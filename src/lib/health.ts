@@ -72,7 +72,7 @@ function classificacaoTse(status: number) {
   if (status === 403) {
     return {
       status: "bloqueado" as const,
-      detalhe: "HTTP 403 — provável bloqueio de edge (Akamai), ver docs/DATA_SOURCES.md §5",
+      detalhe: "HTTP 403 — bloqueio de rede do lado da fonte, fora do nosso controle",
     };
   }
   return { status: "indisponivel" as const, detalhe: `HTTP ${status}` };
@@ -83,7 +83,7 @@ function classificacaoTransparencia(status: number) {
   if (status === 401 || status === 403) {
     return {
       status: "requer-autenticacao" as const,
-      detalhe: "Servidor alcançável — falta a chave de API (chave-api-dados), ver docs/DATA_SOURCES.md §4",
+      detalhe: "Servidor alcançável — ainda falta configurar a chave de acesso",
     };
   }
   return { status: "indisponivel" as const, detalhe: `HTTP ${status}` };
