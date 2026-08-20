@@ -6,25 +6,37 @@
  * no edge (Akamai). A partir do ambiente usado para desenvolver este
  * projeto, `cdn.tse.jus.br` retornou 403 "Access Denied" — documentado e
  * testado em docs/DATA_SOURCES.md §5. Rode isto localmente ou em CI com
- * saída de rede validada antes de assumir que vai funcionar.
+ * saída de rede validada antes de assumir que vai funcionar. Confirmado
+ * em 2026-08-20 que uma rede residencial comum acessa o CDN normalmente
+ * (200) — o bloqueio é específico de certas redes de datacenter/nuvem,
+ * não do TSE em geral.
  *
- * Uso: npm run ingest -- --ano=2026
+ * Uso:
+ *   npm run ingest -- --ano=2026
+ *   npm run ingest -- --ano=2026 --from-dir=./caminho/com/zips-baixados
+ *
+ * `--from-dir` lê `{dataset}_{ano}.zip` de um diretório local em vez de
+ * baixar — útil quando alguém baixou os ZIPs manualmente (navegador, outra
+ * máquina) de uma rede que funciona e só precisa rodar o parsing daqui.
+ * Nomes de arquivo esperados: `consulta_cand_{ano}.zip`,
+ * `bem_candidato_{ano}.zip` (mesma convenção do CDN do TSE).
  *
  * O que faz:
- *  1. Baixa consulta_cand_{ano}.zip e bem_candidato_{ano}.zip do CDN do TSE.
+ *  1. Obtém consulta_cand_{ano}.zip e bem_candidato_{ano}.zip (download do
+ *     CDN do TSE, ou de --from-dir).
  *  2. Extrai o CSV consolidado (_BRASIL.csv) de cada um.
  *  3. Converte de Latin-1 para UTF-8 e faz parsing (separador ";").
  *  4. Agrupa por UF e grava em data/{ano}/candidatos/{UF}.json e
  *     data/{ano}/bens/{UF}.json.
  *  5. Grava data/{ano}/meta.json com o timestamp da ingestão.
  *
- * Nomes de coluna: confirmados para `consulta_cand` a partir da
- * documentação pública do TSE (ver DATA_SOURCES.md §1). Para
+ * Nomes de coluna: confirmados para `consulta_cand` contra um ZIP real
+ * baixado em 2026-08-20 (eleições gerais/estaduais 2026). Para
  * `bem_candidato`, os nomes abaixo seguem o padrão de nomenclatura usado
  * pelo TSE em outros datasets (prefixo SQ_/DS_/VR_) mas NÃO foram
- * confirmados contra o leiame.pdf real (o ZIP está bloqueado nesta sessão
- * — ver §5). Confira contra o leiame.pdf na primeira execução real e
- * ajuste BEM_COLUNAS abaixo se necessário.
+ * confirmados contra um ZIP real desse dataset especificamente — confira
+ * contra o leiame.pdf na primeira execução real e ajuste BEM_COLUNAS
+ * abaixo se necessário.
  */
 import { mkdir, readFile, rm, writeFile } from "node:fs/promises";
 import path from "node:path";
@@ -32,6 +44,7 @@ import AdmZip from "adm-zip";
 import { parse } from "csv-parse/sync";
 
 const ano = process.argv.find((a) => a.startsWith("--ano="))?.split("=")[1] ?? "2026";
+const fromDir = process.argv.find((a) => a.startsWith("--from-dir="))?.split("=")[1];
 const TMP_DIR = path.join(process.cwd(), ".tmp-ingest");
 const DATA_DIR = path.join(process.cwd(), "data", ano);
 
@@ -52,13 +65,23 @@ const CAND_COLUNAS = {
   grauInstrucao: "DS_GRAU_INSTRUCAO",
   ocupacao: "DS_OCUPACAO",
   cpf: "NR_CPF_CANDIDATO",
-  // Códigos usados para consultar o detalhe ao vivo no DivulgaCandContas
-  // (ver src/types/candidato.ts) — nomes de coluna seguem a convenção
-  // padrão do TSE para esses datasets, mas NÃO confirmados contra o
-  // leiame.pdf real desta eleição (mesma ressalva do cabeçalho do arquivo).
-  codMunicipio: "CD_MUNICIPIO",
+  // Código da eleição, usado para consultar o detalhe ao vivo no
+  // DivulgaCandContas (ver src/types/candidato.ts) — confirmado presente
+  // no CSV real (coluna CD_ELEICAO).
   codEleicao: "CD_ELEICAO",
 } as const;
+
+// NÃO existe coluna CD_MUNICIPIO em `consulta_cand` para eleições de
+// abrangência estadual/federal (governador, senador, deputados,
+// presidente) — confirmado contra um ZIP real de 2026: o cabeçalho não
+// traz esse campo, só SG_UE/NM_UE (que aqui equivalem à UF, não a um
+// município). O parâmetro `municipio` exigido pela URL do DivulgaCandContas
+// para candidaturas desse tipo ainda não foi determinado com confiança —
+// por isso `codMunicipio` fica de fora do candidato ingerido, e
+// `buscarDetalheDivulgaCand` (src/lib/enrichment.ts) simplesmente não é
+// chamado para esses candidatos (ela exige codMunicipio truthy). Para
+// eleições municipais (vereador/prefeito) o dataset provavelmente traz
+// CD_MUNICIPIO de verdade — reconfirmar quando houver um ZIP desse tipo.
 
 // Não confirmado contra o leiame.pdf real — ver aviso no cabeçalho do arquivo.
 const BEM_COLUNAS = {
@@ -76,7 +99,19 @@ const BACKOFF_BASE_MS = 2000;
  * docs/DATA_SOURCES.md §5) NÃO é tratado como transitório — não adianta
  * repetir, é um bloqueio de rede, não um erro passageiro — falha rápido
  * com uma mensagem clara em vez de gastar 3 tentativas inúteis.
+ *
+ * Com `--from-dir`, lê `{dataset}_{ano}.zip` do disco em vez de baixar —
+ * ver cabeçalho do arquivo.
  */
+async function obterZip(dataset: string): Promise<Buffer> {
+  if (fromDir) {
+    const caminho = path.join(fromDir, `${dataset}_${ano}.zip`);
+    console.log(`Lendo ${caminho} (--from-dir)`);
+    return readFile(caminho);
+  }
+  return baixarZip(dataset);
+}
+
 async function baixarZip(dataset: string): Promise<Buffer> {
   const url = `https://cdn.tse.jus.br/estatistica/sead/odsele/${dataset}/${dataset}_${ano}.zip`;
 
@@ -165,7 +200,7 @@ function validarColunaCritica(linhas: Record<string, string>[], coluna: string, 
 }
 
 async function ingestCandidatos(): Promise<Set<string>> {
-  const zipBuffer = await baixarZip("consulta_cand");
+  const zipBuffer = await obterZip("consulta_cand");
   const csv = extrairCsvBrasil(zipBuffer, "consulta_cand");
   const linhas = parseCsvTse(csv);
   console.log(`${linhas.length} linhas de candidatos lidas`);
@@ -199,7 +234,8 @@ async function ingestCandidatos(): Promise<Set<string>> {
       grauInstrucao: linha[CAND_COLUNAS.grauInstrucao] || undefined,
       ocupacao: linha[CAND_COLUNAS.ocupacao] || undefined,
       cpf: linha[CAND_COLUNAS.cpf] || undefined,
-      codMunicipio: linha[CAND_COLUNAS.codMunicipio] || undefined,
+      // codMunicipio fica de fora — ver nota acima de CAND_COLUNAS sobre a
+      // ausência dessa coluna para eleições estaduais/federais.
       codEleicao: linha[CAND_COLUNAS.codEleicao] || undefined,
     };
 
@@ -219,8 +255,24 @@ async function ingestCandidatos(): Promise<Set<string>> {
   return ufsEncontradas;
 }
 
+/**
+ * Ingestão de bens é tratada como opcional em relação à de candidatos:
+ * se o ZIP de `bem_candidato` não estiver disponível (--from-dir sem esse
+ * arquivo, ou bloqueio de rede só nesse dataset), a ingestão de
+ * candidatos — o dado principal — não deve ser jogada fora por causa
+ * disso. `carregarBensPorUf` (src/lib/data.ts) já degrada para a amostra
+ * quando não encontra `data/{ano}/bens/{uf}.json`, então pular é seguro.
+ */
 async function ingestBens(): Promise<void> {
-  const zipBuffer = await baixarZip("bem_candidato");
+  let zipBuffer: Buffer;
+  try {
+    zipBuffer = await obterZip("bem_candidato");
+  } catch (err) {
+    console.warn(
+      `Pulando ingestão de bens: ${err instanceof Error ? err.message : String(err)}`,
+    );
+    return;
+  }
   const csv = extrairCsvBrasil(zipBuffer, "bem_candidato");
   const linhas = parseCsvTse(csv);
   console.log(`${linhas.length} linhas de bens lidas`);

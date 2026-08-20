@@ -55,17 +55,22 @@ export async function carregarCandidatosPorUf(
 }
 
 /**
- * Lê as 27 UFs em paralelo. Usado pela busca direta (nome/número/ID não
- * tem como saber a UF de antemão) e para derivar listas de cidade/partido
- * disponíveis nos filtros. Para o volume atual do dataset (JSON estático
- * por UF), ler tudo em paralelo é aceitável — ver docs/ARCHITECTURE.md §4;
- * revisar se o dataset crescer a ponto de justificar um índice único.
+ * Lê as 27 UFs + "BR" em paralelo. "BR" é a unidade eleitoral que o TSE
+ * usa para presidente/vice-presidente (candidatura nacional, sem UF) —
+ * confirmado presente em `data/{ano}/candidatos/BR.json` quando a
+ * ingestão real roda; sem essa entrada, candidatos à presidência ficam
+ * invisíveis tanto na busca direta quanto na página de detalhe.
+ * Usado pela busca direta (nome/número/ID não tem como saber a UF de
+ * antemão) e para derivar listas de cidade/partido disponíveis nos
+ * filtros. Para o volume atual do dataset (JSON estático por UF), ler
+ * tudo em paralelo é aceitável — ver docs/ARCHITECTURE.md §4; revisar se
+ * o dataset crescer a ponto de justificar um índice único.
  */
 export async function carregarTodosCandidatos(): Promise<{
   candidatos: Candidato[];
   isAmostra: boolean;
 }> {
-  const resultados = await Promise.all(UFS.map((uf) => carregarCandidatosPorUf(uf)));
+  const resultados = await Promise.all([...UFS, "BR"].map((uf) => carregarCandidatosPorUf(uf)));
   return {
     candidatos: resultados.flatMap((r) => r.candidatos),
     isAmostra: resultados.some((r) => r.isAmostra),

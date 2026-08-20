@@ -68,17 +68,29 @@ npm install
 npm run dev
 ```
 
-Abre em `http://localhost:3000`. Sem nenhum dado real do TSE ingerido, as
-páginas caem para um fixture de exemplo, claramente identificado como tal na UI.
+Abre em `http://localhost:3000`. O repositório já vem com um snapshot real de
+candidatos (`data/2026/candidatos/`, 20.638 registros em 28 unidades
+eleitorais — as 27 UFs + `BR`, usada pelo TSE para presidente/vice). Bens
+declarados (`data/2026/bens/`) ainda não foram ingeridos — essa seção
+específica cai para uma amostra claramente identificada como tal na UI até
+alguém rodar a ingestão com o ZIP de `bem_candidato`.
 
 ### Ingerindo dados reais do TSE
 
 ```bash
 npm run ingest -- --ano=2026
+# ou, com um ZIP já baixado manualmente (ver abaixo):
+npm run ingest -- --ano=2026 --from-dir=./caminho/com/zips-baixados
 ```
 
-Precisa rodar de uma rede que o TSE não bloqueie — ver
-`docs/DATA_SOURCES.md` §5 antes de assumir que vai funcionar do seu ambiente.
+Precisa rodar de uma rede que o TSE não bloqueie — o bloqueio (403 do edge
+Akamai) é específico de certas redes de datacenter/nuvem, **não** do TSE em
+geral: uma rede residencial comum funciona normalmente (confirmado em
+20/08/2026, ver `docs/DATA_SOURCES.md` §5). Se você já baixou o(s) ZIP(s)
+manualmente (navegador, outra máquina) mas quer rodar o parsing daqui, use
+`--from-dir` apontando para uma pasta com `consulta_cand_{ano}.zip` e/ou
+`bem_candidato_{ano}.zip` — a ingestão de cada dataset é independente, então
+rodar só com o de candidatos (sem o de bens) funciona normalmente.
 
 ### Variáveis de ambiente
 

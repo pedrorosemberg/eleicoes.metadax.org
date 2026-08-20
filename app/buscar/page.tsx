@@ -38,7 +38,8 @@ export default async function BuscarPage({
 }) {
   const sp = await searchParams;
   const modo: Modo = sp.modo === "direta" ? "direta" : "indireta";
-  const uf = sp.uf && UFS.includes(sp.uf.toUpperCase() as (typeof UFS)[number]) ? sp.uf.toUpperCase() : "SP";
+  const ufsValidas = [...UFS, "BR"] as readonly string[];
+  const uf = sp.uf && ufsValidas.includes(sp.uf.toUpperCase()) ? sp.uf.toUpperCase() : "SP";
 
   const meta = await carregarMeta();
 
@@ -144,6 +145,7 @@ export default async function BuscarPage({
                   {sigla}
                 </option>
               ))}
+              <option value="BR">BR — Nacional (Presidente/Vice)</option>
             </select>
           </label>
           <label className="flex flex-col gap-1 text-sm font-medium text-[var(--text-secondary)]">

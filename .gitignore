@@ -19,7 +19,9 @@ next-env.d.ts
 tsconfig.tsbuildinfo
 
 # Ingestão de dados (gerado por scripts/ingest-tse.ts — ver docs/ARCHITECTURE.md §4)
-/data
+# NÃO ignorar /data: a Vercel tem filesystem efêmero e a ingestão roda fora
+# do runtime de produção (ver docs/ARCHITECTURE.md §4) — o snapshot só chega
+# em produção se for commitado junto com o código.
 .tmp-ingest
 
 # Variáveis de ambiente — nunca commitar chaves (ex.: PORTAL_TRANSPARENCIA_API_KEY)
