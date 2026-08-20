@@ -54,7 +54,7 @@ const PRINCIPIOS = [
   {
     titulo: "Sem cor de partido",
     descricao:
-      "Interface em tema claro, preto e branco. Nenhuma cor associada a partido é usada para diferenciar candidatos — ver o Design System do projeto.",
+      "Interface em tema claro, preto e branco. Nenhuma cor associada a partido é usada para diferenciar candidatos — ver a identidade visual do projeto.",
   },
   {
     titulo: "Fonte pública, sempre citada",
@@ -199,7 +199,7 @@ export default function LandingPage() {
                 <a className="underline underline-offset-2" href={`${REPO_URL}/blob/main/docs/DESIGN_SYSTEM.md`} target="_blank" rel="noreferrer noopener">
                   docs/DESIGN_SYSTEM.md
                 </a>{" "}
-                — adaptação neutra (preto/branco) do Design System da METADAX
+                — identidade visual neutra (preto/branco) do projeto, do Instituto METADAX de Inovação
               </li>
               <li>
                 <a className="underline underline-offset-2" href={`${REPO_URL}/blob/main/LICENSE`} target="_blank" rel="noreferrer noopener">

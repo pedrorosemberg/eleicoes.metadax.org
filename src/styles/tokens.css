@@ -1,8 +1,8 @@
 /**
- * Tokens de design — adaptação neutra (preto/branco) do Design System METADAX v2.
+ * Tokens de design deste projeto — tema claro, neutro (preto/branco).
  * Ver docs/DESIGN_SYSTEM.md para a justificativa completa de cada decisão aqui.
- * Cores de marca/semânticas do v2 (azul, vermelho, verde, amarelo) são
- * deliberadamente omitidas — não usar em nenhum componente de produto.
+ * Azul, vermelho, verde e amarelo são deliberadamente omitidos — não usar
+ * em nenhum componente de produto.
  */
 
 :root {

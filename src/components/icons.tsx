@@ -45,6 +45,14 @@ export function IconX({ className }: IconProps) {
   );
 }
 
+export function IconMenu({ className }: IconProps) {
+  return (
+    <svg viewBox="0 0 20 20" width="20" height="20" fill="none" className={className} aria-hidden>
+      <path d="M3 6h14M3 10h14M3 14h14" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+    </svg>
+  );
+}
+
 export function IconExternalLink({ className }: IconProps) {
   return (
     <svg viewBox="0 0 20 20" width="14" height="14" fill="none" className={className} aria-hidden>

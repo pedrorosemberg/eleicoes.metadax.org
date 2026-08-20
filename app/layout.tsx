@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import Script from "next/script";
-import { SiteNav } from "@/components/SiteNav";
+import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
+import { Header } from "@/components/Header";
+import { SiteFooter } from "@/components/SiteFooter";
 import "./globals.css";
 
 const SITE_URL = "https://eleicoes.metadax.org";
@@ -26,7 +29,7 @@ export const metadata: Metadata = {
     "bens declarados",
     "eleições 2026",
   ],
-  authors: [{ name: "METADAX", url: "https://www.metadax.com.br" }],
+  authors: [{ name: "Instituto METADAX de Inovação (IMI)", url: "https://imi.metadax.org" }],
   openGraph: {
     type: "website",
     locale: "pt_BR",
@@ -61,8 +64,8 @@ const jsonLdWebsite = {
   inLanguage: "pt-BR",
   publisher: {
     "@type": "Organization",
-    name: "METADAX CONSULTORIA LTDA",
-    url: "https://www.metadax.com.br",
+    name: "Instituto METADAX de Inovação (IMI)",
+    url: "https://imi.metadax.org",
   },
   potentialAction: {
     "@type": "SearchAction",
@@ -84,14 +87,19 @@ export default function RootLayout({
         />
       </head>
       <body>
-        <SiteNav />
+        <Header />
         {children}
 
-        {/* Header/footer/loader centralizados da METADAX — Design System v2, Seção 6.
-            Não recriar localmente, conforme a regra do próprio Design System. */}
+        {/* Header/footer/loader institucionais, centralizados no CDN público da METADAX. */}
         <Script src="https://cdn.metadax.com.br/components/scripts/whatsapp-button.js" strategy="afterInteractive" />
         <Script src="https://cdn.metadax.com.br/metadax-loader.js" strategy="afterInteractive" />
         <Script src="https://cdn.metadax.com.br/component-loader.js" strategy="afterInteractive" />
+
+        <SiteFooter />
+
+        {/* Analytics/observabilidade — ver /privacidade para o que é coletado */}
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );

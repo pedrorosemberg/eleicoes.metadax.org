@@ -21,17 +21,8 @@ export default async function StatusPage() {
       </h1>
       <p className="mt-3 max-w-prose text-[17px] leading-relaxed text-[var(--text-secondary)]">
         Checagem em tempo real, feita a partir deste servidor, contra cada fonte externa que o
-        projeto usa. Um status de <strong>&ldquo;Bloqueado&rdquo;</strong> nas rotas do TSE reflete
-        um bloqueio de rede documentado em{" "}
-        <a
-          className="underline underline-offset-2"
-          href="https://github.com/pedrorosemberg/eleicoes.metadax.org/blob/main/docs/DATA_SOURCES.md"
-          target="_blank"
-          rel="noreferrer noopener"
-        >
-          docs/DATA_SOURCES.md §5
-        </a>
-        , não um erro do produto.
+        projeto usa. Um status de <strong>&ldquo;Bloqueado&rdquo;</strong> nas rotas do TSE
+        indica uma restrição de rede do lado do TSE, não um erro do produto.
       </p>
 
       <div className="mt-8">

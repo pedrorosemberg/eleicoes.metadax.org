@@ -56,7 +56,7 @@ Essa divisão existe por três motivos, todos documentados em `DATA_SOURCES.md`:
 | Camada | Escolha | Motivo |
 |---|---|---|
 | Frontend | Next.js 16 (App Router) + React 19 + TypeScript | Server Components renderizam o conteúdo no HTML do primeiro request — essencial para SEO/AEO/GEO (crawlers que não executam JS ainda leem o conteúdo principal); roteamento e API routes no mesmo framework, deploy nativo na Vercel |
-| Estilo | Tailwind CSS v4 (`@tailwindcss/postcss`) + tokens CSS custom (`src/styles/tokens.css`) | Ver `docs/DESIGN_SYSTEM.md` — tokens derivados do Design System METADAX v2, restritos a tema claro P&B |
+| Estilo | Tailwind CSS v4 (`@tailwindcss/postcss`) + tokens CSS custom (`src/styles/tokens.css`) | Ver `docs/DESIGN_SYSTEM.md` — identidade visual própria do projeto, restrita a tema claro P&B |
 | Roteamento | App Router nativo (`app/`) | `/candidato/[id]`, `/partido/[sigla]`, `/buscar`, `/sobre` — cada um com `generateMetadata` próprio |
 | Camada de API | Route Handlers (`app/api/**/route.ts`) | Mesmo motivo do proxy documentado abaixo (CORS, esconder chave da CGU); rodam como Vercel Functions sem configuração extra |
 | Hospedagem | Vercel, repositório público no GitHub (`pedrorosemberg/eleicoes.metadax.org`) | Deploy contínuo a partir do `main`; domínio customizado (`eleicoes.metadax.org`) configurado na Vercel |
@@ -126,8 +126,11 @@ Todas em `/api/*`, todas com cache de borda e, quando aplicável, normalização
 | `GET /api/divulgacand/candidato/:ano/:municipio/:eleicao/:id` | DivulgaCandContas | 6 horas | Necessário para contornar CORS. Pode falhar se o bloqueio de rede do TSE também atingir o runtime de produção — nesse caso, a UI deve degradar graciosamente (mostrar "dados adicionais indisponíveis no momento", nunca quebrar a página). |
 | `GET /api/transparencia/:tipo/:documento` | Portal da Transparência | 1 hora | Requer `PORTAL_TRANSPARENCIA_API_KEY` em variável de ambiente server-side — nunca no client. `:tipo` restrito a um allowlist (`peps`, `contratos`, `ceis`, `cnep`, `emendas`) para não expor a API da CGU como proxy genérico. |
 | `GET /api/health` | TSE ×3, BrasilAPI, Portal da Transparência | Sem cache (`no-store`) | Checagem ao vivo para a página `/status` — classifica cada fonte como operacional, bloqueada (edge do TSE), indisponível, ou "requer autenticação" |
+| `GET /api/estatisticas` | Dados internos (agregados) | 5 min | Contagem de candidatos por UF/cargo/partido — nunca dado individual. Ver §10. |
 
 **Nota operacional confirmada nesta sessão:** a BrasilAPI retorna `403` para o `User-Agent` padrão que o `fetch` do Node/undici envia (`node`) — por isso toda chamada de saída deste projeto usa um `User-Agent` explícito (`src/lib/http.ts`), não apenas por boa prática, mas porque sem isso o endpoint pareceria fora do ar. Ver `docs/DATA_SOURCES.md` (seção BrasilAPI).
+
+**CORS:** todas as rotas `/api/*` respondem com `Access-Control-Allow-Origin: *` (aplicado globalmente em `middleware.ts`, ver `src/lib/cors.ts`) — deliberadamente aberto, para que qualquer site (incluindo qualquer subdomínio de `metadax.org` e `metadax.com.br`, que ficam automaticamente cobertos por não haver nenhuma restrição de origem) possa consumir os dados sem bloqueio de navegador. Ver §10 sobre até onde isso torna o projeto utilizável como fonte de dados por terceiros.
 
 ## 6. Contingência: bloqueio do TSE também em produção
 
@@ -168,3 +171,29 @@ O que está implementado:
 7. **JSON puro como fonte de dado** (`data/{ano}/**/*.json`, servido/lido diretamente) — mais fácil de raspar corretamente do que fazer parsing de HTML, e evita que um scraper precise reconstruir dado que já está estruturado.
 
 O que fica como trabalho futuro, não implementado nesta sessão: ISR/revalidação agressiva ligada à cadência real da ingestão (hoje o cache é por tempo fixo, não por evento), sitemap de candidatos individuais (hoje só há sitemap por UF — o volume de milhares de páginas de candidato precisa de sitemap paginado antes de ativar), e Open Graph image dinâmica por candidato.
+
+## 10. O projeto como proxy público de dados — viabilidade
+
+Pergunta levantada pelo usuário: dá para outras pessoas/empresas se conectarem neste projeto para consumir os dados que ele já consome, usando-o como intermediário?
+
+**Sim, e já está funcionando hoje**, dentro de limites claros — não foi construída nenhuma camada nova de "API pública para terceiros" com autenticação/chaves/planos (isso seria um projeto à parte); o que existe é a reutilização honesta da própria camada de proxy que o produto já precisa para si:
+
+- Todas as rotas em `/api/*` (§5) respondem com CORS aberto (`Access-Control-Allow-Origin: *`) — qualquer site pode fazer `fetch()` para elas do navegador, sem bloqueio.
+- `GET /api/estatisticas` é o caso mais direto de "dado pronto para consumo externo": contagens agregadas de candidatos por UF/cargo/partido, sem nenhum dado individual.
+- `GET /api/cnpj/:cnpj` funciona como um proxy de fato para a BrasilAPI, já com o `User-Agent` correto (§5) e cache de borda — um terceiro que bater nessa rota está, na prática, usando este projeto como intermediário para a BrasilAPI.
+
+**Limites que isso não resolve, e por que não foram construídos nesta sessão:**
+1. **Sem autenticação/chave própria.** Não há como emitir uma "chave de API do projeto" para terceiros, medir uso por consumidor ou aplicar limites por cliente — implicaria criar uma camada de gestão de chaves e um banco de dados, que é infraestrutura nova, não uma extensão do proxy existente.
+2. **Capacidade compartilhada com o próprio site.** Os limites de taxa de cada fonte upstream (documentados em `docs/DATA_SOURCES.md`) são por IP/aplicação, não por consumidor final — uso pesado por terceiros consome a mesma cota que os usuários do site. Em caso de abuso, a mitigação disponível hoje é bloquear por origem/IP na Vercel, não um sistema de quotas dedicado.
+3. **`/api/transparencia/:tipo` continua restrito por allowlist** (§5) — não vira uma porta aberta para toda a API da CGU, mesmo com CORS liberado.
+
+**Conclusão:** o projeto já serve como proxy público de fato para os dados agregados e para a consulta de CNPJ, sem trabalho adicional. Uma oferta formal de "API para desenvolvedores" (com chave, documentação própria tipo Swagger, e limites por cliente) é viável tecnicamente, mas é um escopo novo — não foi implementada aqui, e não deve ser assumida como existente até que seja.
+
+## 11. Incidente registrado: build de produção sem CSS/hidratação
+
+Em 20/08/2026, uma deployment em produção (commit `55480ef`) ficou no ar sem nenhum estilo (HTML puro, sem CSS) e sem hidratação de JavaScript (componentes client, como os contadores animados da home, travavam no estado inicial). Investigação:
+
+- O domínio custom também esteve fora do ar por ~40 minutos com `404 NOT_FOUND` no edge da Vercel, **sem nenhuma linha de log de runtime e sem erro registrado** — evidência de que a requisição nunca chegava a invocar nenhuma função (problema de roteamento de domínio na borda da Vercel, não da aplicação). O painel mostrava "Valid Configuration" mesmo assim. **Resolvido removendo e re-adicionando o domínio** em Settings → Domains, forçando a Vercel a reprovisionar certificado e alias do zero.
+- Separadamente, o **mesmo commit exato**, reconstruído localmente de forma isolada (`rm -rf .next && npm run build && npm run start`) mais de uma vez, produziu resultados diferentes entre tentativas: numa saiu sem CSS/hidratação (idêntico ao sintoma em produção), na seguinte saiu perfeito — com `next.config.ts` e as dependências de build idênticos entre as tentativas. Isso aponta para uma **instabilidade do build de produção em Turbopack** (`▲ Next.js 16.3.1 (Turbopack)`, bundler de build ainda recente), não uma causa determinística no código.
+
+**Mitigação prática adotada:** antes de qualquer deploy, rodar `rm -rf .next && npm run build && npm run start` localmente e conferir visualmente (não só o código de status HTTP) que o CSS carregou e que componentes client hidrataram — um `curl` retornando `200` não é suficiente para confirmar que o build está íntegro. Se o problema se repetir, o próximo passo é testar sem Turbopack para isolar se é uma regressão específica dele.

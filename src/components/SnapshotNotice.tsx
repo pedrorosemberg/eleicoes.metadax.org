@@ -22,9 +22,9 @@ export function SnapshotNotice({
       >
         <span aria-hidden>⚠</span>
         <p>
-          <strong className="text-[var(--text-primary)]">Dados de exemplo.</strong> O snapshot
-          oficial do TSE ainda não foi processado neste ambiente — ver docs/DATA_SOURCES.md §5.
-          Os candidatos abaixo são fictícios.
+          <strong className="text-[var(--text-primary)]">Dados de exemplo.</strong> Ainda
+          estamos processando a base oficial do TSE para este ambiente. Os candidatos abaixo
+          são fictícios, só para mostrar como a busca vai funcionar.
         </p>
       </div>
     );

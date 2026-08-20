@@ -4,9 +4,9 @@ Consulta pública de candidatos às eleições brasileiras, cruzando dados ofici
 Tribunal Superior Eleitoral (TSE) com o Portal da Transparência (CGU) e dados de
 CNPJ da Receita Federal (via [BrasilAPI](https://brasilapi.com.br)).
 
-Tema claro, preto e branco, sem cor de partido, mobile-first. Design derivado do
-Design System da [METADAX](https://www.metadax.com.br), com neutralidade
-político-partidária como requisito central — ver `docs/DESIGN_SYSTEM.md`.
+Tema claro, preto e branco, sem cor de partido, mobile-first — neutralidade
+político-partidária como requisito central de design, ver `docs/DESIGN_SYSTEM.md`.
+Um projeto do [Instituto METADAX de Inovação (IMI)](https://imi.metadax.org).
 
 Licenciado sob [CC BY 4.0](LICENSE).
 
@@ -16,12 +16,23 @@ Licenciado sob [CC BY 4.0](LICENSE).
 - `/buscar` — busca **direta** (nome, número ou ID do candidato) ou **indireta**
   (filtros combináveis por UF, cidade, cargo e partido)
 - `/candidato/[id]` — perfil de um candidato
+- `/mapa` — estatísticas públicas: candidatos por UF e por cargo (consumível também
+  via `GET /api/estatisticas`, JSON, CORS aberto)
 - `/status` — saúde em tempo real de cada fonte de dado externa (TSE, BrasilAPI,
   Portal da Transparência), com checagem ao vivo a cada 30s
 - `/sobre` — metodologia, fontes e licença
+- `/privacidade` — o que é coletado (Vercel Analytics/Speed Insights, eventos de busca) e por quê
+- `/termos` — usos autorizados do site e dos dados
 
 Todo horário exibido no site segue o padrão brasileiro (`America/Sao_Paulo`,
 GMT-3), independentemente do fuso do servidor.
+
+## API pública
+
+Todas as rotas em `/api/*` respondem com CORS aberto (`Access-Control-Allow-Origin: *`)
+— qualquer site, incluindo qualquer subdomínio de `metadax.org`/`metadax.com.br`, pode
+consumi-las livremente. Ver `docs/ARCHITECTURE.md` §10 para o que isso cobre (e o que não
+cobre — não há chave de API nem gestão de cota por consumidor).
 
 ## Documentação
 
@@ -36,9 +47,9 @@ design está documentada e foi validada com testes reais, não apenas descrita:
 - **[docs/ARCHITECTURE.md](docs/ARCHITECTURE.md)** — pipeline de ingestão,
   camada de proxy de API, modelo de dados, estrutura de páginas e a estratégia
   de SEO/AEO/GEO (visibilidade para buscadores e para IAs/crawlers).
-- **[docs/DESIGN_SYSTEM.md](docs/DESIGN_SYSTEM.md)** — adaptação neutra
-  (preto/branco) do Design System v2 da METADAX, e por que cada cor de marca
-  foi deliberadamente excluída.
+- **[docs/DESIGN_SYSTEM.md](docs/DESIGN_SYSTEM.md)** — identidade visual neutra
+  (preto/branco) do projeto, e por que cada cor "de marca" foi deliberadamente
+  excluída.
 
 ## Stack
 

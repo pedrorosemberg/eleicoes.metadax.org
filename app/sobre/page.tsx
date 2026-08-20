@@ -83,10 +83,18 @@ export default function SobrePage() {
         .
       </p>
 
-      <h2 className="mt-10 text-[22px] font-semibold text-[var(--text-primary)]">Marca</h2>
+      <h2 className="mt-10 text-[22px] font-semibold text-[var(--text-primary)]">Marca e mantenedor</h2>
       <p className="mt-3 text-[17px] leading-relaxed text-[var(--text-secondary)]">
-        Design e identidade visual seguem o Design System e o Manual de Marca da METADAX.
-        A METADAX é uma marca da METADAX CONSULTORIA LTDA (CNPJ 65.640.808/0001-89).
+        Este é um projeto do{" "}
+        <a className="underline underline-offset-2" href="https://imi.metadax.org" target="_blank" rel="noreferrer noopener">
+          Instituto METADAX de Inovação (IMI)
+        </a>
+        . O uso do logotipo e da identidade visual da marca METADAX segue o Manual de Marca
+        oficial (
+        <a className="underline underline-offset-2" href="https://www.metadax.com.br/manual-de-marca" target="_blank" rel="noreferrer noopener">
+          metadax.com.br/manual-de-marca
+        </a>
+        ). A METADAX é uma marca da METADAX CONSULTORIA LTDA (CNPJ 65.640.808/0001-89).
       </p>
     </main>
   );

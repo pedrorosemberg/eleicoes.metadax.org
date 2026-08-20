@@ -98,9 +98,8 @@ export default async function CandidatoPage({
       )}
 
       <p className="mt-10 text-sm text-[var(--text-tertiary)]">
-        Plano de governo, site oficial e histórico de candidaturas anteriores dependem do
-        enriquecimento via DivulgaCandContas — ver docs/DATA_SOURCES.md §2 e §5 para o status
-        dessa integração.
+        Plano de governo, site oficial e histórico de candidaturas anteriores ainda estão
+        sendo integrados a este perfil.
       </p>
     </main>
   );

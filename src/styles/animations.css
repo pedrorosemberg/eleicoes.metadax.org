@@ -62,3 +62,42 @@
     animation: metadax-fade-in 0.8s ease both;
   }
 }
+
+/* Skeleton de carregamento — bloco cinza, sem cor de marca. Com
+   prefers-reduced-motion, fica estático (ainda comunica "carregando" pela
+   forma, sem depender de animação). */
+@keyframes metadax-skeleton-pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.skeleton {
+  background: var(--surface-2);
+  border-radius: 8px;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .skeleton {
+    animation: metadax-skeleton-pulse 1.4s ease-in-out infinite;
+  }
+}
+
+@keyframes metadax-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.spinner {
+  animation: metadax-spin 0.8s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .spinner {
+    animation-duration: 1.6s;
+  }
+}

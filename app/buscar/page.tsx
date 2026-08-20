@@ -4,6 +4,7 @@ import { buscarCandidatos, carregarCandidatosPorUf, carregarMeta } from "@/lib/d
 import { UFS } from "@/lib/ufs";
 import { CandidatoCard } from "@/components/CandidatoCard";
 import { SnapshotNotice } from "@/components/SnapshotNotice";
+import { BuscaTracker } from "@/components/BuscaTracker";
 
 export const metadata: Metadata = {
   title: "Busca de candidatos",
@@ -61,6 +62,14 @@ export default async function BuscarPage({
 
   return (
     <main className="mx-auto max-w-3xl px-4 py-8 sm:px-6 sm:py-12">
+      <BuscaTracker
+        modo={modo}
+        temTermo={Boolean(sp.q)}
+        uf={modo === "indireta" ? uf : undefined}
+        cargo={sp.cargo}
+        temCidade={Boolean(sp.cidade)}
+        temPartido={Boolean(sp.partido)}
+      />
       <header className="mb-6">
         <h1 className="text-[clamp(28px,6vw,40px)] font-semibold leading-tight text-[var(--text-primary)]">
           Candidatos às eleições
