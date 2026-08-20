@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Script from "next/script";
+import { SiteNav } from "@/components/SiteNav";
 import "./globals.css";
 
 const SITE_URL = "https://eleicoes.metadax.org";
@@ -83,6 +84,7 @@ export default function RootLayout({
         />
       </head>
       <body>
+        <SiteNav />
         {children}
 
         {/* Header/footer/loader centralizados da METADAX — Design System v2, Seção 6.

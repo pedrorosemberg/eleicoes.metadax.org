@@ -2,6 +2,7 @@ import { readFile } from "node:fs/promises";
 import path from "node:path";
 import type { Bem, Candidato } from "@/types/candidato";
 import { CANDIDATOS_AMOSTRA, BENS_AMOSTRA } from "./amostra";
+import { UFS } from "./ufs";
 
 export const ANO_ELEICAO = 2026;
 
@@ -9,6 +10,16 @@ export interface SnapshotMeta {
   ano: number;
   geradoEm: string;
   ufs: string[];
+}
+
+export interface FiltrosBusca {
+  /** Busca direta: nome (completo ou de urna), número ou sqCandidato — combinados com OR. */
+  q?: string;
+  /** Busca indireta — combinados com AND entre si. */
+  uf?: string;
+  cidade?: string;
+  cargo?: string;
+  partido?: string;
 }
 
 const DATA_DIR = path.join(process.cwd(), "data");
@@ -43,20 +54,79 @@ export async function carregarCandidatosPorUf(
   };
 }
 
+/**
+ * Lê as 27 UFs em paralelo. Usado pela busca direta (nome/número/ID não
+ * tem como saber a UF de antemão) e para derivar listas de cidade/partido
+ * disponíveis nos filtros. Para o volume atual do dataset (JSON estático
+ * por UF), ler tudo em paralelo é aceitável — ver docs/ARCHITECTURE.md §4;
+ * revisar se o dataset crescer a ponto de justificar um índice único.
+ */
+export async function carregarTodosCandidatos(): Promise<{
+  candidatos: Candidato[];
+  isAmostra: boolean;
+}> {
+  const resultados = await Promise.all(UFS.map((uf) => carregarCandidatosPorUf(uf)));
+  return {
+    candidatos: resultados.flatMap((r) => r.candidatos),
+    isAmostra: resultados.some((r) => r.isAmostra),
+  };
+}
+
 export async function carregarCandidatoPorId(
   sqCandidato: string,
 ): Promise<{ candidato: Candidato | null; isAmostra: boolean }> {
-  // O índice completo é dividido por UF; sem um índice reverso persistido,
-  // procuramos nas 27 UFs. Aceitável para o volume do dataset (ver
-  // docs/ARCHITECTURE.md §4) — se a UF já for conhecida pela rota, prefira
-  // carregarCandidatosPorUf diretamente.
-  const { UFS } = await import("./ufs");
-  for (const uf of UFS) {
-    const { candidatos, isAmostra } = await carregarCandidatosPorUf(uf);
-    const encontrado = candidatos.find((c) => c.sqCandidato === sqCandidato);
-    if (encontrado) return { candidato: encontrado, isAmostra };
-  }
-  return { candidato: null, isAmostra: false };
+  const { candidatos, isAmostra } = await carregarTodosCandidatos();
+  return { candidato: candidatos.find((c) => c.sqCandidato === sqCandidato) ?? null, isAmostra };
+}
+
+function normalizar(texto: string): string {
+  return texto
+    .normalize("NFD")
+    .replace(/[̀-ͯ]/g, "") // remove acentos (diacríticos combinantes)
+    .toLowerCase()
+    .trim();
+}
+
+/**
+ * Busca direta (nome/número/ID) e indireta (UF/cidade/cargo/partido),
+ * combináveis — ver docs/ARCHITECTURE.md §7. `q` é OR entre os três
+ * campos; os filtros indiretos são AND entre si e com `q`.
+ */
+export async function buscarCandidatos(
+  filtros: FiltrosBusca,
+): Promise<{ candidatos: Candidato[]; isAmostra: boolean }> {
+  const { q, uf, cidade, cargo, partido } = filtros;
+
+  const { candidatos: base, isAmostra } = uf
+    ? await carregarCandidatosPorUf(uf)
+    : await carregarTodosCandidatos();
+
+  const termo = q ? normalizar(q) : null;
+  const cidadeNorm = cidade ? normalizar(cidade) : null;
+  const partidoNorm = partido ? normalizar(partido) : null;
+
+  const candidatos = base.filter((c) => {
+    if (termo) {
+      const combina =
+        normalizar(c.nomeUrna).includes(termo) ||
+        normalizar(c.nomeCompleto).includes(termo) ||
+        c.numero.includes(termo) ||
+        c.sqCandidato === q;
+      if (!combina) return false;
+    }
+    if (cidadeNorm && !normalizar(c.municipio).includes(cidadeNorm)) return false;
+    if (cargo && c.cargo !== cargo) return false;
+    if (
+      partidoNorm &&
+      !normalizar(c.partido.sigla).includes(partidoNorm) &&
+      !normalizar(c.partido.nome).includes(partidoNorm)
+    ) {
+      return false;
+    }
+    return true;
+  });
+
+  return { candidatos, isAmostra };
 }
 
 export async function carregarBensPorUf(

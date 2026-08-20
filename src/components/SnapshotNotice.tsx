@@ -1,3 +1,5 @@
+import { formatarDataHoraBR } from "@/lib/format";
+
 /**
  * Aviso de transparência do próprio produto: sempre visível quando a lista
  * exibida é o fixture de exemplo (ingestão ainda não rodou) ou quando
@@ -30,7 +32,7 @@ export function SnapshotNotice({
 
   return (
     <p className="text-sm text-[var(--text-tertiary)]">
-      Última atualização dos dados oficiais: {geradoEm ? new Date(geradoEm).toLocaleString("pt-BR") : "—"}
+      Última atualização dos dados oficiais: {geradoEm ? formatarDataHoraBR(geradoEm) : "—"}
     </p>
   );
 }

@@ -188,6 +188,10 @@ Resposta real obtida (200 OK), campos confirmados em produção:
 
 Um segundo teste imediato retornou `429 Too Many Requests` (rate limit não documentado publicamente — provavelmente por IP/janela curta). **Implicação de arquitetura:** cache agressivo é obrigatório (CNPJ muda raramente) — nunca consultar a mesma empresa/partido em cada carregamento de página; usar cache de borda com TTL longo (dias) e revalidação em background.
 
+### Pegadinha confirmada: BrasilAPI bloqueia o User-Agent padrão do Node
+
+Testado e confirmado nesta sessão: uma chamada `fetch()` feita pelo runtime Node/undici (como as Route Handlers do Next.js fazem por padrão) envia `User-Agent: node` — e a BrasilAPI retorna **403** especificamente para esse valor. `curl` (UA `curl/8.x`) e um User-Agent customizado (`eleicoes.metadax.org/1.0 (+https://eleicoes.metadax.org)`) funcionam normalmente (`200`); um UA vazio retorna `429`. **Correção aplicada no código:** todo `fetch` para a BrasilAPI (e, por padronização, para as demais fontes) envia um `User-Agent` explícito — ver `src/lib/http.ts`. Sem esse cabeçalho, o endpoint pareceria "fora do ar" quando na verdade está apenas bloqueando o identificador do cliente.
+
 ### Outros endpoints úteis da mesma API (não testados individualmente, mesma base confiável)
 
 | Endpoint | Uso no projeto |

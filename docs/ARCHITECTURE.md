@@ -125,6 +125,9 @@ Todas em `/api/*`, todas com cache de borda e, quando aplicável, normalização
 | `GET /api/cnpj/:cnpj` | BrasilAPI | 7 dias | Sem chave. Testado funcionando nesta sessão. |
 | `GET /api/divulgacand/candidato/:ano/:municipio/:eleicao/:id` | DivulgaCandContas | 6 horas | Necessário para contornar CORS. Pode falhar se o bloqueio de rede do TSE também atingir o runtime de produção — nesse caso, a UI deve degradar graciosamente (mostrar "dados adicionais indisponíveis no momento", nunca quebrar a página). |
 | `GET /api/transparencia/:tipo/:documento` | Portal da Transparência | 1 hora | Requer `PORTAL_TRANSPARENCIA_API_KEY` em variável de ambiente server-side — nunca no client. `:tipo` restrito a um allowlist (`peps`, `contratos`, `ceis`, `cnep`, `emendas`) para não expor a API da CGU como proxy genérico. |
+| `GET /api/health` | TSE ×3, BrasilAPI, Portal da Transparência | Sem cache (`no-store`) | Checagem ao vivo para a página `/status` — classifica cada fonte como operacional, bloqueada (edge do TSE), indisponível, ou "requer autenticação" |
+
+**Nota operacional confirmada nesta sessão:** a BrasilAPI retorna `403` para o `User-Agent` padrão que o `fetch` do Node/undici envia (`node`) — por isso toda chamada de saída deste projeto usa um `User-Agent` explícito (`src/lib/http.ts`), não apenas por boa prática, mas porque sem isso o endpoint pareceria fora do ar. Ver `docs/DATA_SOURCES.md` (seção BrasilAPI).
 
 ## 6. Contingência: bloqueio do TSE também em produção
 
@@ -142,6 +145,7 @@ Se, ao testar a partir do ambiente de produção real (Vercel ou onde for hosped
 | `/candidato/[id]` | **Implementado** (enriquecimento parcial) | Perfil: dados básicos, dados do partido via CNPJ; plano de governo/site oficial/histórico de candidaturas pendentes de ligar ao proxy DivulgaCandContas na UI |
 | `/partido/[sigla]` | **Pendente** | Dados cadastrais via CNPJ (BrasilAPI), lista de candidatos do partido na UF selecionada |
 | `/sobre` | **Implementado** | Transparência do próprio produto: metodologia, fontes, licença |
+| `/status` | **Implementado** | Saúde em tempo real de cada fonte externa (TSE ×3, BrasilAPI, Portal da Transparência) — checagem ao vivo no servidor a cada carregamento + polling client-side a cada 30s via `/api/health` |
 
 ## 8. O que este projeto explicitamente não faz (fora de escopo do MVP)
 

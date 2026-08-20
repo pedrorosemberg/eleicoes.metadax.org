@@ -7,6 +7,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const estaticas: MetadataRoute.Sitemap = [
     { url: `${SITE_URL}/`, changeFrequency: "weekly", priority: 1 },
     { url: `${SITE_URL}/buscar`, changeFrequency: "daily", priority: 0.9 },
+    { url: `${SITE_URL}/status`, changeFrequency: "always", priority: 0.4 },
     { url: `${SITE_URL}/sobre`, changeFrequency: "monthly", priority: 0.5 },
   ];
 

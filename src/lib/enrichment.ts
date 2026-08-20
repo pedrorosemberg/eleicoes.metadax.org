@@ -4,6 +4,7 @@ import type {
   DivulgaCandDetalhe,
   TransparenciaResumo,
 } from "@/types/candidato";
+import { USER_AGENT } from "./http";
 
 /**
  * Funções de enriquecimento sob demanda. Usadas tanto pelos Server
@@ -21,6 +22,7 @@ export async function buscarDadosCnpj(cnpj: string): Promise<BrasilApiCnpjRespon
   if (limpo.length !== 14) return null;
   try {
     const res = await fetch(`https://brasilapi.com.br/api/cnpj/v1/${limpo}`, {
+      headers: { "User-Agent": USER_AGENT },
       next: { revalidate: CNPJ_CACHE_TTL },
     });
     if (!res.ok) return null;
@@ -40,7 +42,7 @@ export async function buscarDetalheDivulgaCand(params: {
   try {
     const res = await fetch(
       `https://divulgacandcontas.tse.jus.br/divulga/rest/v1/candidatura/buscar/${ano}/${municipio}/${eleicao}/candidato/${candidato}`,
-      { next: { revalidate: DIVULGACAND_CACHE_TTL } },
+      { headers: { "User-Agent": USER_AGENT }, next: { revalidate: DIVULGACAND_CACHE_TTL } },
     );
     if (!res.ok) return null;
     return (await res.json()) as DivulgaCandDetalhe;
@@ -69,7 +71,7 @@ export async function buscarTransparencia(
   const qs = new URLSearchParams({ pagina: "1", ...query }).toString();
   try {
     const res = await fetch(`${TRANSPARENCIA_BASE}/${tipo}?${qs}`, {
-      headers: { "chave-api-dados": apiKey },
+      headers: { "chave-api-dados": apiKey, "User-Agent": USER_AGENT },
       next: { revalidate: TRANSPARENCIA_CACHE_TTL },
     });
     if (!res.ok) return null;

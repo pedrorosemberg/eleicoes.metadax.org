@@ -10,6 +10,19 @@ político-partidária como requisito central — ver `docs/DESIGN_SYSTEM.md`.
 
 Licenciado sob [CC BY 4.0](LICENSE).
 
+## Páginas
+
+- `/` — apresentação do projeto
+- `/buscar` — busca **direta** (nome, número ou ID do candidato) ou **indireta**
+  (filtros combináveis por UF, cidade, cargo e partido)
+- `/candidato/[id]` — perfil de um candidato
+- `/status` — saúde em tempo real de cada fonte de dado externa (TSE, BrasilAPI,
+  Portal da Transparência), com checagem ao vivo a cada 30s
+- `/sobre` — metodologia, fontes e licença
+
+Todo horário exibido no site segue o padrão brasileiro (`America/Sao_Paulo`,
+GMT-3), independentemente do fuso do servidor.
+
 ## Documentação
 
 Leia antes de mexer no código — cada decisão de arquitetura, fonte de dado e

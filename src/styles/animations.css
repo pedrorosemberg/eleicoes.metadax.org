@@ -1,0 +1,64 @@
+/**
+ * Animações do produto — todas CSS-first (sem lib de animação), todas
+ * neutras em cor. Toda animação para com `prefers-reduced-motion: reduce`
+ * (regra geral já em tokens.css) — as classes abaixo, além disso,
+ * degradam para "totalmente visível, sem transição" quando o usuário não
+ * expressa preferência por movimento, via progressive enhancement: o
+ * estado-base de qualquer elemento é visível; a versão "escondido até
+ * entrar na tela" só existe dentro do media query que permite movimento.
+ */
+
+@keyframes metadax-marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.marquee-track {
+  display: flex;
+  width: max-content;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .marquee-track {
+    animation: metadax-marquee 32s linear infinite;
+  }
+  .marquee-track:hover,
+  .marquee-track:focus-within {
+    animation-play-state: paused;
+  }
+}
+
+.reveal {
+  opacity: 1;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .reveal {
+    opacity: 0;
+    transform: translateY(16px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+  .reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes metadax-fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .fade-in-on-load {
+    animation: metadax-fade-in 0.8s ease both;
+  }
+}
