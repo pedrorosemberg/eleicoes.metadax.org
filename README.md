@@ -6,7 +6,9 @@ CNPJ da Receita Federal (via [BrasilAPI](https://brasilapi.com.br)).
 
 Tema claro, preto e branco, sem cor de partido, mobile-first — neutralidade
 político-partidária como requisito central de design, ver `docs/DESIGN_SYSTEM.md`.
-Um projeto do [Instituto METADAX de Inovação (IMI)](https://imi.metadax.org).
+Sem nenhuma dependência de rede externa da METADAX (CDN, loader, header/footer) —
+tudo autocontido neste projeto. Um projeto do
+[Instituto METADAX de Inovação (IMI)](https://imi.metadax.org).
 
 Licenciado sob [CC BY 4.0](LICENSE).
 
@@ -15,7 +17,10 @@ Licenciado sob [CC BY 4.0](LICENSE).
 - `/` — apresentação do projeto
 - `/buscar` — busca **direta** (nome, número ou ID do candidato) ou **indireta**
   (filtros combináveis por UF, cidade, cargo e partido)
-- `/candidato/[id]` — perfil de um candidato
+- `/candidato/[id]` — perfil de um candidato: dados básicos, bens declarados, e —
+  ao vivo, via API — site oficial, plano de governo, histórico de candidaturas
+  anteriores (DivulgaCandContas) e cruzamento com o Portal da Transparência
+  (PEP, contratos, sanções)
 - `/mapa` — estatísticas públicas: candidatos por UF e por cargo (consumível também
   via `GET /api/estatisticas`, JSON, CORS aberto)
 - `/status` — saúde em tempo real de cada fonte de dado externa (TSE, BrasilAPI,
