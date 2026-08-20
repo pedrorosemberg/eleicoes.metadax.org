@@ -80,20 +80,31 @@ export default function RootLayout({
   return (
     <html lang="pt-BR" data-theme="light">
       <head>
-        <link rel="stylesheet" href="https://cdn.metadax.com.br/components/css/styles.css" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdWebsite) }}
         />
+        <noscript>
+          <style>{`.reveal{opacity:1 !important;transform:none !important;}`}</style>
+        </noscript>
       </head>
       <body>
         <Header />
         {children}
 
-        {/* Header/footer/loader institucionais, centralizados no CDN público da METADAX. */}
+        {/*
+          Deliberadamente SEM o header/footer/loader injetados pelo CDN
+          institucional da METADAX: são um script de terceiro cuja latência
+          este produto não controla, e um loader em tela cheia que pode
+          travar a primeira impressão do site se a rede do visitante for
+          lenta ou bloquear cdn.metadax.com.br. Este produto já tem seu
+          próprio Header e SiteFooter, totalmente autocontidos — o bloco
+          legal obrigatório da METADAX está em SiteFooter.tsx como texto
+          estático, sem depender de nenhum script externo. Mantido só o
+          botão de WhatsApp (widget flutuante pequeno, não bloqueia
+          conteúdo, falha de forma silenciosa se a rede não responder).
+        */}
         <Script src="https://cdn.metadax.com.br/components/scripts/whatsapp-button.js" strategy="afterInteractive" />
-        <Script src="https://cdn.metadax.com.br/metadax-loader.js" strategy="afterInteractive" />
-        <Script src="https://cdn.metadax.com.br/component-loader.js" strategy="afterInteractive" />
 
         <SiteFooter />
 

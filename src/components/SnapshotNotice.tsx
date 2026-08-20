@@ -1,10 +1,11 @@
 import { formatarDataHoraBR } from "@/lib/format";
+import { IconInfo } from "./icons";
 
 /**
  * Aviso de transparência do próprio produto: sempre visível quando a lista
  * exibida é o fixture de exemplo (ingestão ainda não rodou) ou quando
- * mostramos a data do último snapshot real. Nunca comunicado só por cor
- * — sempre com ícone + texto, ver docs/DESIGN_SYSTEM.md §3.
+ * mostramos a data do último snapshot real. Cor informativa (azul) +
+ * ícone + texto — nunca cor sozinha.
  */
 export function SnapshotNotice({
   isAmostra,
@@ -16,11 +17,13 @@ export function SnapshotNotice({
   if (isAmostra) {
     return (
       <div
-        className="flex items-start gap-2 rounded-[10px] border border-dashed p-3 text-sm text-[var(--text-secondary)]"
-        style={{ borderColor: "var(--hairline-strong)" }}
+        className="flex items-start gap-2 rounded-[10px] p-3 text-sm"
+        style={{ background: "var(--color-info-bg)", color: "var(--text-secondary)" }}
         role="status"
       >
-        <span aria-hidden>⚠</span>
+        <span className="mt-0.5 shrink-0" style={{ color: "var(--color-info)" }}>
+          <IconInfo />
+        </span>
         <p>
           <strong className="text-[var(--text-primary)]">Dados de exemplo.</strong> Ainda
           estamos processando a base oficial do TSE para este ambiente. Os candidatos abaixo

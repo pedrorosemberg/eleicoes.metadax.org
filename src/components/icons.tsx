@@ -1,7 +1,8 @@
 /**
- * Ícones monocromáticos (herdam a cor do texto via currentColor) — nunca
- * cor própria. Diferenciação de status vem do desenho do ícone + texto,
- * nunca de cor. Ver docs/DESIGN_SYSTEM.md §3.
+ * Ícones monocromáticos (herdam a cor via currentColor). Diferenciação de
+ * status vem do DESENHO do ícone + texto, nunca só de cor — mesmo nos
+ * casos em que o texto ao redor usa as cores semânticas (erro/execução/
+ * sucesso, ver tokens.css), o ícone muda de forma também.
  */
 type IconProps = { className?: string };
 
@@ -49,6 +50,34 @@ export function IconMenu({ className }: IconProps) {
   return (
     <svg viewBox="0 0 20 20" width="20" height="20" fill="none" className={className} aria-hidden>
       <path d="M3 6h14M3 10h14M3 14h14" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+    </svg>
+  );
+}
+
+export function IconInfo({ className }: IconProps) {
+  return (
+    <svg viewBox="0 0 20 20" width="16" height="16" fill="none" className={className} aria-hidden>
+      <circle cx="10" cy="10" r="7.5" stroke="currentColor" strokeWidth="1.6" />
+      <path d="M10 9v4.5" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" />
+      <circle cx="10" cy="6.5" r="1" fill="currentColor" />
+    </svg>
+  );
+}
+
+export function IconCheckCircle({ className }: IconProps) {
+  return (
+    <svg viewBox="0 0 20 20" width="16" height="16" fill="none" className={className} aria-hidden>
+      <circle cx="10" cy="10" r="7.5" stroke="currentColor" strokeWidth="1.6" />
+      <path d="M6.5 10.2 8.8 12.5 13.5 7.5" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
+  );
+}
+
+export function IconXCircle({ className }: IconProps) {
+  return (
+    <svg viewBox="0 0 20 20" width="16" height="16" fill="none" className={className} aria-hidden>
+      <circle cx="10" cy="10" r="7.5" stroke="currentColor" strokeWidth="1.6" />
+      <path d="M7.5 7.5l5 5M12.5 7.5l-5 5" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" />
     </svg>
   );
 }

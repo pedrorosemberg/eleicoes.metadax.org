@@ -1,10 +1,11 @@
 "use client";
 
-import { IconAlertTriangle } from "./icons";
+import { IconXCircle } from "./icons";
 
 /**
  * Estado de erro padrão do produto — usado pelos boundaries error.tsx de
- * cada rota. Ícone + texto, nunca cor sozinha (ver docs/DESIGN_SYSTEM.md §3).
+ * cada rota. Cor semântica de erro (vermelho) sempre acompanhada de ícone
+ * + texto, nunca cor sozinha.
  */
 export function ErrorState({
   titulo = "Algo deu errado",
@@ -18,11 +19,11 @@ export function ErrorState({
   return (
     <div
       className="mx-auto flex max-w-md flex-col items-center gap-3 rounded-[18px] border px-6 py-12 text-center"
-      style={{ borderColor: "var(--hairline)" }}
+      style={{ borderColor: "var(--color-error-bg)", background: "var(--color-error-bg)" }}
       role="alert"
     >
-      <span className="text-[var(--text-secondary)]">
-        <IconAlertTriangle className="h-8 w-8" />
+      <span style={{ color: "var(--color-error)" }}>
+        <IconXCircle className="h-8 w-8" />
       </span>
       <h2 className="text-[17px] font-semibold text-[var(--text-primary)]">{titulo}</h2>
       <p className="text-sm text-[var(--text-secondary)]">{descricao}</p>

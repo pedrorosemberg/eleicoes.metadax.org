@@ -7,17 +7,18 @@
 
 ## 1. Decisão de neutralidade — a regra que domina todas as outras
 
-Requisito explícito do projeto: **tema claro, predominância de preto e branco, sem azul, verde, amarelo ou vermelho** — para não sugerir associação com qualquer partido político. Isso é uma decisão deliberada de produto, não uma limitação técnica: uma ferramenta de transparência eleitoral não pode adotar a paleta de nenhum partido nem repetir o padrão visual (azul institucional, verde/vermelho de aprovação-reprovação) que os próprios partidos usam.
+Requisito explícito do projeto: **tema claro, predominância de preto e branco, sem cor de identidade partidária** — para não sugerir associação com qualquer partido político. Isso é uma decisão deliberada de produto, não uma limitação técnica: uma ferramenta de transparência eleitoral não pode adotar a paleta de nenhum partido nem repetir o padrão visual (azul institucional, verde/vermelho de aprovação-reprovação) que os próprios partidos usam para se identificar.
 
-**Resolução adotada:** o produto usa **apenas uma escala de neutros** (pretos, brancos, cinzas) e substitui toda comunicação que normalmente seria resolvida por cor — status, alerta, sinal financeiro — por **hierarquia tipográfica, ícone, borda e texto explícito**. Onde um sistema convencional diria "vermelho = erro", este projeto usa um ícone de alerta + texto + peso de fonte, nunca hue. Isso também reforça acessibilidade: nenhuma informação é comunicada só por cor.
+**Resolução adotada:** cor nunca é usada para decoração, marca, navegação ou identificação de categoria (cargo/UF/partido) — isso permanece só em preto, branco e cinza, com hierarquia tipográfica, ícone e texto explícito. A única exceção, deliberada, é um conjunto pequeno e fixo de **três cores semânticas de estado** (erro, execução/informativo, sucesso — Seção 2), usadas exclusivamente como *feedback funcional* (uma checagem deu certo, algo falhou, uma ação está em andamento) — nunca para diferenciar candidato, partido ou cargo. Mesmo nesses casos, cor nunca aparece sozinha: sempre com ícone de forma distinta + texto.
 
 **O que segue o padrão institucional da METADAX, por não ter carga partidária:**
 - Tipografia (Audiowide no logotipo — uso exclusivo —, Inter no restante do texto)
 - Grid, espaçamento e breakpoints do site institucional
 - Regras de uso da marca/logotipo (ver Manual de Marca, `metadax.com.br/manual-de-marca`)
-- Bloco de rodapé institucional obrigatório (CNPJ, endereço, razão social)
-- Header/footer/loader centralizados via CDN pública da METADAX — **não recriados localmente**
+- Bloco de rodapé institucional obrigatório (CNPJ, endereço, razão social) — reproduzido como texto estático em `SiteFooter.tsx` (ver nota abaixo sobre por que não vem do CDN)
 - Diretrizes de mobile-first, alvos de toque, safe-area
+
+**Decisão registrada:** o header/footer/loader em tela cheia do CDN público da METADAX (`cdn.metadax.com.br`) foram removidos deste projeto — não por divergência de marca, mas por confiabilidade: são scripts/CSS de terceiro carregados em tempo de execução, e uma rede lenta ou um bloqueio de `cdn.metadax.com.br` do lado do visitante trava a primeira renderização da página (o `<link rel="stylesheet">` daquele CDN era render-blocking) ou deixa um loader em tela cheia sem nunca resolver. Este produto tem seu próprio Header e SiteFooter, completos e autocontidos — o bloco legal obrigatório da METADAX está reproduzido como texto estático em `SiteFooter.tsx`, sem nenhuma dependência de rede externa. Mantido apenas o botão de WhatsApp (widget flutuante pequeno, não bloqueia conteúdo).
 
 ## 2. Paleta — tokens usados neste projeto
 
@@ -58,23 +59,36 @@ Tema **claro** apenas.
   --radius-card: 18px;
 
   --shadow-product: rgba(0, 0, 0, 0.16) 3px 5px 30px 0;
+
+  /* Semântica de estado — só feedback funcional, nunca decoração/marca/categoria */
+  --color-error: #C4281F;
+  --color-error-bg: rgba(196, 40, 31, 0.10);
+  --color-info: #0056B3;      /* reaproveita o azul institucional da METADAX — única aparição dele aqui */
+  --color-info-bg: rgba(0, 86, 179, 0.08);
+  --color-success: #16A34A;
+  --color-success-bg: rgba(22, 163, 74, 0.10);
 }
 ```
 
-**Cores explicitamente banidas neste produto** (não usar em nenhum componente): qualquer azul, vermelho, verde ou amarelo — inclusive as variações institucionais/semânticas que a METADAX usa em outros produtos próprios. Nenhuma delas tem papel aqui; usar qualquer uma reintroduziria cor onde a regra de neutralidade exige texto/ícone.
+**Regra de uso das três cores semânticas — a única exceção à neutralidade:**
+- `--color-error` (vermelho): algo falhou — boundary de erro, fonte de dado bloqueada/indisponível, candidatura indeferida/cassada.
+- `--color-info` (azul): informativo ou em andamento — aviso de dados de exemplo, fonte que precisa de configuração (chave de API), status "sub judice"/pendente.
+- `--color-success` (verde): confirmação positiva — fonte operacional, candidatura deferida.
+- **Nunca** para: identificar partido, cargo, UF, navegação, branding, ou qualquer elemento decorativo. Sempre acompanhadas de um ícone com forma distinta (não só a cor muda) e texto explícito — nunca cor sozinha carregando o significado.
 
-**Exceção única e explícita:** o **logotipo** da METADAX no header/footer usa suas cores oficiais — a marca em si não é "cor de ação da interface", é identidade institucional obrigatória, e o Manual de Marca da METADAX proíbe alterar as cores do logotipo.
+**Exceção adicional:** o **logotipo** da METADAX no header/footer usa suas cores oficiais — a marca em si não é "cor de ação da interface", é identidade institucional obrigatória, e o Manual de Marca da METADAX proíbe alterar as cores do logotipo.
 
-## 3. Como o produto resolve o que normalmente seria cor
+## 3. Como o produto usa (ou não) cor por tipo de informação
 
 | Necessidade | Solução neste projeto |
 |---|---|
-| Badge de status "Ativo"/"Indeferido"/"Cassado" do candidato | Texto explícito + ícone outline (check / x / alerta), fundo `--surface-2`, borda `--hairline-strong`, nunca fundo verde/vermelho |
-| Sinalizar valor financeiro (bens, contratos públicos) | `font-variant-numeric: tabular-nums`, fonte monoespaçada (JetBrains Mono) para todo valor em R$, sem cor de sinal |
-| Diferenciar cargo/UF/partido na lista de resultados | Tipografia (peso, tamanho) e ícones outline — nunca um sistema de cor por categoria, que é exatamente o padrão visual que os próprios partidos usam e que o requisito pede para evitar |
-| Alertar dado desatualizado / fonte indisponível | Ícone de alerta neutro (`--text-secondary`) + texto explicativo, borda tracejada em vez de fundo colorido |
-| Link para site oficial / plano de governo | Sublinhado + ícone de link externo, cor de texto igual ao restante do corpo (`--text-primary`) |
-| Status de saúde das fontes (`/status`) | Ícone distinto por estado (check / cadeado / alerta / x) + texto — nunca semáforo verde/amarelo/vermelho |
+| Situação da candidatura (Deferido/Indeferido/Cassado/etc.) | Badge com ícone (check-circle / x-circle) + texto, na cor semântica correspondente (verde/vermelho/azul) quando o texto do TSE é reconhecido com confiança; texto neutro sem cor quando não é |
+| Sinalizar valor financeiro (bens, contratos públicos) | `font-variant-numeric: tabular-nums`, fonte monoespaçada (JetBrains Mono) para todo valor em R$ — sem cor de sinal (não há "positivo/negativo" aqui, só magnitude) |
+| Diferenciar cargo/UF/partido na lista de resultados | Tipografia (peso, tamanho) e ícones outline — nunca cor, mesmo semântica; isso não é um "estado", é uma categoria, e categoria não usa cor neste produto |
+| Aviso de dados de exemplo / fonte ainda sem configuração | Ícone de informação + texto, fundo `--color-info-bg` |
+| Boundary de erro (`error.tsx`) | Ícone de x-circle + texto, na cor `--color-error` |
+| Link para site oficial / plano de governo | Sublinhado + ícone de link externo, cor de texto igual ao restante do corpo (`--text-primary`) — não é um estado, não leva cor semântica |
+| Status de saúde das fontes (`/status`) | Ícone distinto por estado (check-circle / cadeado / alerta / x-circle) + texto, na cor semântica correspondente |
 
 ## 4. Tipografia
 
@@ -94,7 +108,8 @@ Tema **claro** apenas.
 - Geometria de botão retangular com cantos arredondados (`--radius-button-*`), sempre preto/branco, nunca azul.
 - Sistema de inputs/select/checkbox/radio com focus ring neutro escuro.
 - Elevação por cor de superfície, nunca sombra decorativa.
-- Header/Footer/Loader via CDN pública da METADAX — reaproveitados como componentes prontos, sem recriação local.
+- Header (`Header.tsx`) e footer (`SiteFooter.tsx`) próprios, autocontidos — ver Seção 1 sobre por que não vêm mais do CDN institucional.
+- Barra de progresso animada no topo (`TopProgressBar.tsx`) durante navegação entre rotas — feedback de carregamento visível em toda troca de página.
 
 ## 6. Mobile-first
 

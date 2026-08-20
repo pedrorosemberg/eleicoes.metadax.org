@@ -10,7 +10,7 @@ export default function GlobalError({ reset }: { error: Error & { digest?: strin
     <html lang="pt-BR">
       <body style={{ fontFamily: "system-ui, sans-serif", background: "#FFFFFF", color: "#1E1E1E" }}>
         <main style={{ maxWidth: 480, margin: "80px auto", padding: "0 16px", textAlign: "center" }}>
-          <h1 style={{ fontSize: 24, fontWeight: 600 }}>Algo deu errado</h1>
+          <h1 style={{ fontSize: 24, fontWeight: 600, color: "#C4281F" }}>Algo deu errado</h1>
           <p style={{ color: "rgba(0,0,0,0.7)", marginTop: 8 }}>
             Não foi possível carregar o Eleições — METADAX agora. Tente novamente.
           </p>

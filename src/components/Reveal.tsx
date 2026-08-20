@@ -3,10 +3,11 @@
 import { useEffect, useRef, type CSSProperties, type ReactNode } from "react";
 
 /**
- * Revela o conteúdo com fade+translate ao entrar na tela. Sem JS, ou com
+ * Revela o conteúdo com fade+translate ao entrar na tela. Com
  * `prefers-reduced-motion: reduce`, o conteúdo já nasce visível — ver
- * src/styles/animations.css. Puramente decorativo: nunca esconde
- * conteúdo de crawlers (a classe base é `opacity: 1`).
+ * src/styles/animations.css. Puramente decorativo, nunca deveria esconder
+ * conteúdo de verdade — por isso o timeout de segurança abaixo, e o
+ * fallback `<noscript>` em app/layout.tsx para quando JS não roda.
  */
 export function Reveal({
   children,
@@ -25,17 +26,29 @@ export function Reveal({
     const el = ref.current;
     if (!el) return;
 
+    const revelar = () => el.classList.add("is-visible");
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry?.isIntersecting) {
-          el.classList.add("is-visible");
+          revelar();
           observer.disconnect();
         }
       },
       { threshold: 0.15 },
     );
     observer.observe(el);
-    return () => observer.disconnect();
+
+    // Rede de segurança: o conteúdo nunca pode ficar permanentemente
+    // invisível se o IntersectionObserver não disparar por qualquer
+    // motivo (hidratação lenta, scroll instantâneo, captura
+    // automatizada) — revela de qualquer forma após um tempo curto.
+    const timeout = setTimeout(revelar, 1200);
+
+    return () => {
+      observer.disconnect();
+      clearTimeout(timeout);
+    };
   }, []);
 
   return (

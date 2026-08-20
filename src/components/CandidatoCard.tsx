@@ -2,10 +2,29 @@ import Link from "next/link";
 import type { Candidato } from "@/types/candidato";
 
 /**
- * Cartão de resultado de busca. Sem cor por categoria/partido de propósito
- * — ver docs/DESIGN_SYSTEM.md §3 (diferenciação por tipografia/ícone, nunca hue).
+ * Classifica a situação da candidatura em uma cor semântica — só quando
+ * reconhecemos o texto do TSE com confiança; qualquer valor não mapeado
+ * fica neutro (nunca "adivinha" uma cor para um status desconhecido).
+ */
+function corSituacao(situacao: string): { cor: string; fundo: string } | null {
+  const s = situacao.toUpperCase();
+  if (s.includes("DEFERID")) return { cor: "var(--color-success)", fundo: "var(--color-success-bg)" };
+  if (s.includes("INDEFERID") || s.includes("CASSAD") || s.includes("INAPT")) {
+    return { cor: "var(--color-error)", fundo: "var(--color-error-bg)" };
+  }
+  if (s.includes("SUB JUDICE") || s.includes("RENUNC") || s.includes("PENDENTE")) {
+    return { cor: "var(--color-info)", fundo: "var(--color-info-bg)" };
+  }
+  return null;
+}
+
+/**
+ * Cartão de resultado de busca. Sem cor por partido/cargo — diferenciação
+ * por tipografia e ícone. A situação da candidatura é a única exceção,
+ * usando as cores semânticas de erro/execução/sucesso quando aplicável.
  */
 export function CandidatoCard({ candidato }: { candidato: Candidato }) {
+  const situacaoCor = corSituacao(candidato.situacao);
   return (
     <Link
       href={`/candidato/${candidato.sqCandidato}`}
@@ -33,7 +52,16 @@ export function CandidatoCard({ candidato }: { candidato: Candidato }) {
         <span aria-hidden>·</span>
         <span>{candidato.partido.nome}</span>
         <span aria-hidden>·</span>
-        <span>{candidato.situacao}</span>
+        {situacaoCor ? (
+          <span
+            className="rounded-full px-2 py-0.5 text-xs font-semibold"
+            style={{ background: situacaoCor.fundo, color: situacaoCor.cor }}
+          >
+            {candidato.situacao}
+          </span>
+        ) : (
+          <span>{candidato.situacao}</span>
+        )}
       </div>
     </Link>
   );

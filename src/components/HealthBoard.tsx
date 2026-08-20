@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import type { ChecagemFonte, StatusFonte } from "@/lib/health";
 import { formatarHoraBR } from "@/lib/format";
-import { IconAlertTriangle, IconCheck, IconLock, IconX } from "./icons";
+import { IconAlertTriangle, IconCheckCircle, IconLock, IconXCircle } from "./icons";
 
 const POLL_MS = 30_000;
 
@@ -14,16 +14,28 @@ const ROTULO: Record<StatusFonte, string> = {
   indisponivel: "Indisponível",
 };
 
+/**
+ * Única aparição de cor semântica fora dos tokens neutros — feedback de
+ * estado real (fonte no ar / precisa de config / fora do ar), sempre com
+ * ícone de forma distinta junto, nunca cor sozinha.
+ */
+const ESTILO_STATUS: Record<StatusFonte, { cor: string; fundo: string }> = {
+  operacional: { cor: "var(--color-success)", fundo: "var(--color-success-bg)" },
+  "requer-autenticacao": { cor: "var(--color-info)", fundo: "var(--color-info-bg)" },
+  bloqueado: { cor: "var(--color-error)", fundo: "var(--color-error-bg)" },
+  indisponivel: { cor: "var(--color-error)", fundo: "var(--color-error-bg)" },
+};
+
 function IconeStatus({ status }: { status: StatusFonte }) {
   switch (status) {
     case "operacional":
-      return <IconCheck />;
+      return <IconCheckCircle />;
     case "requer-autenticacao":
       return <IconLock />;
     case "bloqueado":
       return <IconAlertTriangle />;
     case "indisponivel":
-      return <IconX />;
+      return <IconXCircle />;
   }
 }
 
@@ -76,8 +88,8 @@ export function HealthBoard({ inicial }: { inicial: ChecagemFonte[] }) {
                 <p className="mt-0.5 text-sm text-[var(--text-secondary)]">{c.descricao}</p>
               </div>
               <span
-                className="flex shrink-0 items-center gap-1.5 rounded-full border px-2.5 py-1 text-xs font-semibold text-[var(--text-primary)]"
-                style={{ borderColor: "var(--hairline-strong)" }}
+                className="flex shrink-0 items-center gap-1.5 rounded-full px-2.5 py-1 text-xs font-semibold"
+                style={{ background: ESTILO_STATUS[c.status].fundo, color: ESTILO_STATUS[c.status].cor }}
               >
                 <IconeStatus status={c.status} />
                 {ROTULO[c.status]}
