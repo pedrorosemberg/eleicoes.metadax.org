@@ -63,6 +63,7 @@ Essa divisão existe por três motivos, todos documentados em `DATA_SOURCES.md`:
 | Cache de enriquecimento | `fetch(..., { next: { revalidate } })` do Next.js (ISR/cache de dados) — 7 dias para CNPJ, 6h para DivulgaCandContas, 1h para Portal da Transparência | CNPJ muda raramente; dados da CGU mudam mais |
 | Ingestão de dados TSE | Script Node standalone (`scripts/ingest-tse.ts`, rodado com `npm run ingest`), executado manualmente ou via cron **fora** do build da Vercel (ex.: GitHub Actions com runner cujo IP não esteja bloqueado, ou máquina do usuário) | Ver §5 do `DATA_SOURCES.md` — o resultado (`data/{ano}/**/*.json`) é lido por Server Components via `fs`, não via HTTP |
 | SEO/AEO/GEO | `generateMetadata` por rota, JSON-LD (`WebSite`, `Person` por candidato), `app/sitemap.ts`, `app/robots.ts` (permissivo, libera crawlers de IA), `public/llms.txt` | Ver §9 abaixo |
+| Mapa (`/mapa`) | Leaflet + `react-leaflet`, GeoJSON oficial do IBGE (`public/geo/brasil-uf.json`, ver `docs/DATA_SOURCES.md` §4c) | Coroplético real das fronteiras estaduais, cor em escala de cinza (intensidade = nº de candidatos) — sem camada de mapa-base (tiles), que introduziria cor fora da regra de neutralidade do projeto |
 
 ## 3. Modelo de dados
 
@@ -147,12 +148,15 @@ Se, ao testar a partir do ambiente de produção real (Vercel ou onde for hosped
 
 | Rota | Status | Conteúdo |
 |---|---|---|
-| `/` | **Implementado** | Landing/apresentação do projeto — hero, lista de funcionalidades (disponível vs. em desenvolvimento), princípios, link para o repositório público e para `/buscar` |
-| `/buscar` | **Implementado** (com dado de exemplo até a ingestão real rodar) | Busca — filtro por UF; lista de resultados em cards |
-| `/candidato/[id]` | **Implementado** (enriquecimento parcial) | Perfil: dados básicos, dados do partido via CNPJ; plano de governo/site oficial/histórico de candidaturas pendentes de ligar ao proxy DivulgaCandContas na UI |
-| `/partido/[sigla]` | **Pendente** | Dados cadastrais via CNPJ (BrasilAPI), lista de candidatos do partido na UF selecionada |
-| `/sobre` | **Implementado** | Transparência do próprio produto: metodologia, fontes, licença |
+| `/` | **Implementado** | Landing/apresentação do projeto — hero, lista de funcionalidades com status real (disponível/em progresso/indisponível), princípios, link para o repositório público e para `/buscar` |
+| `/buscar` | **Implementado** (com dado de exemplo até a ingestão real rodar) | Busca direta (nome/número/ID) e indireta (UF/cidade/cargo/partido), combináveis |
+| `/candidato/[id]` | **Implementado** (dados de ligação dependem do snapshot ter os campos `codMunicipio`/`codEleicao`, ver §4 do `DATA_SOURCES.md`) | Perfil: dados básicos, bens declarados, dados do partido via CNPJ, e — ao vivo — site oficial/plano de governo/histórico de candidaturas (DivulgaCandContas) e cruzamento com o Portal da Transparência (PEP/contratos/sanções) |
+| `/mapa` | **Implementado** | Coroplético real dos estados (Leaflet + GeoJSON do IBGE) e estatísticas por UF/cargo, também via `/api/estatisticas` |
 | `/status` | **Implementado** | Saúde em tempo real de cada fonte externa (TSE ×3, BrasilAPI, Portal da Transparência) — checagem ao vivo no servidor a cada carregamento + polling client-side a cada 30s via `/api/health` |
+| `/sobre` | **Implementado** | Transparência do próprio produto: metodologia, fontes, licença, responsável pelo projeto |
+| `/participe` | **Implementado** | Dicas de voto consciente + guia de contribuição ao projeto (issues, PRs, ajudar com a ingestão) |
+| `/privacidade`, `/termos` | **Implementado** | O que é coletado (Vercel Analytics/eventos de busca) e usos autorizados do site/dados |
+| `/partido/[sigla]` | **Pendente** | Dados cadastrais via CNPJ (BrasilAPI), lista de candidatos do partido na UF selecionada |
 
 ## 8. O que este projeto explicitamente não faz (fora de escopo do MVP)
 

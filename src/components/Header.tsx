@@ -12,6 +12,7 @@ const LINKS = [
   { href: "/mapa", label: "Mapa" },
   { href: "/status", label: "Status" },
   { href: "/sobre", label: "Sobre" },
+  { href: "/participe", label: "Participe" },
 ];
 
 export function Header() {

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { calcularEstatisticas } from "@/lib/stats";
 import { SnapshotNotice } from "@/components/SnapshotNotice";
 import { carregarMeta } from "@/lib/data";
+import { BrazilHeatmap } from "@/components/BrazilHeatmap";
 
 export const metadata: Metadata = {
   title: "Mapa e estatísticas",
@@ -49,15 +50,20 @@ export default async function MapaPage() {
         <code className="font-financial text-sm">GET /api/estatisticas</code> (JSON, CORS
         aberto).
       </p>
-      <p className="mt-2 text-sm text-[var(--text-tertiary)]">
-        Nota: esta é uma visualização por barras, não um mapa geográfico do Brasil — um
-        heatmap cartográfico real é uma melhoria futura documentada (depende de um SVG dos
-        estados brasileiros com fonte confirmada, ainda não incluído no projeto).
-      </p>
-
       <div className="mt-6">
         <SnapshotNotice isAmostra={estatisticas.isAmostra} geradoEm={meta?.geradoEm} />
       </div>
+
+      <section className="mt-8">
+        <h2 className="text-[20px] font-semibold text-[var(--text-primary)]">Mapa por UF</h2>
+        <p className="mt-1 text-sm text-[var(--text-tertiary)]">
+          Fronteiras reais dos estados (IBGE) — quanto mais escuro, mais candidatos. Clique
+          num estado para ir direto à busca filtrada por ele.
+        </p>
+        <div className="mt-4">
+          <BrazilHeatmap porUf={estatisticas.porUf} />
+        </div>
+      </section>
 
       <section className="mt-10">
         <h2 className="text-[20px] font-semibold text-[var(--text-primary)]">

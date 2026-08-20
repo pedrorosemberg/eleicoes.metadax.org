@@ -97,6 +97,55 @@ export default function SobrePage() {
         </a>
         ). A METADAX é uma marca da METADAX CONSULTORIA LTDA (CNPJ 65.640.808/0001-89).
       </p>
+
+      <h2 className="mt-10 text-[22px] font-semibold text-[var(--text-primary)]">Responsável pelo projeto</h2>
+      <div className="mt-4 flex items-start gap-4 rounded-[18px] border p-5" style={{ borderColor: "var(--hairline)" }}>
+        <div
+          className="flex h-16 w-16 shrink-0 items-center justify-center rounded-full text-[20px] font-semibold"
+          style={{ background: "var(--surface-2)", color: "var(--text-secondary)" }}
+          aria-hidden
+        >
+          PR
+        </div>
+        <div>
+          <p className="text-[17px] font-semibold text-[var(--text-primary)]">Pedro Rosemberg</p>
+          <p className="mt-1 text-sm text-[var(--text-secondary)]">
+            Idealizador e mantenedor do projeto, pelo Instituto METADAX de Inovação (IMI).
+          </p>
+          <ul className="mt-3 flex flex-wrap gap-x-4 gap-y-1.5 text-sm">
+            <li>
+              <a
+                className="underline underline-offset-2"
+                href="https://www.linkedin.com/in/pedrorosemberg/"
+                target="_blank"
+                rel="noreferrer noopener"
+              >
+                LinkedIn
+              </a>
+            </li>
+            <li>
+              <a
+                className="underline underline-offset-2"
+                href="https://orcid.org/0000-0002-4947-8174"
+                target="_blank"
+                rel="noreferrer noopener"
+              >
+                ORCID
+              </a>
+            </li>
+            <li>
+              <a
+                className="underline underline-offset-2"
+                href="http://lattes.cnpq.br/2162940985603250"
+                target="_blank"
+                rel="noreferrer noopener"
+              >
+                Lattes
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
     </main>
   );
 }

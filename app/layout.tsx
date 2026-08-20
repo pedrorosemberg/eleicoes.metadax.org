@@ -79,8 +79,8 @@ export const metadata: Metadata = {
     // publicidade institucional, é o mesmo dado de transparência.
     "geo.placename": "Belo Horizonte, MG, Brasil",
     "geo.region": "BR-MG",
-    "address": "Avenida Getúlio Vargas, 671, Sala 500, Savassi, Belo Horizonte, MG, CEP 30112-021, Brasil",
-    "company": "METADAX CONSULTORIA LTDA",
+    "address": "Avenida Getúlio Vargas, 671, Sala 500, Parte 1364, Savassi, Belo Horizonte, MG, CEP 30112-021, Brasil",
+    "company": "METADAX",
     "cnpj": "65.640.808/0001-89",
   },
 };
@@ -112,12 +112,13 @@ const jsonLdWebsite = {
 const jsonLdOperador = {
   "@context": "https://schema.org",
   "@type": "Organization",
-  name: "METADAX CONSULTORIA LTDA",
+  name: "METADAX",
+  legalName: "METADAX CONSULTORIA LTDA",
   url: "https://www.metadax.com.br",
   taxID: "65.640.808/0001-89",
   address: {
     "@type": "PostalAddress",
-    streetAddress: "Avenida Getúlio Vargas, 671, Sala 500",
+    streetAddress: "Avenida Getúlio Vargas, 671, Sala 500, Parte 1364",
     addressLocality: "Belo Horizonte",
     addressRegion: "MG",
     postalCode: "30112-021",

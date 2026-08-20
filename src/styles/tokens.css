@@ -5,10 +5,11 @@
  * Cor NUNCA é decorativa ou de marca neste produto — nada de azul/verde/
  * vermelho em botões, links, ícones de navegação, cards ou qualquer
  * elemento identitário (regra de neutralidade partidária, inegociável).
- * A única exceção são os três tokens semânticos abaixo (--color-error,
- * --color-info, --color-success), e só quando comunicam um ESTADO real
- * (erro/execução/sucesso) — sempre acompanhados de ícone + texto, nunca
- * cor sozinha.
+ * A única exceção são os quatro tokens semânticos abaixo (--color-error,
+ * --color-info, --color-success, --color-warning), e só quando comunicam
+ * um ESTADO real (erro/execução/sucesso/em progresso — ex.: badge de
+ * status de feature, "DISPONÍVEL"/"EM PROGRESSO"/"INDISPONÍVEL") —
+ * sempre acompanhados de ícone + texto, nunca cor sozinha.
  */
 
 :root {
@@ -48,6 +49,8 @@
   --color-info-bg: rgba(0, 86, 179, 0.08);
   --color-success: #16a34a;
   --color-success-bg: rgba(22, 163, 74, 0.1);
+  --color-warning: #b45309;
+  --color-warning-bg: rgba(180, 83, 9, 0.1);
 
   --radius-button-sm: 8px;
   --radius-button-md: 10px;

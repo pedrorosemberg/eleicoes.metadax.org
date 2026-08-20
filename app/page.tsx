@@ -3,6 +3,7 @@ import Link from "next/link";
 import { SourceMarquee } from "@/components/SourceMarquee";
 import { Reveal } from "@/components/Reveal";
 import { CounterStat } from "@/components/CounterStat";
+import { IconCheckCircle, IconAlertTriangle, IconXCircle } from "@/components/icons";
 
 const REPO_URL = "https://github.com/pedrorosemberg/eleicoes.metadax.org";
 
@@ -12,7 +13,9 @@ export const metadata: Metadata = {
     "Consulta pública de candidatos às eleições brasileiras: dados oficiais do TSE, plano de governo, partido e cruzamento com o Portal da Transparência e a Receita Federal. Projeto de código aberto, sem cor de partido.",
 };
 
-const FEATURES: Array<{ titulo: string; descricao: string; status: "disponível" | "em desenvolvimento" }> = [
+type StatusFeature = "disponível" | "em progresso" | "indisponível";
+
+const FEATURES: Array<{ titulo: string; descricao: string; status: StatusFeature }> = [
   {
     titulo: "Busca direta e por filtros",
     descricao:
@@ -22,14 +25,14 @@ const FEATURES: Array<{ titulo: string; descricao: string; status: "disponível"
   {
     titulo: "Site oficial e plano de governo",
     descricao:
-      "Link direto ao site/redes sociais informados ao TSE e ao PDF do plano de governo, via DivulgaCandContas.",
-    status: "em desenvolvimento",
+      "Link direto ao site/redes sociais informados ao TSE e ao PDF do plano de governo, via DivulgaCandContas — consulta ao vivo, funcional; aguardando a base do TSE liberar do lado deles.",
+    status: "em progresso",
   },
   {
     titulo: "Bens declarados",
     descricao:
       "Descrição e valor dos bens declarados na candidatura, conforme a regra de privacidade do TSE desde 2022.",
-    status: "em desenvolvimento",
+    status: "disponível",
   },
   {
     titulo: "Partido → CNPJ → sócios",
@@ -40,15 +43,22 @@ const FEATURES: Array<{ titulo: string; descricao: string; status: "disponível"
   {
     titulo: "Cruzamento com o Portal da Transparência",
     descricao:
-      "Contratos federais, status de Pessoa Exposta Politicamente (PEP) e sanções (CEIS/CNEP/CEPIM) ligados ao candidato ou a empresas dele.",
-    status: "em desenvolvimento",
+      "Contratos federais, status de Pessoa Exposta Politicamente (PEP) e sanções (CEIS/CNEP/CEPIM) ligados ao candidato ou a empresas dele — consulta ao vivo pronta, aguardando a chave de API do Portal da Transparência.",
+    status: "em progresso",
   },
   {
     titulo: "Histórico de candidaturas anteriores",
-    descricao: "Mandatos e candidaturas passadas, para acompanhar trajetória política ao longo do tempo.",
-    status: "em desenvolvimento",
+    descricao:
+      "Mandatos e candidaturas passadas, via DivulgaCandContas — consulta ao vivo, funcional; aguardando a base do TSE liberar do lado deles.",
+    status: "em progresso",
   },
 ];
+
+const STATUS_CONFIG: Record<StatusFeature, { rotulo: string; cor: string; corFundo: string; Icone: typeof IconCheckCircle }> = {
+  disponível: { rotulo: "disponível", cor: "var(--color-success)", corFundo: "var(--color-success-bg)", Icone: IconCheckCircle },
+  "em progresso": { rotulo: "em progresso", cor: "var(--color-warning)", corFundo: "var(--color-warning-bg)", Icone: IconAlertTriangle },
+  indisponível: { rotulo: "indisponível", cor: "var(--color-error)", corFundo: "var(--color-error-bg)", Icone: IconXCircle },
+};
 
 const PRINCIPIOS = [
   {
@@ -77,7 +87,7 @@ export default function LandingPage() {
             className="w-fit rounded-full border px-3 py-1 text-xs font-semibold uppercase tracking-wide text-[var(--text-secondary)]"
             style={{ borderColor: "var(--hairline-strong)" }}
           >
-            Em construção · MVP público
+            Projeto open source
           </span>
           <h1 className="text-[clamp(32px,7vw,56px)] font-semibold leading-[1.07] tracking-tight text-[var(--text-primary)]">
             Transparência eleitoral, sem cor de partido.
@@ -134,25 +144,29 @@ export default function LandingPage() {
             O que o projeto faz
           </h2>
           <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2">
-            {FEATURES.map((f, i) => (
-              <Reveal key={f.titulo} delayMs={i * 60}>
-                <div
-                  className="h-full rounded-[18px] border p-4 sm:p-5"
-                  style={{ borderColor: "var(--hairline)" }}
-                >
-                  <div className="flex items-start justify-between gap-3">
-                    <h3 className="text-[17px] font-semibold text-[var(--text-primary)]">{f.titulo}</h3>
-                    <span
-                      className="shrink-0 rounded-full border px-2 py-0.5 text-[11px] font-semibold uppercase tracking-wide text-[var(--text-tertiary)]"
-                      style={{ borderColor: "var(--hairline-strong)" }}
-                    >
-                      {f.status === "disponível" ? "✓ disponível" : "em progresso"}
-                    </span>
+            {FEATURES.map((f, i) => {
+              const { rotulo, cor, corFundo, Icone } = STATUS_CONFIG[f.status];
+              return (
+                <Reveal key={f.titulo} delayMs={i * 60}>
+                  <div
+                    className="h-full rounded-[18px] border p-4 sm:p-5"
+                    style={{ borderColor: "var(--hairline)" }}
+                  >
+                    <div className="flex items-start justify-between gap-3">
+                      <h3 className="text-[17px] font-semibold text-[var(--text-primary)]">{f.titulo}</h3>
+                      <span
+                        className="inline-flex shrink-0 items-center gap-1 rounded-full px-2 py-0.5 text-[11px] font-semibold uppercase tracking-wide"
+                        style={{ color: cor, background: corFundo }}
+                      >
+                        <Icone className="h-3 w-3" />
+                        {rotulo}
+                      </span>
+                    </div>
+                    <p className="mt-2 text-sm leading-relaxed text-[var(--text-secondary)]">{f.descricao}</p>
                   </div>
-                  <p className="mt-2 text-sm leading-relaxed text-[var(--text-secondary)]">{f.descricao}</p>
-                </div>
-              </Reveal>
-            ))}
+                </Reveal>
+              );
+            })}
           </div>
         </section>
 
@@ -170,6 +184,13 @@ export default function LandingPage() {
               </Reveal>
             ))}
           </div>
+          <Link
+            href="/participe"
+            className="mt-6 inline-flex h-11 items-center rounded-[10px] border px-5 text-[15px] font-semibold text-[var(--text-primary)] hover:bg-[var(--surface-1)]"
+            style={{ borderColor: "var(--action-ghost-border)" }}
+          >
+            Vote com consciência e participe do projeto →
+          </Link>
         </section>
 
         <Reveal className="mt-16">

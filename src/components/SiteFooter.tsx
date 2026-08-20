@@ -17,6 +17,9 @@ export function SiteFooter() {
           <Link href="/sobre" className="underline underline-offset-2">
             Sobre e fontes
           </Link>
+          <Link href="/participe" className="underline underline-offset-2">
+            Participe
+          </Link>
           <Link href="/privacidade" className="underline underline-offset-2">
             Privacidade
           </Link>
@@ -41,8 +44,8 @@ export function SiteFooter() {
 
         <div className="border-t pt-4 text-xs leading-relaxed" style={{ borderColor: "var(--hairline)" }}>
           <p className="font-semibold text-[var(--text-secondary)]">METADAX</p>
-          <p>METADAX CONSULTORIA LTDA — CNPJ 65.640.808/0001-89</p>
-          <p>Av. Getúlio Vargas, 671, Sala 500 — Savassi, Belo Horizonte, MG — CEP 30112-021</p>
+          <p>METADAX — CNPJ 65.640.808/0001-89</p>
+          <p>Av. Getúlio Vargas, 671, Sala 500, Parte 1364 — Savassi, Belo Horizonte, MG — CEP 30112-021</p>
           <a href="https://www.metadax.com.br" target="_blank" rel="noreferrer noopener" className="underline underline-offset-2">
             metadax.com.br
           </a>

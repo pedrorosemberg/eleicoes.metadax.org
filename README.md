@@ -21,11 +21,12 @@ Licenciado sob [CC BY 4.0](LICENSE).
   ao vivo, via API — site oficial, plano de governo, histórico de candidaturas
   anteriores (DivulgaCandContas) e cruzamento com o Portal da Transparência
   (PEP, contratos, sanções)
-- `/mapa` — estatísticas públicas: candidatos por UF e por cargo (consumível também
-  via `GET /api/estatisticas`, JSON, CORS aberto)
+- `/mapa` — mapa coroplético real (Leaflet + fronteiras oficiais do IBGE) e
+  estatísticas por UF/cargo (consumível também via `GET /api/estatisticas`, JSON, CORS aberto)
 - `/status` — saúde em tempo real de cada fonte de dado externa (TSE, BrasilAPI,
   Portal da Transparência), com checagem ao vivo a cada 30s
-- `/sobre` — metodologia, fontes e licença
+- `/sobre` — metodologia, fontes, licença e responsável pelo projeto
+- `/participe` — dicas de voto consciente e como contribuir com o projeto
 - `/privacidade` — o que é coletado (Vercel Analytics/Speed Insights, eventos de busca) e por quê
 - `/termos` — usos autorizados do site e dos dados
 

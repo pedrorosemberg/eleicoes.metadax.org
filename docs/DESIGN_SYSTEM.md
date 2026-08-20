@@ -67,13 +67,16 @@ Tema **claro** apenas.
   --color-info-bg: rgba(0, 86, 179, 0.08);
   --color-success: #16A34A;
   --color-success-bg: rgba(22, 163, 74, 0.10);
+  --color-warning: #B45309;
+  --color-warning-bg: rgba(180, 83, 9, 0.10);
 }
 ```
 
-**Regra de uso das três cores semânticas — a única exceção à neutralidade:**
-- `--color-error` (vermelho): algo falhou — boundary de erro, fonte de dado bloqueada/indisponível, candidatura indeferida/cassada.
-- `--color-info` (azul): informativo ou em andamento — aviso de dados de exemplo, fonte que precisa de configuração (chave de API), status "sub judice"/pendente.
-- `--color-success` (verde): confirmação positiva — fonte operacional, candidatura deferida.
+**Regra de uso das quatro cores semânticas — a única exceção à neutralidade:**
+- `--color-error` (vermelho): algo falhou — boundary de erro, fonte de dado bloqueada/indisponível, candidatura indeferida/cassada, funcionalidade indisponível.
+- `--color-info` (azul): informativo — aviso de dados de exemplo, fonte que precisa de configuração (chave de API), status "sub judice"/pendente.
+- `--color-success` (verde): confirmação positiva — fonte operacional, candidatura deferida, funcionalidade disponível.
+- `--color-warning` (âmbar/laranja): em progresso — usado especificamente no badge de status de funcionalidade da home (`/`), para "em progresso" (código pronto, aguardando dado real ou configuração externa) — distinto de `--color-info` para não confundir "isto é só um aviso" com "isto está sendo construído".
 - **Nunca** para: identificar partido, cargo, UF, navegação, branding, ou qualquer elemento decorativo. Sempre acompanhadas de um ícone com forma distinta (não só a cor muda) e texto explícito — nunca cor sozinha carregando o significado.
 
 **Exceção adicional:** o **logotipo** da METADAX no header/footer usa suas cores oficiais — a marca em si não é "cor de ação da interface", é identidade institucional obrigatória, e o Manual de Marca da METADAX proíbe alterar as cores do logotipo.
@@ -89,6 +92,7 @@ Tema **claro** apenas.
 | Boundary de erro (`error.tsx`) | Ícone de x-circle + texto, na cor `--color-error` |
 | Link para site oficial / plano de governo | Sublinhado + ícone de link externo, cor de texto igual ao restante do corpo (`--text-primary`) — não é um estado, não leva cor semântica |
 | Status de saúde das fontes (`/status`) | Ícone distinto por estado (check-circle / cadeado / alerta / x-circle) + texto, na cor semântica correspondente |
+| Status de funcionalidade na home (`/`) | Badge com ícone + texto: `--color-success` (verde) = disponível, `--color-warning` (âmbar/laranja) = em progresso, `--color-error` (vermelho) = indisponível — mesma regra: nunca cor sozinha |
 
 ## 4. Tipografia
 
