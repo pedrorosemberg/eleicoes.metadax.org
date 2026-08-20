@@ -149,8 +149,8 @@ Se, ao testar a partir do ambiente de produção real (Vercel ou onde for hosped
 | Rota | Status | Conteúdo |
 |---|---|---|
 | `/` | **Implementado** | Landing/apresentação do projeto — hero, lista de funcionalidades com status real (disponível/em progresso/indisponível), princípios, link para o repositório público e para `/buscar` |
-| `/buscar` | **Implementado** (com dado de exemplo até a ingestão real rodar) | Busca direta (nome/número/ID) e indireta (UF/cidade/cargo/partido), combináveis |
-| `/candidato/[id]` | **Implementado** (dados de ligação dependem do snapshot ter os campos `codMunicipio`/`codEleicao`, ver §4 do `DATA_SOURCES.md`) | Perfil: dados básicos, bens declarados, dados do partido via CNPJ, e — ao vivo — site oficial/plano de governo/histórico de candidaturas (DivulgaCandContas) e cruzamento com o Portal da Transparência (PEP/contratos/sanções) |
+| `/buscar` | **Implementado**, snapshot real commitado (20/08/2026) | Busca direta (nome/número/ID) e indireta (UF/cidade/cargo/partido), combináveis |
+| `/candidato/[id]` | **Implementado** | Perfil: dados básicos, bens declarados, redes sociais, coligação (composição/situação), dados do partido via CNPJ, cruzamento com o Portal da Transparência (PEP/contratos/sanções). Site oficial/plano de governo/histórico via DivulgaCandContas fica desativado neste snapshot — falta um `codMunicipio` confiável para candidaturas estaduais/federais, só `codEleicao` foi confirmado (ver §4/§5 do `DATA_SOURCES.md`) |
 | `/mapa` | **Implementado** | Coroplético real dos estados (Leaflet + GeoJSON do IBGE) e estatísticas por UF/cargo, também via `/api/estatisticas` |
 | `/status` | **Implementado** | Saúde em tempo real de cada fonte externa (TSE ×3, BrasilAPI, Portal da Transparência) — checagem ao vivo no servidor a cada carregamento + polling client-side a cada 30s via `/api/health` |
 | `/sobre` | **Implementado** | Transparência do próprio produto: metodologia, fontes, licença, responsável pelo projeto |
@@ -158,7 +158,7 @@ Se, ao testar a partir do ambiente de produção real (Vercel ou onde for hosped
 | `/privacidade`, `/termos` | **Implementado** | O que é coletado (Vercel Analytics/eventos de busca) e usos autorizados do site/dados |
 | `/partido/[sigla]` | **Pendente** | Dados cadastrais via CNPJ (BrasilAPI), lista de candidatos do partido na UF selecionada |
 
-## 8. O que este projeto explicitamente não faz (fora de escopo do MVP)
+## 8. O que este projeto explicitamente não faz (fora de escopo)
 
 - Não replica autenticação/login — é 100% leitura pública.
 - Não faz scraping de páginas HTML de campanha (apenas os links oficiais informados ao TSE) — evita fragilidade e problemas de direitos autorais sobre conteúdo de terceiros.

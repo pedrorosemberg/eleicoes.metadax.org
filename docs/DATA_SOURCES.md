@@ -263,7 +263,7 @@ Todos paginados (`pagina`, padrão `1`), retorno JSON, limite de itens por pági
 
 ## 4b. Outras fontes mapeadas (avaliadas e descartadas ou pendentes)
 
-A pedido do usuário, as fontes abaixo foram checadas nesta sessão. Nenhuma delas entra na arquitetura do MVP — os motivos estão registrados para não serem reavaliadas sem necessidade.
+A pedido do usuário, as fontes abaixo foram checadas nesta sessão. Nenhuma delas entra na arquitetura do produto — os motivos estão registrados para não serem reavaliadas sem necessidade.
 
 | Fonte | O que é | Status do teste | Decisão |
 |---|---|---|---|

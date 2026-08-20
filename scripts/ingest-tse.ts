@@ -19,26 +19,31 @@
  * baixar — útil quando alguém baixou os ZIPs manualmente (navegador, outra
  * máquina) de uma rede que funciona e só precisa rodar o parsing daqui.
  * Nomes de arquivo esperados: `consulta_cand_{ano}.zip`,
- * `bem_candidato_{ano}.zip` (mesma convenção do CDN do TSE).
+ * `bem_candidato_{ano}.zip`, `rede_social_candidato_{ano}.zip`,
+ * `motivo_cassacao_{ano}.zip`, `consulta_coligacao_{ano}.zip`,
+ * `consulta_vagas_{ano}.zip` (mesma convenção do CDN do TSE).
  *
  * O que faz:
- *  1. Obtém consulta_cand_{ano}.zip e bem_candidato_{ano}.zip (download do
- *     CDN do TSE, ou de --from-dir).
+ *  1. Obtém cada ZIP (download do CDN do TSE, ou de --from-dir). Só
+ *     `consulta_cand` é obrigatório — todo o resto é opcional: se faltar,
+ *     é pulado com um aviso, sem derrubar a ingestão inteira (ver
+ *     `ingestarOpcional`).
  *  2. Extrai o CSV consolidado (_BRASIL.csv) de cada um.
  *  3. Converte de Latin-1 para UTF-8 e faz parsing (separador ";").
- *  4. Agrupa por UF e grava em data/{ano}/candidatos/{UF}.json e
- *     data/{ano}/bens/{UF}.json.
+ *  4. Agrupa por UF (quando faz sentido) e grava em
+ *     data/{ano}/candidatos/{UF}.json, data/{ano}/bens/{UF}.json,
+ *     data/{ano}/redes-sociais/{UF}.json, data/{ano}/motivos-cassacao/{UF}.json,
+ *     data/{ano}/coligacoes.json (não é por-UF — uma coligação cobre um
+ *     cargo numa UF, faz mais sentido como lista única) e
+ *     data/{ano}/vagas.json (idem — poucas linhas, uma por UF+cargo).
  *  5. Grava data/{ano}/meta.json com o timestamp da ingestão.
  *
- * Nomes de coluna: confirmados para `consulta_cand` contra um ZIP real
- * baixado em 2026-08-20 (eleições gerais/estaduais 2026). Para
- * `bem_candidato`, os nomes abaixo seguem o padrão de nomenclatura usado
- * pelo TSE em outros datasets (prefixo SQ_/DS_/VR_) mas NÃO foram
- * confirmados contra um ZIP real desse dataset especificamente — confira
- * contra o leiame.pdf na primeira execução real e ajuste BEM_COLUNAS
- * abaixo se necessário.
+ * Nomes de coluna: confirmados para `consulta_cand`, `bem_candidato`,
+ * `rede_social_candidato`, `motivo_cassacao` e `consulta_coligacao` contra
+ * ZIPs reais coletados em 2026-08-20 (eleições gerais/estaduais 2026) —
+ * ver docs/DATA_SOURCES.md §1 para a origem exata de cada um.
  */
-import { mkdir, readFile, rm, writeFile } from "node:fs/promises";
+import { mkdir, readdir, readFile, rm, writeFile } from "node:fs/promises";
 import path from "node:path";
 import AdmZip from "adm-zip";
 import { parse } from "csv-parse/sync";
@@ -69,6 +74,9 @@ const CAND_COLUNAS = {
   // DivulgaCandContas (ver src/types/candidato.ts) — confirmado presente
   // no CSV real (coluna CD_ELEICAO).
   codEleicao: "CD_ELEICAO",
+  // Chave para cruzar com o dataset consulta_coligacao (composição e
+  // situação da coligação) — confirmado presente no CSV real.
+  sqColigacao: "SQ_COLIGACAO",
 } as const;
 
 // NÃO existe coluna CD_MUNICIPIO em `consulta_cand` para eleições de
@@ -83,11 +91,37 @@ const CAND_COLUNAS = {
 // eleições municipais (vereador/prefeito) o dataset provavelmente traz
 // CD_MUNICIPIO de verdade — reconfirmar quando houver um ZIP desse tipo.
 
-// Não confirmado contra o leiame.pdf real — ver aviso no cabeçalho do arquivo.
 const BEM_COLUNAS = {
   sqCandidato: "SQ_CANDIDATO",
   descricao: "DS_BEM_CANDIDATO",
   valor: "VR_BEM_CANDIDATO",
+} as const;
+
+const REDE_SOCIAL_COLUNAS = {
+  sqCandidato: "SQ_CANDIDATO",
+  url: "DS_URL",
+} as const;
+
+const MOTIVO_CASSACAO_COLUNAS = {
+  sqCandidato: "SQ_CANDIDATO",
+  numeroProcesso: "NR_PROCESSO",
+  tipoMotivo: "DS_TP_MOTIVO",
+  motivo: "DS_MOTIVO",
+} as const;
+
+const COLIGACAO_COLUNAS = {
+  sqColigacao: "SQ_COLIGACAO",
+  uf: "SG_UF",
+  cargo: "DS_CARGO",
+  nome: "NM_COLIGACAO",
+  composicao: "DS_COMPOSICAO_COLIGACAO",
+  situacao: "DS_SITUACAO",
+} as const;
+
+const VAGA_COLUNAS = {
+  uf: "SG_UF",
+  cargo: "DS_CARGO",
+  quantidade: "QT_VAGA",
 } as const;
 
 const TENTATIVAS_DOWNLOAD = 3;
@@ -237,6 +271,7 @@ async function ingestCandidatos(): Promise<Set<string>> {
       // codMunicipio fica de fora — ver nota acima de CAND_COLUNAS sobre a
       // ausência dessa coluna para eleições estaduais/federais.
       codEleicao: linha[CAND_COLUNAS.codEleicao] || undefined,
+      sqColigacao: linha[CAND_COLUNAS.sqColigacao] || undefined,
     };
 
     if (!porUf.has(uf)) porUf.set(uf, []);
@@ -255,47 +290,62 @@ async function ingestCandidatos(): Promise<Set<string>> {
   return ufsEncontradas;
 }
 
-/**
- * Ingestão de bens é tratada como opcional em relação à de candidatos:
- * se o ZIP de `bem_candidato` não estiver disponível (--from-dir sem esse
- * arquivo, ou bloqueio de rede só nesse dataset), a ingestão de
- * candidatos — o dado principal — não deve ser jogada fora por causa
- * disso. `carregarBensPorUf` (src/lib/data.ts) já degrada para a amostra
- * quando não encontra `data/{ano}/bens/{uf}.json`, então pular é seguro.
- */
-async function ingestBens(): Promise<void> {
-  let zipBuffer: Buffer;
-  try {
-    zipBuffer = await obterZip("bem_candidato");
-  } catch (err) {
-    console.warn(
-      `Pulando ingestão de bens: ${err instanceof Error ? err.message : String(err)}`,
-    );
-    return;
-  }
-  const csv = extrairCsvBrasil(zipBuffer, "bem_candidato");
-  const linhas = parseCsvTse(csv);
-  console.log(`${linhas.length} linhas de bens lidas`);
-  validarColunaCritica(linhas, BEM_COLUNAS.sqCandidato, "bem_candidato");
+let indiceUfPorCandidatoCache: Map<string, string> | null = null;
 
-  // O CSV de bens não tem UF direta — cruzamos com o índice de candidatos
-  // já gravado para agrupar por UF (mesma UF do candidato dono do bem).
-  const indiceUfPorCandidato = new Map<string, string>();
+/**
+ * Vários datasets do TSE (bens, redes sociais, motivo de cassação) trazem
+ * `SQ_CANDIDATO` mas não UF direta — cruzamos com o índice de candidatos
+ * já gravado por `ingestCandidatos` para agrupar cada um por UF (mesma UF
+ * do candidato dono do registro). Cacheado porque é lido do disco uma vez
+ * e reaproveitado pelas três ingestões opcionais abaixo.
+ */
+async function indiceUfPorCandidato(): Promise<Map<string, string>> {
+  if (indiceUfPorCandidatoCache) return indiceUfPorCandidatoCache;
+  const indice = new Map<string, string>();
   const candidatosDir = path.join(DATA_DIR, "candidatos");
-  const arquivos = await import("node:fs/promises").then((fs) => fs.readdir(candidatosDir));
+  const arquivos = await readdir(candidatosDir);
   for (const arquivo of arquivos) {
     const uf = arquivo.replace(".json", "");
     const candidatos = JSON.parse(
       await readFile(path.join(candidatosDir, arquivo), "utf-8"),
     ) as { sqCandidato: string }[];
-    for (const c of candidatos) indiceUfPorCandidato.set(c.sqCandidato, uf);
+    for (const c of candidatos) indice.set(c.sqCandidato, uf);
   }
+  indiceUfPorCandidatoCache = indice;
+  return indice;
+}
 
+/**
+ * Roda uma ingestão opcional (todo dataset além de `consulta_cand`) e
+ * nunca deixa a falta dele (ZIP ausente em --from-dir, ou bloqueio de
+ * rede só nesse dataset) derrubar a ingestão inteira — o dado principal
+ * (candidatos) já foi gravado antes de qualquer uma destas rodar. Cada
+ * loader em src/lib/data.ts já trata a ausência do arquivo de saída como
+ * "esse enriquecimento não está disponível", não como erro.
+ */
+async function ingestarOpcional(dataset: string, tarefa: () => Promise<void>): Promise<void> {
+  try {
+    await tarefa();
+  } catch (err) {
+    console.warn(
+      `Pulando ingestão de ${dataset}: ${err instanceof Error ? err.message : String(err)}`,
+    );
+  }
+}
+
+async function ingestBens(): Promise<void> {
+  const zipBuffer = await obterZip("bem_candidato");
+  const csv = extrairCsvBrasil(zipBuffer, "bem_candidato");
+  const linhas = parseCsvTse(csv);
+  console.log(`${linhas.length} linhas de bens lidas`);
+  validarColunaCritica(linhas, BEM_COLUNAS.sqCandidato, "bem_candidato");
+
+  const indice = await indiceUfPorCandidato();
   const porUf = new Map<string, unknown[]>();
   for (const linha of linhas) {
     const sqCandidato = linha[BEM_COLUNAS.sqCandidato];
     if (!sqCandidato) continue;
-    const uf = indiceUfPorCandidato.get(sqCandidato);
+    const uf = indice.get(sqCandidato);
     if (!uf) continue;
 
     const bem = {
@@ -314,11 +364,137 @@ async function ingestBens(): Promise<void> {
   console.log(`Gravado bens para ${porUf.size} UFs`);
 }
 
+async function ingestRedesSociais(): Promise<void> {
+  const zipBuffer = await obterZip("rede_social_candidato");
+  const csv = extrairCsvBrasil(zipBuffer, "rede_social_candidato");
+  const linhas = parseCsvTse(csv);
+  console.log(`${linhas.length} linhas de redes sociais lidas`);
+  validarColunaCritica(linhas, REDE_SOCIAL_COLUNAS.sqCandidato, "rede_social_candidato");
+
+  const indice = await indiceUfPorCandidato();
+  const porUf = new Map<string, unknown[]>();
+  for (const linha of linhas) {
+    const sqCandidato = linha[REDE_SOCIAL_COLUNAS.sqCandidato];
+    const url = linha[REDE_SOCIAL_COLUNAS.url];
+    if (!sqCandidato || !url) continue;
+    const uf = indice.get(sqCandidato);
+    if (!uf) continue;
+
+    if (!porUf.has(uf)) porUf.set(uf, []);
+    porUf.get(uf)!.push({ sqCandidato, url });
+  }
+
+  await mkdir(path.join(DATA_DIR, "redes-sociais"), { recursive: true });
+  for (const [uf, redes] of porUf) {
+    await writeFile(
+      path.join(DATA_DIR, "redes-sociais", `${uf}.json`),
+      JSON.stringify(redes, null, 2),
+      "utf-8",
+    );
+  }
+  console.log(`Gravado redes sociais para ${porUf.size} UFs`);
+}
+
+/**
+ * Só existe registro para candidatos com candidatura efetivamente cassada
+ * — o dataset pode vir com zero linhas de dado (só cabeçalho) numa
+ * eleição em andamento, o que é um resultado válido, não uma falha.
+ */
+async function ingestMotivosCassacao(): Promise<void> {
+  const zipBuffer = await obterZip("motivo_cassacao");
+  const csv = extrairCsvBrasil(zipBuffer, "motivo_cassacao");
+  const linhas = parseCsvTse(csv);
+  console.log(`${linhas.length} linhas de motivo de cassação lidas`);
+  if (linhas.length === 0) {
+    console.log("Nenhuma cassação registrada ainda — nada para gravar.");
+    return;
+  }
+
+  const indice = await indiceUfPorCandidato();
+  const porUf = new Map<string, unknown[]>();
+  for (const linha of linhas) {
+    const sqCandidato = linha[MOTIVO_CASSACAO_COLUNAS.sqCandidato];
+    if (!sqCandidato) continue;
+    const uf = indice.get(sqCandidato);
+    if (!uf) continue;
+
+    const motivo = {
+      sqCandidato,
+      numeroProcesso: linha[MOTIVO_CASSACAO_COLUNAS.numeroProcesso],
+      tipoMotivo: linha[MOTIVO_CASSACAO_COLUNAS.tipoMotivo],
+      motivo: linha[MOTIVO_CASSACAO_COLUNAS.motivo],
+    };
+    if (!porUf.has(uf)) porUf.set(uf, []);
+    porUf.get(uf)!.push(motivo);
+  }
+
+  await mkdir(path.join(DATA_DIR, "motivos-cassacao"), { recursive: true });
+  for (const [uf, motivos] of porUf) {
+    await writeFile(
+      path.join(DATA_DIR, "motivos-cassacao", `${uf}.json`),
+      JSON.stringify(motivos, null, 2),
+      "utf-8",
+    );
+  }
+  console.log(`Gravado motivos de cassação para ${porUf.size} UFs`);
+}
+
+/**
+ * Coligações e vagas já trazem `SG_UF` direto na própria linha (não
+ * precisam do índice por candidato) e são pequenas o bastante (milhares e
+ * centenas de linhas, respectivamente) para ficarem num arquivo único em
+ * vez de particionadas por UF.
+ */
+async function ingestColigacoes(): Promise<void> {
+  const zipBuffer = await obterZip("consulta_coligacao");
+  const csv = extrairCsvBrasil(zipBuffer, "consulta_coligacao");
+  const linhas = parseCsvTse(csv);
+  console.log(`${linhas.length} linhas de coligações lidas`);
+  validarColunaCritica(linhas, COLIGACAO_COLUNAS.sqColigacao, "consulta_coligacao");
+
+  const coligacoes = linhas
+    .filter((linha) => linha[COLIGACAO_COLUNAS.sqColigacao])
+    .map((linha) => ({
+      sqColigacao: linha[COLIGACAO_COLUNAS.sqColigacao],
+      uf: linha[COLIGACAO_COLUNAS.uf],
+      cargo: linha[COLIGACAO_COLUNAS.cargo],
+      nome: linha[COLIGACAO_COLUNAS.nome],
+      composicao: linha[COLIGACAO_COLUNAS.composicao],
+      situacao: linha[COLIGACAO_COLUNAS.situacao],
+    }));
+
+  await mkdir(DATA_DIR, { recursive: true });
+  await writeFile(path.join(DATA_DIR, "coligacoes.json"), JSON.stringify(coligacoes, null, 2), "utf-8");
+  console.log(`Gravado ${coligacoes.length} coligações`);
+}
+
+async function ingestVagas(): Promise<void> {
+  const zipBuffer = await obterZip("consulta_vagas");
+  const csv = extrairCsvBrasil(zipBuffer, "consulta_vagas");
+  const linhas = parseCsvTse(csv);
+  console.log(`${linhas.length} linhas de vagas lidas`);
+  validarColunaCritica(linhas, VAGA_COLUNAS.quantidade, "consulta_vagas");
+
+  const vagas = linhas.map((linha) => ({
+    uf: linha[VAGA_COLUNAS.uf],
+    cargo: linha[VAGA_COLUNAS.cargo],
+    quantidade: Number(linha[VAGA_COLUNAS.quantidade]) || 0,
+  }));
+
+  await mkdir(DATA_DIR, { recursive: true });
+  await writeFile(path.join(DATA_DIR, "vagas.json"), JSON.stringify(vagas, null, 2), "utf-8");
+  console.log(`Gravado ${vagas.length} registros de vagas`);
+}
+
 async function main() {
   await mkdir(TMP_DIR, { recursive: true });
   try {
     const ufs = await ingestCandidatos();
-    await ingestBens();
+    await ingestarOpcional("bem_candidato", ingestBens);
+    await ingestarOpcional("rede_social_candidato", ingestRedesSociais);
+    await ingestarOpcional("motivo_cassacao", ingestMotivosCassacao);
+    await ingestarOpcional("consulta_coligacao", ingestColigacoes);
+    await ingestarOpcional("consulta_vagas", ingestVagas);
 
     await writeFile(
       path.join(DATA_DIR, "meta.json"),

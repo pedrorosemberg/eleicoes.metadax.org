@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { calcularEstatisticas } from "@/lib/stats";
 import { SnapshotNotice } from "@/components/SnapshotNotice";
-import { carregarMeta } from "@/lib/data";
+import { carregarMeta, carregarVagas } from "@/lib/data";
 import { BrazilHeatmap } from "@/components/BrazilHeatmap";
 
 export const metadata: Metadata = {
@@ -35,9 +35,20 @@ function Barra({ rotulo, total, maximo }: { rotulo: string; total: number; maxim
 }
 
 export default async function MapaPage() {
-  const [estatisticas, meta] = await Promise.all([calcularEstatisticas(), carregarMeta()]);
+  const [estatisticas, meta, vagas] = await Promise.all([
+    calcularEstatisticas(),
+    carregarMeta(),
+    carregarVagas(),
+  ]);
   const maxUf = Math.max(...estatisticas.porUf.map((u) => u.total), 1);
   const maxCargo = Math.max(...estatisticas.porCargo.map((c) => c.total), 1);
+
+  // consulta_vagas do TSE vem uma linha por UF+cargo — somamos por cargo
+  // (ignorando UF) para casar com o agrupamento de estatisticas.porCargo.
+  const vagasPorCargo = new Map<string, number>();
+  for (const v of vagas) {
+    vagasPorCargo.set(v.cargo.toUpperCase(), (vagasPorCargo.get(v.cargo.toUpperCase()) ?? 0) + v.quantidade);
+  }
 
   return (
     <main className="mx-auto max-w-2xl px-4 py-10 sm:px-6 sm:py-16">
@@ -87,6 +98,31 @@ export default async function MapaPage() {
           ))}
         </ul>
       </section>
+
+      {vagas.length > 0 && (
+        <section className="mt-10">
+          <h2 className="text-[20px] font-semibold text-[var(--text-primary)]">Vagas em disputa por cargo</h2>
+          <p className="mt-1 text-sm text-[var(--text-tertiary)]">
+            Total de vagas somadas de todas as UFs, por cargo — fonte: dataset{" "}
+            <code className="font-financial text-xs">consulta_vagas</code> do TSE.
+          </p>
+          <ul className="mt-4 flex flex-col gap-3 text-sm">
+            {estatisticas.porCargo.map((c) => {
+              const qtVagas = vagasPorCargo.get(c.cargo.toUpperCase());
+              if (!qtVagas) return null;
+              const candidatosPorVaga = c.total / qtVagas;
+              return (
+                <li key={c.cargo} className="flex items-center justify-between gap-3">
+                  <span className="text-[var(--text-secondary)]">{c.cargo}</span>
+                  <span className="font-financial shrink-0 text-[var(--text-primary)]">
+                    {qtVagas} {qtVagas === 1 ? "vaga" : "vagas"} · {candidatosPorVaga.toFixed(1)} candidatos/vaga
+                  </span>
+                </li>
+              );
+            })}
+          </ul>
+        </section>
+      )}
     </main>
   );
 }

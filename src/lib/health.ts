@@ -111,7 +111,7 @@ export async function verificarSaudeFontes(): Promise<ChecagemFonte[]> {
     checar(
       "tse-divulgacand",
       "TSE — DivulgaCandContas",
-      "API de detalhe de candidato, plano de governo (divulgacandcontas.tse.jus.br)",
+      "Sistema de consulta individual do TSE (divulgacandcontas.tse.jus.br) — checagem só de disponibilidade; o site não usa este sistema no momento (ver docs/DATA_SOURCES.md §5)",
       "https://divulgacandcontas.tse.jus.br/divulga/rest/v1/eleicao/ordinarias",
       classificacaoTse,
     ),

@@ -18,7 +18,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "SERVIDOR PÚBLICO ESTADUAL",
     "cpf": "70266158153",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800099"
   },
   {
     "sqCandidato": "120002534954",
@@ -39,7 +40,8 @@
     "grauInstrucao": "ENSINO MÉDIO COMPLETO",
     "ocupacao": "MANICURE E MAQUILADOR",
     "cpf": "96197676168",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800227"
   },
   {
     "sqCandidato": "120002534952",
@@ -60,7 +62,8 @@
     "grauInstrucao": "ENSINO MÉDIO COMPLETO",
     "ocupacao": "OUTROS",
     "cpf": "87170485168",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800227"
   },
   {
     "sqCandidato": "120002534955",
@@ -81,7 +84,8 @@
     "grauInstrucao": "SUPERIOR INCOMPLETO",
     "ocupacao": "SERVIDOR PÚBLICO MUNICIPAL",
     "cpf": "71090029187",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800228"
   },
   {
     "sqCandidato": "120002535262",
@@ -102,7 +106,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "TÉCNICO DE ENFERMAGEM E ASSEMELHADOS (EXCETO ENFERMEIRO)",
     "cpf": "78098890104",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800268"
   },
   {
     "sqCandidato": "120002535265",
@@ -123,7 +128,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "ANTROPÓLOGO",
     "cpf": "71504214153",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800268"
   },
   {
     "sqCandidato": "120002535514",
@@ -144,7 +150,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "MÉDICO",
     "cpf": "86856812191",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800249"
   },
   {
     "sqCandidato": "120002535528",
@@ -165,7 +172,8 @@
     "grauInstrucao": "ENSINO MÉDIO COMPLETO",
     "ocupacao": "JORNALISTA E REDATOR",
     "cpf": "03964813109",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800249"
   },
   {
     "sqCandidato": "120002535536",
@@ -186,7 +194,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "ECONOMISTA",
     "cpf": "33782148134",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800249"
   },
   {
     "sqCandidato": "120002535765",
@@ -207,7 +216,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "MÉDICO",
     "cpf": "40448118149",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800239"
   },
   {
     "sqCandidato": "120002536068",
@@ -228,7 +238,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "SERVIDOR PÚBLICO FEDERAL",
     "cpf": "69138435187",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800276"
   },
   {
     "sqCandidato": "120002536071",
@@ -249,7 +260,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "SERVIDOR PÚBLICO ESTADUAL",
     "cpf": "03611427659",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800276"
   },
   {
     "sqCandidato": "120002536076",
@@ -270,7 +282,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "SERVIDOR PÚBLICO CIVIL APOSENTADO",
     "cpf": "20018614191",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800276"
   },
   {
     "sqCandidato": "120002536582",
@@ -291,7 +304,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "GOVERNADOR",
     "cpf": "00898464781",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800246"
   },
   {
     "sqCandidato": "120002537360",
@@ -312,7 +326,8 @@
     "grauInstrucao": "ENSINO MÉDIO COMPLETO",
     "ocupacao": "CORRETOR DE IMÓVEIS, SEGUROS, TÍTULOS E VALORES",
     "cpf": "78237114191",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800356"
   },
   {
     "sqCandidato": "120002537509",
@@ -333,7 +348,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "VEREADOR",
     "cpf": "98362704187",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800364"
   },
   {
     "sqCandidato": "120002537513",
@@ -354,7 +370,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "APOSENTADO (EXCETO SERVIDOR PÚBLICO)",
     "cpf": "48121886104",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800364"
   },
   {
     "sqCandidato": "120002537521",
@@ -375,7 +392,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "ADVOGADO",
     "cpf": "31635768853",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800364"
   },
   {
     "sqCandidato": "120002538952",
@@ -396,7 +414,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "APOSENTADO (EXCETO SERVIDOR PÚBLICO)",
     "cpf": "06358012134",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800411"
   },
   {
     "sqCandidato": "120002544960",
@@ -417,7 +436,8 @@
     "grauInstrucao": "ENSINO MÉDIO COMPLETO",
     "ocupacao": "ESTUDANTE, BOLSISTA, ESTAGIÁRIO E ASSEMELHADOS",
     "cpf": "06505851194",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800768"
   },
   {
     "sqCandidato": "120002544969",
@@ -438,7 +458,8 @@
     "grauInstrucao": "ENSINO FUNDAMENTAL COMPLETO",
     "ocupacao": "COZINHEIRO",
     "cpf": "63991470187",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800769"
   },
   {
     "sqCandidato": "120002544976",
@@ -459,7 +480,8 @@
     "grauInstrucao": "SUPERIOR INCOMPLETO",
     "ocupacao": "ADMINISTRADOR",
     "cpf": "05469583112",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800769"
   },
   {
     "sqCandidato": "120002544977",
@@ -480,7 +502,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "ADVOGADO",
     "cpf": "91700060163",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800769"
   },
   {
     "sqCandidato": "120002547057",
@@ -501,7 +524,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "CORRETOR DE IMÓVEIS, SEGUROS, TÍTULOS E VALORES",
     "cpf": "27295281134",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800852"
   },
   {
     "sqCandidato": "120002549563",
@@ -522,7 +546,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "ADVOGADO",
     "cpf": "01938485114",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001801054"
   },
   {
     "sqCandidato": "120002549691",
@@ -543,7 +568,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "DESPACHANTE",
     "cpf": "60982071191",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001801020"
   },
   {
     "sqCandidato": "120002550714",
@@ -564,7 +590,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "ADVOGADO",
     "cpf": "55739644100",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001801128"
   },
   {
     "sqCandidato": "120002550717",
@@ -585,7 +612,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "PROFESSOR DE ENSINO SUPERIOR",
     "cpf": "83928987704",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001801128"
   },
   {
     "sqCandidato": "120002551716",
@@ -606,7 +634,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "PSICÓLOGO",
     "cpf": "06395556169",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001801270"
   },
   {
     "sqCandidato": "120002551723",
@@ -627,7 +656,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "OUTROS",
     "cpf": "01822271118",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001801270"
   },
   {
     "sqCandidato": "120002552175",
@@ -648,7 +678,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "EMPRESÁRIO",
     "cpf": "25692976153",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001801252"
   },
   {
     "sqCandidato": "120002552176",
@@ -669,7 +700,8 @@
     "grauInstrucao": "ENSINO MÉDIO COMPLETO",
     "ocupacao": "EMPRESÁRIO",
     "cpf": "04754718143",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001801252"
   },
   {
     "sqCandidato": "120002552205",
@@ -690,7 +722,8 @@
     "grauInstrucao": "ENSINO MÉDIO COMPLETO",
     "ocupacao": "SERVIDOR PÚBLICO MUNICIPAL",
     "cpf": "96483199104",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001801245"
   },
   {
     "sqCandidato": "120002552211",
@@ -711,7 +744,8 @@
     "grauInstrucao": "ENSINO FUNDAMENTAL COMPLETO",
     "ocupacao": "EMPRESÁRIO",
     "cpf": "80396593100",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001801245"
   },
   {
     "sqCandidato": "120002552687",
@@ -732,7 +766,8 @@
     "grauInstrucao": "ENSINO MÉDIO INCOMPLETO",
     "ocupacao": "ESTUDANTE, BOLSISTA, ESTAGIÁRIO E ASSEMELHADOS",
     "cpf": "70505359154",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001801260"
   },
   {
     "sqCandidato": "120002553022",
@@ -753,7 +788,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "PSICÓLOGO",
     "cpf": "03008264190",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001801350"
   },
   {
     "sqCandidato": "120002532718",
@@ -774,7 +810,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "PROFESSOR DE ENSINO FUNDAMENTAL",
     "cpf": "03417333180",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800099"
   },
   {
     "sqCandidato": "120002535259",
@@ -795,7 +832,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "MÉDICO",
     "cpf": "69608474191",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800268"
   },
   {
     "sqCandidato": "120002535260",
@@ -816,7 +854,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "PROFESSOR DE ENSINO FUNDAMENTAL",
     "cpf": "49200844120",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800268"
   },
   {
     "sqCandidato": "120002535526",
@@ -837,7 +876,8 @@
     "grauInstrucao": "ENSINO FUNDAMENTAL COMPLETO",
     "ocupacao": "COMERCIANTE",
     "cpf": "33726078134",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800249"
   },
   {
     "sqCandidato": "120002535534",
@@ -858,7 +898,8 @@
     "grauInstrucao": "SUPERIOR INCOMPLETO",
     "ocupacao": "SERVIDOR PÚBLICO ESTADUAL",
     "cpf": "03059233152",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800249"
   },
   {
     "sqCandidato": "120002535533",
@@ -879,7 +920,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "SERVIDOR PÚBLICO MUNICIPAL",
     "cpf": "01761327160",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800249"
   },
   {
     "sqCandidato": "120002535766",
@@ -900,7 +942,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "ADVOGADO",
     "cpf": "00116330180",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800239"
   },
   {
     "sqCandidato": "120002535769",
@@ -921,7 +964,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "MEMBRO DAS FORÇAS ARMADAS",
     "cpf": "32443006859",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800239"
   },
   {
     "sqCandidato": "120002536282",
@@ -942,7 +986,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "ADVOGADO",
     "cpf": "71036091104",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800253"
   },
   {
     "sqCandidato": "120002537355",
@@ -963,7 +1008,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "DEPUTADO",
     "cpf": "69380007191",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800356"
   },
   {
     "sqCandidato": "120002537461",
@@ -984,7 +1030,8 @@
     "grauInstrucao": "ENSINO MÉDIO COMPLETO",
     "ocupacao": "DONA DE CASA",
     "cpf": "04424412156",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800362"
   },
   {
     "sqCandidato": "120002537462",
@@ -1005,7 +1052,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "APOSENTADO (EXCETO SERVIDOR PÚBLICO)",
     "cpf": "20070349134",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800362"
   },
   {
     "sqCandidato": "120002537466",
@@ -1026,7 +1074,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "ADVOGADO",
     "cpf": "46645632134",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800362"
   },
   {
     "sqCandidato": "120002537499",
@@ -1047,7 +1096,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "EMPRESÁRIO",
     "cpf": "02927549141",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800364"
   },
   {
     "sqCandidato": "120002537500",
@@ -1068,7 +1118,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "ADVOGADO",
     "cpf": "00596908105",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800364"
   },
   {
     "sqCandidato": "120002537510",
@@ -1089,7 +1140,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "EMPRESÁRIO",
     "cpf": "85211117115",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800364"
   },
   {
     "sqCandidato": "120002537514",
@@ -1110,7 +1162,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "POLICIAL MILITAR",
     "cpf": "02244931161",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800364"
   },
   {
     "sqCandidato": "120002537518",
@@ -1131,7 +1184,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "EMPRESÁRIO",
     "cpf": "63755955172",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800364"
   },
   {
     "sqCandidato": "120002537520",
@@ -1152,7 +1206,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "EMPRESÁRIO",
     "cpf": "45659176100",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800364"
   },
   {
     "sqCandidato": "120002538787",
@@ -1173,7 +1228,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "ADVOGADO",
     "cpf": "01347396128",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800440"
   },
   {
     "sqCandidato": "120002538946",
@@ -1194,7 +1250,8 @@
     "grauInstrucao": "ENSINO MÉDIO COMPLETO",
     "ocupacao": "CORRETOR DE IMÓVEIS, SEGUROS, TÍTULOS E VALORES",
     "cpf": "34626670172",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800411"
   },
   {
     "sqCandidato": "120002539693",
@@ -1215,7 +1272,8 @@
     "grauInstrucao": "ENSINO MÉDIO COMPLETO",
     "ocupacao": "EMPRESÁRIO",
     "cpf": "87792982149",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800466"
   },
   {
     "sqCandidato": "120002539696",
@@ -1236,7 +1294,8 @@
     "grauInstrucao": "SUPERIOR INCOMPLETO",
     "ocupacao": "SERVIDOR PÚBLICO MUNICIPAL",
     "cpf": "60096845104",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800466"
   },
   {
     "sqCandidato": "120002539701",
@@ -1257,7 +1316,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "FISCAL",
     "cpf": "13394102811",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800466"
   },
   {
     "sqCandidato": "120002539703",
@@ -1278,7 +1338,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "ADVOGADO",
     "cpf": "40482332115",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800466"
   },
   {
     "sqCandidato": "120002544704",
@@ -1299,7 +1360,8 @@
     "grauInstrucao": "ENSINO MÉDIO INCOMPLETO",
     "ocupacao": "COMERCIANTE",
     "cpf": "80193684691",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800745"
   },
   {
     "sqCandidato": "120002544708",
@@ -1320,7 +1382,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "ESTUDANTE, BOLSISTA, ESTAGIÁRIO E ASSEMELHADOS",
     "cpf": "13539218670",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800745"
   },
   {
     "sqCandidato": "120002544716",
@@ -1341,7 +1404,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "SERVIDOR PÚBLICO CIVIL APOSENTADO",
     "cpf": "58265589620",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800745"
   },
   {
     "sqCandidato": "120002544962",
@@ -1362,7 +1426,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "PROFESSOR DE ENSINO MÉDIO",
     "cpf": "15607992187",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800769"
   },
   {
     "sqCandidato": "120002544973",
@@ -1383,7 +1448,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "ADMINISTRADOR",
     "cpf": "48158372104",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800769"
   },
   {
     "sqCandidato": "120002545234",
@@ -1404,7 +1470,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "ADVOGADO",
     "cpf": "30908159153",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800660"
   },
   {
     "sqCandidato": "120002545237",
@@ -1425,7 +1492,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "BOMBEIRO MILITAR",
     "cpf": "46489681153",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800660"
   },
   {
     "sqCandidato": "120002547064",
@@ -1446,7 +1514,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "MÉDICO",
     "cpf": "11476272824",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800852"
   },
   {
     "sqCandidato": "120002547437",
@@ -1467,7 +1536,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "EMPRESÁRIO",
     "cpf": "92430520125",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800861"
   },
   {
     "sqCandidato": "120002549564",
@@ -1488,7 +1558,8 @@
     "grauInstrucao": "ENSINO FUNDAMENTAL COMPLETO",
     "ocupacao": "OUTROS",
     "cpf": "01945489103",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001801054"
   },
   {
     "sqCandidato": "120002549565",
@@ -1509,7 +1580,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "SERVIDOR PÚBLICO CIVIL APOSENTADO",
     "cpf": "17446929120",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001801054"
   },
   {
     "sqCandidato": "120002549581",
@@ -1530,7 +1602,8 @@
     "grauInstrucao": "SUPERIOR INCOMPLETO",
     "ocupacao": "COMERCIANTE",
     "cpf": "02264060409",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001801054"
   },
   {
     "sqCandidato": "120002549686",
@@ -1551,7 +1624,8 @@
     "grauInstrucao": "ENSINO MÉDIO COMPLETO",
     "ocupacao": "PUBLICITÁRIO",
     "cpf": "04683520150",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001801020"
   },
   {
     "sqCandidato": "120002549687",
@@ -1572,7 +1646,8 @@
     "grauInstrucao": "SUPERIOR INCOMPLETO",
     "ocupacao": "TÉCNICO DE ENFERMAGEM E ASSEMELHADOS (EXCETO ENFERMEIRO)",
     "cpf": "85444120178",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001801020"
   },
   {
     "sqCandidato": "120002550198",
@@ -1593,7 +1668,8 @@
     "grauInstrucao": "ENSINO MÉDIO COMPLETO",
     "ocupacao": "JORNALISTA E REDATOR",
     "cpf": "60037520172",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001801095"
   },
   {
     "sqCandidato": "120002551719",
@@ -1614,7 +1690,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "SERVIDOR PÚBLICO ESTADUAL",
     "cpf": "90775279153",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001801270"
   },
   {
     "sqCandidato": "120002552179",
@@ -1635,7 +1712,8 @@
     "grauInstrucao": "ENSINO FUNDAMENTAL COMPLETO",
     "ocupacao": "EMPRESÁRIO",
     "cpf": "65331540104",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001801252"
   },
   {
     "sqCandidato": "120002553013",
@@ -1656,7 +1734,8 @@
     "grauInstrucao": "ENSINO FUNDAMENTAL COMPLETO",
     "ocupacao": "SACERDOTE OU MEMBRO DE ORDEM OU SEITA RELIGIOSA",
     "cpf": "80410880159",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001801350"
   },
   {
     "sqCandidato": "120002553016",
@@ -1677,7 +1756,8 @@
     "grauInstrucao": "LÊ E ESCREVE",
     "ocupacao": "PESCADOR",
     "cpf": "51878704168",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001801350"
   },
   {
     "sqCandidato": "120002553021",
@@ -1698,7 +1778,8 @@
     "grauInstrucao": "ENSINO FUNDAMENTAL INCOMPLETO",
     "ocupacao": "EMPRESÁRIO",
     "cpf": "05785500167",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001801350"
   },
   {
     "sqCandidato": "120002553020",
@@ -1719,7 +1800,8 @@
     "grauInstrucao": "SUPERIOR INCOMPLETO",
     "ocupacao": "COMERCIANTE",
     "cpf": "63900580120",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001801350"
   },
   {
     "sqCandidato": "120002553244",
@@ -1740,7 +1822,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "PSICÓLOGO",
     "cpf": "55981089253",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001801350"
   },
   {
     "sqCandidato": "120002553249",
@@ -1761,7 +1844,8 @@
     "grauInstrucao": "ENSINO MÉDIO COMPLETO",
     "ocupacao": "APOSENTADO (EXCETO SERVIDOR PÚBLICO)",
     "cpf": "03391493372",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001801350"
   },
   {
     "sqCandidato": "120002532703",
@@ -1782,7 +1866,8 @@
     "grauInstrucao": "SUPERIOR INCOMPLETO",
     "ocupacao": "EMPRESÁRIO",
     "cpf": "00091116112",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800098"
   },
   {
     "sqCandidato": "120002532705",
@@ -1803,7 +1888,8 @@
     "grauInstrucao": "ENSINO MÉDIO COMPLETO",
     "ocupacao": "OUTROS",
     "cpf": "37008410867",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800098"
   },
   {
     "sqCandidato": "120002532706",
@@ -1824,7 +1910,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "ASSISTENTE SOCIAL",
     "cpf": "63850532100",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800098"
   },
   {
     "sqCandidato": "120002532715",
@@ -1845,7 +1932,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "PRODUTOR DE ESPETÁCULOS PÚBLICOS",
     "cpf": "02499463198",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800099"
   },
   {
     "sqCandidato": "120002532713",
@@ -1866,7 +1954,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "PROFESSOR DE ENSINO FUNDAMENTAL",
     "cpf": "03841606113",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800099"
   },
   {
     "sqCandidato": "120002532717",
@@ -1887,7 +1976,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "APOSENTADO (EXCETO SERVIDOR PÚBLICO)",
     "cpf": "29812879153",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800099"
   },
   {
     "sqCandidato": "120002534957",
@@ -1908,7 +1998,8 @@
     "grauInstrucao": "ENSINO MÉDIO COMPLETO",
     "ocupacao": "DONA DE CASA",
     "cpf": "10249375184",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800228"
   },
   {
     "sqCandidato": "120002534960",
@@ -1929,7 +2020,8 @@
     "grauInstrucao": "ENSINO FUNDAMENTAL COMPLETO",
     "ocupacao": "MANICURE E MAQUILADOR",
     "cpf": "05304437160",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800228"
   },
   {
     "sqCandidato": "120002535767",
@@ -1950,7 +2042,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "ADMINISTRADOR",
     "cpf": "68963998134",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800239"
   },
   {
     "sqCandidato": "120002536061",
@@ -1971,7 +2064,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "DECORADOR",
     "cpf": "02150660148",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800276"
   },
   {
     "sqCandidato": "120002536072",
@@ -1992,7 +2086,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "VETERINÁRIO",
     "cpf": "86166310110",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800276"
   },
   {
     "sqCandidato": "120002536288",
@@ -2013,7 +2108,8 @@
     "grauInstrucao": "ENSINO MÉDIO COMPLETO",
     "ocupacao": "MEMBRO DAS FORÇAS ARMADAS",
     "cpf": "17207088191",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800253"
   },
   {
     "sqCandidato": "120002537362",
@@ -2034,7 +2130,8 @@
     "grauInstrucao": "SUPERIOR INCOMPLETO",
     "ocupacao": "VEREADOR",
     "cpf": "01590747542",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800356"
   },
   {
     "sqCandidato": "120002537516",
@@ -2055,7 +2152,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "ADVOGADO",
     "cpf": "01236216156",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800364"
   },
   {
     "sqCandidato": "120002537517",
@@ -2076,7 +2174,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "ADVOGADO",
     "cpf": "04604290865",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800364"
   },
   {
     "sqCandidato": "120002538784",
@@ -2097,7 +2196,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "DEPUTADO",
     "cpf": "12896918191",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800440"
   },
   {
     "sqCandidato": "120002539698",
@@ -2118,7 +2218,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "ADVOGADO",
     "cpf": "03770264177",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800466"
   },
   {
     "sqCandidato": "120002539710",
@@ -2139,7 +2240,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "PRODUTOR AGROPECUÁRIO",
     "cpf": "00808407104",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800466"
   },
   {
     "sqCandidato": "120002544706",
@@ -2160,7 +2262,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "ADVOGADO",
     "cpf": "03991633108",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800745"
   },
   {
     "sqCandidato": "120002544715",
@@ -2181,7 +2284,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "ADVOGADO",
     "cpf": "44807350110",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800745"
   },
   {
     "sqCandidato": "120002544958",
@@ -2202,7 +2306,8 @@
     "grauInstrucao": "SUPERIOR INCOMPLETO",
     "ocupacao": "AUXILIAR DE ESCRITÓRIO E ASSEMELHADOS",
     "cpf": "03860201166",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800768"
   },
   {
     "sqCandidato": "120002544961",
@@ -2223,7 +2328,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "ADVOGADO",
     "cpf": "04087093913",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800768"
   },
   {
     "sqCandidato": "120002544974",
@@ -2244,7 +2350,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "PROFESSOR DE ENSINO FUNDAMENTAL",
     "cpf": "06786128114",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800769"
   },
   {
     "sqCandidato": "120002545239",
@@ -2265,7 +2372,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "SERVIDOR PÚBLICO FEDERAL",
     "cpf": "97551732187",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800660"
   },
   {
     "sqCandidato": "120002547048",
@@ -2286,7 +2394,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "COMERCIÁRIO",
     "cpf": "04761077174",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800852"
   },
   {
     "sqCandidato": "120002549559",
@@ -2307,7 +2416,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "MÉDICO",
     "cpf": "85557617191",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001801054"
   },
   {
     "sqCandidato": "120002549571",
@@ -2328,7 +2438,8 @@
     "grauInstrucao": "ENSINO MÉDIO COMPLETO",
     "ocupacao": "AGRICULTOR",
     "cpf": "92879730163",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001801054"
   },
   {
     "sqCandidato": "120002549682",
@@ -2349,7 +2460,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "OUTROS",
     "cpf": "00081869100",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001801019"
   },
   {
     "sqCandidato": "120002551714",
@@ -2370,7 +2482,8 @@
     "grauInstrucao": "ENSINO FUNDAMENTAL COMPLETO",
     "ocupacao": "TRABALHADOR DE CONSTRUÇÃO CIVIL",
     "cpf": "69518327149",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001801270"
   },
   {
     "sqCandidato": "120002551718",
@@ -2391,7 +2504,8 @@
     "grauInstrucao": "SUPERIOR INCOMPLETO",
     "ocupacao": "EMPRESÁRIO",
     "cpf": "04896311183",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001801270"
   },
   {
     "sqCandidato": "120002551717",
@@ -2412,7 +2526,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "PROFESSOR DE ENSINO MÉDIO",
     "cpf": "01006669140",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001801270"
   },
   {
     "sqCandidato": "120002551908",
@@ -2433,7 +2548,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "EMPRESÁRIO",
     "cpf": "83096345104",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001801219"
   },
   {
     "sqCandidato": "120002552154",
@@ -2454,7 +2570,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "FARMACÊUTICO",
     "cpf": "60119721104",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001801243"
   },
   {
     "sqCandidato": "120002552160",
@@ -2475,7 +2592,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "ADVOGADO",
     "cpf": "01799628760",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001801245"
   },
   {
     "sqCandidato": "120002552178",
@@ -2496,7 +2614,8 @@
     "grauInstrucao": "ENSINO FUNDAMENTAL COMPLETO",
     "ocupacao": "SERVIDOR PÚBLICO FEDERAL",
     "cpf": "32138156168",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001801252"
   },
   {
     "sqCandidato": "120002552190",
@@ -2517,7 +2636,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "ECONOMISTA",
     "cpf": "25428440899",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001801255"
   },
   {
     "sqCandidato": "120002552196",
@@ -2538,7 +2658,8 @@
     "grauInstrucao": "ENSINO MÉDIO COMPLETO",
     "ocupacao": "TRABALHADOR DE CONSTRUÇÃO CIVIL",
     "cpf": "01210074133",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001801256"
   },
   {
     "sqCandidato": "120002552202",
@@ -2559,7 +2680,8 @@
     "grauInstrucao": "ENSINO FUNDAMENTAL INCOMPLETO",
     "ocupacao": "OUTROS",
     "cpf": "72847522115",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001801258"
   },
   {
     "sqCandidato": "120002552201",
@@ -2580,7 +2702,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "PROFESSOR DE ENSINO FUNDAMENTAL",
     "cpf": "82967148172",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001801258"
   },
   {
     "sqCandidato": "120002552204",
@@ -2601,7 +2724,8 @@
     "grauInstrucao": "SUPERIOR INCOMPLETO",
     "ocupacao": "EMPRESÁRIO",
     "cpf": "73638749134",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001801245"
   },
   {
     "sqCandidato": "120002552214",
@@ -2622,7 +2746,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "SERVIDOR PÚBLICO MUNICIPAL",
     "cpf": "56026862153",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001801245"
   },
   {
     "sqCandidato": "120002552945",
@@ -2643,7 +2768,8 @@
     "grauInstrucao": "ENSINO MÉDIO COMPLETO",
     "ocupacao": "AGRICULTOR",
     "cpf": "29394325115",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001801284"
   },
   {
     "sqCandidato": "120002552947",
@@ -2664,7 +2790,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "ADVOGADO",
     "cpf": "60917636104",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001801284"
   },
   {
     "sqCandidato": "120002552951",
@@ -2685,7 +2812,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "POLICIAL MILITAR",
     "cpf": "40871100100",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001801284"
   },
   {
     "sqCandidato": "120002552950",
@@ -2706,7 +2834,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "ADVOGADO",
     "cpf": "56280300153",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001801284"
   },
   {
     "sqCandidato": "120002532708",
@@ -2727,7 +2856,8 @@
     "grauInstrucao": "ENSINO MÉDIO COMPLETO",
     "ocupacao": "SERRALHEIRO",
     "cpf": "10498334813",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800098"
   },
   {
     "sqCandidato": "120002532712",
@@ -2748,7 +2878,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "PROFESSOR DE ENSINO FUNDAMENTAL",
     "cpf": "40901343153",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800099"
   },
   {
     "sqCandidato": "120002532721",
@@ -2769,7 +2900,8 @@
     "grauInstrucao": "ENSINO FUNDAMENTAL COMPLETO",
     "ocupacao": "AGRICULTOR",
     "cpf": "89579089191",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800100"
   },
   {
     "sqCandidato": "120002534953",
@@ -2790,7 +2922,8 @@
     "grauInstrucao": "ENSINO FUNDAMENTAL INCOMPLETO",
     "ocupacao": "LAVADOR DE VEÍCULOS",
     "cpf": "02124862170",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800227"
   },
   {
     "sqCandidato": "120002534956",
@@ -2811,7 +2944,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "TÉCNICO CONTABILIDADE, ESTATÍSTICA, ECONOMIA DOMÉSTICA E ADMINISTRAÇÃO",
     "cpf": "51827549149",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800228"
   },
   {
     "sqCandidato": "120002535257",
@@ -2832,7 +2966,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "BOMBEIRO MILITAR",
     "cpf": "69430713191",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800268"
   },
   {
     "sqCandidato": "120002535515",
@@ -2853,7 +2988,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "EMPRESÁRIO",
     "cpf": "71194614191",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800249"
   },
   {
     "sqCandidato": "120002535519",
@@ -2874,7 +3010,8 @@
     "grauInstrucao": "ENSINO MÉDIO INCOMPLETO",
     "ocupacao": "SERVIDOR PÚBLICO MUNICIPAL",
     "cpf": "01319522181",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800249"
   },
   {
     "sqCandidato": "120002535520",
@@ -2895,7 +3032,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "SERVIDOR PÚBLICO ESTADUAL",
     "cpf": "20164416153",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800249"
   },
   {
     "sqCandidato": "120002535527",
@@ -2916,7 +3054,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "ESTETICISTA",
     "cpf": "00093834179",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800249"
   },
   {
     "sqCandidato": "120002535532",
@@ -2937,7 +3076,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "SERVIDOR PÚBLICO CIVIL APOSENTADO",
     "cpf": "06975338833",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800249"
   },
   {
     "sqCandidato": "120002536054",
@@ -2958,7 +3098,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "ADVOGADO",
     "cpf": "95799923120",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800276"
   },
   {
     "sqCandidato": "120002536062",
@@ -2979,7 +3120,8 @@
     "grauInstrucao": "ENSINO MÉDIO COMPLETO",
     "ocupacao": "PROTÉTICO",
     "cpf": "85063207120",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800276"
   },
   {
     "sqCandidato": "120002536064",
@@ -3000,7 +3142,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "VEREADOR",
     "cpf": "60052120104",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800276"
   },
   {
     "sqCandidato": "120002536065",
@@ -3021,7 +3164,8 @@
     "grauInstrucao": "ENSINO MÉDIO COMPLETO",
     "ocupacao": "VEREADOR",
     "cpf": "04658646196",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800276"
   },
   {
     "sqCandidato": "120002536075",
@@ -3042,7 +3186,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "POLICIAL MILITAR",
     "cpf": "88643638153",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800276"
   },
   {
     "sqCandidato": "120002537361",
@@ -3063,7 +3208,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "ECONOMISTA",
     "cpf": "32251777172",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800356"
   },
   {
     "sqCandidato": "120002537465",
@@ -3084,7 +3230,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "DEPUTADO",
     "cpf": "02749531101",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800362"
   },
   {
     "sqCandidato": "120002537464",
@@ -3105,7 +3252,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "PROFESSOR DE ENSINO SUPERIOR",
     "cpf": "39134741100",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800362"
   },
   {
     "sqCandidato": "120002537502",
@@ -3126,7 +3274,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "EMPRESÁRIO",
     "cpf": "01798418150",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800364"
   },
   {
     "sqCandidato": "120002537512",
@@ -3147,7 +3296,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "ENGENHEIRO",
     "cpf": "58283587153",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800364"
   },
   {
     "sqCandidato": "120002537515",
@@ -3168,7 +3318,8 @@
     "grauInstrucao": "SUPERIOR INCOMPLETO",
     "ocupacao": "EMPRESÁRIO",
     "cpf": "02991811110",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800364"
   },
   {
     "sqCandidato": "120002538789",
@@ -3189,7 +3340,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "ADVOGADO",
     "cpf": "85799467191",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800440"
   },
   {
     "sqCandidato": "120002538948",
@@ -3210,7 +3362,8 @@
     "grauInstrucao": "SUPERIOR INCOMPLETO",
     "ocupacao": "ADVOGADO",
     "cpf": "01194680186",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800411"
   },
   {
     "sqCandidato": "120002539699",
@@ -3231,7 +3384,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "EMPRESÁRIO",
     "cpf": "70349134120",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800466"
   },
   {
     "sqCandidato": "120002539708",
@@ -3252,7 +3406,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "DEPUTADO",
     "cpf": "35678348191",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800466"
   },
   {
     "sqCandidato": "120002544705",
@@ -3273,7 +3428,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "MÉDICO",
     "cpf": "00598305904",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800745"
   },
   {
     "sqCandidato": "120002544712",
@@ -3294,7 +3450,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "SERVIDOR PÚBLICO CIVIL APOSENTADO",
     "cpf": "54335345100",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800745"
   },
   {
     "sqCandidato": "120002544717",
@@ -3315,7 +3472,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "VEREADOR",
     "cpf": "89101251104",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800745"
   },
   {
     "sqCandidato": "120002544963",
@@ -3336,7 +3494,8 @@
     "grauInstrucao": "ENSINO MÉDIO COMPLETO",
     "ocupacao": "COMERCIÁRIO",
     "cpf": "02279587130",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800769"
   },
   {
     "sqCandidato": "120002544968",
@@ -3357,7 +3516,8 @@
     "grauInstrucao": "ENSINO MÉDIO COMPLETO",
     "ocupacao": "TÉCNICO EM AGRONOMIA E AGRIMENSURA",
     "cpf": "02826724193",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800769"
   },
   {
     "sqCandidato": "120002544971",
@@ -3378,7 +3538,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "EMPRESÁRIO",
     "cpf": "02374947106",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800769"
   },
   {
     "sqCandidato": "120002544979",
@@ -3399,7 +3560,8 @@
     "grauInstrucao": "ENSINO MÉDIO COMPLETO",
     "ocupacao": "TRABALHADOR RURAL",
     "cpf": "01042709181",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800769"
   },
   {
     "sqCandidato": "120002544978",
@@ -3420,7 +3582,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "CORRETOR DE IMÓVEIS, SEGUROS, TÍTULOS E VALORES",
     "cpf": "00168482177",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800769"
   },
   {
     "sqCandidato": "120002545236",
@@ -3441,7 +3604,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "SERVIDOR PÚBLICO MUNICIPAL",
     "cpf": "02765678111",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800660"
   },
   {
     "sqCandidato": "120002545235",
@@ -3462,7 +3626,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "SECURITÁRIO",
     "cpf": "01500924156",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800660"
   },
   {
     "sqCandidato": "120002547049",
@@ -3483,7 +3648,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "PSICÓLOGO",
     "cpf": "99791420149",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800852"
   },
   {
     "sqCandidato": "120002547050",
@@ -3504,7 +3670,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "ADVOGADO",
     "cpf": "20554060191",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800852"
   },
   {
     "sqCandidato": "120002547060",
@@ -3525,7 +3692,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "ADVOGADO",
     "cpf": "38997711172",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800852"
   },
   {
     "sqCandidato": "120002547068",
@@ -3546,7 +3714,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "PROFESSOR DE ENSINO FUNDAMENTAL",
     "cpf": "90991893115",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800852"
   },
   {
     "sqCandidato": "120002549560",
@@ -3567,7 +3736,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "ADVOGADO",
     "cpf": "36762466168",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001801054"
   },
   {
     "sqCandidato": "120002549568",
@@ -3588,7 +3758,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "ADVOGADO",
     "cpf": "00245507108",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001801054"
   },
   {
     "sqCandidato": "120002549572",
@@ -3609,7 +3780,8 @@
     "grauInstrucao": "ENSINO MÉDIO COMPLETO",
     "ocupacao": "OUTROS",
     "cpf": "01439369135",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001801054"
   },
   {
     "sqCandidato": "120002549574",
@@ -3630,7 +3802,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "SERVIDOR PÚBLICO MUNICIPAL",
     "cpf": "92696872104",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001801054"
   },
   {
     "sqCandidato": "120002549577",
@@ -3651,7 +3824,8 @@
     "grauInstrucao": "ENSINO MÉDIO COMPLETO",
     "ocupacao": "EMPRESÁRIO",
     "cpf": "89822803168",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001801054"
   },
   {
     "sqCandidato": "120002549688",
@@ -3672,7 +3846,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "ECONOMISTA",
     "cpf": "01451621175",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001801020"
   },
   {
     "sqCandidato": "120002550199",
@@ -3693,7 +3868,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "PROFESSOR DE ENSINO MÉDIO",
     "cpf": "05872883889",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001801095"
   },
   {
     "sqCandidato": "120002551715",
@@ -3714,7 +3890,8 @@
     "grauInstrucao": "ENSINO MÉDIO COMPLETO",
     "ocupacao": "EMPRESÁRIO",
     "cpf": "36772208153",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001801270"
   },
   {
     "sqCandidato": "120002552173",
@@ -3735,7 +3912,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "EMPRESÁRIO",
     "cpf": "94666270159",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001801252"
   },
   {
     "sqCandidato": "120002552207",
@@ -3756,7 +3934,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "PROFESSOR DE ENSINO MÉDIO",
     "cpf": "04929416108",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001801245"
   },
   {
     "sqCandidato": "120002552210",
@@ -3777,7 +3956,8 @@
     "grauInstrucao": "ENSINO MÉDIO COMPLETO",
     "ocupacao": "EMPRESÁRIO",
     "cpf": "63965402153",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001801245"
   },
   {
     "sqCandidato": "120002552212",
@@ -3798,7 +3978,8 @@
     "grauInstrucao": "ENSINO FUNDAMENTAL INCOMPLETO",
     "ocupacao": "DESPACHANTE",
     "cpf": "36745642115",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001801245"
   },
   {
     "sqCandidato": "120002552684",
@@ -3819,7 +4000,8 @@
     "grauInstrucao": "ENSINO FUNDAMENTAL INCOMPLETO",
     "ocupacao": "ESTUDANTE, BOLSISTA, ESTAGIÁRIO E ASSEMELHADOS",
     "cpf": "06551713122",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001801259"
   },
   {
     "sqCandidato": "120002552948",
@@ -3840,7 +4022,8 @@
     "grauInstrucao": "ENSINO FUNDAMENTAL INCOMPLETO",
     "ocupacao": "OUTROS",
     "cpf": "44716877191",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001801284"
   },
   {
     "sqCandidato": "120002553245",
@@ -3861,7 +4044,8 @@
     "grauInstrucao": "ENSINO MÉDIO COMPLETO",
     "ocupacao": "EMPRESÁRIO",
     "cpf": "92815243849",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001801350"
   },
   {
     "sqCandidato": "120002553246",
@@ -3882,7 +4066,8 @@
     "grauInstrucao": "ENSINO MÉDIO COMPLETO",
     "ocupacao": "COMERCIANTE",
     "cpf": "80347800904",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001801350"
   },
   {
     "sqCandidato": "120002532709",
@@ -3903,7 +4088,8 @@
     "grauInstrucao": "ENSINO FUNDAMENTAL COMPLETO",
     "ocupacao": "AGRICULTOR",
     "cpf": "88083543187",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800098"
   },
   {
     "sqCandidato": "120002532714",
@@ -3924,7 +4110,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "JORNALISTA E REDATOR",
     "cpf": "23036737120",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800099"
   },
   {
     "sqCandidato": "120002534958",
@@ -3945,7 +4132,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "PROFESSOR DE ENSINO FUNDAMENTAL",
     "cpf": "83080058100",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800228"
   },
   {
     "sqCandidato": "120002535768",
@@ -3966,7 +4154,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "ECONOMISTA",
     "cpf": "63969084172",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800239"
   },
   {
     "sqCandidato": "120002536055",
@@ -3987,7 +4176,8 @@
     "grauInstrucao": "ENSINO FUNDAMENTAL COMPLETO",
     "ocupacao": "PECUARISTA",
     "cpf": "00372110134",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800276"
   },
   {
     "sqCandidato": "120002536069",
@@ -4008,7 +4198,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "DEPUTADO",
     "cpf": "47502592172",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800276"
   },
   {
     "sqCandidato": "120002536280",
@@ -4029,7 +4220,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "EMPRESÁRIO",
     "cpf": "94553980100",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800253"
   },
   {
     "sqCandidato": "120002536284",
@@ -4050,7 +4242,8 @@
     "grauInstrucao": "ENSINO MÉDIO COMPLETO",
     "ocupacao": "EMPRESÁRIO",
     "cpf": "20292465149",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800253"
   },
   {
     "sqCandidato": "120002537358",
@@ -4071,7 +4264,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "MÉDICO",
     "cpf": "23724480130",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800356"
   },
   {
     "sqCandidato": "120002537463",
@@ -4092,7 +4286,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "PROFESSOR DE ENSINO SUPERIOR",
     "cpf": "85977802153",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800362"
   },
   {
     "sqCandidato": "120002537468",
@@ -4113,7 +4308,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "ADVOGADO",
     "cpf": "33889074120",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800362"
   },
   {
     "sqCandidato": "120002537504",
@@ -4134,7 +4330,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "PROFESSOR DE ENSINO MÉDIO",
     "cpf": "36843920144",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800364"
   },
   {
     "sqCandidato": "120002537503",
@@ -4155,7 +4352,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "VEREADOR",
     "cpf": "78934354100",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800364"
   },
   {
     "sqCandidato": "120002537505",
@@ -4176,7 +4374,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "ECONOMISTA",
     "cpf": "71616969172",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800364"
   },
   {
     "sqCandidato": "120002538791",
@@ -4197,7 +4396,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "ADVOGADO",
     "cpf": "00263382893",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800440"
   },
   {
     "sqCandidato": "120002538947",
@@ -4218,7 +4418,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "ADVOGADO",
     "cpf": "90131657291",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800411"
   },
   {
     "sqCandidato": "120002539692",
@@ -4239,7 +4440,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "EMPRESÁRIO",
     "cpf": "44507089115",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800466"
   },
   {
     "sqCandidato": "120002539691",
@@ -4260,7 +4462,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "MÉDICO",
     "cpf": "35710624187",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800466"
   },
   {
     "sqCandidato": "120002539694",
@@ -4281,7 +4484,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "ARQUITETO",
     "cpf": "20403852153",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800466"
   },
   {
     "sqCandidato": "120002539700",
@@ -4302,7 +4506,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "ADVOGADO",
     "cpf": "05559996106",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800466"
   },
   {
     "sqCandidato": "120002539704",
@@ -4323,7 +4528,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "VETERINÁRIO",
     "cpf": "10515712191",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800466"
   },
   {
     "sqCandidato": "120002539711",
@@ -4344,7 +4550,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "ODONTÓLOGO",
     "cpf": "01507948867",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800466"
   },
   {
     "sqCandidato": "120002539712",
@@ -4365,7 +4572,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "OUTROS",
     "cpf": "34428953836",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800466"
   },
   {
     "sqCandidato": "120002539834",
@@ -4386,7 +4594,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "ADVOGADO",
     "cpf": "98303651749",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800491"
   },
   {
     "sqCandidato": "120002539835",
@@ -4407,7 +4616,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "APOSENTADO (EXCETO SERVIDOR PÚBLICO)",
     "cpf": "13931547191",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800491"
   },
   {
     "sqCandidato": "120002544707",
@@ -4428,7 +4638,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "ADMINISTRADOR",
     "cpf": "89700570053",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800745"
   },
   {
     "sqCandidato": "120002544720",
@@ -4449,7 +4660,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "PROFESSOR DE ENSINO MÉDIO",
     "cpf": "70098875191",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800745"
   },
   {
     "sqCandidato": "120002544718",
@@ -4470,7 +4682,8 @@
     "grauInstrucao": "ENSINO FUNDAMENTAL INCOMPLETO",
     "ocupacao": "OUTROS",
     "cpf": "80031773168",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800745"
   },
   {
     "sqCandidato": "120002544959",
@@ -4491,7 +4704,8 @@
     "grauInstrucao": "SUPERIOR INCOMPLETO",
     "ocupacao": "ESTUDANTE, BOLSISTA, ESTAGIÁRIO E ASSEMELHADOS",
     "cpf": "04952495132",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800768"
   },
   {
     "sqCandidato": "120002544964",
@@ -4512,7 +4726,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "EMPRESÁRIO",
     "cpf": "60853557187",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800769"
   },
   {
     "sqCandidato": "120002544966",
@@ -4533,7 +4748,8 @@
     "grauInstrucao": "SUPERIOR INCOMPLETO",
     "ocupacao": "DONA DE CASA",
     "cpf": "05017442154",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800769"
   },
   {
     "sqCandidato": "120002545242",
@@ -4554,7 +4770,8 @@
     "grauInstrucao": "ENSINO MÉDIO COMPLETO",
     "ocupacao": "OUTROS",
     "cpf": "13734860741",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800660"
   },
   {
     "sqCandidato": "120002545241",
@@ -4575,7 +4792,8 @@
     "grauInstrucao": "ENSINO MÉDIO COMPLETO",
     "ocupacao": "ADMINISTRADOR",
     "cpf": "02109217146",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800660"
   },
   {
     "sqCandidato": "120002547045",
@@ -4596,7 +4814,8 @@
     "grauInstrucao": "SUPERIOR INCOMPLETO",
     "ocupacao": "COMERCIANTE",
     "cpf": "01870743130",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800852"
   },
   {
     "sqCandidato": "120002547051",
@@ -4617,7 +4836,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "ASSISTENTE SOCIAL",
     "cpf": "50664140106",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800852"
   },
   {
     "sqCandidato": "120002547058",
@@ -4638,7 +4858,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "DEPUTADO",
     "cpf": "04064992172",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800852"
   },
   {
     "sqCandidato": "120002547061",
@@ -4659,7 +4880,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "SERVIDOR PÚBLICO ESTADUAL",
     "cpf": "43773281900",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800852"
   },
   {
     "sqCandidato": "120002547066",
@@ -4680,7 +4902,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "ENFERMEIRO",
     "cpf": "55734901172",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800852"
   },
   {
     "sqCandidato": "120002547067",
@@ -4701,7 +4924,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "EMPRESÁRIO",
     "cpf": "72230339168",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800852"
   },
   {
     "sqCandidato": "120002549570",
@@ -4722,7 +4946,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "ASSISTENTE SOCIAL",
     "cpf": "49714112168",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001801054"
   },
   {
     "sqCandidato": "120002549576",
@@ -4743,7 +4968,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "SERVIDOR PÚBLICO ESTADUAL",
     "cpf": "06593207896",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001801054"
   },
   {
     "sqCandidato": "120002549575",
@@ -4764,7 +4990,8 @@
     "grauInstrucao": "SUPERIOR INCOMPLETO",
     "ocupacao": "MOTORISTA PARTICULAR",
     "cpf": "02600669159",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001801054"
   },
   {
     "sqCandidato": "120002549684",
@@ -4785,7 +5012,8 @@
     "grauInstrucao": "ENSINO MÉDIO COMPLETO",
     "ocupacao": "EMPRESÁRIO",
     "cpf": "00780811143",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001801020"
   },
   {
     "sqCandidato": "120002551713",
@@ -4806,7 +5034,8 @@
     "grauInstrucao": "ENSINO MÉDIO COMPLETO",
     "ocupacao": "OUTROS",
     "cpf": "70186657102",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001801270"
   },
   {
     "sqCandidato": "120002551909",
@@ -4827,7 +5056,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "ENGENHEIRO",
     "cpf": "40408248149",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001801219"
   },
   {
     "sqCandidato": "120002552159",
@@ -4848,7 +5078,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "EMPRESÁRIO",
     "cpf": "03432361173",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001801245"
   },
   {
     "sqCandidato": "120002552162",
@@ -4869,7 +5100,8 @@
     "grauInstrucao": "SUPERIOR INCOMPLETO",
     "ocupacao": "ADMINISTRADOR",
     "cpf": "39049558100",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001801245"
   },
   {
     "sqCandidato": "120002552182",
@@ -4890,7 +5122,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "ENGENHEIRO",
     "cpf": "86100530244",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001801253"
   },
   {
     "sqCandidato": "120002552184",
@@ -4911,7 +5144,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "EMPRESÁRIO",
     "cpf": "78318262972",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001801253"
   },
   {
     "sqCandidato": "120002552195",
@@ -4932,7 +5166,8 @@
     "grauInstrucao": "SUPERIOR INCOMPLETO",
     "ocupacao": "JORNALISTA E REDATOR",
     "cpf": "00888218117",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001801256"
   },
   {
     "sqCandidato": "120002552209",
@@ -4953,7 +5188,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "CORRETOR DE IMÓVEIS, SEGUROS, TÍTULOS E VALORES",
     "cpf": "88618587168",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001801245"
   },
   {
     "sqCandidato": "120002552215",
@@ -4974,7 +5210,8 @@
     "grauInstrucao": "ENSINO FUNDAMENTAL INCOMPLETO",
     "ocupacao": "APOSENTADO (EXCETO SERVIDOR PÚBLICO)",
     "cpf": "47500115849",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001801245"
   },
   {
     "sqCandidato": "120002552952",
@@ -4995,7 +5232,8 @@
     "grauInstrucao": "ENSINO MÉDIO COMPLETO",
     "ocupacao": "ESTUDANTE, BOLSISTA, ESTAGIÁRIO E ASSEMELHADOS",
     "cpf": "09063475136",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001801284"
   },
   {
     "sqCandidato": "120002553018",
@@ -5016,7 +5254,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "DONA DE CASA",
     "cpf": "96945176134",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001801350"
   },
   {
     "sqCandidato": "120002532256",
@@ -5037,7 +5276,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "PROFESSOR DE ENSINO SUPERIOR",
     "cpf": "29107989253",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001799961"
   },
   {
     "sqCandidato": "120002532700",
@@ -5058,7 +5298,8 @@
     "grauInstrucao": "ENSINO MÉDIO COMPLETO",
     "ocupacao": "MOTORISTA DE VEÍCULOS DE TRANSPORTE DE CARGA",
     "cpf": "08507168701",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800098"
   },
   {
     "sqCandidato": "120002532257",
@@ -5079,7 +5320,8 @@
     "grauInstrucao": "ENSINO FUNDAMENTAL COMPLETO",
     "ocupacao": "EMPRESÁRIO",
     "cpf": "31183700172",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001799961"
   },
   {
     "sqCandidato": "120002532702",
@@ -5100,7 +5342,8 @@
     "grauInstrucao": "ENSINO FUNDAMENTAL INCOMPLETO",
     "ocupacao": "OUTROS",
     "cpf": "03073586156",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800098"
   },
   {
     "sqCandidato": "120002532707",
@@ -5121,7 +5364,8 @@
     "grauInstrucao": "ENSINO FUNDAMENTAL INCOMPLETO",
     "ocupacao": "OUTROS",
     "cpf": "65238974191",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800098"
   },
   {
     "sqCandidato": "120002532710",
@@ -5142,7 +5386,8 @@
     "grauInstrucao": "ENSINO MÉDIO COMPLETO",
     "ocupacao": "OUTROS",
     "cpf": "02999600135",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800099"
   },
   {
     "sqCandidato": "120002532720",
@@ -5163,7 +5408,8 @@
     "grauInstrucao": "ENSINO MÉDIO COMPLETO",
     "ocupacao": "DONA DE CASA",
     "cpf": "87295741100",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800100"
   },
   {
     "sqCandidato": "120002534959",
@@ -5184,7 +5430,8 @@
     "grauInstrucao": "ENSINO MÉDIO INCOMPLETO",
     "ocupacao": "VENDEDOR PRACISTA, REPRESENTANTE, CAIXEIRO-VIAJANTE E ASSEMELHADOS",
     "cpf": "69415072172",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800228"
   },
   {
     "sqCandidato": "120002535261",
@@ -5205,7 +5452,8 @@
     "grauInstrucao": "SUPERIOR INCOMPLETO",
     "ocupacao": "COMERCIANTE",
     "cpf": "40736296115",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800268"
   },
   {
     "sqCandidato": "120002535263",
@@ -5226,7 +5474,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "VEREADOR",
     "cpf": "83018042115",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800268"
   },
   {
     "sqCandidato": "120002535513",
@@ -5247,7 +5496,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "OUTROS",
     "cpf": "05241762485",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800249"
   },
   {
     "sqCandidato": "120002535392",
@@ -5268,7 +5518,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "EMPRESÁRIO",
     "cpf": "02366427158",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800276"
   },
   {
     "sqCandidato": "120002535393",
@@ -5289,7 +5540,8 @@
     "grauInstrucao": "SUPERIOR INCOMPLETO",
     "ocupacao": "TÉCNICO DE ENFERMAGEM E ASSEMELHADOS (EXCETO ENFERMEIRO)",
     "cpf": "61375934104",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800276"
   },
   {
     "sqCandidato": "120002535517",
@@ -5310,7 +5562,8 @@
     "grauInstrucao": "ENSINO FUNDAMENTAL COMPLETO",
     "ocupacao": "MANICURE E MAQUILADOR",
     "cpf": "55484034191",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800249"
   },
   {
     "sqCandidato": "120002535518",
@@ -5331,7 +5584,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "OUTROS",
     "cpf": "28632060104",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800249"
   },
   {
     "sqCandidato": "120002535525",
@@ -5352,7 +5606,8 @@
     "grauInstrucao": "ENSINO MÉDIO COMPLETO",
     "ocupacao": "OUTROS",
     "cpf": "66366100187",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800249"
   },
   {
     "sqCandidato": "120002535529",
@@ -5373,7 +5628,8 @@
     "grauInstrucao": "SUPERIOR INCOMPLETO",
     "ocupacao": "EMPRESÁRIO",
     "cpf": "05084931960",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800249"
   },
   {
     "sqCandidato": "120002535530",
@@ -5394,7 +5650,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "CORRETOR DE IMÓVEIS, SEGUROS, TÍTULOS E VALORES",
     "cpf": "78146798187",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800249"
   },
   {
     "sqCandidato": "120002535535",
@@ -5415,7 +5672,8 @@
     "grauInstrucao": "ENSINO FUNDAMENTAL COMPLETO",
     "ocupacao": "SERVIDOR PÚBLICO MUNICIPAL",
     "cpf": "29848440178",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800249"
   },
   {
     "sqCandidato": "120002536056",
@@ -5436,7 +5694,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "ENGENHEIRO",
     "cpf": "36291870720",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800276"
   },
   {
     "sqCandidato": "120002536059",
@@ -5457,7 +5716,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "ADVOGADO",
     "cpf": "90608925187",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800276"
   },
   {
     "sqCandidato": "120002536074",
@@ -5478,7 +5738,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "ADMINISTRADOR",
     "cpf": "44799187104",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800276"
   },
   {
     "sqCandidato": "120002536073",
@@ -5499,7 +5760,8 @@
     "grauInstrucao": "SUPERIOR INCOMPLETO",
     "ocupacao": "JORNALISTA E REDATOR",
     "cpf": "72243406187",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800276"
   },
   {
     "sqCandidato": "120002536283",
@@ -5520,7 +5782,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "PSICÓLOGO",
     "cpf": "09240412930",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800253"
   },
   {
     "sqCandidato": "120002537460",
@@ -5541,7 +5804,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "VEREADOR",
     "cpf": "42107059187",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800362"
   },
   {
     "sqCandidato": "120002537508",
@@ -5562,7 +5826,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "ADVOGADO",
     "cpf": "01103183150",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800364"
   },
   {
     "sqCandidato": "120002537519",
@@ -5583,7 +5848,8 @@
     "grauInstrucao": "ENSINO FUNDAMENTAL INCOMPLETO",
     "ocupacao": "VENDEDOR DE COMÉRCIO VAREJISTA E ATACADISTA",
     "cpf": "04632968854",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800364"
   },
   {
     "sqCandidato": "120002537522",
@@ -5604,7 +5870,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "DEPUTADO",
     "cpf": "12265240877",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800364"
   },
   {
     "sqCandidato": "120002538786",
@@ -5625,7 +5892,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "MÉDICO",
     "cpf": "05134552134",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800440"
   },
   {
     "sqCandidato": "120002538788",
@@ -5646,7 +5914,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "PROFESSOR DE ENSINO MÉDIO",
     "cpf": "93132620106",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800440"
   },
   {
     "sqCandidato": "120002538792",
@@ -5667,7 +5936,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "POLICIAL CIVIL",
     "cpf": "12747759814",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800440"
   },
   {
     "sqCandidato": "120002538950",
@@ -5688,7 +5958,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "ADMINISTRADOR",
     "cpf": "55889441191",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800411"
   },
   {
     "sqCandidato": "120002539690",
@@ -5709,7 +5980,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "EMPRESÁRIO",
     "cpf": "51912325187",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800466"
   },
   {
     "sqCandidato": "120002539706",
@@ -5730,7 +6002,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "EMPRESÁRIO",
     "cpf": "00165701110",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800466"
   },
   {
     "sqCandidato": "120002539709",
@@ -5751,7 +6024,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "ADMINISTRADOR",
     "cpf": "04849835805",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800466"
   },
   {
     "sqCandidato": "120002544714",
@@ -5772,7 +6046,8 @@
     "grauInstrucao": "ENSINO MÉDIO COMPLETO",
     "ocupacao": "APOSENTADO (EXCETO SERVIDOR PÚBLICO)",
     "cpf": "04860233115",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800745"
   },
   {
     "sqCandidato": "120002544719",
@@ -5793,7 +6068,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "APOSENTADO (EXCETO SERVIDOR PÚBLICO)",
     "cpf": "46466479153",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800745"
   },
   {
     "sqCandidato": "120002544965",
@@ -5814,7 +6090,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "TÉCNICO DE ENFERMAGEM E ASSEMELHADOS (EXCETO ENFERMEIRO)",
     "cpf": "69380619120",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800769"
   },
   {
     "sqCandidato": "120002544972",
@@ -5835,7 +6112,8 @@
     "grauInstrucao": "ENSINO FUNDAMENTAL INCOMPLETO",
     "ocupacao": "ALFAIATE E COSTUREIRO",
     "cpf": "50183133153",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800769"
   },
   {
     "sqCandidato": "120002544981",
@@ -5856,7 +6134,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "PROFESSOR DE ENSINO MÉDIO",
     "cpf": "40384245889",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800769"
   },
   {
     "sqCandidato": "120002547047",
@@ -5877,7 +6156,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "SERVIDOR PÚBLICO MUNICIPAL",
     "cpf": "96399406153",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800852"
   },
   {
     "sqCandidato": "120002547046",
@@ -5898,7 +6178,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "ADVOGADO",
     "cpf": "10661891100",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800852"
   },
   {
     "sqCandidato": "120002547052",
@@ -5919,7 +6200,8 @@
     "grauInstrucao": "ENSINO FUNDAMENTAL COMPLETO",
     "ocupacao": "CERAMISTA E OLEIRO",
     "cpf": "52568520191",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800852"
   },
   {
     "sqCandidato": "120002547053",
@@ -5940,7 +6222,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "EMPRESÁRIO",
     "cpf": "29803748149",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800852"
   },
   {
     "sqCandidato": "120002547055",
@@ -5961,7 +6244,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "SERVIDOR PÚBLICO FEDERAL",
     "cpf": "95756493115",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800852"
   },
   {
     "sqCandidato": "120002547054",
@@ -5982,7 +6266,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "CORRETOR DE IMÓVEIS, SEGUROS, TÍTULOS E VALORES",
     "cpf": "06561196830",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800852"
   },
   {
     "sqCandidato": "120002547435",
@@ -6003,7 +6288,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "BANCÁRIO E ECONOMIÁRIO",
     "cpf": "32247753191",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800861"
   },
   {
     "sqCandidato": "120002547436",
@@ -6024,7 +6310,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "PROFESSOR DE ENSINO FUNDAMENTAL",
     "cpf": "36747602153",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800861"
   },
   {
     "sqCandidato": "120002547438",
@@ -6045,7 +6332,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "SERVIDOR PÚBLICO CIVIL APOSENTADO",
     "cpf": "27190960163",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800861"
   },
   {
     "sqCandidato": "120002549681",
@@ -6066,7 +6354,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "CAPITALISTA DE ATIVOS FINANCEIROS",
     "cpf": "01682454185",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001801019"
   },
   {
     "sqCandidato": "120002549689",
@@ -6087,7 +6376,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "COMERCIANTE",
     "cpf": "74262475972",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001801020"
   },
   {
     "sqCandidato": "120002550712",
@@ -6108,7 +6398,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "PROFESSOR DE ENSINO FUNDAMENTAL",
     "cpf": "59560924168",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001801128"
   },
   {
     "sqCandidato": "120002550718",
@@ -6129,7 +6420,8 @@
     "grauInstrucao": "ENSINO FUNDAMENTAL INCOMPLETO",
     "ocupacao": "APOSENTADO (EXCETO SERVIDOR PÚBLICO)",
     "cpf": "02574918991",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001801128"
   },
   {
     "sqCandidato": "120002551721",
@@ -6150,7 +6442,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "GERENTE",
     "cpf": "95108386168",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001801270"
   },
   {
     "sqCandidato": "120002551724",
@@ -6171,7 +6464,8 @@
     "grauInstrucao": "ENSINO FUNDAMENTAL INCOMPLETO",
     "ocupacao": "GERENTE",
     "cpf": "00028184181",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001801270"
   },
   {
     "sqCandidato": "120002551726",
@@ -6192,7 +6486,8 @@
     "grauInstrucao": "ENSINO MÉDIO COMPLETO",
     "ocupacao": "SERVIDOR PÚBLICO MUNICIPAL",
     "cpf": "55985831191",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001801270"
   },
   {
     "sqCandidato": "120002551725",
@@ -6213,7 +6508,8 @@
     "grauInstrucao": "ENSINO MÉDIO INCOMPLETO",
     "ocupacao": "PRODUTOR AGROPECUÁRIO",
     "cpf": "30581400100",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001801270"
   },
   {
     "sqCandidato": "120002551907",
@@ -6234,7 +6530,8 @@
     "grauInstrucao": "ENSINO FUNDAMENTAL COMPLETO",
     "ocupacao": "TRABALHADOR RURAL",
     "cpf": "43172423972",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001801219"
   },
   {
     "sqCandidato": "120002552174",
@@ -6255,7 +6552,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "CONTADOR",
     "cpf": "68970528172",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001801252"
   },
   {
     "sqCandidato": "120002552181",
@@ -6276,7 +6574,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "COZINHEIRO",
     "cpf": "06823649160",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001801252"
   },
   {
     "sqCandidato": "120002552183",
@@ -6297,7 +6596,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "EMPRESÁRIO",
     "cpf": "46520210110",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001801253"
   },
   {
     "sqCandidato": "120002552208",
@@ -6318,7 +6618,8 @@
     "grauInstrucao": "SUPERIOR INCOMPLETO",
     "ocupacao": "ESTUDANTE, BOLSISTA, ESTAGIÁRIO E ASSEMELHADOS",
     "cpf": "07970497110",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001801245"
   },
   {
     "sqCandidato": "120002552953",
@@ -6339,7 +6640,8 @@
     "grauInstrucao": "ENSINO MÉDIO COMPLETO",
     "ocupacao": "EMPRESÁRIO",
     "cpf": "00478882106",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001801284"
   },
   {
     "sqCandidato": "120002553017",
@@ -6360,7 +6662,8 @@
     "grauInstrucao": "SUPERIOR INCOMPLETO",
     "ocupacao": "ADVOGADO",
     "cpf": "48974250187",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001801350"
   },
   {
     "sqCandidato": "120002532711",
@@ -6381,7 +6684,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "GEÓGRAFO",
     "cpf": "40403254191",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800099"
   },
   {
     "sqCandidato": "120002535522",
@@ -6402,7 +6706,8 @@
     "grauInstrucao": "ENSINO MÉDIO COMPLETO",
     "ocupacao": "OUTROS",
     "cpf": "79934404168",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800249"
   },
   {
     "sqCandidato": "120002535524",
@@ -6423,7 +6728,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "JORNALISTA E REDATOR",
     "cpf": "65245911191",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800249"
   },
   {
     "sqCandidato": "120002535531",
@@ -6444,7 +6750,8 @@
     "grauInstrucao": "ENSINO FUNDAMENTAL INCOMPLETO",
     "ocupacao": "SERVIDOR PÚBLICO MUNICIPAL",
     "cpf": "11271368870",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800249"
   },
   {
     "sqCandidato": "120002536057",
@@ -6465,7 +6772,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "ADVOGADO",
     "cpf": "97652911168",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800276"
   },
   {
     "sqCandidato": "120002536067",
@@ -6486,7 +6794,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "EMPRESÁRIO",
     "cpf": "60907932134",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800276"
   },
   {
     "sqCandidato": "120002536070",
@@ -6507,7 +6816,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "CORRETOR DE IMÓVEIS, SEGUROS, TÍTULOS E VALORES",
     "cpf": "01945180196",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800276"
   },
   {
     "sqCandidato": "120002536581",
@@ -6528,7 +6838,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "ADVOGADO",
     "cpf": "28021908149",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800246"
   },
   {
     "sqCandidato": "120002537357",
@@ -6549,7 +6860,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "BOMBEIRO MILITAR",
     "cpf": "36855553168",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800356"
   },
   {
     "sqCandidato": "120002537511",
@@ -6570,7 +6882,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "PUBLICITÁRIO",
     "cpf": "13943693104",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800364"
   },
   {
     "sqCandidato": "120002538790",
@@ -6591,7 +6904,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "EMPRESÁRIO",
     "cpf": "09470447875",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800440"
   },
   {
     "sqCandidato": "120002538949",
@@ -6612,7 +6926,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "ADVOGADO",
     "cpf": "02000518141",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800411"
   },
   {
     "sqCandidato": "120002538953",
@@ -6633,7 +6948,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "SERVIDOR PÚBLICO ESTADUAL",
     "cpf": "77129172134",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800411"
   },
   {
     "sqCandidato": "120002539705",
@@ -6654,7 +6970,8 @@
     "grauInstrucao": "SUPERIOR INCOMPLETO",
     "ocupacao": "OUTROS",
     "cpf": "20404816134",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800466"
   },
   {
     "sqCandidato": "120002544713",
@@ -6675,7 +6992,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "APOSENTADO (EXCETO SERVIDOR PÚBLICO)",
     "cpf": "43960545800",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800745"
   },
   {
     "sqCandidato": "120002544722",
@@ -6696,7 +7014,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "DEPUTADO",
     "cpf": "25741934153",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800745"
   },
   {
     "sqCandidato": "120002544957",
@@ -6717,7 +7036,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "EMPRESÁRIO",
     "cpf": "04578809102",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800768"
   },
   {
     "sqCandidato": "120002544967",
@@ -6738,7 +7058,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "CORRETOR DE IMÓVEIS, SEGUROS, TÍTULOS E VALORES",
     "cpf": "83271007187",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800769"
   },
   {
     "sqCandidato": "120002544970",
@@ -6759,7 +7080,8 @@
     "grauInstrucao": "ENSINO MÉDIO COMPLETO",
     "ocupacao": "GERENTE",
     "cpf": "41685259880",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800769"
   },
   {
     "sqCandidato": "120002544980",
@@ -6780,7 +7102,8 @@
     "grauInstrucao": "SUPERIOR INCOMPLETO",
     "ocupacao": "TÉCNICO EM AGRONOMIA E AGRIMENSURA",
     "cpf": "36696471120",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800769"
   },
   {
     "sqCandidato": "120002544983",
@@ -6801,7 +7124,8 @@
     "grauInstrucao": "ENSINO MÉDIO COMPLETO",
     "ocupacao": "EMPRESÁRIO",
     "cpf": "07804387601",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800769"
   },
   {
     "sqCandidato": "120002545238",
@@ -6822,7 +7146,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "AGRÔNOMO",
     "cpf": "42461383634",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800660"
   },
   {
     "sqCandidato": "120002547059",
@@ -6843,7 +7168,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "ESCRITOR E CRÍTICO",
     "cpf": "95058125153",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800852"
   },
   {
     "sqCandidato": "120002547062",
@@ -6864,7 +7190,8 @@
     "grauInstrucao": "ENSINO FUNDAMENTAL INCOMPLETO",
     "ocupacao": "OUTROS",
     "cpf": "63722895120",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800852"
   },
   {
     "sqCandidato": "120002547063",
@@ -6885,7 +7212,8 @@
     "grauInstrucao": "ENSINO MÉDIO COMPLETO",
     "ocupacao": "AGRICULTOR",
     "cpf": "82234256100",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800852"
   },
   {
     "sqCandidato": "120002547065",
@@ -6906,7 +7234,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "EMPRESÁRIO",
     "cpf": "66723965272",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800852"
   },
   {
     "sqCandidato": "120002547434",
@@ -6927,7 +7256,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "ADVOGADO",
     "cpf": "60838965172",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800861"
   },
   {
     "sqCandidato": "120002549562",
@@ -6948,7 +7278,8 @@
     "grauInstrucao": "ENSINO MÉDIO COMPLETO",
     "ocupacao": "EMPRESÁRIO",
     "cpf": "01244998133",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001801054"
   },
   {
     "sqCandidato": "120002549566",
@@ -6969,7 +7300,8 @@
     "grauInstrucao": "SUPERIOR INCOMPLETO",
     "ocupacao": "SERVIDOR PÚBLICO ESTADUAL",
     "cpf": "03559868173",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001801054"
   },
   {
     "sqCandidato": "120002549569",
@@ -6990,7 +7322,8 @@
     "grauInstrucao": "ENSINO MÉDIO COMPLETO",
     "ocupacao": "COMERCIANTE",
     "cpf": "60116781149",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001801054"
   },
   {
     "sqCandidato": "120002549573",
@@ -7011,7 +7344,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "ADMINISTRADOR",
     "cpf": "63657325115",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001801054"
   },
   {
     "sqCandidato": "120002549578",
@@ -7032,7 +7366,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "MÉDICO",
     "cpf": "03463205939",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001801054"
   },
   {
     "sqCandidato": "120002549579",
@@ -7053,7 +7388,8 @@
     "grauInstrucao": "ENSINO MÉDIO COMPLETO",
     "ocupacao": "SERVIDOR PÚBLICO MUNICIPAL",
     "cpf": "55413552149",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001801054"
   },
   {
     "sqCandidato": "120002549582",
@@ -7074,7 +7410,8 @@
     "grauInstrucao": "SUPERIOR INCOMPLETO",
     "ocupacao": "OUTROS",
     "cpf": "08084059777",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001801054"
   },
   {
     "sqCandidato": "120002549580",
@@ -7095,7 +7432,8 @@
     "grauInstrucao": "ENSINO MÉDIO COMPLETO",
     "ocupacao": "DONA DE CASA",
     "cpf": "02277725129",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001801054"
   },
   {
     "sqCandidato": "120002549690",
@@ -7116,7 +7454,8 @@
     "grauInstrucao": "ENSINO MÉDIO COMPLETO",
     "ocupacao": "COMERCIANTE",
     "cpf": "09732074779",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001801020"
   },
   {
     "sqCandidato": "120002550711",
@@ -7137,7 +7476,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "ODONTÓLOGO",
     "cpf": "06979341871",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001801128"
   },
   {
     "sqCandidato": "120002551720",
@@ -7158,7 +7498,8 @@
     "grauInstrucao": "SUPERIOR INCOMPLETO",
     "ocupacao": "ESTUDANTE, BOLSISTA, ESTAGIÁRIO E ASSEMELHADOS",
     "cpf": "70058804129",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001801270"
   },
   {
     "sqCandidato": "120002551722",
@@ -7179,7 +7520,8 @@
     "grauInstrucao": "ENSINO MÉDIO INCOMPLETO",
     "ocupacao": "GARÇOM",
     "cpf": "56166729120",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001801270"
   },
   {
     "sqCandidato": "120002551727",
@@ -7200,7 +7542,8 @@
     "grauInstrucao": "SUPERIOR INCOMPLETO",
     "ocupacao": "APOSENTADO (EXCETO SERVIDOR PÚBLICO)",
     "cpf": "42814570978",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001801270"
   },
   {
     "sqCandidato": "120002551728",
@@ -7221,7 +7564,8 @@
     "grauInstrucao": "ENSINO MÉDIO INCOMPLETO",
     "ocupacao": "REPRESENTANTE COMERCIAL",
     "cpf": "58355421191",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001801270"
   },
   {
     "sqCandidato": "120002552115",
@@ -7242,7 +7586,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "ADVOGADO",
     "cpf": "76756700197",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001801248"
   },
   {
     "sqCandidato": "120002552117",
@@ -7263,7 +7608,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "ADMINISTRADOR",
     "cpf": "30839920091",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001801248"
   },
   {
     "sqCandidato": "120002552155",
@@ -7284,7 +7630,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "ENGENHEIRO",
     "cpf": "01127982842",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001801243"
   },
   {
     "sqCandidato": "120002552180",
@@ -7305,7 +7652,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "EMPRESÁRIO",
     "cpf": "70758000863",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001801252"
   },
   {
     "sqCandidato": "120002552191",
@@ -7326,7 +7674,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "ADVOGADO",
     "cpf": "01247628167",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001801255"
   },
   {
     "sqCandidato": "120002552203",
@@ -7347,7 +7696,8 @@
     "grauInstrucao": "ENSINO MÉDIO COMPLETO",
     "ocupacao": "TRABALHADOR DE CONSTRUÇÃO CIVIL",
     "cpf": "92266053191",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001801245"
   },
   {
     "sqCandidato": "120002552683",
@@ -7368,7 +7718,8 @@
     "grauInstrucao": "ENSINO FUNDAMENTAL INCOMPLETO",
     "ocupacao": "TRABALHADOR RURAL",
     "cpf": "04470910180",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001801259"
   },
   {
     "sqCandidato": "120002552685",
@@ -7389,7 +7740,8 @@
     "grauInstrucao": "ENSINO MÉDIO COMPLETO",
     "ocupacao": "DONA DE CASA",
     "cpf": "70649916166",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001801259"
   },
   {
     "sqCandidato": "120002552686",
@@ -7410,7 +7762,8 @@
     "grauInstrucao": "SUPERIOR INCOMPLETO",
     "ocupacao": "COMERCIANTE",
     "cpf": "07787138149",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001801259"
   },
   {
     "sqCandidato": "120002552689",
@@ -7431,7 +7784,8 @@
     "grauInstrucao": "ENSINO MÉDIO COMPLETO",
     "ocupacao": "OUTROS",
     "cpf": "02160908142",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001801260"
   },
   {
     "sqCandidato": "120002552949",
@@ -7452,7 +7806,8 @@
     "grauInstrucao": "SUPERIOR INCOMPLETO",
     "ocupacao": "ADVOGADO",
     "cpf": "04244502165",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001801284"
   },
   {
     "sqCandidato": "120002553015",
@@ -7473,7 +7828,8 @@
     "grauInstrucao": "ENSINO MÉDIO COMPLETO",
     "ocupacao": "DONA DE CASA",
     "cpf": "00631304169",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001801350"
   },
   {
     "sqCandidato": "120002553014",
@@ -7494,7 +7850,8 @@
     "grauInstrucao": "LÊ E ESCREVE",
     "ocupacao": "APOSENTADO (EXCETO SERVIDOR PÚBLICO)",
     "cpf": "95985891100",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001801350"
   },
   {
     "sqCandidato": "120002553019",
@@ -7515,7 +7872,8 @@
     "grauInstrucao": "ENSINO FUNDAMENTAL COMPLETO",
     "ocupacao": "VENDEDOR DE COMÉRCIO VAREJISTA E ATACADISTA",
     "cpf": "96943815172",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001801350"
   },
   {
     "sqCandidato": "120002553248",
@@ -7536,7 +7894,8 @@
     "grauInstrucao": "ENSINO MÉDIO COMPLETO",
     "ocupacao": "SACERDOTE OU MEMBRO DE ORDEM OU SEITA RELIGIOSA",
     "cpf": "87337495404",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001801350"
   },
   {
     "sqCandidato": "120002553247",
@@ -7557,7 +7916,8 @@
     "grauInstrucao": "ENSINO MÉDIO INCOMPLETO",
     "ocupacao": "JORNALISTA E REDATOR",
     "cpf": "81017251720",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001801350"
   },
   {
     "sqCandidato": "120002532701",
@@ -7578,7 +7938,8 @@
     "grauInstrucao": "ENSINO FUNDAMENTAL COMPLETO",
     "ocupacao": "CANTOR E COMPOSITOR",
     "cpf": "06017582186",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800098"
   },
   {
     "sqCandidato": "120002532704",
@@ -7599,7 +7960,8 @@
     "grauInstrucao": "ENSINO MÉDIO INCOMPLETO",
     "ocupacao": "OUTROS",
     "cpf": "13964941115",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800098"
   },
   {
     "sqCandidato": "120002532719",
@@ -7620,7 +7982,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "PROFESSOR DE ENSINO FUNDAMENTAL",
     "cpf": "83177116172",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800100"
   },
   {
     "sqCandidato": "120002535258",
@@ -7641,7 +8004,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "EMPRESÁRIO",
     "cpf": "36547425134",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800268"
   },
   {
     "sqCandidato": "120002535264",
@@ -7662,7 +8026,8 @@
     "grauInstrucao": "ENSINO MÉDIO COMPLETO",
     "ocupacao": "VEREADOR",
     "cpf": "00312986130",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800268"
   },
   {
     "sqCandidato": "120002535516",
@@ -7683,7 +8048,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "SERVIDOR PÚBLICO MUNICIPAL",
     "cpf": "02513588100",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800249"
   },
   {
     "sqCandidato": "120002535521",
@@ -7704,7 +8070,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "ADVOGADO",
     "cpf": "00601638107",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800249"
   },
   {
     "sqCandidato": "120002535523",
@@ -7725,7 +8092,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "SERVIDOR PÚBLICO ESTADUAL",
     "cpf": "01778012124",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800249"
   },
   {
     "sqCandidato": "120002535764",
@@ -7746,7 +8114,8 @@
     "grauInstrucao": "SUPERIOR INCOMPLETO",
     "ocupacao": "PRODUTOR AGROPECUÁRIO",
     "cpf": "28633938120",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800239"
   },
   {
     "sqCandidato": "120002536058",
@@ -7767,7 +8136,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "PROFESSOR DE ENSINO FUNDAMENTAL",
     "cpf": "03897546175",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800276"
   },
   {
     "sqCandidato": "120002536060",
@@ -7788,7 +8158,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "ADVOGADO",
     "cpf": "04817960108",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800276"
   },
   {
     "sqCandidato": "120002536063",
@@ -7809,7 +8180,8 @@
     "grauInstrucao": "ENSINO MÉDIO COMPLETO",
     "ocupacao": "EMPRESÁRIO",
     "cpf": "71527710149",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800276"
   },
   {
     "sqCandidato": "120002536066",
@@ -7830,7 +8202,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "DEPUTADO",
     "cpf": "36718556149",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800276"
   },
   {
     "sqCandidato": "120002536281",
@@ -7851,7 +8224,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "PECUARISTA",
     "cpf": "77389557168",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800253"
   },
   {
     "sqCandidato": "120002536285",
@@ -7872,7 +8246,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "ENGENHEIRO",
     "cpf": "01514316803",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800253"
   },
   {
     "sqCandidato": "120002536287",
@@ -7893,7 +8268,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "ADVOGADO",
     "cpf": "93630603149",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800253"
   },
   {
     "sqCandidato": "120002536286",
@@ -7914,7 +8290,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "ODONTÓLOGO",
     "cpf": "52677044900",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800253"
   },
   {
     "sqCandidato": "120002537356",
@@ -7935,7 +8312,8 @@
     "grauInstrucao": "ENSINO FUNDAMENTAL INCOMPLETO",
     "ocupacao": "VEREADOR",
     "cpf": "91552540120",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800356"
   },
   {
     "sqCandidato": "120002537359",
@@ -7956,7 +8334,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "BOMBEIRO MILITAR",
     "cpf": "88399982172",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800356"
   },
   {
     "sqCandidato": "120002537363",
@@ -7977,7 +8356,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "ENGENHEIRO",
     "cpf": "96001100853",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800356"
   },
   {
     "sqCandidato": "120002537467",
@@ -7998,7 +8378,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "APOSENTADO (EXCETO SERVIDOR PÚBLICO)",
     "cpf": "35598212153",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800362"
   },
   {
     "sqCandidato": "120002537501",
@@ -8019,7 +8400,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "POLICIAL MILITAR",
     "cpf": "00267853157",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800364"
   },
   {
     "sqCandidato": "120002537506",
@@ -8040,7 +8422,8 @@
     "grauInstrucao": "ENSINO MÉDIO COMPLETO",
     "ocupacao": "EMPRESÁRIO",
     "cpf": "89383150106",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800364"
   },
   {
     "sqCandidato": "120002537507",
@@ -8061,7 +8444,8 @@
     "grauInstrucao": "SUPERIOR INCOMPLETO",
     "ocupacao": "ESTUDANTE, BOLSISTA, ESTAGIÁRIO E ASSEMELHADOS",
     "cpf": "09336896164",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800364"
   },
   {
     "sqCandidato": "120002538785",
@@ -8082,7 +8466,8 @@
     "grauInstrucao": "SUPERIOR INCOMPLETO",
     "ocupacao": "JORNALISTA E REDATOR",
     "cpf": "84206241104",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800440"
   },
   {
     "sqCandidato": "120002538945",
@@ -8103,7 +8488,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "AGRÔNOMO",
     "cpf": "06307389125",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800411"
   },
   {
     "sqCandidato": "120002538951",
@@ -8124,7 +8510,8 @@
     "grauInstrucao": "SUPERIOR INCOMPLETO",
     "ocupacao": "JORNALISTA E REDATOR",
     "cpf": "08977458170",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800411"
   },
   {
     "sqCandidato": "120002539695",
@@ -8145,7 +8532,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "SERVIDOR PÚBLICO FEDERAL",
     "cpf": "47557389115",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800466"
   },
   {
     "sqCandidato": "120002539697",
@@ -8166,7 +8554,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "BIOMÉDICO",
     "cpf": "49726854172",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800466"
   },
   {
     "sqCandidato": "120002539702",
@@ -8187,7 +8576,8 @@
     "grauInstrucao": "ENSINO MÉDIO COMPLETO",
     "ocupacao": "PRODUTOR AGROPECUÁRIO",
     "cpf": "20008090149",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800466"
   },
   {
     "sqCandidato": "120002539707",
@@ -8208,7 +8598,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "BOMBEIRO MILITAR",
     "cpf": "95007997153",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800466"
   },
   {
     "sqCandidato": "120002544710",
@@ -8229,7 +8620,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "ODONTÓLOGO",
     "cpf": "01749184109",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800745"
   },
   {
     "sqCandidato": "120002544709",
@@ -8250,7 +8642,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "ENFERMEIRO",
     "cpf": "96682043104",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800745"
   },
   {
     "sqCandidato": "120002544711",
@@ -8271,7 +8664,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "PROFESSOR DE ENSINO FUNDAMENTAL",
     "cpf": "69222045149",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800745"
   },
   {
     "sqCandidato": "120002544956",
@@ -8292,7 +8686,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "VENDEDOR DE COMÉRCIO VAREJISTA E ATACADISTA",
     "cpf": "05224212103",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800768"
   },
   {
     "sqCandidato": "120002544721",
@@ -8313,7 +8708,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "ARQUITETO",
     "cpf": "58332308100",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800745"
   },
   {
     "sqCandidato": "120002544975",
@@ -8334,7 +8730,8 @@
     "grauInstrucao": "ENSINO MÉDIO INCOMPLETO",
     "ocupacao": "DONA DE CASA",
     "cpf": "93729723120",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800769"
   },
   {
     "sqCandidato": "120002544982",
@@ -8355,7 +8752,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "BANCÁRIO E ECONOMIÁRIO",
     "cpf": "13943853829",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800769"
   },
   {
     "sqCandidato": "120002545240",
@@ -8376,7 +8774,8 @@
     "grauInstrucao": "SUPERIOR INCOMPLETO",
     "ocupacao": "POLICIAL MILITAR",
     "cpf": "89164725120",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800660"
   },
   {
     "sqCandidato": "120002547056",
@@ -8397,7 +8796,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "SERVIDOR PÚBLICO CIVIL APOSENTADO",
     "cpf": "39033309149",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800852"
   },
   {
     "sqCandidato": "120002547433",
@@ -8418,7 +8818,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "EMPRESÁRIO",
     "cpf": "01274443199",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001800861"
   },
   {
     "sqCandidato": "120002549561",
@@ -8439,7 +8840,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "ENFERMEIRO",
     "cpf": "27218856187",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001801054"
   },
   {
     "sqCandidato": "120002549567",
@@ -8460,7 +8862,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "SERVIDOR PÚBLICO MUNICIPAL",
     "cpf": "66817862191",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001801054"
   },
   {
     "sqCandidato": "120002549683",
@@ -8481,7 +8884,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "PROFESSOR DE ENSINO MÉDIO",
     "cpf": "92941338187",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001801020"
   },
   {
     "sqCandidato": "120002549685",
@@ -8502,7 +8906,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "ADVOGADO",
     "cpf": "02246060184",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001801020"
   },
   {
     "sqCandidato": "120002550713",
@@ -8523,7 +8928,8 @@
     "grauInstrucao": "ENSINO MÉDIO COMPLETO",
     "ocupacao": "MOTORISTA DE VEÍCULOS DE TRANSPORTE COLETIVO DE PASSAGEIROS",
     "cpf": "96660414134",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001801128"
   },
   {
     "sqCandidato": "120002550715",
@@ -8544,7 +8950,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "ENFERMEIRO",
     "cpf": "50084402172",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001801128"
   },
   {
     "sqCandidato": "120002550716",
@@ -8565,7 +8972,8 @@
     "grauInstrucao": "SUPERIOR COMPLETO",
     "ocupacao": "PEDAGOGO",
     "cpf": "82025673191",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001801128"
   },
   {
     "sqCandidato": "120002552116",
@@ -8586,7 +8994,8 @@
     "grauInstrucao": "ENSINO MÉDIO COMPLETO",
     "ocupacao": "PRODUTOR AGROPECUÁRIO",
     "cpf": "12775276873",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001801248"
   },
   {
     "sqCandidato": "120002552161",
@@ -8607,7 +9016,8 @@
     "grauInstrucao": "ENSINO MÉDIO COMPLETO",
     "ocupacao": "EMPRESÁRIO",
     "cpf": "55866115115",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001801245"
   },
   {
     "sqCandidato": "120002552177",
@@ -8628,7 +9038,8 @@
     "grauInstrucao": "ENSINO FUNDAMENTAL INCOMPLETO",
     "ocupacao": "EMPRESÁRIO",
     "cpf": "90329058134",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001801252"
   },
   {
     "sqCandidato": "120002552194",
@@ -8649,7 +9060,8 @@
     "grauInstrucao": "LÊ E ESCREVE",
     "ocupacao": "TRABALHADOR RURAL",
     "cpf": "05162322156",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001801256"
   },
   {
     "sqCandidato": "120002552206",
@@ -8670,7 +9082,8 @@
     "grauInstrucao": "ENSINO FUNDAMENTAL INCOMPLETO",
     "ocupacao": "EMPRESÁRIO",
     "cpf": "59542675100",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001801245"
   },
   {
     "sqCandidato": "120002552213",
@@ -8691,7 +9104,8 @@
     "grauInstrucao": "SUPERIOR INCOMPLETO",
     "ocupacao": "COZINHEIRO",
     "cpf": "09547513885",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001801245"
   },
   {
     "sqCandidato": "120002552688",
@@ -8712,7 +9126,8 @@
     "grauInstrucao": "ENSINO FUNDAMENTAL INCOMPLETO",
     "ocupacao": "TRABALHADOR RURAL",
     "cpf": "44636318153",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001801260"
   },
   {
     "sqCandidato": "120002552946",
@@ -8733,7 +9148,8 @@
     "grauInstrucao": "SUPERIOR INCOMPLETO",
     "ocupacao": "EMPRESÁRIO",
     "cpf": "56184816187",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001801284"
   },
   {
     "sqCandidato": "120002553012",
@@ -8754,7 +9170,8 @@
     "grauInstrucao": "SUPERIOR INCOMPLETO",
     "ocupacao": "EMPRESÁRIO",
     "cpf": "40482758104",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001801350"
   },
   {
     "sqCandidato": "120002553243",
@@ -8775,7 +9192,8 @@
     "grauInstrucao": "SUPERIOR INCOMPLETO",
     "ocupacao": "MEMBRO DAS FORÇAS ARMADAS",
     "cpf": "60507179234",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001801350"
   },
   {
     "sqCandidato": "120002553676",
@@ -8796,6 +9214,7 @@
     "grauInstrucao": "ENSINO MÉDIO COMPLETO",
     "ocupacao": "OUTROS",
     "cpf": "79193684134",
-    "codEleicao": "6259"
+    "codEleicao": "6259",
+    "sqColigacao": "120001801054"
   }
 ]

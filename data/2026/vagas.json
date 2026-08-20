@@ -1,0 +1,957 @@
+[
+  {
+    "uf": "BR",
+    "cargo": "Presidente",
+    "quantidade": 1
+  },
+  {
+    "uf": "BR",
+    "cargo": "Vice-presidente",
+    "quantidade": 1
+  },
+  {
+    "uf": "AC",
+    "cargo": "Governador",
+    "quantidade": 1
+  },
+  {
+    "uf": "AC",
+    "cargo": "Vice-governador",
+    "quantidade": 1
+  },
+  {
+    "uf": "AC",
+    "cargo": "Senador",
+    "quantidade": 2
+  },
+  {
+    "uf": "AC",
+    "cargo": "Deputado Federal",
+    "quantidade": 8
+  },
+  {
+    "uf": "AC",
+    "cargo": "Deputado Estadual",
+    "quantidade": 24
+  },
+  {
+    "uf": "AC",
+    "cargo": "1. Suplente",
+    "quantidade": 2
+  },
+  {
+    "uf": "AC",
+    "cargo": "2. Suplente",
+    "quantidade": 2
+  },
+  {
+    "uf": "AL",
+    "cargo": "Governador",
+    "quantidade": 1
+  },
+  {
+    "uf": "AL",
+    "cargo": "Vice-governador",
+    "quantidade": 1
+  },
+  {
+    "uf": "AL",
+    "cargo": "Senador",
+    "quantidade": 2
+  },
+  {
+    "uf": "AL",
+    "cargo": "Deputado Federal",
+    "quantidade": 9
+  },
+  {
+    "uf": "AL",
+    "cargo": "Deputado Estadual",
+    "quantidade": 27
+  },
+  {
+    "uf": "AL",
+    "cargo": "1. Suplente",
+    "quantidade": 2
+  },
+  {
+    "uf": "AL",
+    "cargo": "2. Suplente",
+    "quantidade": 2
+  },
+  {
+    "uf": "AM",
+    "cargo": "Governador",
+    "quantidade": 1
+  },
+  {
+    "uf": "AM",
+    "cargo": "Vice-governador",
+    "quantidade": 1
+  },
+  {
+    "uf": "AM",
+    "cargo": "Senador",
+    "quantidade": 2
+  },
+  {
+    "uf": "AM",
+    "cargo": "Deputado Federal",
+    "quantidade": 8
+  },
+  {
+    "uf": "AM",
+    "cargo": "Deputado Estadual",
+    "quantidade": 24
+  },
+  {
+    "uf": "AP",
+    "cargo": "Governador",
+    "quantidade": 1
+  },
+  {
+    "uf": "AM",
+    "cargo": "1. Suplente",
+    "quantidade": 2
+  },
+  {
+    "uf": "AM",
+    "cargo": "2. Suplente",
+    "quantidade": 2
+  },
+  {
+    "uf": "AP",
+    "cargo": "Vice-governador",
+    "quantidade": 1
+  },
+  {
+    "uf": "AP",
+    "cargo": "Senador",
+    "quantidade": 2
+  },
+  {
+    "uf": "AP",
+    "cargo": "Deputado Federal",
+    "quantidade": 8
+  },
+  {
+    "uf": "AP",
+    "cargo": "Deputado Estadual",
+    "quantidade": 24
+  },
+  {
+    "uf": "AP",
+    "cargo": "1. Suplente",
+    "quantidade": 2
+  },
+  {
+    "uf": "AP",
+    "cargo": "2. Suplente",
+    "quantidade": 2
+  },
+  {
+    "uf": "BA",
+    "cargo": "Governador",
+    "quantidade": 1
+  },
+  {
+    "uf": "BA",
+    "cargo": "Vice-governador",
+    "quantidade": 1
+  },
+  {
+    "uf": "BA",
+    "cargo": "Senador",
+    "quantidade": 2
+  },
+  {
+    "uf": "BA",
+    "cargo": "Deputado Federal",
+    "quantidade": 39
+  },
+  {
+    "uf": "BA",
+    "cargo": "Deputado Estadual",
+    "quantidade": 63
+  },
+  {
+    "uf": "BA",
+    "cargo": "1. Suplente",
+    "quantidade": 2
+  },
+  {
+    "uf": "BA",
+    "cargo": "2. Suplente",
+    "quantidade": 2
+  },
+  {
+    "uf": "CE",
+    "cargo": "Governador",
+    "quantidade": 1
+  },
+  {
+    "uf": "CE",
+    "cargo": "Vice-governador",
+    "quantidade": 1
+  },
+  {
+    "uf": "CE",
+    "cargo": "Senador",
+    "quantidade": 2
+  },
+  {
+    "uf": "CE",
+    "cargo": "Deputado Federal",
+    "quantidade": 22
+  },
+  {
+    "uf": "CE",
+    "cargo": "Deputado Estadual",
+    "quantidade": 46
+  },
+  {
+    "uf": "CE",
+    "cargo": "1. Suplente",
+    "quantidade": 2
+  },
+  {
+    "uf": "CE",
+    "cargo": "2. Suplente",
+    "quantidade": 2
+  },
+  {
+    "uf": "DF",
+    "cargo": "Governador",
+    "quantidade": 1
+  },
+  {
+    "uf": "DF",
+    "cargo": "Vice-governador",
+    "quantidade": 1
+  },
+  {
+    "uf": "DF",
+    "cargo": "Senador",
+    "quantidade": 2
+  },
+  {
+    "uf": "DF",
+    "cargo": "Deputado Federal",
+    "quantidade": 8
+  },
+  {
+    "uf": "DF",
+    "cargo": "Deputado Distrital",
+    "quantidade": 24
+  },
+  {
+    "uf": "DF",
+    "cargo": "1. Suplente",
+    "quantidade": 2
+  },
+  {
+    "uf": "DF",
+    "cargo": "2. Suplente",
+    "quantidade": 2
+  },
+  {
+    "uf": "ES",
+    "cargo": "Governador",
+    "quantidade": 1
+  },
+  {
+    "uf": "ES",
+    "cargo": "Vice-governador",
+    "quantidade": 1
+  },
+  {
+    "uf": "ES",
+    "cargo": "Senador",
+    "quantidade": 2
+  },
+  {
+    "uf": "ES",
+    "cargo": "Deputado Federal",
+    "quantidade": 10
+  },
+  {
+    "uf": "ES",
+    "cargo": "Deputado Estadual",
+    "quantidade": 30
+  },
+  {
+    "uf": "ES",
+    "cargo": "1. Suplente",
+    "quantidade": 2
+  },
+  {
+    "uf": "ES",
+    "cargo": "2. Suplente",
+    "quantidade": 2
+  },
+  {
+    "uf": "GO",
+    "cargo": "Governador",
+    "quantidade": 1
+  },
+  {
+    "uf": "GO",
+    "cargo": "Vice-governador",
+    "quantidade": 1
+  },
+  {
+    "uf": "GO",
+    "cargo": "Senador",
+    "quantidade": 2
+  },
+  {
+    "uf": "GO",
+    "cargo": "Deputado Federal",
+    "quantidade": 17
+  },
+  {
+    "uf": "GO",
+    "cargo": "Deputado Estadual",
+    "quantidade": 41
+  },
+  {
+    "uf": "GO",
+    "cargo": "1. Suplente",
+    "quantidade": 2
+  },
+  {
+    "uf": "GO",
+    "cargo": "2. Suplente",
+    "quantidade": 2
+  },
+  {
+    "uf": "MA",
+    "cargo": "Governador",
+    "quantidade": 1
+  },
+  {
+    "uf": "MA",
+    "cargo": "Vice-governador",
+    "quantidade": 1
+  },
+  {
+    "uf": "MA",
+    "cargo": "Senador",
+    "quantidade": 2
+  },
+  {
+    "uf": "MA",
+    "cargo": "Deputado Federal",
+    "quantidade": 18
+  },
+  {
+    "uf": "MA",
+    "cargo": "Deputado Estadual",
+    "quantidade": 42
+  },
+  {
+    "uf": "MA",
+    "cargo": "1. Suplente",
+    "quantidade": 2
+  },
+  {
+    "uf": "MA",
+    "cargo": "2. Suplente",
+    "quantidade": 2
+  },
+  {
+    "uf": "MG",
+    "cargo": "Governador",
+    "quantidade": 1
+  },
+  {
+    "uf": "MG",
+    "cargo": "Vice-governador",
+    "quantidade": 1
+  },
+  {
+    "uf": "MG",
+    "cargo": "Senador",
+    "quantidade": 2
+  },
+  {
+    "uf": "MG",
+    "cargo": "Deputado Federal",
+    "quantidade": 53
+  },
+  {
+    "uf": "MG",
+    "cargo": "Deputado Estadual",
+    "quantidade": 77
+  },
+  {
+    "uf": "MG",
+    "cargo": "1. Suplente",
+    "quantidade": 2
+  },
+  {
+    "uf": "MS",
+    "cargo": "Governador",
+    "quantidade": 1
+  },
+  {
+    "uf": "MS",
+    "cargo": "Vice-governador",
+    "quantidade": 1
+  },
+  {
+    "uf": "MG",
+    "cargo": "2. Suplente",
+    "quantidade": 2
+  },
+  {
+    "uf": "MS",
+    "cargo": "Senador",
+    "quantidade": 2
+  },
+  {
+    "uf": "MS",
+    "cargo": "Deputado Federal",
+    "quantidade": 8
+  },
+  {
+    "uf": "MS",
+    "cargo": "Deputado Estadual",
+    "quantidade": 24
+  },
+  {
+    "uf": "MT",
+    "cargo": "Governador",
+    "quantidade": 1
+  },
+  {
+    "uf": "MS",
+    "cargo": "1. Suplente",
+    "quantidade": 2
+  },
+  {
+    "uf": "MS",
+    "cargo": "2. Suplente",
+    "quantidade": 2
+  },
+  {
+    "uf": "MT",
+    "cargo": "Vice-governador",
+    "quantidade": 1
+  },
+  {
+    "uf": "MT",
+    "cargo": "Senador",
+    "quantidade": 2
+  },
+  {
+    "uf": "MT",
+    "cargo": "Deputado Federal",
+    "quantidade": 8
+  },
+  {
+    "uf": "MT",
+    "cargo": "Deputado Estadual",
+    "quantidade": 24
+  },
+  {
+    "uf": "MT",
+    "cargo": "1. Suplente",
+    "quantidade": 2
+  },
+  {
+    "uf": "MT",
+    "cargo": "2. Suplente",
+    "quantidade": 2
+  },
+  {
+    "uf": "PA",
+    "cargo": "Governador",
+    "quantidade": 1
+  },
+  {
+    "uf": "PA",
+    "cargo": "Vice-governador",
+    "quantidade": 1
+  },
+  {
+    "uf": "PA",
+    "cargo": "Senador",
+    "quantidade": 2
+  },
+  {
+    "uf": "PA",
+    "cargo": "Deputado Federal",
+    "quantidade": 17
+  },
+  {
+    "uf": "PA",
+    "cargo": "Deputado Estadual",
+    "quantidade": 41
+  },
+  {
+    "uf": "PA",
+    "cargo": "1. Suplente",
+    "quantidade": 2
+  },
+  {
+    "uf": "PA",
+    "cargo": "2. Suplente",
+    "quantidade": 2
+  },
+  {
+    "uf": "PB",
+    "cargo": "Governador",
+    "quantidade": 1
+  },
+  {
+    "uf": "PB",
+    "cargo": "Vice-governador",
+    "quantidade": 1
+  },
+  {
+    "uf": "PB",
+    "cargo": "Senador",
+    "quantidade": 2
+  },
+  {
+    "uf": "PB",
+    "cargo": "Deputado Federal",
+    "quantidade": 12
+  },
+  {
+    "uf": "PB",
+    "cargo": "Deputado Estadual",
+    "quantidade": 36
+  },
+  {
+    "uf": "PB",
+    "cargo": "1. Suplente",
+    "quantidade": 2
+  },
+  {
+    "uf": "PB",
+    "cargo": "2. Suplente",
+    "quantidade": 2
+  },
+  {
+    "uf": "PE",
+    "cargo": "Governador",
+    "quantidade": 1
+  },
+  {
+    "uf": "PE",
+    "cargo": "Vice-governador",
+    "quantidade": 1
+  },
+  {
+    "uf": "PE",
+    "cargo": "Senador",
+    "quantidade": 2
+  },
+  {
+    "uf": "PE",
+    "cargo": "Deputado Federal",
+    "quantidade": 25
+  },
+  {
+    "uf": "PE",
+    "cargo": "Deputado Estadual",
+    "quantidade": 49
+  },
+  {
+    "uf": "PE",
+    "cargo": "1. Suplente",
+    "quantidade": 2
+  },
+  {
+    "uf": "PE",
+    "cargo": "2. Suplente",
+    "quantidade": 2
+  },
+  {
+    "uf": "PI",
+    "cargo": "Governador",
+    "quantidade": 1
+  },
+  {
+    "uf": "PI",
+    "cargo": "Vice-governador",
+    "quantidade": 1
+  },
+  {
+    "uf": "PI",
+    "cargo": "Senador",
+    "quantidade": 2
+  },
+  {
+    "uf": "PI",
+    "cargo": "Deputado Federal",
+    "quantidade": 10
+  },
+  {
+    "uf": "PI",
+    "cargo": "Deputado Estadual",
+    "quantidade": 30
+  },
+  {
+    "uf": "PI",
+    "cargo": "1. Suplente",
+    "quantidade": 2
+  },
+  {
+    "uf": "PR",
+    "cargo": "Governador",
+    "quantidade": 1
+  },
+  {
+    "uf": "PR",
+    "cargo": "Vice-governador",
+    "quantidade": 1
+  },
+  {
+    "uf": "PI",
+    "cargo": "2. Suplente",
+    "quantidade": 2
+  },
+  {
+    "uf": "PR",
+    "cargo": "Senador",
+    "quantidade": 2
+  },
+  {
+    "uf": "PR",
+    "cargo": "Deputado Federal",
+    "quantidade": 30
+  },
+  {
+    "uf": "PR",
+    "cargo": "Deputado Estadual",
+    "quantidade": 54
+  },
+  {
+    "uf": "PR",
+    "cargo": "1. Suplente",
+    "quantidade": 2
+  },
+  {
+    "uf": "PR",
+    "cargo": "2. Suplente",
+    "quantidade": 2
+  },
+  {
+    "uf": "RJ",
+    "cargo": "Governador",
+    "quantidade": 1
+  },
+  {
+    "uf": "RJ",
+    "cargo": "Vice-governador",
+    "quantidade": 1
+  },
+  {
+    "uf": "RJ",
+    "cargo": "Senador",
+    "quantidade": 2
+  },
+  {
+    "uf": "RJ",
+    "cargo": "Deputado Federal",
+    "quantidade": 46
+  },
+  {
+    "uf": "RJ",
+    "cargo": "Deputado Estadual",
+    "quantidade": 70
+  },
+  {
+    "uf": "RJ",
+    "cargo": "1. Suplente",
+    "quantidade": 2
+  },
+  {
+    "uf": "RJ",
+    "cargo": "2. Suplente",
+    "quantidade": 2
+  },
+  {
+    "uf": "RN",
+    "cargo": "Governador",
+    "quantidade": 1
+  },
+  {
+    "uf": "RN",
+    "cargo": "Vice-governador",
+    "quantidade": 1
+  },
+  {
+    "uf": "RN",
+    "cargo": "Senador",
+    "quantidade": 2
+  },
+  {
+    "uf": "RN",
+    "cargo": "Deputado Federal",
+    "quantidade": 8
+  },
+  {
+    "uf": "RN",
+    "cargo": "Deputado Estadual",
+    "quantidade": 24
+  },
+  {
+    "uf": "RN",
+    "cargo": "1. Suplente",
+    "quantidade": 2
+  },
+  {
+    "uf": "RN",
+    "cargo": "2. Suplente",
+    "quantidade": 2
+  },
+  {
+    "uf": "RO",
+    "cargo": "Governador",
+    "quantidade": 1
+  },
+  {
+    "uf": "RO",
+    "cargo": "Vice-governador",
+    "quantidade": 1
+  },
+  {
+    "uf": "RO",
+    "cargo": "Senador",
+    "quantidade": 2
+  },
+  {
+    "uf": "RO",
+    "cargo": "Deputado Federal",
+    "quantidade": 8
+  },
+  {
+    "uf": "RO",
+    "cargo": "Deputado Estadual",
+    "quantidade": 24
+  },
+  {
+    "uf": "RO",
+    "cargo": "1. Suplente",
+    "quantidade": 2
+  },
+  {
+    "uf": "RO",
+    "cargo": "2. Suplente",
+    "quantidade": 2
+  },
+  {
+    "uf": "RR",
+    "cargo": "Governador",
+    "quantidade": 1
+  },
+  {
+    "uf": "RR",
+    "cargo": "Vice-governador",
+    "quantidade": 1
+  },
+  {
+    "uf": "RR",
+    "cargo": "Senador",
+    "quantidade": 2
+  },
+  {
+    "uf": "RR",
+    "cargo": "Deputado Federal",
+    "quantidade": 8
+  },
+  {
+    "uf": "RR",
+    "cargo": "Deputado Estadual",
+    "quantidade": 24
+  },
+  {
+    "uf": "RR",
+    "cargo": "1. Suplente",
+    "quantidade": 2
+  },
+  {
+    "uf": "RR",
+    "cargo": "2. Suplente",
+    "quantidade": 2
+  },
+  {
+    "uf": "RS",
+    "cargo": "Governador",
+    "quantidade": 1
+  },
+  {
+    "uf": "RS",
+    "cargo": "Vice-governador",
+    "quantidade": 1
+  },
+  {
+    "uf": "RS",
+    "cargo": "Senador",
+    "quantidade": 2
+  },
+  {
+    "uf": "RS",
+    "cargo": "Deputado Federal",
+    "quantidade": 31
+  },
+  {
+    "uf": "RS",
+    "cargo": "Deputado Estadual",
+    "quantidade": 55
+  },
+  {
+    "uf": "RS",
+    "cargo": "1. Suplente",
+    "quantidade": 2
+  },
+  {
+    "uf": "RS",
+    "cargo": "2. Suplente",
+    "quantidade": 2
+  },
+  {
+    "uf": "SC",
+    "cargo": "Governador",
+    "quantidade": 1
+  },
+  {
+    "uf": "SC",
+    "cargo": "Vice-governador",
+    "quantidade": 1
+  },
+  {
+    "uf": "SC",
+    "cargo": "Senador",
+    "quantidade": 2
+  },
+  {
+    "uf": "SC",
+    "cargo": "Deputado Federal",
+    "quantidade": 16
+  },
+  {
+    "uf": "SC",
+    "cargo": "Deputado Estadual",
+    "quantidade": 40
+  },
+  {
+    "uf": "SC",
+    "cargo": "1. Suplente",
+    "quantidade": 2
+  },
+  {
+    "uf": "SC",
+    "cargo": "2. Suplente",
+    "quantidade": 2
+  },
+  {
+    "uf": "SE",
+    "cargo": "Governador",
+    "quantidade": 1
+  },
+  {
+    "uf": "SE",
+    "cargo": "Vice-governador",
+    "quantidade": 1
+  },
+  {
+    "uf": "SE",
+    "cargo": "Senador",
+    "quantidade": 2
+  },
+  {
+    "uf": "SE",
+    "cargo": "Deputado Federal",
+    "quantidade": 8
+  },
+  {
+    "uf": "SE",
+    "cargo": "Deputado Estadual",
+    "quantidade": 24
+  },
+  {
+    "uf": "SE",
+    "cargo": "1. Suplente",
+    "quantidade": 2
+  },
+  {
+    "uf": "SE",
+    "cargo": "2. Suplente",
+    "quantidade": 2
+  },
+  {
+    "uf": "SP",
+    "cargo": "Governador",
+    "quantidade": 1
+  },
+  {
+    "uf": "SP",
+    "cargo": "Vice-governador",
+    "quantidade": 1
+  },
+  {
+    "uf": "SP",
+    "cargo": "Senador",
+    "quantidade": 2
+  },
+  {
+    "uf": "SP",
+    "cargo": "Deputado Federal",
+    "quantidade": 70
+  },
+  {
+    "uf": "SP",
+    "cargo": "Deputado Estadual",
+    "quantidade": 94
+  },
+  {
+    "uf": "SP",
+    "cargo": "1. Suplente",
+    "quantidade": 2
+  },
+  {
+    "uf": "SP",
+    "cargo": "2. Suplente",
+    "quantidade": 2
+  },
+  {
+    "uf": "TO",
+    "cargo": "Governador",
+    "quantidade": 1
+  },
+  {
+    "uf": "TO",
+    "cargo": "Vice-governador",
+    "quantidade": 1
+  },
+  {
+    "uf": "TO",
+    "cargo": "Senador",
+    "quantidade": 2
+  },
+  {
+    "uf": "TO",
+    "cargo": "Deputado Federal",
+    "quantidade": 8
+  },
+  {
+    "uf": "TO",
+    "cargo": "Deputado Estadual",
+    "quantidade": 24
+  },
+  {
+    "uf": "TO",
+    "cargo": "1. Suplente",
+    "quantidade": 2
+  },
+  {
+    "uf": "TO",
+    "cargo": "2. Suplente",
+    "quantidade": 2
+  }
+]

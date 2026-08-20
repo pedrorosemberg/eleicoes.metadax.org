@@ -39,12 +39,12 @@ export default function SobrePage() {
       </h2>
       <ul className="mt-3 flex flex-col gap-2 text-[17px] text-[var(--text-secondary)]">
         <li>
-          <strong className="text-[var(--text-primary)]">TSE — Dados Abertos:</strong> lista
-          de candidatos, partido, situação, bens declarados.
-        </li>
-        <li>
-          <strong className="text-[var(--text-primary)]">TSE — DivulgaCandContas:</strong>{" "}
-          site oficial, plano de governo, histórico de candidaturas anteriores.
+          <strong className="text-[var(--text-primary)]">TSE — dados coletados do site de dados
+            abertos:</strong> lista de candidatos, partido, situação, bens declarados, redes
+          sociais informadas ao TSE, coligações e vagas em disputa. Coletados diretamente do site
+          do TSE (não há API pública em tempo real para esses dados — requisições automatizadas
+          de fora de uma rede residencial/brasileira são bloqueadas na borda) e atualizados
+          periodicamente.
         </li>
         <li>
           <strong className="text-[var(--text-primary)]">BrasilAPI (Receita Federal):</strong>{" "}

@@ -28,22 +28,59 @@ export interface Candidato {
   cpf?: string;
   fotoUrl?: string;
   /**
-   * Códigos necessários para consultar o detalhe ao vivo no
-   * DivulgaCandContas (site oficial, plano de governo, histórico de
-   * candidaturas) — ver src/lib/enrichment.ts#buscarDetalheDivulgaCand.
-   * Vêm do CSV (`CD_MUNICIPIO`, `CD_ELEICAO`) — nomes de coluna não
-   * confirmados contra o leiame.pdf real, mesma ressalva do restante do
-   * script de ingestão. Ausentes nos dados de exemplo (não faz sentido
-   * chamar a API ao vivo para um candidato fictício).
+   * Códigos usados para consultar o detalhe ao vivo no DivulgaCandContas
+   * (site oficial, plano de governo, histórico de candidaturas) — ver
+   * src/lib/enrichment.ts#buscarDetalheDivulgaCand. `codEleicao` vem do
+   * CSV `consulta_cand` (`CD_ELEICAO`), confirmado contra um ZIP real
+   * (20/08/2026). `codMunicipio` fica ausente neste snapshot: a coluna
+   * `CD_MUNICIPIO` não existe em `consulta_cand` para candidaturas de
+   * abrangência estadual/federal (confirmado contra o mesmo ZIP) — só
+   * eleições municipais (vereador/prefeito) devem ter esse código de
+   * verdade. Sem `codMunicipio`, o enriquecimento ao vivo fica desativado
+   * para o candidato (degrada graciosamente) — ver scripts/ingest-tse.ts
+   * e docs/DATA_SOURCES.md §5.
    */
   codMunicipio?: string;
   codEleicao?: string;
+  /** Chave para cruzar com `data/{ano}/coligacoes.json` (composição e situação da coligação). */
+  sqColigacao?: string;
 }
 
 export interface Bem {
   sqCandidato: string;
   descricao: string;
   valor: number;
+}
+
+/** Origem: dataset `rede_social_candidato` do TSE — ver docs/DATA_SOURCES.md §1. */
+export interface RedeSocial {
+  sqCandidato: string;
+  url: string;
+}
+
+/** Origem: dataset `motivo_cassacao` do TSE — só existe registro para candidatos com candidatura cassada. */
+export interface MotivoCassacao {
+  sqCandidato: string;
+  numeroProcesso: string;
+  tipoMotivo: string;
+  motivo: string;
+}
+
+/** Origem: dataset `consulta_coligacao` do TSE — uma entrada por coligação (não por candidato). */
+export interface Coligacao {
+  sqColigacao: string;
+  uf: string;
+  cargo: string;
+  nome: string;
+  composicao: string;
+  situacao: string;
+}
+
+/** Origem: dataset `consulta_vagas` do TSE — vagas em disputa por cargo/UF, não por candidato. */
+export interface Vaga {
+  uf: string;
+  cargo: string;
+  quantidade: number;
 }
 
 export interface HistoricoCandidatura {

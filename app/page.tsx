@@ -23,15 +23,15 @@ const FEATURES: Array<{ titulo: string; descricao: string; status: StatusFeature
     status: "disponível",
   },
   {
-    titulo: "Site oficial e plano de governo",
+    titulo: "Redes sociais e bens declarados",
     descricao:
-      "Link direto ao site/redes sociais informados ao TSE e ao PDF do plano de governo, via DivulgaCandContas — consulta ao vivo, funcional; aguardando a base do TSE liberar do lado deles.",
-    status: "em progresso",
+      "Redes sociais informadas ao TSE e descrição/valor dos bens declarados na candidatura, conforme a regra de privacidade do TSE desde 2022 — coletados do site de dados abertos do TSE.",
+    status: "disponível",
   },
   {
-    titulo: "Bens declarados",
+    titulo: "Coligações e vagas em disputa",
     descricao:
-      "Descrição e valor dos bens declarados na candidatura, conforme a regra de privacidade do TSE desde 2022.",
+      "Composição e situação da coligação de cada candidato, e o total de vagas em disputa por cargo/UF — coletados do site de dados abertos do TSE.",
     status: "disponível",
   },
   {
@@ -47,10 +47,10 @@ const FEATURES: Array<{ titulo: string; descricao: string; status: StatusFeature
     status: "em progresso",
   },
   {
-    titulo: "Histórico de candidaturas anteriores",
+    titulo: "Site oficial (link direto), plano de governo e histórico de candidaturas",
     descricao:
-      "Mandatos e candidaturas passadas, via DivulgaCandContas — consulta ao vivo, funcional; aguardando a base do TSE liberar do lado deles.",
-    status: "em progresso",
+      "Dependem do sistema DivulgaCandContas do TSE, que não expõe o código de município usado para candidaturas estaduais/federais nos dados coletados até agora — sem ele, essa consulta não pode ser feita com confiança. Ver docs/DATA_SOURCES.md §5.",
+    status: "indisponível",
   },
 ];
 
@@ -103,7 +103,7 @@ export default function LandingPage() {
               className="inline-flex h-11 items-center rounded-[10px] px-5 text-[15px] font-semibold"
               style={{ background: "var(--action-primary-bg)", color: "var(--action-primary-fg)" }}
             >
-              Ver busca de candidatos (demo)
+              Ver busca de candidatos
             </Link>
             <a
               href={REPO_URL}

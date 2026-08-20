@@ -1,8 +1,9 @@
 # eleicoes.metadax.org
 
-Consulta pública de candidatos às eleições brasileiras, cruzando dados oficiais do
-Tribunal Superior Eleitoral (TSE) com o Portal da Transparência (CGU) e dados de
-CNPJ da Receita Federal (via [BrasilAPI](https://brasilapi.com.br)).
+Consulta pública de candidatos às eleições brasileiras, cruzando dados coletados
+do site de dados abertos do Tribunal Superior Eleitoral (TSE) com o Portal da
+Transparência (CGU) e dados de CNPJ da Receita Federal (via
+[BrasilAPI](https://brasilapi.com.br)).
 
 Tema claro, preto e branco, sem cor de partido, mobile-first — neutralidade
 político-partidária como requisito central de design, ver `docs/DESIGN_SYSTEM.md`.
@@ -17,10 +18,9 @@ Licenciado sob [CC BY 4.0](LICENSE).
 - `/` — apresentação do projeto
 - `/buscar` — busca **direta** (nome, número ou ID do candidato) ou **indireta**
   (filtros combináveis por UF, cidade, cargo e partido)
-- `/candidato/[id]` — perfil de um candidato: dados básicos, bens declarados, e —
-  ao vivo, via API — site oficial, plano de governo, histórico de candidaturas
-  anteriores (DivulgaCandContas) e cruzamento com o Portal da Transparência
-  (PEP, contratos, sanções)
+- `/candidato/[id]` — perfil de um candidato: dados básicos, bens declarados,
+  redes sociais e coligação (coletados do site de dados abertos do TSE) e
+  cruzamento com o Portal da Transparência (PEP, contratos, sanções)
 - `/mapa` — mapa coroplético real (Leaflet + fronteiras oficiais do IBGE) e
   estatísticas por UF/cargo (consumível também via `GET /api/estatisticas`, JSON, CORS aberto)
 - `/status` — saúde em tempo real de cada fonte de dado externa (TSE, BrasilAPI,
@@ -68,29 +68,36 @@ npm install
 npm run dev
 ```
 
-Abre em `http://localhost:3000`. O repositório já vem com um snapshot real de
-candidatos (`data/2026/candidatos/`, 20.638 registros em 28 unidades
-eleitorais — as 27 UFs + `BR`, usada pelo TSE para presidente/vice). Bens
-declarados (`data/2026/bens/`) ainda não foram ingeridos — essa seção
-específica cai para uma amostra claramente identificada como tal na UI até
-alguém rodar a ingestão com o ZIP de `bem_candidato`.
+Abre em `http://localhost:3000`. O repositório já vem com um snapshot real,
+coletado do site de dados abertos do TSE em 20/08/2026 e commitado em
+`data/2026/`: 20.638 candidatos (28 unidades eleitorais — as 27 UFs + `BR`,
+usada pelo TSE para presidente/vice), bens declarados, redes sociais,
+coligações e vagas em disputa. Motivo de cassação está vazio porque nenhuma
+candidatura foi cassada até a data da coleta — não é ausência de dado, é o
+resultado real (o dataset do TSE trazia zero linhas).
 
-### Ingerindo dados reais do TSE
+### Coletando dados atualizados do TSE
+
+O TSE disponibiliza esses dados como arquivos para download no seu site de
+dados abertos — não como uma API pública para consumo em tempo real
+(requisições automatizadas de fora de uma rede residencial/brasileira são
+bloqueadas no edge, ver `docs/DATA_SOURCES.md` §5). Por isso a atualização é
+sempre em duas etapas manuais:
 
 ```bash
+# 1. baixar os ZIPs mais recentes de uma rede que o TSE não bloqueie
 npm run ingest -- --ano=2026
-# ou, com um ZIP já baixado manualmente (ver abaixo):
+# ou, se você já baixou os ZIPs manualmente (navegador, outra máquina):
 npm run ingest -- --ano=2026 --from-dir=./caminho/com/zips-baixados
 ```
 
-Precisa rodar de uma rede que o TSE não bloqueie — o bloqueio (403 do edge
-Akamai) é específico de certas redes de datacenter/nuvem, **não** do TSE em
-geral: uma rede residencial comum funciona normalmente (confirmado em
-20/08/2026, ver `docs/DATA_SOURCES.md` §5). Se você já baixou o(s) ZIP(s)
-manualmente (navegador, outra máquina) mas quer rodar o parsing daqui, use
-`--from-dir` apontando para uma pasta com `consulta_cand_{ano}.zip` e/ou
-`bem_candidato_{ano}.zip` — a ingestão de cada dataset é independente, então
-rodar só com o de candidatos (sem o de bens) funciona normalmente.
+`--from-dir` lê `{dataset}_{ano}.zip` de uma pasta local em vez de baixar —
+nomes esperados: `consulta_cand_{ano}.zip`, `bem_candidato_{ano}.zip`,
+`rede_social_candidato_{ano}.zip`, `motivo_cassacao_{ano}.zip`,
+`consulta_coligacao_{ano}.zip`, `consulta_vagas_{ano}.zip`. Só
+`consulta_cand` é obrigatório — os demais são independentes entre si, então
+rodar com qualquer subconjunto deles funciona normalmente (o que faltar
+fica de fora do snapshot, sem quebrar o resto).
 
 ### Variáveis de ambiente
 

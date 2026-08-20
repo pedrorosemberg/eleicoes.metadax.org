@@ -1,6 +1,13 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { ANO_ELEICAO, carregarBensPorUf, carregarCandidatoPorId } from "@/lib/data";
+import {
+  ANO_ELEICAO,
+  carregarBensPorUf,
+  carregarCandidatoPorId,
+  carregarColigacoes,
+  carregarMotivosCassacaoPorUf,
+  carregarRedesSociaisPorUf,
+} from "@/lib/data";
 import { buscarDadosCnpj, buscarDetalheDivulgaCand, buscarResumoTransparencia } from "@/lib/enrichment";
 import { SnapshotNotice } from "@/components/SnapshotNotice";
 import { formatarDataBR, formatarMoedaBRL } from "@/lib/format";
@@ -33,9 +40,23 @@ export default async function CandidatoPage({
   // Enriquecimentos rodam em paralelo — cada um degrada de forma
   // independente (null) se a fonte estiver indisponível, nunca quebra a
   // página. Ver docs/DATA_SOURCES.md para o status de cada integração.
-  const [dadosCnpjPartido, bensResultado, detalheDivulgaCand, resumoTransparencia] = await Promise.all([
+  const [
+    dadosCnpjPartido,
+    bensResultado,
+    detalheDivulgaCand,
+    resumoTransparencia,
+    redesSociaisDaUf,
+    motivosCassacaoDaUf,
+    coligacoes,
+  ] = await Promise.all([
     candidato.partido.cnpj ? buscarDadosCnpj(candidato.partido.cnpj) : Promise.resolve(null),
     carregarBensPorUf(candidato.uf),
+    // codMunicipio fica ausente para candidaturas estaduais/federais neste
+    // snapshot — ver src/types/candidato.ts e docs/DATA_SOURCES.md §5 —
+    // então esta chamada não roda para nenhum candidato dele por
+    // enquanto. Segue condicionada (em vez de removida) para já valer
+    // automaticamente se o site passar a ingerir eleições municipais,
+    // onde essa coluna existe de verdade.
     candidato.codMunicipio && candidato.codEleicao
       ? buscarDetalheDivulgaCand({
           ano: ANO_ELEICAO,
@@ -45,10 +66,18 @@ export default async function CandidatoPage({
         })
       : Promise.resolve(null),
     candidato.cpf ? buscarResumoTransparencia(candidato.cpf) : Promise.resolve(null),
+    carregarRedesSociaisPorUf(candidato.uf),
+    carregarMotivosCassacaoPorUf(candidato.uf),
+    carregarColigacoes(),
   ]);
 
   const bensDoCanditato = bensResultado.bens.filter((b) => b.sqCandidato === candidato.sqCandidato);
   const totalBens = bensDoCanditato.reduce((soma, b) => soma + b.valor, 0);
+  const redesSociais = redesSociaisDaUf.filter((r) => r.sqCandidato === candidato.sqCandidato);
+  const motivoCassacao = motivosCassacaoDaUf.find((m) => m.sqCandidato === candidato.sqCandidato);
+  const coligacaoDoCanditato = candidato.sqColigacao
+    ? coligacoes.find((c) => c.sqColigacao === candidato.sqColigacao)
+    : undefined;
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -58,7 +87,9 @@ export default async function CandidatoPage({
     jobTitle: candidato.cargo,
     memberOf: { "@type": "Organization", name: candidato.partido.nome },
     address: { "@type": "PostalAddress", addressRegion: candidato.uf, addressLocality: candidato.municipio },
-    ...(detalheDivulgaCand?.sites?.length ? { sameAs: detalheDivulgaCand.sites } : {}),
+    ...(detalheDivulgaCand?.sites?.length || redesSociais.length
+      ? { sameAs: [...(detalheDivulgaCand?.sites ?? []), ...redesSociais.map((r) => r.url)] }
+      : {}),
   };
 
   return (
@@ -101,15 +132,50 @@ export default async function CandidatoPage({
             <dd className="text-[var(--text-primary)]">{candidato.ocupacao}</dd>
           </>
         )}
+
+        {candidato.coligacao && candidato.coligacao !== "PARTIDO ISOLADO" && (
+          <>
+            <dt className="text-[var(--text-tertiary)]">Coligação</dt>
+            <dd className="text-[var(--text-primary)]">
+              {candidato.coligacao}
+              {coligacaoDoCanditato?.situacao ? ` — ${coligacaoDoCanditato.situacao}` : ""}
+            </dd>
+          </>
+        )}
       </dl>
 
-      {/* Site oficial e plano de governo — ao vivo via DivulgaCandContas */}
-      {(detalheDivulgaCand?.sites?.length || detalheDivulgaCand?.arquivos?.length) ? (
+      {coligacaoDoCanditato?.composicao && coligacaoDoCanditato.composicao !== "#NULO" && (
+        <p className="mt-3 text-sm text-[var(--text-tertiary)]">
+          Composição da coligação: {coligacaoDoCanditato.composicao}
+        </p>
+      )}
+
+      {motivoCassacao && (
+        <section
+          className="mt-6 flex items-start gap-2.5 rounded-[18px] border p-4 text-sm"
+          style={{ borderColor: "var(--color-error)", background: "var(--color-error-bg)" }}
+        >
+          <span className="mt-0.5 shrink-0" style={{ color: "var(--color-error)" }}>
+            <IconAlertTriangle />
+          </span>
+          <div>
+            <p className="font-semibold" style={{ color: "var(--color-error)" }}>
+              Candidatura cassada — {motivoCassacao.tipoMotivo}
+            </p>
+            <p className="mt-1 text-[var(--text-secondary)]">
+              {motivoCassacao.motivo} (processo {motivoCassacao.numeroProcesso})
+            </p>
+          </div>
+        </section>
+      )}
+
+      {/* Site oficial e plano de governo (só quando codMunicipio existir — ver src/types/candidato.ts) + redes sociais (dataset rede_social_candidato, coletado do site do TSE) */}
+      {detalheDivulgaCand?.sites?.length || detalheDivulgaCand?.arquivos?.length || redesSociais.length ? (
         <section className="mt-8 rounded-[18px] border p-5" style={{ borderColor: "var(--hairline)" }}>
           <h2 className="text-[17px] font-semibold text-[var(--text-primary)]">
-            Site oficial e plano de governo
+            Site oficial, redes sociais e plano de governo
           </h2>
-          {detalheDivulgaCand.sites?.length ? (
+          {detalheDivulgaCand?.sites?.length ? (
             <ul className="mt-3 flex flex-col gap-1.5 text-sm">
               {detalheDivulgaCand.sites.map((site) => (
                 <li key={site}>
@@ -126,7 +192,24 @@ export default async function CandidatoPage({
               ))}
             </ul>
           ) : null}
-          {detalheDivulgaCand.arquivos?.length ? (
+          {redesSociais.length ? (
+            <ul className="mt-3 flex flex-col gap-1.5 text-sm">
+              {redesSociais.map((r, i) => (
+                <li key={i}>
+                  <a
+                    href={r.url}
+                    target="_blank"
+                    rel="noreferrer noopener"
+                    className="inline-flex items-center gap-1.5 underline underline-offset-2 text-[var(--text-primary)]"
+                  >
+                    {r.url}
+                    <IconExternalLink />
+                  </a>
+                </li>
+              ))}
+            </ul>
+          ) : null}
+          {detalheDivulgaCand?.arquivos?.length ? (
             <ul className="mt-3 flex flex-col gap-1.5 text-sm">
               {detalheDivulgaCand.arquivos.map((arquivo) => (
                 <li key={arquivo.idArquivo}>
@@ -146,11 +229,11 @@ export default async function CandidatoPage({
         </section>
       ) : (
         <p className="mt-8 text-sm text-[var(--text-tertiary)]">
-          Site oficial e plano de governo ainda não disponíveis para este candidato.
+          Site oficial, redes sociais e plano de governo ainda não disponíveis para este candidato.
         </p>
       )}
 
-      {/* Histórico de candidaturas anteriores — ao vivo via DivulgaCandContas */}
+      {/* Histórico de candidaturas anteriores — só quando codMunicipio existir (ver acima) */}
       {detalheDivulgaCand?.eleicoesAnteriores?.length ? (
         <section className="mt-8 rounded-[18px] border p-5" style={{ borderColor: "var(--hairline)" }}>
           <h2 className="text-[17px] font-semibold text-[var(--text-primary)]">

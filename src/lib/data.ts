@@ -1,6 +1,6 @@
 import { readFile } from "node:fs/promises";
 import path from "node:path";
-import type { Bem, Candidato } from "@/types/candidato";
+import type { Bem, Candidato, Coligacao, MotivoCassacao, RedeSocial, Vaga } from "@/types/candidato";
 import { CANDIDATOS_AMOSTRA, BENS_AMOSTRA } from "./amostra";
 import { UFS } from "./ufs";
 
@@ -144,4 +144,33 @@ export async function carregarBensPorUf(
 
 export async function carregarMeta(): Promise<SnapshotMeta | null> {
   return lerJsonOuNulo<SnapshotMeta>(`${ANO_ELEICAO}/meta.json`);
+}
+
+/**
+ * Datasets abaixo (redes sociais, motivo de cassação, coligações, vagas)
+ * não têm fixture de amostra — não existe "dado de exemplo" plausível
+ * para eles, então simplesmente retornam vazio quando a ingestão real
+ * ainda não rodou, sem flag `isAmostra` (não há amostra para sinalizar).
+ * Ver scripts/ingest-tse.ts e docs/DATA_SOURCES.md §1.
+ */
+
+export async function carregarRedesSociaisPorUf(uf: string): Promise<RedeSocial[]> {
+  return (await lerJsonOuNulo<RedeSocial[]>(`${ANO_ELEICAO}/redes-sociais/${uf}.json`)) ?? [];
+}
+
+export async function carregarMotivosCassacaoPorUf(uf: string): Promise<MotivoCassacao[]> {
+  return (await lerJsonOuNulo<MotivoCassacao[]>(`${ANO_ELEICAO}/motivos-cassacao/${uf}.json`)) ?? [];
+}
+
+let coligacoesCache: Coligacao[] | null = null;
+
+/** Lista única (não por UF) — ver ingestColigacoes em scripts/ingest-tse.ts. Cacheada em memória do processo. */
+export async function carregarColigacoes(): Promise<Coligacao[]> {
+  if (coligacoesCache) return coligacoesCache;
+  coligacoesCache = (await lerJsonOuNulo<Coligacao[]>(`${ANO_ELEICAO}/coligacoes.json`)) ?? [];
+  return coligacoesCache;
+}
+
+export async function carregarVagas(): Promise<Vaga[]> {
+  return (await lerJsonOuNulo<Vaga[]>(`${ANO_ELEICAO}/vagas.json`)) ?? [];
 }
