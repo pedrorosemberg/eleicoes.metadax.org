@@ -6,6 +6,7 @@ export const metadata: Metadata = {
   title: "Status das fontes de dados",
   description:
     "Disponibilidade em tempo real do TSE, DivulgaCandContas, BrasilAPI e Portal da Transparência.",
+  alternates: { canonical: "/status" },
 };
 
 // Sempre verificado ao vivo — nunca cacheado, ver docs/DATA_SOURCES.md §5.

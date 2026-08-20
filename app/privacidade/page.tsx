@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Política de Privacidade",
   description: "Quais dados este site coleta, para quê, e como são usados.",
+  alternates: { canonical: "/privacidade" },
 };
 
 export default function PrivacidadePage() {

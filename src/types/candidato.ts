@@ -27,6 +27,17 @@ export interface Candidato {
   /** CPF completo nunca deve ser renderizado sem máscara na UI — ver docs/DATA_SOURCES.md §7. */
   cpf?: string;
   fotoUrl?: string;
+  /**
+   * Códigos necessários para consultar o detalhe ao vivo no
+   * DivulgaCandContas (site oficial, plano de governo, histórico de
+   * candidaturas) — ver src/lib/enrichment.ts#buscarDetalheDivulgaCand.
+   * Vêm do CSV (`CD_MUNICIPIO`, `CD_ELEICAO`) — nomes de coluna não
+   * confirmados contra o leiame.pdf real, mesma ressalva do restante do
+   * script de ingestão. Ausentes nos dados de exemplo (não faz sentido
+   * chamar a API ao vivo para um candidato fictício).
+   */
+  codMunicipio?: string;
+  codEleicao?: string;
 }
 
 export interface Bem {

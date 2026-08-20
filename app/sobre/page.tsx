@@ -6,6 +6,7 @@ export const metadata: Metadata = {
   title: "Sobre e fontes",
   description:
     "Metodologia, fontes de dados e licença do projeto Eleições — METADAX. TSE, Portal da Transparência e Receita Federal.",
+  alternates: { canonical: "/sobre" },
 };
 
 export default function SobrePage() {

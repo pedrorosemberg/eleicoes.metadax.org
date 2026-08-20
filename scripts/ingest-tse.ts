@@ -52,6 +52,12 @@ const CAND_COLUNAS = {
   grauInstrucao: "DS_GRAU_INSTRUCAO",
   ocupacao: "DS_OCUPACAO",
   cpf: "NR_CPF_CANDIDATO",
+  // Códigos usados para consultar o detalhe ao vivo no DivulgaCandContas
+  // (ver src/types/candidato.ts) — nomes de coluna seguem a convenção
+  // padrão do TSE para esses datasets, mas NÃO confirmados contra o
+  // leiame.pdf real desta eleição (mesma ressalva do cabeçalho do arquivo).
+  codMunicipio: "CD_MUNICIPIO",
+  codEleicao: "CD_ELEICAO",
 } as const;
 
 // Não confirmado contra o leiame.pdf real — ver aviso no cabeçalho do arquivo.
@@ -61,25 +67,70 @@ const BEM_COLUNAS = {
   valor: "VR_BEM_CANDIDATO",
 } as const;
 
+const TENTATIVAS_DOWNLOAD = 3;
+const BACKOFF_BASE_MS = 2000;
+
+/**
+ * Baixa o ZIP com retry (backoff exponencial) — cobre falhas
+ * transitórias de rede. Um 403 do edge Akamai do TSE (documentado em
+ * docs/DATA_SOURCES.md §5) NÃO é tratado como transitório — não adianta
+ * repetir, é um bloqueio de rede, não um erro passageiro — falha rápido
+ * com uma mensagem clara em vez de gastar 3 tentativas inúteis.
+ */
 async function baixarZip(dataset: string): Promise<Buffer> {
   const url = `https://cdn.tse.jus.br/estatistica/sead/odsele/${dataset}/${dataset}_${ano}.zip`;
-  console.log(`Baixando ${url}`);
-  const res = await fetch(url);
-  if (!res.ok) {
-    throw new Error(
-      `Falha ao baixar ${dataset} (${res.status}). Se for 403, provavelmente é o bloqueio de edge documentado em docs/DATA_SOURCES.md §5 — tente de outra rede.`,
-    );
+
+  let ultimoErro: unknown;
+  for (let tentativa = 1; tentativa <= TENTATIVAS_DOWNLOAD; tentativa++) {
+    console.log(`Baixando ${url} (tentativa ${tentativa}/${TENTATIVAS_DOWNLOAD})`);
+    try {
+      const res = await fetch(url);
+      if (res.status === 403) {
+        throw new Error(
+          `Bloqueado (403) ao baixar ${dataset} — provável bloqueio de edge (Akamai) do TSE, documentado em docs/DATA_SOURCES.md §5. Não é um erro transitório: rode este script de outra rede (máquina local, CI com IP residencial/brasileiro) em vez de tentar de novo daqui.`,
+        );
+      }
+      if (!res.ok) {
+        throw new Error(`Falha ao baixar ${dataset}: HTTP ${res.status} ${res.statusText}`);
+      }
+      return Buffer.from(await res.arrayBuffer());
+    } catch (err) {
+      ultimoErro = err;
+      const mensagem = err instanceof Error ? err.message : String(err);
+      if (mensagem.includes("Bloqueado (403)")) throw err; // não adianta repetir
+      console.warn(`Tentativa ${tentativa} falhou: ${mensagem}`);
+      if (tentativa < TENTATIVAS_DOWNLOAD) {
+        const espera = BACKOFF_BASE_MS * 2 ** (tentativa - 1);
+        await new Promise((resolve) => setTimeout(resolve, espera));
+      }
+    }
   }
-  return Buffer.from(await res.arrayBuffer());
+  throw new Error(
+    `Falha ao baixar ${dataset} após ${TENTATIVAS_DOWNLOAD} tentativas. Último erro: ${
+      ultimoErro instanceof Error ? ultimoErro.message : String(ultimoErro)
+    }`,
+  );
 }
 
 function extrairCsvBrasil(zipBuffer: Buffer, dataset: string): string {
-  const zip = new AdmZip(zipBuffer);
+  let zip: AdmZip;
+  try {
+    zip = new AdmZip(zipBuffer);
+  } catch (err) {
+    throw new Error(
+      `O download de ${dataset} não é um ZIP válido (${zipBuffer.length} bytes) — provavelmente uma página de erro HTML foi baixada em vez do arquivo real. Causa original: ${
+        err instanceof Error ? err.message : String(err)
+      }`,
+    );
+  }
   const entry = zip
     .getEntries()
     .find((e) => e.entryName.toUpperCase().includes("_BRASIL.CSV"));
   if (!entry) {
-    throw new Error(`Não encontrei o CSV consolidado (_BRASIL.csv) dentro do ZIP de ${dataset}`);
+    const nomes = zip.getEntries().map((e) => e.entryName).join(", ");
+    throw new Error(
+      `Não encontrei o CSV consolidado (_BRASIL.csv) dentro do ZIP de ${dataset}. Arquivos encontrados: ${nomes || "(nenhum)"}`,
+    );
   }
   // TSE publica os CSVs em Latin-1 (ISO-8859-1).
   return entry.getData().toString("latin1");
@@ -95,11 +146,31 @@ function parseCsvTse(conteudo: string): Record<string, string>[] {
   });
 }
 
+/**
+ * Checagem de sanidade pós-parsing: se a coluna crítica vier vazia na
+ * maioria das linhas, é sinal de que o nome da coluna mudou em relação
+ * ao que está hardcoded acima (ex.: leiame.pdf de uma eleição diferente)
+ * — falha alto e claro em vez de gravar um dataset silenciosamente
+ * quebrado.
+ */
+function validarColunaCritica(linhas: Record<string, string>[], coluna: string, contexto: string) {
+  if (linhas.length === 0) return;
+  const preenchidas = linhas.filter((l) => l[coluna]?.trim()).length;
+  const proporcao = preenchidas / linhas.length;
+  if (proporcao < 0.5) {
+    throw new Error(
+      `Coluna crítica "${coluna}" (${contexto}) veio vazia em ${Math.round((1 - proporcao) * 100)}% das linhas — provável mudança de nome de coluna no CSV desta eleição. Confira o leiame.pdf real do TSE e ajuste as constantes de coluna no topo deste script antes de confiar no resultado.`,
+    );
+  }
+}
+
 async function ingestCandidatos(): Promise<Set<string>> {
   const zipBuffer = await baixarZip("consulta_cand");
   const csv = extrairCsvBrasil(zipBuffer, "consulta_cand");
   const linhas = parseCsvTse(csv);
   console.log(`${linhas.length} linhas de candidatos lidas`);
+  validarColunaCritica(linhas, CAND_COLUNAS.sqCandidato, "consulta_cand");
+  validarColunaCritica(linhas, CAND_COLUNAS.uf, "consulta_cand");
 
   const porUf = new Map<string, unknown[]>();
   const ufsEncontradas = new Set<string>();
@@ -128,6 +199,8 @@ async function ingestCandidatos(): Promise<Set<string>> {
       grauInstrucao: linha[CAND_COLUNAS.grauInstrucao] || undefined,
       ocupacao: linha[CAND_COLUNAS.ocupacao] || undefined,
       cpf: linha[CAND_COLUNAS.cpf] || undefined,
+      codMunicipio: linha[CAND_COLUNAS.codMunicipio] || undefined,
+      codEleicao: linha[CAND_COLUNAS.codEleicao] || undefined,
     };
 
     if (!porUf.has(uf)) porUf.set(uf, []);
@@ -151,6 +224,7 @@ async function ingestBens(): Promise<void> {
   const csv = extrairCsvBrasil(zipBuffer, "bem_candidato");
   const linhas = parseCsvTse(csv);
   console.log(`${linhas.length} linhas de bens lidas`);
+  validarColunaCritica(linhas, BEM_COLUNAS.sqCandidato, "bem_candidato");
 
   // O CSV de bens não tem UF direta — cruzamos com o índice de candidatos
   // já gravado para agrupar por UF (mesma UF do candidato dono do bem).

@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Termos de Uso",
   description: "Usos autorizados dos dados e do serviço do Eleições — METADAX.",
+  alternates: { canonical: "/termos" },
 };
 
 export default function TermosPage() {

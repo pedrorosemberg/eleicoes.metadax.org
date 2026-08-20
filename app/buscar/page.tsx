@@ -10,6 +10,7 @@ export const metadata: Metadata = {
   title: "Busca de candidatos",
   description:
     "Busque candidatos às eleições de 2026 por nome, número ou ID, ou filtre por UF, cidade, cargo e partido. Dados oficiais do TSE.",
+  alternates: { canonical: "/buscar" },
 };
 
 type Modo = "direta" | "indireta";

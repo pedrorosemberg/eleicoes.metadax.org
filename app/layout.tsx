@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
-import Script from "next/script";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Header } from "@/components/Header";
 import { SiteFooter } from "@/components/SiteFooter";
+import { ProjectLoader } from "@/components/ProjectLoader";
 import "./globals.css";
 
 const SITE_URL = "https://eleicoes.metadax.org";
@@ -30,6 +30,11 @@ export const metadata: Metadata = {
     "eleições 2026",
   ],
   authors: [{ name: "Instituto METADAX de Inovação (IMI)", url: "https://imi.metadax.org" }],
+  publisher: "Instituto METADAX de Inovação (IMI)",
+  alternates: {
+    canonical: "/",
+  },
+  referrer: "origin-when-cross-origin",
   openGraph: {
     type: "website",
     locale: "pt_BR",
@@ -39,6 +44,8 @@ export const metadata: Metadata = {
     url: SITE_URL,
   },
   twitter: {
+    // Sem twitter:site/creator — este projeto não é a conta comercial da
+    // METADAX, atribuir a ela seria enganoso.
     card: "summary_large_image",
     title: SITE_NAME,
     description: SITE_DESCRIPTION,
@@ -52,6 +59,29 @@ export const metadata: Metadata = {
     "max-snippet": -1,
     "max-image-preview": "large",
     "max-video-preview": -1,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-snippet": -1,
+      "max-image-preview": "large",
+      "max-video-preview": -1,
+    },
+  },
+  other: {
+    // Convenção emergente para dar a um LLM um resumo direto do site —
+    // ver public/llms.txt e o app/robots.ts equivalente.
+    "llm-context": `${SITE_URL}/llms.txt`,
+    "generator": "Next.js",
+    "copyright": "© 2026 Instituto METADAX de Inovação (IMI). Dados de candidatos: fonte pública (TSE/CGU/Receita Federal), sem direito autoral do projeto sobre eles.",
+    "rating": "General",
+    // Identificação do operador legal do site — mesma informação já
+    // exibida no rodapé (SiteFooter.tsx) e em /privacidade, não é
+    // publicidade institucional, é o mesmo dado de transparência.
+    "geo.placename": "Belo Horizonte, MG, Brasil",
+    "geo.region": "BR-MG",
+    "address": "Avenida Getúlio Vargas, 671, Sala 500, Savassi, Belo Horizonte, MG, CEP 30112-021, Brasil",
+    "company": "METADAX CONSULTORIA LTDA",
+    "cnpj": "65.640.808/0001-89",
   },
 };
 
@@ -74,6 +104,27 @@ const jsonLdWebsite = {
   },
 };
 
+/**
+ * Identificação do operador legal — dado de transparência (mesma info do
+ * rodapé), não é a ficha comercial da METADAX como consultoria: por isso
+ * não inclui logo, sameAs de redes sociais nem descrição de marketing.
+ */
+const jsonLdOperador = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "METADAX CONSULTORIA LTDA",
+  url: "https://www.metadax.com.br",
+  taxID: "65.640.808/0001-89",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "Avenida Getúlio Vargas, 671, Sala 500",
+    addressLocality: "Belo Horizonte",
+    addressRegion: "MG",
+    postalCode: "30112-021",
+    addressCountry: "BR",
+  },
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
@@ -84,28 +135,28 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdWebsite) }}
         />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdOperador) }}
+        />
         <noscript>
           <style>{`.reveal{opacity:1 !important;transform:none !important;}`}</style>
         </noscript>
       </head>
       <body>
+        {/*
+          Deliberadamente ZERO dependência do CDN institucional da METADAX
+          (nem CSS, nem loader, nem header/footer, nem botão de WhatsApp):
+          é infraestrutura de terceiro cuja latência/disponibilidade este
+          produto não controla, e um recurso bloqueante ou travado nela
+          já prejudicou a primeira impressão do site (ver
+          docs/ARCHITECTURE.md §11). Header, SiteFooter (com o bloco legal
+          da METADAX como texto estático) e ProjectLoader são 100%
+          próprios deste projeto, sem chamada de rede externa.
+        */}
+        <ProjectLoader />
         <Header />
         {children}
-
-        {/*
-          Deliberadamente SEM o header/footer/loader injetados pelo CDN
-          institucional da METADAX: são um script de terceiro cuja latência
-          este produto não controla, e um loader em tela cheia que pode
-          travar a primeira impressão do site se a rede do visitante for
-          lenta ou bloquear cdn.metadax.com.br. Este produto já tem seu
-          próprio Header e SiteFooter, totalmente autocontidos — o bloco
-          legal obrigatório da METADAX está em SiteFooter.tsx como texto
-          estático, sem depender de nenhum script externo. Mantido só o
-          botão de WhatsApp (widget flutuante pequeno, não bloqueia
-          conteúdo, falha de forma silenciosa se a rede não responder).
-        */}
-        <Script src="https://cdn.metadax.com.br/components/scripts/whatsapp-button.js" strategy="afterInteractive" />
-
         <SiteFooter />
 
         {/* Analytics/observabilidade — ver /privacidade para o que é coletado */}

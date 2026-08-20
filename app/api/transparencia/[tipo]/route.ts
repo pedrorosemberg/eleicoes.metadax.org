@@ -24,9 +24,11 @@ export async function GET(
   });
 
   const dados = await buscarTransparencia(tipo as TipoPermitido, query);
-  if (!dados) {
+  if (dados === null) {
+    // null = chave não configurada ou a chamada falhou; um array vazio
+    // ([]) é um resultado válido ("nada encontrado") e não cai aqui.
     return NextResponse.json(
-      { error: "Sem dados ou PORTAL_TRANSPARENCIA_API_KEY não configurada — ver docs/DATA_SOURCES.md §4" },
+      { error: "Indisponível: chave de API não configurada ou fonte fora do ar" },
       { status: 404 },
     );
   }

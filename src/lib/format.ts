@@ -6,30 +6,47 @@
  */
 
 const TIME_ZONE = "America/Sao_Paulo";
+const PLACEHOLDER = "—";
+
+/** `new Intl.DateTimeFormat().format()` lança em data inválida — dado de
+ * fonte externa (ex.: Portal da Transparência) pode vir vazio/malformado,
+ * e isso não pode derrubar a renderização da página. */
+function dataValida(data: string | number | Date): Date | null {
+  const d = new Date(data);
+  return Number.isNaN(d.getTime()) ? null : d;
+}
 
 export function formatarDataHoraBR(data: string | number | Date): string {
-  return new Intl.DateTimeFormat("pt-BR", {
-    timeZone: TIME_ZONE,
-    day: "2-digit",
-    month: "2-digit",
-    year: "numeric",
-    hour: "2-digit",
-    minute: "2-digit",
-    second: "2-digit",
-    hour12: false,
-  }).format(new Date(data)) + " (GMT-3)";
+  const d = dataValida(data);
+  if (!d) return PLACEHOLDER;
+  return (
+    new Intl.DateTimeFormat("pt-BR", {
+      timeZone: TIME_ZONE,
+      day: "2-digit",
+      month: "2-digit",
+      year: "numeric",
+      hour: "2-digit",
+      minute: "2-digit",
+      second: "2-digit",
+      hour12: false,
+    }).format(d) + " (GMT-3)"
+  );
 }
 
 export function formatarDataBR(data: string | number | Date): string {
+  const d = dataValida(data);
+  if (!d) return PLACEHOLDER;
   return new Intl.DateTimeFormat("pt-BR", {
     timeZone: TIME_ZONE,
     day: "2-digit",
     month: "2-digit",
     year: "numeric",
-  }).format(new Date(data));
+  }).format(d);
 }
 
 export function formatarHoraBR(data: string | number | Date): string {
+  const d = dataValida(data);
+  if (!d) return PLACEHOLDER;
   return (
     new Intl.DateTimeFormat("pt-BR", {
       timeZone: TIME_ZONE,
@@ -37,7 +54,7 @@ export function formatarHoraBR(data: string | number | Date): string {
       minute: "2-digit",
       second: "2-digit",
       hour12: false,
-    }).format(new Date(data)) + " (GMT-3)"
+    }).format(d) + " (GMT-3)"
   );
 }
 

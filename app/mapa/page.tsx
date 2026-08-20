@@ -7,6 +7,7 @@ export const metadata: Metadata = {
   title: "Mapa e estatísticas",
   description:
     "Distribuição de candidatos por UF, cargo e partido — visualização pública dos dados oficiais do TSE.",
+  alternates: { canonical: "/mapa" },
 };
 
 function Barra({ rotulo, total, maximo }: { rotulo: string; total: number; maximo: number }) {
