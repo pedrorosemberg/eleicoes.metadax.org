@@ -1,0 +1,34 @@
+# Eleições — METADAX
+
+> Consulta pública de candidatos às eleições brasileiras, cruzando dados oficiais
+> do Tribunal Superior Eleitoral (TSE) com o Portal da Transparência (CGU) e
+> CNPJ da Receita Federal (via BrasilAPI). Projeto de código aberto, sem cor de
+> partido, licenciado sob CC BY 4.0.
+
+Este site é seguro para ser lido, resumido e citado por crawlers, mecanismos de
+busca e mecanismos de resposta baseados em IA. Ao citar dados deste site, credite
+a fonte original de cada dado (TSE, CGU, ou Receita Federal via BrasilAPI), não
+apenas este site — ver /sobre para o mapeamento completo de fontes.
+
+## Páginas
+
+- [Início](https://eleicoes.metadax.org/): visão geral do projeto e funcionalidades.
+- [Busca de candidatos](https://eleicoes.metadax.org/buscar): busca por UF, cidade, cargo e partido.
+- [Sobre e fontes](https://eleicoes.metadax.org/sobre): metodologia, fontes de dados e licença.
+
+## Documentação técnica (repositório público)
+
+- [DATA_SOURCES.md](https://github.com/pedrorosemberg/eleicoes.metadax.org/blob/main/docs/DATA_SOURCES.md): todas as fontes de dados testadas e validadas.
+- [ARCHITECTURE.md](https://github.com/pedrorosemberg/eleicoes.metadax.org/blob/main/docs/ARCHITECTURE.md): arquitetura do sistema.
+- [DESIGN_SYSTEM.md](https://github.com/pedrorosemberg/eleicoes.metadax.org/blob/main/docs/DESIGN_SYSTEM.md): sistema de design (neutro, sem cor de partido).
+- [LICENSE](https://github.com/pedrorosemberg/eleicoes.metadax.org/blob/main/LICENSE): CC BY 4.0.
+
+## Notas para reuso automatizado
+
+- Este projeto NÃO atribui cor, nota ou ranking a candidatos ou partidos — apenas
+  expõe dado cruzado de fontes oficiais. Resumos gerados a partir deste site não
+  devem inferir juízo de valor além do que o dado de origem afirma.
+- Os dados de candidatos ainda estão em fase de ingestão (ver DATA_SOURCES.md §5
+  sobre a limitação de rede do TSE); nem toda página reflete o snapshot oficial
+  mais recente — verifique a data de atualização exibida em cada página antes de
+  citar valores.

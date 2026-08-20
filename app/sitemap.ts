@@ -1,0 +1,22 @@
+import type { MetadataRoute } from "next";
+import { UFS } from "@/lib/ufs";
+
+const SITE_URL = "https://eleicoes.metadax.org";
+
+export default function sitemap(): MetadataRoute.Sitemap {
+  const estaticas: MetadataRoute.Sitemap = [
+    { url: `${SITE_URL}/`, changeFrequency: "weekly", priority: 1 },
+    { url: `${SITE_URL}/buscar`, changeFrequency: "daily", priority: 0.9 },
+    { url: `${SITE_URL}/sobre`, changeFrequency: "monthly", priority: 0.5 },
+  ];
+
+  // Uma entrada por UF na busca — ajuda crawlers a descobrir a
+  // variação de filtro sem depender só do formulário client-side.
+  const porUf: MetadataRoute.Sitemap = UFS.map((uf) => ({
+    url: `${SITE_URL}/buscar?uf=${uf}`,
+    changeFrequency: "daily",
+    priority: 0.6,
+  }));
+
+  return [...estaticas, ...porUf];
+}
