@@ -102,22 +102,42 @@ export default function PrivacidadePage() {
         §7 para o detalhamento legal e de LGPD dessa distinção.
       </p>
 
-      <h2 className="mt-10 text-[22px] font-semibold text-[var(--text-primary)]">Widget institucional</h2>
+      <h2 className="mt-10 text-[22px] font-semibold text-[var(--text-primary)]">
+        Infraestrutura e ferramentas usadas para publicar este site
+      </h2>
       <p className="mt-3 text-[17px] leading-relaxed text-[var(--text-secondary)]">
-        O cabeçalho, rodapé e o banner de cookies deste site são componentes centralizados da
-        METADAX (ver{" "}
-        <a className="underline underline-offset-2" href="/sobre">
-          /sobre
-        </a>
-        ). Esse componente pode usar cookies próprios de preferência (ex.: tema
-        claro/escuro) — regidos pela{" "}
-        <a
-          className="underline underline-offset-2"
-          href="https://www.metadax.com.br/politica-de-privacidade"
-          target="_blank"
-          rel="noreferrer noopener"
-        >
-          Política de Privacidade da METADAX
+        Nenhuma delas recebe dado pessoal de quem visita o site além do que já está descrito
+        acima (Vercel Analytics/Speed Insights e logs técnicos de infraestrutura):
+      </p>
+      <ul className="mt-3 flex flex-col gap-1.5 text-[17px] text-[var(--text-secondary)]">
+        <li>
+          <strong className="text-[var(--text-primary)]">Vercel</strong> — hospedagem, funções
+          serverless e CDN. Ver{" "}
+          <a
+            className="underline underline-offset-2"
+            href="https://vercel.com/legal/privacy-notice"
+            target="_blank"
+            rel="noreferrer noopener"
+          >
+            Aviso de Privacidade da Vercel
+          </a>
+          .
+        </li>
+        <li>
+          <strong className="text-[var(--text-primary)]">GitHub</strong> — código-fonte público e
+          rastreamento de issues; a página{" "}
+          <a className="underline underline-offset-2" href="/atualizacoes">
+            /atualizacoes
+          </a>{" "}
+          consulta a API pública do GitHub a partir do servidor (nunca do navegador de quem
+          visita), então nenhum dado do visitante é enviado ao GitHub por causa dela.
+        </li>
+      </ul>
+      <p className="mt-3 text-[17px] leading-relaxed text-[var(--text-secondary)]">
+        Detalhes completos de todas as ferramentas usadas para desenvolver e publicar este site
+        — incluindo o uso de IA como apoio ao desenvolvimento — estão em{" "}
+        <a className="underline underline-offset-2" href="/termos">
+          /termos
         </a>
         .
       </p>

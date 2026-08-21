@@ -74,6 +74,90 @@ export default function TermosPage() {
         prevalece sempre.
       </p>
 
+      <h2 className="mt-10 text-[22px] font-semibold text-[var(--text-primary)]">
+        Infraestrutura, ferramentas e como este site foi construído
+      </h2>
+      <p className="mt-3 text-[17px] leading-relaxed text-[var(--text-secondary)]">
+        Por transparência, e porque revisamos explicitamente os termos de uso de cada uma antes
+        de publicar este projeto (ver{" "}
+        <a
+          className="underline underline-offset-2"
+          href="https://github.com/pedrorosemberg/eleicoes.metadax.org/blob/main/docs/DATA_SOURCES.md"
+          target="_blank"
+          rel="noreferrer noopener"
+        >
+          docs/DATA_SOURCES.md
+        </a>{" "}
+        §9):
+      </p>
+      <ul className="mt-3 flex flex-col gap-1.5 text-[17px] text-[var(--text-secondary)]">
+        <li>
+          <strong className="text-[var(--text-primary)]">Hospedagem:</strong> Vercel (funções
+          serverless, CDN, build) — uso padrão de hospedagem web, sob os{" "}
+          <a
+            className="underline underline-offset-2"
+            href="https://vercel.com/legal/terms"
+            target="_blank"
+            rel="noreferrer noopener"
+          >
+            Termos de Serviço
+          </a>{" "}
+          e{" "}
+          <a
+            className="underline underline-offset-2"
+            href="https://vercel.com/legal/acceptable-use-policy"
+            target="_blank"
+            rel="noreferrer noopener"
+          >
+            Política de Uso Aceitável
+          </a>{" "}
+          da Vercel. Este site não usa nenhum produto de IA da Vercel para gerar, processar ou
+          transmitir conteúdo de campanha eleitoral — só hospeda uma aplicação Next.js padrão que
+          exibe dados públicos, sem promover ou se opor a nenhum candidato.
+        </li>
+        <li>
+          <strong className="text-[var(--text-primary)]">Código-fonte e controle de versão:</strong>{" "}
+          GitHub, repositório público, sob os{" "}
+          <a
+            className="underline underline-offset-2"
+            href="https://docs.github.com/en/site-policy/github-terms/github-terms-of-service"
+            target="_blank"
+            rel="noreferrer noopener"
+          >
+            Termos de Serviço do GitHub
+          </a>
+          . A página{" "}
+          <a className="underline underline-offset-2" href="/atualizacoes">
+            /atualizacoes
+          </a>{" "}
+          consulta a API pública do GitHub em uso normal (sem automação abusiva, sem exceder
+          limite de taxa), permitido pela seção &quot;API Terms&quot; desses Termos.
+        </li>
+        <li>
+          <strong className="text-[var(--text-primary)]">Framework e bibliotecas:</strong>{" "}
+          Next.js, React, Tailwind CSS e demais dependências open source listadas em{" "}
+          <code className="font-financial text-sm">package.json</code>, cada uma sob sua própria
+          licença (majoritariamente MIT).
+        </li>
+        <li>
+          <strong className="text-[var(--text-primary)]">Assistência de desenvolvimento por IA:</strong>{" "}
+          partes do código, da documentação e da ingestão de dados deste projeto foram
+          desenvolvidas com apoio do{" "}
+          <a
+            className="underline underline-offset-2"
+            href="https://www.anthropic.com/claude"
+            target="_blank"
+            rel="noreferrer noopener"
+          >
+            Claude, da Anthropic
+          </a>
+          , como ferramenta de programação assistida — usada por um responsável humano que revisa,
+          testa e decide o que é publicado. A IA não seleciona nem edita o conteúdo dos dados de
+          candidatos exibidos (esses vêm sempre da fonte oficial, sem interpretação); seu uso se
+          limita ao desenvolvimento e à manutenção do software em si.
+        </li>
+      </ul>
+
       <h2 className="mt-10 text-[22px] font-semibold text-[var(--text-primary)]">Alterações</h2>
       <p className="mt-3 text-[17px] leading-relaxed text-[var(--text-secondary)]">
         Estes termos podem mudar conforme o projeto evolui. A versão vigente é sempre a

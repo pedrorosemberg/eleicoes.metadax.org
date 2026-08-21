@@ -14,6 +14,7 @@
 6. [Matriz de decisão — qual fonte usar para quê](#6-matriz-de-decisão--qual-fonte-usar-para-quê)
 7. [Aspectos legais e de LGPD](#7-aspectos-legais-e-de-lgpd)
 8. [Licenciamento do repositório — CC BY 4.0](#8-licenciamento-do-repositório--creative-commons-attribution-40)
+9. [Revisão de compliance — termos de uso e legislação eleitoral](#9-revisão-de-compliance--termos-de-uso-das-fontesinfraestrutura-e-legislação-eleitoral)
 
 ---
 
@@ -330,10 +331,100 @@ Decisão do projeto: o conteúdo original deste repositório (documentação, te
 
 | Fonte | Natureza da licença/termo | Compatível com CC BY 4.0? |
 |---|---|---|
-| TSE — Dados Abertos (CSV/CDN) | Dado público por força da legislação eleitoral e da Lei de Acesso à Informação (12.527/2011); não foi possível abrir a página de termos específica do TSE nesta sessão (bloqueio de rede, §5) para confirmar um texto de licença explícito | **Sim, com atribuição** — creditar "Fonte: TSE" em toda exibição é a prática segura adotada, independentemente de exigência estrita |
+| TSE — Dados Abertos (CSV/CDN) | **Confirmado diretamente no metadado CKAN do próprio TSE** (`package_search`, 20/08/2026): `"isopen": true, "license_id": "cc-by", "license_title": "Creative Commons Atribuição", "license_url": "http://www.opendefinition.org/licenses/cc-by"` — presente nos dois datasets usados (`candidatos-2026` e `prestacao-de-contas-eleitorais-2026`). Também amparado pela legislação eleitoral e pela Lei de Acesso à Informação (12.527/2011) | **Sim, com atribuição** — creditar "Fonte: TSE" em toda exibição, exigência explícita da própria licença CC BY do dataset |
 | TSE — DivulgaCandContas (API não oficial) | Mesma origem/natureza de dado do item acima, mas via API não documentada oficialmente pelo TSE (engenharia reversa da comunidade) | **Sim para o dado em si**, com a ressalva de que o *acesso* via API não oficial carrega risco operacional (bloqueio de IP, mudança sem aviso) documentado em `ARCHITECTURE.md` — não é um risco de licença, é um risco de estabilidade |
 | BrasilAPI | Código MIT (`github.com/BrasilAPI/BrasilAPI`, confirmado nesta sessão via `LICENSE` do repositório); dado subjacente é registro público da Receita Federal | **Sim, sem restrição** |
 | Portal da Transparência (CGU) | Dado governamental aberto, publicado sob a política de dados abertos do Poder Executivo Federal; a chave de API controla *taxa de acesso*, não *direito de uso* do dado retornado | **Sim, com atribuição** — creditar "Fonte: Portal da Transparência/CGU" |
 | Design System / Manual de Marca METADAX | Propriedade da METADAX, marca em processo de registro no INPI | **Não coberto pela CC BY do projeto** — logotipo e identidade visual seguem as regras próprias do Manual de Marca (uso autorizado, não licenciamento aberto); o `LICENSE` do repositório deixa essa exceção explícita |
 
 **Conclusão:** nenhuma das fontes efetivamente usadas na arquitetura (TSE, DivulgaCandContas, BrasilAPI, Portal da Transparência) impõe termo incompatível com CC BY 4.0 — não foi necessário trocar de licença. As fontes descartadas em §4b (SP.GOV.BR credenciado, Infosimples, Netrin) não entram na arquitetura, então seus termos comerciais/restritos não se aplicam ao repositório.
+
+---
+
+## 9. Revisão de compliance — termos de uso das fontes/infraestrutura e legislação eleitoral
+
+Revisão feita a pedido do usuário em 20/08/2026, às vésperas do período eleitoral de 2026 —
+objetivo: confirmar que nada no projeto infringe termo de uso de fonte/infraestrutura, nem
+legislação eleitoral. Pesquisa real feita nesta sessão (busca + leitura direta das páginas
+oficiais, quando acessíveis); onde uma página estava bloqueada pela mesma rede que bloqueia o
+TSE (ver §5), a informação foi cruzada com fonte primária alternativa (ex.: metadado CKAN do
+próprio TSE, já citado na tabela acima).
+
+### 9.1 Fontes de dados
+
+- **TSE:** CC BY, confirmado no metadado do próprio dataset (ver tabela §8) — permite uso livre
+  com atribuição, inclusive redistribuição num site de terceiro. Nenhuma cláusula encontrada
+  proibindo cruzamento com outras bases públicas.
+- **Portal da Transparência (CGU):** o [Termo de Uso oficial](https://portaldatransparencia.gov.br/termos-de-uso)
+  (lido nesta sessão) declara explicitamente: *"O acesso ao Portal não requer usuário nem senhas,
+  sendo permitido a qualquer cidadão navegar pelas páginas de forma livre, bem como visualizar e
+  utilizar os dados disponíveis da forma que melhor lhe convier."* Rege-se pela Lei de Acesso à
+  Informação (12.527/2011). A chave de API (`chave-api-dados`) controla taxa de acesso, não
+  direito de uso do dado — mesma leitura já registrada em §8.
+- **Receita Federal (via BrasilAPI):** BrasilAPI é MIT, dado subjacente é registro público —
+  já confirmado em §8, sem achado novo.
+
+### 9.2 Legislação eleitoral (Lei nº 9.504/1997 — Lei das Eleições)
+
+Pesquisa feita sobre propaganda eleitoral na internet e divulgação de dados de candidatos por
+terceiros. Achados relevantes:
+
+- **Não é propaganda eleitoral.** Os arts. 57-A a 57-D da Lei 9.504/1997 regulam propaganda
+  eleitoral na internet — conteúdo que promove ou ataca uma candidatura, ou impulsionamento pago.
+  Este projeto não promove, não ataca, não ranqueia e não recomenda nenhum candidato: apenas
+  exibe dado público já divulgado oficialmente pelo TSE, sem juízo de valor (regra de design já
+  documentada em `DESIGN_SYSTEM.md` §1 — neutralidade político-partidária). Não veicula anúncio
+  pago, não aceita patrocínio de campanha, não faz impulsionamento de conteúdo. Por essas
+  características, não se enquadra na definição de propaganda eleitoral da lei.
+- **Dados públicos por decisão do próprio TSE.** Decisão do TSE de 18/08/2022 (localizada nesta
+  pesquisa) afirma que informações como gênero, raça/cor, estado civil, nacionalidade,
+  escolaridade, ocupação e partido/coligação/federação devem permanecer públicas, por afetarem a
+  decisão do eleitor — o núcleo exato do que este projeto exibe. Em contrapartida, dados de
+  contato pessoal (endereço residencial completo, telefone e e-mail pessoal) devem ser ocultados
+  por segurança do candidato — este projeto nunca exibiu esses campos (não fazem parte do modelo
+  de dados em `src/types/candidato.ts`).
+- **Bens declarados.** A Resolução TSE nº 23.609/2019 já estabelece que a declaração de bens é
+  simplificada (sem endereço de imóvel, placa de veículo etc.) — o próprio dado de origem já
+  vem nesse formato reduzido; o projeto não promete nem tenta reconstruir detalhamento que a
+  fonte não tem (documentado em §7 acima).
+- **Vedação de desinformação (art. 57-D, estendido por jurisprudência a usuários identificados).**
+  Reforça a regra já adotada de nunca alterar, reinterpretar ou complementar com texto gerado o
+  dado oficial — cada informação exibida é a mesma do TSE/CGU, com a fonte sempre citada (ver
+  `/termos`).
+
+**Conclusão 9.2:** não foi encontrado risco de enquadramento como propaganda eleitoral irregular
+ou desinformação, dado o desenho não-partisan, não-comercial e estritamente informativo do
+projeto — mantendo essas características (nunca aceitar patrocínio político, nunca ranquear
+candidatos, sempre citar a fonte) como requisito permanente, não só de lançamento.
+
+### 9.3 Infraestrutura e ferramentas (Vercel, GitHub)
+
+- **Vercel — [Acceptable Use Policy](https://vercel.com/legal/acceptable-use-policy)** (lida
+  nesta sessão): a única cláusula que menciona eleições está na seção 3 ("Artificial Intelligence
+  Services") e proíbe usar os **produtos de IA da própria Vercel** (AI Gateway, v0 etc.) para
+  criar/transmitir conteúdo destinado a campanhas eleitorais. **Não se aplica a este projeto** —
+  a Vercel aqui hospeda uma aplicação Next.js padrão (funções serverless, CDN, Analytics), sem
+  usar nenhum produto de IA da Vercel; o Claude (ver 9.4) é uma ferramenta de desenvolvimento
+  externa, não um "AI Service" da Vercel. A cláusula geral contra scraping/automação
+  (`"Scrape, proxy, act as a VPN..."`, seção 2) refere-se a não abusar da infraestrutura/site da
+  própria Vercel — não restringe o que a aplicação hospedada faz com fontes de terceiros; mesmo
+  assim, o projeto já roda a ingestão do TSE **fora** do runtime de produção por design (ver
+  `ARCHITECTURE.md` §4), o que evita qualquer leitura possível de "scraping em produção".
+- **GitHub — [Termos de Serviço](https://docs.github.com/en/site-policy/github-terms/github-terms-of-service)**,
+  seção H ("API Terms") (lida nesta sessão): uso normal da API pública para desenvolvimento ou
+  coleta de dados é explicitamente permitido; só proíbe abuso/volume excessivo, revenda dos dados
+  de usuários do GitHub para fins de spam (recrutamento etc.) e compartilhamento de token para
+  burlar limite de taxa. A página `/atualizacoes` (ver `src/lib/github.ts`) consulta a API pública
+  do repositório sem autenticação, cacheada por 10 minutos — uso de leitura de baixo volume, bem
+  dentro do permitido.
+
+### 9.4 Uso de IA no desenvolvimento
+
+Registrado por transparência (e agora também em `/termos`): partes do código, documentação e
+scripts de ingestão deste projeto foram desenvolvidas com apoio do **Claude, da Anthropic**, como
+ferramenta de programação assistida por um mantenedor humano que revisa e decide o que é
+publicado. A IA não seleciona, edita ou interpreta o conteúdo dos dados de candidatos exibidos —
+esses vêm sempre da fonte oficial, sem alteração. Esse uso está fora do escopo de qualquer
+cláusula sobre "AI Services" das políticas revisadas acima (que tratam de produtos de IA
+oferecidos *pelos próprios provedores de infraestrutura* — Vercel, TSE, CGU —, não de ferramentas
+de desenvolvimento usadas pela equipe do projeto).

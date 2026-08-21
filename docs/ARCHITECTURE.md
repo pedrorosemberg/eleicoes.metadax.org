@@ -155,7 +155,9 @@ Se, ao testar a partir do ambiente de produção real (Vercel ou onde for hosped
 | `/status` | **Implementado** | Saúde em tempo real de cada fonte externa (TSE ×3, BrasilAPI, Portal da Transparência) — checagem ao vivo no servidor a cada carregamento + polling client-side a cada 30s via `/api/health` |
 | `/sobre` | **Implementado** | Transparência do próprio produto: metodologia, fontes, licença, responsável pelo projeto |
 | `/participe` | **Implementado** | Dicas de voto consciente + guia de contribuição ao projeto (issues, PRs, ajudar com a ingestão) |
-| `/privacidade`, `/termos` | **Implementado** | O que é coletado (Vercel Analytics/eventos de busca) e usos autorizados do site/dados |
+| `/roteiro` | **Implementado** | Features planejadas/bloqueadas/sugeridas, cada uma com a fonte de dado citada, e CTA para propor novas via issue do GitHub |
+| `/atualizacoes` | **Implementado** | Issues, PRs e releases espelhados ao vivo da API pública do GitHub (`src/lib/github.ts`), revalidado a cada 10 min — ver `docs/DATA_SOURCES.md` §9.3 para a análise dos Termos de Serviço do GitHub |
+| `/privacidade`, `/termos` | **Implementado** | O que é coletado (Vercel Analytics/eventos de busca), usos autorizados do site/dados, infraestrutura/ferramentas usadas (Vercel, GitHub, uso de IA no desenvolvimento) — ver `docs/DATA_SOURCES.md` §9 |
 | `/partido/[sigla]` | **Pendente** | Dados cadastrais via CNPJ (BrasilAPI), lista de candidatos do partido na UF selecionada |
 
 ## 8. O que este projeto explicitamente não faz (fora de escopo)

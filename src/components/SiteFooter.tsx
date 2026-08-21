@@ -20,6 +20,12 @@ export function SiteFooter() {
           <Link href="/participe" className="underline underline-offset-2">
             Participe
           </Link>
+          <Link href="/roteiro" className="underline underline-offset-2">
+            Roteiro
+          </Link>
+          <Link href="/atualizacoes" className="underline underline-offset-2">
+            Atualizações
+          </Link>
           <Link href="/privacidade" className="underline underline-offset-2">
             Privacidade
           </Link>

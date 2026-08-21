@@ -29,6 +29,13 @@ const FORMAS_DE_AJUDAR = [
     linkTexto: "Abrir uma issue ↗",
   },
   {
+    titulo: "Sugerir uma melhoria ou dado novo",
+    descricao:
+      "Veja o que já está planejado — e o que ainda é só ideia — em /roteiro, cada item com a fonte de dado correspondente. Uma sugestão com fonte identificada tem prioridade sobre uma sem fonte clara.",
+    link: "/roteiro",
+    linkTexto: "Ver o roteiro →",
+  },
+  {
     titulo: "Contribuir com código",
     descricao:
       "Faça um fork, crie uma branch, e abra um Pull Request. Antes de submeter: rode npm run lint e npm run build localmente — mudanças que quebram o build não são aceitas. Descreva o que mudou e por quê.",
@@ -115,14 +122,23 @@ export default function ParticipePage() {
           <div key={f.titulo} className="rounded-[18px] border p-4 sm:p-5" style={{ borderColor: "var(--hairline)" }}>
             <h3 className="text-[16px] font-semibold text-[var(--text-primary)]">{f.titulo}</h3>
             <p className="mt-1.5 text-sm leading-relaxed text-[var(--text-secondary)]">{f.descricao}</p>
-            <a
-              href={f.link}
-              target="_blank"
-              rel="noreferrer noopener"
-              className="mt-2 inline-block text-sm underline underline-offset-2 text-[var(--text-primary)]"
-            >
-              {f.linkTexto}
-            </a>
+            {f.link.startsWith("/") ? (
+              <Link
+                href={f.link}
+                className="mt-2 inline-block text-sm underline underline-offset-2 text-[var(--text-primary)]"
+              >
+                {f.linkTexto}
+              </Link>
+            ) : (
+              <a
+                href={f.link}
+                target="_blank"
+                rel="noreferrer noopener"
+                className="mt-2 inline-block text-sm underline underline-offset-2 text-[var(--text-primary)]"
+              >
+                {f.linkTexto}
+              </a>
+            )}
           </div>
         ))}
       </div>

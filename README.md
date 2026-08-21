@@ -27,6 +27,10 @@ Licenciado sob [CC BY 4.0](LICENSE).
   Portal da Transparência), com checagem ao vivo a cada 30s
 - `/sobre` — metodologia, fontes, licença e responsável pelo projeto
 - `/participe` — dicas de voto consciente e como contribuir com o projeto
+- `/roteiro` — o que está planejado, bloqueado ou só sugerido, cada item com a fonte de dado
+  correspondente, e como propor algo novo
+- `/atualizacoes` — issues, patches e releases espelhados ao vivo do repositório no GitHub
+  (sincronizado a cada 10 min)
 - `/privacidade` — o que é coletado (Vercel Analytics/Speed Insights, eventos de busca) e por quê
 - `/termos` — usos autorizados do site e dos dados
 
