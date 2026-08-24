@@ -74,6 +74,26 @@ HTTP/2 403 — Access Denied (bloqueio no edge Akamai, não é 404: o recurso ex
 
 Bloqueado a partir do ambiente de execução — ver [§5](#5-nota-sobre-a-rede-de-execução--bloqueio-do-tse). URL e estrutura confirmadas via documentação oficial do TSE e padrão histórico de nomenclatura do CDN (usado desde 2020).
 
+### Datasets adicionais ingeridos em 24/08/2026
+
+Coletados manualmente do site de dados abertos do TSE (mesmo método do §5) e processados por
+`scripts/ingest-tse.ts` / `scripts/build-asset-index.ts`:
+
+| Dataset | Formato real | O que vira no produto |
+|---|---|---|
+| `consulta_cand_complementar` | CSV (`_BRASIL.csv`, mesmo padrão de `consulta_cand`) | Merge direto em `candidatos/{UF}.json`: `tetoGastos` (VR_DESPESA_MAX_CAMPANHA) e `situacaoJulgamento` (DS_SITUACAO_JULGAMENTO — o campo que de fato tem valor antes da eleição; `DS_SIT_TOT_TURNO` só é preenchido depois da apuração, vindo `"#NULO"` até lá) |
+| `prestacao_de_contas_eleitorais_candidatos` | ZIP com **4 CSVs empacotados juntos** (receitas, despesas_contratadas, despesas_pagas, receitas_doador_originario) — só os dois primeiros têm `SQ_CANDIDATO` direto | `data/{ano}/financas/{UF}.json` — receitas e despesas contratadas por candidato. despesas_pagas e receitas_doador_originario ficam de fora (exigem join via SQ_DESPESA/SQ_RECEITA, não implementado — ver `/roteiro`) |
+| `CNPJ_campanha` | **Arquivo posicional de largura fixa, não CSV** — layout confirmado contra `leiame_cnpj_campanha.pdf` real (SECON/CSELE/STI/TSE, Julho/2016, v1.0.0): registro de 200 colunas, campo 2 (pos. 4-17) = CNPJ, campo 4 (pos. 18-167) = nome fiscal | `data/{ano}/cnpj-campanha.json` — lista solta, **não** cruzada com um candidato específico (o dataset não traz `SQ_CANDIDATO`, só CNPJ + nome fiscal no formato "ELEIÇÃO {ano} {nome} {cargo}"; inferir o candidato por esse nome seria uma correspondência não confiável, então fica de fora do perfil do candidato — ver `CnpjCampanha` em `src/types/candidato.ts`) |
+| `foto_cand2026_{UF}_div.zip` (28 arquivos, 1 por UF) | ZIPs de JPEGs, nome `F{UF}{sqCandidato}_div.jpg` | `fotoUrl` em cada candidato — 20.638 fotos, uma para cada candidato do snapshot |
+| `proposta_governo_2026_{UF}.zip` (28 arquivos, 1 por UF) | ZIPs de PDFs, nome `{ano}{UF}{sqCandidato}_{NN}.pdf` | `planoGovernoUrls` — 208 candidatos com pelo menos um PDF (a maioria dos candidatos, principalmente os de cargos proporcionais, não é obrigada a enviar um) |
+
+**Hospedagem dos binários (fotos, PDFs):** ~440MB, grande demais para `data/` (que é JSON,
+commitado normalmente em `main`) e sem necessidade de um serviço de armazenamento de objetos à
+parte — ficam commitados numa branch órfã separada, `assets-tse-2026`, e servidos via
+`raw.githubusercontent.com` (testado e funcional). Nenhum arquivo individual passa de ~14MB
+(fotos) ou ~10MB (PDFs), bem abaixo do limite de 100MB por arquivo do GitHub. Ver o README da
+própria branch `assets-tse-2026` para a estrutura completa.
+
 ---
 
 ## 2. TSE — DivulgaCandContas (API REST não oficial)

@@ -5,6 +5,7 @@ import {
   carregarBensPorUf,
   carregarCandidatoPorId,
   carregarColigacoes,
+  carregarFinancasPorUf,
   carregarMotivosCassacaoPorUf,
   carregarRedesSociaisPorUf,
 } from "@/lib/data";
@@ -48,6 +49,7 @@ export default async function CandidatoPage({
     redesSociaisDaUf,
     motivosCassacaoDaUf,
     coligacoes,
+    financasDaUf,
   ] = await Promise.all([
     candidato.partido.cnpj ? buscarDadosCnpj(candidato.partido.cnpj) : Promise.resolve(null),
     carregarBensPorUf(candidato.uf),
@@ -69,6 +71,7 @@ export default async function CandidatoPage({
     carregarRedesSociaisPorUf(candidato.uf),
     carregarMotivosCassacaoPorUf(candidato.uf),
     carregarColigacoes(),
+    carregarFinancasPorUf(candidato.uf),
   ]);
 
   const bensDoCanditato = bensResultado.bens.filter((b) => b.sqCandidato === candidato.sqCandidato);
@@ -78,6 +81,10 @@ export default async function CandidatoPage({
   const coligacaoDoCanditato = candidato.sqColigacao
     ? coligacoes.find((c) => c.sqColigacao === candidato.sqColigacao)
     : undefined;
+  const receitas = financasDaUf.receitas.filter((r) => r.sqCandidato === candidato.sqCandidato);
+  const despesas = financasDaUf.despesas.filter((d) => d.sqCandidato === candidato.sqCandidato);
+  const totalReceitas = receitas.reduce((soma, r) => soma + r.valor, 0);
+  const totalDespesas = despesas.reduce((soma, d) => soma + d.valor, 0);
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -103,13 +110,28 @@ export default async function CandidatoPage({
         <SnapshotNotice isAmostra={isAmostra} />
       </div>
 
-      <p className="text-sm font-semibold uppercase tracking-wide text-[var(--text-tertiary)]">
-        {candidato.cargo} · {candidato.uf}
-      </p>
-      <h1 className="mt-1 text-[clamp(28px,6vw,40px)] font-semibold text-[var(--text-primary)]">
-        {candidato.nomeUrna}
-      </h1>
-      <p className="mt-1 text-[17px] text-[var(--text-secondary)]">{candidato.nomeCompleto}</p>
+      <div className="flex items-start gap-4">
+        {candidato.fotoUrl && (
+          // eslint-disable-next-line @next/next/no-img-element -- fonte externa (branch de assets no GitHub), fora dos domínios configurados em next/image
+          <img
+            src={candidato.fotoUrl}
+            alt={`Foto oficial de ${candidato.nomeUrna}`}
+            width={80}
+            height={112}
+            className="h-28 w-20 shrink-0 rounded-[10px] border object-cover"
+            style={{ borderColor: "var(--hairline)" }}
+          />
+        )}
+        <div>
+          <p className="text-sm font-semibold uppercase tracking-wide text-[var(--text-tertiary)]">
+            {candidato.cargo} · {candidato.uf}
+          </p>
+          <h1 className="mt-1 text-[clamp(28px,6vw,40px)] font-semibold text-[var(--text-primary)]">
+            {candidato.nomeUrna}
+          </h1>
+          <p className="mt-1 text-[17px] text-[var(--text-secondary)]">{candidato.nomeCompleto}</p>
+        </div>
+      </div>
 
       <dl className="mt-8 grid grid-cols-2 gap-y-4 border-t pt-6 text-sm" style={{ borderColor: "var(--hairline)" }}>
         <dt className="text-[var(--text-tertiary)]">Número</dt>
@@ -123,8 +145,21 @@ export default async function CandidatoPage({
         <dt className="text-[var(--text-tertiary)]">Município</dt>
         <dd className="text-[var(--text-primary)]">{candidato.municipio}/{candidato.uf}</dd>
 
-        <dt className="text-[var(--text-tertiary)]">Situação</dt>
-        <dd className="text-[var(--text-primary)]">{candidato.situacao}</dd>
+        {/* DS_SIT_TOT_TURNO (candidato.situacao) só é preenchido depois da apuração —
+            antes da eleição vem "#NULO" da própria fonte; situacaoJulgamento
+            (DS_SITUACAO_JULGAMENTO, de consulta_cand_complementar) é o que
+            existe de fato nessa fase (deferido/indeferido/etc.). */}
+        {candidato.situacao && candidato.situacao !== "#NULO" ? (
+          <>
+            <dt className="text-[var(--text-tertiary)]">Situação</dt>
+            <dd className="text-[var(--text-primary)]">{candidato.situacao}</dd>
+          </>
+        ) : candidato.situacaoJulgamento ? (
+          <>
+            <dt className="text-[var(--text-tertiary)]">Situação do registro</dt>
+            <dd className="text-[var(--text-primary)]">{candidato.situacaoJulgamento}</dd>
+          </>
+        ) : null}
 
         {candidato.ocupacao && (
           <>
@@ -140,6 +175,13 @@ export default async function CandidatoPage({
               {candidato.coligacao}
               {coligacaoDoCanditato?.situacao ? ` — ${coligacaoDoCanditato.situacao}` : ""}
             </dd>
+          </>
+        )}
+
+        {candidato.tetoGastos && (
+          <>
+            <dt className="text-[var(--text-tertiary)]">Teto de gastos de campanha</dt>
+            <dd className="font-financial text-[var(--text-primary)]">{formatarMoedaBRL(candidato.tetoGastos)}</dd>
           </>
         )}
       </dl>
@@ -169,8 +211,8 @@ export default async function CandidatoPage({
         </section>
       )}
 
-      {/* Site oficial e plano de governo (só quando codMunicipio existir — ver src/types/candidato.ts) + redes sociais (dataset rede_social_candidato, coletado do site do TSE) */}
-      {detalheDivulgaCand?.sites?.length || detalheDivulgaCand?.arquivos?.length || redesSociais.length ? (
+      {/* Site oficial (só quando codMunicipio existir — ver src/types/candidato.ts) + redes sociais e plano de governo (coletados do site de dados abertos do TSE) */}
+      {detalheDivulgaCand?.sites?.length || redesSociais.length || candidato.planoGovernoUrls?.length ? (
         <section className="mt-8 rounded-[18px] border p-5" style={{ borderColor: "var(--hairline)" }}>
           <h2 className="text-[17px] font-semibold text-[var(--text-primary)]">
             Site oficial, redes sociais e plano de governo
@@ -209,17 +251,17 @@ export default async function CandidatoPage({
               ))}
             </ul>
           ) : null}
-          {detalheDivulgaCand?.arquivos?.length ? (
+          {candidato.planoGovernoUrls?.length ? (
             <ul className="mt-3 flex flex-col gap-1.5 text-sm">
-              {detalheDivulgaCand.arquivos.map((arquivo) => (
-                <li key={arquivo.idArquivo}>
+              {candidato.planoGovernoUrls.map((url, i) => (
+                <li key={url}>
                   <a
-                    href={arquivo.url}
+                    href={url}
                     target="_blank"
                     rel="noreferrer noopener"
                     className="inline-flex items-center gap-1.5 underline underline-offset-2 text-[var(--text-primary)]"
                   >
-                    {arquivo.nome || "Plano de governo (PDF)"}
+                    Plano de governo (PDF{candidato.planoGovernoUrls!.length > 1 ? ` ${i + 1}` : ""})
                     <IconExternalLink />
                   </a>
                 </li>
@@ -281,6 +323,62 @@ export default async function CandidatoPage({
           </p>
         )}
       </section>
+
+      {/* Finanças de campanha — receitas (dinheiro recebido) e despesas contratadas (dinheiro gasto) */}
+      {(receitas.length > 0 || despesas.length > 0) && (
+        <section className="mt-8 rounded-[18px] border p-5" style={{ borderColor: "var(--hairline)" }}>
+          <h2 className="text-[17px] font-semibold text-[var(--text-primary)]">Finanças de campanha</h2>
+          {receitas.length > 0 && (
+            <div className="mt-3">
+              <div className="flex items-baseline justify-between gap-3">
+                <p className="font-medium text-[var(--text-primary)]">Receitas</p>
+                <span className="font-financial text-sm font-semibold text-[var(--text-primary)]">
+                  {formatarMoedaBRL(totalReceitas)}
+                </span>
+              </div>
+              <ul className="mt-1.5 flex flex-col gap-1.5 text-sm">
+                {receitas.map((r, i) => (
+                  <li key={i} className="flex items-center justify-between gap-3">
+                    <span className="text-[var(--text-secondary)]">
+                      {r.doador !== "#NULO" ? r.doador : "Doador não identificado"}
+                    </span>
+                    <span className="font-financial shrink-0 text-[var(--text-primary)]">
+                      {formatarMoedaBRL(r.valor)}
+                    </span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
+          {despesas.length > 0 && (
+            <div className="mt-4">
+              <div className="flex items-baseline justify-between gap-3">
+                <p className="font-medium text-[var(--text-primary)]">Despesas contratadas</p>
+                <span className="font-financial text-sm font-semibold text-[var(--text-primary)]">
+                  {formatarMoedaBRL(totalDespesas)}
+                </span>
+              </div>
+              <ul className="mt-1.5 flex flex-col gap-1.5 text-sm">
+                {despesas.map((d, i) => (
+                  <li key={i} className="flex items-center justify-between gap-3">
+                    <span className="text-[var(--text-secondary)]">
+                      {d.fornecedor !== "#NULO" ? d.fornecedor : "Fornecedor não identificado"}
+                    </span>
+                    <span className="font-financial shrink-0 text-[var(--text-primary)]">
+                      {formatarMoedaBRL(d.valor)}
+                    </span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
+          <p className="mt-3 text-xs text-[var(--text-tertiary)]">
+            Fonte: prestação de contas eleitorais, coletada do site de dados abertos do TSE. Só receitas e
+            despesas já contratadas com o candidato identificado no dado de origem — não inclui despesas
+            pagas em parcelas nem doações a órgãos partidários.
+          </p>
+        </section>
+      )}
 
       {/* Cruzamento com o Portal da Transparência */}
       <section className="mt-8 rounded-[18px] border p-5" style={{ borderColor: "var(--hairline)" }}>

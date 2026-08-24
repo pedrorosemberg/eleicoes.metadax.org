@@ -1,0 +1,4101 @@
+{
+  "receitas": [
+    {
+      "sqCandidato": "50002535021",
+      "doador": "CLOVIS SOUSA MARQUES",
+      "cpfCnpjDoador": "28927125568",
+      "descricao": "#NULO",
+      "valor": 2500
+    },
+    {
+      "sqCandidato": "50002535855",
+      "doador": "BARBARA CARINE SOARES PINHEIRO",
+      "cpfCnpjDoador": "03339071594",
+      "descricao": "#NULO",
+      "valor": 100
+    },
+    {
+      "sqCandidato": "50002535855",
+      "doador": "GUIPSON LUIDE ALBUQUERQUE MANGUEIRA",
+      "cpfCnpjDoador": "06937300565",
+      "descricao": "#NULO",
+      "valor": 20
+    },
+    {
+      "sqCandidato": "50002535021",
+      "doador": "GILENO GUIMARAES FERNANDES",
+      "cpfCnpjDoador": "12657573568",
+      "descricao": "#NULO",
+      "valor": 10000
+    },
+    {
+      "sqCandidato": "50002538682",
+      "doador": "Carlos Prado",
+      "cpfCnpjDoador": "48822051815",
+      "descricao": "#NULO",
+      "valor": 50000
+    },
+    {
+      "sqCandidato": "50002533151",
+      "doador": "MICHELLE VIEIRA SOBRAL",
+      "cpfCnpjDoador": "02218840413",
+      "descricao": "#NULO",
+      "valor": 2000
+    },
+    {
+      "sqCandidato": "50002533151",
+      "doador": "MICHELLE VIEIRA SOBRAL",
+      "cpfCnpjDoador": "02218840413",
+      "descricao": "#NULO",
+      "valor": 3000
+    },
+    {
+      "sqCandidato": "50002535021",
+      "doador": "MARIA CAROLINA SOUSA SILVA SOARES",
+      "cpfCnpjDoador": "08779804543",
+      "descricao": "#NULO",
+      "valor": 10000
+    },
+    {
+      "sqCandidato": "50002531355",
+      "doador": "AMANDA SERRA DOS SANTOS",
+      "cpfCnpjDoador": "08276209505",
+      "descricao": "#NULO",
+      "valor": 936
+    },
+    {
+      "sqCandidato": "50002531355",
+      "doador": "AMANDA SERRA DOS SANTOS",
+      "cpfCnpjDoador": "08276209505",
+      "descricao": "#NULO",
+      "valor": 26
+    },
+    {
+      "sqCandidato": "50002531355",
+      "doador": "AMANDA SERRA DOS SANTOS",
+      "cpfCnpjDoador": "08276209505",
+      "descricao": "#NULO",
+      "valor": 420
+    },
+    {
+      "sqCandidato": "50002532684",
+      "doador": "Paulo José Santos Silva",
+      "cpfCnpjDoador": "80008410534",
+      "descricao": "#NULO",
+      "valor": 15000
+    },
+    {
+      "sqCandidato": "50002537869",
+      "doador": "ROBINSON SANTOS ALMEIDA",
+      "cpfCnpjDoador": "36464945572",
+      "descricao": "#NULO",
+      "valor": 22000
+    },
+    {
+      "sqCandidato": "50002537681",
+      "doador": "Direção Nacional - NOVO",
+      "cpfCnpjDoador": "13405866000124",
+      "descricao": "#NULO",
+      "valor": 5000
+    },
+    {
+      "sqCandidato": "50002534979",
+      "doador": "#NULO",
+      "cpfCnpjDoador": "-1",
+      "descricao": "#NULO",
+      "valor": 0
+    },
+    {
+      "sqCandidato": "50002537404",
+      "doador": "JOAO VITOR DE CASTRO LINO BONFIM",
+      "cpfCnpjDoador": "81225750563",
+      "descricao": "#NULO",
+      "valor": 100000
+    },
+    {
+      "sqCandidato": "50002537692",
+      "doador": "Direção Nacional - NOVO",
+      "cpfCnpjDoador": "13405866000124",
+      "descricao": "#NULO",
+      "valor": 12000
+    },
+    {
+      "sqCandidato": "50002532684",
+      "doador": "Mateus Argolo Macedo",
+      "cpfCnpjDoador": "06300114511",
+      "descricao": "#NULO",
+      "valor": 10000
+    },
+    {
+      "sqCandidato": "50002532684",
+      "doador": "Larissa Santos Oliveira",
+      "cpfCnpjDoador": "04547346542",
+      "descricao": "#NULO",
+      "valor": 10000
+    },
+    {
+      "sqCandidato": "50002532684",
+      "doador": "Gilberto Porto de Almeida",
+      "cpfCnpjDoador": "06140924855",
+      "descricao": "#NULO",
+      "valor": 10000
+    },
+    {
+      "sqCandidato": "50002532684",
+      "doador": "Tiago Soares de Oliveira",
+      "cpfCnpjDoador": "01993299580",
+      "descricao": "#NULO",
+      "valor": 10000
+    },
+    {
+      "sqCandidato": "50002536314",
+      "doador": "Direção Estadual/Distrital - PT - BAHIA",
+      "cpfCnpjDoador": "13477302000105",
+      "descricao": "#NULO",
+      "valor": 50000
+    },
+    {
+      "sqCandidato": "50002532684",
+      "doador": "Patrícia Thereza Roldi",
+      "cpfCnpjDoador": "57920630525",
+      "descricao": "#NULO",
+      "valor": 20000
+    },
+    {
+      "sqCandidato": "50002534980",
+      "doador": "LUIS VASCONCELOS MELO",
+      "cpfCnpjDoador": "61346195587",
+      "descricao": "#NULO",
+      "valor": 100
+    },
+    {
+      "sqCandidato": "50002534980",
+      "doador": "LUIS VASCONCELOS MELO",
+      "cpfCnpjDoador": "61346195587",
+      "descricao": "#NULO",
+      "valor": 900
+    },
+    {
+      "sqCandidato": "50002535877",
+      "doador": "JOSE CAETANO DE JESUS FILHO",
+      "cpfCnpjDoador": "03811804502",
+      "descricao": "#NULO",
+      "valor": 2150
+    },
+    {
+      "sqCandidato": "50002532684",
+      "doador": "Ailton Miranda Bahia Junior",
+      "cpfCnpjDoador": "45645086520",
+      "descricao": "#NULO",
+      "valor": 20000
+    },
+    {
+      "sqCandidato": "50002532684",
+      "doador": "Ronivaldo Rodrigues dos Santos",
+      "cpfCnpjDoador": "60300205520",
+      "descricao": "#NULO",
+      "valor": 16000
+    },
+    {
+      "sqCandidato": "50002532625",
+      "doador": "Otto Roberto Mendonça de Alencar",
+      "cpfCnpjDoador": "05985234568",
+      "descricao": "#NULO",
+      "valor": 100000
+    },
+    {
+      "sqCandidato": "50002537690",
+      "doador": "LUCIANO KLIEMA",
+      "cpfCnpjDoador": "82834105120",
+      "descricao": "#NULO",
+      "valor": 1000
+    },
+    {
+      "sqCandidato": "50002535152",
+      "doador": "VALTER HUGO",
+      "cpfCnpjDoador": "02293859584",
+      "descricao": "#NULO",
+      "valor": 250
+    },
+    {
+      "sqCandidato": "50002535021",
+      "doador": "ANA SHEILA LEMOS ANDRADE",
+      "cpfCnpjDoador": "60360771572",
+      "descricao": "#NULO",
+      "valor": 20000
+    },
+    {
+      "sqCandidato": "50002532684",
+      "doador": "Breno Alexander Saraiva Müller de Azevedo",
+      "cpfCnpjDoador": "06172680536",
+      "descricao": "#NULO",
+      "valor": 14000
+    },
+    {
+      "sqCandidato": "50002532684",
+      "doador": "José Miranda de Oliveira",
+      "cpfCnpjDoador": "58395660553",
+      "descricao": "#NULO",
+      "valor": 14000
+    },
+    {
+      "sqCandidato": "50002534981",
+      "doador": "MARCIO SANTOS DA SILVA",
+      "cpfCnpjDoador": "73831778515",
+      "descricao": "#NULO",
+      "valor": 1000
+    },
+    {
+      "sqCandidato": "50002535855",
+      "doador": "EDUARDO MACEDO FONTES",
+      "cpfCnpjDoador": "07802372500",
+      "descricao": "#NULO",
+      "valor": 5
+    },
+    {
+      "sqCandidato": "50002532684",
+      "doador": "João de Cristo Gomes de Almeida Junior",
+      "cpfCnpjDoador": "92800602520",
+      "descricao": "#NULO",
+      "valor": 10000
+    },
+    {
+      "sqCandidato": "50002532684",
+      "doador": "Janis Alves de Souza",
+      "cpfCnpjDoador": "13276144808",
+      "descricao": "#NULO",
+      "valor": 10000
+    },
+    {
+      "sqCandidato": "50002532684",
+      "doador": "Janis Alves de Souza",
+      "cpfCnpjDoador": "13276144808",
+      "descricao": "#NULO",
+      "valor": 10000
+    },
+    {
+      "sqCandidato": "50002538884",
+      "doador": "#NULO",
+      "cpfCnpjDoador": "-1",
+      "descricao": "#NULO",
+      "valor": 0
+    },
+    {
+      "sqCandidato": "50002536321",
+      "doador": "Direção Estadual/Distrital - PT - BAHIA",
+      "cpfCnpjDoador": "13477302000105",
+      "descricao": "#NULO",
+      "valor": 50000
+    },
+    {
+      "sqCandidato": "50002533138",
+      "doador": "MARIA DO CARMO MAGALHÃES MARQUES",
+      "cpfCnpjDoador": "25247646568",
+      "descricao": "#NULO",
+      "valor": 2250
+    },
+    {
+      "sqCandidato": "50002532684",
+      "doador": "Gilmar Lima Reis",
+      "cpfCnpjDoador": "00481850511",
+      "descricao": "#NULO",
+      "valor": 10000
+    },
+    {
+      "sqCandidato": "50002532684",
+      "doador": "Jovita Lima Silva dos Santos",
+      "cpfCnpjDoador": "26085160500",
+      "descricao": "#NULO",
+      "valor": 9500
+    },
+    {
+      "sqCandidato": "50002532684",
+      "doador": "Jovita Lima Silva dos Santos",
+      "cpfCnpjDoador": "26085160500",
+      "descricao": "#NULO",
+      "valor": 9500
+    },
+    {
+      "sqCandidato": "50002534985",
+      "doador": "ALBERTO MAGALHAES PIMENTEL JUNIOR",
+      "cpfCnpjDoador": "00904994503",
+      "descricao": "#NULO",
+      "valor": 2000
+    },
+    {
+      "sqCandidato": "50002534985",
+      "doador": "ALBERTO MAGALHAES PIMENTEL JUNIOR",
+      "cpfCnpjDoador": "00904994503",
+      "descricao": "#NULO",
+      "valor": 3000
+    },
+    {
+      "sqCandidato": "50002534985",
+      "doador": "ALBERTO MAGALHAES PIMENTEL JUNIOR",
+      "cpfCnpjDoador": "00904994503",
+      "descricao": "#NULO",
+      "valor": 3000
+    },
+    {
+      "sqCandidato": "50002535021",
+      "doador": "AGNA MUNIZ MARQUES",
+      "cpfCnpjDoador": "33303770549",
+      "descricao": "#NULO",
+      "valor": 2500
+    },
+    {
+      "sqCandidato": "50002535853",
+      "doador": "ANETI CORDEIRO RAMOS",
+      "cpfCnpjDoador": "73485497720",
+      "descricao": "#NULO",
+      "valor": 150
+    },
+    {
+      "sqCandidato": "50002532684",
+      "doador": "Maria Luiza Marques Pereira",
+      "cpfCnpjDoador": "34498990587",
+      "descricao": "#NULO",
+      "valor": 7000
+    },
+    {
+      "sqCandidato": "50002532684",
+      "doador": "Alick Maia Lopes",
+      "cpfCnpjDoador": "29677998587",
+      "descricao": "#NULO",
+      "valor": 3000
+    },
+    {
+      "sqCandidato": "50002532684",
+      "doador": "Alick Maia Lopes",
+      "cpfCnpjDoador": "29677998587",
+      "descricao": "#NULO",
+      "valor": 3000
+    },
+    {
+      "sqCandidato": "50002535855",
+      "doador": "CARLOS MATIAS DE SANTANA",
+      "cpfCnpjDoador": "76543730587",
+      "descricao": "#NULO",
+      "valor": 50
+    },
+    {
+      "sqCandidato": "50002538757",
+      "doador": "JOSE CERQUEIRA DE SANTANA NETO",
+      "cpfCnpjDoador": "38247186500",
+      "descricao": "#NULO",
+      "valor": 5000
+    },
+    {
+      "sqCandidato": "50002538887",
+      "doador": "#NULO",
+      "cpfCnpjDoador": "-1",
+      "descricao": "#NULO",
+      "valor": 0
+    },
+    {
+      "sqCandidato": "50002537372",
+      "doador": "BRUNA LESSA SOUSA BARONE",
+      "cpfCnpjDoador": "78025648591",
+      "descricao": "#NULO",
+      "valor": 400
+    },
+    {
+      "sqCandidato": "50002532684",
+      "doador": "Lourêncio Emanoel Batista de Oliveira",
+      "cpfCnpjDoador": "08900825534",
+      "descricao": "#NULO",
+      "valor": 10000
+    },
+    {
+      "sqCandidato": "50002532625",
+      "doador": "Jasson Negrão Braga",
+      "cpfCnpjDoador": "97182249553",
+      "descricao": "#NULO",
+      "valor": 50000
+    },
+    {
+      "sqCandidato": "50002532625",
+      "doador": "Jasson Negrão Braga",
+      "cpfCnpjDoador": "97182249553",
+      "descricao": "#NULO",
+      "valor": 51000
+    },
+    {
+      "sqCandidato": "50002538780",
+      "doador": "LEANDRO TEIXEIRA DA SILVA",
+      "cpfCnpjDoador": "84061090500",
+      "descricao": "#NULO",
+      "valor": 5000
+    },
+    {
+      "sqCandidato": "50002537690",
+      "doador": "CARLOS MEDEIROS MIRANDA",
+      "cpfCnpjDoador": "70580960587",
+      "descricao": "#NULO",
+      "valor": 2000
+    },
+    {
+      "sqCandidato": "50002537690",
+      "doador": "CARLOS MEDEIROS MIRANDA",
+      "cpfCnpjDoador": "70580960587",
+      "descricao": "#NULO",
+      "valor": 1000
+    },
+    {
+      "sqCandidato": "50002535021",
+      "doador": "MARIA LUIZA SOUSA SILVA SOARES",
+      "cpfCnpjDoador": "08779862586",
+      "descricao": "#NULO",
+      "valor": 10000
+    },
+    {
+      "sqCandidato": "50002538781",
+      "doador": "Jeronimo Luiz Placido de Mesquita",
+      "cpfCnpjDoador": "79494137515",
+      "descricao": "#NULO",
+      "valor": 5000
+    },
+    {
+      "sqCandidato": "50002532650",
+      "doador": "JOAO BATISTA ALVES PEREIRA",
+      "cpfCnpjDoador": "92800505591",
+      "descricao": "#NULO",
+      "valor": 1000
+    },
+    {
+      "sqCandidato": "50002537697",
+      "doador": "Direção Nacional - NOVO",
+      "cpfCnpjDoador": "13405866000124",
+      "descricao": "#NULO",
+      "valor": 5000
+    },
+    {
+      "sqCandidato": "50002537688",
+      "doador": "Direção Nacional - NOVO",
+      "cpfCnpjDoador": "13405866000124",
+      "descricao": "#NULO",
+      "valor": 2000
+    },
+    {
+      "sqCandidato": "50002535033",
+      "doador": "RONALDO ALMEIDA CARIBE",
+      "cpfCnpjDoador": "02188898524",
+      "descricao": "#NULO",
+      "valor": 4000
+    },
+    {
+      "sqCandidato": "50002535033",
+      "doador": "RONALDO ALMEIDA CARIBE",
+      "cpfCnpjDoador": "02188898524",
+      "descricao": "#NULO",
+      "valor": 6000
+    },
+    {
+      "sqCandidato": "50002534981",
+      "doador": "JOAO BARBOSA DE SOUZA SOBRINHO",
+      "cpfCnpjDoador": "17621950544",
+      "descricao": "#NULO",
+      "valor": 2000
+    },
+    {
+      "sqCandidato": "50002531355",
+      "doador": "MANOEL GONÇALVES DA SLVA",
+      "cpfCnpjDoador": "05684213537",
+      "descricao": "#NULO",
+      "valor": 1064
+    },
+    {
+      "sqCandidato": "50002532684",
+      "doador": "Robson Lopes Souza",
+      "cpfCnpjDoador": "99755920587",
+      "descricao": "#NULO",
+      "valor": 9000
+    },
+    {
+      "sqCandidato": "50002533124",
+      "doador": "ANGELO MARIO CORONEL DE AZEVEDO MARTINS",
+      "cpfCnpjDoador": "77865111568",
+      "descricao": "#NULO",
+      "valor": 20000
+    },
+    {
+      "sqCandidato": "50002537690",
+      "doador": "Direção Nacional - NOVO",
+      "cpfCnpjDoador": "13405866000124",
+      "descricao": "#NULO",
+      "valor": 25000
+    },
+    {
+      "sqCandidato": "50002538781",
+      "doador": "JUTAI MORAES DE JESUS",
+      "cpfCnpjDoador": "36939439587",
+      "descricao": "#NULO",
+      "valor": 2000
+    },
+    {
+      "sqCandidato": "50002532497",
+      "doador": "GERALDO GENTIL MAGALHAES PINTO",
+      "cpfCnpjDoador": "93893868534",
+      "descricao": "#NULO",
+      "valor": 20000
+    },
+    {
+      "sqCandidato": "50002538664",
+      "doador": "ANA PAULA DOS PASSOS CUNHA SANTOS",
+      "cpfCnpjDoador": "56731817520",
+      "descricao": "Emissão dos recibos eleitorais, Organização,análise e avaliação dos docs da prestação de contas,",
+      "valor": 4500
+    },
+    {
+      "sqCandidato": "50002538664",
+      "doador": "SILVIO HUMBERTO DOS PASSOS CUNHA",
+      "cpfCnpjDoador": "32573146553",
+      "descricao": "#NULO",
+      "valor": 9000
+    },
+    {
+      "sqCandidato": "50002538664",
+      "doador": "SILVIO HUMBERTO DOS PASSOS CUNHA",
+      "cpfCnpjDoador": "32573146553",
+      "descricao": "#NULO",
+      "valor": 1000
+    },
+    {
+      "sqCandidato": "50002538664",
+      "doador": "Maria helena Passos Gusmão",
+      "cpfCnpjDoador": "37529544500",
+      "descricao": "Espaço tipo laje em Imóvel",
+      "valor": 3886.87
+    },
+    {
+      "sqCandidato": "50002532513",
+      "doador": "ESAU THIAGO SANTANA SILVA",
+      "cpfCnpjDoador": "02881980503",
+      "descricao": "#NULO",
+      "valor": 3000
+    },
+    {
+      "sqCandidato": "50002537851",
+      "doador": "MARIVALDA DA SILVA",
+      "cpfCnpjDoador": "66833604568",
+      "descricao": "#NULO",
+      "valor": 10000
+    },
+    {
+      "sqCandidato": "50002538774",
+      "doador": "DAMIANA PEREIRA DE MIRANDA",
+      "cpfCnpjDoador": "07830785520",
+      "descricao": "#NULO",
+      "valor": 100
+    },
+    {
+      "sqCandidato": "50002537856",
+      "doador": "TAGNER OLIVEIRA CERQUEIRA",
+      "cpfCnpjDoador": "03053011522",
+      "descricao": "#NULO",
+      "valor": 2000
+    },
+    {
+      "sqCandidato": "50002537872",
+      "doador": "QueroApoiar.com.br",
+      "cpfCnpjDoador": "39586155000197",
+      "descricao": "Importação FCC - 10000000000000000000000",
+      "valor": 8174
+    },
+    {
+      "sqCandidato": "50002535153",
+      "doador": "JULIANA DELMONTE",
+      "cpfCnpjDoador": "00080264590",
+      "descricao": "#NULO",
+      "valor": 50
+    },
+    {
+      "sqCandidato": "50002537856",
+      "doador": "TAGNER OLIVEIRA CERQUEIRA",
+      "cpfCnpjDoador": "03053011522",
+      "descricao": "#NULO",
+      "valor": 3000
+    },
+    {
+      "sqCandidato": "50002535153",
+      "doador": "PAULO ROBERTO SILVA MIMOSO",
+      "cpfCnpjDoador": "07570368568",
+      "descricao": "#NULO",
+      "valor": 100
+    },
+    {
+      "sqCandidato": "50002532538",
+      "doador": "GIOVANNI SANTOS BARRETO",
+      "cpfCnpjDoador": "04179896524",
+      "descricao": "#NULO",
+      "valor": 2000
+    },
+    {
+      "sqCandidato": "50002535153",
+      "doador": "RAYMUNDO JOSÉ MIMOSO DE AZEVEDO E SILVA",
+      "cpfCnpjDoador": "77666704534",
+      "descricao": "#NULO",
+      "valor": 100
+    },
+    {
+      "sqCandidato": "50002533132",
+      "doador": "QueroApoiar.com.br",
+      "cpfCnpjDoador": "39586155000197",
+      "descricao": "#NULO",
+      "valor": 4560
+    },
+    {
+      "sqCandidato": "50002533132",
+      "doador": "QueroApoiar.com.br",
+      "cpfCnpjDoador": "39586155000197",
+      "descricao": "#NULO",
+      "valor": 2000
+    },
+    {
+      "sqCandidato": "50002535153",
+      "doador": "DAIANNELUZIA DA HORA BARAUNA",
+      "cpfCnpjDoador": "71537490559",
+      "descricao": "#NULO",
+      "valor": 50
+    },
+    {
+      "sqCandidato": "50002535153",
+      "doador": "VERA LÚCIA SANTOS MIMOSO",
+      "cpfCnpjDoador": "44045891587",
+      "descricao": "#NULO",
+      "valor": 500
+    },
+    {
+      "sqCandidato": "50002531381",
+      "doador": "MARCIO SILVA COSTA",
+      "cpfCnpjDoador": "68138750510",
+      "descricao": "#NULO",
+      "valor": 500
+    },
+    {
+      "sqCandidato": "50002533132",
+      "doador": "PEDRO AMERICO DE SANTANA SILVA LOPES",
+      "cpfCnpjDoador": "01601953577",
+      "descricao": "#NULO",
+      "valor": 1000
+    },
+    {
+      "sqCandidato": "50002535153",
+      "doador": "PAULA MONTEIRO BARBOSA",
+      "cpfCnpjDoador": "98599232134",
+      "descricao": "#NULO",
+      "valor": 50
+    },
+    {
+      "sqCandidato": "50002532556",
+      "doador": "Aloísio Alan Costa Fernandes",
+      "cpfCnpjDoador": "57914982504",
+      "descricao": "#NULO",
+      "valor": 10000
+    },
+    {
+      "sqCandidato": "50002535153",
+      "doador": "JOSÉ FELIPE ALMEIDA GARCIA",
+      "cpfCnpjDoador": "00489231500",
+      "descricao": "#NULO",
+      "valor": 200
+    },
+    {
+      "sqCandidato": "50002537854",
+      "doador": "Alexandre Rogerio Santana da Silva",
+      "cpfCnpjDoador": "92539521568",
+      "descricao": "#NULO",
+      "valor": 1000
+    },
+    {
+      "sqCandidato": "50002537854",
+      "doador": "Silvia Christiane Ecio Damasceno",
+      "cpfCnpjDoador": "00469484578",
+      "descricao": "#NULO",
+      "valor": 1000
+    },
+    {
+      "sqCandidato": "50002535153",
+      "doador": "VERA LÚCIA SANTOS MIMOSO",
+      "cpfCnpjDoador": "32803486504",
+      "descricao": "#NULO",
+      "valor": 10
+    },
+    {
+      "sqCandidato": "50002537864",
+      "doador": "FABIOLA MANSUR DE CARVALHO",
+      "cpfCnpjDoador": "29271010515",
+      "descricao": "#NULO",
+      "valor": 114644.99
+    },
+    {
+      "sqCandidato": "50002535584",
+      "doador": "VITOR VIANA PARANHOS DE AZEVEDO",
+      "cpfCnpjDoador": "79244629534",
+      "descricao": "#NULO",
+      "valor": 125000
+    },
+    {
+      "sqCandidato": "50002531404",
+      "doador": "PAULO CEZAR SIMOES SILVA",
+      "cpfCnpjDoador": "10641343515",
+      "descricao": "#NULO",
+      "valor": 1000
+    },
+    {
+      "sqCandidato": "50002532556",
+      "doador": "LARA DE CASTRO ARAUJO FERNANDES",
+      "cpfCnpjDoador": "02595083490",
+      "descricao": "#NULO",
+      "valor": 1000
+    },
+    {
+      "sqCandidato": "50002537866",
+      "doador": "ROSEMBERG EVANGELISTA PINTO",
+      "cpfCnpjDoador": "08020051520",
+      "descricao": "#NULO",
+      "valor": 10000
+    },
+    {
+      "sqCandidato": "50002537854",
+      "doador": "MARCOS PAULO SILVA BOMFIM",
+      "cpfCnpjDoador": "68276508553",
+      "descricao": "#NULO",
+      "valor": 1000
+    },
+    {
+      "sqCandidato": "50002538876",
+      "doador": "QueroApoiar.com.br",
+      "cpfCnpjDoador": "39586155000197",
+      "descricao": "Importação FCC - 10000000000000000000000",
+      "valor": 550
+    },
+    {
+      "sqCandidato": "50002535116",
+      "doador": "GABRIEL BANDARRA JOFFILY DE SOUZA",
+      "cpfCnpjDoador": "03783040540",
+      "descricao": "#NULO",
+      "valor": 10000
+    },
+    {
+      "sqCandidato": "50002532912",
+      "doador": "GIULIANO SANTOS DE JESUS ARGOLO",
+      "cpfCnpjDoador": "07051756508",
+      "descricao": "#NULO",
+      "valor": 500
+    },
+    {
+      "sqCandidato": "50002532912",
+      "doador": "GIULIANO SANTOS DE JESUS ARGOLO",
+      "cpfCnpjDoador": "07051756508",
+      "descricao": "#NULO",
+      "valor": 3600
+    },
+    {
+      "sqCandidato": "50002535071",
+      "doador": "PAULO SERGIO PARANHOS DE MAGALHAES JUNIOR",
+      "cpfCnpjDoador": "76732312553",
+      "descricao": "#NULO",
+      "valor": 20000
+    },
+    {
+      "sqCandidato": "50002538676",
+      "doador": "RAMON CARDOSO",
+      "cpfCnpjDoador": "36973890504",
+      "descricao": "#NULO",
+      "valor": 1150
+    },
+    {
+      "sqCandidato": "50002538875",
+      "doador": "#NULO",
+      "cpfCnpjDoador": "-1",
+      "descricao": "#NULO",
+      "valor": 0
+    },
+    {
+      "sqCandidato": "50002537370",
+      "doador": "ELISANGELA DOS SANTOS ARAUJO",
+      "cpfCnpjDoador": "75428423587",
+      "descricao": "#NULO",
+      "valor": 5000
+    },
+    {
+      "sqCandidato": "50002532517",
+      "doador": "ADRIEL BRENDOWN TORRES MATURINO",
+      "cpfCnpjDoador": "03883619566",
+      "descricao": "#NULO",
+      "valor": 500
+    },
+    {
+      "sqCandidato": "50002532517",
+      "doador": "ADRIEL BRENDOWN TORRES MATURINO",
+      "cpfCnpjDoador": "03883619566",
+      "descricao": "#NULO",
+      "valor": 1500
+    },
+    {
+      "sqCandidato": "50002532517",
+      "doador": "ADRIEL BRENDOWN TORRES MATURINO",
+      "cpfCnpjDoador": "03883619566",
+      "descricao": "#NULO",
+      "valor": 400
+    },
+    {
+      "sqCandidato": "50002532517",
+      "doador": "ADRIEL BRENDOWN TORRES MATURINO",
+      "cpfCnpjDoador": "03883619566",
+      "descricao": "#NULO",
+      "valor": 1500
+    },
+    {
+      "sqCandidato": "50002537854",
+      "doador": "JOAO PAULLO FALCAO FERRAZ",
+      "cpfCnpjDoador": "05053201501",
+      "descricao": "#NULO",
+      "valor": 1000
+    },
+    {
+      "sqCandidato": "50002537854",
+      "doador": "Cassius Borba Leite",
+      "cpfCnpjDoador": "98747681500",
+      "descricao": "#NULO",
+      "valor": 1000
+    },
+    {
+      "sqCandidato": "50002537854",
+      "doador": "NILDMA RIBEIRO LIMA",
+      "cpfCnpjDoador": "07659455761",
+      "descricao": "#NULO",
+      "valor": 1000
+    },
+    {
+      "sqCandidato": "50002538877",
+      "doador": "#NULO",
+      "cpfCnpjDoador": "-1",
+      "descricao": "#NULO",
+      "valor": 0
+    },
+    {
+      "sqCandidato": "50002537854",
+      "doador": "TIAGO HENRIQUE SANTOS BATISTA",
+      "cpfCnpjDoador": "01870999525",
+      "descricao": "#NULO",
+      "valor": 1000
+    },
+    {
+      "sqCandidato": "50002535153",
+      "doador": "PABLO MIMOSO DE AZEVEDO E SILVA",
+      "cpfCnpjDoador": "92858155534",
+      "descricao": "#NULO",
+      "valor": 100
+    },
+    {
+      "sqCandidato": "50002535153",
+      "doador": "JOSELITO SILVA MIMOSO",
+      "cpfCnpjDoador": "19584709534",
+      "descricao": "#NULO",
+      "valor": 500
+    },
+    {
+      "sqCandidato": "50002537696",
+      "doador": "Direção Nacional - NOVO",
+      "cpfCnpjDoador": "13405866000124",
+      "descricao": "#NULO",
+      "valor": 7000
+    },
+    {
+      "sqCandidato": "50002537854",
+      "doador": "LUCIANA OLIVEIRA PEREIRA",
+      "cpfCnpjDoador": "01053049560",
+      "descricao": "#NULO",
+      "valor": 1000
+    },
+    {
+      "sqCandidato": "50002537854",
+      "doador": "LUCIANA OLIVEIRA PEREIRA",
+      "cpfCnpjDoador": "01053049560",
+      "descricao": "#NULO",
+      "valor": 1000
+    },
+    {
+      "sqCandidato": "50002538676",
+      "doador": "Direção Nacional - PCDOB",
+      "cpfCnpjDoador": "54956495000156",
+      "descricao": "#NULO",
+      "valor": 255000
+    },
+    {
+      "sqCandidato": "50002538676",
+      "doador": "TANIA MARIA",
+      "cpfCnpjDoador": "37499017591",
+      "descricao": "#NULO",
+      "valor": 3000
+    },
+    {
+      "sqCandidato": "50002535153",
+      "doador": "REBEKA MIMOSO DE AZEVEDO E SILVA",
+      "cpfCnpjDoador": "68629109572",
+      "descricao": "#NULO",
+      "valor": 100
+    },
+    {
+      "sqCandidato": "50002538774",
+      "doador": "QueroApoiar.com.br",
+      "cpfCnpjDoador": "39586155000197",
+      "descricao": "#NULO",
+      "valor": 4250
+    },
+    {
+      "sqCandidato": "50002538774",
+      "doador": "QueroApoiar.com.br",
+      "cpfCnpjDoador": "39586155000197",
+      "descricao": "#NULO",
+      "valor": 8625
+    },
+    {
+      "sqCandidato": "50002537854",
+      "doador": "Adeline Ferraz Santos Brito",
+      "cpfCnpjDoador": "00389465569",
+      "descricao": "#NULO",
+      "valor": 1000
+    },
+    {
+      "sqCandidato": "50002537702",
+      "doador": "Direção Nacional - NOVO",
+      "cpfCnpjDoador": "13405866000124",
+      "descricao": "#NULO",
+      "valor": 2000
+    },
+    {
+      "sqCandidato": "50002534738",
+      "doador": "Isadora Felix de Alencar",
+      "cpfCnpjDoador": "05269561514",
+      "descricao": "#NULO",
+      "valor": 10500
+    },
+    {
+      "sqCandidato": "50002538878",
+      "doador": "#NULO",
+      "cpfCnpjDoador": "-1",
+      "descricao": "#NULO",
+      "valor": 0
+    },
+    {
+      "sqCandidato": "50002538869",
+      "doador": "#NULO",
+      "cpfCnpjDoador": "-1",
+      "descricao": "#NULO",
+      "valor": 0
+    },
+    {
+      "sqCandidato": "50002532641",
+      "doador": "#NULO",
+      "cpfCnpjDoador": "-1",
+      "descricao": "#NULO",
+      "valor": 0
+    },
+    {
+      "sqCandidato": "50002538885",
+      "doador": "QueroApoiar.com.br",
+      "cpfCnpjDoador": "39586155000197",
+      "descricao": "Importação FCC - 10000000000000000000000",
+      "valor": 8330.28
+    },
+    {
+      "sqCandidato": "50002532621",
+      "doador": "PAULO SERGIO PARANHOS DE MAGALHAES",
+      "cpfCnpjDoador": "06015530553",
+      "descricao": "#NULO",
+      "valor": 1000
+    },
+    {
+      "sqCandidato": "50002534998",
+      "doador": "MAURICIO CESAR MARQUES DE CARVALHO",
+      "cpfCnpjDoador": "57779368572",
+      "descricao": "#NULO",
+      "valor": 3000
+    },
+    {
+      "sqCandidato": "50002538770",
+      "doador": "FABIO GUILHERME DE VIVEIROS CUNEGUNDES PEREIRA",
+      "cpfCnpjDoador": "78442915591",
+      "descricao": "#NULO",
+      "valor": 1000
+    },
+    {
+      "sqCandidato": "50002538770",
+      "doador": "LEONARDO OLIVEIRA DE FARIAS",
+      "cpfCnpjDoador": "02075209502",
+      "descricao": "#NULO",
+      "valor": 500
+    },
+    {
+      "sqCandidato": "50002538770",
+      "doador": "JOSÉ AUGUSTO CASTRO TOSSATO",
+      "cpfCnpjDoador": "07947164827",
+      "descricao": "#NULO",
+      "valor": 1500
+    },
+    {
+      "sqCandidato": "50002537700",
+      "doador": "Direção Nacional - NOVO",
+      "cpfCnpjDoador": "13405866000124",
+      "descricao": "#NULO",
+      "valor": 5000
+    },
+    {
+      "sqCandidato": "50002538770",
+      "doador": "ANTONIO OLAVO DE ALMEIDA FRAGA LIMA",
+      "cpfCnpjDoador": "12036935591",
+      "descricao": "#NULO",
+      "valor": 1000
+    },
+    {
+      "sqCandidato": "50002538770",
+      "doador": "MAURICIO FIGUEIREIDO NOGUEIRA",
+      "cpfCnpjDoador": "27475913520",
+      "descricao": "#NULO",
+      "valor": 1000
+    },
+    {
+      "sqCandidato": "50002538770",
+      "doador": "RITA DE CASSIA DE ANDRADE BRANDAO",
+      "cpfCnpjDoador": "88647960530",
+      "descricao": "#NULO",
+      "valor": 5000
+    },
+    {
+      "sqCandidato": "50002538770",
+      "doador": "MARCOS AURELIO DOS SANTOS BOTELHO JUNIOR",
+      "cpfCnpjDoador": "03168392561",
+      "descricao": "#NULO",
+      "valor": 5000
+    },
+    {
+      "sqCandidato": "50002535132",
+      "doador": "FRANCISCO DE OLIVEIRA FRANCA",
+      "cpfCnpjDoador": "08215839568",
+      "descricao": "#NULO",
+      "valor": 1000
+    },
+    {
+      "sqCandidato": "50002535866",
+      "doador": "MARLENE MARQUES FERREIRA",
+      "cpfCnpjDoador": "00001857525",
+      "descricao": "#NULO",
+      "valor": 7000
+    },
+    {
+      "sqCandidato": "50002538885",
+      "doador": "Rainá Azevedo Silva",
+      "cpfCnpjDoador": "86440569562",
+      "descricao": "#NULO",
+      "valor": 14
+    },
+    {
+      "sqCandidato": "50002537683",
+      "doador": "Direção Nacional - NOVO",
+      "cpfCnpjDoador": "13405866000124",
+      "descricao": "#NULO",
+      "valor": 5000
+    },
+    {
+      "sqCandidato": "50002537699",
+      "doador": "Direção Nacional - NOVO",
+      "cpfCnpjDoador": "13405866000124",
+      "descricao": "#NULO",
+      "valor": 5000
+    },
+    {
+      "sqCandidato": "50002538873",
+      "doador": "#NULO",
+      "cpfCnpjDoador": "-1",
+      "descricao": "#NULO",
+      "valor": 0
+    },
+    {
+      "sqCandidato": "50002538778",
+      "doador": "GABRIELA DE DIEGO GARRIDO",
+      "cpfCnpjDoador": "49236202500",
+      "descricao": "#NULO",
+      "valor": 1000
+    },
+    {
+      "sqCandidato": "50002532691",
+      "doador": "ALEX LOPES DA SILVA",
+      "cpfCnpjDoador": "61918490520",
+      "descricao": "#NULO",
+      "valor": 3940
+    },
+    {
+      "sqCandidato": "50002532691",
+      "doador": "ALEX LOPES DA SILVA",
+      "cpfCnpjDoador": "61918490520",
+      "descricao": "#NULO",
+      "valor": 10000
+    },
+    {
+      "sqCandidato": "50002532691",
+      "doador": "ALEX LOPES DA SILVA",
+      "cpfCnpjDoador": "61918490520",
+      "descricao": "#NULO",
+      "valor": 19000
+    },
+    {
+      "sqCandidato": "50002535060",
+      "doador": "SANDRO DE OLIVEIRA REGIS",
+      "cpfCnpjDoador": "63097931520",
+      "descricao": "#NULO",
+      "valor": 27000
+    },
+    {
+      "sqCandidato": "50002535010",
+      "doador": "ANTONIO CAROLINO ARAUJO FILHO",
+      "cpfCnpjDoador": "33437211587",
+      "descricao": "#NULO",
+      "valor": 1000
+    },
+    {
+      "sqCandidato": "50002532697",
+      "doador": "IVANA TEIXEIRA BASTOS",
+      "cpfCnpjDoador": "62519123591",
+      "descricao": "#NULO",
+      "valor": 5000
+    },
+    {
+      "sqCandidato": "50002537705",
+      "doador": "Direção Nacional - NOVO",
+      "cpfCnpjDoador": "13405866000124",
+      "descricao": "#NULO",
+      "valor": 5000
+    },
+    {
+      "sqCandidato": "50002537691",
+      "doador": "Direção Nacional - NOVO",
+      "cpfCnpjDoador": "13405866000124",
+      "descricao": "#NULO",
+      "valor": 5000
+    },
+    {
+      "sqCandidato": "50002535060",
+      "doador": "MARIA JOSE ANDRADE",
+      "cpfCnpjDoador": "56390874553",
+      "descricao": "#NULO",
+      "valor": 50000
+    },
+    {
+      "sqCandidato": "50002532689",
+      "doador": "JOAQUIM BELARMINO CARDOSO NETO",
+      "cpfCnpjDoador": "25510231572",
+      "descricao": "#NULO",
+      "valor": 30000
+    },
+    {
+      "sqCandidato": "50002537865",
+      "doador": "RAFAEL SAMPAIO RUAS",
+      "cpfCnpjDoador": "01442168501",
+      "descricao": "#NULO",
+      "valor": 25000
+    },
+    {
+      "sqCandidato": "50002532697",
+      "doador": "IVANA TEIXEIRA BASTOS",
+      "cpfCnpjDoador": "62519123591",
+      "descricao": "#NULO",
+      "valor": 5000
+    },
+    {
+      "sqCandidato": "50002535541",
+      "doador": "LUCIANO ARAUJO DE OLIVEIRA",
+      "cpfCnpjDoador": "34808418568",
+      "descricao": "#NULO",
+      "valor": 40000
+    },
+    {
+      "sqCandidato": "50002538657",
+      "doador": "#NULO",
+      "cpfCnpjDoador": "-1",
+      "descricao": "#NULO",
+      "valor": 0
+    },
+    {
+      "sqCandidato": "50002531357",
+      "doador": "CARLOS AUGUSTO CARDOSO DA SILVA",
+      "cpfCnpjDoador": "11885610572",
+      "descricao": "#NULO",
+      "valor": 2000
+    },
+    {
+      "sqCandidato": "50002532683",
+      "doador": "ANDREA RODRIGUES SIMAS CASTRO",
+      "cpfCnpjDoador": "88740129500",
+      "descricao": "#NULO",
+      "valor": 10000
+    },
+    {
+      "sqCandidato": "50002532533",
+      "doador": "PEDRO NETO GOMES DE OLIVEIRA",
+      "cpfCnpjDoador": "51467410500",
+      "descricao": "#NULO",
+      "valor": 3000
+    },
+    {
+      "sqCandidato": "50002532689",
+      "doador": "MANOEL BELARMINO CARDOSO FILHO",
+      "cpfCnpjDoador": "15967638504",
+      "descricao": "#NULO",
+      "valor": 20000
+    },
+    {
+      "sqCandidato": "50002532686",
+      "doador": "DIRLEIA SANTOS MEIRA",
+      "cpfCnpjDoador": "03305892536",
+      "descricao": "#NULO",
+      "valor": 3000
+    },
+    {
+      "sqCandidato": "50002538766",
+      "doador": "JOAO PEDRO",
+      "cpfCnpjDoador": "06451201545",
+      "descricao": "#NULO",
+      "valor": 300
+    },
+    {
+      "sqCandidato": "50002538766",
+      "doador": "JOAO PEDRO",
+      "cpfCnpjDoador": "06451201545",
+      "descricao": "#NULO",
+      "valor": 50
+    },
+    {
+      "sqCandidato": "50002535546",
+      "doador": "EULALIA RITA GALVÃO BARBOSA",
+      "cpfCnpjDoador": "30912881534",
+      "descricao": "#NULO",
+      "valor": 2000
+    },
+    {
+      "sqCandidato": "50002538714",
+      "doador": "Ruy Carlos Tourinho Oliveira",
+      "cpfCnpjDoador": "80388515520",
+      "descricao": "#NULO",
+      "valor": 3600
+    },
+    {
+      "sqCandidato": "50002532533",
+      "doador": "RAILDA DE JESUS MOURA",
+      "cpfCnpjDoador": "02252790539",
+      "descricao": "#NULO",
+      "valor": 99
+    },
+    {
+      "sqCandidato": "50002532533",
+      "doador": "RAILDA DE JESUS MOURA",
+      "cpfCnpjDoador": "02252790539",
+      "descricao": "#NULO",
+      "valor": 1
+    },
+    {
+      "sqCandidato": "50002537857",
+      "doador": "ANGELO MARIO CERQUEIRA DE ALMEIDA FILHO",
+      "cpfCnpjDoador": "02885007508",
+      "descricao": "#NULO",
+      "valor": 20000
+    },
+    {
+      "sqCandidato": "50002534984",
+      "doador": "#NULO",
+      "cpfCnpjDoador": "-1",
+      "descricao": "#NULO",
+      "valor": 0
+    },
+    {
+      "sqCandidato": "50002535570",
+      "doador": "TARGINO MACHADO PEDREIRA FILHO",
+      "cpfCnpjDoador": "09582169591",
+      "descricao": "#NULO",
+      "valor": 45000
+    },
+    {
+      "sqCandidato": "50002538776",
+      "doador": "MARCOS DIAS REGO",
+      "cpfCnpjDoador": "01437969500",
+      "descricao": "#NULO",
+      "valor": 1000
+    },
+    {
+      "sqCandidato": "50002535546",
+      "doador": "SOANE GALVÃO BARBOSA",
+      "cpfCnpjDoador": "00562658750",
+      "descricao": "#NULO",
+      "valor": 1000
+    },
+    {
+      "sqCandidato": "50002532693",
+      "doador": "HILDA MARIA MONTEIRO DE MENEZES OLIVEIRA",
+      "cpfCnpjDoador": "29584264591",
+      "descricao": "#NULO",
+      "valor": 18500
+    },
+    {
+      "sqCandidato": "50002535557",
+      "doador": "WELLINGTON SANTOS DE ARAUJO",
+      "cpfCnpjDoador": "77836197549",
+      "descricao": "#NULO",
+      "valor": 10
+    },
+    {
+      "sqCandidato": "50002538726",
+      "doador": "ADRIANA OLIVEIRA AGUIAR",
+      "cpfCnpjDoador": "62966804572",
+      "descricao": "#NULO",
+      "valor": 5000
+    },
+    {
+      "sqCandidato": "50002538770",
+      "doador": "MARCOS VINICIOS VIDEIRA DE SANTANA",
+      "cpfCnpjDoador": "00844214523",
+      "descricao": "#NULO",
+      "valor": 1000
+    },
+    {
+      "sqCandidato": "50002538871",
+      "doador": "#NULO",
+      "cpfCnpjDoador": "-1",
+      "descricao": "#NULO",
+      "valor": 0
+    },
+    {
+      "sqCandidato": "50002535105",
+      "doador": "ANACLETO FRANCA SILVA",
+      "cpfCnpjDoador": "62967142549",
+      "descricao": "#NULO",
+      "valor": 2000
+    },
+    {
+      "sqCandidato": "50002535105",
+      "doador": "ANACLETO FRANCA SILVA",
+      "cpfCnpjDoador": "62967142549",
+      "descricao": "#NULO",
+      "valor": 2000
+    },
+    {
+      "sqCandidato": "50002538770",
+      "doador": "HERBERT FLORENCE DE CARVALHO",
+      "cpfCnpjDoador": "00281988595",
+      "descricao": "#NULO",
+      "valor": 2000
+    },
+    {
+      "sqCandidato": "50002533190",
+      "doador": "Direção Estadual/Distrital - UNIÃO - BAHIA",
+      "cpfCnpjDoador": "45928648000160",
+      "descricao": "#NULO",
+      "valor": 181000
+    },
+    {
+      "sqCandidato": "50002533190",
+      "doador": "CARLOS GERALDO CALUMBY",
+      "cpfCnpjDoador": "04924002534",
+      "descricao": "#NULO",
+      "valor": 40000
+    },
+    {
+      "sqCandidato": "50002532690",
+      "doador": "ARTUR RIBEIRO BARACHISIO LISBOA",
+      "cpfCnpjDoador": "40631567534",
+      "descricao": "#NULO",
+      "valor": 5000
+    },
+    {
+      "sqCandidato": "50002538686",
+      "doador": "Direção Nacional - PCDOB",
+      "cpfCnpjDoador": "54956495000156",
+      "descricao": "#NULO",
+      "valor": 255000
+    },
+    {
+      "sqCandidato": "50002532693",
+      "doador": "DENISE EDELTRUDES SOUSA BELITARDO DE MENEZES",
+      "cpfCnpjDoador": "24349232591",
+      "descricao": "#NULO",
+      "valor": 100000
+    },
+    {
+      "sqCandidato": "50002538686",
+      "doador": "RUI OLIVEIRA",
+      "cpfCnpjDoador": "09447598587",
+      "descricao": "#NULO",
+      "valor": 50000
+    },
+    {
+      "sqCandidato": "50002538684",
+      "doador": "ANDRE LUIS PUGA FIDALGO",
+      "cpfCnpjDoador": "94547912572",
+      "descricao": "#NULO",
+      "valor": 30000
+    },
+    {
+      "sqCandidato": "50002532690",
+      "doador": "QueroApoiar.com.br",
+      "cpfCnpjDoador": "39586155000197",
+      "descricao": "Importação FCC - 10000000000000000000000",
+      "valor": 5000
+    },
+    {
+      "sqCandidato": "50002538776",
+      "doador": "QueroApoiar.com.br",
+      "cpfCnpjDoador": "39586155000197",
+      "descricao": "#NULO",
+      "valor": 5067
+    },
+    {
+      "sqCandidato": "50002537855",
+      "doador": "SILVIO DE OLIVEIRA DIAS",
+      "cpfCnpjDoador": "50975757504",
+      "descricao": "#NULO",
+      "valor": 12000
+    },
+    {
+      "sqCandidato": "50002538766",
+      "doador": "TIAGO TIMOTIO",
+      "cpfCnpjDoador": "06451443557",
+      "descricao": "#NULO",
+      "valor": 50
+    },
+    {
+      "sqCandidato": "50002537871",
+      "doador": "Direção Nacional - PCDOB",
+      "cpfCnpjDoador": "54956495000156",
+      "descricao": "#NULO",
+      "valor": 117500
+    },
+    {
+      "sqCandidato": "50002538776",
+      "doador": "RENATO CARDOSO REGO FILHO",
+      "cpfCnpjDoador": "32863942549",
+      "descricao": "#NULO",
+      "valor": 10000
+    },
+    {
+      "sqCandidato": "50002538779",
+      "doador": "QueroApoiar.com.br",
+      "cpfCnpjDoador": "39586155000197",
+      "descricao": "Importação FCC - 10000000000000000000000",
+      "valor": 15859
+    },
+    {
+      "sqCandidato": "50002538885",
+      "doador": "CLISMAN ALVES",
+      "cpfCnpjDoador": "06604106560",
+      "descricao": "#NULO",
+      "valor": 500
+    },
+    {
+      "sqCandidato": "50002538769",
+      "doador": "FIRMIANE VENAN",
+      "cpfCnpjDoador": "61925268500",
+      "descricao": "#NULO",
+      "valor": 500
+    },
+    {
+      "sqCandidato": "50002538769",
+      "doador": "LIDIO MOTA NET",
+      "cpfCnpjDoador": "47058226504",
+      "descricao": "#NULO",
+      "valor": 500
+    },
+    {
+      "sqCandidato": "50002536317",
+      "doador": "EDVALDO PEREIRA DE BRITO",
+      "cpfCnpjDoador": "00229946534",
+      "descricao": "#NULO",
+      "valor": 533000
+    },
+    {
+      "sqCandidato": "50002538772",
+      "doador": "Direção Nacional - PCDOB",
+      "cpfCnpjDoador": "54956495000156",
+      "descricao": "#NULO",
+      "valor": 1030000
+    },
+    {
+      "sqCandidato": "50002534996",
+      "doador": "GUTEMBERG DA SILVA SANTOS",
+      "cpfCnpjDoador": "15663256504",
+      "descricao": "#NULO",
+      "valor": 40
+    },
+    {
+      "sqCandidato": "50002538769",
+      "doador": "DANIELA L A BO",
+      "cpfCnpjDoador": "78122643515",
+      "descricao": "#NULO",
+      "valor": 500
+    },
+    {
+      "sqCandidato": "50002538769",
+      "doador": "FRANCISCO J U",
+      "cpfCnpjDoador": "13273620587",
+      "descricao": "#NULO",
+      "valor": 500
+    },
+    {
+      "sqCandidato": "50002535024",
+      "doador": "LUIZ AUGUSTO DE JESUS",
+      "cpfCnpjDoador": "38551292587",
+      "descricao": "#NULO",
+      "valor": 3000
+    },
+    {
+      "sqCandidato": "50002535024",
+      "doador": "LUIZ AUGUSTO DE JESUS",
+      "cpfCnpjDoador": "38551292587",
+      "descricao": "#NULO",
+      "valor": 3000
+    },
+    {
+      "sqCandidato": "50002532637",
+      "doador": "MARIA CELIA PEDREIRA DE FREITAS FONTE",
+      "cpfCnpjDoador": "45028699453",
+      "descricao": "#NULO",
+      "valor": 6000
+    },
+    {
+      "sqCandidato": "50002538769",
+      "doador": "ESMERALDA MARI",
+      "cpfCnpjDoador": "16284364504",
+      "descricao": "#NULO",
+      "valor": 10000
+    },
+    {
+      "sqCandidato": "50002537706",
+      "doador": "Direção Nacional - NOVO",
+      "cpfCnpjDoador": "13405866000124",
+      "descricao": "#NULO",
+      "valor": 15000
+    },
+    {
+      "sqCandidato": "50002538769",
+      "doador": "MARIO NELSON DA COSTA CARVALHO",
+      "cpfCnpjDoador": "01956710582",
+      "descricao": "#NULO",
+      "valor": 1000
+    },
+    {
+      "sqCandidato": "50002538769",
+      "doador": "RODRIGO PIMENT",
+      "cpfCnpjDoador": "88607275534",
+      "descricao": "#NULO",
+      "valor": 2000
+    },
+    {
+      "sqCandidato": "50002537849",
+      "doador": "ARTHUR DE SOUZA SILVA",
+      "cpfCnpjDoador": "05435096561",
+      "descricao": "#NULO",
+      "valor": 1000
+    },
+    {
+      "sqCandidato": "50002536653",
+      "doador": "WILSON DA SILVA",
+      "cpfCnpjDoador": "29298873549",
+      "descricao": "#NULO",
+      "valor": 300
+    },
+    {
+      "sqCandidato": "50002532637",
+      "doador": "GABRIEL JOSE MOURA NUNES SOARES",
+      "cpfCnpjDoador": "01082083542",
+      "descricao": "#NULO",
+      "valor": 10000
+    },
+    {
+      "sqCandidato": "50002532651",
+      "doador": "EDUARDO HENRIQUE BRITO DOS SANTOS SANCHES",
+      "cpfCnpjDoador": "03569214508",
+      "descricao": "#NULO",
+      "valor": 15000
+    },
+    {
+      "sqCandidato": "50002537849",
+      "doador": "PRISCYLLA DE OLIVEIRA MENDES",
+      "cpfCnpjDoador": "04753793575",
+      "descricao": "#NULO",
+      "valor": 5
+    },
+    {
+      "sqCandidato": "50002537682",
+      "doador": "Denilton Costa Silva",
+      "cpfCnpjDoador": "04661756550",
+      "descricao": "#NULO",
+      "valor": 50
+    },
+    {
+      "sqCandidato": "50002538687",
+      "doador": "LUZINEIDE MIRANDA BORGES",
+      "cpfCnpjDoador": "87313391587",
+      "descricao": "#NULO",
+      "valor": 312
+    },
+    {
+      "sqCandidato": "50002537682",
+      "doador": "Gilmar de Oliveira Batista",
+      "cpfCnpjDoador": "00410571555",
+      "descricao": "#NULO",
+      "valor": 50
+    },
+    {
+      "sqCandidato": "50002537682",
+      "doador": "Maikon Farias Rodrigues",
+      "cpfCnpjDoador": "03348433592",
+      "descricao": "#NULO",
+      "valor": 100
+    },
+    {
+      "sqCandidato": "50002537682",
+      "doador": "Isac Batista Nogueira",
+      "cpfCnpjDoador": "05043795506",
+      "descricao": "#NULO",
+      "valor": 30
+    },
+    {
+      "sqCandidato": "50002537849",
+      "doador": "TIAGO FONSECA ALCANTARA",
+      "cpfCnpjDoador": "03807736514",
+      "descricao": "#NULO",
+      "valor": 1000
+    },
+    {
+      "sqCandidato": "50002538880",
+      "doador": "#NULO",
+      "cpfCnpjDoador": "-1",
+      "descricao": "#NULO",
+      "valor": 0
+    },
+    {
+      "sqCandidato": "50002537682",
+      "doador": "Aliria Fernandes Nogueira",
+      "cpfCnpjDoador": "28971892587",
+      "descricao": "#NULO",
+      "valor": 50
+    },
+    {
+      "sqCandidato": "50002537844",
+      "doador": "Direção Nacional - PCDOB",
+      "cpfCnpjDoador": "54956495000156",
+      "descricao": "#NULO",
+      "valor": 365000
+    },
+    {
+      "sqCandidato": "50002537686",
+      "doador": "QueroApoiar.com.br",
+      "cpfCnpjDoador": "39586155000197",
+      "descricao": "Importação FCC - 10000000000000000000000",
+      "valor": 380
+    },
+    {
+      "sqCandidato": "50002534990",
+      "doador": "ADALBERTO ROSA BARRETO",
+      "cpfCnpjDoador": "90105290530",
+      "descricao": "#NULO",
+      "valor": 10000
+    },
+    {
+      "sqCandidato": "50002537850",
+      "doador": "JOAO FELIPE DE MELO LACERDA",
+      "cpfCnpjDoador": "04187154590",
+      "descricao": "#NULO",
+      "valor": 2500
+    },
+    {
+      "sqCandidato": "50002537850",
+      "doador": "JOAO FELIPE DE MELO LACERDA",
+      "cpfCnpjDoador": "04187154590",
+      "descricao": "#NULO",
+      "valor": 1000
+    },
+    {
+      "sqCandidato": "50002535884",
+      "doador": "MARIA VITORIA MENESES SANTIAGO",
+      "cpfCnpjDoador": "45926387515",
+      "descricao": "#NULO",
+      "valor": 100
+    },
+    {
+      "sqCandidato": "50002538765",
+      "doador": "JOSÉ VIEIRA LEAL NETO",
+      "cpfCnpjDoador": "03135960501",
+      "descricao": "#NULO",
+      "valor": 2000
+    },
+    {
+      "sqCandidato": "50002538765",
+      "doador": "JOSÉ VIEIRA LEAL NETO",
+      "cpfCnpjDoador": "03135960501",
+      "descricao": "#NULO",
+      "valor": 500
+    },
+    {
+      "sqCandidato": "50002537844",
+      "doador": "MARIA CLARA RO",
+      "cpfCnpjDoador": "07072073558",
+      "descricao": "#NULO",
+      "valor": 1000
+    },
+    {
+      "sqCandidato": "50002538765",
+      "doador": "JOSEMAR CARLOS DA PAIXÃO",
+      "cpfCnpjDoador": "01851229574",
+      "descricao": "SERVIÇOS DE ADMINISTRADOR FINANCEIRO",
+      "valor": 3500
+    },
+    {
+      "sqCandidato": "50002532637",
+      "doador": "MARIA DE FATIMA NUNES SOARES",
+      "cpfCnpjDoador": "65105885520",
+      "descricao": "#NULO",
+      "valor": 10000
+    },
+    {
+      "sqCandidato": "50002537849",
+      "doador": "PAULO ROBERTO N MERCES",
+      "cpfCnpjDoador": "00824230590",
+      "descricao": "#NULO",
+      "valor": 1000
+    },
+    {
+      "sqCandidato": "50002532687",
+      "doador": "NILSON PORTO PALMA",
+      "cpfCnpjDoador": "56818181520",
+      "descricao": "#NULO",
+      "valor": 23000
+    },
+    {
+      "sqCandidato": "50002532687",
+      "doador": "NILSON PORTO PALMA",
+      "cpfCnpjDoador": "56818181520",
+      "descricao": "#NULO",
+      "valor": 16000
+    },
+    {
+      "sqCandidato": "50002537682",
+      "doador": "Roberto Campos Reis",
+      "cpfCnpjDoador": "65923413787",
+      "descricao": "#NULO",
+      "valor": 200
+    },
+    {
+      "sqCandidato": "50002538687",
+      "doador": "MARCILENE GARCIA DE SOUZA",
+      "cpfCnpjDoador": "01673913997",
+      "descricao": "#NULO",
+      "valor": 150
+    },
+    {
+      "sqCandidato": "50002538687",
+      "doador": "DANIEL RAICHELIS DEGENSZAJN",
+      "cpfCnpjDoador": "22361810867",
+      "descricao": "#NULO",
+      "valor": 10000
+    },
+    {
+      "sqCandidato": "50002538687",
+      "doador": "CLAUDIA PATRICIA DINIZ CORREIA",
+      "cpfCnpjDoador": "33421510563",
+      "descricao": "#NULO",
+      "valor": 100
+    },
+    {
+      "sqCandidato": "50002532698",
+      "doador": "UBIRAJARA DE SOUZA VELAME",
+      "cpfCnpjDoador": "11506172504",
+      "descricao": "#NULO",
+      "valor": 100
+    },
+    {
+      "sqCandidato": "50002532902",
+      "doador": "LEANDRO SILVA DE JESUS",
+      "cpfCnpjDoador": "81555814549",
+      "descricao": "#NULO",
+      "valor": 5000
+    },
+    {
+      "sqCandidato": "50002532902",
+      "doador": "LEANDRO SILVA DE JESUS",
+      "cpfCnpjDoador": "81555814549",
+      "descricao": "#NULO",
+      "valor": 30000
+    },
+    {
+      "sqCandidato": "50002532523",
+      "doador": "QueroApoiar.com.br",
+      "cpfCnpjDoador": "39586155000197",
+      "descricao": "#NULO",
+      "valor": 7815
+    },
+    {
+      "sqCandidato": "50002537682",
+      "doador": "Anderson Leao Oliveira",
+      "cpfCnpjDoador": "03860366599",
+      "descricao": "#NULO",
+      "valor": 30
+    },
+    {
+      "sqCandidato": "50002537682",
+      "doador": "Fernando Souza Santos",
+      "cpfCnpjDoador": "02585097595",
+      "descricao": "#NULO",
+      "valor": 50
+    },
+    {
+      "sqCandidato": "50002538874",
+      "doador": "#NULO",
+      "cpfCnpjDoador": "-1",
+      "descricao": "#NULO",
+      "valor": 0
+    },
+    {
+      "sqCandidato": "50002531449",
+      "doador": "ANDREA CRISTIANE RODRIGUES DA SILVA MEDEIROS",
+      "cpfCnpjDoador": "90151186472",
+      "descricao": "#NULO",
+      "valor": 3000
+    },
+    {
+      "sqCandidato": "50002532637",
+      "doador": "TAHIS FLORES NUNES SOARES",
+      "cpfCnpjDoador": "79510558591",
+      "descricao": "#NULO",
+      "valor": 10000
+    },
+    {
+      "sqCandidato": "50002537682",
+      "doador": "Andre Luis F Gumes",
+      "cpfCnpjDoador": "69031576549",
+      "descricao": "#NULO",
+      "valor": 200
+    },
+    {
+      "sqCandidato": "50002537682",
+      "doador": "Silvano Neves Dias",
+      "cpfCnpjDoador": "31979297568",
+      "descricao": "#NULO",
+      "valor": 30
+    },
+    {
+      "sqCandidato": "50002537682",
+      "doador": "Jose Littor De Jesus Oliveira",
+      "cpfCnpjDoador": "06135744518",
+      "descricao": "#NULO",
+      "valor": 30
+    },
+    {
+      "sqCandidato": "50002532698",
+      "doador": "CARLOS ROBERTO DE SOUZA PINTO",
+      "cpfCnpjDoador": "78763185504",
+      "descricao": "#NULO",
+      "valor": 100
+    },
+    {
+      "sqCandidato": "50002535884",
+      "doador": "LOURENCO ROBERTO FERREIRA DA SILVA",
+      "cpfCnpjDoador": "12136581520",
+      "descricao": "#NULO",
+      "valor": 50.08
+    },
+    {
+      "sqCandidato": "50002538687",
+      "doador": "ANGELA ROSA DA SILVA",
+      "cpfCnpjDoador": "79172091053",
+      "descricao": "#NULO",
+      "valor": 200
+    },
+    {
+      "sqCandidato": "50002538772",
+      "doador": "ANA ELISA FREITAS MARQUES",
+      "cpfCnpjDoador": "00363719555",
+      "descricao": "serviços próprios de administração financeira da campanha eleitoral",
+      "valor": 10000
+    },
+    {
+      "sqCandidato": "50002535884",
+      "doador": "MIGUEL FERRARO NETO",
+      "cpfCnpjDoador": "25475959587",
+      "descricao": "#NULO",
+      "valor": 5000
+    },
+    {
+      "sqCandidato": "50002538769",
+      "doador": "RENE ALVES SOU",
+      "cpfCnpjDoador": "77925912553",
+      "descricao": "#NULO",
+      "valor": 2000.08
+    },
+    {
+      "sqCandidato": "50002536317",
+      "doador": "Direção Estadual/Distrital - PT - BAHIA",
+      "cpfCnpjDoador": "13477302000105",
+      "descricao": "#NULO",
+      "valor": 50000
+    },
+    {
+      "sqCandidato": "50002538769",
+      "doador": "NANCY ALVES DE",
+      "cpfCnpjDoador": "50614118549",
+      "descricao": "#NULO",
+      "valor": 500
+    },
+    {
+      "sqCandidato": "50002532688",
+      "doador": "JOSE EDUARDO MENDONCA DE ALENCAR",
+      "cpfCnpjDoador": "07927509500",
+      "descricao": "#NULO",
+      "valor": 3000
+    },
+    {
+      "sqCandidato": "50002538769",
+      "doador": "JERONIMO DA SI",
+      "cpfCnpjDoador": "55998801504",
+      "descricao": "#NULO",
+      "valor": 500
+    },
+    {
+      "sqCandidato": "50002537682",
+      "doador": "Silvano de Azevedo Gomes",
+      "cpfCnpjDoador": "24974620894",
+      "descricao": "#NULO",
+      "valor": 200
+    },
+    {
+      "sqCandidato": "50002537682",
+      "doador": "Rene Andrade Alves de Souza",
+      "cpfCnpjDoador": "01312495502",
+      "descricao": "#NULO",
+      "valor": 50
+    },
+    {
+      "sqCandidato": "50002537682",
+      "doador": "Valber Lima Silva",
+      "cpfCnpjDoador": "06573942540",
+      "descricao": "#NULO",
+      "valor": 30
+    },
+    {
+      "sqCandidato": "50002537682",
+      "doador": "Joao neto",
+      "cpfCnpjDoador": "06630712595",
+      "descricao": "#NULO",
+      "valor": 30
+    },
+    {
+      "sqCandidato": "50002538687",
+      "doador": "RENILDA DE OLIVEIRA",
+      "cpfCnpjDoador": "18547001549",
+      "descricao": "#NULO",
+      "valor": 20
+    },
+    {
+      "sqCandidato": "50002537849",
+      "doador": "VITOR PACHECO DE SOUZA REIS",
+      "cpfCnpjDoador": "03218311527",
+      "descricao": "#NULO",
+      "valor": 1000
+    },
+    {
+      "sqCandidato": "50002532687",
+      "doador": "FELIPE DE OLIVEIRA SANTANA",
+      "cpfCnpjDoador": "05930354537",
+      "descricao": "#NULO",
+      "valor": 20000
+    },
+    {
+      "sqCandidato": "50002538769",
+      "doador": "PAULO MORENO C",
+      "cpfCnpjDoador": "35926600553",
+      "descricao": "#NULO",
+      "valor": 2000
+    },
+    {
+      "sqCandidato": "50002538769",
+      "doador": "ILANA KATIA",
+      "cpfCnpjDoador": "27231267572",
+      "descricao": "#NULO",
+      "valor": 1000
+    },
+    {
+      "sqCandidato": "50002531374",
+      "doador": "MARCOS ADRIANO CARDOSO DE OLIVEIRA",
+      "cpfCnpjDoador": "99062712568",
+      "descricao": "#NULO",
+      "valor": 19100
+    },
+    {
+      "sqCandidato": "50002531374",
+      "doador": "MARCOS ADRIANO CARDOSO DE OLIVEIRA",
+      "cpfCnpjDoador": "99062712568",
+      "descricao": "#NULO",
+      "valor": 20000
+    },
+    {
+      "sqCandidato": "50002532895",
+      "doador": "MARIA DAS DORES ALMEIDA DA SILVA ARAUJO",
+      "cpfCnpjDoador": "31048803520",
+      "descricao": "#NULO",
+      "valor": 70
+    },
+    {
+      "sqCandidato": "50002537844",
+      "doador": "RAIMUNDO NONATO TAVARES DA SILVA",
+      "cpfCnpjDoador": "24971928553",
+      "descricao": "#NULO",
+      "valor": 1400
+    },
+    {
+      "sqCandidato": "50002537682",
+      "doador": "Ludgero Rego Barros Neto",
+      "cpfCnpjDoador": "01969334550",
+      "descricao": "#NULO",
+      "valor": 30
+    },
+    {
+      "sqCandidato": "50002537682",
+      "doador": "Direção Nacional - NOVO",
+      "cpfCnpjDoador": "13405866000124",
+      "descricao": "#NULO",
+      "valor": 2000
+    },
+    {
+      "sqCandidato": "50002537682",
+      "doador": "Nivaldo S Brandao",
+      "cpfCnpjDoador": "76527220804",
+      "descricao": "#NULO",
+      "valor": 150
+    },
+    {
+      "sqCandidato": "50002537682",
+      "doador": "Jose Alfredo Amorim Filho",
+      "cpfCnpjDoador": "04248532565",
+      "descricao": "#NULO",
+      "valor": 20
+    },
+    {
+      "sqCandidato": "50002531374",
+      "doador": "MARCOS ADRIANO CARDOSO DE OLIVEIRA",
+      "cpfCnpjDoador": "99062712568",
+      "descricao": "#NULO",
+      "valor": 19000
+    },
+    {
+      "sqCandidato": "50002538769",
+      "doador": "QueroApoiar.com.br",
+      "cpfCnpjDoador": "39586155000197",
+      "descricao": "Importação FCC - 10000000000000000000000",
+      "valor": 38727.68
+    },
+    {
+      "sqCandidato": "50002540497",
+      "doador": "QueroApoiar.com.br",
+      "cpfCnpjDoador": "39586155000197",
+      "descricao": "Importação FCC - 10000000000000000000000",
+      "valor": 500
+    },
+    {
+      "sqCandidato": "50002537682",
+      "doador": "Valter Novais Fernandes",
+      "cpfCnpjDoador": "06891190541",
+      "descricao": "#NULO",
+      "valor": 30
+    },
+    {
+      "sqCandidato": "50002537682",
+      "doador": "George A F Alves Santos",
+      "cpfCnpjDoador": "01329759559",
+      "descricao": "#NULO",
+      "valor": 30
+    },
+    {
+      "sqCandidato": "50002537682",
+      "doador": "Valmir Borges Neves",
+      "cpfCnpjDoador": "69029768568",
+      "descricao": "#NULO",
+      "valor": 100
+    },
+    {
+      "sqCandidato": "50002537682",
+      "doador": "Marcos Adriano Cardoso Vilasboas Barros",
+      "cpfCnpjDoador": "00293894531",
+      "descricao": "#NULO",
+      "valor": 100
+    },
+    {
+      "sqCandidato": "50002537849",
+      "doador": "PAULO MARIO P MESQUITA",
+      "cpfCnpjDoador": "19667353591",
+      "descricao": "#NULO",
+      "valor": 1000
+    },
+    {
+      "sqCandidato": "50002536631",
+      "doador": "JOSE UBALDINO ALVES PINTO JUNIOR",
+      "cpfCnpjDoador": "40217167500",
+      "descricao": "#NULO",
+      "valor": 50000
+    },
+    {
+      "sqCandidato": "50002537849",
+      "doador": "ROWENNA DOS SANTOS BRITO",
+      "cpfCnpjDoador": "03094440550",
+      "descricao": "#NULO",
+      "valor": 8000
+    },
+    {
+      "sqCandidato": "50002537849",
+      "doador": "ROWENNA DOS SANTOS BRITO",
+      "cpfCnpjDoador": "03094440550",
+      "descricao": "#NULO",
+      "valor": 12000
+    },
+    {
+      "sqCandidato": "50002538687",
+      "doador": "WALTHER MOREIRA SALLES JUNIOR",
+      "cpfCnpjDoador": "40693546700",
+      "descricao": "#NULO",
+      "valor": 50000
+    },
+    {
+      "sqCandidato": "50002537687",
+      "doador": "Direção Nacional - NOVO",
+      "cpfCnpjDoador": "13405866000124",
+      "descricao": "#NULO",
+      "valor": 5000
+    },
+    {
+      "sqCandidato": "50002538687",
+      "doador": "MAISE SILVA SANTANA DOS SANTOS",
+      "cpfCnpjDoador": "64207218572",
+      "descricao": "#NULO",
+      "valor": 30
+    },
+    {
+      "sqCandidato": "50002538687",
+      "doador": "VIVIANE JUVENAL MARQUES",
+      "cpfCnpjDoador": "28502892134",
+      "descricao": "#NULO",
+      "valor": 70
+    },
+    {
+      "sqCandidato": "50002537708",
+      "doador": "Direção Nacional - NOVO",
+      "cpfCnpjDoador": "13405866000124",
+      "descricao": "#NULO",
+      "valor": 5000
+    },
+    {
+      "sqCandidato": "50002537686",
+      "doador": "Direção Nacional - NOVO",
+      "cpfCnpjDoador": "13405866000124",
+      "descricao": "#NULO",
+      "valor": 5000
+    },
+    {
+      "sqCandidato": "50002535837",
+      "doador": "IGOR ROCHA PASSOS",
+      "cpfCnpjDoador": "02893349692",
+      "descricao": "#NULO",
+      "valor": 11000
+    },
+    {
+      "sqCandidato": "50002532549",
+      "doador": "AMANDA DE ALMEIDA MIRANDA RIOS",
+      "cpfCnpjDoador": "04373922527",
+      "descricao": "#NULO",
+      "valor": 500
+    },
+    {
+      "sqCandidato": "50002532889",
+      "doador": "#NULO",
+      "cpfCnpjDoador": "-1",
+      "descricao": "#NULO",
+      "valor": 0
+    },
+    {
+      "sqCandidato": "50002538687",
+      "doador": "JOAO JORGE SANTOS RODRIGUES",
+      "cpfCnpjDoador": "09600264520",
+      "descricao": "#NULO",
+      "valor": 1000
+    },
+    {
+      "sqCandidato": "50002535572",
+      "doador": "CICERO DE CARVALHO MONTEIRO",
+      "cpfCnpjDoador": "24516414520",
+      "descricao": "#NULO",
+      "valor": 10000
+    },
+    {
+      "sqCandidato": "50002537868",
+      "doador": "JORGE JOSE SANTOS PEREIRA SOLLA",
+      "cpfCnpjDoador": "68430467000105",
+      "descricao": "#NULO",
+      "valor": 3000
+    },
+    {
+      "sqCandidato": "50002537868",
+      "doador": "JORGE JOSE SANTOS PEREIRA SOLLA",
+      "cpfCnpjDoador": "68430467000105",
+      "descricao": "#NULO",
+      "valor": 3000
+    }
+  ],
+  "despesas": [
+    {
+      "sqCandidato": "50002538714",
+      "fornecedor": "#NULO",
+      "cpfCnpjFornecedor": "-1",
+      "descricao": "#NULO",
+      "valor": 0
+    },
+    {
+      "sqCandidato": "50002531374",
+      "fornecedor": "VIZZUAL BRINDES LTDA",
+      "cpfCnpjFornecedor": "13441451000106",
+      "descricao": "BONE POLIEST. AZ MARINHO DTF ADULTO",
+      "valor": 696
+    },
+    {
+      "sqCandidato": "50002531374",
+      "fornecedor": "CANARIO FARDAMENTO E MALHARIA LTDA",
+      "cpfCnpjFornecedor": "20934489000186",
+      "descricao": "CAMISA SIMPLES",
+      "valor": 1190
+    },
+    {
+      "sqCandidato": "50002531374",
+      "fornecedor": "CANARIO FARDAMENTO E MALHARIA LTDA",
+      "cpfCnpjFornecedor": "20934489000186",
+      "descricao": "CAMISA SIMPLES",
+      "valor": 750
+    },
+    {
+      "sqCandidato": "50002531374",
+      "fornecedor": "SUBLIDECOR E-COMMERCE LTDA",
+      "cpfCnpjFornecedor": "52627675000169",
+      "descricao": "WindBanner Personalizado Kit Completo do Seu Jeito 2,8m",
+      "valor": 48874.5
+    },
+    {
+      "sqCandidato": "50002531374",
+      "fornecedor": "#NULO",
+      "cpfCnpjFornecedor": "-1",
+      "descricao": "310 TEDpessoal",
+      "valor": 34.6
+    },
+    {
+      "sqCandidato": "50002531374",
+      "fornecedor": "#NULO",
+      "cpfCnpjFornecedor": "-1",
+      "descricao": "258 Tarifa Pix Enviado",
+      "valor": 13.04
+    },
+    {
+      "sqCandidato": "50002531374",
+      "fornecedor": "#NULO",
+      "cpfCnpjFornecedor": "-1",
+      "descricao": "258 Tarifa Pix Enviado",
+      "valor": 0.5
+    },
+    {
+      "sqCandidato": "50002531374",
+      "fornecedor": "#NULO",
+      "cpfCnpjFornecedor": "-1",
+      "descricao": "258 Tarifa Pix Enviado",
+      "valor": 0.5
+    },
+    {
+      "sqCandidato": "50002531357",
+      "fornecedor": "#NULO",
+      "cpfCnpjFornecedor": "-1",
+      "descricao": "#NULO",
+      "valor": 0
+    },
+    {
+      "sqCandidato": "50002531381",
+      "fornecedor": "#NULO",
+      "cpfCnpjFornecedor": "-1",
+      "descricao": "#NULO",
+      "valor": 0
+    },
+    {
+      "sqCandidato": "50002531355",
+      "fornecedor": "#NULO",
+      "cpfCnpjFornecedor": "-1",
+      "descricao": "TARIFA BANCÁRIA",
+      "valor": 13
+    },
+    {
+      "sqCandidato": "50002531355",
+      "fornecedor": "ALN COMUNICACAO VISUAL LTDA",
+      "cpfCnpjFornecedor": "35315112000116",
+      "descricao": "SANTINHO 6X9",
+      "valor": 800
+    },
+    {
+      "sqCandidato": "50002531355",
+      "fornecedor": "ALN COMUNICACAO VISUAL LTDA",
+      "cpfCnpjFornecedor": "35315112000116",
+      "descricao": "PRAGUINHA 8X8",
+      "valor": 400
+    },
+    {
+      "sqCandidato": "50002531355",
+      "fornecedor": "ALN COMUNICACAO VISUAL LTDA",
+      "cpfCnpjFornecedor": "35315112000116",
+      "descricao": "PRAGÃO 25X25",
+      "valor": 800
+    },
+    {
+      "sqCandidato": "50002531355",
+      "fornecedor": "#NULO",
+      "cpfCnpjFornecedor": "-1",
+      "descricao": "TARIFA BANCÁRIA",
+      "valor": 13
+    },
+    {
+      "sqCandidato": "50002531355",
+      "fornecedor": "58.982.904 FREDE BARRETO SANTOS",
+      "cpfCnpjFornecedor": "58982904000140",
+      "descricao": "Execução de música (2 jingles)",
+      "valor": 420
+    },
+    {
+      "sqCandidato": "50002535060",
+      "fornecedor": "#NULO",
+      "cpfCnpjFornecedor": "-1",
+      "descricao": "#NULO",
+      "valor": 0
+    },
+    {
+      "sqCandidato": "50002535071",
+      "fornecedor": "Lucas Cardoso Vaz",
+      "cpfCnpjFornecedor": "85806665542",
+      "descricao": "Locação de Imóvel para Comitê de Campanha",
+      "valor": 14000
+    },
+    {
+      "sqCandidato": "50002535033",
+      "fornecedor": "#NULO",
+      "cpfCnpjFornecedor": "-1",
+      "descricao": "#NULO",
+      "valor": 0
+    },
+    {
+      "sqCandidato": "50002535021",
+      "fornecedor": "ROSALVO SILVA CORREIA JUNIOR",
+      "cpfCnpjFornecedor": "91791120563",
+      "descricao": "ALUGUEL DE BEM IMÓVEL SITUADO NA AVENIDA BRUMADO, 331- BAIRRO IBIRAPUERA- CEP: 45.051-000",
+      "valor": 22500
+    },
+    {
+      "sqCandidato": "50002535021",
+      "fornecedor": "FACEBOOK SERVICOS ONLINE DO BRASIL LTDA.",
+      "cpfCnpjFornecedor": "13347016000117",
+      "descricao": "Impulsionamento FACEBOOK",
+      "valor": 10000
+    },
+    {
+      "sqCandidato": "50002535024",
+      "fornecedor": "#NULO",
+      "cpfCnpjFornecedor": "-1",
+      "descricao": "#NULO",
+      "valor": 0
+    },
+    {
+      "sqCandidato": "50002537708",
+      "fornecedor": "#NULO",
+      "cpfCnpjFornecedor": "-1",
+      "descricao": "#NULO",
+      "valor": 0
+    },
+    {
+      "sqCandidato": "50002537690",
+      "fornecedor": "#NULO",
+      "cpfCnpjFornecedor": "-1",
+      "descricao": "#NULO",
+      "valor": 0
+    },
+    {
+      "sqCandidato": "50002537691",
+      "fornecedor": "#NULO",
+      "cpfCnpjFornecedor": "-1",
+      "descricao": "#NULO",
+      "valor": 0
+    },
+    {
+      "sqCandidato": "50002537700",
+      "fornecedor": "#NULO",
+      "cpfCnpjFornecedor": "-1",
+      "descricao": "#NULO",
+      "valor": 0
+    },
+    {
+      "sqCandidato": "50002537681",
+      "fornecedor": "#NULO",
+      "cpfCnpjFornecedor": "-1",
+      "descricao": "#NULO",
+      "valor": 0
+    },
+    {
+      "sqCandidato": "50002537686",
+      "fornecedor": "QueroApoiar.com.br",
+      "cpfCnpjFornecedor": "39586155000197",
+      "descricao": "Taxa Administração Financiamento Coletivo",
+      "valor": 11.1
+    },
+    {
+      "sqCandidato": "50002537696",
+      "fornecedor": "#NULO",
+      "cpfCnpjFornecedor": "-1",
+      "descricao": "#NULO",
+      "valor": 0
+    },
+    {
+      "sqCandidato": "50002537705",
+      "fornecedor": "#NULO",
+      "cpfCnpjFornecedor": "-1",
+      "descricao": "#NULO",
+      "valor": 0
+    },
+    {
+      "sqCandidato": "50002537687",
+      "fornecedor": "#NULO",
+      "cpfCnpjFornecedor": "-1",
+      "descricao": "#NULO",
+      "valor": 0
+    },
+    {
+      "sqCandidato": "50002538769",
+      "fornecedor": "QueroApoiar.com.br",
+      "cpfCnpjFornecedor": "39586155000197",
+      "descricao": "Taxa Administração Financiamento Coletivo",
+      "valor": 784.98
+    },
+    {
+      "sqCandidato": "50002538776",
+      "fornecedor": "QueroApoiar.com.br",
+      "cpfCnpjFornecedor": "39586155000197",
+      "descricao": "Taxa Administração Financiamento Coletivo",
+      "valor": 110.26
+    },
+    {
+      "sqCandidato": "50002538770",
+      "fornecedor": "#NULO",
+      "cpfCnpjFornecedor": "-1",
+      "descricao": "#NULO",
+      "valor": 0
+    },
+    {
+      "sqCandidato": "50002538765",
+      "fornecedor": "BUSCAFORMA TURISMO E EMPREENDIMENTOS LTDA",
+      "cpfCnpjFornecedor": "00131454000100",
+      "descricao": "01 IMÓVEL SITUADO NA RUA VISCONDE DE CACHOEIRA N. 117 , RIO VERMELHO, SALVADOR/BA",
+      "valor": 45000
+    },
+    {
+      "sqCandidato": "50002538757",
+      "fornecedor": "#NULO",
+      "cpfCnpjFornecedor": "-1",
+      "descricao": "#NULO",
+      "valor": 0
+    },
+    {
+      "sqCandidato": "50002538780",
+      "fornecedor": "#NULO",
+      "cpfCnpjFornecedor": "-1",
+      "descricao": "#NULO",
+      "valor": 0
+    },
+    {
+      "sqCandidato": "50002538774",
+      "fornecedor": "QueroApoiar.com.br",
+      "cpfCnpjFornecedor": "39586155000197",
+      "descricao": "Taxa Administração Financiamento Coletivo",
+      "valor": 283.75
+    },
+    {
+      "sqCandidato": "50002538774",
+      "fornecedor": "DLOCAL BRASIL INSTITUICAO DE PAGAMENTO S.A.",
+      "cpfCnpjFornecedor": "25021356000132",
+      "descricao": "IMPULSIONAMENTO",
+      "valor": 8000
+    },
+    {
+      "sqCandidato": "50002538774",
+      "fornecedor": "QueroApoiar.com.br",
+      "cpfCnpjFornecedor": "39586155000197",
+      "descricao": "Taxa Administração Financiamento Coletivo",
+      "valor": 176.59
+    },
+    {
+      "sqCandidato": "50002538772",
+      "fornecedor": "MARINO ALVES MARINHO",
+      "cpfCnpjFornecedor": "20725248572",
+      "descricao": "SERVIÇO CONTABEIS E PRESTAÇÃO DE CONTAS CAMPANHA ELEITORAL",
+      "valor": 40000
+    },
+    {
+      "sqCandidato": "50002538772",
+      "fornecedor": "YURI MATOS DOS SANTOS",
+      "cpfCnpjFornecedor": "09143320589",
+      "descricao": "SERVIÇOS DE LOGISTICA DA CAMPANHA",
+      "valor": 2400
+    },
+    {
+      "sqCandidato": "50002538772",
+      "fornecedor": "LUIZ CARLOS COVA MARQUES",
+      "cpfCnpjFornecedor": "31368549500",
+      "descricao": "LOCAÇÃO DE IMOVEL PARA COMITÊ CENTRAL",
+      "valor": 40000
+    },
+    {
+      "sqCandidato": "50002538772",
+      "fornecedor": "JOELSON RODRIGO PARAGUASSU BRITO",
+      "cpfCnpjFornecedor": "03915665550",
+      "descricao": "SERVIÇOS DE COORDENAÇÃO DE BAIRRO EM MOBILIZAÇÃO/PANFLETAGEM (Uruguai, jardim Cruzeiro e Mangueira)",
+      "valor": 10000
+    },
+    {
+      "sqCandidato": "50002538772",
+      "fornecedor": "ISABELA SANTANA DE QUEIROZ",
+      "cpfCnpjFornecedor": "03492172547",
+      "descricao": "SERVIÇOS DE COORDENAÇÃO DE BAIRRO EM MOBILIZAÇÃO/PANFLETAGEM (Uruguai, Cam.Areia e Pedra Furada)",
+      "valor": 10000
+    },
+    {
+      "sqCandidato": "50002538772",
+      "fornecedor": "ANTONIO CARLOS DE JESUS",
+      "cpfCnpjFornecedor": "36230480549",
+      "descricao": "SERVIÇO DE COORDENAÇÃO DE MOB BAIRRO (FEDERAÇÃO, ALTO POMBAS E BOLA)",
+      "valor": 10000
+    },
+    {
+      "sqCandidato": "50002538772",
+      "fornecedor": "JANDIRA MARIA SANTOS E SILVA",
+      "cpfCnpjFornecedor": "07257252572",
+      "descricao": "SERVIÇOS DE COORDENAÇÃO DE BAIRRO (MASSARANDUBA)",
+      "valor": 8000
+    },
+    {
+      "sqCandidato": "50002538772",
+      "fornecedor": "CAROLINA AMORIM DE JESUS",
+      "cpfCnpjFornecedor": "86275632500",
+      "descricao": "serviços de coordenação de mobilização de bairro (Federação, Vale Muriçoca e Final Linha Fed.)",
+      "valor": 10000
+    },
+    {
+      "sqCandidato": "50002538772",
+      "fornecedor": "GERALDO CHADUD DO ESPIRITO SANTO",
+      "cpfCnpjFornecedor": "01960829513",
+      "descricao": "LOCAÇÃO DE VEÍCULO COM MOTORISTA",
+      "valor": 8000
+    },
+    {
+      "sqCandidato": "50002538772",
+      "fornecedor": "COSTA   MEDRADO ADVOGADOS ASSOCIADOS",
+      "cpfCnpjFornecedor": "10505398000171",
+      "descricao": "SERVIÇOS ADVOCATICIOS DA CAMPANHA ELEITORAL",
+      "valor": 20000
+    },
+    {
+      "sqCandidato": "50002538766",
+      "fornecedor": "EXACT INDUSTRIA E SERVIÇOS DE EMBALAGENS E ROTULOS LTDA",
+      "cpfCnpjFornecedor": "23412180000114",
+      "descricao": "ADESIVO RETANGULAR DE VINIL PARA CARRO DANIEL/LULA",
+      "valor": 5500
+    },
+    {
+      "sqCandidato": "50002538766",
+      "fornecedor": "EXACT INDUSTRIA E SERVIÇOS DE EMBALAGENS E ROTULOS LTDA",
+      "cpfCnpjFornecedor": "23412180000114",
+      "descricao": "ADESIVO RETANGULAR DE VINIL PARA CARRO DANIEL/IVANA",
+      "valor": 2200
+    },
+    {
+      "sqCandidato": "50002538766",
+      "fornecedor": "EXACT INDUSTRIA E SERVIÇOS DE EMBALAGENS E ROTULOS LTDA",
+      "cpfCnpjFornecedor": "23412180000114",
+      "descricao": "ADESIVO RETANGULAR DE VINIL PARA CARRO DANIEL/JOAO FELIPE40,95 X 11,7",
+      "valor": 1100
+    },
+    {
+      "sqCandidato": "50002538766",
+      "fornecedor": "EXACT INDUSTRIA E SERVIÇOS DE EMBALAGENS E ROTULOS LTDA",
+      "cpfCnpjFornecedor": "23412180000114",
+      "descricao": "ADESIVO RETANGULAR DE VINIL PARA CARRO",
+      "valor": 11000
+    },
+    {
+      "sqCandidato": "50002538766",
+      "fornecedor": "EXACT INDUSTRIA E SERVIÇOS DE EMBALAGENS E ROTULOS LTDA",
+      "cpfCnpjFornecedor": "23412180000114",
+      "descricao": "ADESIVO RETANGULAR DE VINIL PARA CARRO DANIEL/BOBO",
+      "valor": 11000
+    },
+    {
+      "sqCandidato": "50002538766",
+      "fornecedor": "VONO TECNOLOGIA LTDA",
+      "cpfCnpjFornecedor": "30842345000153",
+      "descricao": "Crédito para utilização de licenças da plataforma de comunicação e segurança Vono.",
+      "valor": 40
+    },
+    {
+      "sqCandidato": "50002538766",
+      "fornecedor": "VONO TECNOLOGIA LTDA",
+      "cpfCnpjFornecedor": "30842345000153",
+      "descricao": "Crédito para utilização de licenças da plataforma de comunicação e segurança Vono.",
+      "valor": 39.8
+    },
+    {
+      "sqCandidato": "50002538766",
+      "fornecedor": "CARLOS AUGUSTO COSTA DOS SANTOS",
+      "cpfCnpjFornecedor": "62906314000105",
+      "descricao": "Fornecimento locação de som, iluminação, palco e toldo",
+      "valor": 3000
+    },
+    {
+      "sqCandidato": "50002538781",
+      "fornecedor": "FACEBOOK SERVICOS ONLINE DO BRASIL LTDA.",
+      "cpfCnpjFornecedor": "13347016000117",
+      "descricao": "IMPULSIONAMENTO",
+      "valor": 1000
+    },
+    {
+      "sqCandidato": "50002538779",
+      "fornecedor": "QueroApoiar.com.br",
+      "cpfCnpjFornecedor": "39586155000197",
+      "descricao": "Taxa Administração Financiamento Coletivo",
+      "valor": 330.03
+    },
+    {
+      "sqCandidato": "50002533132",
+      "fornecedor": "QueroApoiar.com.br",
+      "cpfCnpjFornecedor": "39586155000197",
+      "descricao": "Taxa Administração Financiamento Coletivo",
+      "valor": 137.6
+    },
+    {
+      "sqCandidato": "50002533132",
+      "fornecedor": "QueroApoiar.com.br",
+      "cpfCnpjFornecedor": "39586155000197",
+      "descricao": "Taxa Administração Financiamento Coletivo",
+      "valor": 93.69
+    },
+    {
+      "sqCandidato": "50002533151",
+      "fornecedor": "ALUGRAF SERVICOS GRAFICOS LTDA",
+      "cpfCnpjFornecedor": "19179551000192",
+      "descricao": "SANTINHOS 6X9, 4,2 CORES, COCHE 80G",
+      "valor": 1500
+    },
+    {
+      "sqCandidato": "50002533151",
+      "fornecedor": "ALUGRAF SERVICOS GRAFICOS LTDA",
+      "cpfCnpjFornecedor": "19179551000192",
+      "descricao": "PERFURADOS 100 X 45CM",
+      "valor": 300
+    },
+    {
+      "sqCandidato": "50002533151",
+      "fornecedor": "FACEBOOK SERVICOS ONLINE DO BRASIL LTDA.",
+      "cpfCnpjFornecedor": "13347016000117",
+      "descricao": "CREDITOS DE IMPULSIONAMENTO",
+      "valor": 1000
+    },
+    {
+      "sqCandidato": "50002538778",
+      "fornecedor": "RUTH ISADORA COQUEIRO DE DEUS",
+      "cpfCnpjFornecedor": "05671240530",
+      "descricao": "serviços de comunicação digital",
+      "valor": 7000
+    },
+    {
+      "sqCandidato": "50002532650",
+      "fornecedor": "#NULO",
+      "cpfCnpjFornecedor": "-1",
+      "descricao": "#NULO",
+      "valor": 0
+    },
+    {
+      "sqCandidato": "50002532651",
+      "fornecedor": "#NULO",
+      "cpfCnpjFornecedor": "-1",
+      "descricao": "#NULO",
+      "valor": 0
+    },
+    {
+      "sqCandidato": "50002533138",
+      "fornecedor": "#NULO",
+      "cpfCnpjFornecedor": "-1",
+      "descricao": "#NULO",
+      "valor": 0
+    },
+    {
+      "sqCandidato": "50002535570",
+      "fornecedor": "#NULO",
+      "cpfCnpjFornecedor": "-1",
+      "descricao": "#NULO",
+      "valor": 0
+    },
+    {
+      "sqCandidato": "50002535541",
+      "fornecedor": "66.678.430 ERICK DIAS RODRIGUES DA SILVA",
+      "cpfCnpjFornecedor": "66678430000175",
+      "descricao": "Desenvolvimento e disponibilização de página eletrônica personalizada para campanha eleitoral",
+      "valor": 797
+    },
+    {
+      "sqCandidato": "50002535546",
+      "fornecedor": "#NULO",
+      "cpfCnpjFornecedor": "-1",
+      "descricao": "#NULO",
+      "valor": 0
+    },
+    {
+      "sqCandidato": "50002535572",
+      "fornecedor": "#NULO",
+      "cpfCnpjFornecedor": "-1",
+      "descricao": "#NULO",
+      "valor": 0
+    },
+    {
+      "sqCandidato": "50002535584",
+      "fornecedor": "#NULO",
+      "cpfCnpjFornecedor": "-1",
+      "descricao": "#NULO",
+      "valor": 0
+    },
+    {
+      "sqCandidato": "50002535557",
+      "fornecedor": "#NULO",
+      "cpfCnpjFornecedor": "-1",
+      "descricao": "#NULO",
+      "valor": 0
+    },
+    {
+      "sqCandidato": "50002538682",
+      "fornecedor": "#NULO",
+      "cpfCnpjFornecedor": "-1",
+      "descricao": "#NULO",
+      "valor": 0
+    },
+    {
+      "sqCandidato": "50002537865",
+      "fornecedor": "VERIVALDO SANTANA LIMA",
+      "cpfCnpjFornecedor": "59430621572",
+      "descricao": "ELABORAÇAO E PRESTAÇÃO DE CONTA ELEITORAL",
+      "valor": 10000
+    },
+    {
+      "sqCandidato": "50002537865",
+      "fornecedor": "LOYANA ARAUJO CHAVES",
+      "cpfCnpjFornecedor": "89772873591",
+      "descricao": "CONTRATO DE LOCAÇAO - COMITÊ DE CAMPANHA ELEIÇOES 2026",
+      "valor": 8400
+    },
+    {
+      "sqCandidato": "50002537849",
+      "fornecedor": "DLOCAL BRASIL INSTITUICAO DE PAGAMENTO S.A.",
+      "cpfCnpjFornecedor": "25021356000132",
+      "descricao": "IMPULSIONAMENTO DE CONTEÚDO",
+      "valor": 10000
+    },
+    {
+      "sqCandidato": "50002537849",
+      "fornecedor": "SIGRAF SERVICOS GRAFICOS LTDA",
+      "cpfCnpjFornecedor": "10791709000106",
+      "descricao": "PANFLETOS 15x21 - 4x4 COUCHE 90G",
+      "valor": 1600
+    },
+    {
+      "sqCandidato": "50002537849",
+      "fornecedor": "SIGRAF SERVICOS GRAFICOS LTDA",
+      "cpfCnpjFornecedor": "10791709000106",
+      "descricao": "SANTINHO 7x10 - 4x4 OFFSET 75G",
+      "valor": 1980
+    },
+    {
+      "sqCandidato": "50002537849",
+      "fornecedor": "IPS PAPER ROTULOS E ETIQUETAS LTDA",
+      "cpfCnpjFornecedor": "60743244000196",
+      "descricao": "PRAGUINHA COUCHE MOD 1 9x9",
+      "valor": 5000
+    },
+    {
+      "sqCandidato": "50002537849",
+      "fornecedor": "IPS PAPER ROTULOS E ETIQUETAS LTDA",
+      "cpfCnpjFornecedor": "60743244000196",
+      "descricao": "PRAGUINHA COUCHE MOD 2 TAM 9x9",
+      "valor": 5000
+    },
+    {
+      "sqCandidato": "50002537849",
+      "fornecedor": "IPS PAPER ROTULOS E ETIQUETAS LTDA",
+      "cpfCnpjFornecedor": "60743244000196",
+      "descricao": "PRAGUINHA COUCHE MODELO 3 TAM 9x9",
+      "valor": 5000
+    },
+    {
+      "sqCandidato": "50002537849",
+      "fornecedor": "IPS PAPER ROTULOS E ETIQUETAS LTDA",
+      "cpfCnpjFornecedor": "60743244000196",
+      "descricao": "PRAGUINHA COUCHE MODELO 2 TAM 9x9",
+      "valor": 5000
+    },
+    {
+      "sqCandidato": "50002537849",
+      "fornecedor": "IPS PAPER ROTULOS E ETIQUETAS LTDA",
+      "cpfCnpjFornecedor": "60743244000196",
+      "descricao": "PRAGUINHA COUCHE MODELO 3 TAM 9x9",
+      "valor": 5000
+    },
+    {
+      "sqCandidato": "50002537849",
+      "fornecedor": "IPS PAPER ROTULOS E ETIQUETAS LTDA",
+      "cpfCnpjFornecedor": "60743244000196",
+      "descricao": "PRAGUINHA COUCHE MODELO 1 TAM 9x9",
+      "valor": 5000
+    },
+    {
+      "sqCandidato": "50002537856",
+      "fornecedor": "FACEBOOK SERVICOS ONLINE DO BRASIL LTDA.",
+      "cpfCnpjFornecedor": "13347016000117",
+      "descricao": "IMPULSIONAMENTO DE CONTEÚDOS",
+      "valor": 3000
+    },
+    {
+      "sqCandidato": "50002537855",
+      "fornecedor": "FABIO RICCO DOS SANTOS LIMA",
+      "cpfCnpjFornecedor": "04007804532",
+      "descricao": "DESPESA DE LOCAÇÃO",
+      "valor": 8000
+    },
+    {
+      "sqCandidato": "50002537855",
+      "fornecedor": "#NULO",
+      "cpfCnpjFornecedor": "-1",
+      "descricao": "TARIFA PIX",
+      "valor": 0.5
+    },
+    {
+      "sqCandidato": "50002537855",
+      "fornecedor": "FACEBOOK SERVICOS ONLINE DO BRASIL LTDA.",
+      "cpfCnpjFornecedor": "13347016000117",
+      "descricao": "IMPULSIONAMENTO DE CONTEÚDO",
+      "valor": 6000
+    },
+    {
+      "sqCandidato": "50002538676",
+      "fornecedor": "#NULO",
+      "cpfCnpjFornecedor": "-1",
+      "descricao": "#NULO",
+      "valor": 0
+    },
+    {
+      "sqCandidato": "50002538687",
+      "fornecedor": "#NULO",
+      "cpfCnpjFornecedor": "-1",
+      "descricao": "#NULO",
+      "valor": 0
+    },
+    {
+      "sqCandidato": "50002537869",
+      "fornecedor": "#NULO",
+      "cpfCnpjFornecedor": "-1",
+      "descricao": "#NULO",
+      "valor": 0
+    },
+    {
+      "sqCandidato": "50002537850",
+      "fornecedor": "#NULO",
+      "cpfCnpjFornecedor": "-1",
+      "descricao": "#NULO",
+      "valor": 0
+    },
+    {
+      "sqCandidato": "50002538684",
+      "fornecedor": "#NULO",
+      "cpfCnpjFornecedor": "-1",
+      "descricao": "#NULO",
+      "valor": 0
+    },
+    {
+      "sqCandidato": "50002537857",
+      "fornecedor": "XIRE PRODUCOES S/A",
+      "cpfCnpjFornecedor": "31506945000103",
+      "descricao": "CONTRATO DE PRESTAÇÃO DE SERVIÇO DE PRODUÇÃO DE EVENTOS E OUTROS SERVIÇOS PARA ELEIÇÕES",
+      "valor": 300000
+    },
+    {
+      "sqCandidato": "50002537857",
+      "fornecedor": "FEIRA ROTULOS E ETIQUETAS ADESIVAS LTDA",
+      "cpfCnpjFornecedor": "24759252000167",
+      "descricao": "BANNER 1,70 X 3,82 M2 MOTIVO 1",
+      "valor": 390
+    },
+    {
+      "sqCandidato": "50002537857",
+      "fornecedor": "FEIRA ROTULOS E ETIQUETAS ADESIVAS LTDA",
+      "cpfCnpjFornecedor": "24759252000167",
+      "descricao": "BANNER 1,70 X 3,82 M2 MOTIVO 2",
+      "valor": 780
+    },
+    {
+      "sqCandidato": "50002537857",
+      "fornecedor": "FEIRA ROTULOS E ETIQUETAS ADESIVAS LTDA",
+      "cpfCnpjFornecedor": "24759252000167",
+      "descricao": "BANNER 1,70 X 3,82 M2 MOTIVO 3",
+      "valor": 1170
+    },
+    {
+      "sqCandidato": "50002537857",
+      "fornecedor": "FEIRA ROTULOS E ETIQUETAS ADESIVAS LTDA",
+      "cpfCnpjFornecedor": "24759252000167",
+      "descricao": "BANNER 1,70 X 3,82 M2 MOTIVO 4",
+      "valor": 1560
+    },
+    {
+      "sqCandidato": "50002537857",
+      "fornecedor": "FEIRA ROTULOS E ETIQUETAS ADESIVAS LTDA",
+      "cpfCnpjFornecedor": "24759252000167",
+      "descricao": "BANNER 1,70 X 1,92 M2 MOTIVO 1",
+      "valor": 200
+    },
+    {
+      "sqCandidato": "50002537857",
+      "fornecedor": "FEIRA ROTULOS E ETIQUETAS ADESIVAS LTDA",
+      "cpfCnpjFornecedor": "24759252000167",
+      "descricao": "BANNER 1,70 X 1,92 M2 MOTIVO 2",
+      "valor": 200
+    },
+    {
+      "sqCandidato": "50002537857",
+      "fornecedor": "FEIRA ROTULOS E ETIQUETAS ADESIVAS LTDA",
+      "cpfCnpjFornecedor": "24759252000167",
+      "descricao": "FAIXA 4,0 X 1,00 M2",
+      "valor": 440
+    },
+    {
+      "sqCandidato": "50002537857",
+      "fornecedor": "FEIRA ROTULOS E ETIQUETAS ADESIVAS LTDA",
+      "cpfCnpjFornecedor": "24759252000167",
+      "descricao": "PLACA 2,50 X 0,50 M2",
+      "valor": 475
+    },
+    {
+      "sqCandidato": "50002537857",
+      "fornecedor": "FEIRA ROTULOS E ETIQUETAS ADESIVAS LTDA",
+      "cpfCnpjFornecedor": "24759252000167",
+      "descricao": "LONA 6,80 X 2,80 M2",
+      "valor": 2095
+    },
+    {
+      "sqCandidato": "50002537857",
+      "fornecedor": "FEIRA ROTULOS E ETIQUETAS ADESIVAS LTDA",
+      "cpfCnpjFornecedor": "24759252000167",
+      "descricao": "FAIXA 5,00 X 0,50 M2",
+      "valor": 275
+    },
+    {
+      "sqCandidato": "50002537857",
+      "fornecedor": "FACEBOOK SERVICOS ONLINE DO BRASIL LTDA.",
+      "cpfCnpjFornecedor": "13347016000117",
+      "descricao": "IMPULSIONAMENTO",
+      "valor": 50
+    },
+    {
+      "sqCandidato": "50002537857",
+      "fornecedor": "FEIRA ROTULOS E ETIQUETAS ADESIVAS LTDA",
+      "cpfCnpjFornecedor": "24759252000167",
+      "descricao": "ADESIVO 30 x 10 CM",
+      "valor": 2736
+    },
+    {
+      "sqCandidato": "50002537857",
+      "fornecedor": "FEIRA ROTULOS E ETIQUETAS ADESIVAS LTDA",
+      "cpfCnpjFornecedor": "24759252000167",
+      "descricao": "ADESIVO PRAGAO 30 X 30 CM",
+      "valor": 8050
+    },
+    {
+      "sqCandidato": "50002537857",
+      "fornecedor": "FEIRA ROTULOS E ETIQUETAS ADESIVAS LTDA",
+      "cpfCnpjFornecedor": "24759252000167",
+      "descricao": "PRAGUINHA 9 X 9 CM",
+      "valor": 1601
+    },
+    {
+      "sqCandidato": "50002537857",
+      "fornecedor": "FEIRA ROTULOS E ETIQUETAS ADESIVAS LTDA",
+      "cpfCnpjFornecedor": "24759252000167",
+      "descricao": "PIRULITO DUPLA FACE 50 X 50 CM",
+      "valor": 483
+    },
+    {
+      "sqCandidato": "50002537857",
+      "fornecedor": "HAGE, ARAGAO E ADVOGADOS",
+      "cpfCnpjFornecedor": "26623641000196",
+      "descricao": "CONTRATO DE HONORÁRIOS ADVOCATÍCIOS",
+      "valor": 20000
+    },
+    {
+      "sqCandidato": "50002537857",
+      "fornecedor": "HEKO DIGITAL LTDA",
+      "cpfCnpjFornecedor": "38256696000194",
+      "descricao": "BANDEIRA WINDBANNER",
+      "valor": 1400
+    },
+    {
+      "sqCandidato": "50002537857",
+      "fornecedor": "RAFAEL MULTARY ANGELO",
+      "cpfCnpjFornecedor": "92423043520",
+      "descricao": "Contrato de Prestação de Serviços Contábeis",
+      "valor": 8000
+    },
+    {
+      "sqCandidato": "50002537868",
+      "fornecedor": "#NULO",
+      "cpfCnpjFornecedor": "-1",
+      "descricao": "#NULO",
+      "valor": 0
+    },
+    {
+      "sqCandidato": "50002537871",
+      "fornecedor": "#NULO",
+      "cpfCnpjFornecedor": "-1",
+      "descricao": "#NULO",
+      "valor": 0
+    },
+    {
+      "sqCandidato": "50002537854",
+      "fornecedor": "DLOCAL BRASIL INSTITUICAO DE PAGAMENTO S.A.",
+      "cpfCnpjFornecedor": "25021356000132",
+      "descricao": "Impulsionamento - FACEBOOK",
+      "valor": 10000
+    },
+    {
+      "sqCandidato": "50002537864",
+      "fornecedor": "#NULO",
+      "cpfCnpjFornecedor": "-1",
+      "descricao": "#NULO",
+      "valor": 0
+    },
+    {
+      "sqCandidato": "50002537866",
+      "fornecedor": "#NULO",
+      "cpfCnpjFornecedor": "-1",
+      "descricao": "#NULO",
+      "valor": 0
+    },
+    {
+      "sqCandidato": "50002537844",
+      "fornecedor": "C M E COMERCIAL DE EMBALAGENS LTDA",
+      "cpfCnpjFornecedor": "32312379000161",
+      "descricao": "AGUA SANITARIA Q BOA 2L",
+      "valor": 27.2
+    },
+    {
+      "sqCandidato": "50002537844",
+      "fornecedor": "C M E COMERCIAL DE EMBALAGENS LTDA",
+      "cpfCnpjFornecedor": "32312379000161",
+      "descricao": "SEQUILHO DE QUEIJO 180G",
+      "valor": 18.9
+    },
+    {
+      "sqCandidato": "50002537844",
+      "fornecedor": "C M E COMERCIAL DE EMBALAGENS LTDA",
+      "cpfCnpjFornecedor": "32312379000161",
+      "descricao": "DETERGENTE TEIU NEUTRO 500ML",
+      "valor": 11.8
+    },
+    {
+      "sqCandidato": "50002537844",
+      "fornecedor": "C M E COMERCIAL DE EMBALAGENS LTDA",
+      "cpfCnpjFornecedor": "32312379000161",
+      "descricao": "DETERGENTE YPE CLEAR 500 ML",
+      "valor": 13.8
+    },
+    {
+      "sqCandidato": "50002537844",
+      "fornecedor": "C M E COMERCIAL DE EMBALAGENS LTDA",
+      "cpfCnpjFornecedor": "32312379000161",
+      "descricao": "FLANELA 39X59",
+      "valor": 12.5
+    },
+    {
+      "sqCandidato": "50002537844",
+      "fornecedor": "C M E COMERCIAL DE EMBALAGENS LTDA",
+      "cpfCnpjFornecedor": "32312379000161",
+      "descricao": "GARRAFA TERMICA M.PUMP PRETO 1L",
+      "valor": 267.6
+    },
+    {
+      "sqCandidato": "50002537844",
+      "fornecedor": "C M E COMERCIAL DE EMBALAGENS LTDA",
+      "cpfCnpjFornecedor": "32312379000161",
+      "descricao": "LIXEIRA JAGUAR 7,5L",
+      "valor": 104.5
+    },
+    {
+      "sqCandidato": "50002537844",
+      "fornecedor": "C M E COMERCIAL DE EMBALAGENS LTDA",
+      "cpfCnpjFornecedor": "32312379000161",
+      "descricao": "LUVA VERNIZ SILVER VERDE TAM M",
+      "valor": 18.6
+    },
+    {
+      "sqCandidato": "50002537844",
+      "fornecedor": "C M E COMERCIAL DE EMBALAGENS LTDA",
+      "cpfCnpjFornecedor": "32312379000161",
+      "descricao": "LUVA VOLK RANHURADA TAM M",
+      "valor": 13.9
+    },
+    {
+      "sqCandidato": "50002537844",
+      "fornecedor": "C M E COMERCIAL DE EMBALAGENS LTDA",
+      "cpfCnpjFornecedor": "32312379000161",
+      "descricao": "PANO MICRO FIBRA 30X30 AZUL C/2",
+      "valor": 12.6
+    },
+    {
+      "sqCandidato": "50002537844",
+      "fornecedor": "C M E COMERCIAL DE EMBALAGENS LTDA",
+      "cpfCnpjFornecedor": "32312379000161",
+      "descricao": "PANO PRATO 45X85",
+      "valor": 15
+    },
+    {
+      "sqCandidato": "50002537844",
+      "fornecedor": "C M E COMERCIAL DE EMBALAGENS LTDA",
+      "cpfCnpjFornecedor": "32312379000161",
+      "descricao": "PANO PRATO XADREZ 66CM X 44CM",
+      "valor": 35.7
+    },
+    {
+      "sqCandidato": "50002537844",
+      "fornecedor": "C M E COMERCIAL DE EMBALAGENS LTDA",
+      "cpfCnpjFornecedor": "32312379000161",
+      "descricao": "PAPEL HIG 100% CELULOSE 8X100 STILO",
+      "valor": 114
+    },
+    {
+      "sqCandidato": "50002537844",
+      "fornecedor": "C M E COMERCIAL DE EMBALAGENS LTDA",
+      "cpfCnpjFornecedor": "32312379000161",
+      "descricao": "PAPEL TOALHA INTERF 100% IDEAL C/2000 FLS",
+      "valor": 59.8
+    },
+    {
+      "sqCandidato": "50002537844",
+      "fornecedor": "C M E COMERCIAL DE EMBALAGENS LTDA",
+      "cpfCnpjFornecedor": "32312379000161",
+      "descricao": "SABONETE PEROLIZADO MEYORS FLORAL 5L",
+      "valor": 38.9
+    },
+    {
+      "sqCandidato": "50002537844",
+      "fornecedor": "C M E COMERCIAL DE EMBALAGENS LTDA",
+      "cpfCnpjFornecedor": "32312379000161",
+      "descricao": "SACO DE LIXO PEGALIXO 15L PT C/80",
+      "valor": 19.8
+    },
+    {
+      "sqCandidato": "50002537844",
+      "fornecedor": "C M E COMERCIAL DE EMBALAGENS LTDA",
+      "cpfCnpjFornecedor": "32312379000161",
+      "descricao": "SACO DE LIXO REFORCADO MICRA 6 100L PRETO COM 100",
+      "valor": 44.5
+    },
+    {
+      "sqCandidato": "50002537844",
+      "fornecedor": "C M E COMERCIAL DE EMBALAGENS LTDA",
+      "cpfCnpjFornecedor": "32312379000161",
+      "descricao": "SAPOLIO CREMOSO CLASSICO 250 ML",
+      "valor": 31.96
+    },
+    {
+      "sqCandidato": "50002537844",
+      "fornecedor": "C M E COMERCIAL DE EMBALAGENS LTDA",
+      "cpfCnpjFornecedor": "32312379000161",
+      "descricao": "DESINFETANTE UAU FLORES E FRUTAS VERMELHA 2L",
+      "valor": 50
+    },
+    {
+      "sqCandidato": "50002537851",
+      "fornecedor": "#NULO",
+      "cpfCnpjFornecedor": "-1",
+      "descricao": "#NULO",
+      "valor": 0
+    },
+    {
+      "sqCandidato": "50002538686",
+      "fornecedor": "#NULO",
+      "cpfCnpjFornecedor": "-1",
+      "descricao": "#NULO",
+      "valor": 0
+    },
+    {
+      "sqCandidato": "50002537872",
+      "fornecedor": "QueroApoiar.com.br",
+      "cpfCnpjFornecedor": "39586155000197",
+      "descricao": "Taxa Administração Financiamento Coletivo",
+      "valor": 170.8
+    },
+    {
+      "sqCandidato": "50002532538",
+      "fornecedor": "#NULO",
+      "cpfCnpjFornecedor": "-1",
+      "descricao": "#NULO",
+      "valor": 0
+    },
+    {
+      "sqCandidato": "50002532533",
+      "fornecedor": "EDILTON SANTANA SANTOS 64754073568",
+      "cpfCnpjFornecedor": "34587977000179",
+      "descricao": "CONFECÇÃO DE DOIS (02) DOIS JINGLES PARA O CANDIDATO",
+      "valor": 1320
+    },
+    {
+      "sqCandidato": "50002532549",
+      "fornecedor": "#NULO",
+      "cpfCnpjFornecedor": "-1",
+      "descricao": "#NULO",
+      "valor": 0
+    },
+    {
+      "sqCandidato": "50002532556",
+      "fornecedor": "#NULO",
+      "cpfCnpjFornecedor": "-1",
+      "descricao": "#NULO",
+      "valor": 0
+    },
+    {
+      "sqCandidato": "50002532687",
+      "fornecedor": "JMX SOLUCOES E COMUNICACAO LTDA",
+      "cpfCnpjFornecedor": "03285136000183",
+      "descricao": "Vinil Perfurado",
+      "valor": 1200
+    },
+    {
+      "sqCandidato": "50002532687",
+      "fornecedor": "JMX SOLUCOES E COMUNICACAO LTDA",
+      "cpfCnpjFornecedor": "03285136000183",
+      "descricao": "Santinho - Tamanho 6x9CM",
+      "valor": 13000
+    },
+    {
+      "sqCandidato": "50002532687",
+      "fornecedor": "JMX SOLUCOES E COMUNICACAO LTDA",
+      "cpfCnpjFornecedor": "03285136000183",
+      "descricao": "ADESIVO (30 x 10)",
+      "valor": 9900
+    },
+    {
+      "sqCandidato": "50002532687",
+      "fornecedor": "JMX SOLUCOES E COMUNICACAO LTDA",
+      "cpfCnpjFornecedor": "03285136000183",
+      "descricao": "ADESIVO (35 x 35)",
+      "valor": 3000
+    },
+    {
+      "sqCandidato": "50002532687",
+      "fornecedor": "JMX SOLUCOES E COMUNICACAO LTDA",
+      "cpfCnpjFornecedor": "03285136000183",
+      "descricao": "Praguinha Adesiva - Poliotica 7X7cm",
+      "valor": 2900
+    },
+    {
+      "sqCandidato": "50002532684",
+      "fornecedor": "#NULO",
+      "cpfCnpjFornecedor": "-1",
+      "descricao": "#NULO",
+      "valor": 0
+    },
+    {
+      "sqCandidato": "50002532683",
+      "fornecedor": "#NULO",
+      "cpfCnpjFornecedor": "-1",
+      "descricao": "#NULO",
+      "valor": 0
+    },
+    {
+      "sqCandidato": "50002532690",
+      "fornecedor": "QueroApoiar.com.br",
+      "cpfCnpjFornecedor": "39586155000197",
+      "descricao": "Taxa Administração Financiamento Coletivo",
+      "valor": 99.5
+    },
+    {
+      "sqCandidato": "50002532690",
+      "fornecedor": "FACEBOOK SERVICOS ONLINE DO BRASIL LTDA.",
+      "cpfCnpjFornecedor": "13347016000117",
+      "descricao": "CREDITOS DE IMPULSIONAMENTO",
+      "valor": 9900.5
+    },
+    {
+      "sqCandidato": "50002532686",
+      "fornecedor": "#NULO",
+      "cpfCnpjFornecedor": "-1",
+      "descricao": "#NULO",
+      "valor": 0
+    },
+    {
+      "sqCandidato": "50002532697",
+      "fornecedor": "#NULO",
+      "cpfCnpjFornecedor": "-1",
+      "descricao": "#NULO",
+      "valor": 0
+    },
+    {
+      "sqCandidato": "50002532689",
+      "fornecedor": "IDEIA BRAZIL DIGITAL LTDA",
+      "cpfCnpjFornecedor": "54735624000186",
+      "descricao": "PRAGUINHA 9X9",
+      "valor": 3370
+    },
+    {
+      "sqCandidato": "50002532689",
+      "fornecedor": "IDEIA BRAZIL DIGITAL LTDA",
+      "cpfCnpjFornecedor": "54735624000186",
+      "descricao": "ADESIVOS 10X30",
+      "valor": 6000
+    },
+    {
+      "sqCandidato": "50002532689",
+      "fornecedor": "IDEIA BRAZIL DIGITAL LTDA",
+      "cpfCnpjFornecedor": "54735624000186",
+      "descricao": "SANTINHOS 10X7",
+      "valor": 1930
+    },
+    {
+      "sqCandidato": "50002532689",
+      "fornecedor": "JOÃO RABELO DA SILVA FILHO",
+      "cpfCnpjFornecedor": "00897362578",
+      "descricao": "SERVIÇO DE MOTORISTA",
+      "valor": 3000
+    },
+    {
+      "sqCandidato": "50002532689",
+      "fornecedor": "MS COMUNICACAO VISUAL E GRAFICA LTDA",
+      "cpfCnpjFornecedor": "48411965000101",
+      "descricao": "PERFURADOS 1,35X0,45",
+      "valor": 7348
+    },
+    {
+      "sqCandidato": "50002532689",
+      "fornecedor": "MS COMUNICACAO VISUAL E GRAFICA LTDA",
+      "cpfCnpjFornecedor": "48411965000101",
+      "descricao": "PRAGOES 30X30",
+      "valor": 690
+    },
+    {
+      "sqCandidato": "50002532689",
+      "fornecedor": "MS COMUNICACAO VISUAL E GRAFICA LTDA",
+      "cpfCnpjFornecedor": "48411965000101",
+      "descricao": "BANDEIRAS 0,90X0,60 cm",
+      "valor": 3900
+    },
+    {
+      "sqCandidato": "50002532689",
+      "fornecedor": "MS COMUNICACAO VISUAL E GRAFICA LTDA",
+      "cpfCnpjFornecedor": "48411965000101",
+      "descricao": "PRAGÕES 9X9 cm",
+      "valor": 5800
+    },
+    {
+      "sqCandidato": "50002532689",
+      "fornecedor": "MS COMUNICACAO VISUAL E GRAFICA LTDA",
+      "cpfCnpjFornecedor": "48411965000101",
+      "descricao": "PRAGUINHAS 7X7 cm",
+      "valor": 5400
+    },
+    {
+      "sqCandidato": "50002532689",
+      "fornecedor": "MS COMUNICACAO VISUAL E GRAFICA LTDA",
+      "cpfCnpjFornecedor": "48411965000101",
+      "descricao": "PRAGUINHAS 9X7 cm",
+      "valor": 5197
+    },
+    {
+      "sqCandidato": "50002532689",
+      "fornecedor": "MS COMUNICACAO VISUAL E GRAFICA LTDA",
+      "cpfCnpjFornecedor": "48411965000101",
+      "descricao": "PRAGUINHAS 7X6 cm",
+      "valor": 10500
+    },
+    {
+      "sqCandidato": "50002532688",
+      "fornecedor": "#NULO",
+      "cpfCnpjFornecedor": "-1",
+      "descricao": "#NULO",
+      "valor": 0
+    },
+    {
+      "sqCandidato": "50002532698",
+      "fornecedor": "#NULO",
+      "cpfCnpjFornecedor": "-1",
+      "descricao": "#NULO",
+      "valor": 0
+    },
+    {
+      "sqCandidato": "50002532693",
+      "fornecedor": "#NULO",
+      "cpfCnpjFornecedor": "-1",
+      "descricao": "#NULO",
+      "valor": 0
+    },
+    {
+      "sqCandidato": "50002532691",
+      "fornecedor": "#NULO",
+      "cpfCnpjFornecedor": "-1",
+      "descricao": "#NULO",
+      "valor": 0
+    },
+    {
+      "sqCandidato": "50002538726",
+      "fornecedor": "#NULO",
+      "cpfCnpjFornecedor": "-1",
+      "descricao": "#NULO",
+      "valor": 0
+    },
+    {
+      "sqCandidato": "50002532637",
+      "fornecedor": "#NULO",
+      "cpfCnpjFornecedor": "-1",
+      "descricao": "#NULO",
+      "valor": 0
+    },
+    {
+      "sqCandidato": "50002532641",
+      "fornecedor": "#NULO",
+      "cpfCnpjFornecedor": "-1",
+      "descricao": "#NULO",
+      "valor": 0
+    },
+    {
+      "sqCandidato": "50002532625",
+      "fornecedor": "#NULO",
+      "cpfCnpjFornecedor": "-1",
+      "descricao": "#NULO",
+      "valor": 0
+    },
+    {
+      "sqCandidato": "50002532621",
+      "fornecedor": "#NULO",
+      "cpfCnpjFornecedor": "-1",
+      "descricao": "#NULO",
+      "valor": 0
+    },
+    {
+      "sqCandidato": "50002538877",
+      "fornecedor": "#NULO",
+      "cpfCnpjFornecedor": "-1",
+      "descricao": "#NULO",
+      "valor": 0
+    },
+    {
+      "sqCandidato": "50002538885",
+      "fornecedor": "QueroApoiar.com.br",
+      "cpfCnpjFornecedor": "39586155000197",
+      "descricao": "Taxa Administração Financiamento Coletivo",
+      "valor": 136.38
+    },
+    {
+      "sqCandidato": "50002538878",
+      "fornecedor": "#NULO",
+      "cpfCnpjFornecedor": "-1",
+      "descricao": "#NULO",
+      "valor": 0
+    },
+    {
+      "sqCandidato": "50002538869",
+      "fornecedor": "#NULO",
+      "cpfCnpjFornecedor": "-1",
+      "descricao": "#NULO",
+      "valor": 0
+    },
+    {
+      "sqCandidato": "50002538887",
+      "fornecedor": "#NULO",
+      "cpfCnpjFornecedor": "-1",
+      "descricao": "#NULO",
+      "valor": 0
+    },
+    {
+      "sqCandidato": "50002538876",
+      "fornecedor": "QueroApoiar.com.br",
+      "cpfCnpjFornecedor": "39586155000197",
+      "descricao": "Taxa Administração Financiamento Coletivo",
+      "valor": 8.15
+    },
+    {
+      "sqCandidato": "50002538874",
+      "fornecedor": "#NULO",
+      "cpfCnpjFornecedor": "-1",
+      "descricao": "#NULO",
+      "valor": 0
+    },
+    {
+      "sqCandidato": "50002538884",
+      "fornecedor": "#NULO",
+      "cpfCnpjFornecedor": "-1",
+      "descricao": "#NULO",
+      "valor": 0
+    },
+    {
+      "sqCandidato": "50002535877",
+      "fornecedor": "#NULO",
+      "cpfCnpjFornecedor": "-1",
+      "descricao": "#NULO",
+      "valor": 0
+    },
+    {
+      "sqCandidato": "50002538880",
+      "fornecedor": "#NULO",
+      "cpfCnpjFornecedor": "-1",
+      "descricao": "#NULO",
+      "valor": 0
+    },
+    {
+      "sqCandidato": "50002538873",
+      "fornecedor": "#NULO",
+      "cpfCnpjFornecedor": "-1",
+      "descricao": "#NULO",
+      "valor": 0
+    },
+    {
+      "sqCandidato": "50002538871",
+      "fornecedor": "#NULO",
+      "cpfCnpjFornecedor": "-1",
+      "descricao": "#NULO",
+      "valor": 0
+    },
+    {
+      "sqCandidato": "50002538875",
+      "fornecedor": "#NULO",
+      "cpfCnpjFornecedor": "-1",
+      "descricao": "#NULO",
+      "valor": 0
+    },
+    {
+      "sqCandidato": "50002535884",
+      "fornecedor": "#NULO",
+      "cpfCnpjFornecedor": "-1",
+      "descricao": "#NULO",
+      "valor": 0
+    },
+    {
+      "sqCandidato": "50002535866",
+      "fornecedor": "#NULO",
+      "cpfCnpjFornecedor": "-1",
+      "descricao": "#NULO",
+      "valor": 0
+    },
+    {
+      "sqCandidato": "50002537370",
+      "fornecedor": "#NULO",
+      "cpfCnpjFornecedor": "-1",
+      "descricao": "#NULO",
+      "valor": 0
+    },
+    {
+      "sqCandidato": "50002537404",
+      "fornecedor": "DLOCAL BRASIL INSTITUICAO DE PAGAMENTO S.A.",
+      "cpfCnpjFornecedor": "25021356000132",
+      "descricao": "Despesas com impulsionamento",
+      "valor": 15000
+    },
+    {
+      "sqCandidato": "50002537404",
+      "fornecedor": "WALLA VIANA FONTES",
+      "cpfCnpjFornecedor": "01845134567",
+      "descricao": "CONTRATO DE PRESTAÇÃO DE SERVIÇOS JURÍDICOS ELEITORAIS",
+      "valor": 10000
+    },
+    {
+      "sqCandidato": "50002537404",
+      "fornecedor": "RAFAEL MULTARY ANGELO",
+      "cpfCnpjFornecedor": "92423043520",
+      "descricao": "Contrato de Prestação de Serviços Contábeis",
+      "valor": 8000
+    },
+    {
+      "sqCandidato": "50002536321",
+      "fornecedor": "#NULO",
+      "cpfCnpjFornecedor": "-1",
+      "descricao": "#NULO",
+      "valor": 0
+    },
+    {
+      "sqCandidato": "50002536317",
+      "fornecedor": "#NULO",
+      "cpfCnpjFornecedor": "-1",
+      "descricao": "#NULO",
+      "valor": 0
+    },
+    {
+      "sqCandidato": "50002533124",
+      "fornecedor": "#NULO",
+      "cpfCnpjFornecedor": "-1",
+      "descricao": "#NULO",
+      "valor": 0
+    },
+    {
+      "sqCandidato": "50002537372",
+      "fornecedor": "VL COMERCIAL DE EMBALAGENS E DESCARTAVEIS LTDA",
+      "cpfCnpjFornecedor": "05018212000110",
+      "descricao": "SACOLA BOCA DE PALHACO",
+      "valor": 283.5
+    },
+    {
+      "sqCandidato": "50002534996",
+      "fornecedor": "#NULO",
+      "cpfCnpjFornecedor": "-1",
+      "descricao": "#NULO",
+      "valor": 0
+    },
+    {
+      "sqCandidato": "50002534979",
+      "fornecedor": "#NULO",
+      "cpfCnpjFornecedor": "-1",
+      "descricao": "#NULO",
+      "valor": 0
+    },
+    {
+      "sqCandidato": "50002535010",
+      "fornecedor": "#NULO",
+      "cpfCnpjFornecedor": "-1",
+      "descricao": "#NULO",
+      "valor": 0
+    },
+    {
+      "sqCandidato": "50002534990",
+      "fornecedor": "SILVEIRA SILVEIRA CONTADORES ASSOCIADOS LTDA",
+      "cpfCnpjFornecedor": "12427278000129",
+      "descricao": "prestação de serviços técnicos de assessoria e consultoria contábil na elaboração da prestação",
+      "valor": 50000
+    },
+    {
+      "sqCandidato": "50002534990",
+      "fornecedor": "ANA CLÁUDIA DE SOUZA QUADROS",
+      "cpfCnpjFornecedor": "04029597521",
+      "descricao": "LOCAÇÃO DE IMOVEL PARA COMITÊ",
+      "valor": 3500
+    },
+    {
+      "sqCandidato": "50002534990",
+      "fornecedor": "FELIPE REIS GALVÃO",
+      "cpfCnpjFornecedor": "05685278527",
+      "descricao": "contrato é serviço de pilotagem, da aeronave locada para apoio campanha Eleitoral 2026 do Candidato",
+      "valor": 50000
+    },
+    {
+      "sqCandidato": "50002534990",
+      "fornecedor": "ALBUQUERQUE   KELLER SOCIEDADE DE ADVOGADOS",
+      "cpfCnpjFornecedor": "57074754000103",
+      "descricao": "prestação de serviços técnicos de assessoria e consultoria jurídica",
+      "valor": 50000
+    },
+    {
+      "sqCandidato": "50002534990",
+      "fornecedor": "PEDRO CONI E CONI SOCIEDADE INDIVIDUAL DE ADVOCACIA",
+      "cpfCnpjFornecedor": "58077184000178",
+      "descricao": "prestação de serviços técnicos de assessoria e consultoria Jurídico",
+      "valor": 50000
+    },
+    {
+      "sqCandidato": "50002534990",
+      "fornecedor": "IDEIA ATIVA GRAFICA LTDA",
+      "cpfCnpjFornecedor": "16625708000178",
+      "descricao": "impressão de adesivo bola 25x25cm ( Candidato sozinho)",
+      "valor": 40300
+    },
+    {
+      "sqCandidato": "50002534990",
+      "fornecedor": "IDEIA ATIVA GRAFICA LTDA",
+      "cpfCnpjFornecedor": "16625708000178",
+      "descricao": "impressão de adesivo bola 12x12cm ( Candidato sozinho)",
+      "valor": 7020
+    },
+    {
+      "sqCandidato": "50002534990",
+      "fornecedor": "IDEIA ATIVA GRAFICA LTDA",
+      "cpfCnpjFornecedor": "16625708000178",
+      "descricao": "impressão de praguinha 10x10cm ( Candidato sozinho)",
+      "valor": 146880
+    },
+    {
+      "sqCandidato": "50002534990",
+      "fornecedor": "IDEIA ATIVA GRAFICA LTDA",
+      "cpfCnpjFornecedor": "16625708000178",
+      "descricao": "impressão de bandeira 90x60 cm ( Candidato sozinho)",
+      "valor": 209096
+    },
+    {
+      "sqCandidato": "50002534990",
+      "fornecedor": "IDEIA ATIVA GRAFICA LTDA",
+      "cpfCnpjFornecedor": "16625708000178",
+      "descricao": "impressão de santinho formato 10x7 4x2 cores ( Candidato sozinho)",
+      "valor": 14900
+    },
+    {
+      "sqCandidato": "50002534985",
+      "fornecedor": "BOSSA NOVA COMUNICACAO, MARKETING, EVENTOS E PRODUCOES LTDA.",
+      "cpfCnpjFornecedor": "45413215000172",
+      "descricao": "PRODUÇÃO DE CONTEÚDO DIGITAL E GESTÃO DE TRÁFEGO",
+      "valor": 25000
+    },
+    {
+      "sqCandidato": "50002534985",
+      "fornecedor": "MENTE MESTRA DIGITAL LTDA",
+      "cpfCnpjFornecedor": "59749543000159",
+      "descricao": "Gestão de tráfego pago",
+      "valor": 2000
+    },
+    {
+      "sqCandidato": "50002534985",
+      "fornecedor": "FEIRA ROTULOS E ETIQUETAS ADESIVAS LTDA",
+      "cpfCnpjFornecedor": "24759252000167",
+      "descricao": "KIT BANDEIRAS, PRAGÕES, ADESIVOS, PIRULITOS E PRAGUINHAS",
+      "valor": 318440
+    },
+    {
+      "sqCandidato": "50002534985",
+      "fornecedor": "FEIRA ROTULOS E ETIQUETAS ADESIVAS LTDA",
+      "cpfCnpjFornecedor": "24759252000167",
+      "descricao": "BIG HANDS 60X40CM",
+      "valor": 120000
+    },
+    {
+      "sqCandidato": "50002534985",
+      "fornecedor": "FACEBOOK SERVICOS ONLINE DO BRASIL LTDA.",
+      "cpfCnpjFornecedor": "13347016000117",
+      "descricao": "IMPULSIONAMENTO DE CONTEÚDOS NO FACEBOOK",
+      "valor": 2000
+    },
+    {
+      "sqCandidato": "50002534985",
+      "fornecedor": "EMGRAF EMPRESARIAL GRAFICA FEIRENSE LTDA",
+      "cpfCnpjFornecedor": "14752810000109",
+      "descricao": "KIT SANTINHOS E ADESIVOS",
+      "valor": 63000
+    },
+    {
+      "sqCandidato": "50002534985",
+      "fornecedor": "EMGRAF FLEXO E GRAFICA LTDA",
+      "cpfCnpjFornecedor": "34598438000135",
+      "descricao": "BIG HANDS 90X55CM",
+      "valor": 99000
+    },
+    {
+      "sqCandidato": "50002534980",
+      "fornecedor": "#NULO",
+      "cpfCnpjFornecedor": "-1",
+      "descricao": "#NULO",
+      "valor": 0
+    },
+    {
+      "sqCandidato": "50002534981",
+      "fornecedor": "#NULO",
+      "cpfCnpjFornecedor": "-1",
+      "descricao": "#NULO",
+      "valor": 0
+    },
+    {
+      "sqCandidato": "50002534998",
+      "fornecedor": "#NULO",
+      "cpfCnpjFornecedor": "-1",
+      "descricao": "#NULO",
+      "valor": 0
+    },
+    {
+      "sqCandidato": "50002534984",
+      "fornecedor": "#NULO",
+      "cpfCnpjFornecedor": "-1",
+      "descricao": "#NULO",
+      "valor": 0
+    },
+    {
+      "sqCandidato": "50002537692",
+      "fornecedor": "#NULO",
+      "cpfCnpjFornecedor": "-1",
+      "descricao": "#NULO",
+      "valor": 0
+    },
+    {
+      "sqCandidato": "50002537702",
+      "fornecedor": "#NULO",
+      "cpfCnpjFornecedor": "-1",
+      "descricao": "#NULO",
+      "valor": 0
+    },
+    {
+      "sqCandidato": "50002537682",
+      "fornecedor": "#NULO",
+      "cpfCnpjFornecedor": "-1",
+      "descricao": "#NULO",
+      "valor": 0
+    },
+    {
+      "sqCandidato": "50002537699",
+      "fornecedor": "#NULO",
+      "cpfCnpjFornecedor": "-1",
+      "descricao": "#NULO",
+      "valor": 0
+    },
+    {
+      "sqCandidato": "50002537697",
+      "fornecedor": "#NULO",
+      "cpfCnpjFornecedor": "-1",
+      "descricao": "#NULO",
+      "valor": 0
+    },
+    {
+      "sqCandidato": "50002537683",
+      "fornecedor": "#NULO",
+      "cpfCnpjFornecedor": "-1",
+      "descricao": "#NULO",
+      "valor": 0
+    },
+    {
+      "sqCandidato": "50002537706",
+      "fornecedor": "#NULO",
+      "cpfCnpjFornecedor": "-1",
+      "descricao": "#NULO",
+      "valor": 0
+    },
+    {
+      "sqCandidato": "50002537688",
+      "fornecedor": "#NULO",
+      "cpfCnpjFornecedor": "-1",
+      "descricao": "#NULO",
+      "valor": 0
+    },
+    {
+      "sqCandidato": "50002536631",
+      "fornecedor": "#NULO",
+      "cpfCnpjFornecedor": "-1",
+      "descricao": "#NULO",
+      "valor": 0
+    },
+    {
+      "sqCandidato": "50002536653",
+      "fornecedor": "#NULO",
+      "cpfCnpjFornecedor": "-1",
+      "descricao": "#NULO",
+      "valor": 0
+    },
+    {
+      "sqCandidato": "50002532902",
+      "fornecedor": "#NULO",
+      "cpfCnpjFornecedor": "-1",
+      "descricao": "#NULO",
+      "valor": 0
+    },
+    {
+      "sqCandidato": "50002532889",
+      "fornecedor": "#NULO",
+      "cpfCnpjFornecedor": "-1",
+      "descricao": "#NULO",
+      "valor": 0
+    },
+    {
+      "sqCandidato": "50002532895",
+      "fornecedor": "#NULO",
+      "cpfCnpjFornecedor": "-1",
+      "descricao": "#NULO",
+      "valor": 0
+    },
+    {
+      "sqCandidato": "50002532912",
+      "fornecedor": "MEGA PRIME SERVICOS AUTOMOTIVO ESPLANADA LTDA",
+      "cpfCnpjFornecedor": "32118139000120",
+      "descricao": "LOCAÇÃO DE VEICULO PARA USO DURANTE A CAMPANHA ELEITORAL",
+      "valor": 7200
+    },
+    {
+      "sqCandidato": "50002531404",
+      "fornecedor": "#NULO",
+      "cpfCnpjFornecedor": "-1",
+      "descricao": "#NULO",
+      "valor": 0
+    },
+    {
+      "sqCandidato": "50002540497",
+      "fornecedor": "QueroApoiar.com.br",
+      "cpfCnpjFornecedor": "39586155000197",
+      "descricao": "Taxa Administração Financiamento Coletivo",
+      "valor": 7.4
+    },
+    {
+      "sqCandidato": "50002535153",
+      "fornecedor": "#NULO",
+      "cpfCnpjFornecedor": "-1",
+      "descricao": "#NULO",
+      "valor": 0
+    },
+    {
+      "sqCandidato": "50002532517",
+      "fornecedor": "FACEBOOK SERVICOS ONLINE DO BRASIL LTDA.",
+      "cpfCnpjFornecedor": "13347016000117",
+      "descricao": "IMPULSIONAMENTO DE CONTEÚDO",
+      "valor": 500
+    },
+    {
+      "sqCandidato": "50002532517",
+      "fornecedor": "JOELDEN DE SA BARRETO SOARES 01826711511",
+      "cpfCnpjFornecedor": "28865164000109",
+      "descricao": "santinhos tamanho 6x9 - 4x0",
+      "valor": 2100
+    },
+    {
+      "sqCandidato": "50002532497",
+      "fornecedor": "#NULO",
+      "cpfCnpjFornecedor": "-1",
+      "descricao": "#NULO",
+      "valor": 0
+    },
+    {
+      "sqCandidato": "50002535837",
+      "fornecedor": "#NULO",
+      "cpfCnpjFornecedor": "-1",
+      "descricao": "#NULO",
+      "valor": 0
+    },
+    {
+      "sqCandidato": "50002535152",
+      "fornecedor": "#NULO",
+      "cpfCnpjFornecedor": "-1",
+      "descricao": "#NULO",
+      "valor": 0
+    },
+    {
+      "sqCandidato": "50002532513",
+      "fornecedor": "FACEBOOK SERVICOS ONLINE DO BRASIL LTDA.",
+      "cpfCnpjFornecedor": "13347016000117",
+      "descricao": "Créditos para impulsionamento em redes sociais",
+      "valor": 1000
+    },
+    {
+      "sqCandidato": "50002532513",
+      "fornecedor": "53.995.571 LEANDRO MORAIS DOS SANTOS",
+      "cpfCnpjFornecedor": "53995571000170",
+      "descricao": "Confecção, impressãoeinstalaçãodeplacadeidentificaçãodafachadadocomitêeleitoral,medindo4,00mx1,00m,",
+      "valor": 1100
+    },
+    {
+      "sqCandidato": "50002532523",
+      "fornecedor": "QueroApoiar.com.br",
+      "cpfCnpjFornecedor": "39586155000197",
+      "descricao": "Taxa Administração Financiamento Coletivo",
+      "valor": 157.64
+    },
+    {
+      "sqCandidato": "50002531449",
+      "fornecedor": "#NULO",
+      "cpfCnpjFornecedor": "-1",
+      "descricao": "#NULO",
+      "valor": 0
+    },
+    {
+      "sqCandidato": "50002532504",
+      "fornecedor": "#NULO",
+      "cpfCnpjFornecedor": "-1",
+      "descricao": "#NULO",
+      "valor": 0
+    },
+    {
+      "sqCandidato": "50002535853",
+      "fornecedor": "#NULO",
+      "cpfCnpjFornecedor": "-1",
+      "descricao": "#NULO",
+      "valor": 0
+    },
+    {
+      "sqCandidato": "50002535855",
+      "fornecedor": "#NULO",
+      "cpfCnpjFornecedor": "-1",
+      "descricao": "#NULO",
+      "valor": 0
+    },
+    {
+      "sqCandidato": "50002534738",
+      "fornecedor": "#NULO",
+      "cpfCnpjFornecedor": "-1",
+      "descricao": "#NULO",
+      "valor": 0
+    },
+    {
+      "sqCandidato": "50002538664",
+      "fornecedor": "WLADIMIR DE ARAUJO PINHO",
+      "cpfCnpjFornecedor": "76575730582",
+      "descricao": "Serviços Técnicos Contábil na elaboração da Prestação de Contas",
+      "valor": 6380
+    },
+    {
+      "sqCandidato": "50002538664",
+      "fornecedor": "Caliane Moura Nunes",
+      "cpfCnpjFornecedor": "84252162572",
+      "descricao": "Assessoria e consultoria no curso da campanha eleitoral, em favor desta e em processo judicial",
+      "valor": 4000
+    },
+    {
+      "sqCandidato": "50002538657",
+      "fornecedor": "#NULO",
+      "cpfCnpjFornecedor": "-1",
+      "descricao": "#NULO",
+      "valor": 0
+    },
+    {
+      "sqCandidato": "50002535105",
+      "fornecedor": "#NULO",
+      "cpfCnpjFornecedor": "-1",
+      "descricao": "#NULO",
+      "valor": 0
+    },
+    {
+      "sqCandidato": "50002535116",
+      "fornecedor": "#NULO",
+      "cpfCnpjFornecedor": "-1",
+      "descricao": "#NULO",
+      "valor": 0
+    },
+    {
+      "sqCandidato": "50002535132",
+      "fornecedor": "#NULO",
+      "cpfCnpjFornecedor": "-1",
+      "descricao": "#NULO",
+      "valor": 0
+    },
+    {
+      "sqCandidato": "50002533190",
+      "fornecedor": "CENCOSUD BRASIL COMERCIAL LTDA.",
+      "cpfCnpjFornecedor": "39346861035038",
+      "descricao": "LOCAÇÃO COMITÊ AVENIDA ACM",
+      "valor": 180000
+    },
+    {
+      "sqCandidato": "50002533190",
+      "fornecedor": "#NULO",
+      "cpfCnpjFornecedor": "-1",
+      "descricao": "TARIFA BANCÁRIA FP",
+      "valor": 13.6
+    },
+    {
+      "sqCandidato": "50002536314",
+      "fornecedor": "#NULO",
+      "cpfCnpjFornecedor": "-1",
+      "descricao": "#NULO",
+      "valor": 0
+    }
+  ]
+}

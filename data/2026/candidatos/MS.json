@@ -19,7 +19,10 @@
     "ocupacao": "SERVIDOR PÚBLICO ESTADUAL",
     "cpf": "70266158153",
     "codEleicao": "6259",
-    "sqColigacao": "120001800099"
+    "sqColigacao": "120001800099",
+    "tetoGastos": 3176572.53,
+    "situacaoJulgamento": "DEFERIDO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002532716_div.jpg"
   },
   {
     "sqCandidato": "120002534954",
@@ -41,7 +44,9 @@
     "ocupacao": "MANICURE E MAQUILADOR",
     "cpf": "96197676168",
     "codEleicao": "6259",
-    "sqColigacao": "120001800227"
+    "sqColigacao": "120001800227",
+    "situacaoJulgamento": "AGUARDANDO JULGAMENTO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002534954_div.jpg"
   },
   {
     "sqCandidato": "120002534952",
@@ -63,7 +68,10 @@
     "ocupacao": "OUTROS",
     "cpf": "87170485168",
     "codEleicao": "6259",
-    "sqColigacao": "120001800227"
+    "sqColigacao": "120001800227",
+    "tetoGastos": 3176572.53,
+    "situacaoJulgamento": "AGUARDANDO JULGAMENTO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002534952_div.jpg"
   },
   {
     "sqCandidato": "120002534955",
@@ -85,7 +93,10 @@
     "ocupacao": "SERVIDOR PÚBLICO MUNICIPAL",
     "cpf": "71090029187",
     "codEleicao": "6259",
-    "sqColigacao": "120001800228"
+    "sqColigacao": "120001800228",
+    "tetoGastos": 3176572.53,
+    "situacaoJulgamento": "DEFERIDO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002534955_div.jpg"
   },
   {
     "sqCandidato": "120002535262",
@@ -107,7 +118,10 @@
     "ocupacao": "TÉCNICO DE ENFERMAGEM E ASSEMELHADOS (EXCETO ENFERMEIRO)",
     "cpf": "78098890104",
     "codEleicao": "6259",
-    "sqColigacao": "120001800268"
+    "sqColigacao": "120001800268",
+    "tetoGastos": 3176572.53,
+    "situacaoJulgamento": "AGUARDANDO JULGAMENTO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002535262_div.jpg"
   },
   {
     "sqCandidato": "120002535265",
@@ -129,7 +143,10 @@
     "ocupacao": "ANTROPÓLOGO",
     "cpf": "71504214153",
     "codEleicao": "6259",
-    "sqColigacao": "120001800268"
+    "sqColigacao": "120001800268",
+    "tetoGastos": 3176572.53,
+    "situacaoJulgamento": "DEFERIDO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002535265_div.jpg"
   },
   {
     "sqCandidato": "120002535514",
@@ -151,7 +168,10 @@
     "ocupacao": "MÉDICO",
     "cpf": "86856812191",
     "codEleicao": "6259",
-    "sqColigacao": "120001800249"
+    "sqColigacao": "120001800249",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "DEFERIDO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002535514_div.jpg"
   },
   {
     "sqCandidato": "120002535528",
@@ -173,7 +193,10 @@
     "ocupacao": "JORNALISTA E REDATOR",
     "cpf": "03964813109",
     "codEleicao": "6259",
-    "sqColigacao": "120001800249"
+    "sqColigacao": "120001800249",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "AGUARDANDO JULGAMENTO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002535528_div.jpg"
   },
   {
     "sqCandidato": "120002535536",
@@ -195,7 +218,10 @@
     "ocupacao": "ECONOMISTA",
     "cpf": "33782148134",
     "codEleicao": "6259",
-    "sqColigacao": "120001800249"
+    "sqColigacao": "120001800249",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "DEFERIDO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002535536_div.jpg"
   },
   {
     "sqCandidato": "120002535765",
@@ -217,7 +243,9 @@
     "ocupacao": "MÉDICO",
     "cpf": "40448118149",
     "codEleicao": "6259",
-    "sqColigacao": "120001800239"
+    "sqColigacao": "120001800239",
+    "situacaoJulgamento": "DEFERIDO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002535765_div.jpg"
   },
   {
     "sqCandidato": "120002536068",
@@ -239,7 +267,10 @@
     "ocupacao": "SERVIDOR PÚBLICO FEDERAL",
     "cpf": "69138435187",
     "codEleicao": "6259",
-    "sqColigacao": "120001800276"
+    "sqColigacao": "120001800276",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "DEFERIDO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002536068_div.jpg"
   },
   {
     "sqCandidato": "120002536071",
@@ -261,7 +292,10 @@
     "ocupacao": "SERVIDOR PÚBLICO ESTADUAL",
     "cpf": "03611427659",
     "codEleicao": "6259",
-    "sqColigacao": "120001800276"
+    "sqColigacao": "120001800276",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "DEFERIDO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002536071_div.jpg"
   },
   {
     "sqCandidato": "120002536076",
@@ -283,7 +317,10 @@
     "ocupacao": "SERVIDOR PÚBLICO CIVIL APOSENTADO",
     "cpf": "20018614191",
     "codEleicao": "6259",
-    "sqColigacao": "120001800276"
+    "sqColigacao": "120001800276",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "DEFERIDO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002536076_div.jpg"
   },
   {
     "sqCandidato": "120002536582",
@@ -305,7 +342,13 @@
     "ocupacao": "GOVERNADOR",
     "cpf": "00898464781",
     "codEleicao": "6259",
-    "sqColigacao": "120001800246"
+    "sqColigacao": "120001800246",
+    "tetoGastos": 6226082.16,
+    "situacaoJulgamento": "DEFERIDO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002536582_div.jpg",
+    "planoGovernoUrls": [
+      "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/planos-de-governo/MS/2026MS120002536582_01.pdf"
+    ]
   },
   {
     "sqCandidato": "120002537360",
@@ -327,7 +370,10 @@
     "ocupacao": "CORRETOR DE IMÓVEIS, SEGUROS, TÍTULOS E VALORES",
     "cpf": "78237114191",
     "codEleicao": "6259",
-    "sqColigacao": "120001800356"
+    "sqColigacao": "120001800356",
+    "tetoGastos": 3176572.53,
+    "situacaoJulgamento": "DEFERIDO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002537360_div.jpg"
   },
   {
     "sqCandidato": "120002537509",
@@ -349,7 +395,10 @@
     "ocupacao": "VEREADOR",
     "cpf": "98362704187",
     "codEleicao": "6259",
-    "sqColigacao": "120001800364"
+    "sqColigacao": "120001800364",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "DEFERIDO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002537509_div.jpg"
   },
   {
     "sqCandidato": "120002537513",
@@ -371,7 +420,10 @@
     "ocupacao": "APOSENTADO (EXCETO SERVIDOR PÚBLICO)",
     "cpf": "48121886104",
     "codEleicao": "6259",
-    "sqColigacao": "120001800364"
+    "sqColigacao": "120001800364",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "DEFERIDO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002537513_div.jpg"
   },
   {
     "sqCandidato": "120002537521",
@@ -393,7 +445,10 @@
     "ocupacao": "ADVOGADO",
     "cpf": "31635768853",
     "codEleicao": "6259",
-    "sqColigacao": "120001800364"
+    "sqColigacao": "120001800364",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "RENÚNCIA",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002537521_div.jpg"
   },
   {
     "sqCandidato": "120002538952",
@@ -415,7 +470,10 @@
     "ocupacao": "APOSENTADO (EXCETO SERVIDOR PÚBLICO)",
     "cpf": "06358012134",
     "codEleicao": "6259",
-    "sqColigacao": "120001800411"
+    "sqColigacao": "120001800411",
+    "tetoGastos": 3176572.53,
+    "situacaoJulgamento": "DEFERIDO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002538952_div.jpg"
   },
   {
     "sqCandidato": "120002544960",
@@ -437,7 +495,10 @@
     "ocupacao": "ESTUDANTE, BOLSISTA, ESTAGIÁRIO E ASSEMELHADOS",
     "cpf": "06505851194",
     "codEleicao": "6259",
-    "sqColigacao": "120001800768"
+    "sqColigacao": "120001800768",
+    "tetoGastos": 3176572.53,
+    "situacaoJulgamento": "AGUARDANDO JULGAMENTO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002544960_div.jpg"
   },
   {
     "sqCandidato": "120002544969",
@@ -459,7 +520,10 @@
     "ocupacao": "COZINHEIRO",
     "cpf": "63991470187",
     "codEleicao": "6259",
-    "sqColigacao": "120001800769"
+    "sqColigacao": "120001800769",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "AGUARDANDO JULGAMENTO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002544969_div.jpg"
   },
   {
     "sqCandidato": "120002544976",
@@ -481,7 +545,10 @@
     "ocupacao": "ADMINISTRADOR",
     "cpf": "05469583112",
     "codEleicao": "6259",
-    "sqColigacao": "120001800769"
+    "sqColigacao": "120001800769",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "AGUARDANDO JULGAMENTO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002544976_div.jpg"
   },
   {
     "sqCandidato": "120002544977",
@@ -503,7 +570,10 @@
     "ocupacao": "ADVOGADO",
     "cpf": "91700060163",
     "codEleicao": "6259",
-    "sqColigacao": "120001800769"
+    "sqColigacao": "120001800769",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "AGUARDANDO JULGAMENTO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002544977_div.jpg"
   },
   {
     "sqCandidato": "120002547057",
@@ -525,7 +595,10 @@
     "ocupacao": "CORRETOR DE IMÓVEIS, SEGUROS, TÍTULOS E VALORES",
     "cpf": "27295281134",
     "codEleicao": "6259",
-    "sqColigacao": "120001800852"
+    "sqColigacao": "120001800852",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "DEFERIDO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002547057_div.jpg"
   },
   {
     "sqCandidato": "120002549563",
@@ -547,7 +620,10 @@
     "ocupacao": "ADVOGADO",
     "cpf": "01938485114",
     "codEleicao": "6259",
-    "sqColigacao": "120001801054"
+    "sqColigacao": "120001801054",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "AGUARDANDO JULGAMENTO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002549563_div.jpg"
   },
   {
     "sqCandidato": "120002549691",
@@ -569,7 +645,10 @@
     "ocupacao": "DESPACHANTE",
     "cpf": "60982071191",
     "codEleicao": "6259",
-    "sqColigacao": "120001801020"
+    "sqColigacao": "120001801020",
+    "tetoGastos": 3176572.53,
+    "situacaoJulgamento": "DEFERIDO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002549691_div.jpg"
   },
   {
     "sqCandidato": "120002550714",
@@ -591,7 +670,10 @@
     "ocupacao": "ADVOGADO",
     "cpf": "55739644100",
     "codEleicao": "6259",
-    "sqColigacao": "120001801128"
+    "sqColigacao": "120001801128",
+    "tetoGastos": 3176572.53,
+    "situacaoJulgamento": "AGUARDANDO JULGAMENTO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002550714_div.jpg"
   },
   {
     "sqCandidato": "120002550717",
@@ -613,7 +695,10 @@
     "ocupacao": "PROFESSOR DE ENSINO SUPERIOR",
     "cpf": "83928987704",
     "codEleicao": "6259",
-    "sqColigacao": "120001801128"
+    "sqColigacao": "120001801128",
+    "tetoGastos": 3176572.53,
+    "situacaoJulgamento": "AGUARDANDO JULGAMENTO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002550717_div.jpg"
   },
   {
     "sqCandidato": "120002551716",
@@ -635,7 +720,10 @@
     "ocupacao": "PSICÓLOGO",
     "cpf": "06395556169",
     "codEleicao": "6259",
-    "sqColigacao": "120001801270"
+    "sqColigacao": "120001801270",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "DEFERIDO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002551716_div.jpg"
   },
   {
     "sqCandidato": "120002551723",
@@ -657,7 +745,10 @@
     "ocupacao": "OUTROS",
     "cpf": "01822271118",
     "codEleicao": "6259",
-    "sqColigacao": "120001801270"
+    "sqColigacao": "120001801270",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "DEFERIDO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002551723_div.jpg"
   },
   {
     "sqCandidato": "120002552175",
@@ -679,7 +770,10 @@
     "ocupacao": "EMPRESÁRIO",
     "cpf": "25692976153",
     "codEleicao": "6259",
-    "sqColigacao": "120001801252"
+    "sqColigacao": "120001801252",
+    "tetoGastos": 3176572.53,
+    "situacaoJulgamento": "AGUARDANDO JULGAMENTO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002552175_div.jpg"
   },
   {
     "sqCandidato": "120002552176",
@@ -701,7 +795,10 @@
     "ocupacao": "EMPRESÁRIO",
     "cpf": "04754718143",
     "codEleicao": "6259",
-    "sqColigacao": "120001801252"
+    "sqColigacao": "120001801252",
+    "tetoGastos": 3176572.53,
+    "situacaoJulgamento": "AGUARDANDO JULGAMENTO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002552176_div.jpg"
   },
   {
     "sqCandidato": "120002552205",
@@ -723,7 +820,10 @@
     "ocupacao": "SERVIDOR PÚBLICO MUNICIPAL",
     "cpf": "96483199104",
     "codEleicao": "6259",
-    "sqColigacao": "120001801245"
+    "sqColigacao": "120001801245",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "DEFERIDO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002552205_div.jpg"
   },
   {
     "sqCandidato": "120002552211",
@@ -745,7 +845,10 @@
     "ocupacao": "EMPRESÁRIO",
     "cpf": "80396593100",
     "codEleicao": "6259",
-    "sqColigacao": "120001801245"
+    "sqColigacao": "120001801245",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "AGUARDANDO JULGAMENTO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002552211_div.jpg"
   },
   {
     "sqCandidato": "120002552687",
@@ -767,7 +870,10 @@
     "ocupacao": "ESTUDANTE, BOLSISTA, ESTAGIÁRIO E ASSEMELHADOS",
     "cpf": "70505359154",
     "codEleicao": "6259",
-    "sqColigacao": "120001801260"
+    "sqColigacao": "120001801260",
+    "tetoGastos": 3176572.53,
+    "situacaoJulgamento": "AGUARDANDO JULGAMENTO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002552687_div.jpg"
   },
   {
     "sqCandidato": "120002553022",
@@ -789,7 +895,10 @@
     "ocupacao": "PSICÓLOGO",
     "cpf": "03008264190",
     "codEleicao": "6259",
-    "sqColigacao": "120001801350"
+    "sqColigacao": "120001801350",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "AGUARDANDO JULGAMENTO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002553022_div.jpg"
   },
   {
     "sqCandidato": "120002532718",
@@ -811,7 +920,10 @@
     "ocupacao": "PROFESSOR DE ENSINO FUNDAMENTAL",
     "cpf": "03417333180",
     "codEleicao": "6259",
-    "sqColigacao": "120001800099"
+    "sqColigacao": "120001800099",
+    "tetoGastos": 3176572.53,
+    "situacaoJulgamento": "DEFERIDO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002532718_div.jpg"
   },
   {
     "sqCandidato": "120002535259",
@@ -833,7 +945,10 @@
     "ocupacao": "MÉDICO",
     "cpf": "69608474191",
     "codEleicao": "6259",
-    "sqColigacao": "120001800268"
+    "sqColigacao": "120001800268",
+    "tetoGastos": 3176572.53,
+    "situacaoJulgamento": "DEFERIDO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002535259_div.jpg"
   },
   {
     "sqCandidato": "120002535260",
@@ -855,7 +970,10 @@
     "ocupacao": "PROFESSOR DE ENSINO FUNDAMENTAL",
     "cpf": "49200844120",
     "codEleicao": "6259",
-    "sqColigacao": "120001800268"
+    "sqColigacao": "120001800268",
+    "tetoGastos": 3176572.53,
+    "situacaoJulgamento": "DEFERIDO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002535260_div.jpg"
   },
   {
     "sqCandidato": "120002535526",
@@ -877,7 +995,10 @@
     "ocupacao": "COMERCIANTE",
     "cpf": "33726078134",
     "codEleicao": "6259",
-    "sqColigacao": "120001800249"
+    "sqColigacao": "120001800249",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "DEFERIDO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002535526_div.jpg"
   },
   {
     "sqCandidato": "120002535534",
@@ -899,7 +1020,10 @@
     "ocupacao": "SERVIDOR PÚBLICO ESTADUAL",
     "cpf": "03059233152",
     "codEleicao": "6259",
-    "sqColigacao": "120001800249"
+    "sqColigacao": "120001800249",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "DEFERIDO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002535534_div.jpg"
   },
   {
     "sqCandidato": "120002535533",
@@ -921,7 +1045,10 @@
     "ocupacao": "SERVIDOR PÚBLICO MUNICIPAL",
     "cpf": "01761327160",
     "codEleicao": "6259",
-    "sqColigacao": "120001800249"
+    "sqColigacao": "120001800249",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "DEFERIDO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002535533_div.jpg"
   },
   {
     "sqCandidato": "120002535766",
@@ -943,7 +1070,9 @@
     "ocupacao": "ADVOGADO",
     "cpf": "00116330180",
     "codEleicao": "6259",
-    "sqColigacao": "120001800239"
+    "sqColigacao": "120001800239",
+    "situacaoJulgamento": "DEFERIDO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002535766_div.jpg"
   },
   {
     "sqCandidato": "120002535769",
@@ -965,7 +1094,10 @@
     "ocupacao": "MEMBRO DAS FORÇAS ARMADAS",
     "cpf": "32443006859",
     "codEleicao": "6259",
-    "sqColigacao": "120001800239"
+    "sqColigacao": "120001800239",
+    "tetoGastos": 3176572.53,
+    "situacaoJulgamento": "DEFERIDO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002535769_div.jpg"
   },
   {
     "sqCandidato": "120002536282",
@@ -987,7 +1119,10 @@
     "ocupacao": "ADVOGADO",
     "cpf": "71036091104",
     "codEleicao": "6259",
-    "sqColigacao": "120001800253"
+    "sqColigacao": "120001800253",
+    "tetoGastos": 3176572.53,
+    "situacaoJulgamento": "DEFERIDO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002536282_div.jpg"
   },
   {
     "sqCandidato": "120002537355",
@@ -1009,7 +1144,10 @@
     "ocupacao": "DEPUTADO",
     "cpf": "69380007191",
     "codEleicao": "6259",
-    "sqColigacao": "120001800356"
+    "sqColigacao": "120001800356",
+    "tetoGastos": 3176572.53,
+    "situacaoJulgamento": "DEFERIDO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002537355_div.jpg"
   },
   {
     "sqCandidato": "120002537461",
@@ -1031,7 +1169,10 @@
     "ocupacao": "DONA DE CASA",
     "cpf": "04424412156",
     "codEleicao": "6259",
-    "sqColigacao": "120001800362"
+    "sqColigacao": "120001800362",
+    "tetoGastos": 3176572.53,
+    "situacaoJulgamento": "AGUARDANDO JULGAMENTO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002537461_div.jpg"
   },
   {
     "sqCandidato": "120002537462",
@@ -1053,7 +1194,10 @@
     "ocupacao": "APOSENTADO (EXCETO SERVIDOR PÚBLICO)",
     "cpf": "20070349134",
     "codEleicao": "6259",
-    "sqColigacao": "120001800362"
+    "sqColigacao": "120001800362",
+    "tetoGastos": 3176572.53,
+    "situacaoJulgamento": "DEFERIDO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002537462_div.jpg"
   },
   {
     "sqCandidato": "120002537466",
@@ -1075,7 +1219,10 @@
     "ocupacao": "ADVOGADO",
     "cpf": "46645632134",
     "codEleicao": "6259",
-    "sqColigacao": "120001800362"
+    "sqColigacao": "120001800362",
+    "tetoGastos": 3176572.53,
+    "situacaoJulgamento": "DEFERIDO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002537466_div.jpg"
   },
   {
     "sqCandidato": "120002537499",
@@ -1097,7 +1244,10 @@
     "ocupacao": "EMPRESÁRIO",
     "cpf": "02927549141",
     "codEleicao": "6259",
-    "sqColigacao": "120001800364"
+    "sqColigacao": "120001800364",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "DEFERIDO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002537499_div.jpg"
   },
   {
     "sqCandidato": "120002537500",
@@ -1119,7 +1269,10 @@
     "ocupacao": "ADVOGADO",
     "cpf": "00596908105",
     "codEleicao": "6259",
-    "sqColigacao": "120001800364"
+    "sqColigacao": "120001800364",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "DEFERIDO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002537500_div.jpg"
   },
   {
     "sqCandidato": "120002537510",
@@ -1141,7 +1294,10 @@
     "ocupacao": "EMPRESÁRIO",
     "cpf": "85211117115",
     "codEleicao": "6259",
-    "sqColigacao": "120001800364"
+    "sqColigacao": "120001800364",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "DEFERIDO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002537510_div.jpg"
   },
   {
     "sqCandidato": "120002537514",
@@ -1163,7 +1319,10 @@
     "ocupacao": "POLICIAL MILITAR",
     "cpf": "02244931161",
     "codEleicao": "6259",
-    "sqColigacao": "120001800364"
+    "sqColigacao": "120001800364",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "DEFERIDO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002537514_div.jpg"
   },
   {
     "sqCandidato": "120002537518",
@@ -1185,7 +1344,10 @@
     "ocupacao": "EMPRESÁRIO",
     "cpf": "63755955172",
     "codEleicao": "6259",
-    "sqColigacao": "120001800364"
+    "sqColigacao": "120001800364",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "DEFERIDO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002537518_div.jpg"
   },
   {
     "sqCandidato": "120002537520",
@@ -1207,7 +1369,10 @@
     "ocupacao": "EMPRESÁRIO",
     "cpf": "45659176100",
     "codEleicao": "6259",
-    "sqColigacao": "120001800364"
+    "sqColigacao": "120001800364",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "DEFERIDO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002537520_div.jpg"
   },
   {
     "sqCandidato": "120002538787",
@@ -1229,7 +1394,10 @@
     "ocupacao": "ADVOGADO",
     "cpf": "01347396128",
     "codEleicao": "6259",
-    "sqColigacao": "120001800440"
+    "sqColigacao": "120001800440",
+    "tetoGastos": 3176572.53,
+    "situacaoJulgamento": "DEFERIDO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002538787_div.jpg"
   },
   {
     "sqCandidato": "120002538946",
@@ -1251,7 +1419,10 @@
     "ocupacao": "CORRETOR DE IMÓVEIS, SEGUROS, TÍTULOS E VALORES",
     "cpf": "34626670172",
     "codEleicao": "6259",
-    "sqColigacao": "120001800411"
+    "sqColigacao": "120001800411",
+    "tetoGastos": 3176572.53,
+    "situacaoJulgamento": "DEFERIDO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002538946_div.jpg"
   },
   {
     "sqCandidato": "120002539693",
@@ -1273,7 +1444,10 @@
     "ocupacao": "EMPRESÁRIO",
     "cpf": "87792982149",
     "codEleicao": "6259",
-    "sqColigacao": "120001800466"
+    "sqColigacao": "120001800466",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "AGUARDANDO JULGAMENTO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002539693_div.jpg"
   },
   {
     "sqCandidato": "120002539696",
@@ -1295,7 +1469,10 @@
     "ocupacao": "SERVIDOR PÚBLICO MUNICIPAL",
     "cpf": "60096845104",
     "codEleicao": "6259",
-    "sqColigacao": "120001800466"
+    "sqColigacao": "120001800466",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "AGUARDANDO JULGAMENTO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002539696_div.jpg"
   },
   {
     "sqCandidato": "120002539701",
@@ -1317,7 +1494,10 @@
     "ocupacao": "FISCAL",
     "cpf": "13394102811",
     "codEleicao": "6259",
-    "sqColigacao": "120001800466"
+    "sqColigacao": "120001800466",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "AGUARDANDO JULGAMENTO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002539701_div.jpg"
   },
   {
     "sqCandidato": "120002539703",
@@ -1339,7 +1519,10 @@
     "ocupacao": "ADVOGADO",
     "cpf": "40482332115",
     "codEleicao": "6259",
-    "sqColigacao": "120001800466"
+    "sqColigacao": "120001800466",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "AGUARDANDO JULGAMENTO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002539703_div.jpg"
   },
   {
     "sqCandidato": "120002544704",
@@ -1361,7 +1544,10 @@
     "ocupacao": "COMERCIANTE",
     "cpf": "80193684691",
     "codEleicao": "6259",
-    "sqColigacao": "120001800745"
+    "sqColigacao": "120001800745",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "DEFERIDO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002544704_div.jpg"
   },
   {
     "sqCandidato": "120002544708",
@@ -1383,7 +1569,10 @@
     "ocupacao": "ESTUDANTE, BOLSISTA, ESTAGIÁRIO E ASSEMELHADOS",
     "cpf": "13539218670",
     "codEleicao": "6259",
-    "sqColigacao": "120001800745"
+    "sqColigacao": "120001800745",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "DEFERIDO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002544708_div.jpg"
   },
   {
     "sqCandidato": "120002544716",
@@ -1405,7 +1594,10 @@
     "ocupacao": "SERVIDOR PÚBLICO CIVIL APOSENTADO",
     "cpf": "58265589620",
     "codEleicao": "6259",
-    "sqColigacao": "120001800745"
+    "sqColigacao": "120001800745",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "DEFERIDO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002544716_div.jpg"
   },
   {
     "sqCandidato": "120002544962",
@@ -1427,7 +1619,10 @@
     "ocupacao": "PROFESSOR DE ENSINO MÉDIO",
     "cpf": "15607992187",
     "codEleicao": "6259",
-    "sqColigacao": "120001800769"
+    "sqColigacao": "120001800769",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "AGUARDANDO JULGAMENTO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002544962_div.jpg"
   },
   {
     "sqCandidato": "120002544973",
@@ -1449,7 +1644,10 @@
     "ocupacao": "ADMINISTRADOR",
     "cpf": "48158372104",
     "codEleicao": "6259",
-    "sqColigacao": "120001800769"
+    "sqColigacao": "120001800769",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "AGUARDANDO JULGAMENTO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002544973_div.jpg"
   },
   {
     "sqCandidato": "120002545234",
@@ -1471,7 +1669,10 @@
     "ocupacao": "ADVOGADO",
     "cpf": "30908159153",
     "codEleicao": "6259",
-    "sqColigacao": "120001800660"
+    "sqColigacao": "120001800660",
+    "tetoGastos": 3176572.53,
+    "situacaoJulgamento": "AGUARDANDO JULGAMENTO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002545234_div.jpg"
   },
   {
     "sqCandidato": "120002545237",
@@ -1493,7 +1694,10 @@
     "ocupacao": "BOMBEIRO MILITAR",
     "cpf": "46489681153",
     "codEleicao": "6259",
-    "sqColigacao": "120001800660"
+    "sqColigacao": "120001800660",
+    "tetoGastos": 3176572.53,
+    "situacaoJulgamento": "AGUARDANDO JULGAMENTO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002545237_div.jpg"
   },
   {
     "sqCandidato": "120002547064",
@@ -1515,7 +1719,10 @@
     "ocupacao": "MÉDICO",
     "cpf": "11476272824",
     "codEleicao": "6259",
-    "sqColigacao": "120001800852"
+    "sqColigacao": "120001800852",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "AGUARDANDO JULGAMENTO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002547064_div.jpg"
   },
   {
     "sqCandidato": "120002547437",
@@ -1537,7 +1744,9 @@
     "ocupacao": "EMPRESÁRIO",
     "cpf": "92430520125",
     "codEleicao": "6259",
-    "sqColigacao": "120001800861"
+    "sqColigacao": "120001800861",
+    "situacaoJulgamento": "AGUARDANDO JULGAMENTO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002547437_div.jpg"
   },
   {
     "sqCandidato": "120002549564",
@@ -1559,7 +1768,10 @@
     "ocupacao": "OUTROS",
     "cpf": "01945489103",
     "codEleicao": "6259",
-    "sqColigacao": "120001801054"
+    "sqColigacao": "120001801054",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "DEFERIDO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002549564_div.jpg"
   },
   {
     "sqCandidato": "120002549565",
@@ -1581,7 +1793,10 @@
     "ocupacao": "SERVIDOR PÚBLICO CIVIL APOSENTADO",
     "cpf": "17446929120",
     "codEleicao": "6259",
-    "sqColigacao": "120001801054"
+    "sqColigacao": "120001801054",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "AGUARDANDO JULGAMENTO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002549565_div.jpg"
   },
   {
     "sqCandidato": "120002549581",
@@ -1603,7 +1818,10 @@
     "ocupacao": "COMERCIANTE",
     "cpf": "02264060409",
     "codEleicao": "6259",
-    "sqColigacao": "120001801054"
+    "sqColigacao": "120001801054",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "AGUARDANDO JULGAMENTO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002549581_div.jpg"
   },
   {
     "sqCandidato": "120002549686",
@@ -1625,7 +1843,10 @@
     "ocupacao": "PUBLICITÁRIO",
     "cpf": "04683520150",
     "codEleicao": "6259",
-    "sqColigacao": "120001801020"
+    "sqColigacao": "120001801020",
+    "tetoGastos": 3176572.53,
+    "situacaoJulgamento": "DEFERIDO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002549686_div.jpg"
   },
   {
     "sqCandidato": "120002549687",
@@ -1647,7 +1868,10 @@
     "ocupacao": "TÉCNICO DE ENFERMAGEM E ASSEMELHADOS (EXCETO ENFERMEIRO)",
     "cpf": "85444120178",
     "codEleicao": "6259",
-    "sqColigacao": "120001801020"
+    "sqColigacao": "120001801020",
+    "tetoGastos": 3176572.53,
+    "situacaoJulgamento": "DEFERIDO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002549687_div.jpg"
   },
   {
     "sqCandidato": "120002550198",
@@ -1669,7 +1893,13 @@
     "ocupacao": "JORNALISTA E REDATOR",
     "cpf": "60037520172",
     "codEleicao": "6259",
-    "sqColigacao": "120001801095"
+    "sqColigacao": "120001801095",
+    "tetoGastos": 6226082.16,
+    "situacaoJulgamento": "AGUARDANDO JULGAMENTO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002550198_div.jpg",
+    "planoGovernoUrls": [
+      "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/planos-de-governo/MS/2026MS120002550198_01.pdf"
+    ]
   },
   {
     "sqCandidato": "120002551719",
@@ -1691,7 +1921,10 @@
     "ocupacao": "SERVIDOR PÚBLICO ESTADUAL",
     "cpf": "90775279153",
     "codEleicao": "6259",
-    "sqColigacao": "120001801270"
+    "sqColigacao": "120001801270",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "DEFERIDO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002551719_div.jpg"
   },
   {
     "sqCandidato": "120002552179",
@@ -1713,7 +1946,10 @@
     "ocupacao": "EMPRESÁRIO",
     "cpf": "65331540104",
     "codEleicao": "6259",
-    "sqColigacao": "120001801252"
+    "sqColigacao": "120001801252",
+    "tetoGastos": 3176572.53,
+    "situacaoJulgamento": "AGUARDANDO JULGAMENTO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002552179_div.jpg"
   },
   {
     "sqCandidato": "120002553013",
@@ -1735,7 +1971,10 @@
     "ocupacao": "SACERDOTE OU MEMBRO DE ORDEM OU SEITA RELIGIOSA",
     "cpf": "80410880159",
     "codEleicao": "6259",
-    "sqColigacao": "120001801350"
+    "sqColigacao": "120001801350",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "AGUARDANDO JULGAMENTO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002553013_div.jpg"
   },
   {
     "sqCandidato": "120002553016",
@@ -1757,7 +1996,10 @@
     "ocupacao": "PESCADOR",
     "cpf": "51878704168",
     "codEleicao": "6259",
-    "sqColigacao": "120001801350"
+    "sqColigacao": "120001801350",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "AGUARDANDO JULGAMENTO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002553016_div.jpg"
   },
   {
     "sqCandidato": "120002553021",
@@ -1779,7 +2021,10 @@
     "ocupacao": "EMPRESÁRIO",
     "cpf": "05785500167",
     "codEleicao": "6259",
-    "sqColigacao": "120001801350"
+    "sqColigacao": "120001801350",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "AGUARDANDO JULGAMENTO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002553021_div.jpg"
   },
   {
     "sqCandidato": "120002553020",
@@ -1801,7 +2046,10 @@
     "ocupacao": "COMERCIANTE",
     "cpf": "63900580120",
     "codEleicao": "6259",
-    "sqColigacao": "120001801350"
+    "sqColigacao": "120001801350",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "AGUARDANDO JULGAMENTO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002553020_div.jpg"
   },
   {
     "sqCandidato": "120002553244",
@@ -1823,7 +2071,10 @@
     "ocupacao": "PSICÓLOGO",
     "cpf": "55981089253",
     "codEleicao": "6259",
-    "sqColigacao": "120001801350"
+    "sqColigacao": "120001801350",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "AGUARDANDO JULGAMENTO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002553244_div.jpg"
   },
   {
     "sqCandidato": "120002553249",
@@ -1845,7 +2096,10 @@
     "ocupacao": "APOSENTADO (EXCETO SERVIDOR PÚBLICO)",
     "cpf": "03391493372",
     "codEleicao": "6259",
-    "sqColigacao": "120001801350"
+    "sqColigacao": "120001801350",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "AGUARDANDO JULGAMENTO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002553249_div.jpg"
   },
   {
     "sqCandidato": "120002532703",
@@ -1867,7 +2121,10 @@
     "ocupacao": "EMPRESÁRIO",
     "cpf": "00091116112",
     "codEleicao": "6259",
-    "sqColigacao": "120001800098"
+    "sqColigacao": "120001800098",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "DEFERIDO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002532703_div.jpg"
   },
   {
     "sqCandidato": "120002532705",
@@ -1889,7 +2146,10 @@
     "ocupacao": "OUTROS",
     "cpf": "37008410867",
     "codEleicao": "6259",
-    "sqColigacao": "120001800098"
+    "sqColigacao": "120001800098",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "DEFERIDO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002532705_div.jpg"
   },
   {
     "sqCandidato": "120002532706",
@@ -1911,7 +2171,10 @@
     "ocupacao": "ASSISTENTE SOCIAL",
     "cpf": "63850532100",
     "codEleicao": "6259",
-    "sqColigacao": "120001800098"
+    "sqColigacao": "120001800098",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "DEFERIDO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002532706_div.jpg"
   },
   {
     "sqCandidato": "120002532715",
@@ -1933,7 +2196,10 @@
     "ocupacao": "PRODUTOR DE ESPETÁCULOS PÚBLICOS",
     "cpf": "02499463198",
     "codEleicao": "6259",
-    "sqColigacao": "120001800099"
+    "sqColigacao": "120001800099",
+    "tetoGastos": 3176572.53,
+    "situacaoJulgamento": "DEFERIDO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002532715_div.jpg"
   },
   {
     "sqCandidato": "120002532713",
@@ -1955,7 +2221,10 @@
     "ocupacao": "PROFESSOR DE ENSINO FUNDAMENTAL",
     "cpf": "03841606113",
     "codEleicao": "6259",
-    "sqColigacao": "120001800099"
+    "sqColigacao": "120001800099",
+    "tetoGastos": 3176572.53,
+    "situacaoJulgamento": "DEFERIDO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002532713_div.jpg"
   },
   {
     "sqCandidato": "120002532717",
@@ -1977,7 +2246,10 @@
     "ocupacao": "APOSENTADO (EXCETO SERVIDOR PÚBLICO)",
     "cpf": "29812879153",
     "codEleicao": "6259",
-    "sqColigacao": "120001800099"
+    "sqColigacao": "120001800099",
+    "tetoGastos": 3176572.53,
+    "situacaoJulgamento": "DEFERIDO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002532717_div.jpg"
   },
   {
     "sqCandidato": "120002534957",
@@ -1999,7 +2271,10 @@
     "ocupacao": "DONA DE CASA",
     "cpf": "10249375184",
     "codEleicao": "6259",
-    "sqColigacao": "120001800228"
+    "sqColigacao": "120001800228",
+    "tetoGastos": 3176572.53,
+    "situacaoJulgamento": "AGUARDANDO JULGAMENTO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002534957_div.jpg"
   },
   {
     "sqCandidato": "120002534960",
@@ -2021,7 +2296,10 @@
     "ocupacao": "MANICURE E MAQUILADOR",
     "cpf": "05304437160",
     "codEleicao": "6259",
-    "sqColigacao": "120001800228"
+    "sqColigacao": "120001800228",
+    "tetoGastos": 3176572.53,
+    "situacaoJulgamento": "DEFERIDO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002534960_div.jpg"
   },
   {
     "sqCandidato": "120002535767",
@@ -2043,7 +2321,9 @@
     "ocupacao": "ADMINISTRADOR",
     "cpf": "68963998134",
     "codEleicao": "6259",
-    "sqColigacao": "120001800239"
+    "sqColigacao": "120001800239",
+    "situacaoJulgamento": "DEFERIDO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002535767_div.jpg"
   },
   {
     "sqCandidato": "120002536061",
@@ -2065,7 +2345,10 @@
     "ocupacao": "DECORADOR",
     "cpf": "02150660148",
     "codEleicao": "6259",
-    "sqColigacao": "120001800276"
+    "sqColigacao": "120001800276",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "DEFERIDO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002536061_div.jpg"
   },
   {
     "sqCandidato": "120002536072",
@@ -2087,7 +2370,10 @@
     "ocupacao": "VETERINÁRIO",
     "cpf": "86166310110",
     "codEleicao": "6259",
-    "sqColigacao": "120001800276"
+    "sqColigacao": "120001800276",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "DEFERIDO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002536072_div.jpg"
   },
   {
     "sqCandidato": "120002536288",
@@ -2109,7 +2395,10 @@
     "ocupacao": "MEMBRO DAS FORÇAS ARMADAS",
     "cpf": "17207088191",
     "codEleicao": "6259",
-    "sqColigacao": "120001800253"
+    "sqColigacao": "120001800253",
+    "tetoGastos": 3176572.53,
+    "situacaoJulgamento": "DEFERIDO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002536288_div.jpg"
   },
   {
     "sqCandidato": "120002537362",
@@ -2131,7 +2420,10 @@
     "ocupacao": "VEREADOR",
     "cpf": "01590747542",
     "codEleicao": "6259",
-    "sqColigacao": "120001800356"
+    "sqColigacao": "120001800356",
+    "tetoGastos": 3176572.53,
+    "situacaoJulgamento": "DEFERIDO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002537362_div.jpg"
   },
   {
     "sqCandidato": "120002537516",
@@ -2153,7 +2445,10 @@
     "ocupacao": "ADVOGADO",
     "cpf": "01236216156",
     "codEleicao": "6259",
-    "sqColigacao": "120001800364"
+    "sqColigacao": "120001800364",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "DEFERIDO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002537516_div.jpg"
   },
   {
     "sqCandidato": "120002537517",
@@ -2175,7 +2470,10 @@
     "ocupacao": "ADVOGADO",
     "cpf": "04604290865",
     "codEleicao": "6259",
-    "sqColigacao": "120001800364"
+    "sqColigacao": "120001800364",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "AGUARDANDO JULGAMENTO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002537517_div.jpg"
   },
   {
     "sqCandidato": "120002538784",
@@ -2197,7 +2495,10 @@
     "ocupacao": "DEPUTADO",
     "cpf": "12896918191",
     "codEleicao": "6259",
-    "sqColigacao": "120001800440"
+    "sqColigacao": "120001800440",
+    "tetoGastos": 3176572.53,
+    "situacaoJulgamento": "AGUARDANDO JULGAMENTO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002538784_div.jpg"
   },
   {
     "sqCandidato": "120002539698",
@@ -2219,7 +2520,10 @@
     "ocupacao": "ADVOGADO",
     "cpf": "03770264177",
     "codEleicao": "6259",
-    "sqColigacao": "120001800466"
+    "sqColigacao": "120001800466",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "AGUARDANDO JULGAMENTO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002539698_div.jpg"
   },
   {
     "sqCandidato": "120002539710",
@@ -2241,7 +2545,10 @@
     "ocupacao": "PRODUTOR AGROPECUÁRIO",
     "cpf": "00808407104",
     "codEleicao": "6259",
-    "sqColigacao": "120001800466"
+    "sqColigacao": "120001800466",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "AGUARDANDO JULGAMENTO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002539710_div.jpg"
   },
   {
     "sqCandidato": "120002544706",
@@ -2263,7 +2570,10 @@
     "ocupacao": "ADVOGADO",
     "cpf": "03991633108",
     "codEleicao": "6259",
-    "sqColigacao": "120001800745"
+    "sqColigacao": "120001800745",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "DEFERIDO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002544706_div.jpg"
   },
   {
     "sqCandidato": "120002544715",
@@ -2285,7 +2595,10 @@
     "ocupacao": "ADVOGADO",
     "cpf": "44807350110",
     "codEleicao": "6259",
-    "sqColigacao": "120001800745"
+    "sqColigacao": "120001800745",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "DEFERIDO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002544715_div.jpg"
   },
   {
     "sqCandidato": "120002544958",
@@ -2307,7 +2620,10 @@
     "ocupacao": "AUXILIAR DE ESCRITÓRIO E ASSEMELHADOS",
     "cpf": "03860201166",
     "codEleicao": "6259",
-    "sqColigacao": "120001800768"
+    "sqColigacao": "120001800768",
+    "tetoGastos": 3176572.53,
+    "situacaoJulgamento": "AGUARDANDO JULGAMENTO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002544958_div.jpg"
   },
   {
     "sqCandidato": "120002544961",
@@ -2329,7 +2645,10 @@
     "ocupacao": "ADVOGADO",
     "cpf": "04087093913",
     "codEleicao": "6259",
-    "sqColigacao": "120001800768"
+    "sqColigacao": "120001800768",
+    "tetoGastos": 3176572.53,
+    "situacaoJulgamento": "AGUARDANDO JULGAMENTO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002544961_div.jpg"
   },
   {
     "sqCandidato": "120002544974",
@@ -2351,7 +2670,10 @@
     "ocupacao": "PROFESSOR DE ENSINO FUNDAMENTAL",
     "cpf": "06786128114",
     "codEleicao": "6259",
-    "sqColigacao": "120001800769"
+    "sqColigacao": "120001800769",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "AGUARDANDO JULGAMENTO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002544974_div.jpg"
   },
   {
     "sqCandidato": "120002545239",
@@ -2373,7 +2695,10 @@
     "ocupacao": "SERVIDOR PÚBLICO FEDERAL",
     "cpf": "97551732187",
     "codEleicao": "6259",
-    "sqColigacao": "120001800660"
+    "sqColigacao": "120001800660",
+    "tetoGastos": 3176572.53,
+    "situacaoJulgamento": "AGUARDANDO JULGAMENTO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002545239_div.jpg"
   },
   {
     "sqCandidato": "120002547048",
@@ -2395,7 +2720,10 @@
     "ocupacao": "COMERCIÁRIO",
     "cpf": "04761077174",
     "codEleicao": "6259",
-    "sqColigacao": "120001800852"
+    "sqColigacao": "120001800852",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "AGUARDANDO JULGAMENTO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002547048_div.jpg"
   },
   {
     "sqCandidato": "120002549559",
@@ -2417,7 +2745,10 @@
     "ocupacao": "MÉDICO",
     "cpf": "85557617191",
     "codEleicao": "6259",
-    "sqColigacao": "120001801054"
+    "sqColigacao": "120001801054",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "AGUARDANDO JULGAMENTO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002549559_div.jpg"
   },
   {
     "sqCandidato": "120002549571",
@@ -2439,7 +2770,10 @@
     "ocupacao": "AGRICULTOR",
     "cpf": "92879730163",
     "codEleicao": "6259",
-    "sqColigacao": "120001801054"
+    "sqColigacao": "120001801054",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "AGUARDANDO JULGAMENTO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002549571_div.jpg"
   },
   {
     "sqCandidato": "120002549682",
@@ -2461,7 +2795,9 @@
     "ocupacao": "OUTROS",
     "cpf": "00081869100",
     "codEleicao": "6259",
-    "sqColigacao": "120001801019"
+    "sqColigacao": "120001801019",
+    "situacaoJulgamento": "RENÚNCIA",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002549682_div.jpg"
   },
   {
     "sqCandidato": "120002551714",
@@ -2483,7 +2819,10 @@
     "ocupacao": "TRABALHADOR DE CONSTRUÇÃO CIVIL",
     "cpf": "69518327149",
     "codEleicao": "6259",
-    "sqColigacao": "120001801270"
+    "sqColigacao": "120001801270",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "DEFERIDO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002551714_div.jpg"
   },
   {
     "sqCandidato": "120002551718",
@@ -2505,7 +2844,10 @@
     "ocupacao": "EMPRESÁRIO",
     "cpf": "04896311183",
     "codEleicao": "6259",
-    "sqColigacao": "120001801270"
+    "sqColigacao": "120001801270",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "DEFERIDO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002551718_div.jpg"
   },
   {
     "sqCandidato": "120002551717",
@@ -2527,7 +2869,10 @@
     "ocupacao": "PROFESSOR DE ENSINO MÉDIO",
     "cpf": "01006669140",
     "codEleicao": "6259",
-    "sqColigacao": "120001801270"
+    "sqColigacao": "120001801270",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "DEFERIDO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002551717_div.jpg"
   },
   {
     "sqCandidato": "120002551908",
@@ -2549,7 +2894,9 @@
     "ocupacao": "EMPRESÁRIO",
     "cpf": "83096345104",
     "codEleicao": "6259",
-    "sqColigacao": "120001801219"
+    "sqColigacao": "120001801219",
+    "situacaoJulgamento": "RENÚNCIA",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002551908_div.jpg"
   },
   {
     "sqCandidato": "120002552154",
@@ -2571,7 +2918,9 @@
     "ocupacao": "FARMACÊUTICO",
     "cpf": "60119721104",
     "codEleicao": "6259",
-    "sqColigacao": "120001801243"
+    "sqColigacao": "120001801243",
+    "situacaoJulgamento": "DEFERIDO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002552154_div.jpg"
   },
   {
     "sqCandidato": "120002552160",
@@ -2593,7 +2942,10 @@
     "ocupacao": "ADVOGADO",
     "cpf": "01799628760",
     "codEleicao": "6259",
-    "sqColigacao": "120001801245"
+    "sqColigacao": "120001801245",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "AGUARDANDO JULGAMENTO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002552160_div.jpg"
   },
   {
     "sqCandidato": "120002552178",
@@ -2615,7 +2967,10 @@
     "ocupacao": "SERVIDOR PÚBLICO FEDERAL",
     "cpf": "32138156168",
     "codEleicao": "6259",
-    "sqColigacao": "120001801252"
+    "sqColigacao": "120001801252",
+    "tetoGastos": 3176572.53,
+    "situacaoJulgamento": "AGUARDANDO JULGAMENTO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002552178_div.jpg"
   },
   {
     "sqCandidato": "120002552190",
@@ -2637,7 +2992,9 @@
     "ocupacao": "ECONOMISTA",
     "cpf": "25428440899",
     "codEleicao": "6259",
-    "sqColigacao": "120001801255"
+    "sqColigacao": "120001801255",
+    "situacaoJulgamento": "AGUARDANDO JULGAMENTO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002552190_div.jpg"
   },
   {
     "sqCandidato": "120002552196",
@@ -2659,7 +3016,10 @@
     "ocupacao": "TRABALHADOR DE CONSTRUÇÃO CIVIL",
     "cpf": "01210074133",
     "codEleicao": "6259",
-    "sqColigacao": "120001801256"
+    "sqColigacao": "120001801256",
+    "tetoGastos": 3176572.53,
+    "situacaoJulgamento": "AGUARDANDO JULGAMENTO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002552196_div.jpg"
   },
   {
     "sqCandidato": "120002552202",
@@ -2681,7 +3041,9 @@
     "ocupacao": "OUTROS",
     "cpf": "72847522115",
     "codEleicao": "6259",
-    "sqColigacao": "120001801258"
+    "sqColigacao": "120001801258",
+    "situacaoJulgamento": "AGUARDANDO JULGAMENTO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002552202_div.jpg"
   },
   {
     "sqCandidato": "120002552201",
@@ -2703,7 +3065,13 @@
     "ocupacao": "PROFESSOR DE ENSINO FUNDAMENTAL",
     "cpf": "82967148172",
     "codEleicao": "6259",
-    "sqColigacao": "120001801258"
+    "sqColigacao": "120001801258",
+    "tetoGastos": 6226082.16,
+    "situacaoJulgamento": "AGUARDANDO JULGAMENTO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002552201_div.jpg",
+    "planoGovernoUrls": [
+      "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/planos-de-governo/MS/2026MS120002552201_01.pdf"
+    ]
   },
   {
     "sqCandidato": "120002552204",
@@ -2725,7 +3093,10 @@
     "ocupacao": "EMPRESÁRIO",
     "cpf": "73638749134",
     "codEleicao": "6259",
-    "sqColigacao": "120001801245"
+    "sqColigacao": "120001801245",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "DEFERIDO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002552204_div.jpg"
   },
   {
     "sqCandidato": "120002552214",
@@ -2747,7 +3118,10 @@
     "ocupacao": "SERVIDOR PÚBLICO MUNICIPAL",
     "cpf": "56026862153",
     "codEleicao": "6259",
-    "sqColigacao": "120001801245"
+    "sqColigacao": "120001801245",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "DEFERIDO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002552214_div.jpg"
   },
   {
     "sqCandidato": "120002552945",
@@ -2769,7 +3143,10 @@
     "ocupacao": "AGRICULTOR",
     "cpf": "29394325115",
     "codEleicao": "6259",
-    "sqColigacao": "120001801284"
+    "sqColigacao": "120001801284",
+    "tetoGastos": 3176572.53,
+    "situacaoJulgamento": "AGUARDANDO JULGAMENTO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002552945_div.jpg"
   },
   {
     "sqCandidato": "120002552947",
@@ -2791,7 +3168,10 @@
     "ocupacao": "ADVOGADO",
     "cpf": "60917636104",
     "codEleicao": "6259",
-    "sqColigacao": "120001801284"
+    "sqColigacao": "120001801284",
+    "tetoGastos": 3176572.53,
+    "situacaoJulgamento": "AGUARDANDO JULGAMENTO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002552947_div.jpg"
   },
   {
     "sqCandidato": "120002552951",
@@ -2813,7 +3193,10 @@
     "ocupacao": "POLICIAL MILITAR",
     "cpf": "40871100100",
     "codEleicao": "6259",
-    "sqColigacao": "120001801284"
+    "sqColigacao": "120001801284",
+    "tetoGastos": 3176572.53,
+    "situacaoJulgamento": "AGUARDANDO JULGAMENTO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002552951_div.jpg"
   },
   {
     "sqCandidato": "120002552950",
@@ -2835,7 +3218,10 @@
     "ocupacao": "ADVOGADO",
     "cpf": "56280300153",
     "codEleicao": "6259",
-    "sqColigacao": "120001801284"
+    "sqColigacao": "120001801284",
+    "tetoGastos": 3176572.53,
+    "situacaoJulgamento": "AGUARDANDO JULGAMENTO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002552950_div.jpg"
   },
   {
     "sqCandidato": "120002532708",
@@ -2857,7 +3243,10 @@
     "ocupacao": "SERRALHEIRO",
     "cpf": "10498334813",
     "codEleicao": "6259",
-    "sqColigacao": "120001800098"
+    "sqColigacao": "120001800098",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "DEFERIDO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002532708_div.jpg"
   },
   {
     "sqCandidato": "120002532712",
@@ -2879,7 +3268,10 @@
     "ocupacao": "PROFESSOR DE ENSINO FUNDAMENTAL",
     "cpf": "40901343153",
     "codEleicao": "6259",
-    "sqColigacao": "120001800099"
+    "sqColigacao": "120001800099",
+    "tetoGastos": 3176572.53,
+    "situacaoJulgamento": "DEFERIDO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002532712_div.jpg"
   },
   {
     "sqCandidato": "120002532721",
@@ -2901,7 +3293,10 @@
     "ocupacao": "AGRICULTOR",
     "cpf": "89579089191",
     "codEleicao": "6259",
-    "sqColigacao": "120001800100"
+    "sqColigacao": "120001800100",
+    "tetoGastos": 3176572.53,
+    "situacaoJulgamento": "DEFERIDO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002532721_div.jpg"
   },
   {
     "sqCandidato": "120002534953",
@@ -2923,7 +3318,9 @@
     "ocupacao": "LAVADOR DE VEÍCULOS",
     "cpf": "02124862170",
     "codEleicao": "6259",
-    "sqColigacao": "120001800227"
+    "sqColigacao": "120001800227",
+    "situacaoJulgamento": "AGUARDANDO JULGAMENTO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002534953_div.jpg"
   },
   {
     "sqCandidato": "120002534956",
@@ -2945,7 +3342,10 @@
     "ocupacao": "TÉCNICO CONTABILIDADE, ESTATÍSTICA, ECONOMIA DOMÉSTICA E ADMINISTRAÇÃO",
     "cpf": "51827549149",
     "codEleicao": "6259",
-    "sqColigacao": "120001800228"
+    "sqColigacao": "120001800228",
+    "tetoGastos": 3176572.53,
+    "situacaoJulgamento": "AGUARDANDO JULGAMENTO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002534956_div.jpg"
   },
   {
     "sqCandidato": "120002535257",
@@ -2967,7 +3367,10 @@
     "ocupacao": "BOMBEIRO MILITAR",
     "cpf": "69430713191",
     "codEleicao": "6259",
-    "sqColigacao": "120001800268"
+    "sqColigacao": "120001800268",
+    "tetoGastos": 3176572.53,
+    "situacaoJulgamento": "DEFERIDO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002535257_div.jpg"
   },
   {
     "sqCandidato": "120002535515",
@@ -2989,7 +3392,10 @@
     "ocupacao": "EMPRESÁRIO",
     "cpf": "71194614191",
     "codEleicao": "6259",
-    "sqColigacao": "120001800249"
+    "sqColigacao": "120001800249",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "DEFERIDO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002535515_div.jpg"
   },
   {
     "sqCandidato": "120002535519",
@@ -3011,7 +3417,10 @@
     "ocupacao": "SERVIDOR PÚBLICO MUNICIPAL",
     "cpf": "01319522181",
     "codEleicao": "6259",
-    "sqColigacao": "120001800249"
+    "sqColigacao": "120001800249",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "DEFERIDO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002535519_div.jpg"
   },
   {
     "sqCandidato": "120002535520",
@@ -3033,7 +3442,10 @@
     "ocupacao": "SERVIDOR PÚBLICO ESTADUAL",
     "cpf": "20164416153",
     "codEleicao": "6259",
-    "sqColigacao": "120001800249"
+    "sqColigacao": "120001800249",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "DEFERIDO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002535520_div.jpg"
   },
   {
     "sqCandidato": "120002535527",
@@ -3055,7 +3467,10 @@
     "ocupacao": "ESTETICISTA",
     "cpf": "00093834179",
     "codEleicao": "6259",
-    "sqColigacao": "120001800249"
+    "sqColigacao": "120001800249",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "DEFERIDO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002535527_div.jpg"
   },
   {
     "sqCandidato": "120002535532",
@@ -3077,7 +3492,10 @@
     "ocupacao": "SERVIDOR PÚBLICO CIVIL APOSENTADO",
     "cpf": "06975338833",
     "codEleicao": "6259",
-    "sqColigacao": "120001800249"
+    "sqColigacao": "120001800249",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "DEFERIDO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002535532_div.jpg"
   },
   {
     "sqCandidato": "120002536054",
@@ -3099,7 +3517,10 @@
     "ocupacao": "ADVOGADO",
     "cpf": "95799923120",
     "codEleicao": "6259",
-    "sqColigacao": "120001800276"
+    "sqColigacao": "120001800276",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "DEFERIDO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002536054_div.jpg"
   },
   {
     "sqCandidato": "120002536062",
@@ -3121,7 +3542,10 @@
     "ocupacao": "PROTÉTICO",
     "cpf": "85063207120",
     "codEleicao": "6259",
-    "sqColigacao": "120001800276"
+    "sqColigacao": "120001800276",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "DEFERIDO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002536062_div.jpg"
   },
   {
     "sqCandidato": "120002536064",
@@ -3143,7 +3567,10 @@
     "ocupacao": "VEREADOR",
     "cpf": "60052120104",
     "codEleicao": "6259",
-    "sqColigacao": "120001800276"
+    "sqColigacao": "120001800276",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "DEFERIDO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002536064_div.jpg"
   },
   {
     "sqCandidato": "120002536065",
@@ -3165,7 +3592,10 @@
     "ocupacao": "VEREADOR",
     "cpf": "04658646196",
     "codEleicao": "6259",
-    "sqColigacao": "120001800276"
+    "sqColigacao": "120001800276",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "DEFERIDO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002536065_div.jpg"
   },
   {
     "sqCandidato": "120002536075",
@@ -3187,7 +3617,10 @@
     "ocupacao": "POLICIAL MILITAR",
     "cpf": "88643638153",
     "codEleicao": "6259",
-    "sqColigacao": "120001800276"
+    "sqColigacao": "120001800276",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "DEFERIDO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002536075_div.jpg"
   },
   {
     "sqCandidato": "120002537361",
@@ -3209,7 +3642,10 @@
     "ocupacao": "ECONOMISTA",
     "cpf": "32251777172",
     "codEleicao": "6259",
-    "sqColigacao": "120001800356"
+    "sqColigacao": "120001800356",
+    "tetoGastos": 3176572.53,
+    "situacaoJulgamento": "DEFERIDO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002537361_div.jpg"
   },
   {
     "sqCandidato": "120002537465",
@@ -3231,7 +3667,10 @@
     "ocupacao": "DEPUTADO",
     "cpf": "02749531101",
     "codEleicao": "6259",
-    "sqColigacao": "120001800362"
+    "sqColigacao": "120001800362",
+    "tetoGastos": 3176572.53,
+    "situacaoJulgamento": "DEFERIDO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002537465_div.jpg"
   },
   {
     "sqCandidato": "120002537464",
@@ -3253,7 +3692,10 @@
     "ocupacao": "PROFESSOR DE ENSINO SUPERIOR",
     "cpf": "39134741100",
     "codEleicao": "6259",
-    "sqColigacao": "120001800362"
+    "sqColigacao": "120001800362",
+    "tetoGastos": 3176572.53,
+    "situacaoJulgamento": "DEFERIDO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002537464_div.jpg"
   },
   {
     "sqCandidato": "120002537502",
@@ -3275,7 +3717,10 @@
     "ocupacao": "EMPRESÁRIO",
     "cpf": "01798418150",
     "codEleicao": "6259",
-    "sqColigacao": "120001800364"
+    "sqColigacao": "120001800364",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "DEFERIDO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002537502_div.jpg"
   },
   {
     "sqCandidato": "120002537512",
@@ -3297,7 +3742,10 @@
     "ocupacao": "ENGENHEIRO",
     "cpf": "58283587153",
     "codEleicao": "6259",
-    "sqColigacao": "120001800364"
+    "sqColigacao": "120001800364",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "DEFERIDO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002537512_div.jpg"
   },
   {
     "sqCandidato": "120002537515",
@@ -3319,7 +3767,10 @@
     "ocupacao": "EMPRESÁRIO",
     "cpf": "02991811110",
     "codEleicao": "6259",
-    "sqColigacao": "120001800364"
+    "sqColigacao": "120001800364",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "DEFERIDO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002537515_div.jpg"
   },
   {
     "sqCandidato": "120002538789",
@@ -3341,7 +3792,10 @@
     "ocupacao": "ADVOGADO",
     "cpf": "85799467191",
     "codEleicao": "6259",
-    "sqColigacao": "120001800440"
+    "sqColigacao": "120001800440",
+    "tetoGastos": 3176572.53,
+    "situacaoJulgamento": "AGUARDANDO JULGAMENTO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002538789_div.jpg"
   },
   {
     "sqCandidato": "120002538948",
@@ -3363,7 +3817,10 @@
     "ocupacao": "ADVOGADO",
     "cpf": "01194680186",
     "codEleicao": "6259",
-    "sqColigacao": "120001800411"
+    "sqColigacao": "120001800411",
+    "tetoGastos": 3176572.53,
+    "situacaoJulgamento": "DEFERIDO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002538948_div.jpg"
   },
   {
     "sqCandidato": "120002539699",
@@ -3385,7 +3842,10 @@
     "ocupacao": "EMPRESÁRIO",
     "cpf": "70349134120",
     "codEleicao": "6259",
-    "sqColigacao": "120001800466"
+    "sqColigacao": "120001800466",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "AGUARDANDO JULGAMENTO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002539699_div.jpg"
   },
   {
     "sqCandidato": "120002539708",
@@ -3407,7 +3867,10 @@
     "ocupacao": "DEPUTADO",
     "cpf": "35678348191",
     "codEleicao": "6259",
-    "sqColigacao": "120001800466"
+    "sqColigacao": "120001800466",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "AGUARDANDO JULGAMENTO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002539708_div.jpg"
   },
   {
     "sqCandidato": "120002544705",
@@ -3429,7 +3892,10 @@
     "ocupacao": "MÉDICO",
     "cpf": "00598305904",
     "codEleicao": "6259",
-    "sqColigacao": "120001800745"
+    "sqColigacao": "120001800745",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "DEFERIDO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002544705_div.jpg"
   },
   {
     "sqCandidato": "120002544712",
@@ -3451,7 +3917,10 @@
     "ocupacao": "SERVIDOR PÚBLICO CIVIL APOSENTADO",
     "cpf": "54335345100",
     "codEleicao": "6259",
-    "sqColigacao": "120001800745"
+    "sqColigacao": "120001800745",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "DEFERIDO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002544712_div.jpg"
   },
   {
     "sqCandidato": "120002544717",
@@ -3473,7 +3942,10 @@
     "ocupacao": "VEREADOR",
     "cpf": "89101251104",
     "codEleicao": "6259",
-    "sqColigacao": "120001800745"
+    "sqColigacao": "120001800745",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "DEFERIDO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002544717_div.jpg"
   },
   {
     "sqCandidato": "120002544963",
@@ -3495,7 +3967,10 @@
     "ocupacao": "COMERCIÁRIO",
     "cpf": "02279587130",
     "codEleicao": "6259",
-    "sqColigacao": "120001800769"
+    "sqColigacao": "120001800769",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "AGUARDANDO JULGAMENTO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002544963_div.jpg"
   },
   {
     "sqCandidato": "120002544968",
@@ -3517,7 +3992,10 @@
     "ocupacao": "TÉCNICO EM AGRONOMIA E AGRIMENSURA",
     "cpf": "02826724193",
     "codEleicao": "6259",
-    "sqColigacao": "120001800769"
+    "sqColigacao": "120001800769",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "AGUARDANDO JULGAMENTO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002544968_div.jpg"
   },
   {
     "sqCandidato": "120002544971",
@@ -3539,7 +4017,10 @@
     "ocupacao": "EMPRESÁRIO",
     "cpf": "02374947106",
     "codEleicao": "6259",
-    "sqColigacao": "120001800769"
+    "sqColigacao": "120001800769",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "AGUARDANDO JULGAMENTO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002544971_div.jpg"
   },
   {
     "sqCandidato": "120002544979",
@@ -3561,7 +4042,10 @@
     "ocupacao": "TRABALHADOR RURAL",
     "cpf": "01042709181",
     "codEleicao": "6259",
-    "sqColigacao": "120001800769"
+    "sqColigacao": "120001800769",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "RENÚNCIA",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002544979_div.jpg"
   },
   {
     "sqCandidato": "120002544978",
@@ -3583,7 +4067,10 @@
     "ocupacao": "CORRETOR DE IMÓVEIS, SEGUROS, TÍTULOS E VALORES",
     "cpf": "00168482177",
     "codEleicao": "6259",
-    "sqColigacao": "120001800769"
+    "sqColigacao": "120001800769",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "AGUARDANDO JULGAMENTO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002544978_div.jpg"
   },
   {
     "sqCandidato": "120002545236",
@@ -3605,7 +4092,10 @@
     "ocupacao": "SERVIDOR PÚBLICO MUNICIPAL",
     "cpf": "02765678111",
     "codEleicao": "6259",
-    "sqColigacao": "120001800660"
+    "sqColigacao": "120001800660",
+    "tetoGastos": 3176572.53,
+    "situacaoJulgamento": "AGUARDANDO JULGAMENTO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002545236_div.jpg"
   },
   {
     "sqCandidato": "120002545235",
@@ -3627,7 +4117,10 @@
     "ocupacao": "SECURITÁRIO",
     "cpf": "01500924156",
     "codEleicao": "6259",
-    "sqColigacao": "120001800660"
+    "sqColigacao": "120001800660",
+    "tetoGastos": 3176572.53,
+    "situacaoJulgamento": "AGUARDANDO JULGAMENTO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002545235_div.jpg"
   },
   {
     "sqCandidato": "120002547049",
@@ -3649,7 +4142,10 @@
     "ocupacao": "PSICÓLOGO",
     "cpf": "99791420149",
     "codEleicao": "6259",
-    "sqColigacao": "120001800852"
+    "sqColigacao": "120001800852",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "AGUARDANDO JULGAMENTO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002547049_div.jpg"
   },
   {
     "sqCandidato": "120002547050",
@@ -3671,7 +4167,10 @@
     "ocupacao": "ADVOGADO",
     "cpf": "20554060191",
     "codEleicao": "6259",
-    "sqColigacao": "120001800852"
+    "sqColigacao": "120001800852",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "AGUARDANDO JULGAMENTO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002547050_div.jpg"
   },
   {
     "sqCandidato": "120002547060",
@@ -3693,7 +4192,10 @@
     "ocupacao": "ADVOGADO",
     "cpf": "38997711172",
     "codEleicao": "6259",
-    "sqColigacao": "120001800852"
+    "sqColigacao": "120001800852",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "AGUARDANDO JULGAMENTO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002547060_div.jpg"
   },
   {
     "sqCandidato": "120002547068",
@@ -3715,7 +4217,10 @@
     "ocupacao": "PROFESSOR DE ENSINO FUNDAMENTAL",
     "cpf": "90991893115",
     "codEleicao": "6259",
-    "sqColigacao": "120001800852"
+    "sqColigacao": "120001800852",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "AGUARDANDO JULGAMENTO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002547068_div.jpg"
   },
   {
     "sqCandidato": "120002549560",
@@ -3737,7 +4242,10 @@
     "ocupacao": "ADVOGADO",
     "cpf": "36762466168",
     "codEleicao": "6259",
-    "sqColigacao": "120001801054"
+    "sqColigacao": "120001801054",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "AGUARDANDO JULGAMENTO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002549560_div.jpg"
   },
   {
     "sqCandidato": "120002549568",
@@ -3759,7 +4267,10 @@
     "ocupacao": "ADVOGADO",
     "cpf": "00245507108",
     "codEleicao": "6259",
-    "sqColigacao": "120001801054"
+    "sqColigacao": "120001801054",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "AGUARDANDO JULGAMENTO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002549568_div.jpg"
   },
   {
     "sqCandidato": "120002549572",
@@ -3781,7 +4292,10 @@
     "ocupacao": "OUTROS",
     "cpf": "01439369135",
     "codEleicao": "6259",
-    "sqColigacao": "120001801054"
+    "sqColigacao": "120001801054",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "AGUARDANDO JULGAMENTO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002549572_div.jpg"
   },
   {
     "sqCandidato": "120002549574",
@@ -3803,7 +4317,10 @@
     "ocupacao": "SERVIDOR PÚBLICO MUNICIPAL",
     "cpf": "92696872104",
     "codEleicao": "6259",
-    "sqColigacao": "120001801054"
+    "sqColigacao": "120001801054",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "AGUARDANDO JULGAMENTO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002549574_div.jpg"
   },
   {
     "sqCandidato": "120002549577",
@@ -3825,7 +4342,10 @@
     "ocupacao": "EMPRESÁRIO",
     "cpf": "89822803168",
     "codEleicao": "6259",
-    "sqColigacao": "120001801054"
+    "sqColigacao": "120001801054",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "AGUARDANDO JULGAMENTO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002549577_div.jpg"
   },
   {
     "sqCandidato": "120002549688",
@@ -3847,7 +4367,10 @@
     "ocupacao": "ECONOMISTA",
     "cpf": "01451621175",
     "codEleicao": "6259",
-    "sqColigacao": "120001801020"
+    "sqColigacao": "120001801020",
+    "tetoGastos": 3176572.53,
+    "situacaoJulgamento": "DEFERIDO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002549688_div.jpg"
   },
   {
     "sqCandidato": "120002550199",
@@ -3869,7 +4392,9 @@
     "ocupacao": "PROFESSOR DE ENSINO MÉDIO",
     "cpf": "05872883889",
     "codEleicao": "6259",
-    "sqColigacao": "120001801095"
+    "sqColigacao": "120001801095",
+    "situacaoJulgamento": "AGUARDANDO JULGAMENTO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002550199_div.jpg"
   },
   {
     "sqCandidato": "120002551715",
@@ -3891,7 +4416,10 @@
     "ocupacao": "EMPRESÁRIO",
     "cpf": "36772208153",
     "codEleicao": "6259",
-    "sqColigacao": "120001801270"
+    "sqColigacao": "120001801270",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "DEFERIDO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002551715_div.jpg"
   },
   {
     "sqCandidato": "120002552173",
@@ -3913,7 +4441,10 @@
     "ocupacao": "EMPRESÁRIO",
     "cpf": "94666270159",
     "codEleicao": "6259",
-    "sqColigacao": "120001801252"
+    "sqColigacao": "120001801252",
+    "tetoGastos": 3176572.53,
+    "situacaoJulgamento": "AGUARDANDO JULGAMENTO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002552173_div.jpg"
   },
   {
     "sqCandidato": "120002552207",
@@ -3935,7 +4466,10 @@
     "ocupacao": "PROFESSOR DE ENSINO MÉDIO",
     "cpf": "04929416108",
     "codEleicao": "6259",
-    "sqColigacao": "120001801245"
+    "sqColigacao": "120001801245",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "AGUARDANDO JULGAMENTO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002552207_div.jpg"
   },
   {
     "sqCandidato": "120002552210",
@@ -3957,7 +4491,10 @@
     "ocupacao": "EMPRESÁRIO",
     "cpf": "63965402153",
     "codEleicao": "6259",
-    "sqColigacao": "120001801245"
+    "sqColigacao": "120001801245",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "DEFERIDO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002552210_div.jpg"
   },
   {
     "sqCandidato": "120002552212",
@@ -3979,7 +4516,10 @@
     "ocupacao": "DESPACHANTE",
     "cpf": "36745642115",
     "codEleicao": "6259",
-    "sqColigacao": "120001801245"
+    "sqColigacao": "120001801245",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "AGUARDANDO JULGAMENTO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002552212_div.jpg"
   },
   {
     "sqCandidato": "120002552684",
@@ -4001,7 +4541,10 @@
     "ocupacao": "ESTUDANTE, BOLSISTA, ESTAGIÁRIO E ASSEMELHADOS",
     "cpf": "06551713122",
     "codEleicao": "6259",
-    "sqColigacao": "120001801259"
+    "sqColigacao": "120001801259",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "AGUARDANDO JULGAMENTO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002552684_div.jpg"
   },
   {
     "sqCandidato": "120002552948",
@@ -4023,7 +4566,10 @@
     "ocupacao": "OUTROS",
     "cpf": "44716877191",
     "codEleicao": "6259",
-    "sqColigacao": "120001801284"
+    "sqColigacao": "120001801284",
+    "tetoGastos": 3176572.53,
+    "situacaoJulgamento": "AGUARDANDO JULGAMENTO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002552948_div.jpg"
   },
   {
     "sqCandidato": "120002553245",
@@ -4045,7 +4591,10 @@
     "ocupacao": "EMPRESÁRIO",
     "cpf": "92815243849",
     "codEleicao": "6259",
-    "sqColigacao": "120001801350"
+    "sqColigacao": "120001801350",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "AGUARDANDO JULGAMENTO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002553245_div.jpg"
   },
   {
     "sqCandidato": "120002553246",
@@ -4067,7 +4616,10 @@
     "ocupacao": "COMERCIANTE",
     "cpf": "80347800904",
     "codEleicao": "6259",
-    "sqColigacao": "120001801350"
+    "sqColigacao": "120001801350",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "AGUARDANDO JULGAMENTO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002553246_div.jpg"
   },
   {
     "sqCandidato": "120002532709",
@@ -4089,7 +4641,10 @@
     "ocupacao": "AGRICULTOR",
     "cpf": "88083543187",
     "codEleicao": "6259",
-    "sqColigacao": "120001800098"
+    "sqColigacao": "120001800098",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "DEFERIDO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002532709_div.jpg"
   },
   {
     "sqCandidato": "120002532714",
@@ -4111,7 +4666,10 @@
     "ocupacao": "JORNALISTA E REDATOR",
     "cpf": "23036737120",
     "codEleicao": "6259",
-    "sqColigacao": "120001800099"
+    "sqColigacao": "120001800099",
+    "tetoGastos": 3176572.53,
+    "situacaoJulgamento": "AGUARDANDO JULGAMENTO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002532714_div.jpg"
   },
   {
     "sqCandidato": "120002534958",
@@ -4133,7 +4691,10 @@
     "ocupacao": "PROFESSOR DE ENSINO FUNDAMENTAL",
     "cpf": "83080058100",
     "codEleicao": "6259",
-    "sqColigacao": "120001800228"
+    "sqColigacao": "120001800228",
+    "tetoGastos": 3176572.53,
+    "situacaoJulgamento": "DEFERIDO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002534958_div.jpg"
   },
   {
     "sqCandidato": "120002535768",
@@ -4155,7 +4716,9 @@
     "ocupacao": "ECONOMISTA",
     "cpf": "63969084172",
     "codEleicao": "6259",
-    "sqColigacao": "120001800239"
+    "sqColigacao": "120001800239",
+    "situacaoJulgamento": "DEFERIDO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002535768_div.jpg"
   },
   {
     "sqCandidato": "120002536055",
@@ -4177,7 +4740,10 @@
     "ocupacao": "PECUARISTA",
     "cpf": "00372110134",
     "codEleicao": "6259",
-    "sqColigacao": "120001800276"
+    "sqColigacao": "120001800276",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "DEFERIDO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002536055_div.jpg"
   },
   {
     "sqCandidato": "120002536069",
@@ -4199,7 +4765,10 @@
     "ocupacao": "DEPUTADO",
     "cpf": "47502592172",
     "codEleicao": "6259",
-    "sqColigacao": "120001800276"
+    "sqColigacao": "120001800276",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "DEFERIDO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002536069_div.jpg"
   },
   {
     "sqCandidato": "120002536280",
@@ -4221,7 +4790,10 @@
     "ocupacao": "EMPRESÁRIO",
     "cpf": "94553980100",
     "codEleicao": "6259",
-    "sqColigacao": "120001800253"
+    "sqColigacao": "120001800253",
+    "tetoGastos": 3176572.53,
+    "situacaoJulgamento": "DEFERIDO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002536280_div.jpg"
   },
   {
     "sqCandidato": "120002536284",
@@ -4243,7 +4815,10 @@
     "ocupacao": "EMPRESÁRIO",
     "cpf": "20292465149",
     "codEleicao": "6259",
-    "sqColigacao": "120001800253"
+    "sqColigacao": "120001800253",
+    "tetoGastos": 3176572.53,
+    "situacaoJulgamento": "DEFERIDO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002536284_div.jpg"
   },
   {
     "sqCandidato": "120002537358",
@@ -4265,7 +4840,10 @@
     "ocupacao": "MÉDICO",
     "cpf": "23724480130",
     "codEleicao": "6259",
-    "sqColigacao": "120001800356"
+    "sqColigacao": "120001800356",
+    "tetoGastos": 3176572.53,
+    "situacaoJulgamento": "DEFERIDO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002537358_div.jpg"
   },
   {
     "sqCandidato": "120002537463",
@@ -4287,7 +4865,10 @@
     "ocupacao": "PROFESSOR DE ENSINO SUPERIOR",
     "cpf": "85977802153",
     "codEleicao": "6259",
-    "sqColigacao": "120001800362"
+    "sqColigacao": "120001800362",
+    "tetoGastos": 3176572.53,
+    "situacaoJulgamento": "DEFERIDO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002537463_div.jpg"
   },
   {
     "sqCandidato": "120002537468",
@@ -4309,7 +4890,10 @@
     "ocupacao": "ADVOGADO",
     "cpf": "33889074120",
     "codEleicao": "6259",
-    "sqColigacao": "120001800362"
+    "sqColigacao": "120001800362",
+    "tetoGastos": 3176572.53,
+    "situacaoJulgamento": "DEFERIDO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002537468_div.jpg"
   },
   {
     "sqCandidato": "120002537504",
@@ -4331,7 +4915,10 @@
     "ocupacao": "PROFESSOR DE ENSINO MÉDIO",
     "cpf": "36843920144",
     "codEleicao": "6259",
-    "sqColigacao": "120001800364"
+    "sqColigacao": "120001800364",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "DEFERIDO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002537504_div.jpg"
   },
   {
     "sqCandidato": "120002537503",
@@ -4353,7 +4940,10 @@
     "ocupacao": "VEREADOR",
     "cpf": "78934354100",
     "codEleicao": "6259",
-    "sqColigacao": "120001800364"
+    "sqColigacao": "120001800364",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "DEFERIDO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002537503_div.jpg"
   },
   {
     "sqCandidato": "120002537505",
@@ -4375,7 +4965,10 @@
     "ocupacao": "ECONOMISTA",
     "cpf": "71616969172",
     "codEleicao": "6259",
-    "sqColigacao": "120001800364"
+    "sqColigacao": "120001800364",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "DEFERIDO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002537505_div.jpg"
   },
   {
     "sqCandidato": "120002538791",
@@ -4397,7 +4990,10 @@
     "ocupacao": "ADVOGADO",
     "cpf": "00263382893",
     "codEleicao": "6259",
-    "sqColigacao": "120001800440"
+    "sqColigacao": "120001800440",
+    "tetoGastos": 3176572.53,
+    "situacaoJulgamento": "DEFERIDO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002538791_div.jpg"
   },
   {
     "sqCandidato": "120002538947",
@@ -4419,7 +5015,10 @@
     "ocupacao": "ADVOGADO",
     "cpf": "90131657291",
     "codEleicao": "6259",
-    "sqColigacao": "120001800411"
+    "sqColigacao": "120001800411",
+    "tetoGastos": 3176572.53,
+    "situacaoJulgamento": "DEFERIDO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002538947_div.jpg"
   },
   {
     "sqCandidato": "120002539692",
@@ -4441,7 +5040,10 @@
     "ocupacao": "EMPRESÁRIO",
     "cpf": "44507089115",
     "codEleicao": "6259",
-    "sqColigacao": "120001800466"
+    "sqColigacao": "120001800466",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "AGUARDANDO JULGAMENTO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002539692_div.jpg"
   },
   {
     "sqCandidato": "120002539691",
@@ -4463,7 +5065,10 @@
     "ocupacao": "MÉDICO",
     "cpf": "35710624187",
     "codEleicao": "6259",
-    "sqColigacao": "120001800466"
+    "sqColigacao": "120001800466",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "AGUARDANDO JULGAMENTO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002539691_div.jpg"
   },
   {
     "sqCandidato": "120002539694",
@@ -4485,7 +5090,10 @@
     "ocupacao": "ARQUITETO",
     "cpf": "20403852153",
     "codEleicao": "6259",
-    "sqColigacao": "120001800466"
+    "sqColigacao": "120001800466",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "AGUARDANDO JULGAMENTO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002539694_div.jpg"
   },
   {
     "sqCandidato": "120002539700",
@@ -4507,7 +5115,10 @@
     "ocupacao": "ADVOGADO",
     "cpf": "05559996106",
     "codEleicao": "6259",
-    "sqColigacao": "120001800466"
+    "sqColigacao": "120001800466",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "AGUARDANDO JULGAMENTO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002539700_div.jpg"
   },
   {
     "sqCandidato": "120002539704",
@@ -4529,7 +5140,10 @@
     "ocupacao": "VETERINÁRIO",
     "cpf": "10515712191",
     "codEleicao": "6259",
-    "sqColigacao": "120001800466"
+    "sqColigacao": "120001800466",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "RENÚNCIA",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002539704_div.jpg"
   },
   {
     "sqCandidato": "120002539711",
@@ -4551,7 +5165,10 @@
     "ocupacao": "ODONTÓLOGO",
     "cpf": "01507948867",
     "codEleicao": "6259",
-    "sqColigacao": "120001800466"
+    "sqColigacao": "120001800466",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "AGUARDANDO JULGAMENTO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002539711_div.jpg"
   },
   {
     "sqCandidato": "120002539712",
@@ -4573,7 +5190,10 @@
     "ocupacao": "OUTROS",
     "cpf": "34428953836",
     "codEleicao": "6259",
-    "sqColigacao": "120001800466"
+    "sqColigacao": "120001800466",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "AGUARDANDO JULGAMENTO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002539712_div.jpg"
   },
   {
     "sqCandidato": "120002539834",
@@ -4595,7 +5215,13 @@
     "ocupacao": "ADVOGADO",
     "cpf": "98303651749",
     "codEleicao": "6259",
-    "sqColigacao": "120001800491"
+    "sqColigacao": "120001800491",
+    "tetoGastos": 6226082.16,
+    "situacaoJulgamento": "AGUARDANDO JULGAMENTO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002539834_div.jpg",
+    "planoGovernoUrls": [
+      "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/planos-de-governo/MS/2026MS120002539834_01.pdf"
+    ]
   },
   {
     "sqCandidato": "120002539835",
@@ -4617,7 +5243,9 @@
     "ocupacao": "APOSENTADO (EXCETO SERVIDOR PÚBLICO)",
     "cpf": "13931547191",
     "codEleicao": "6259",
-    "sqColigacao": "120001800491"
+    "sqColigacao": "120001800491",
+    "situacaoJulgamento": "AGUARDANDO JULGAMENTO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002539835_div.jpg"
   },
   {
     "sqCandidato": "120002544707",
@@ -4639,7 +5267,10 @@
     "ocupacao": "ADMINISTRADOR",
     "cpf": "89700570053",
     "codEleicao": "6259",
-    "sqColigacao": "120001800745"
+    "sqColigacao": "120001800745",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "DEFERIDO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002544707_div.jpg"
   },
   {
     "sqCandidato": "120002544720",
@@ -4661,7 +5292,10 @@
     "ocupacao": "PROFESSOR DE ENSINO MÉDIO",
     "cpf": "70098875191",
     "codEleicao": "6259",
-    "sqColigacao": "120001800745"
+    "sqColigacao": "120001800745",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "DEFERIDO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002544720_div.jpg"
   },
   {
     "sqCandidato": "120002544718",
@@ -4683,7 +5317,10 @@
     "ocupacao": "OUTROS",
     "cpf": "80031773168",
     "codEleicao": "6259",
-    "sqColigacao": "120001800745"
+    "sqColigacao": "120001800745",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "DEFERIDO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002544718_div.jpg"
   },
   {
     "sqCandidato": "120002544959",
@@ -4705,7 +5342,10 @@
     "ocupacao": "ESTUDANTE, BOLSISTA, ESTAGIÁRIO E ASSEMELHADOS",
     "cpf": "04952495132",
     "codEleicao": "6259",
-    "sqColigacao": "120001800768"
+    "sqColigacao": "120001800768",
+    "tetoGastos": 3176572.53,
+    "situacaoJulgamento": "AGUARDANDO JULGAMENTO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002544959_div.jpg"
   },
   {
     "sqCandidato": "120002544964",
@@ -4727,7 +5367,10 @@
     "ocupacao": "EMPRESÁRIO",
     "cpf": "60853557187",
     "codEleicao": "6259",
-    "sqColigacao": "120001800769"
+    "sqColigacao": "120001800769",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "AGUARDANDO JULGAMENTO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002544964_div.jpg"
   },
   {
     "sqCandidato": "120002544966",
@@ -4749,7 +5392,10 @@
     "ocupacao": "DONA DE CASA",
     "cpf": "05017442154",
     "codEleicao": "6259",
-    "sqColigacao": "120001800769"
+    "sqColigacao": "120001800769",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "AGUARDANDO JULGAMENTO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002544966_div.jpg"
   },
   {
     "sqCandidato": "120002545242",
@@ -4771,7 +5417,10 @@
     "ocupacao": "OUTROS",
     "cpf": "13734860741",
     "codEleicao": "6259",
-    "sqColigacao": "120001800660"
+    "sqColigacao": "120001800660",
+    "tetoGastos": 3176572.53,
+    "situacaoJulgamento": "AGUARDANDO JULGAMENTO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002545242_div.jpg"
   },
   {
     "sqCandidato": "120002545241",
@@ -4793,7 +5442,10 @@
     "ocupacao": "ADMINISTRADOR",
     "cpf": "02109217146",
     "codEleicao": "6259",
-    "sqColigacao": "120001800660"
+    "sqColigacao": "120001800660",
+    "tetoGastos": 3176572.53,
+    "situacaoJulgamento": "AGUARDANDO JULGAMENTO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002545241_div.jpg"
   },
   {
     "sqCandidato": "120002547045",
@@ -4815,7 +5467,10 @@
     "ocupacao": "COMERCIANTE",
     "cpf": "01870743130",
     "codEleicao": "6259",
-    "sqColigacao": "120001800852"
+    "sqColigacao": "120001800852",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "AGUARDANDO JULGAMENTO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002547045_div.jpg"
   },
   {
     "sqCandidato": "120002547051",
@@ -4837,7 +5492,10 @@
     "ocupacao": "ASSISTENTE SOCIAL",
     "cpf": "50664140106",
     "codEleicao": "6259",
-    "sqColigacao": "120001800852"
+    "sqColigacao": "120001800852",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "AGUARDANDO JULGAMENTO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002547051_div.jpg"
   },
   {
     "sqCandidato": "120002547058",
@@ -4859,7 +5517,10 @@
     "ocupacao": "DEPUTADO",
     "cpf": "04064992172",
     "codEleicao": "6259",
-    "sqColigacao": "120001800852"
+    "sqColigacao": "120001800852",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "AGUARDANDO JULGAMENTO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002547058_div.jpg"
   },
   {
     "sqCandidato": "120002547061",
@@ -4881,7 +5542,10 @@
     "ocupacao": "SERVIDOR PÚBLICO ESTADUAL",
     "cpf": "43773281900",
     "codEleicao": "6259",
-    "sqColigacao": "120001800852"
+    "sqColigacao": "120001800852",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "AGUARDANDO JULGAMENTO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002547061_div.jpg"
   },
   {
     "sqCandidato": "120002547066",
@@ -4903,7 +5567,10 @@
     "ocupacao": "ENFERMEIRO",
     "cpf": "55734901172",
     "codEleicao": "6259",
-    "sqColigacao": "120001800852"
+    "sqColigacao": "120001800852",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "AGUARDANDO JULGAMENTO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002547066_div.jpg"
   },
   {
     "sqCandidato": "120002547067",
@@ -4925,7 +5592,10 @@
     "ocupacao": "EMPRESÁRIO",
     "cpf": "72230339168",
     "codEleicao": "6259",
-    "sqColigacao": "120001800852"
+    "sqColigacao": "120001800852",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "AGUARDANDO JULGAMENTO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002547067_div.jpg"
   },
   {
     "sqCandidato": "120002549570",
@@ -4947,7 +5617,10 @@
     "ocupacao": "ASSISTENTE SOCIAL",
     "cpf": "49714112168",
     "codEleicao": "6259",
-    "sqColigacao": "120001801054"
+    "sqColigacao": "120001801054",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "AGUARDANDO JULGAMENTO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002549570_div.jpg"
   },
   {
     "sqCandidato": "120002549576",
@@ -4969,7 +5642,10 @@
     "ocupacao": "SERVIDOR PÚBLICO ESTADUAL",
     "cpf": "06593207896",
     "codEleicao": "6259",
-    "sqColigacao": "120001801054"
+    "sqColigacao": "120001801054",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "AGUARDANDO JULGAMENTO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002549576_div.jpg"
   },
   {
     "sqCandidato": "120002549575",
@@ -4991,7 +5667,10 @@
     "ocupacao": "MOTORISTA PARTICULAR",
     "cpf": "02600669159",
     "codEleicao": "6259",
-    "sqColigacao": "120001801054"
+    "sqColigacao": "120001801054",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "DEFERIDO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002549575_div.jpg"
   },
   {
     "sqCandidato": "120002549684",
@@ -5013,7 +5692,10 @@
     "ocupacao": "EMPRESÁRIO",
     "cpf": "00780811143",
     "codEleicao": "6259",
-    "sqColigacao": "120001801020"
+    "sqColigacao": "120001801020",
+    "tetoGastos": 3176572.53,
+    "situacaoJulgamento": "DEFERIDO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002549684_div.jpg"
   },
   {
     "sqCandidato": "120002551713",
@@ -5035,7 +5717,10 @@
     "ocupacao": "OUTROS",
     "cpf": "70186657102",
     "codEleicao": "6259",
-    "sqColigacao": "120001801270"
+    "sqColigacao": "120001801270",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "DEFERIDO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002551713_div.jpg"
   },
   {
     "sqCandidato": "120002551909",
@@ -5057,7 +5742,10 @@
     "ocupacao": "ENGENHEIRO",
     "cpf": "40408248149",
     "codEleicao": "6259",
-    "sqColigacao": "120001801219"
+    "sqColigacao": "120001801219",
+    "tetoGastos": 3176572.53,
+    "situacaoJulgamento": "AGUARDANDO JULGAMENTO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002551909_div.jpg"
   },
   {
     "sqCandidato": "120002552159",
@@ -5079,7 +5767,10 @@
     "ocupacao": "EMPRESÁRIO",
     "cpf": "03432361173",
     "codEleicao": "6259",
-    "sqColigacao": "120001801245"
+    "sqColigacao": "120001801245",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "DEFERIDO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002552159_div.jpg"
   },
   {
     "sqCandidato": "120002552162",
@@ -5101,7 +5792,10 @@
     "ocupacao": "ADMINISTRADOR",
     "cpf": "39049558100",
     "codEleicao": "6259",
-    "sqColigacao": "120001801245"
+    "sqColigacao": "120001801245",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "AGUARDANDO JULGAMENTO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002552162_div.jpg"
   },
   {
     "sqCandidato": "120002552182",
@@ -5123,7 +5817,9 @@
     "ocupacao": "ENGENHEIRO",
     "cpf": "86100530244",
     "codEleicao": "6259",
-    "sqColigacao": "120001801253"
+    "sqColigacao": "120001801253",
+    "situacaoJulgamento": "DEFERIDO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002552182_div.jpg"
   },
   {
     "sqCandidato": "120002552184",
@@ -5145,7 +5841,9 @@
     "ocupacao": "EMPRESÁRIO",
     "cpf": "78318262972",
     "codEleicao": "6259",
-    "sqColigacao": "120001801253"
+    "sqColigacao": "120001801253",
+    "situacaoJulgamento": "DEFERIDO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002552184_div.jpg"
   },
   {
     "sqCandidato": "120002552195",
@@ -5167,7 +5865,9 @@
     "ocupacao": "JORNALISTA E REDATOR",
     "cpf": "00888218117",
     "codEleicao": "6259",
-    "sqColigacao": "120001801256"
+    "sqColigacao": "120001801256",
+    "situacaoJulgamento": "AGUARDANDO JULGAMENTO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002552195_div.jpg"
   },
   {
     "sqCandidato": "120002552209",
@@ -5189,7 +5889,10 @@
     "ocupacao": "CORRETOR DE IMÓVEIS, SEGUROS, TÍTULOS E VALORES",
     "cpf": "88618587168",
     "codEleicao": "6259",
-    "sqColigacao": "120001801245"
+    "sqColigacao": "120001801245",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "AGUARDANDO JULGAMENTO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002552209_div.jpg"
   },
   {
     "sqCandidato": "120002552215",
@@ -5211,7 +5914,10 @@
     "ocupacao": "APOSENTADO (EXCETO SERVIDOR PÚBLICO)",
     "cpf": "47500115849",
     "codEleicao": "6259",
-    "sqColigacao": "120001801245"
+    "sqColigacao": "120001801245",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "AGUARDANDO JULGAMENTO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002552215_div.jpg"
   },
   {
     "sqCandidato": "120002552952",
@@ -5233,7 +5939,10 @@
     "ocupacao": "ESTUDANTE, BOLSISTA, ESTAGIÁRIO E ASSEMELHADOS",
     "cpf": "09063475136",
     "codEleicao": "6259",
-    "sqColigacao": "120001801284"
+    "sqColigacao": "120001801284",
+    "tetoGastos": 3176572.53,
+    "situacaoJulgamento": "AGUARDANDO JULGAMENTO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002552952_div.jpg"
   },
   {
     "sqCandidato": "120002553018",
@@ -5255,7 +5964,10 @@
     "ocupacao": "DONA DE CASA",
     "cpf": "96945176134",
     "codEleicao": "6259",
-    "sqColigacao": "120001801350"
+    "sqColigacao": "120001801350",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "AGUARDANDO JULGAMENTO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002553018_div.jpg"
   },
   {
     "sqCandidato": "120002532256",
@@ -5277,7 +5989,9 @@
     "ocupacao": "PROFESSOR DE ENSINO SUPERIOR",
     "cpf": "29107989253",
     "codEleicao": "6259",
-    "sqColigacao": "120001799961"
+    "sqColigacao": "120001799961",
+    "situacaoJulgamento": "DEFERIDO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002532256_div.jpg"
   },
   {
     "sqCandidato": "120002532700",
@@ -5299,7 +6013,10 @@
     "ocupacao": "MOTORISTA DE VEÍCULOS DE TRANSPORTE DE CARGA",
     "cpf": "08507168701",
     "codEleicao": "6259",
-    "sqColigacao": "120001800098"
+    "sqColigacao": "120001800098",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "DEFERIDO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002532700_div.jpg"
   },
   {
     "sqCandidato": "120002532257",
@@ -5321,7 +6038,13 @@
     "ocupacao": "EMPRESÁRIO",
     "cpf": "31183700172",
     "codEleicao": "6259",
-    "sqColigacao": "120001799961"
+    "sqColigacao": "120001799961",
+    "tetoGastos": 6226082.16,
+    "situacaoJulgamento": "DEFERIDO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002532257_div.jpg",
+    "planoGovernoUrls": [
+      "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/planos-de-governo/MS/2026MS120002532257_01.pdf"
+    ]
   },
   {
     "sqCandidato": "120002532702",
@@ -5343,7 +6066,10 @@
     "ocupacao": "OUTROS",
     "cpf": "03073586156",
     "codEleicao": "6259",
-    "sqColigacao": "120001800098"
+    "sqColigacao": "120001800098",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "DEFERIDO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002532702_div.jpg"
   },
   {
     "sqCandidato": "120002532707",
@@ -5365,7 +6091,10 @@
     "ocupacao": "OUTROS",
     "cpf": "65238974191",
     "codEleicao": "6259",
-    "sqColigacao": "120001800098"
+    "sqColigacao": "120001800098",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "AGUARDANDO JULGAMENTO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002532707_div.jpg"
   },
   {
     "sqCandidato": "120002532710",
@@ -5387,7 +6116,10 @@
     "ocupacao": "OUTROS",
     "cpf": "02999600135",
     "codEleicao": "6259",
-    "sqColigacao": "120001800099"
+    "sqColigacao": "120001800099",
+    "tetoGastos": 3176572.53,
+    "situacaoJulgamento": "DEFERIDO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002532710_div.jpg"
   },
   {
     "sqCandidato": "120002532720",
@@ -5409,7 +6141,9 @@
     "ocupacao": "DONA DE CASA",
     "cpf": "87295741100",
     "codEleicao": "6259",
-    "sqColigacao": "120001800100"
+    "sqColigacao": "120001800100",
+    "situacaoJulgamento": "DEFERIDO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002532720_div.jpg"
   },
   {
     "sqCandidato": "120002534959",
@@ -5431,7 +6165,10 @@
     "ocupacao": "VENDEDOR PRACISTA, REPRESENTANTE, CAIXEIRO-VIAJANTE E ASSEMELHADOS",
     "cpf": "69415072172",
     "codEleicao": "6259",
-    "sqColigacao": "120001800228"
+    "sqColigacao": "120001800228",
+    "tetoGastos": 3176572.53,
+    "situacaoJulgamento": "DEFERIDO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002534959_div.jpg"
   },
   {
     "sqCandidato": "120002535261",
@@ -5453,7 +6190,10 @@
     "ocupacao": "COMERCIANTE",
     "cpf": "40736296115",
     "codEleicao": "6259",
-    "sqColigacao": "120001800268"
+    "sqColigacao": "120001800268",
+    "tetoGastos": 3176572.53,
+    "situacaoJulgamento": "DEFERIDO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002535261_div.jpg"
   },
   {
     "sqCandidato": "120002535263",
@@ -5475,7 +6215,10 @@
     "ocupacao": "VEREADOR",
     "cpf": "83018042115",
     "codEleicao": "6259",
-    "sqColigacao": "120001800268"
+    "sqColigacao": "120001800268",
+    "tetoGastos": 3176572.53,
+    "situacaoJulgamento": "DEFERIDO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002535263_div.jpg"
   },
   {
     "sqCandidato": "120002535513",
@@ -5497,7 +6240,10 @@
     "ocupacao": "OUTROS",
     "cpf": "05241762485",
     "codEleicao": "6259",
-    "sqColigacao": "120001800249"
+    "sqColigacao": "120001800249",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "DEFERIDO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002535513_div.jpg"
   },
   {
     "sqCandidato": "120002535392",
@@ -5519,7 +6265,10 @@
     "ocupacao": "EMPRESÁRIO",
     "cpf": "02366427158",
     "codEleicao": "6259",
-    "sqColigacao": "120001800276"
+    "sqColigacao": "120001800276",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "DEFERIDO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002535392_div.jpg"
   },
   {
     "sqCandidato": "120002535393",
@@ -5541,7 +6290,10 @@
     "ocupacao": "TÉCNICO DE ENFERMAGEM E ASSEMELHADOS (EXCETO ENFERMEIRO)",
     "cpf": "61375934104",
     "codEleicao": "6259",
-    "sqColigacao": "120001800276"
+    "sqColigacao": "120001800276",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "DEFERIDO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002535393_div.jpg"
   },
   {
     "sqCandidato": "120002535517",
@@ -5563,7 +6315,10 @@
     "ocupacao": "MANICURE E MAQUILADOR",
     "cpf": "55484034191",
     "codEleicao": "6259",
-    "sqColigacao": "120001800249"
+    "sqColigacao": "120001800249",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "AGUARDANDO JULGAMENTO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002535517_div.jpg"
   },
   {
     "sqCandidato": "120002535518",
@@ -5585,7 +6340,10 @@
     "ocupacao": "OUTROS",
     "cpf": "28632060104",
     "codEleicao": "6259",
-    "sqColigacao": "120001800249"
+    "sqColigacao": "120001800249",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "DEFERIDO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002535518_div.jpg"
   },
   {
     "sqCandidato": "120002535525",
@@ -5607,7 +6365,10 @@
     "ocupacao": "OUTROS",
     "cpf": "66366100187",
     "codEleicao": "6259",
-    "sqColigacao": "120001800249"
+    "sqColigacao": "120001800249",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "AGUARDANDO JULGAMENTO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002535525_div.jpg"
   },
   {
     "sqCandidato": "120002535529",
@@ -5629,7 +6390,10 @@
     "ocupacao": "EMPRESÁRIO",
     "cpf": "05084931960",
     "codEleicao": "6259",
-    "sqColigacao": "120001800249"
+    "sqColigacao": "120001800249",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "DEFERIDO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002535529_div.jpg"
   },
   {
     "sqCandidato": "120002535530",
@@ -5651,7 +6415,10 @@
     "ocupacao": "CORRETOR DE IMÓVEIS, SEGUROS, TÍTULOS E VALORES",
     "cpf": "78146798187",
     "codEleicao": "6259",
-    "sqColigacao": "120001800249"
+    "sqColigacao": "120001800249",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "DEFERIDO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002535530_div.jpg"
   },
   {
     "sqCandidato": "120002535535",
@@ -5673,7 +6440,10 @@
     "ocupacao": "SERVIDOR PÚBLICO MUNICIPAL",
     "cpf": "29848440178",
     "codEleicao": "6259",
-    "sqColigacao": "120001800249"
+    "sqColigacao": "120001800249",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "DEFERIDO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002535535_div.jpg"
   },
   {
     "sqCandidato": "120002536056",
@@ -5695,7 +6465,10 @@
     "ocupacao": "ENGENHEIRO",
     "cpf": "36291870720",
     "codEleicao": "6259",
-    "sqColigacao": "120001800276"
+    "sqColigacao": "120001800276",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "DEFERIDO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002536056_div.jpg"
   },
   {
     "sqCandidato": "120002536059",
@@ -5717,7 +6490,10 @@
     "ocupacao": "ADVOGADO",
     "cpf": "90608925187",
     "codEleicao": "6259",
-    "sqColigacao": "120001800276"
+    "sqColigacao": "120001800276",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "DEFERIDO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002536059_div.jpg"
   },
   {
     "sqCandidato": "120002536074",
@@ -5739,7 +6515,10 @@
     "ocupacao": "ADMINISTRADOR",
     "cpf": "44799187104",
     "codEleicao": "6259",
-    "sqColigacao": "120001800276"
+    "sqColigacao": "120001800276",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "DEFERIDO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002536074_div.jpg"
   },
   {
     "sqCandidato": "120002536073",
@@ -5761,7 +6540,10 @@
     "ocupacao": "JORNALISTA E REDATOR",
     "cpf": "72243406187",
     "codEleicao": "6259",
-    "sqColigacao": "120001800276"
+    "sqColigacao": "120001800276",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "DEFERIDO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002536073_div.jpg"
   },
   {
     "sqCandidato": "120002536283",
@@ -5783,7 +6565,10 @@
     "ocupacao": "PSICÓLOGO",
     "cpf": "09240412930",
     "codEleicao": "6259",
-    "sqColigacao": "120001800253"
+    "sqColigacao": "120001800253",
+    "tetoGastos": 3176572.53,
+    "situacaoJulgamento": "DEFERIDO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002536283_div.jpg"
   },
   {
     "sqCandidato": "120002537460",
@@ -5805,7 +6590,10 @@
     "ocupacao": "VEREADOR",
     "cpf": "42107059187",
     "codEleicao": "6259",
-    "sqColigacao": "120001800362"
+    "sqColigacao": "120001800362",
+    "tetoGastos": 3176572.53,
+    "situacaoJulgamento": "DEFERIDO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002537460_div.jpg"
   },
   {
     "sqCandidato": "120002537508",
@@ -5827,7 +6615,10 @@
     "ocupacao": "ADVOGADO",
     "cpf": "01103183150",
     "codEleicao": "6259",
-    "sqColigacao": "120001800364"
+    "sqColigacao": "120001800364",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "RENÚNCIA",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002537508_div.jpg"
   },
   {
     "sqCandidato": "120002537519",
@@ -5849,7 +6640,10 @@
     "ocupacao": "VENDEDOR DE COMÉRCIO VAREJISTA E ATACADISTA",
     "cpf": "04632968854",
     "codEleicao": "6259",
-    "sqColigacao": "120001800364"
+    "sqColigacao": "120001800364",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "DEFERIDO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002537519_div.jpg"
   },
   {
     "sqCandidato": "120002537522",
@@ -5871,7 +6665,10 @@
     "ocupacao": "DEPUTADO",
     "cpf": "12265240877",
     "codEleicao": "6259",
-    "sqColigacao": "120001800364"
+    "sqColigacao": "120001800364",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "DEFERIDO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002537522_div.jpg"
   },
   {
     "sqCandidato": "120002538786",
@@ -5893,7 +6690,10 @@
     "ocupacao": "MÉDICO",
     "cpf": "05134552134",
     "codEleicao": "6259",
-    "sqColigacao": "120001800440"
+    "sqColigacao": "120001800440",
+    "tetoGastos": 3176572.53,
+    "situacaoJulgamento": "DEFERIDO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002538786_div.jpg"
   },
   {
     "sqCandidato": "120002538788",
@@ -5915,7 +6715,10 @@
     "ocupacao": "PROFESSOR DE ENSINO MÉDIO",
     "cpf": "93132620106",
     "codEleicao": "6259",
-    "sqColigacao": "120001800440"
+    "sqColigacao": "120001800440",
+    "tetoGastos": 3176572.53,
+    "situacaoJulgamento": "AGUARDANDO JULGAMENTO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002538788_div.jpg"
   },
   {
     "sqCandidato": "120002538792",
@@ -5937,7 +6740,10 @@
     "ocupacao": "POLICIAL CIVIL",
     "cpf": "12747759814",
     "codEleicao": "6259",
-    "sqColigacao": "120001800440"
+    "sqColigacao": "120001800440",
+    "tetoGastos": 3176572.53,
+    "situacaoJulgamento": "AGUARDANDO JULGAMENTO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002538792_div.jpg"
   },
   {
     "sqCandidato": "120002538950",
@@ -5959,7 +6765,10 @@
     "ocupacao": "ADMINISTRADOR",
     "cpf": "55889441191",
     "codEleicao": "6259",
-    "sqColigacao": "120001800411"
+    "sqColigacao": "120001800411",
+    "tetoGastos": 3176572.53,
+    "situacaoJulgamento": "DEFERIDO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002538950_div.jpg"
   },
   {
     "sqCandidato": "120002539690",
@@ -5981,7 +6790,10 @@
     "ocupacao": "EMPRESÁRIO",
     "cpf": "51912325187",
     "codEleicao": "6259",
-    "sqColigacao": "120001800466"
+    "sqColigacao": "120001800466",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "AGUARDANDO JULGAMENTO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002539690_div.jpg"
   },
   {
     "sqCandidato": "120002539706",
@@ -6003,7 +6815,10 @@
     "ocupacao": "EMPRESÁRIO",
     "cpf": "00165701110",
     "codEleicao": "6259",
-    "sqColigacao": "120001800466"
+    "sqColigacao": "120001800466",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "AGUARDANDO JULGAMENTO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002539706_div.jpg"
   },
   {
     "sqCandidato": "120002539709",
@@ -6025,7 +6840,10 @@
     "ocupacao": "ADMINISTRADOR",
     "cpf": "04849835805",
     "codEleicao": "6259",
-    "sqColigacao": "120001800466"
+    "sqColigacao": "120001800466",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "AGUARDANDO JULGAMENTO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002539709_div.jpg"
   },
   {
     "sqCandidato": "120002544714",
@@ -6047,7 +6865,10 @@
     "ocupacao": "APOSENTADO (EXCETO SERVIDOR PÚBLICO)",
     "cpf": "04860233115",
     "codEleicao": "6259",
-    "sqColigacao": "120001800745"
+    "sqColigacao": "120001800745",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "DEFERIDO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002544714_div.jpg"
   },
   {
     "sqCandidato": "120002544719",
@@ -6069,7 +6890,10 @@
     "ocupacao": "APOSENTADO (EXCETO SERVIDOR PÚBLICO)",
     "cpf": "46466479153",
     "codEleicao": "6259",
-    "sqColigacao": "120001800745"
+    "sqColigacao": "120001800745",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "DEFERIDO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002544719_div.jpg"
   },
   {
     "sqCandidato": "120002544965",
@@ -6091,7 +6915,10 @@
     "ocupacao": "TÉCNICO DE ENFERMAGEM E ASSEMELHADOS (EXCETO ENFERMEIRO)",
     "cpf": "69380619120",
     "codEleicao": "6259",
-    "sqColigacao": "120001800769"
+    "sqColigacao": "120001800769",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "AGUARDANDO JULGAMENTO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002544965_div.jpg"
   },
   {
     "sqCandidato": "120002544972",
@@ -6113,7 +6940,10 @@
     "ocupacao": "ALFAIATE E COSTUREIRO",
     "cpf": "50183133153",
     "codEleicao": "6259",
-    "sqColigacao": "120001800769"
+    "sqColigacao": "120001800769",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "AGUARDANDO JULGAMENTO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002544972_div.jpg"
   },
   {
     "sqCandidato": "120002544981",
@@ -6135,7 +6965,10 @@
     "ocupacao": "PROFESSOR DE ENSINO MÉDIO",
     "cpf": "40384245889",
     "codEleicao": "6259",
-    "sqColigacao": "120001800769"
+    "sqColigacao": "120001800769",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "AGUARDANDO JULGAMENTO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002544981_div.jpg"
   },
   {
     "sqCandidato": "120002547047",
@@ -6157,7 +6990,10 @@
     "ocupacao": "SERVIDOR PÚBLICO MUNICIPAL",
     "cpf": "96399406153",
     "codEleicao": "6259",
-    "sqColigacao": "120001800852"
+    "sqColigacao": "120001800852",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "AGUARDANDO JULGAMENTO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002547047_div.jpg"
   },
   {
     "sqCandidato": "120002547046",
@@ -6179,7 +7015,10 @@
     "ocupacao": "ADVOGADO",
     "cpf": "10661891100",
     "codEleicao": "6259",
-    "sqColigacao": "120001800852"
+    "sqColigacao": "120001800852",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "AGUARDANDO JULGAMENTO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002547046_div.jpg"
   },
   {
     "sqCandidato": "120002547052",
@@ -6201,7 +7040,10 @@
     "ocupacao": "CERAMISTA E OLEIRO",
     "cpf": "52568520191",
     "codEleicao": "6259",
-    "sqColigacao": "120001800852"
+    "sqColigacao": "120001800852",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "AGUARDANDO JULGAMENTO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002547052_div.jpg"
   },
   {
     "sqCandidato": "120002547053",
@@ -6223,7 +7065,10 @@
     "ocupacao": "EMPRESÁRIO",
     "cpf": "29803748149",
     "codEleicao": "6259",
-    "sqColigacao": "120001800852"
+    "sqColigacao": "120001800852",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "AGUARDANDO JULGAMENTO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002547053_div.jpg"
   },
   {
     "sqCandidato": "120002547055",
@@ -6245,7 +7090,10 @@
     "ocupacao": "SERVIDOR PÚBLICO FEDERAL",
     "cpf": "95756493115",
     "codEleicao": "6259",
-    "sqColigacao": "120001800852"
+    "sqColigacao": "120001800852",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "AGUARDANDO JULGAMENTO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002547055_div.jpg"
   },
   {
     "sqCandidato": "120002547054",
@@ -6267,7 +7115,10 @@
     "ocupacao": "CORRETOR DE IMÓVEIS, SEGUROS, TÍTULOS E VALORES",
     "cpf": "06561196830",
     "codEleicao": "6259",
-    "sqColigacao": "120001800852"
+    "sqColigacao": "120001800852",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "AGUARDANDO JULGAMENTO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002547054_div.jpg"
   },
   {
     "sqCandidato": "120002547435",
@@ -6289,7 +7140,10 @@
     "ocupacao": "BANCÁRIO E ECONOMIÁRIO",
     "cpf": "32247753191",
     "codEleicao": "6259",
-    "sqColigacao": "120001800861"
+    "sqColigacao": "120001800861",
+    "tetoGastos": 3176572.53,
+    "situacaoJulgamento": "AGUARDANDO JULGAMENTO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002547435_div.jpg"
   },
   {
     "sqCandidato": "120002547436",
@@ -6311,7 +7165,9 @@
     "ocupacao": "PROFESSOR DE ENSINO FUNDAMENTAL",
     "cpf": "36747602153",
     "codEleicao": "6259",
-    "sqColigacao": "120001800861"
+    "sqColigacao": "120001800861",
+    "situacaoJulgamento": "AGUARDANDO JULGAMENTO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002547436_div.jpg"
   },
   {
     "sqCandidato": "120002547438",
@@ -6333,7 +7189,9 @@
     "ocupacao": "SERVIDOR PÚBLICO CIVIL APOSENTADO",
     "cpf": "27190960163",
     "codEleicao": "6259",
-    "sqColigacao": "120001800861"
+    "sqColigacao": "120001800861",
+    "situacaoJulgamento": "AGUARDANDO JULGAMENTO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002547438_div.jpg"
   },
   {
     "sqCandidato": "120002549681",
@@ -6355,7 +7213,13 @@
     "ocupacao": "CAPITALISTA DE ATIVOS FINANCEIROS",
     "cpf": "01682454185",
     "codEleicao": "6259",
-    "sqColigacao": "120001801019"
+    "sqColigacao": "120001801019",
+    "tetoGastos": 6226082.16,
+    "situacaoJulgamento": "DEFERIDO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002549681_div.jpg",
+    "planoGovernoUrls": [
+      "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/planos-de-governo/MS/2026MS120002549681_01.pdf"
+    ]
   },
   {
     "sqCandidato": "120002549689",
@@ -6377,7 +7241,10 @@
     "ocupacao": "COMERCIANTE",
     "cpf": "74262475972",
     "codEleicao": "6259",
-    "sqColigacao": "120001801020"
+    "sqColigacao": "120001801020",
+    "tetoGastos": 3176572.53,
+    "situacaoJulgamento": "DEFERIDO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002549689_div.jpg"
   },
   {
     "sqCandidato": "120002550712",
@@ -6399,7 +7266,10 @@
     "ocupacao": "PROFESSOR DE ENSINO FUNDAMENTAL",
     "cpf": "59560924168",
     "codEleicao": "6259",
-    "sqColigacao": "120001801128"
+    "sqColigacao": "120001801128",
+    "tetoGastos": 3176572.53,
+    "situacaoJulgamento": "AGUARDANDO JULGAMENTO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002550712_div.jpg"
   },
   {
     "sqCandidato": "120002550718",
@@ -6421,7 +7291,10 @@
     "ocupacao": "APOSENTADO (EXCETO SERVIDOR PÚBLICO)",
     "cpf": "02574918991",
     "codEleicao": "6259",
-    "sqColigacao": "120001801128"
+    "sqColigacao": "120001801128",
+    "tetoGastos": 3176572.53,
+    "situacaoJulgamento": "AGUARDANDO JULGAMENTO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002550718_div.jpg"
   },
   {
     "sqCandidato": "120002551721",
@@ -6443,7 +7316,10 @@
     "ocupacao": "GERENTE",
     "cpf": "95108386168",
     "codEleicao": "6259",
-    "sqColigacao": "120001801270"
+    "sqColigacao": "120001801270",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "DEFERIDO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002551721_div.jpg"
   },
   {
     "sqCandidato": "120002551724",
@@ -6465,7 +7341,10 @@
     "ocupacao": "GERENTE",
     "cpf": "00028184181",
     "codEleicao": "6259",
-    "sqColigacao": "120001801270"
+    "sqColigacao": "120001801270",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "DEFERIDO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002551724_div.jpg"
   },
   {
     "sqCandidato": "120002551726",
@@ -6487,7 +7366,10 @@
     "ocupacao": "SERVIDOR PÚBLICO MUNICIPAL",
     "cpf": "55985831191",
     "codEleicao": "6259",
-    "sqColigacao": "120001801270"
+    "sqColigacao": "120001801270",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "DEFERIDO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002551726_div.jpg"
   },
   {
     "sqCandidato": "120002551725",
@@ -6509,7 +7391,10 @@
     "ocupacao": "PRODUTOR AGROPECUÁRIO",
     "cpf": "30581400100",
     "codEleicao": "6259",
-    "sqColigacao": "120001801270"
+    "sqColigacao": "120001801270",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "DEFERIDO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002551725_div.jpg"
   },
   {
     "sqCandidato": "120002551907",
@@ -6531,7 +7416,9 @@
     "ocupacao": "TRABALHADOR RURAL",
     "cpf": "43172423972",
     "codEleicao": "6259",
-    "sqColigacao": "120001801219"
+    "sqColigacao": "120001801219",
+    "situacaoJulgamento": "AGUARDANDO JULGAMENTO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002551907_div.jpg"
   },
   {
     "sqCandidato": "120002552174",
@@ -6553,7 +7440,10 @@
     "ocupacao": "CONTADOR",
     "cpf": "68970528172",
     "codEleicao": "6259",
-    "sqColigacao": "120001801252"
+    "sqColigacao": "120001801252",
+    "tetoGastos": 3176572.53,
+    "situacaoJulgamento": "AGUARDANDO JULGAMENTO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002552174_div.jpg"
   },
   {
     "sqCandidato": "120002552181",
@@ -6575,7 +7465,10 @@
     "ocupacao": "COZINHEIRO",
     "cpf": "06823649160",
     "codEleicao": "6259",
-    "sqColigacao": "120001801252"
+    "sqColigacao": "120001801252",
+    "tetoGastos": 3176572.53,
+    "situacaoJulgamento": "AGUARDANDO JULGAMENTO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002552181_div.jpg"
   },
   {
     "sqCandidato": "120002552183",
@@ -6597,7 +7490,10 @@
     "ocupacao": "EMPRESÁRIO",
     "cpf": "46520210110",
     "codEleicao": "6259",
-    "sqColigacao": "120001801253"
+    "sqColigacao": "120001801253",
+    "tetoGastos": 3176572.53,
+    "situacaoJulgamento": "DEFERIDO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002552183_div.jpg"
   },
   {
     "sqCandidato": "120002552208",
@@ -6619,7 +7515,10 @@
     "ocupacao": "ESTUDANTE, BOLSISTA, ESTAGIÁRIO E ASSEMELHADOS",
     "cpf": "07970497110",
     "codEleicao": "6259",
-    "sqColigacao": "120001801245"
+    "sqColigacao": "120001801245",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "AGUARDANDO JULGAMENTO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002552208_div.jpg"
   },
   {
     "sqCandidato": "120002552953",
@@ -6641,7 +7540,10 @@
     "ocupacao": "EMPRESÁRIO",
     "cpf": "00478882106",
     "codEleicao": "6259",
-    "sqColigacao": "120001801284"
+    "sqColigacao": "120001801284",
+    "tetoGastos": 3176572.53,
+    "situacaoJulgamento": "AGUARDANDO JULGAMENTO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002552953_div.jpg"
   },
   {
     "sqCandidato": "120002553017",
@@ -6663,7 +7565,10 @@
     "ocupacao": "ADVOGADO",
     "cpf": "48974250187",
     "codEleicao": "6259",
-    "sqColigacao": "120001801350"
+    "sqColigacao": "120001801350",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "AGUARDANDO JULGAMENTO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002553017_div.jpg"
   },
   {
     "sqCandidato": "120002532711",
@@ -6685,7 +7590,10 @@
     "ocupacao": "GEÓGRAFO",
     "cpf": "40403254191",
     "codEleicao": "6259",
-    "sqColigacao": "120001800099"
+    "sqColigacao": "120001800099",
+    "tetoGastos": 3176572.53,
+    "situacaoJulgamento": "DEFERIDO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002532711_div.jpg"
   },
   {
     "sqCandidato": "120002535522",
@@ -6707,7 +7615,10 @@
     "ocupacao": "OUTROS",
     "cpf": "79934404168",
     "codEleicao": "6259",
-    "sqColigacao": "120001800249"
+    "sqColigacao": "120001800249",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "DEFERIDO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002535522_div.jpg"
   },
   {
     "sqCandidato": "120002535524",
@@ -6729,7 +7640,10 @@
     "ocupacao": "JORNALISTA E REDATOR",
     "cpf": "65245911191",
     "codEleicao": "6259",
-    "sqColigacao": "120001800249"
+    "sqColigacao": "120001800249",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "AGUARDANDO JULGAMENTO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002535524_div.jpg"
   },
   {
     "sqCandidato": "120002535531",
@@ -6751,7 +7665,10 @@
     "ocupacao": "SERVIDOR PÚBLICO MUNICIPAL",
     "cpf": "11271368870",
     "codEleicao": "6259",
-    "sqColigacao": "120001800249"
+    "sqColigacao": "120001800249",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "DEFERIDO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002535531_div.jpg"
   },
   {
     "sqCandidato": "120002536057",
@@ -6773,7 +7690,10 @@
     "ocupacao": "ADVOGADO",
     "cpf": "97652911168",
     "codEleicao": "6259",
-    "sqColigacao": "120001800276"
+    "sqColigacao": "120001800276",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "DEFERIDO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002536057_div.jpg"
   },
   {
     "sqCandidato": "120002536067",
@@ -6795,7 +7715,10 @@
     "ocupacao": "EMPRESÁRIO",
     "cpf": "60907932134",
     "codEleicao": "6259",
-    "sqColigacao": "120001800276"
+    "sqColigacao": "120001800276",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "DEFERIDO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002536067_div.jpg"
   },
   {
     "sqCandidato": "120002536070",
@@ -6817,7 +7740,10 @@
     "ocupacao": "CORRETOR DE IMÓVEIS, SEGUROS, TÍTULOS E VALORES",
     "cpf": "01945180196",
     "codEleicao": "6259",
-    "sqColigacao": "120001800276"
+    "sqColigacao": "120001800276",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "DEFERIDO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002536070_div.jpg"
   },
   {
     "sqCandidato": "120002536581",
@@ -6839,7 +7765,9 @@
     "ocupacao": "ADVOGADO",
     "cpf": "28021908149",
     "codEleicao": "6259",
-    "sqColigacao": "120001800246"
+    "sqColigacao": "120001800246",
+    "situacaoJulgamento": "DEFERIDO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002536581_div.jpg"
   },
   {
     "sqCandidato": "120002537357",
@@ -6861,7 +7789,10 @@
     "ocupacao": "BOMBEIRO MILITAR",
     "cpf": "36855553168",
     "codEleicao": "6259",
-    "sqColigacao": "120001800356"
+    "sqColigacao": "120001800356",
+    "tetoGastos": 3176572.53,
+    "situacaoJulgamento": "DEFERIDO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002537357_div.jpg"
   },
   {
     "sqCandidato": "120002537511",
@@ -6883,7 +7814,10 @@
     "ocupacao": "PUBLICITÁRIO",
     "cpf": "13943693104",
     "codEleicao": "6259",
-    "sqColigacao": "120001800364"
+    "sqColigacao": "120001800364",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "DEFERIDO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002537511_div.jpg"
   },
   {
     "sqCandidato": "120002538790",
@@ -6905,7 +7839,10 @@
     "ocupacao": "EMPRESÁRIO",
     "cpf": "09470447875",
     "codEleicao": "6259",
-    "sqColigacao": "120001800440"
+    "sqColigacao": "120001800440",
+    "tetoGastos": 3176572.53,
+    "situacaoJulgamento": "AGUARDANDO JULGAMENTO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002538790_div.jpg"
   },
   {
     "sqCandidato": "120002538949",
@@ -6927,7 +7864,10 @@
     "ocupacao": "ADVOGADO",
     "cpf": "02000518141",
     "codEleicao": "6259",
-    "sqColigacao": "120001800411"
+    "sqColigacao": "120001800411",
+    "tetoGastos": 3176572.53,
+    "situacaoJulgamento": "DEFERIDO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002538949_div.jpg"
   },
   {
     "sqCandidato": "120002538953",
@@ -6949,7 +7889,10 @@
     "ocupacao": "SERVIDOR PÚBLICO ESTADUAL",
     "cpf": "77129172134",
     "codEleicao": "6259",
-    "sqColigacao": "120001800411"
+    "sqColigacao": "120001800411",
+    "tetoGastos": 3176572.53,
+    "situacaoJulgamento": "DEFERIDO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002538953_div.jpg"
   },
   {
     "sqCandidato": "120002539705",
@@ -6971,7 +7914,10 @@
     "ocupacao": "OUTROS",
     "cpf": "20404816134",
     "codEleicao": "6259",
-    "sqColigacao": "120001800466"
+    "sqColigacao": "120001800466",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "AGUARDANDO JULGAMENTO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002539705_div.jpg"
   },
   {
     "sqCandidato": "120002544713",
@@ -6993,7 +7939,10 @@
     "ocupacao": "APOSENTADO (EXCETO SERVIDOR PÚBLICO)",
     "cpf": "43960545800",
     "codEleicao": "6259",
-    "sqColigacao": "120001800745"
+    "sqColigacao": "120001800745",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "AGUARDANDO JULGAMENTO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002544713_div.jpg"
   },
   {
     "sqCandidato": "120002544722",
@@ -7015,7 +7964,10 @@
     "ocupacao": "DEPUTADO",
     "cpf": "25741934153",
     "codEleicao": "6259",
-    "sqColigacao": "120001800745"
+    "sqColigacao": "120001800745",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "DEFERIDO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002544722_div.jpg"
   },
   {
     "sqCandidato": "120002544957",
@@ -7037,7 +7989,10 @@
     "ocupacao": "EMPRESÁRIO",
     "cpf": "04578809102",
     "codEleicao": "6259",
-    "sqColigacao": "120001800768"
+    "sqColigacao": "120001800768",
+    "tetoGastos": 3176572.53,
+    "situacaoJulgamento": "AGUARDANDO JULGAMENTO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002544957_div.jpg"
   },
   {
     "sqCandidato": "120002544967",
@@ -7059,7 +8014,10 @@
     "ocupacao": "CORRETOR DE IMÓVEIS, SEGUROS, TÍTULOS E VALORES",
     "cpf": "83271007187",
     "codEleicao": "6259",
-    "sqColigacao": "120001800769"
+    "sqColigacao": "120001800769",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "AGUARDANDO JULGAMENTO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002544967_div.jpg"
   },
   {
     "sqCandidato": "120002544970",
@@ -7081,7 +8039,10 @@
     "ocupacao": "GERENTE",
     "cpf": "41685259880",
     "codEleicao": "6259",
-    "sqColigacao": "120001800769"
+    "sqColigacao": "120001800769",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "AGUARDANDO JULGAMENTO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002544970_div.jpg"
   },
   {
     "sqCandidato": "120002544980",
@@ -7103,7 +8064,10 @@
     "ocupacao": "TÉCNICO EM AGRONOMIA E AGRIMENSURA",
     "cpf": "36696471120",
     "codEleicao": "6259",
-    "sqColigacao": "120001800769"
+    "sqColigacao": "120001800769",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "AGUARDANDO JULGAMENTO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002544980_div.jpg"
   },
   {
     "sqCandidato": "120002544983",
@@ -7125,7 +8089,10 @@
     "ocupacao": "EMPRESÁRIO",
     "cpf": "07804387601",
     "codEleicao": "6259",
-    "sqColigacao": "120001800769"
+    "sqColigacao": "120001800769",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "AGUARDANDO JULGAMENTO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002544983_div.jpg"
   },
   {
     "sqCandidato": "120002545238",
@@ -7147,7 +8114,10 @@
     "ocupacao": "AGRÔNOMO",
     "cpf": "42461383634",
     "codEleicao": "6259",
-    "sqColigacao": "120001800660"
+    "sqColigacao": "120001800660",
+    "tetoGastos": 3176572.53,
+    "situacaoJulgamento": "AGUARDANDO JULGAMENTO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002545238_div.jpg"
   },
   {
     "sqCandidato": "120002547059",
@@ -7169,7 +8139,10 @@
     "ocupacao": "ESCRITOR E CRÍTICO",
     "cpf": "95058125153",
     "codEleicao": "6259",
-    "sqColigacao": "120001800852"
+    "sqColigacao": "120001800852",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "AGUARDANDO JULGAMENTO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002547059_div.jpg"
   },
   {
     "sqCandidato": "120002547062",
@@ -7191,7 +8164,10 @@
     "ocupacao": "OUTROS",
     "cpf": "63722895120",
     "codEleicao": "6259",
-    "sqColigacao": "120001800852"
+    "sqColigacao": "120001800852",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "AGUARDANDO JULGAMENTO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002547062_div.jpg"
   },
   {
     "sqCandidato": "120002547063",
@@ -7213,7 +8189,10 @@
     "ocupacao": "AGRICULTOR",
     "cpf": "82234256100",
     "codEleicao": "6259",
-    "sqColigacao": "120001800852"
+    "sqColigacao": "120001800852",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "AGUARDANDO JULGAMENTO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002547063_div.jpg"
   },
   {
     "sqCandidato": "120002547065",
@@ -7235,7 +8214,10 @@
     "ocupacao": "EMPRESÁRIO",
     "cpf": "66723965272",
     "codEleicao": "6259",
-    "sqColigacao": "120001800852"
+    "sqColigacao": "120001800852",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "AGUARDANDO JULGAMENTO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002547065_div.jpg"
   },
   {
     "sqCandidato": "120002547434",
@@ -7257,7 +8239,10 @@
     "ocupacao": "ADVOGADO",
     "cpf": "60838965172",
     "codEleicao": "6259",
-    "sqColigacao": "120001800861"
+    "sqColigacao": "120001800861",
+    "tetoGastos": 3176572.53,
+    "situacaoJulgamento": "AGUARDANDO JULGAMENTO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002547434_div.jpg"
   },
   {
     "sqCandidato": "120002549562",
@@ -7279,7 +8264,10 @@
     "ocupacao": "EMPRESÁRIO",
     "cpf": "01244998133",
     "codEleicao": "6259",
-    "sqColigacao": "120001801054"
+    "sqColigacao": "120001801054",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "AGUARDANDO JULGAMENTO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002549562_div.jpg"
   },
   {
     "sqCandidato": "120002549566",
@@ -7301,7 +8289,10 @@
     "ocupacao": "SERVIDOR PÚBLICO ESTADUAL",
     "cpf": "03559868173",
     "codEleicao": "6259",
-    "sqColigacao": "120001801054"
+    "sqColigacao": "120001801054",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "RENÚNCIA",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002549566_div.jpg"
   },
   {
     "sqCandidato": "120002549569",
@@ -7323,7 +8314,10 @@
     "ocupacao": "COMERCIANTE",
     "cpf": "60116781149",
     "codEleicao": "6259",
-    "sqColigacao": "120001801054"
+    "sqColigacao": "120001801054",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "AGUARDANDO JULGAMENTO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002549569_div.jpg"
   },
   {
     "sqCandidato": "120002549573",
@@ -7345,7 +8339,10 @@
     "ocupacao": "ADMINISTRADOR",
     "cpf": "63657325115",
     "codEleicao": "6259",
-    "sqColigacao": "120001801054"
+    "sqColigacao": "120001801054",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "AGUARDANDO JULGAMENTO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002549573_div.jpg"
   },
   {
     "sqCandidato": "120002549578",
@@ -7367,7 +8364,10 @@
     "ocupacao": "MÉDICO",
     "cpf": "03463205939",
     "codEleicao": "6259",
-    "sqColigacao": "120001801054"
+    "sqColigacao": "120001801054",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "AGUARDANDO JULGAMENTO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002549578_div.jpg"
   },
   {
     "sqCandidato": "120002549579",
@@ -7389,7 +8389,10 @@
     "ocupacao": "SERVIDOR PÚBLICO MUNICIPAL",
     "cpf": "55413552149",
     "codEleicao": "6259",
-    "sqColigacao": "120001801054"
+    "sqColigacao": "120001801054",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "AGUARDANDO JULGAMENTO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002549579_div.jpg"
   },
   {
     "sqCandidato": "120002549582",
@@ -7411,7 +8414,10 @@
     "ocupacao": "OUTROS",
     "cpf": "08084059777",
     "codEleicao": "6259",
-    "sqColigacao": "120001801054"
+    "sqColigacao": "120001801054",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "AGUARDANDO JULGAMENTO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002549582_div.jpg"
   },
   {
     "sqCandidato": "120002549580",
@@ -7433,7 +8439,10 @@
     "ocupacao": "DONA DE CASA",
     "cpf": "02277725129",
     "codEleicao": "6259",
-    "sqColigacao": "120001801054"
+    "sqColigacao": "120001801054",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "AGUARDANDO JULGAMENTO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002549580_div.jpg"
   },
   {
     "sqCandidato": "120002549690",
@@ -7455,7 +8464,10 @@
     "ocupacao": "COMERCIANTE",
     "cpf": "09732074779",
     "codEleicao": "6259",
-    "sqColigacao": "120001801020"
+    "sqColigacao": "120001801020",
+    "tetoGastos": 3176572.53,
+    "situacaoJulgamento": "DEFERIDO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002549690_div.jpg"
   },
   {
     "sqCandidato": "120002550711",
@@ -7477,7 +8489,10 @@
     "ocupacao": "ODONTÓLOGO",
     "cpf": "06979341871",
     "codEleicao": "6259",
-    "sqColigacao": "120001801128"
+    "sqColigacao": "120001801128",
+    "tetoGastos": 3176572.53,
+    "situacaoJulgamento": "AGUARDANDO JULGAMENTO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002550711_div.jpg"
   },
   {
     "sqCandidato": "120002551720",
@@ -7499,7 +8514,10 @@
     "ocupacao": "ESTUDANTE, BOLSISTA, ESTAGIÁRIO E ASSEMELHADOS",
     "cpf": "70058804129",
     "codEleicao": "6259",
-    "sqColigacao": "120001801270"
+    "sqColigacao": "120001801270",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "DEFERIDO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002551720_div.jpg"
   },
   {
     "sqCandidato": "120002551722",
@@ -7521,7 +8539,10 @@
     "ocupacao": "GARÇOM",
     "cpf": "56166729120",
     "codEleicao": "6259",
-    "sqColigacao": "120001801270"
+    "sqColigacao": "120001801270",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "DEFERIDO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002551722_div.jpg"
   },
   {
     "sqCandidato": "120002551727",
@@ -7543,7 +8564,10 @@
     "ocupacao": "APOSENTADO (EXCETO SERVIDOR PÚBLICO)",
     "cpf": "42814570978",
     "codEleicao": "6259",
-    "sqColigacao": "120001801270"
+    "sqColigacao": "120001801270",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "DEFERIDO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002551727_div.jpg"
   },
   {
     "sqCandidato": "120002551728",
@@ -7565,7 +8589,10 @@
     "ocupacao": "REPRESENTANTE COMERCIAL",
     "cpf": "58355421191",
     "codEleicao": "6259",
-    "sqColigacao": "120001801270"
+    "sqColigacao": "120001801270",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "DEFERIDO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002551728_div.jpg"
   },
   {
     "sqCandidato": "120002552115",
@@ -7587,7 +8614,10 @@
     "ocupacao": "ADVOGADO",
     "cpf": "76756700197",
     "codEleicao": "6259",
-    "sqColigacao": "120001801248"
+    "sqColigacao": "120001801248",
+    "tetoGastos": 3176572.53,
+    "situacaoJulgamento": "AGUARDANDO JULGAMENTO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002552115_div.jpg"
   },
   {
     "sqCandidato": "120002552117",
@@ -7609,7 +8639,9 @@
     "ocupacao": "ADMINISTRADOR",
     "cpf": "30839920091",
     "codEleicao": "6259",
-    "sqColigacao": "120001801248"
+    "sqColigacao": "120001801248",
+    "situacaoJulgamento": "AGUARDANDO JULGAMENTO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002552117_div.jpg"
   },
   {
     "sqCandidato": "120002552155",
@@ -7631,7 +8663,13 @@
     "ocupacao": "ENGENHEIRO",
     "cpf": "01127982842",
     "codEleicao": "6259",
-    "sqColigacao": "120001801243"
+    "sqColigacao": "120001801243",
+    "tetoGastos": 6226082.16,
+    "situacaoJulgamento": "DEFERIDO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002552155_div.jpg",
+    "planoGovernoUrls": [
+      "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/planos-de-governo/MS/2026MS120002552155_01.pdf"
+    ]
   },
   {
     "sqCandidato": "120002552180",
@@ -7653,7 +8691,10 @@
     "ocupacao": "EMPRESÁRIO",
     "cpf": "70758000863",
     "codEleicao": "6259",
-    "sqColigacao": "120001801252"
+    "sqColigacao": "120001801252",
+    "tetoGastos": 3176572.53,
+    "situacaoJulgamento": "AGUARDANDO JULGAMENTO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002552180_div.jpg"
   },
   {
     "sqCandidato": "120002552191",
@@ -7675,7 +8716,13 @@
     "ocupacao": "ADVOGADO",
     "cpf": "01247628167",
     "codEleicao": "6259",
-    "sqColigacao": "120001801255"
+    "sqColigacao": "120001801255",
+    "tetoGastos": 6226082.16,
+    "situacaoJulgamento": "AGUARDANDO JULGAMENTO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002552191_div.jpg",
+    "planoGovernoUrls": [
+      "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/planos-de-governo/MS/2026MS120002552191_01.pdf"
+    ]
   },
   {
     "sqCandidato": "120002552203",
@@ -7697,7 +8744,10 @@
     "ocupacao": "TRABALHADOR DE CONSTRUÇÃO CIVIL",
     "cpf": "92266053191",
     "codEleicao": "6259",
-    "sqColigacao": "120001801245"
+    "sqColigacao": "120001801245",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "AGUARDANDO JULGAMENTO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002552203_div.jpg"
   },
   {
     "sqCandidato": "120002552683",
@@ -7719,7 +8769,10 @@
     "ocupacao": "TRABALHADOR RURAL",
     "cpf": "04470910180",
     "codEleicao": "6259",
-    "sqColigacao": "120001801259"
+    "sqColigacao": "120001801259",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "AGUARDANDO JULGAMENTO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002552683_div.jpg"
   },
   {
     "sqCandidato": "120002552685",
@@ -7741,7 +8794,10 @@
     "ocupacao": "DONA DE CASA",
     "cpf": "70649916166",
     "codEleicao": "6259",
-    "sqColigacao": "120001801259"
+    "sqColigacao": "120001801259",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "AGUARDANDO JULGAMENTO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002552685_div.jpg"
   },
   {
     "sqCandidato": "120002552686",
@@ -7763,7 +8819,10 @@
     "ocupacao": "COMERCIANTE",
     "cpf": "07787138149",
     "codEleicao": "6259",
-    "sqColigacao": "120001801259"
+    "sqColigacao": "120001801259",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "AGUARDANDO JULGAMENTO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002552686_div.jpg"
   },
   {
     "sqCandidato": "120002552689",
@@ -7785,7 +8844,10 @@
     "ocupacao": "OUTROS",
     "cpf": "02160908142",
     "codEleicao": "6259",
-    "sqColigacao": "120001801260"
+    "sqColigacao": "120001801260",
+    "tetoGastos": 3176572.53,
+    "situacaoJulgamento": "AGUARDANDO JULGAMENTO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002552689_div.jpg"
   },
   {
     "sqCandidato": "120002552949",
@@ -7807,7 +8869,10 @@
     "ocupacao": "ADVOGADO",
     "cpf": "04244502165",
     "codEleicao": "6259",
-    "sqColigacao": "120001801284"
+    "sqColigacao": "120001801284",
+    "tetoGastos": 3176572.53,
+    "situacaoJulgamento": "AGUARDANDO JULGAMENTO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002552949_div.jpg"
   },
   {
     "sqCandidato": "120002553015",
@@ -7829,7 +8894,10 @@
     "ocupacao": "DONA DE CASA",
     "cpf": "00631304169",
     "codEleicao": "6259",
-    "sqColigacao": "120001801350"
+    "sqColigacao": "120001801350",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "AGUARDANDO JULGAMENTO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002553015_div.jpg"
   },
   {
     "sqCandidato": "120002553014",
@@ -7851,7 +8919,10 @@
     "ocupacao": "APOSENTADO (EXCETO SERVIDOR PÚBLICO)",
     "cpf": "95985891100",
     "codEleicao": "6259",
-    "sqColigacao": "120001801350"
+    "sqColigacao": "120001801350",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "AGUARDANDO JULGAMENTO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002553014_div.jpg"
   },
   {
     "sqCandidato": "120002553019",
@@ -7873,7 +8944,10 @@
     "ocupacao": "VENDEDOR DE COMÉRCIO VAREJISTA E ATACADISTA",
     "cpf": "96943815172",
     "codEleicao": "6259",
-    "sqColigacao": "120001801350"
+    "sqColigacao": "120001801350",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "AGUARDANDO JULGAMENTO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002553019_div.jpg"
   },
   {
     "sqCandidato": "120002553248",
@@ -7895,7 +8969,10 @@
     "ocupacao": "SACERDOTE OU MEMBRO DE ORDEM OU SEITA RELIGIOSA",
     "cpf": "87337495404",
     "codEleicao": "6259",
-    "sqColigacao": "120001801350"
+    "sqColigacao": "120001801350",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "AGUARDANDO JULGAMENTO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002553248_div.jpg"
   },
   {
     "sqCandidato": "120002553247",
@@ -7917,7 +8994,10 @@
     "ocupacao": "JORNALISTA E REDATOR",
     "cpf": "81017251720",
     "codEleicao": "6259",
-    "sqColigacao": "120001801350"
+    "sqColigacao": "120001801350",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "AGUARDANDO JULGAMENTO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002553247_div.jpg"
   },
   {
     "sqCandidato": "120002532701",
@@ -7939,7 +9019,10 @@
     "ocupacao": "CANTOR E COMPOSITOR",
     "cpf": "06017582186",
     "codEleicao": "6259",
-    "sqColigacao": "120001800098"
+    "sqColigacao": "120001800098",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "DEFERIDO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002532701_div.jpg"
   },
   {
     "sqCandidato": "120002532704",
@@ -7961,7 +9044,10 @@
     "ocupacao": "OUTROS",
     "cpf": "13964941115",
     "codEleicao": "6259",
-    "sqColigacao": "120001800098"
+    "sqColigacao": "120001800098",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "DEFERIDO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002532704_div.jpg"
   },
   {
     "sqCandidato": "120002532719",
@@ -7983,7 +9069,9 @@
     "ocupacao": "PROFESSOR DE ENSINO FUNDAMENTAL",
     "cpf": "83177116172",
     "codEleicao": "6259",
-    "sqColigacao": "120001800100"
+    "sqColigacao": "120001800100",
+    "situacaoJulgamento": "DEFERIDO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002532719_div.jpg"
   },
   {
     "sqCandidato": "120002535258",
@@ -8005,7 +9093,10 @@
     "ocupacao": "EMPRESÁRIO",
     "cpf": "36547425134",
     "codEleicao": "6259",
-    "sqColigacao": "120001800268"
+    "sqColigacao": "120001800268",
+    "tetoGastos": 3176572.53,
+    "situacaoJulgamento": "DEFERIDO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002535258_div.jpg"
   },
   {
     "sqCandidato": "120002535264",
@@ -8027,7 +9118,10 @@
     "ocupacao": "VEREADOR",
     "cpf": "00312986130",
     "codEleicao": "6259",
-    "sqColigacao": "120001800268"
+    "sqColigacao": "120001800268",
+    "tetoGastos": 3176572.53,
+    "situacaoJulgamento": "DEFERIDO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002535264_div.jpg"
   },
   {
     "sqCandidato": "120002535516",
@@ -8049,7 +9143,10 @@
     "ocupacao": "SERVIDOR PÚBLICO MUNICIPAL",
     "cpf": "02513588100",
     "codEleicao": "6259",
-    "sqColigacao": "120001800249"
+    "sqColigacao": "120001800249",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "DEFERIDO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002535516_div.jpg"
   },
   {
     "sqCandidato": "120002535521",
@@ -8071,7 +9168,10 @@
     "ocupacao": "ADVOGADO",
     "cpf": "00601638107",
     "codEleicao": "6259",
-    "sqColigacao": "120001800249"
+    "sqColigacao": "120001800249",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "DEFERIDO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002535521_div.jpg"
   },
   {
     "sqCandidato": "120002535523",
@@ -8093,7 +9193,10 @@
     "ocupacao": "SERVIDOR PÚBLICO ESTADUAL",
     "cpf": "01778012124",
     "codEleicao": "6259",
-    "sqColigacao": "120001800249"
+    "sqColigacao": "120001800249",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "DEFERIDO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002535523_div.jpg"
   },
   {
     "sqCandidato": "120002535764",
@@ -8115,7 +9218,10 @@
     "ocupacao": "PRODUTOR AGROPECUÁRIO",
     "cpf": "28633938120",
     "codEleicao": "6259",
-    "sqColigacao": "120001800239"
+    "sqColigacao": "120001800239",
+    "tetoGastos": 3176572.53,
+    "situacaoJulgamento": "DEFERIDO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002535764_div.jpg"
   },
   {
     "sqCandidato": "120002536058",
@@ -8137,7 +9243,10 @@
     "ocupacao": "PROFESSOR DE ENSINO FUNDAMENTAL",
     "cpf": "03897546175",
     "codEleicao": "6259",
-    "sqColigacao": "120001800276"
+    "sqColigacao": "120001800276",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "DEFERIDO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002536058_div.jpg"
   },
   {
     "sqCandidato": "120002536060",
@@ -8159,7 +9268,10 @@
     "ocupacao": "ADVOGADO",
     "cpf": "04817960108",
     "codEleicao": "6259",
-    "sqColigacao": "120001800276"
+    "sqColigacao": "120001800276",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "DEFERIDO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002536060_div.jpg"
   },
   {
     "sqCandidato": "120002536063",
@@ -8181,7 +9293,10 @@
     "ocupacao": "EMPRESÁRIO",
     "cpf": "71527710149",
     "codEleicao": "6259",
-    "sqColigacao": "120001800276"
+    "sqColigacao": "120001800276",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "DEFERIDO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002536063_div.jpg"
   },
   {
     "sqCandidato": "120002536066",
@@ -8203,7 +9318,10 @@
     "ocupacao": "DEPUTADO",
     "cpf": "36718556149",
     "codEleicao": "6259",
-    "sqColigacao": "120001800276"
+    "sqColigacao": "120001800276",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "DEFERIDO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002536066_div.jpg"
   },
   {
     "sqCandidato": "120002536281",
@@ -8225,7 +9343,10 @@
     "ocupacao": "PECUARISTA",
     "cpf": "77389557168",
     "codEleicao": "6259",
-    "sqColigacao": "120001800253"
+    "sqColigacao": "120001800253",
+    "tetoGastos": 3176572.53,
+    "situacaoJulgamento": "DEFERIDO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002536281_div.jpg"
   },
   {
     "sqCandidato": "120002536285",
@@ -8247,7 +9368,10 @@
     "ocupacao": "ENGENHEIRO",
     "cpf": "01514316803",
     "codEleicao": "6259",
-    "sqColigacao": "120001800253"
+    "sqColigacao": "120001800253",
+    "tetoGastos": 3176572.53,
+    "situacaoJulgamento": "AGUARDANDO JULGAMENTO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002536285_div.jpg"
   },
   {
     "sqCandidato": "120002536287",
@@ -8269,7 +9393,10 @@
     "ocupacao": "ADVOGADO",
     "cpf": "93630603149",
     "codEleicao": "6259",
-    "sqColigacao": "120001800253"
+    "sqColigacao": "120001800253",
+    "tetoGastos": 3176572.53,
+    "situacaoJulgamento": "DEFERIDO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002536287_div.jpg"
   },
   {
     "sqCandidato": "120002536286",
@@ -8291,7 +9418,10 @@
     "ocupacao": "ODONTÓLOGO",
     "cpf": "52677044900",
     "codEleicao": "6259",
-    "sqColigacao": "120001800253"
+    "sqColigacao": "120001800253",
+    "tetoGastos": 3176572.53,
+    "situacaoJulgamento": "DEFERIDO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002536286_div.jpg"
   },
   {
     "sqCandidato": "120002537356",
@@ -8313,7 +9443,10 @@
     "ocupacao": "VEREADOR",
     "cpf": "91552540120",
     "codEleicao": "6259",
-    "sqColigacao": "120001800356"
+    "sqColigacao": "120001800356",
+    "tetoGastos": 3176572.53,
+    "situacaoJulgamento": "DEFERIDO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002537356_div.jpg"
   },
   {
     "sqCandidato": "120002537359",
@@ -8335,7 +9468,10 @@
     "ocupacao": "BOMBEIRO MILITAR",
     "cpf": "88399982172",
     "codEleicao": "6259",
-    "sqColigacao": "120001800356"
+    "sqColigacao": "120001800356",
+    "tetoGastos": 3176572.53,
+    "situacaoJulgamento": "DEFERIDO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002537359_div.jpg"
   },
   {
     "sqCandidato": "120002537363",
@@ -8357,7 +9493,10 @@
     "ocupacao": "ENGENHEIRO",
     "cpf": "96001100853",
     "codEleicao": "6259",
-    "sqColigacao": "120001800356"
+    "sqColigacao": "120001800356",
+    "tetoGastos": 3176572.53,
+    "situacaoJulgamento": "DEFERIDO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002537363_div.jpg"
   },
   {
     "sqCandidato": "120002537467",
@@ -8379,7 +9518,10 @@
     "ocupacao": "APOSENTADO (EXCETO SERVIDOR PÚBLICO)",
     "cpf": "35598212153",
     "codEleicao": "6259",
-    "sqColigacao": "120001800362"
+    "sqColigacao": "120001800362",
+    "tetoGastos": 3176572.53,
+    "situacaoJulgamento": "DEFERIDO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002537467_div.jpg"
   },
   {
     "sqCandidato": "120002537501",
@@ -8401,7 +9543,10 @@
     "ocupacao": "POLICIAL MILITAR",
     "cpf": "00267853157",
     "codEleicao": "6259",
-    "sqColigacao": "120001800364"
+    "sqColigacao": "120001800364",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "DEFERIDO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002537501_div.jpg"
   },
   {
     "sqCandidato": "120002537506",
@@ -8423,7 +9568,10 @@
     "ocupacao": "EMPRESÁRIO",
     "cpf": "89383150106",
     "codEleicao": "6259",
-    "sqColigacao": "120001800364"
+    "sqColigacao": "120001800364",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "DEFERIDO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002537506_div.jpg"
   },
   {
     "sqCandidato": "120002537507",
@@ -8445,7 +9593,10 @@
     "ocupacao": "ESTUDANTE, BOLSISTA, ESTAGIÁRIO E ASSEMELHADOS",
     "cpf": "09336896164",
     "codEleicao": "6259",
-    "sqColigacao": "120001800364"
+    "sqColigacao": "120001800364",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "RENÚNCIA",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002537507_div.jpg"
   },
   {
     "sqCandidato": "120002538785",
@@ -8467,7 +9618,10 @@
     "ocupacao": "JORNALISTA E REDATOR",
     "cpf": "84206241104",
     "codEleicao": "6259",
-    "sqColigacao": "120001800440"
+    "sqColigacao": "120001800440",
+    "tetoGastos": 3176572.53,
+    "situacaoJulgamento": "AGUARDANDO JULGAMENTO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002538785_div.jpg"
   },
   {
     "sqCandidato": "120002538945",
@@ -8489,7 +9643,10 @@
     "ocupacao": "AGRÔNOMO",
     "cpf": "06307389125",
     "codEleicao": "6259",
-    "sqColigacao": "120001800411"
+    "sqColigacao": "120001800411",
+    "tetoGastos": 3176572.53,
+    "situacaoJulgamento": "DEFERIDO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002538945_div.jpg"
   },
   {
     "sqCandidato": "120002538951",
@@ -8511,7 +9668,10 @@
     "ocupacao": "JORNALISTA E REDATOR",
     "cpf": "08977458170",
     "codEleicao": "6259",
-    "sqColigacao": "120001800411"
+    "sqColigacao": "120001800411",
+    "tetoGastos": 3176572.53,
+    "situacaoJulgamento": "DEFERIDO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002538951_div.jpg"
   },
   {
     "sqCandidato": "120002539695",
@@ -8533,7 +9693,10 @@
     "ocupacao": "SERVIDOR PÚBLICO FEDERAL",
     "cpf": "47557389115",
     "codEleicao": "6259",
-    "sqColigacao": "120001800466"
+    "sqColigacao": "120001800466",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "AGUARDANDO JULGAMENTO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002539695_div.jpg"
   },
   {
     "sqCandidato": "120002539697",
@@ -8555,7 +9718,10 @@
     "ocupacao": "BIOMÉDICO",
     "cpf": "49726854172",
     "codEleicao": "6259",
-    "sqColigacao": "120001800466"
+    "sqColigacao": "120001800466",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "AGUARDANDO JULGAMENTO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002539697_div.jpg"
   },
   {
     "sqCandidato": "120002539702",
@@ -8577,7 +9743,10 @@
     "ocupacao": "PRODUTOR AGROPECUÁRIO",
     "cpf": "20008090149",
     "codEleicao": "6259",
-    "sqColigacao": "120001800466"
+    "sqColigacao": "120001800466",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "AGUARDANDO JULGAMENTO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002539702_div.jpg"
   },
   {
     "sqCandidato": "120002539707",
@@ -8599,7 +9768,10 @@
     "ocupacao": "BOMBEIRO MILITAR",
     "cpf": "95007997153",
     "codEleicao": "6259",
-    "sqColigacao": "120001800466"
+    "sqColigacao": "120001800466",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "AGUARDANDO JULGAMENTO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002539707_div.jpg"
   },
   {
     "sqCandidato": "120002544710",
@@ -8621,7 +9793,10 @@
     "ocupacao": "ODONTÓLOGO",
     "cpf": "01749184109",
     "codEleicao": "6259",
-    "sqColigacao": "120001800745"
+    "sqColigacao": "120001800745",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "DEFERIDO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002544710_div.jpg"
   },
   {
     "sqCandidato": "120002544709",
@@ -8643,7 +9818,10 @@
     "ocupacao": "ENFERMEIRO",
     "cpf": "96682043104",
     "codEleicao": "6259",
-    "sqColigacao": "120001800745"
+    "sqColigacao": "120001800745",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "DEFERIDO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002544709_div.jpg"
   },
   {
     "sqCandidato": "120002544711",
@@ -8665,7 +9843,10 @@
     "ocupacao": "PROFESSOR DE ENSINO FUNDAMENTAL",
     "cpf": "69222045149",
     "codEleicao": "6259",
-    "sqColigacao": "120001800745"
+    "sqColigacao": "120001800745",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "DEFERIDO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002544711_div.jpg"
   },
   {
     "sqCandidato": "120002544956",
@@ -8687,7 +9868,10 @@
     "ocupacao": "VENDEDOR DE COMÉRCIO VAREJISTA E ATACADISTA",
     "cpf": "05224212103",
     "codEleicao": "6259",
-    "sqColigacao": "120001800768"
+    "sqColigacao": "120001800768",
+    "tetoGastos": 3176572.53,
+    "situacaoJulgamento": "AGUARDANDO JULGAMENTO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002544956_div.jpg"
   },
   {
     "sqCandidato": "120002544721",
@@ -8709,7 +9893,10 @@
     "ocupacao": "ARQUITETO",
     "cpf": "58332308100",
     "codEleicao": "6259",
-    "sqColigacao": "120001800745"
+    "sqColigacao": "120001800745",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "DEFERIDO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002544721_div.jpg"
   },
   {
     "sqCandidato": "120002544975",
@@ -8731,7 +9918,10 @@
     "ocupacao": "DONA DE CASA",
     "cpf": "93729723120",
     "codEleicao": "6259",
-    "sqColigacao": "120001800769"
+    "sqColigacao": "120001800769",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "AGUARDANDO JULGAMENTO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002544975_div.jpg"
   },
   {
     "sqCandidato": "120002544982",
@@ -8753,7 +9943,10 @@
     "ocupacao": "BANCÁRIO E ECONOMIÁRIO",
     "cpf": "13943853829",
     "codEleicao": "6259",
-    "sqColigacao": "120001800769"
+    "sqColigacao": "120001800769",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "AGUARDANDO JULGAMENTO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002544982_div.jpg"
   },
   {
     "sqCandidato": "120002545240",
@@ -8775,7 +9968,10 @@
     "ocupacao": "POLICIAL MILITAR",
     "cpf": "89164725120",
     "codEleicao": "6259",
-    "sqColigacao": "120001800660"
+    "sqColigacao": "120001800660",
+    "tetoGastos": 3176572.53,
+    "situacaoJulgamento": "AGUARDANDO JULGAMENTO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002545240_div.jpg"
   },
   {
     "sqCandidato": "120002547056",
@@ -8797,7 +9993,10 @@
     "ocupacao": "SERVIDOR PÚBLICO CIVIL APOSENTADO",
     "cpf": "39033309149",
     "codEleicao": "6259",
-    "sqColigacao": "120001800852"
+    "sqColigacao": "120001800852",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "AGUARDANDO JULGAMENTO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002547056_div.jpg"
   },
   {
     "sqCandidato": "120002547433",
@@ -8819,7 +10018,9 @@
     "ocupacao": "EMPRESÁRIO",
     "cpf": "01274443199",
     "codEleicao": "6259",
-    "sqColigacao": "120001800861"
+    "sqColigacao": "120001800861",
+    "situacaoJulgamento": "AGUARDANDO JULGAMENTO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002547433_div.jpg"
   },
   {
     "sqCandidato": "120002549561",
@@ -8841,7 +10042,10 @@
     "ocupacao": "ENFERMEIRO",
     "cpf": "27218856187",
     "codEleicao": "6259",
-    "sqColigacao": "120001801054"
+    "sqColigacao": "120001801054",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "AGUARDANDO JULGAMENTO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002549561_div.jpg"
   },
   {
     "sqCandidato": "120002549567",
@@ -8863,7 +10067,10 @@
     "ocupacao": "SERVIDOR PÚBLICO MUNICIPAL",
     "cpf": "66817862191",
     "codEleicao": "6259",
-    "sqColigacao": "120001801054"
+    "sqColigacao": "120001801054",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "AGUARDANDO JULGAMENTO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002549567_div.jpg"
   },
   {
     "sqCandidato": "120002549683",
@@ -8885,7 +10092,10 @@
     "ocupacao": "PROFESSOR DE ENSINO MÉDIO",
     "cpf": "92941338187",
     "codEleicao": "6259",
-    "sqColigacao": "120001801020"
+    "sqColigacao": "120001801020",
+    "tetoGastos": 3176572.53,
+    "situacaoJulgamento": "DEFERIDO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002549683_div.jpg"
   },
   {
     "sqCandidato": "120002549685",
@@ -8907,7 +10117,10 @@
     "ocupacao": "ADVOGADO",
     "cpf": "02246060184",
     "codEleicao": "6259",
-    "sqColigacao": "120001801020"
+    "sqColigacao": "120001801020",
+    "tetoGastos": 3176572.53,
+    "situacaoJulgamento": "AGUARDANDO JULGAMENTO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002549685_div.jpg"
   },
   {
     "sqCandidato": "120002550713",
@@ -8929,7 +10142,10 @@
     "ocupacao": "MOTORISTA DE VEÍCULOS DE TRANSPORTE COLETIVO DE PASSAGEIROS",
     "cpf": "96660414134",
     "codEleicao": "6259",
-    "sqColigacao": "120001801128"
+    "sqColigacao": "120001801128",
+    "tetoGastos": 3176572.53,
+    "situacaoJulgamento": "AGUARDANDO JULGAMENTO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002550713_div.jpg"
   },
   {
     "sqCandidato": "120002550715",
@@ -8951,7 +10167,10 @@
     "ocupacao": "ENFERMEIRO",
     "cpf": "50084402172",
     "codEleicao": "6259",
-    "sqColigacao": "120001801128"
+    "sqColigacao": "120001801128",
+    "tetoGastos": 3176572.53,
+    "situacaoJulgamento": "AGUARDANDO JULGAMENTO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002550715_div.jpg"
   },
   {
     "sqCandidato": "120002550716",
@@ -8973,7 +10192,10 @@
     "ocupacao": "PEDAGOGO",
     "cpf": "82025673191",
     "codEleicao": "6259",
-    "sqColigacao": "120001801128"
+    "sqColigacao": "120001801128",
+    "tetoGastos": 3176572.53,
+    "situacaoJulgamento": "AGUARDANDO JULGAMENTO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002550716_div.jpg"
   },
   {
     "sqCandidato": "120002552116",
@@ -8995,7 +10217,9 @@
     "ocupacao": "PRODUTOR AGROPECUÁRIO",
     "cpf": "12775276873",
     "codEleicao": "6259",
-    "sqColigacao": "120001801248"
+    "sqColigacao": "120001801248",
+    "situacaoJulgamento": "AGUARDANDO JULGAMENTO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002552116_div.jpg"
   },
   {
     "sqCandidato": "120002552161",
@@ -9017,7 +10241,10 @@
     "ocupacao": "EMPRESÁRIO",
     "cpf": "55866115115",
     "codEleicao": "6259",
-    "sqColigacao": "120001801245"
+    "sqColigacao": "120001801245",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "DEFERIDO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002552161_div.jpg"
   },
   {
     "sqCandidato": "120002552177",
@@ -9039,7 +10266,10 @@
     "ocupacao": "EMPRESÁRIO",
     "cpf": "90329058134",
     "codEleicao": "6259",
-    "sqColigacao": "120001801252"
+    "sqColigacao": "120001801252",
+    "tetoGastos": 3176572.53,
+    "situacaoJulgamento": "AGUARDANDO JULGAMENTO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002552177_div.jpg"
   },
   {
     "sqCandidato": "120002552194",
@@ -9061,7 +10291,9 @@
     "ocupacao": "TRABALHADOR RURAL",
     "cpf": "05162322156",
     "codEleicao": "6259",
-    "sqColigacao": "120001801256"
+    "sqColigacao": "120001801256",
+    "situacaoJulgamento": "AGUARDANDO JULGAMENTO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002552194_div.jpg"
   },
   {
     "sqCandidato": "120002552206",
@@ -9083,7 +10315,10 @@
     "ocupacao": "EMPRESÁRIO",
     "cpf": "59542675100",
     "codEleicao": "6259",
-    "sqColigacao": "120001801245"
+    "sqColigacao": "120001801245",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "DEFERIDO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002552206_div.jpg"
   },
   {
     "sqCandidato": "120002552213",
@@ -9105,7 +10340,10 @@
     "ocupacao": "COZINHEIRO",
     "cpf": "09547513885",
     "codEleicao": "6259",
-    "sqColigacao": "120001801245"
+    "sqColigacao": "120001801245",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "AGUARDANDO JULGAMENTO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002552213_div.jpg"
   },
   {
     "sqCandidato": "120002552688",
@@ -9127,7 +10365,10 @@
     "ocupacao": "TRABALHADOR RURAL",
     "cpf": "44636318153",
     "codEleicao": "6259",
-    "sqColigacao": "120001801260"
+    "sqColigacao": "120001801260",
+    "tetoGastos": 3176572.53,
+    "situacaoJulgamento": "AGUARDANDO JULGAMENTO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002552688_div.jpg"
   },
   {
     "sqCandidato": "120002552946",
@@ -9149,7 +10390,10 @@
     "ocupacao": "EMPRESÁRIO",
     "cpf": "56184816187",
     "codEleicao": "6259",
-    "sqColigacao": "120001801284"
+    "sqColigacao": "120001801284",
+    "tetoGastos": 3176572.53,
+    "situacaoJulgamento": "AGUARDANDO JULGAMENTO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002552946_div.jpg"
   },
   {
     "sqCandidato": "120002553012",
@@ -9171,7 +10415,10 @@
     "ocupacao": "EMPRESÁRIO",
     "cpf": "40482758104",
     "codEleicao": "6259",
-    "sqColigacao": "120001801350"
+    "sqColigacao": "120001801350",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "AGUARDANDO JULGAMENTO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002553012_div.jpg"
   },
   {
     "sqCandidato": "120002553243",
@@ -9193,7 +10440,10 @@
     "ocupacao": "MEMBRO DAS FORÇAS ARMADAS",
     "cpf": "60507179234",
     "codEleicao": "6259",
-    "sqColigacao": "120001801350"
+    "sqColigacao": "120001801350",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "AGUARDANDO JULGAMENTO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002553243_div.jpg"
   },
   {
     "sqCandidato": "120002553676",
@@ -9215,6 +10465,9 @@
     "ocupacao": "OUTROS",
     "cpf": "79193684134",
     "codEleicao": "6259",
-    "sqColigacao": "120001801054"
+    "sqColigacao": "120001801054",
+    "tetoGastos": 1270629.01,
+    "situacaoJulgamento": "AGUARDANDO JULGAMENTO",
+    "fotoUrl": "https://raw.githubusercontent.com/pedrorosemberg/eleicoes.metadax.org/assets-tse-2026/fotos/MS/FMS120002553676_div.jpg"
   }
 ]

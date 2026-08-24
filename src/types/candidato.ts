@@ -44,6 +44,17 @@ export interface Candidato {
   codEleicao?: string;
   /** Chave para cruzar com `data/{ano}/coligacoes.json` (composição e situação da coligação). */
   sqColigacao?: string;
+  /**
+   * PDF(s) do plano de governo — coletados do TSE (dataset `proposta_governo`)
+   * e servidos via a branch `assets-tse-2026` do próprio repositório (não
+   * cabem em `data/`, são binários). Um candidato pode ter mais de um
+   * arquivo (ex.: retificação). Ver scripts/build-asset-index.ts.
+   */
+  planoGovernoUrls?: string[];
+  /** Origem: `consulta_cand_complementar` — teto de gastos de campanha declarado (VR_DESPESA_MAX_CAMPANHA). */
+  tetoGastos?: number;
+  /** Origem: `consulta_cand_complementar` — situação do julgamento do registro de candidatura (DS_SITUACAO_JULGAMENTO). */
+  situacaoJulgamento?: string;
 }
 
 export interface Bem {
@@ -138,4 +149,38 @@ export interface TransparenciaResumo {
   pep: boolean;
   contratos: TransparenciaContrato[];
   sancoes: Array<{ tipo: "CEIS" | "CNEP" | "CEPIM"; orgaoSancionador: string; data: string }>;
+}
+
+/** Origem: dataset `prestacao_de_contas_eleitorais_candidatos` (receitas), do TSE — dinheiro recebido pela campanha. */
+export interface ReceitaCampanha {
+  sqCandidato: string;
+  doador: string;
+  cpfCnpjDoador?: string;
+  descricao: string;
+  valor: number;
+}
+
+/** Origem: dataset `prestacao_de_contas_eleitorais_candidatos` (despesas contratadas), do TSE — dinheiro gasto/contratado pela campanha. */
+export interface DespesaCampanha {
+  sqCandidato: string;
+  fornecedor: string;
+  cpfCnpjFornecedor?: string;
+  descricao: string;
+  valor: number;
+}
+
+/**
+ * Origem: dataset `CNPJ_campanha` do TSE (arquivo posicional, não CSV — ver
+ * scripts/ingest-tse.ts). Sem `sqCandidato`: o dataset original só traz CNPJ
+ * + nome fiscal (formato "ELEIÇÃO {ano} {nome} {cargo}" para candidatos),
+ * sem uma chave numérica de candidato — cruzar por nome seria uma
+ * inferência não confiável, então este dataset fica como lista de
+ * referência solta, não associado a um `Candidato` específico.
+ */
+export interface CnpjCampanha {
+  tipo: "candidato" | "partido";
+  cnpj: string;
+  nome: string;
+  naturezaJuridica: string;
+  cnae: string;
 }

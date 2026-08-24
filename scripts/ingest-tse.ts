@@ -124,6 +124,32 @@ const VAGA_COLUNAS = {
   quantidade: "QT_VAGA",
 } as const;
 
+// Confirmadas contra ZIP real coletado em 24/08/2026 (prestacao_de_contas_eleitorais_candidatos).
+const RECEITA_COLUNAS = {
+  sqCandidato: "SQ_CANDIDATO",
+  doador: "NM_DOADOR",
+  cpfCnpjDoador: "NR_CPF_CNPJ_DOADOR",
+  descricao: "DS_RECEITA",
+  valor: "VR_RECEITA",
+} as const;
+
+const DESPESA_COLUNAS = {
+  sqCandidato: "SQ_CANDIDATO",
+  fornecedor: "NM_FORNECEDOR",
+  cpfCnpjFornecedor: "NR_CPF_CNPJ_FORNECEDOR",
+  descricao: "DS_DESPESA",
+  valor: "VR_DESPESA_CONTRATADA",
+} as const;
+
+// Só os campos incorporados ao candidato (ver src/types/candidato.ts) —
+// consulta_cand_complementar tem ~49 colunas, a maioria (etnia indígena,
+// gênero/raça do FEFC etc.) não vira campo exibido no produto ainda.
+const CAND_COMPLEMENTAR_COLUNAS = {
+  sqCandidato: "SQ_CANDIDATO",
+  tetoGastos: "VR_DESPESA_MAX_CAMPANHA",
+  situacaoJulgamento: "DS_SITUACAO_JULGAMENTO",
+} as const;
+
 const TENTATIVAS_DOWNLOAD = 3;
 const BACKOFF_BASE_MS = 2000;
 
@@ -202,6 +228,30 @@ function extrairCsvBrasil(zipBuffer: Buffer, dataset: string): string {
     );
   }
   // TSE publica os CSVs em Latin-1 (ISO-8859-1).
+  return entry.getData().toString("latin1");
+}
+
+/**
+ * Alguns ZIPs do TSE (prestação de contas) empacotam vários datasets juntos
+ * — diferente de `extrairCsvBrasil`, que assume um único `_BRASIL.csv` por
+ * ZIP, esta função busca um arquivo específico pelo nome dentro do ZIP.
+ */
+function extrairArquivoDoZip(zipBuffer: Buffer, dataset: string, nomeArquivo: string): string {
+  let zip: AdmZip;
+  try {
+    zip = new AdmZip(zipBuffer);
+  } catch (err) {
+    throw new Error(
+      `O download de ${dataset} não é um ZIP válido (${zipBuffer.length} bytes). Causa original: ${
+        err instanceof Error ? err.message : String(err)
+      }`,
+    );
+  }
+  const entry = zip.getEntries().find((e) => e.entryName.toUpperCase().endsWith(nomeArquivo.toUpperCase()));
+  if (!entry) {
+    const nomes = zip.getEntries().map((e) => e.entryName).join(", ");
+    throw new Error(`Não encontrei ${nomeArquivo} dentro do ZIP de ${dataset}. Arquivos encontrados: ${nomes || "(nenhum)"}`);
+  }
   return entry.getData().toString("latin1");
 }
 
@@ -486,6 +536,158 @@ async function ingestVagas(): Promise<void> {
   console.log(`Gravado ${vagas.length} registros de vagas`);
 }
 
+/**
+ * receitas_candidatos e despesas_contratadas_candidatos vêm no mesmo ZIP
+ * de prestação de contas, cada uma com SQ_CANDIDATO direto — junta as
+ * duas num único registro por UF (data/{ano}/financas/{UF}.json), já que
+ * a UI mostra receita e despesa lado a lado. Deixa de fora
+ * despesas_pagas e receitas_doador_originario (não têm SQ_CANDIDATO
+ * direto no dataset, precisariam de um join a mais via SQ_DESPESA/
+ * SQ_RECEITA — não incorporado nesta rodada).
+ */
+async function ingestFinancasCandidatos(): Promise<void> {
+  const zipBuffer = await obterZip("prestacao_de_contas_eleitorais_candidatos");
+
+  const csvReceitas = extrairArquivoDoZip(
+    zipBuffer,
+    "prestacao_de_contas_eleitorais_candidatos",
+    "receitas_candidatos_2026_BRASIL.csv",
+  );
+  const linhasReceitas = parseCsvTse(csvReceitas);
+  console.log(`${linhasReceitas.length} linhas de receitas de candidatos lidas`);
+  validarColunaCritica(linhasReceitas, RECEITA_COLUNAS.sqCandidato, "receitas_candidatos");
+
+  const csvDespesas = extrairArquivoDoZip(
+    zipBuffer,
+    "prestacao_de_contas_eleitorais_candidatos",
+    "despesas_contratadas_candidatos_2026_BRASIL.csv",
+  );
+  const linhasDespesas = parseCsvTse(csvDespesas);
+  console.log(`${linhasDespesas.length} linhas de despesas de candidatos lidas`);
+  validarColunaCritica(linhasDespesas, DESPESA_COLUNAS.sqCandidato, "despesas_contratadas_candidatos");
+
+  const indice = await indiceUfPorCandidato();
+  const porUf = new Map<string, { receitas: unknown[]; despesas: unknown[] }>();
+  const garantirUf = (uf: string) => {
+    if (!porUf.has(uf)) porUf.set(uf, { receitas: [], despesas: [] });
+    return porUf.get(uf)!;
+  };
+
+  for (const linha of linhasReceitas) {
+    const sqCandidato = linha[RECEITA_COLUNAS.sqCandidato];
+    const uf = sqCandidato ? indice.get(sqCandidato) : undefined;
+    if (!uf) continue;
+    garantirUf(uf).receitas.push({
+      sqCandidato,
+      doador: linha[RECEITA_COLUNAS.doador],
+      cpfCnpjDoador: linha[RECEITA_COLUNAS.cpfCnpjDoador] || undefined,
+      descricao: linha[RECEITA_COLUNAS.descricao],
+      valor: Number(linha[RECEITA_COLUNAS.valor]?.replace(",", ".")) || 0,
+    });
+  }
+  for (const linha of linhasDespesas) {
+    const sqCandidato = linha[DESPESA_COLUNAS.sqCandidato];
+    const uf = sqCandidato ? indice.get(sqCandidato) : undefined;
+    if (!uf) continue;
+    garantirUf(uf).despesas.push({
+      sqCandidato,
+      fornecedor: linha[DESPESA_COLUNAS.fornecedor],
+      cpfCnpjFornecedor: linha[DESPESA_COLUNAS.cpfCnpjFornecedor] || undefined,
+      descricao: linha[DESPESA_COLUNAS.descricao],
+      valor: Number(linha[DESPESA_COLUNAS.valor]?.replace(",", ".")) || 0,
+    });
+  }
+
+  await mkdir(path.join(DATA_DIR, "financas"), { recursive: true });
+  for (const [uf, dados] of porUf) {
+    await writeFile(path.join(DATA_DIR, "financas", `${uf}.json`), JSON.stringify(dados, null, 2), "utf-8");
+  }
+  console.log(`Gravado finanças de campanha para ${porUf.size} UFs`);
+}
+
+/**
+ * consulta_cand_complementar não vira um arquivo novo — é um merge nos
+ * candidatos/{UF}.json já gravados por ingestCandidatos (lê, adiciona os
+ * campos, regrava).
+ */
+async function ingestCandidatosComplementar(): Promise<void> {
+  const zipBuffer = await obterZip("consulta_cand_complementar");
+  const csv = extrairCsvBrasil(zipBuffer, "consulta_cand_complementar");
+  const linhas = parseCsvTse(csv);
+  console.log(`${linhas.length} linhas de informações complementares lidas`);
+  validarColunaCritica(linhas, CAND_COMPLEMENTAR_COLUNAS.sqCandidato, "consulta_cand_complementar");
+
+  const porSqCandidato = new Map<string, Record<string, string>>();
+  for (const linha of linhas) {
+    const sq = linha[CAND_COMPLEMENTAR_COLUNAS.sqCandidato];
+    if (sq) porSqCandidato.set(sq, linha);
+  }
+
+  const candidatosDir = path.join(DATA_DIR, "candidatos");
+  const arquivos = await readdir(candidatosDir);
+  let candidatosAtualizados = 0;
+  for (const arquivo of arquivos) {
+    const caminho = path.join(candidatosDir, arquivo);
+    const candidatos = JSON.parse(await readFile(caminho, "utf-8")) as Array<Record<string, unknown>>;
+    for (const candidato of candidatos) {
+      const complementar = porSqCandidato.get(candidato.sqCandidato as string);
+      if (!complementar) continue;
+      const teto = Number(complementar[CAND_COMPLEMENTAR_COLUNAS.tetoGastos]?.replace(",", "."));
+      if (teto > 0) candidato.tetoGastos = teto;
+      const situacaoJulgamento = complementar[CAND_COMPLEMENTAR_COLUNAS.situacaoJulgamento];
+      if (situacaoJulgamento && situacaoJulgamento !== "#NULO") candidato.situacaoJulgamento = situacaoJulgamento;
+      candidatosAtualizados++;
+    }
+    await writeFile(caminho, JSON.stringify(candidatos, null, 2), "utf-8");
+  }
+  console.log(`Complementados ${candidatosAtualizados} candidatos com dados de consulta_cand_complementar`);
+}
+
+/**
+ * CNPJ_campanha vem em formato posicional (largura fixa), não CSV — layout
+ * confirmado contra leiame_cnpj_campanha.pdf (SECON/CSELE/STI/TSE,
+ * Julho/2016, v1.0.0) real, extraído em 24/08/2026. Duas colunas de
+ * detalhe por linha "2": tipo (01=partido, 02=candidato), CNPJ, nome
+ * fiscal. Sem SQ_CANDIDATO no dataset — ver CnpjCampanha em
+ * src/types/candidato.ts sobre por que não cruza com um candidato
+ * específico.
+ */
+function parseCnpjPosicional(conteudo: string, tipo: "candidato" | "partido"): Array<{ tipo: "candidato" | "partido"; cnpj: string; nome: string; naturezaJuridica: string; cnae: string }> {
+  const linhas = conteudo.split("\n").filter((l) => l.startsWith("2")); // só registros de DETALHE
+  return linhas.map((linha) => ({
+    tipo,
+    cnpj: linha.slice(3, 17).trim(),
+    nome: linha.slice(17, 167).trim(),
+    naturezaJuridica: linha.slice(167, 171).trim(),
+    cnae: linha.slice(171, 178).trim(),
+  }));
+}
+
+async function ingestCnpjCampanha(): Promise<void> {
+  const zipBuffer = await obterZip("CNPJ_campanha");
+  let zip: AdmZip;
+  try {
+    zip = new AdmZip(zipBuffer);
+  } catch (err) {
+    throw new Error(`ZIP de CNPJ_campanha inválido: ${err instanceof Error ? err.message : String(err)}`);
+  }
+  const arquivoCandidatos = zip.getEntries().find((e) => e.entryName.toUpperCase().endsWith("CNPJ_CANDIDATOS_2026.TXT"));
+  const arquivoPartidos = zip.getEntries().find((e) => e.entryName.toUpperCase().endsWith("CNPJ_PARTIDO_2026.TXT"));
+  if (!arquivoCandidatos || !arquivoPartidos) {
+    throw new Error("Não encontrei cnpj_candidatos_2026.txt e/ou cnpj_partido_2026.txt dentro do ZIP de CNPJ_campanha.");
+  }
+
+  const cnpjs = [
+    ...parseCnpjPosicional(arquivoCandidatos.getData().toString("latin1"), "candidato"),
+    ...parseCnpjPosicional(arquivoPartidos.getData().toString("latin1"), "partido"),
+  ];
+  console.log(`${cnpjs.length} CNPJs de campanha lidos (candidatos + partidos)`);
+
+  await mkdir(DATA_DIR, { recursive: true });
+  await writeFile(path.join(DATA_DIR, "cnpj-campanha.json"), JSON.stringify(cnpjs, null, 2), "utf-8");
+  console.log(`Gravado ${cnpjs.length} CNPJs de campanha`);
+}
+
 async function main() {
   await mkdir(TMP_DIR, { recursive: true });
   try {
@@ -495,6 +697,9 @@ async function main() {
     await ingestarOpcional("motivo_cassacao", ingestMotivosCassacao);
     await ingestarOpcional("consulta_coligacao", ingestColigacoes);
     await ingestarOpcional("consulta_vagas", ingestVagas);
+    await ingestarOpcional("consulta_cand_complementar", ingestCandidatosComplementar);
+    await ingestarOpcional("prestacao_de_contas_eleitorais_candidatos", ingestFinancasCandidatos);
+    await ingestarOpcional("CNPJ_campanha", ingestCnpjCampanha);
 
     await writeFile(
       path.join(DATA_DIR, "meta.json"),

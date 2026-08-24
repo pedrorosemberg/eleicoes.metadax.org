@@ -1,6 +1,15 @@
 import { readFile } from "node:fs/promises";
 import path from "node:path";
-import type { Bem, Candidato, Coligacao, MotivoCassacao, RedeSocial, Vaga } from "@/types/candidato";
+import type {
+  Bem,
+  Candidato,
+  Coligacao,
+  DespesaCampanha,
+  MotivoCassacao,
+  ReceitaCampanha,
+  RedeSocial,
+  Vaga,
+} from "@/types/candidato";
 import { CANDIDATOS_AMOSTRA, BENS_AMOSTRA } from "./amostra";
 import { UFS } from "./ufs";
 
@@ -173,4 +182,19 @@ export async function carregarColigacoes(): Promise<Coligacao[]> {
 
 export async function carregarVagas(): Promise<Vaga[]> {
   return (await lerJsonOuNulo<Vaga[]>(`${ANO_ELEICAO}/vagas.json`)) ?? [];
+}
+
+export interface FinancasCandidatosUf {
+  receitas: ReceitaCampanha[];
+  despesas: DespesaCampanha[];
+}
+
+/** Origem: `prestacao_de_contas_eleitorais_candidatos` do TSE — ver scripts/ingest-tse.ts. */
+export async function carregarFinancasPorUf(uf: string): Promise<FinancasCandidatosUf> {
+  return (
+    (await lerJsonOuNulo<FinancasCandidatosUf>(`${ANO_ELEICAO}/financas/${uf}.json`)) ?? {
+      receitas: [],
+      despesas: [],
+    }
+  );
 }

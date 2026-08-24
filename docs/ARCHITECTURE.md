@@ -115,6 +115,14 @@ interface Partido {
 5. Grava `data/{ano}/meta.json` com timestamp da ingestão — **a UI deve sempre mostrar essa data**, pois os dados do TSE mudam a cada hora durante o julgamento de registros.
 6. Idempotente: pode ser reexecutado a qualquer momento sem duplicar dados (sobrescreve os JSON).
 
+Desde 24/08/2026 o mesmo script também ingere `consulta_cand_complementar` (merge nos
+candidatos), `prestacao_de_contas_eleitorais_candidatos` (receitas/despesas em
+`data/{ano}/financas/{UF}.json`) e `CNPJ_campanha` (arquivo posicional de largura fixa, não CSV
+— ver `docs/DATA_SOURCES.md` §1). Fotos e PDFs de plano de governo passam por um segundo script,
+`scripts/build-asset-index.ts`, que não baixa nada — só cruza arquivos já extraídos localmente
+com os candidatos e grava as URLs (hospedadas na branch `assets-tse-2026`, não em `data/`). Ver
+`docs/DATA_SOURCES.md` §1 para a origem e o formato de cada um.
+
 **Cadência recomendada:** diária fora do período crítico; a cada poucas horas entre a data-limite de registro e o primeiro turno, já que impugnações/indeferimentos mudam a situação de candidatos nesse intervalo.
 
 **Tratamento de erro:** `baixarZip()` tenta 3x com backoff exponencial antes de desistir — exceto num `403`, que é tratado como bloqueio de rede (não transitório) e falha imediatamente com uma mensagem apontando para `docs/DATA_SOURCES.md` §5, em vez de gastar tentativas inúteis. Depois do parsing, `validarColunaCritica()` confere se colunas-chave (`SQ_CANDIDATO`, `SG_UF`) vieram preenchidas na maioria das linhas — se não, é sinal de que o nome da coluna mudou nesta eleição (o mapeamento é hardcoded e não confirmado contra o leiame.pdf real, ver cabeçalho do script) e o script falha alto e claro em vez de gravar um dataset silenciosamente errado.
@@ -129,7 +137,7 @@ Todas em `/api/*`, todas com cache de borda e, quando aplicável, normalização
 |---|---|---|---|
 | `GET /api/cnpj/:cnpj` | BrasilAPI | 7 dias | Sem chave. Testado funcionando nesta sessão. |
 | `GET /api/divulgacand/candidato/:ano/:municipio/:eleicao/:id` | DivulgaCandContas | 6 horas | Necessário para contornar CORS. Consumido ao vivo pela página de candidato (`app/candidato/[id]/page.tsx`, via `buscarDetalheDivulgaCand`) para site oficial, plano de governo e histórico de candidaturas — requer `codMunicipio`/`codEleicao` do candidato (colunas do CSV, ver §4); ausentes, essas seções somem em vez de quebrar. Pode falhar se o bloqueio de rede do TSE também atingir o runtime de produção — confirmado que atinge, ver §6 — nesse caso a UI degrada graciosamente ("ainda não disponível", nunca quebra a página). |
-| `GET /api/transparencia/:tipo/:documento` | Portal da Transparência | 1 hora | Requer `PORTAL_TRANSPARENCIA_API_KEY` em variável de ambiente server-side — nunca no client. `:tipo` restrito a um allowlist (`peps`, `contratos/cpf-cnpj`, `ceis`, `cnep`, `cepim`, `emendas`) para não expor a API da CGU como proxy genérico. A página de candidato não usa esta rota diretamente — chama `buscarResumoTransparencia()` (`src/lib/enrichment.ts`), que agrega `peps` + `contratos/cpf-cnpj` + `ceis` + `cnep` + `cepim` num resumo único (PEP, contratos, sanções). Nomes de campo da resposta de cada endpoint não confirmados contra uma chamada real (sem chave disponível nesta sessão) — conferir na primeira execução com `PORTAL_TRANSPARENCIA_API_KEY` configurada. |
+| `GET /api/transparencia/:tipo/:documento` | Portal da Transparência | 1 hora | Requer `PORTAL_TRANSPARENCIA_API_KEY` em variável de ambiente server-side — nunca no client. **Chave configurada e confirmada operacional em produção em 24/08/2026** (`GET /api/health` retorna `"status":"operacional"` para `portal-transparencia`, e o cruzamento real aparece em perfis de candidato). `:tipo` restrito a um allowlist (`peps`, `contratos/cpf-cnpj`, `ceis`, `cnep`, `cepim`, `emendas`) para não expor a API da CGU como proxy genérico. A página de candidato não usa esta rota diretamente — chama `buscarResumoTransparencia()` (`src/lib/enrichment.ts`), que agrega `peps` + `contratos/cpf-cnpj` + `ceis` + `cnep` + `cepim` num resumo único (PEP, contratos, sanções). |
 | `GET /api/health` | TSE ×3, BrasilAPI, Portal da Transparência | Sem cache (`no-store`) | Checagem ao vivo para a página `/status` — classifica cada fonte como operacional, bloqueada (edge do TSE), indisponível, ou "requer autenticação" |
 | `GET /api/estatisticas` | Dados internos (agregados) | 5 min | Contagem de candidatos por UF/cargo/partido — nunca dado individual. Ver §10. |
 
@@ -150,7 +158,7 @@ Se, ao testar a partir do ambiente de produção real (Vercel ou onde for hosped
 |---|---|---|
 | `/` | **Implementado** | Landing/apresentação do projeto — hero, lista de funcionalidades com status real (disponível/em progresso/indisponível), princípios, link para o repositório público e para `/buscar` |
 | `/buscar` | **Implementado**, snapshot real commitado (20/08/2026) | Busca direta (nome/número/ID) e indireta (UF/cidade/cargo/partido), combináveis |
-| `/candidato/[id]` | **Implementado** | Perfil: dados básicos, bens declarados, redes sociais, coligação (composição/situação), dados do partido via CNPJ, cruzamento com o Portal da Transparência (PEP/contratos/sanções). Site oficial/plano de governo/histórico via DivulgaCandContas fica desativado neste snapshot — falta um `codMunicipio` confiável para candidaturas estaduais/federais, só `codEleicao` foi confirmado (ver §4/§5 do `DATA_SOURCES.md`) |
+| `/candidato/[id]` | **Implementado** | Perfil: foto, dados básicos (com teto de gastos e situação de julgamento), bens declarados, finanças de campanha (receitas/despesas), redes sociais, plano de governo (PDF), coligação (composição/situação), dados do partido via CNPJ, cruzamento com o Portal da Transparência (PEP/contratos/sanções). Site oficial/histórico via DivulgaCandContas fica desativado neste snapshot — falta um `codMunicipio` confiável para candidaturas estaduais/federais, só `codEleicao` foi confirmado (ver §4/§5 do `DATA_SOURCES.md`) |
 | `/mapa` | **Implementado** | Coroplético real dos estados (Leaflet + GeoJSON do IBGE) e estatísticas por UF/cargo, também via `/api/estatisticas` |
 | `/status` | **Implementado** | Saúde em tempo real de cada fonte externa (TSE ×3, BrasilAPI, Portal da Transparência) — checagem ao vivo no servidor a cada carregamento + polling client-side a cada 30s via `/api/health` |
 | `/sobre` | **Implementado** | Transparência do próprio produto: metodologia, fontes, licença, responsável pelo projeto |

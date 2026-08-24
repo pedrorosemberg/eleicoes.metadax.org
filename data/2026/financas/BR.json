@@ -1,0 +1,5851 @@
+{
+  "receitas": [
+    {
+      "sqCandidato": "280002552484",
+      "doador": "CLARIANA ZACARKIM BARAO",
+      "cpfCnpjDoador": "01542149142",
+      "descricao": "#NULO",
+      "valor": 5000
+    },
+    {
+      "sqCandidato": "280002548139",
+      "doador": "WILSON GRASSI JUNIOR",
+      "cpfCnpjDoador": "11777433886",
+      "descricao": "#NULO",
+      "valor": 100000
+    },
+    {
+      "sqCandidato": "280002548139",
+      "doador": "WILSON GRASSI JUNIOR",
+      "cpfCnpjDoador": "11777433886",
+      "descricao": "#NULO",
+      "valor": 10000
+    },
+    {
+      "sqCandidato": "280002548139",
+      "doador": "WILSON GRASSI JUNIOR",
+      "cpfCnpjDoador": "11777433886",
+      "descricao": "#NULO",
+      "valor": 180000
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "PAULO JARBAS T",
+      "cpfCnpjDoador": "31106813820",
+      "descricao": "#NULO",
+      "valor": 50
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "RENATO HENRIQUE TEIXEIRA",
+      "cpfCnpjDoador": "11398654639",
+      "descricao": "#NULO",
+      "valor": 10
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "JEFERSON YOSHIAKI KANASHIRO",
+      "cpfCnpjDoador": "27780506800",
+      "descricao": "#NULO",
+      "valor": 100
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "Mateus Mattiolo",
+      "cpfCnpjDoador": "08803804978",
+      "descricao": "#NULO",
+      "valor": 30
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "LUCAS SANTOS ROCHA",
+      "cpfCnpjDoador": "08485960130",
+      "descricao": "#NULO",
+      "valor": 70
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "WIKNEY EDSON CORREIA DA SILVA",
+      "cpfCnpjDoador": "13552204679",
+      "descricao": "#NULO",
+      "valor": 20
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "Leandro Goncalves Aguiar",
+      "cpfCnpjDoador": "32405690861",
+      "descricao": "#NULO",
+      "valor": 100
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "LUCAS SANTOS MARQUES COMARU",
+      "cpfCnpjDoador": "16555777788",
+      "descricao": "#NULO",
+      "valor": 5
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "MATHEUS STEFANO JOSE SILVA",
+      "cpfCnpjDoador": "05587177130",
+      "descricao": "#NULO",
+      "valor": 7
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "MATEUS CORDEIRO COSTA",
+      "cpfCnpjDoador": "09988725981",
+      "descricao": "#NULO",
+      "valor": 100
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "RUAN BRAGA",
+      "cpfCnpjDoador": "11711537594",
+      "descricao": "#NULO",
+      "valor": 14
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "KASSYUS DOWGLAS RODRIGUES MENDONCA",
+      "cpfCnpjDoador": "03856314130",
+      "descricao": "#NULO",
+      "valor": 150
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "GUSTAVO LIMA M",
+      "cpfCnpjDoador": "34042691870",
+      "descricao": "#NULO",
+      "valor": 14
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "VITOR AUGUSTO",
+      "cpfCnpjDoador": "09921411926",
+      "descricao": "#NULO",
+      "valor": 20
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "Socrates Gutenberg Santana",
+      "cpfCnpjDoador": "03855687110",
+      "descricao": "#NULO",
+      "valor": 1000
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "MARLON ANTONIO",
+      "cpfCnpjDoador": "14993949693",
+      "descricao": "#NULO",
+      "valor": 1.4
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "Andrey Roberto",
+      "cpfCnpjDoador": "12873488905",
+      "descricao": "#NULO",
+      "valor": 4
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "THIARLES DE SANTIS FLORES",
+      "cpfCnpjDoador": "06979265083",
+      "descricao": "#NULO",
+      "valor": 20
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "SILAS STENIO I",
+      "cpfCnpjDoador": "02106732147",
+      "descricao": "#NULO",
+      "valor": 14
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "Diego Albert Carvalho",
+      "cpfCnpjDoador": "07765440128",
+      "descricao": "#NULO",
+      "valor": 14.14
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "NELSON FELIPPE DA SILVA",
+      "cpfCnpjDoador": "19876190059",
+      "descricao": "#NULO",
+      "valor": 100
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "JENIFFER TALITA MENDES DE OLIVEIRA",
+      "cpfCnpjDoador": "08992595964",
+      "descricao": "#NULO",
+      "valor": 14.14
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "ANDRE BERNARDO",
+      "cpfCnpjDoador": "20453349706",
+      "descricao": "#NULO",
+      "valor": 10
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "ANDRE BERNARDO",
+      "cpfCnpjDoador": "20453349706",
+      "descricao": "#NULO",
+      "valor": 5
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "Luan Lassarott",
+      "cpfCnpjDoador": "21031394702",
+      "descricao": "#NULO",
+      "valor": 1.14
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "WESLEY BRUSKI",
+      "cpfCnpjDoador": "03120730033",
+      "descricao": "#NULO",
+      "valor": 50
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "Renann Cardoso",
+      "cpfCnpjDoador": "50747044805",
+      "descricao": "#NULO",
+      "valor": 10
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "Renata Fabriny",
+      "cpfCnpjDoador": "07178659165",
+      "descricao": "#NULO",
+      "valor": 3.6
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "ALVARO NOVA",
+      "cpfCnpjDoador": "18692297704",
+      "descricao": "#NULO",
+      "valor": 0.93
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "GABRIEL GUSTAVO STUPP PEREIRA",
+      "cpfCnpjDoador": "08013688984",
+      "descricao": "#NULO",
+      "valor": 8.77
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "LUCAS LADISLAU GOMES",
+      "cpfCnpjDoador": "03487889242",
+      "descricao": "#NULO",
+      "valor": 20
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "Marcelo Asfor",
+      "cpfCnpjDoador": "02928452354",
+      "descricao": "#NULO",
+      "valor": 100
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "Igor José da S",
+      "cpfCnpjDoador": "01571880437",
+      "descricao": "#NULO",
+      "valor": 14
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "ERICLES WILLIAN NUNES E SILVA",
+      "cpfCnpjDoador": "44450562860",
+      "descricao": "#NULO",
+      "valor": 14
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "VINICIUS STRAM",
+      "cpfCnpjDoador": "44075624803",
+      "descricao": "#NULO",
+      "valor": 60.14
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "CECILIA SACCHE",
+      "cpfCnpjDoador": "29469040678",
+      "descricao": "#NULO",
+      "valor": 100
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "ERIKA FUJIT",
+      "cpfCnpjDoador": "46733605830",
+      "descricao": "#NULO",
+      "valor": 200
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "LUIZ SEBASTIAO RIBEIRO DOS SANTOS",
+      "cpfCnpjDoador": "48200683850",
+      "descricao": "#NULO",
+      "valor": 14
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "VICTOR FERNANDO GONCALVES ARAUJO",
+      "cpfCnpjDoador": "13761891431",
+      "descricao": "#NULO",
+      "valor": 10
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "IGHOR DOS SANTOS RIBEIRO",
+      "cpfCnpjDoador": "13197305744",
+      "descricao": "#NULO",
+      "valor": 14.14
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "JADER ANDERSON LEDUR GOMES",
+      "cpfCnpjDoador": "01075156017",
+      "descricao": "#NULO",
+      "valor": 200
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "MILTON RODRIGO GONCALVES",
+      "cpfCnpjDoador": "06124768984",
+      "descricao": "#NULO",
+      "valor": 200
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "MATEUS SANTANA DE OLIVEIRA",
+      "cpfCnpjDoador": "37843000810",
+      "descricao": "#NULO",
+      "valor": 50
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "HELIO SEVERINO DE SOUZA FILHO",
+      "cpfCnpjDoador": "12377134475",
+      "descricao": "#NULO",
+      "valor": 100
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "RAPHAEL DE SOUZA LACERDA",
+      "cpfCnpjDoador": "16320179708",
+      "descricao": "#NULO",
+      "valor": 100
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "PEDRO ARTHUR DE SOUZA LIMA",
+      "cpfCnpjDoador": "45241212850",
+      "descricao": "#NULO",
+      "valor": 2000
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "VINICIUS RIBEIRO FERREIRA",
+      "cpfCnpjDoador": "70192438190",
+      "descricao": "#NULO",
+      "valor": 14
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "SAMUEL CASAGRANDE PINHEIRO",
+      "cpfCnpjDoador": "03971650058",
+      "descricao": "#NULO",
+      "valor": 14
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "JAQUELINE S",
+      "cpfCnpjDoador": "03039550071",
+      "descricao": "#NULO",
+      "valor": 34
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "FILIPE ANDRADE NASCIMENTO",
+      "cpfCnpjDoador": "01723357529",
+      "descricao": "#NULO",
+      "valor": 14.36
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "FILIPE ANDRADE NASCIMENTO",
+      "cpfCnpjDoador": "01723357529",
+      "descricao": "#NULO",
+      "valor": 14
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "ESTEVAM NUN",
+      "cpfCnpjDoador": "19638095725",
+      "descricao": "#NULO",
+      "valor": 10
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "Anderson Vambo",
+      "cpfCnpjDoador": "06621855958",
+      "descricao": "#NULO",
+      "valor": 500
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "Welington G C Teixeira",
+      "cpfCnpjDoador": "11124221611",
+      "descricao": "#NULO",
+      "valor": 50.14
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "FELIPE CRIS",
+      "cpfCnpjDoador": "50233830839",
+      "descricao": "#NULO",
+      "valor": 7.5
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "FELIPE CRIS",
+      "cpfCnpjDoador": "50233830839",
+      "descricao": "#NULO",
+      "valor": 2.93
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "Leonardo Otavi",
+      "cpfCnpjDoador": "05377785193",
+      "descricao": "#NULO",
+      "valor": 20.2
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "Leonardo Otavi",
+      "cpfCnpjDoador": "05377785193",
+      "descricao": "#NULO",
+      "valor": 0.36
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "GUILHERME R",
+      "cpfCnpjDoador": "03418483011",
+      "descricao": "#NULO",
+      "valor": 100
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "GABRIEL GARCIA FEIGE",
+      "cpfCnpjDoador": "45558234865",
+      "descricao": "#NULO",
+      "valor": 3.14
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "LUCAS MARX",
+      "cpfCnpjDoador": "49814253847",
+      "descricao": "#NULO",
+      "valor": 14.14
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "LEONARDO MUNHOZ FONSECA",
+      "cpfCnpjDoador": "52380160856",
+      "descricao": "#NULO",
+      "valor": 10.14
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "LUIZ AUGUSTO T",
+      "cpfCnpjDoador": "07143853950",
+      "descricao": "#NULO",
+      "valor": 100
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "LUIS FELIPE LOURENCO",
+      "cpfCnpjDoador": "06745277980",
+      "descricao": "#NULO",
+      "valor": 170
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "DAVI NIKLIS CORREA",
+      "cpfCnpjDoador": "11112580905",
+      "descricao": "#NULO",
+      "valor": 500
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "GABRIEL AUGUSTO RODRIGUES ZANATTA",
+      "cpfCnpjDoador": "06866116163",
+      "descricao": "#NULO",
+      "valor": 5
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "GABRIEL AUGUSTO RODRIGUES ZANATTA",
+      "cpfCnpjDoador": "06866116163",
+      "descricao": "#NULO",
+      "valor": 5
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "Gabriel August",
+      "cpfCnpjDoador": "01380662990",
+      "descricao": "#NULO",
+      "valor": 50
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "FABIO C ARAUJO",
+      "cpfCnpjDoador": "16408916767",
+      "descricao": "#NULO",
+      "valor": 14
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "VICTOR CHAG",
+      "cpfCnpjDoador": "48133478863",
+      "descricao": "#NULO",
+      "valor": 30
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "Anderson Mauri",
+      "cpfCnpjDoador": "11248034830",
+      "descricao": "#NULO",
+      "valor": 50
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "Pedro Henrique Gondim Porcaro",
+      "cpfCnpjDoador": "10921402635",
+      "descricao": "#NULO",
+      "valor": 200
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "MARCOS VINICIUS LOPES CARVALHO",
+      "cpfCnpjDoador": "09267996657",
+      "descricao": "#NULO",
+      "valor": 20
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "CESAR AUGUSTO GABAS HIROOKA",
+      "cpfCnpjDoador": "18253003803",
+      "descricao": "#NULO",
+      "valor": 500
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "Renato Elvis Silva Barbosa",
+      "cpfCnpjDoador": "87216965272",
+      "descricao": "#NULO",
+      "valor": 2
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "MATHEUS HENRIQUE DOS SANTOS",
+      "cpfCnpjDoador": "11180086694",
+      "descricao": "#NULO",
+      "valor": 100
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "Guilherme Giese Souza",
+      "cpfCnpjDoador": "81478224053",
+      "descricao": "#NULO",
+      "valor": 140.14
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "ADRIAN BALDISERA DE FARIA DA SILVA",
+      "cpfCnpjDoador": "42329419830",
+      "descricao": "#NULO",
+      "valor": 100
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "KAUAN MAURICIO DA SILVA ALVES",
+      "cpfCnpjDoador": "15736578670",
+      "descricao": "#NULO",
+      "valor": 10
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "MARIANA DOCA MONTEIRO",
+      "cpfCnpjDoador": "36456850819",
+      "descricao": "#NULO",
+      "valor": 14
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "João Paulo Car",
+      "cpfCnpjDoador": "13423675705",
+      "descricao": "#NULO",
+      "valor": 14
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "HUGO LEONARDO SALLES MAGALHAES",
+      "cpfCnpjDoador": "12330128789",
+      "descricao": "#NULO",
+      "valor": 24.9
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "GABRIEL ELIAS SILVA BEJA",
+      "cpfCnpjDoador": "12100946650",
+      "descricao": "#NULO",
+      "valor": 14
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "ISABELLA FERREIRA PROENCA",
+      "cpfCnpjDoador": "14771352941",
+      "descricao": "#NULO",
+      "valor": 15
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "RAUL ROBERTO SANTOS DOMINGOS",
+      "cpfCnpjDoador": "11334871574",
+      "descricao": "#NULO",
+      "valor": 0.11
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "JOSE CARLOS LIRA NETO",
+      "cpfCnpjDoador": "05774027490",
+      "descricao": "#NULO",
+      "valor": 100
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "RUAN ALVES",
+      "cpfCnpjDoador": "14458974408",
+      "descricao": "#NULO",
+      "valor": 5
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "DANIEL EDUARDO RODRIGUES DE SOUSA",
+      "cpfCnpjDoador": "40191554880",
+      "descricao": "#NULO",
+      "valor": 100
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "CARLOS HENRIQUE MARTINS DE QUEIROZ",
+      "cpfCnpjDoador": "28260161800",
+      "descricao": "#NULO",
+      "valor": 100
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "JOEL EMILIO FARIA FERNANDES",
+      "cpfCnpjDoador": "32303388805",
+      "descricao": "#NULO",
+      "valor": 100
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "MARCELO FER",
+      "cpfCnpjDoador": "15583525622",
+      "descricao": "#NULO",
+      "valor": 100
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "BRENO DOS SANTOS ALVES",
+      "cpfCnpjDoador": "06189201377",
+      "descricao": "#NULO",
+      "valor": 100
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "Adriano Guedes Dacroce",
+      "cpfCnpjDoador": "02769536141",
+      "descricao": "#NULO",
+      "valor": 50
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "HUGO PEREIRA COSTA",
+      "cpfCnpjDoador": "21504739841",
+      "descricao": "#NULO",
+      "valor": 1000
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "GABRIEL MONTEIRO NORONHA",
+      "cpfCnpjDoador": "01799417204",
+      "descricao": "#NULO",
+      "valor": 20
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "RAFAEL DE S",
+      "cpfCnpjDoador": "04920412290",
+      "descricao": "#NULO",
+      "valor": 2.5
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "TULIO CESAR TORRES",
+      "cpfCnpjDoador": "92534775634",
+      "descricao": "#NULO",
+      "valor": 100
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "VINICIUS BENTO DE SOUZA",
+      "cpfCnpjDoador": "50062459805",
+      "descricao": "#NULO",
+      "valor": 114.14
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "RAFAEL AUGUSTO ABRUNHOSA DA SILVA",
+      "cpfCnpjDoador": "41453186840",
+      "descricao": "#NULO",
+      "valor": 100
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "DAVI JONATHAS",
+      "cpfCnpjDoador": "05285523257",
+      "descricao": "#NULO",
+      "valor": 1
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "PEDRO HENRIQUE TORRES DA SILVA",
+      "cpfCnpjDoador": "45336579823",
+      "descricao": "#NULO",
+      "valor": 40
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "ALFREDO VIEIRA DA SILVA",
+      "cpfCnpjDoador": "05506866810",
+      "descricao": "#NULO",
+      "valor": 100
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "SHIRLEY COBIAK ZELIC",
+      "cpfCnpjDoador": "89316061849",
+      "descricao": "#NULO",
+      "valor": 20
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "DANIEL NAMIAS LANNES",
+      "cpfCnpjDoador": "34149259828",
+      "descricao": "#NULO",
+      "valor": 114.14
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "GUSTAVO LIPI",
+      "cpfCnpjDoador": "35321892830",
+      "descricao": "#NULO",
+      "valor": 14
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "Gustavo Frazão",
+      "cpfCnpjDoador": "17694414766",
+      "descricao": "#NULO",
+      "valor": 10
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "MARINALDO S GU",
+      "cpfCnpjDoador": "42359406515",
+      "descricao": "#NULO",
+      "valor": 20
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "CRISTHIANE SANTIAGO DE MOURA",
+      "cpfCnpjDoador": "07703571997",
+      "descricao": "#NULO",
+      "valor": 50
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "JOAO DONISETE CUSTODIO",
+      "cpfCnpjDoador": "27843868801",
+      "descricao": "#NULO",
+      "valor": 14.14
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "HELIAN MICAEL LIMA SANTOS",
+      "cpfCnpjDoador": "13395983455",
+      "descricao": "#NULO",
+      "valor": 14
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "JOAO CARLOS",
+      "cpfCnpjDoador": "07685892901",
+      "descricao": "#NULO",
+      "valor": 14
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "GEORGE MOURAO SILVA",
+      "cpfCnpjDoador": "04288421357",
+      "descricao": "#NULO",
+      "valor": 14
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "Erik Gentil No",
+      "cpfCnpjDoador": "45533829890",
+      "descricao": "#NULO",
+      "valor": 10
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "IAGO GONCALVES FERREIRA",
+      "cpfCnpjDoador": "00663533279",
+      "descricao": "#NULO",
+      "valor": 40
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "VINICIUS ADRIEL FERREIRA VIEIRA",
+      "cpfCnpjDoador": "14380561410",
+      "descricao": "#NULO",
+      "valor": 20
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "GUILHERME PLAS",
+      "cpfCnpjDoador": "50724598880",
+      "descricao": "#NULO",
+      "valor": 5
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "SIDNEY DA S",
+      "cpfCnpjDoador": "11963377486",
+      "descricao": "#NULO",
+      "valor": 0.14
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "CAMILA ROSSI KENNERLEY",
+      "cpfCnpjDoador": "35039413807",
+      "descricao": "#NULO",
+      "valor": 140
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "YUJI RODRIG",
+      "cpfCnpjDoador": "45031037091",
+      "descricao": "#NULO",
+      "valor": 1
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "LUIS GUSTAVO BARBOSA DOS SANTOS",
+      "cpfCnpjDoador": "41047880822",
+      "descricao": "#NULO",
+      "valor": 10
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "Lucas Emanuel",
+      "cpfCnpjDoador": "18661581710",
+      "descricao": "#NULO",
+      "valor": 10
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "Raycelio Lima",
+      "cpfCnpjDoador": "60651607337",
+      "descricao": "#NULO",
+      "valor": 100
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "LUIS GUSTAVO NUNES NOVAES CORDEIRO",
+      "cpfCnpjDoador": "10626033462",
+      "descricao": "#NULO",
+      "valor": 100
+    },
+    {
+      "sqCandidato": "280002539826",
+      "doador": "Direção Nacional - NOVO",
+      "cpfCnpjDoador": "13405866000124",
+      "descricao": "#NULO",
+      "valor": 750000
+    },
+    {
+      "sqCandidato": "280002539826",
+      "doador": "Direção Nacional - NOVO",
+      "cpfCnpjDoador": "13405866000124",
+      "descricao": "#NULO",
+      "valor": 750000
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "SERGIO ZICA DA",
+      "cpfCnpjDoador": "10486873684",
+      "descricao": "#NULO",
+      "valor": 14.14
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "Edson Dalazen",
+      "cpfCnpjDoador": "00924161957",
+      "descricao": "#NULO",
+      "valor": 14
+    },
+    {
+      "sqCandidato": "280002542548",
+      "doador": "Katia Lucia dos Santos Medeiros Dubois",
+      "cpfCnpjDoador": "45814813768",
+      "descricao": "#NULO",
+      "valor": 5000
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "MARCOS SANCHEZ RIBEIRO",
+      "cpfCnpjDoador": "48018270805",
+      "descricao": "#NULO",
+      "valor": 20
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "Vitor Rebelo H",
+      "cpfCnpjDoador": "44175644857",
+      "descricao": "#NULO",
+      "valor": 5
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "GUILHERME GONCALVES PIEROSAN",
+      "cpfCnpjDoador": "08403274980",
+      "descricao": "#NULO",
+      "valor": 20
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "Lucas Manoel A",
+      "cpfCnpjDoador": "09687142421",
+      "descricao": "#NULO",
+      "valor": 7.9
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "DIOGO SANTOS M",
+      "cpfCnpjDoador": "47156154877",
+      "descricao": "#NULO",
+      "valor": 10
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "JOAO GABRIEL DAS NEVES ALVES",
+      "cpfCnpjDoador": "70530671492",
+      "descricao": "#NULO",
+      "valor": 14.22
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "CLAYTON ANTONY DE SANTANA",
+      "cpfCnpjDoador": "30494010100",
+      "descricao": "#NULO",
+      "valor": 100
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "SAMUEL DOS SANTOS CARDOSO",
+      "cpfCnpjDoador": "04300296910",
+      "descricao": "#NULO",
+      "valor": 20
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "Thiago Jansen",
+      "cpfCnpjDoador": "10787997927",
+      "descricao": "#NULO",
+      "valor": 14.14
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "ANA EMANUELE RIBAS",
+      "cpfCnpjDoador": "13053438917",
+      "descricao": "#NULO",
+      "valor": 100
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "Anderson Schwarz de Freitas",
+      "cpfCnpjDoador": "04902694000",
+      "descricao": "#NULO",
+      "valor": 10
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "ALLAN KAYKY ALMEIDA AGOSTINI",
+      "cpfCnpjDoador": "07919376904",
+      "descricao": "#NULO",
+      "valor": 100
+    },
+    {
+      "sqCandidato": "280002539826",
+      "doador": "RENATO RIBEIRO MACHADO",
+      "cpfCnpjDoador": "38045281634",
+      "descricao": "#NULO",
+      "valor": 200000
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "LORENZO TAVARES AYALA DA FONSECA",
+      "cpfCnpjDoador": "06329391769",
+      "descricao": "#NULO",
+      "valor": 140
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "VICTOR SOUZA LOPES DE COUTO",
+      "cpfCnpjDoador": "45025776856",
+      "descricao": "#NULO",
+      "valor": 1
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "RAUL SALOMAO T",
+      "cpfCnpjDoador": "42347229877",
+      "descricao": "#NULO",
+      "valor": 2
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "JOSE MARLON LIMA DOS SANTOS",
+      "cpfCnpjDoador": "14546553480",
+      "descricao": "#NULO",
+      "valor": 14
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "OSVANIL LUIZ DE OLIVEIRA",
+      "cpfCnpjDoador": "67140386900",
+      "descricao": "#NULO",
+      "valor": 133.33
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "ARTHUR SOUSA B",
+      "cpfCnpjDoador": "04248779374",
+      "descricao": "#NULO",
+      "valor": 14
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "GLEDSON DE OLIVEIRA BORGES",
+      "cpfCnpjDoador": "90283783672",
+      "descricao": "#NULO",
+      "valor": 100
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "ANA KAROLINE SILVA DE ALMEIDA",
+      "cpfCnpjDoador": "16863748797",
+      "descricao": "#NULO",
+      "valor": 30
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "TALITA ROCHA FIRMINO FUENTES",
+      "cpfCnpjDoador": "05072318133",
+      "descricao": "#NULO",
+      "valor": 132
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "ANDRE KUNRATH MENNA BARRETO FIALHO",
+      "cpfCnpjDoador": "10482235900",
+      "descricao": "#NULO",
+      "valor": 514.14
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "ALGIAN MATE",
+      "cpfCnpjDoador": "11666834947",
+      "descricao": "#NULO",
+      "valor": 14
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "MATHEUS FERNAN",
+      "cpfCnpjDoador": "50787582832",
+      "descricao": "#NULO",
+      "valor": 14
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "IVAN KUIAVA",
+      "cpfCnpjDoador": "02279440970",
+      "descricao": "#NULO",
+      "valor": 50
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "Matheus Arruda",
+      "cpfCnpjDoador": "09246953908",
+      "descricao": "#NULO",
+      "valor": 100
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "GABRIEL VIDAL DE SOUZA",
+      "cpfCnpjDoador": "08234516310",
+      "descricao": "#NULO",
+      "valor": 41.51
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "ANDERSON EU",
+      "cpfCnpjDoador": "08687823355",
+      "descricao": "#NULO",
+      "valor": 14
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "LEONARDO BEZERRA SIQUEIRA",
+      "cpfCnpjDoador": "52926980833",
+      "descricao": "#NULO",
+      "valor": 14
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "FELIPE CALDEIRA DOS SANTOS",
+      "cpfCnpjDoador": "36460827800",
+      "descricao": "#NULO",
+      "valor": 100
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "VINICIUS OL",
+      "cpfCnpjDoador": "39980762802",
+      "descricao": "#NULO",
+      "valor": 14.14
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "GERALDO SOU",
+      "cpfCnpjDoador": "49241696842",
+      "descricao": "#NULO",
+      "valor": 5
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "VINICIUS SOUSA DA COSTA",
+      "cpfCnpjDoador": "15304032780",
+      "descricao": "#NULO",
+      "valor": 14
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "Renato Luís Ma",
+      "cpfCnpjDoador": "45907924861",
+      "descricao": "#NULO",
+      "valor": 1.41
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "DENNIS FERREIRA GODOY",
+      "cpfCnpjDoador": "41492401838",
+      "descricao": "#NULO",
+      "valor": 100
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "EBENEZER FERREIRA PRIANTI",
+      "cpfCnpjDoador": "04572692190",
+      "descricao": "#NULO",
+      "valor": 9.91
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "GUILHERME DALT",
+      "cpfCnpjDoador": "82212937091",
+      "descricao": "#NULO",
+      "valor": 100
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "LEONARDO GARBELOTTI DE CAMARGO",
+      "cpfCnpjDoador": "06085511124",
+      "descricao": "#NULO",
+      "valor": 100
+    },
+    {
+      "sqCandidato": "280002542548",
+      "doador": "Rabih Nasser",
+      "cpfCnpjDoador": "81628943904",
+      "descricao": "#NULO",
+      "valor": 15000
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "RAFAEL MACKMILLAN SOLANO",
+      "cpfCnpjDoador": "03392859079",
+      "descricao": "#NULO",
+      "valor": 100
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "Anderson Henri",
+      "cpfCnpjDoador": "44665238863",
+      "descricao": "#NULO",
+      "valor": 15
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "ALEX SANDRO CAMILO DOS SANTOS",
+      "cpfCnpjDoador": "46228733893",
+      "descricao": "#NULO",
+      "valor": 114
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "FERNANDO CAIRE",
+      "cpfCnpjDoador": "54071428805",
+      "descricao": "#NULO",
+      "valor": 100
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "Pedro Marcio d",
+      "cpfCnpjDoador": "03757652398",
+      "descricao": "#NULO",
+      "valor": 179.79
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "Kallebe Rolim",
+      "cpfCnpjDoador": "60366112341",
+      "descricao": "#NULO",
+      "valor": 14
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "PAULO HENRIQUE FERRAZ",
+      "cpfCnpjDoador": "34111161880",
+      "descricao": "#NULO",
+      "valor": 100
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "DAVI RODRIGUES SOLANO",
+      "cpfCnpjDoador": "04083567155",
+      "descricao": "#NULO",
+      "valor": 300
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "ADRIANA BAS",
+      "cpfCnpjDoador": "04749422797",
+      "descricao": "#NULO",
+      "valor": 100
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "KAYNAN LUCAS PINTO DOMICIANO",
+      "cpfCnpjDoador": "16231604721",
+      "descricao": "#NULO",
+      "valor": 100
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "GUILHERME SOUSA RODRIGUES ALVES",
+      "cpfCnpjDoador": "50417705816",
+      "descricao": "#NULO",
+      "valor": 42
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "JONATAN BREZEZ",
+      "cpfCnpjDoador": "10489034942",
+      "descricao": "#NULO",
+      "valor": 18
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "DELANO SCOD",
+      "cpfCnpjDoador": "09517903669",
+      "descricao": "#NULO",
+      "valor": 14
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "LUIS FELIPE",
+      "cpfCnpjDoador": "53927792802",
+      "descricao": "#NULO",
+      "valor": 8.6
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "MATHEUS RIBEIRO ARRUDA",
+      "cpfCnpjDoador": "14499706483",
+      "descricao": "#NULO",
+      "valor": 5.76
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "JOAO BENEDITO DE SOUZA MELLO CAMARGO",
+      "cpfCnpjDoador": "08396402850",
+      "descricao": "#NULO",
+      "valor": 500
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "WESLEY LUAN ROSSATTO",
+      "cpfCnpjDoador": "03807229094",
+      "descricao": "#NULO",
+      "valor": 14
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "ANA CLAUDIA",
+      "cpfCnpjDoador": "77189680497",
+      "descricao": "#NULO",
+      "valor": 0.14
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "SAULO BESSA GOMES FILHO",
+      "cpfCnpjDoador": "62865859312",
+      "descricao": "#NULO",
+      "valor": 0.14
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "ERIK FARIAS DOS SANTOS",
+      "cpfCnpjDoador": "14401263480",
+      "descricao": "#NULO",
+      "valor": 20
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "LEONARDO FRONZA",
+      "cpfCnpjDoador": "09057842947",
+      "descricao": "#NULO",
+      "valor": 100
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "ANTONIO DE SOUZA CARVALHO NETO",
+      "cpfCnpjDoador": "37795213855",
+      "descricao": "#NULO",
+      "valor": 100
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "Weriston Miranda de Moura",
+      "cpfCnpjDoador": "34124799268",
+      "descricao": "#NULO",
+      "valor": 14
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "LUIS HENRIQUE GONCALVES",
+      "cpfCnpjDoador": "04108363973",
+      "descricao": "#NULO",
+      "valor": 14
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "LUIS HENRIQUE GONCALVES",
+      "cpfCnpjDoador": "04108363973",
+      "descricao": "#NULO",
+      "valor": 36
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "DIOGO FREITAS NOBREGA",
+      "cpfCnpjDoador": "91923280163",
+      "descricao": "#NULO",
+      "valor": 100
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "GUSTAVO L A",
+      "cpfCnpjDoador": "50222819880",
+      "descricao": "#NULO",
+      "valor": 100
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "GLAUCO RICARDO FORNARI",
+      "cpfCnpjDoador": "03273413000",
+      "descricao": "#NULO",
+      "valor": 100
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "CARLOS ALBERTO SALLES BERGAMO",
+      "cpfCnpjDoador": "26556624829",
+      "descricao": "#NULO",
+      "valor": 500
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "ELIARDO GONCALVES PEREIRA",
+      "cpfCnpjDoador": "35266488832",
+      "descricao": "#NULO",
+      "valor": 50
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "GABRIEL ARRUDA CONCOURD DE CARVALHO",
+      "cpfCnpjDoador": "41442976837",
+      "descricao": "#NULO",
+      "valor": 14
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "BRUNO MARQUES",
+      "cpfCnpjDoador": "02395937070",
+      "descricao": "#NULO",
+      "valor": 10
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "Bernaldir Caiu",
+      "cpfCnpjDoador": "00895438909",
+      "descricao": "#NULO",
+      "valor": 20
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "LUCAS RODRIGUES SOUZA DA SILVA",
+      "cpfCnpjDoador": "11494647710",
+      "descricao": "#NULO",
+      "valor": 10
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "TAUA SILVA",
+      "cpfCnpjDoador": "20031257798",
+      "descricao": "#NULO",
+      "valor": 5
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "Leonilson Pere",
+      "cpfCnpjDoador": "80868223387",
+      "descricao": "#NULO",
+      "valor": 120
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "BEATRIZ DA SIL",
+      "cpfCnpjDoador": "38661669820",
+      "descricao": "#NULO",
+      "valor": 100
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "LUCAS GABRIEL GOMES GONCALVES",
+      "cpfCnpjDoador": "60166173851",
+      "descricao": "#NULO",
+      "valor": 15
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "AUSTER DANIEL DE FREITAS LACERDA",
+      "cpfCnpjDoador": "57847207672",
+      "descricao": "#NULO",
+      "valor": 140
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "AUSTER DANIEL DE FREITAS LACERDA",
+      "cpfCnpjDoador": "57847207672",
+      "descricao": "#NULO",
+      "valor": 100
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "Jean Vitor Alv",
+      "cpfCnpjDoador": "07015261308",
+      "descricao": "#NULO",
+      "valor": 10
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "Jean Vitor Alv",
+      "cpfCnpjDoador": "07015261308",
+      "descricao": "#NULO",
+      "valor": 5
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "JULIO CESAR",
+      "cpfCnpjDoador": "08274595807",
+      "descricao": "#NULO",
+      "valor": 10
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "PAULO RICARDO AGOSTINHO ANTONELLI",
+      "cpfCnpjDoador": "38428175845",
+      "descricao": "#NULO",
+      "valor": 29.39
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "PAULO RICARDO AGOSTINHO ANTONELLI",
+      "cpfCnpjDoador": "38428175845",
+      "descricao": "#NULO",
+      "valor": 20.1
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "SONIA MARA RONCOSKI TRINKAUS",
+      "cpfCnpjDoador": "05541027900",
+      "descricao": "#NULO",
+      "valor": 50
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "BRUNNA CASATI",
+      "cpfCnpjDoador": "36921339874",
+      "descricao": "#NULO",
+      "valor": 14
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "BRUNO TIBILLETTI",
+      "cpfCnpjDoador": "05734006955",
+      "descricao": "#NULO",
+      "valor": 20
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "Anderson Murie",
+      "cpfCnpjDoador": "04057800018",
+      "descricao": "#NULO",
+      "valor": 104.6
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "HENRIQUE PEREIRA WARMLING",
+      "cpfCnpjDoador": "08688189927",
+      "descricao": "#NULO",
+      "valor": 114
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "PABLO AUGUSTO MARQUES DO NASCIMENTO",
+      "cpfCnpjDoador": "04913790137",
+      "descricao": "#NULO",
+      "valor": 60
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "Jose weynirez Almeida Brito",
+      "cpfCnpjDoador": "06981872374",
+      "descricao": "#NULO",
+      "valor": 10
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "ADAM MEWS DOS SANTOS",
+      "cpfCnpjDoador": "09031274909",
+      "descricao": "#NULO",
+      "valor": 140
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "GUSTAVO DE SOUSA COSTA VAZ",
+      "cpfCnpjDoador": "59152843882",
+      "descricao": "#NULO",
+      "valor": 14
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "CARLOS WILSON GOUVEIA SANTA ROSA",
+      "cpfCnpjDoador": "05872664494",
+      "descricao": "#NULO",
+      "valor": 29.69
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "VINICIUS MARZO ALMEIDA DA SILVA",
+      "cpfCnpjDoador": "32168883807",
+      "descricao": "#NULO",
+      "valor": 14
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "MATHEUS RIBEIRO E RIBEIRO",
+      "cpfCnpjDoador": "40001171810",
+      "descricao": "#NULO",
+      "valor": 14
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "LUIZ FELIPE DE",
+      "cpfCnpjDoador": "19145274703",
+      "descricao": "#NULO",
+      "valor": 10
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "ALEXANDRE ALVES LOPES",
+      "cpfCnpjDoador": "07641365930",
+      "descricao": "#NULO",
+      "valor": 50
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "LUCAS BRAGA MONTEIRO REIS",
+      "cpfCnpjDoador": "04449194144",
+      "descricao": "#NULO",
+      "valor": 140
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "Ronilson Costa",
+      "cpfCnpjDoador": "10245745122",
+      "descricao": "#NULO",
+      "valor": 10
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "CESAR OLIVEIRA LOBO",
+      "cpfCnpjDoador": "09744682663",
+      "descricao": "#NULO",
+      "valor": 114.14
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "VINICIUS SILVEIRA CARNEIRO",
+      "cpfCnpjDoador": "13298480630",
+      "descricao": "#NULO",
+      "valor": 2
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "MAIARA MENDES ALVES",
+      "cpfCnpjDoador": "02418676064",
+      "descricao": "#NULO",
+      "valor": 50
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "ESTEVAM PEREIR",
+      "cpfCnpjDoador": "09108531692",
+      "descricao": "#NULO",
+      "valor": 100
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "DANILO LUIZ RONCOSKI TRINKAUS",
+      "cpfCnpjDoador": "05032728926",
+      "descricao": "#NULO",
+      "valor": 50
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "ISRAEL COSTA S",
+      "cpfCnpjDoador": "17815027733",
+      "descricao": "#NULO",
+      "valor": 118.37
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "NILSON VAZ EDUARDO",
+      "cpfCnpjDoador": "03382969130",
+      "descricao": "#NULO",
+      "valor": 200
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "VICTOR HUGO SCARPIN XAVIER",
+      "cpfCnpjDoador": "07326331928",
+      "descricao": "#NULO",
+      "valor": 2.82
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "HEVEM KETIN",
+      "cpfCnpjDoador": "17355562703",
+      "descricao": "#NULO",
+      "valor": 20
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "DANIEL ANTONIO BRAZ DA SILVA",
+      "cpfCnpjDoador": "39903963823",
+      "descricao": "#NULO",
+      "valor": 35
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "VITOR HUGO REIS BRANDOLIN BARTHOLOMEU",
+      "cpfCnpjDoador": "47565628840",
+      "descricao": "#NULO",
+      "valor": 84
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "MATHEUS FIGUEREDO SILVA",
+      "cpfCnpjDoador": "06541791740",
+      "descricao": "#NULO",
+      "valor": 50
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "GIOVANNI CARIAS DE OLIVEIRA",
+      "cpfCnpjDoador": "44420942843",
+      "descricao": "#NULO",
+      "valor": 5
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "Francisco Jail",
+      "cpfCnpjDoador": "07388615377",
+      "descricao": "#NULO",
+      "valor": 10
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "MILTON DE FREITAS ALVES",
+      "cpfCnpjDoador": "05200448352",
+      "descricao": "#NULO",
+      "valor": 20
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "Leonardo Olive",
+      "cpfCnpjDoador": "11290894957",
+      "descricao": "#NULO",
+      "valor": 50
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "ITAMAR VELLEDA",
+      "cpfCnpjDoador": "35790415091",
+      "descricao": "#NULO",
+      "valor": 100
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "DUILTON SABIO DE MORAIS",
+      "cpfCnpjDoador": "12566273723",
+      "descricao": "#NULO",
+      "valor": 150
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "Jose Enodio De Lima Neto",
+      "cpfCnpjDoador": "08616900446",
+      "descricao": "#NULO",
+      "valor": 50
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "MARCO ANTONIO LEAO DAMASCENO",
+      "cpfCnpjDoador": "74373200297",
+      "descricao": "#NULO",
+      "valor": 100
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "Iasmin Rosario Moreira",
+      "cpfCnpjDoador": "07461672967",
+      "descricao": "#NULO",
+      "valor": 50
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "Diogo Reuhel Marins Gomes Ribeiro",
+      "cpfCnpjDoador": "11895095719",
+      "descricao": "#NULO",
+      "valor": 100
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "Dea Leonor Bastos Costa",
+      "cpfCnpjDoador": "01534941746",
+      "descricao": "#NULO",
+      "valor": 214
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "DIOGO DE TOLEDO MENDES",
+      "cpfCnpjDoador": "43105138838",
+      "descricao": "#NULO",
+      "valor": 140
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "JORGE NOGUEIRA SANTOS",
+      "cpfCnpjDoador": "31516245881",
+      "descricao": "#NULO",
+      "valor": 100
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "RICARDO LUCIANO FERREIRA",
+      "cpfCnpjDoador": "49810082878",
+      "descricao": "#NULO",
+      "valor": 100
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "ADERLAN RODRIGUES DE MELO",
+      "cpfCnpjDoador": "28530589807",
+      "descricao": "#NULO",
+      "valor": 14
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "FILIPE DE AMOR",
+      "cpfCnpjDoador": "17965972794",
+      "descricao": "#NULO",
+      "valor": 140
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "MIGUEL HENRIQUE GANDRA",
+      "cpfCnpjDoador": "15335101644",
+      "descricao": "#NULO",
+      "valor": 10.01
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "SANDRO KEN ITI",
+      "cpfCnpjDoador": "60631961968",
+      "descricao": "#NULO",
+      "valor": 100
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "GABRIEL EMIR MOREIRA E SILVA",
+      "cpfCnpjDoador": "16926699828",
+      "descricao": "#NULO",
+      "valor": 140
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "RODOLFO RODRIGUES HENGLER",
+      "cpfCnpjDoador": "33593255839",
+      "descricao": "#NULO",
+      "valor": 100
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "WELLINGTON ARAUJO NOGUEIRA",
+      "cpfCnpjDoador": "44405134847",
+      "descricao": "#NULO",
+      "valor": 100
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "Willian Matheu",
+      "cpfCnpjDoador": "12337746976",
+      "descricao": "#NULO",
+      "valor": 14
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "JHONATAN ARAUJ",
+      "cpfCnpjDoador": "05271963128",
+      "descricao": "#NULO",
+      "valor": 90
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "BRUNO MAFFI",
+      "cpfCnpjDoador": "06384681161",
+      "descricao": "#NULO",
+      "valor": 14.14
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "RENE LUIZ COSTA ARAUJO",
+      "cpfCnpjDoador": "01963906136",
+      "descricao": "#NULO",
+      "valor": 100
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "Kauhan Ribeiro",
+      "cpfCnpjDoador": "01734817100",
+      "descricao": "#NULO",
+      "valor": 100
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "João Pedro Lim",
+      "cpfCnpjDoador": "15524270486",
+      "descricao": "#NULO",
+      "valor": 14
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "JONAS LIMA DE ALMEIDA",
+      "cpfCnpjDoador": "44907336829",
+      "descricao": "#NULO",
+      "valor": 100
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "SEBASTIAO KEVI",
+      "cpfCnpjDoador": "08090611397",
+      "descricao": "#NULO",
+      "valor": 14
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "RAFAEL DE CAMPOS LAGO",
+      "cpfCnpjDoador": "83825169049",
+      "descricao": "#NULO",
+      "valor": 100
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "NEI ESPEDITO PAGNUSSAT",
+      "cpfCnpjDoador": "04028075025",
+      "descricao": "#NULO",
+      "valor": 30
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "NICOLAS GOMES DOS REIS",
+      "cpfCnpjDoador": "07615318157",
+      "descricao": "#NULO",
+      "valor": 100
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "Victor Castro Silva",
+      "cpfCnpjDoador": "83910735053",
+      "descricao": "#NULO",
+      "valor": 9.1
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "WILMAR VITOR FONSECA",
+      "cpfCnpjDoador": "12840694603",
+      "descricao": "#NULO",
+      "valor": 14.14
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "GUSTAVO NUNES DE BARROS SOUZA",
+      "cpfCnpjDoador": "20040763722",
+      "descricao": "#NULO",
+      "valor": 48.8
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "LETICIA VILAS BOAS PACHECO",
+      "cpfCnpjDoador": "36844383835",
+      "descricao": "#NULO",
+      "valor": 100
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "Vinícius Alves",
+      "cpfCnpjDoador": "46691205812",
+      "descricao": "#NULO",
+      "valor": 100
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "LINCOLN ENICHI ABE",
+      "cpfCnpjDoador": "04303974960",
+      "descricao": "#NULO",
+      "valor": 140
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "MARCOS ALEXANDRE SEDREZ",
+      "cpfCnpjDoador": "00747449929",
+      "descricao": "#NULO",
+      "valor": 200
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "MARCELO LIBESKIND",
+      "cpfCnpjDoador": "04181880842",
+      "descricao": "#NULO",
+      "valor": 180
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "MATHEUS PINHEIRO DE BRITO SANTOS",
+      "cpfCnpjDoador": "06185664577",
+      "descricao": "#NULO",
+      "valor": 10
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "FABIO DA SILVA RANGEL LESSA",
+      "cpfCnpjDoador": "08456912794",
+      "descricao": "#NULO",
+      "valor": 140
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "NICOLAS BIONI STEFANO",
+      "cpfCnpjDoador": "02763849032",
+      "descricao": "#NULO",
+      "valor": 617.23
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "JEFFERSON PEREIRA DA SILVA",
+      "cpfCnpjDoador": "23076902806",
+      "descricao": "#NULO",
+      "valor": 70
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "LUIS HENRIQUE PRETTO",
+      "cpfCnpjDoador": "03077482002",
+      "descricao": "#NULO",
+      "valor": 50
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "SERGIO TARRAF FILHO",
+      "cpfCnpjDoador": "38343807847",
+      "descricao": "#NULO",
+      "valor": 131.86
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "SERGIO TARRAF FILHO",
+      "cpfCnpjDoador": "38343807847",
+      "descricao": "#NULO",
+      "valor": 151.31
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "Abilio Esteves Calegario Oliveira",
+      "cpfCnpjDoador": "73160598187",
+      "descricao": "#NULO",
+      "valor": 250
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "TIAGO TREVENZOLI SIQUEIRA",
+      "cpfCnpjDoador": "12814062794",
+      "descricao": "#NULO",
+      "valor": 14.14
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "GABRIEL D OLIVEIRA SAHDO",
+      "cpfCnpjDoador": "70139731229",
+      "descricao": "#NULO",
+      "valor": 100
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "Ely Montagnolli Neto",
+      "cpfCnpjDoador": "47079350875",
+      "descricao": "#NULO",
+      "valor": 14.14
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "EMERSON RODRIGUES DE AGUIAR LAURINDO",
+      "cpfCnpjDoador": "40146317882",
+      "descricao": "#NULO",
+      "valor": 7.14
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "JAKSON KAUAN D",
+      "cpfCnpjDoador": "12299818456",
+      "descricao": "#NULO",
+      "valor": 14
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "ALISSON LUDTKE SCHWANZ",
+      "cpfCnpjDoador": "98533347200",
+      "descricao": "#NULO",
+      "valor": 14
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "GUILHERME NOBRE BERNARDO",
+      "cpfCnpjDoador": "50338551824",
+      "descricao": "#NULO",
+      "valor": 100
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "IGOR SANTORO T",
+      "cpfCnpjDoador": "14424641600",
+      "descricao": "#NULO",
+      "valor": 4.5
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "Renan Santos Souza",
+      "cpfCnpjDoador": "11708345663",
+      "descricao": "#NULO",
+      "valor": 14
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "NICOLAS CANGUSSU SOUZA",
+      "cpfCnpjDoador": "07751787562",
+      "descricao": "#NULO",
+      "valor": 10
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "GLEIDSON JOSE DE OLIVEIRA",
+      "cpfCnpjDoador": "43156227889",
+      "descricao": "#NULO",
+      "valor": 250
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "ANDRE LUIZ LUZI MELLO",
+      "cpfCnpjDoador": "48629857854",
+      "descricao": "#NULO",
+      "valor": 20
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "ALEXANDRE DANTAS TOLEDO",
+      "cpfCnpjDoador": "48992278845",
+      "descricao": "#NULO",
+      "valor": 35
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "ANA INDHYANNARA RODRIGUES VIEIRA",
+      "cpfCnpjDoador": "11104798409",
+      "descricao": "#NULO",
+      "valor": 100
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "FERNANDO PEREIRA SERVULO",
+      "cpfCnpjDoador": "02212403658",
+      "descricao": "#NULO",
+      "valor": 10
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "GUSTAVO TEIXEIRA ALBARELLI",
+      "cpfCnpjDoador": "45749652823",
+      "descricao": "#NULO",
+      "valor": 14.14
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "VICTOR RIBEIRO PAGANI",
+      "cpfCnpjDoador": "13136614739",
+      "descricao": "#NULO",
+      "valor": 1414.14
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "GUILHERME HENRIQUE DE SOUZA SILVA",
+      "cpfCnpjDoador": "05274766250",
+      "descricao": "#NULO",
+      "valor": 14
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "WEBERSON CLAUDIANO PINTO",
+      "cpfCnpjDoador": "91250374634",
+      "descricao": "#NULO",
+      "valor": 14
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "ETTORE LUIZ PETTA DIANIN",
+      "cpfCnpjDoador": "10059523964",
+      "descricao": "#NULO",
+      "valor": 100
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "Fernanda Santos",
+      "cpfCnpjDoador": "29024185823",
+      "descricao": "#NULO",
+      "valor": 100
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "ALYSSON BRUNO OLIVEIRA SANTOS",
+      "cpfCnpjDoador": "00525171525",
+      "descricao": "#NULO",
+      "valor": 400
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "Jefferson Olim",
+      "cpfCnpjDoador": "54602397883",
+      "descricao": "#NULO",
+      "valor": 14
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "MATHEUS HENRIQUE APARECIDO HONORIO",
+      "cpfCnpjDoador": "32067575848",
+      "descricao": "#NULO",
+      "valor": 10
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "RODOLFO PEQUENO DE BRITO",
+      "cpfCnpjDoador": "23180759801",
+      "descricao": "#NULO",
+      "valor": 114.14
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "FERDINAN GOMES",
+      "cpfCnpjDoador": "48376701304",
+      "descricao": "#NULO",
+      "valor": 50
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "WENNER CASTILHO FERNANDES",
+      "cpfCnpjDoador": "13615938658",
+      "descricao": "#NULO",
+      "valor": 114.14
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "JONAS SEMIATZH",
+      "cpfCnpjDoador": "34642244816",
+      "descricao": "#NULO",
+      "valor": 25
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "Rodrigo D Venancio",
+      "cpfCnpjDoador": "09354981925",
+      "descricao": "#NULO",
+      "valor": 50
+    },
+    {
+      "sqCandidato": "280002542548",
+      "doador": "DEIVID FERREIRA COUTO",
+      "cpfCnpjDoador": "30098510819",
+      "descricao": "#NULO",
+      "valor": 200
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "GUILHERME V",
+      "cpfCnpjDoador": "52212838832",
+      "descricao": "#NULO",
+      "valor": 5
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "Pedro Baptista",
+      "cpfCnpjDoador": "71175441473",
+      "descricao": "#NULO",
+      "valor": 50
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "Eduardo Victor",
+      "cpfCnpjDoador": "05394920192",
+      "descricao": "#NULO",
+      "valor": 50
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "ROGERIO MEIRELLES BORBA",
+      "cpfCnpjDoador": "01342675088",
+      "descricao": "#NULO",
+      "valor": 500
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "NILTON CESAR G",
+      "cpfCnpjDoador": "09378183808",
+      "descricao": "#NULO",
+      "valor": 100
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "MIGUEL FELIPE REIS BRITO",
+      "cpfCnpjDoador": "52614812870",
+      "descricao": "#NULO",
+      "valor": 100
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "VICTORIA FERNANDA MISTRO DA SILVA",
+      "cpfCnpjDoador": "06665626954",
+      "descricao": "#NULO",
+      "valor": 200
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "DANILO DE AGUIAR MENDES",
+      "cpfCnpjDoador": "11940067600",
+      "descricao": "#NULO",
+      "valor": 500
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "WENDELL FER",
+      "cpfCnpjDoador": "14100503784",
+      "descricao": "#NULO",
+      "valor": 26.04
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "BRUNO NUNES DE SANTANA",
+      "cpfCnpjDoador": "02455292177",
+      "descricao": "#NULO",
+      "valor": 50
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "FELLIPE DE JESUS DA SILVA",
+      "cpfCnpjDoador": "39001964869",
+      "descricao": "#NULO",
+      "valor": 20
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "WILLIANS MEDEIROS NOGUEIRA",
+      "cpfCnpjDoador": "19241304839",
+      "descricao": "#NULO",
+      "valor": 10
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "Anderson Simao Duarte Jr",
+      "cpfCnpjDoador": "01343930154",
+      "descricao": "#NULO",
+      "valor": 100
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "AUGUSTO OMO",
+      "cpfCnpjDoador": "07513471320",
+      "descricao": "#NULO",
+      "valor": 2
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "OSCAR KENJI TAKESAKI",
+      "cpfCnpjDoador": "57219273991",
+      "descricao": "#NULO",
+      "valor": 30
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "VITOR DE OLIVEIRA CARVALHO",
+      "cpfCnpjDoador": "34635494845",
+      "descricao": "#NULO",
+      "valor": 50
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "LIVIA SILVA DE OLIVEIRA",
+      "cpfCnpjDoador": "14126424695",
+      "descricao": "#NULO",
+      "valor": 18
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "FABIO CRIST",
+      "cpfCnpjDoador": "10707320798",
+      "descricao": "#NULO",
+      "valor": 500
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "RENAN PEREIRA DE OLIVEIRA",
+      "cpfCnpjDoador": "34148389825",
+      "descricao": "#NULO",
+      "valor": 14.14
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "Emerson da Sil",
+      "cpfCnpjDoador": "61558240373",
+      "descricao": "#NULO",
+      "valor": 14
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "AJURY FREIRE DE ALENCAR NETO",
+      "cpfCnpjDoador": "33885050803",
+      "descricao": "#NULO",
+      "valor": 50
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "LUIS FERNANDO LIPKA INSFRAN",
+      "cpfCnpjDoador": "03469434182",
+      "descricao": "#NULO",
+      "valor": 100
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "DANIEL PICCONI ALQUETE",
+      "cpfCnpjDoador": "45036258886",
+      "descricao": "#NULO",
+      "valor": 20
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "VICTOR GABR",
+      "cpfCnpjDoador": "08369132308",
+      "descricao": "#NULO",
+      "valor": 14
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "EDUARDO SCHMIT",
+      "cpfCnpjDoador": "54333738865",
+      "descricao": "#NULO",
+      "valor": 100
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "PEDRO HENRIQUE LIMA DE MEDEIROS",
+      "cpfCnpjDoador": "45605736892",
+      "descricao": "#NULO",
+      "valor": 100
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "Herico Mauro Silveira Balzani",
+      "cpfCnpjDoador": "02799965601",
+      "descricao": "#NULO",
+      "valor": 100
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "Gabriel Julio dos Santos",
+      "cpfCnpjDoador": "51994081864",
+      "descricao": "#NULO",
+      "valor": 28
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "Marcos De Oliv",
+      "cpfCnpjDoador": "00128512130",
+      "descricao": "#NULO",
+      "valor": 10
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "EVERTON PERES",
+      "cpfCnpjDoador": "06692069971",
+      "descricao": "#NULO",
+      "valor": 50
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "CAIQUE CARVALHO CANALLES",
+      "cpfCnpjDoador": "11312295929",
+      "descricao": "#NULO",
+      "valor": 10
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "MELINA NUNE",
+      "cpfCnpjDoador": "00980831040",
+      "descricao": "#NULO",
+      "valor": 10
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "RAFAEL LANDES ANACLETO",
+      "cpfCnpjDoador": "15827339610",
+      "descricao": "#NULO",
+      "valor": 30
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "EDUARDO SOUSA SALES RODRIGUES",
+      "cpfCnpjDoador": "04656079189",
+      "descricao": "#NULO",
+      "valor": 100
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "Lilian Christina Vieira",
+      "cpfCnpjDoador": "08973173944",
+      "descricao": "#NULO",
+      "valor": 5
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "JOHAN STEPH",
+      "cpfCnpjDoador": "15321834709",
+      "descricao": "#NULO",
+      "valor": 13.06
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "LUCAS DAVID MUZEL",
+      "cpfCnpjDoador": "32945034824",
+      "descricao": "#NULO",
+      "valor": 114.14
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "BRUNNO DE OLIVEIRA LIMA ANEAS",
+      "cpfCnpjDoador": "21713130807",
+      "descricao": "#NULO",
+      "valor": 514
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "JEFREY ALLAN HEINRICH",
+      "cpfCnpjDoador": "09480751984",
+      "descricao": "#NULO",
+      "valor": 10
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "DAVI AUGUSTO M",
+      "cpfCnpjDoador": "11786673916",
+      "descricao": "#NULO",
+      "valor": 0.73
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "JASON VARAS",
+      "cpfCnpjDoador": "65152476991",
+      "descricao": "#NULO",
+      "valor": 20
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "LUIS GUSTAVO A",
+      "cpfCnpjDoador": "07653542417",
+      "descricao": "#NULO",
+      "valor": 30
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "Moises Dos San",
+      "cpfCnpjDoador": "03232306365",
+      "descricao": "#NULO",
+      "valor": 2
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "Suyane Araujo",
+      "cpfCnpjDoador": "06913449305",
+      "descricao": "#NULO",
+      "valor": 10
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "Gabriel Volpat",
+      "cpfCnpjDoador": "09310519916",
+      "descricao": "#NULO",
+      "valor": 10
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "Antonio Gabrie",
+      "cpfCnpjDoador": "10091969441",
+      "descricao": "#NULO",
+      "valor": 12.14
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "MATEUS MACIEL GONCALVES",
+      "cpfCnpjDoador": "02099917043",
+      "descricao": "#NULO",
+      "valor": 114
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "Luiz Eduardo N",
+      "cpfCnpjDoador": "13779341441",
+      "descricao": "#NULO",
+      "valor": 2.22
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "EDSON RODRI",
+      "cpfCnpjDoador": "01856175650",
+      "descricao": "#NULO",
+      "valor": 50
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "MARCO ANTONIO FERNANDES",
+      "cpfCnpjDoador": "10900006773",
+      "descricao": "#NULO",
+      "valor": 100
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "PEDRO SILVEIRA PIGATTO",
+      "cpfCnpjDoador": "03205054059",
+      "descricao": "#NULO",
+      "valor": 146.31
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "Luiz Filipe So",
+      "cpfCnpjDoador": "11552142698",
+      "descricao": "#NULO",
+      "valor": 2.55
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "ALEXANDRE BORGES GARCIA",
+      "cpfCnpjDoador": "36137926800",
+      "descricao": "#NULO",
+      "valor": 16.18
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "PABLO SAVIO SOUSA RODRIGUES",
+      "cpfCnpjDoador": "06786096328",
+      "descricao": "#NULO",
+      "valor": 5
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "HEITOR FELIX DE OLIVEIRA",
+      "cpfCnpjDoador": "14165193780",
+      "descricao": "#NULO",
+      "valor": 150
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "ADILSON APARECIDO PASSETTI",
+      "cpfCnpjDoador": "02569569879",
+      "descricao": "#NULO",
+      "valor": 150
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "VICTOR JOAQ",
+      "cpfCnpjDoador": "12294647947",
+      "descricao": "#NULO",
+      "valor": 0.01
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "Davi Oliveira Rabelo",
+      "cpfCnpjDoador": "09494008669",
+      "descricao": "#NULO",
+      "valor": 114
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "RUAN MARCOS",
+      "cpfCnpjDoador": "03071906099",
+      "descricao": "#NULO",
+      "valor": 100
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "PAULO JORGE FLORINDO BARCIA",
+      "cpfCnpjDoador": "35516425832",
+      "descricao": "#NULO",
+      "valor": 100
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "MARLON DE SOUZA JARDIM",
+      "cpfCnpjDoador": "17827439799",
+      "descricao": "#NULO",
+      "valor": 100
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "Manoel Lucas C",
+      "cpfCnpjDoador": "09680567419",
+      "descricao": "#NULO",
+      "valor": 3
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "LUIZ LEVI DO NASCIMENTO SILVA",
+      "cpfCnpjDoador": "10187188424",
+      "descricao": "#NULO",
+      "valor": 15
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "RAFAEL SALVADOR DOS SANTOS",
+      "cpfCnpjDoador": "01148235965",
+      "descricao": "#NULO",
+      "valor": 14
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "Jose Pedro Yam",
+      "cpfCnpjDoador": "42579544852",
+      "descricao": "#NULO",
+      "valor": 100
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "ERICK DOS S",
+      "cpfCnpjDoador": "61046964305",
+      "descricao": "#NULO",
+      "valor": 3
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "Pedro Henrique",
+      "cpfCnpjDoador": "00982120109",
+      "descricao": "#NULO",
+      "valor": 14
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "DAVI OLIVEIRA DA SILVA",
+      "cpfCnpjDoador": "16418193750",
+      "descricao": "#NULO",
+      "valor": 2
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "FERNANDO HERCULES MARCHETTI",
+      "cpfCnpjDoador": "42487092874",
+      "descricao": "#NULO",
+      "valor": 50
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "SABRINA CARLOTTO",
+      "cpfCnpjDoador": "94337780068",
+      "descricao": "#NULO",
+      "valor": 140
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "RODRIGO SOARES",
+      "cpfCnpjDoador": "31168161827",
+      "descricao": "#NULO",
+      "valor": 10
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "RUAN VITOR SANTOS RIBEIRO",
+      "cpfCnpjDoador": "06104463398",
+      "descricao": "#NULO",
+      "valor": 114
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "ELIEL SANGALI",
+      "cpfCnpjDoador": "10359675964",
+      "descricao": "#NULO",
+      "valor": 100
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "RAFAELLA GO",
+      "cpfCnpjDoador": "16233527970",
+      "descricao": "#NULO",
+      "valor": 0.97
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "LEONARDO BARBOSA BELCHIOR DOS SANTOS",
+      "cpfCnpjDoador": "12950970796",
+      "descricao": "#NULO",
+      "valor": 100
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "VICTOR MATH",
+      "cpfCnpjDoador": "03208612010",
+      "descricao": "#NULO",
+      "valor": 2
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "ALEXANDRE MOTTIN DE CAMPOS",
+      "cpfCnpjDoador": "04876515964",
+      "descricao": "#NULO",
+      "valor": 140
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "Luis Augusto Irineu Aguiar Ramos",
+      "cpfCnpjDoador": "09830886409",
+      "descricao": "#NULO",
+      "valor": 30
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "MIKE CABRAL VIEIRA",
+      "cpfCnpjDoador": "05840338770",
+      "descricao": "#NULO",
+      "valor": 100
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "ELIANI FERR",
+      "cpfCnpjDoador": "08977991781",
+      "descricao": "#NULO",
+      "valor": 2.26
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "ANA CARLA ALVES BONFIM TEIXEIRA",
+      "cpfCnpjDoador": "03354143541",
+      "descricao": "#NULO",
+      "valor": 100
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "CAMILA ARGENTA FERRAZ",
+      "cpfCnpjDoador": "01108564062",
+      "descricao": "#NULO",
+      "valor": 30
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "JUAN ICARO DOS SANTOS SA",
+      "cpfCnpjDoador": "14358870694",
+      "descricao": "#NULO",
+      "valor": 5.54
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "GUILHERME KOGUT",
+      "cpfCnpjDoador": "04335360983",
+      "descricao": "#NULO",
+      "valor": 100
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "VICTOR RAFA",
+      "cpfCnpjDoador": "71397940492",
+      "descricao": "#NULO",
+      "valor": 1
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "WALYSSON LUCAS",
+      "cpfCnpjDoador": "17466839703",
+      "descricao": "#NULO",
+      "valor": 14
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "FLAVIO EDUARDO SOUTO MAIOR SERRANO",
+      "cpfCnpjDoador": "07944131456",
+      "descricao": "#NULO",
+      "valor": 100
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "WILLIAM VIEDO MELLO",
+      "cpfCnpjDoador": "01966991002",
+      "descricao": "#NULO",
+      "valor": 27.44
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "Genilson Gonca",
+      "cpfCnpjDoador": "04421135364",
+      "descricao": "#NULO",
+      "valor": 20
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "LUIZ HENRIQUE",
+      "cpfCnpjDoador": "51301209813",
+      "descricao": "#NULO",
+      "valor": 0.03
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "Bruno Lovaglio Cancado Trindade",
+      "cpfCnpjDoador": "02618822609",
+      "descricao": "#NULO",
+      "valor": 500
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "LUCIANO DOS SANTOS",
+      "cpfCnpjDoador": "25588366840",
+      "descricao": "#NULO",
+      "valor": 100
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "DIEGO FEQUETTIA BARROS",
+      "cpfCnpjDoador": "47009227888",
+      "descricao": "#NULO",
+      "valor": 20
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "ARTHUR FRANCO DA SILVA CERQUEIRA",
+      "cpfCnpjDoador": "17678060785",
+      "descricao": "#NULO",
+      "valor": 100
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "Derick de Souz",
+      "cpfCnpjDoador": "38158153801",
+      "descricao": "#NULO",
+      "valor": 100
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "THEO DECHICHI",
+      "cpfCnpjDoador": "48700301876",
+      "descricao": "#NULO",
+      "valor": 120
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "DAVI GARCIA DE SOUZA",
+      "cpfCnpjDoador": "11769658750",
+      "descricao": "#NULO",
+      "valor": 300
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "GABRIEL FELIX DA SILVA",
+      "cpfCnpjDoador": "15309415475",
+      "descricao": "#NULO",
+      "valor": 2.26
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "NILSON PERE",
+      "cpfCnpjDoador": "15959336707",
+      "descricao": "#NULO",
+      "valor": 14
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "Bruno Cecconi",
+      "cpfCnpjDoador": "09220228955",
+      "descricao": "#NULO",
+      "valor": 100
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "LUIS HENRIQUE",
+      "cpfCnpjDoador": "49277700874",
+      "descricao": "#NULO",
+      "valor": 50
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "ALAN BATISTA DE ANDRADE",
+      "cpfCnpjDoador": "27455336810",
+      "descricao": "#NULO",
+      "valor": 14.14
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "ENZO GOMES GRI",
+      "cpfCnpjDoador": "19820947707",
+      "descricao": "#NULO",
+      "valor": 100
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "VALENTINO S BERTE",
+      "cpfCnpjDoador": "03394181096",
+      "descricao": "#NULO",
+      "valor": 14.14
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "MARCO ROBER",
+      "cpfCnpjDoador": "38010383864",
+      "descricao": "#NULO",
+      "valor": 5
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "MAURO ERISON D",
+      "cpfCnpjDoador": "98081128034",
+      "descricao": "#NULO",
+      "valor": 14
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "MESSIAS HEITOR FERREIRA DE OLIVEIRA",
+      "cpfCnpjDoador": "03611287890",
+      "descricao": "#NULO",
+      "valor": 14
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "LUCAS BRAND",
+      "cpfCnpjDoador": "16849095625",
+      "descricao": "#NULO",
+      "valor": 0.02
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "NICOLAS PINHEIRO PEREIRA",
+      "cpfCnpjDoador": "04472286173",
+      "descricao": "#NULO",
+      "valor": 10
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "Wagner Sousa S",
+      "cpfCnpjDoador": "06305434107",
+      "descricao": "#NULO",
+      "valor": 10
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "GUILHERME CARACA MANTOVANI",
+      "cpfCnpjDoador": "49256508826",
+      "descricao": "#NULO",
+      "valor": 20
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "PEDRO HENRI",
+      "cpfCnpjDoador": "09799113628",
+      "descricao": "#NULO",
+      "valor": 14
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "MARCOS VINICIUS DE ALMEIDA DE ALCANTARA",
+      "cpfCnpjDoador": "10135688507",
+      "descricao": "#NULO",
+      "valor": 14
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "JADER TAVAR",
+      "cpfCnpjDoador": "02544432306",
+      "descricao": "#NULO",
+      "valor": 145
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "Vitoria Caroli",
+      "cpfCnpjDoador": "47768455800",
+      "descricao": "#NULO",
+      "valor": 0.01
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "ANDERSON RAFAEL MENDES MAIA",
+      "cpfCnpjDoador": "15587229637",
+      "descricao": "#NULO",
+      "valor": 100
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "EDUARDO SACCON",
+      "cpfCnpjDoador": "07276096963",
+      "descricao": "#NULO",
+      "valor": 50
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "Fabricio De Jesus Da Silva Sousa",
+      "cpfCnpjDoador": "07939387162",
+      "descricao": "#NULO",
+      "valor": 8.63
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "Samuel Henriqu",
+      "cpfCnpjDoador": "01779888279",
+      "descricao": "#NULO",
+      "valor": 10
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "Felipe Correa",
+      "cpfCnpjDoador": "17517403745",
+      "descricao": "#NULO",
+      "valor": 14.14
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "JOSE LUIZ BEZ TROMBETA",
+      "cpfCnpjDoador": "10011143967",
+      "descricao": "#NULO",
+      "valor": 100
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "ENZO MOTA SANTARELLI",
+      "cpfCnpjDoador": "35581073813",
+      "descricao": "#NULO",
+      "valor": 150
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "LUCAS BERNARDO DA SILVA",
+      "cpfCnpjDoador": "13295089981",
+      "descricao": "#NULO",
+      "valor": 14.14
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "Pietro Davila",
+      "cpfCnpjDoador": "55880026876",
+      "descricao": "#NULO",
+      "valor": 10
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "FELIPE AUGUSTO DOS SANTOS",
+      "cpfCnpjDoador": "39638130830",
+      "descricao": "#NULO",
+      "valor": 1000
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "THALES DE SOUZA SILVA",
+      "cpfCnpjDoador": "17675183746",
+      "descricao": "#NULO",
+      "valor": 8.5
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "MAURO MARCELO QUEIROZ DE ARRUDA SOBRINHO",
+      "cpfCnpjDoador": "81915055504",
+      "descricao": "#NULO",
+      "valor": 314
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "DEYVISON CRYSTIAN SILVA ABRENHOSA",
+      "cpfCnpjDoador": "70623337193",
+      "descricao": "#NULO",
+      "valor": 5
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "RUAN GUSTAVO D",
+      "cpfCnpjDoador": "61303697351",
+      "descricao": "#NULO",
+      "valor": 10
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "THIAGO S GA",
+      "cpfCnpjDoador": "38414709800",
+      "descricao": "#NULO",
+      "valor": 14
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "Carlos Henriqu",
+      "cpfCnpjDoador": "08991651330",
+      "descricao": "#NULO",
+      "valor": 56
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "RAFAEL BRANDAO",
+      "cpfCnpjDoador": "16909647661",
+      "descricao": "#NULO",
+      "valor": 14.14
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "LUCAS RAFAE",
+      "cpfCnpjDoador": "10085396940",
+      "descricao": "#NULO",
+      "valor": 500
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "Leonardo Lima",
+      "cpfCnpjDoador": "02893247008",
+      "descricao": "#NULO",
+      "valor": 50
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "Lucas Bezerra Evangelista",
+      "cpfCnpjDoador": "05230621419",
+      "descricao": "#NULO",
+      "valor": 100
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "SERGIO PENA OLIVEIRA",
+      "cpfCnpjDoador": "00939152258",
+      "descricao": "#NULO",
+      "valor": 14
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "MATHEUS LEANDRO MARTINS",
+      "cpfCnpjDoador": "45046010879",
+      "descricao": "#NULO",
+      "valor": 1546.8
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "DAVI DELFINO FERREIRA",
+      "cpfCnpjDoador": "54266074867",
+      "descricao": "#NULO",
+      "valor": 1.14
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "Carlos Alberto N Silva",
+      "cpfCnpjDoador": "80257089772",
+      "descricao": "#NULO",
+      "valor": 56
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "ENZO FRITOLI DA SILVA",
+      "cpfCnpjDoador": "50604605846",
+      "descricao": "#NULO",
+      "valor": 1.5
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "Vitor Gabriel",
+      "cpfCnpjDoador": "15932688661",
+      "descricao": "#NULO",
+      "valor": 5.17
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "Jhon Victor Di",
+      "cpfCnpjDoador": "09031080110",
+      "descricao": "#NULO",
+      "valor": 3.3
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "MARCO ANTONIO DE MENDONCA PACHECO",
+      "cpfCnpjDoador": "16498974729",
+      "descricao": "#NULO",
+      "valor": 100
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "Luiz Carlos Bussolo",
+      "cpfCnpjDoador": "00718002989",
+      "descricao": "#NULO",
+      "valor": 100
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "GUSTAVO PIRES",
+      "cpfCnpjDoador": "06080364123",
+      "descricao": "#NULO",
+      "valor": 140
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "RAQUEL SAYURI KOBAYASHI",
+      "cpfCnpjDoador": "36963463816",
+      "descricao": "#NULO",
+      "valor": 140
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "ANDRE LUIZ FERREIRA BRAGA",
+      "cpfCnpjDoador": "07108592606",
+      "descricao": "#NULO",
+      "valor": 30
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "Abner Jose Bal",
+      "cpfCnpjDoador": "12731549912",
+      "descricao": "#NULO",
+      "valor": 14
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "MARCUS MAHLER BORGES",
+      "cpfCnpjDoador": "04147628192",
+      "descricao": "#NULO",
+      "valor": 14
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "MARCUS MAHLER BORGES",
+      "cpfCnpjDoador": "04147628192",
+      "descricao": "#NULO",
+      "valor": 40
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "RICARDO BECKER",
+      "cpfCnpjDoador": "03873888939",
+      "descricao": "#NULO",
+      "valor": 147.77
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "ARTHUR PIETRO",
+      "cpfCnpjDoador": "63742700375",
+      "descricao": "#NULO",
+      "valor": 1.49
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "JOAO RODRIGUES TAVARES E AFFONSO",
+      "cpfCnpjDoador": "31110087896",
+      "descricao": "#NULO",
+      "valor": 20
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "JOSE FABIO DA SILVA",
+      "cpfCnpjDoador": "84256702334",
+      "descricao": "#NULO",
+      "valor": 10
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "LUIS GUILHERME NUNES CARVALHO",
+      "cpfCnpjDoador": "15668945731",
+      "descricao": "#NULO",
+      "valor": 16.63
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "ROBSON IFRAN VILALBA",
+      "cpfCnpjDoador": "04487143101",
+      "descricao": "#NULO",
+      "valor": 200
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "AUGUSTO GON",
+      "cpfCnpjDoador": "03954461390",
+      "descricao": "#NULO",
+      "valor": 140
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "CAETANO PAS",
+      "cpfCnpjDoador": "59313282895",
+      "descricao": "#NULO",
+      "valor": 14.14
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "Itallo Junio P",
+      "cpfCnpjDoador": "12904204679",
+      "descricao": "#NULO",
+      "valor": 1
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "MATHEUS D RIBE",
+      "cpfCnpjDoador": "09477957402",
+      "descricao": "#NULO",
+      "valor": 100
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "PEDRO GABRIEL VIEIRA ACHAVAL",
+      "cpfCnpjDoador": "04552825100",
+      "descricao": "#NULO",
+      "valor": 100
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "MATEUS LUED",
+      "cpfCnpjDoador": "09401855129",
+      "descricao": "#NULO",
+      "valor": 100
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "JOAO VICTOR DA",
+      "cpfCnpjDoador": "15058398745",
+      "descricao": "#NULO",
+      "valor": 5
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "VINICIUS DE OLIVEIRA DAVID",
+      "cpfCnpjDoador": "45992170855",
+      "descricao": "#NULO",
+      "valor": 100
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "GEORGE BRUNO MENDES FURTADO ZANONI",
+      "cpfCnpjDoador": "04854688327",
+      "descricao": "#NULO",
+      "valor": 200
+    },
+    {
+      "sqCandidato": "280002551547",
+      "doador": "AUGUSTO JORGE CURY",
+      "cpfCnpjDoador": "02162936852",
+      "descricao": "#NULO",
+      "valor": 75000
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "VINICIUS ARAUJO RIBEIRO",
+      "cpfCnpjDoador": "40131711806",
+      "descricao": "#NULO",
+      "valor": 100
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "RENATA CRISTINA DOMARCO",
+      "cpfCnpjDoador": "13336028809",
+      "descricao": "#NULO",
+      "valor": 100
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "Ricardo Falcao",
+      "cpfCnpjDoador": "27036056843",
+      "descricao": "#NULO",
+      "valor": 200
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "LUIZ GUILHERME DE DE SOUZA SOARES",
+      "cpfCnpjDoador": "13982228441",
+      "descricao": "#NULO",
+      "valor": 3.75
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "VITOR GABRIEL DE SOUZA SILVEIRA",
+      "cpfCnpjDoador": "06563106005",
+      "descricao": "#NULO",
+      "valor": 0.23
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "GABRIEL NEGREI",
+      "cpfCnpjDoador": "35565000866",
+      "descricao": "#NULO",
+      "valor": 10
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "GABRIEL AUGUSTO SILVA E SILVA",
+      "cpfCnpjDoador": "48467841850",
+      "descricao": "#NULO",
+      "valor": 500
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "LARA LETICIA OLIVEIRA LUSTOSA MOTA",
+      "cpfCnpjDoador": "03862806146",
+      "descricao": "#NULO",
+      "valor": 50
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "MAURICIO FERRE",
+      "cpfCnpjDoador": "02589102089",
+      "descricao": "#NULO",
+      "valor": 20
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "MATHEUS PIC",
+      "cpfCnpjDoador": "03638042006",
+      "descricao": "#NULO",
+      "valor": 50
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "NELSON NARA",
+      "cpfCnpjDoador": "53611816841",
+      "descricao": "#NULO",
+      "valor": 100
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "KAIKY RODRIGUES GERALDO",
+      "cpfCnpjDoador": "11542708664",
+      "descricao": "#NULO",
+      "valor": 20
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "BEATRIZ EVANGE",
+      "cpfCnpjDoador": "16494258646",
+      "descricao": "#NULO",
+      "valor": 0.88
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "RAFAEL NASCIMENTO IHI",
+      "cpfCnpjDoador": "35300225860",
+      "descricao": "#NULO",
+      "valor": 50
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "RAFAEL NASCIMENTO IHI",
+      "cpfCnpjDoador": "35300225860",
+      "descricao": "#NULO",
+      "valor": 50
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "HENRIQUE DEL PESO MORAES",
+      "cpfCnpjDoador": "55974978803",
+      "descricao": "#NULO",
+      "valor": 2
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "João Pedro San",
+      "cpfCnpjDoador": "12058608941",
+      "descricao": "#NULO",
+      "valor": 18.41
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "LUAN PATRICK WEISS",
+      "cpfCnpjDoador": "12617299945",
+      "descricao": "#NULO",
+      "valor": 50
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "RAIMUNDO BARROS DE CASTRO",
+      "cpfCnpjDoador": "06927046127",
+      "descricao": "#NULO",
+      "valor": 0.82
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "LANA BEATRIZ VIEIRA",
+      "cpfCnpjDoador": "19030545836",
+      "descricao": "#NULO",
+      "valor": 50
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "Cecilia Mari Yoshioka",
+      "cpfCnpjDoador": "26884499826",
+      "descricao": "#NULO",
+      "valor": 100
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "SEVERINO FARIAS DA SILVA JUNIOR",
+      "cpfCnpjDoador": "06419700485",
+      "descricao": "#NULO",
+      "valor": 20
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "GABRIEL MARCOS PEREIRA BARBOSA",
+      "cpfCnpjDoador": "11183787685",
+      "descricao": "#NULO",
+      "valor": 25
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "LUCAS WEBER",
+      "cpfCnpjDoador": "03777567094",
+      "descricao": "#NULO",
+      "valor": 1400
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "FRANKLIN TECEDOR PEREIRA",
+      "cpfCnpjDoador": "37573526881",
+      "descricao": "#NULO",
+      "valor": 100
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "FELIPE PEREIRA GONCALVES",
+      "cpfCnpjDoador": "47338540802",
+      "descricao": "#NULO",
+      "valor": 50
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "LUCAS ALVES SILVA",
+      "cpfCnpjDoador": "52775498892",
+      "descricao": "#NULO",
+      "valor": 300
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "GREGUY LOOBAN CAVALCANTE DE LIMA",
+      "cpfCnpjDoador": "98850660200",
+      "descricao": "#NULO",
+      "valor": 50
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "JOAO EDUARDO PASQUINI JUNIOR",
+      "cpfCnpjDoador": "08576108992",
+      "descricao": "#NULO",
+      "valor": 28
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "PEDRO YURI",
+      "cpfCnpjDoador": "02166670032",
+      "descricao": "#NULO",
+      "valor": 50
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "MAIKON FERNANDO DA SILVA",
+      "cpfCnpjDoador": "46219492846",
+      "descricao": "#NULO",
+      "valor": 14.56
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "HONDEMBERG FERREIRA DOS SANTOS",
+      "cpfCnpjDoador": "13347089677",
+      "descricao": "#NULO",
+      "valor": 100
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "MELQUIZEDEQUE JOAO DA SILVA",
+      "cpfCnpjDoador": "14041942403",
+      "descricao": "#NULO",
+      "valor": 2
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "FRANCINI MARIA BORGES DE OLIVEIRA",
+      "cpfCnpjDoador": "05994372943",
+      "descricao": "#NULO",
+      "valor": 50
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "Diogo Henrique",
+      "cpfCnpjDoador": "13760981488",
+      "descricao": "#NULO",
+      "valor": 2.8
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "GILBERTO MOREIRA CESAR FILHO",
+      "cpfCnpjDoador": "30541990888",
+      "descricao": "#NULO",
+      "valor": 100
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "MARCELO DE MATOS CORSINO PETRUCIO JUNIOR",
+      "cpfCnpjDoador": "44911528885",
+      "descricao": "#NULO",
+      "valor": 149.25
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "Juliana Teresi",
+      "cpfCnpjDoador": "05040052944",
+      "descricao": "#NULO",
+      "valor": 30
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "SAMUEL DUTRA DA SILVA",
+      "cpfCnpjDoador": "03730973606",
+      "descricao": "#NULO",
+      "valor": 100
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "ISAIAS WILSON MOREIRA BARROS",
+      "cpfCnpjDoador": "48597441879",
+      "descricao": "#NULO",
+      "valor": 100
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "GIOVANI RUZZON DE JESUS ORTEGA",
+      "cpfCnpjDoador": "49376463897",
+      "descricao": "#NULO",
+      "valor": 25
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "RENATO FERREIRA DOS SANTOS",
+      "cpfCnpjDoador": "38601667864",
+      "descricao": "#NULO",
+      "valor": 100
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "MATHEUS CAMPOS",
+      "cpfCnpjDoador": "05442369390",
+      "descricao": "#NULO",
+      "valor": 50
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "FERNANDO AUGUSTO RODRIGUES PRADO DE OLIVEIRA E SILVA",
+      "cpfCnpjDoador": "10276631684",
+      "descricao": "#NULO",
+      "valor": 100
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "IURI GILBERTH VALE MEDINA",
+      "cpfCnpjDoador": "04708740239",
+      "descricao": "#NULO",
+      "valor": 14
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "WYLLYAN OLIVEIRA FARIAS",
+      "cpfCnpjDoador": "15586131455",
+      "descricao": "#NULO",
+      "valor": 5
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "Tatiana Costa",
+      "cpfCnpjDoador": "89528808034",
+      "descricao": "#NULO",
+      "valor": 20
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "Lucas Vinicius do Nascimento Rincao",
+      "cpfCnpjDoador": "04567078160",
+      "descricao": "#NULO",
+      "valor": 14
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "GUILHERME SIMOES RODRIGUES",
+      "cpfCnpjDoador": "05009552043",
+      "descricao": "#NULO",
+      "valor": 3
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "PAULO DE SOUZA GEYER",
+      "cpfCnpjDoador": "05118544980",
+      "descricao": "#NULO",
+      "valor": 100
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "ANTONIO CARLOS RODRIGUES",
+      "cpfCnpjDoador": "01327026813",
+      "descricao": "#NULO",
+      "valor": 100
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "LEANDRO DE CARVALHO VIEIRA",
+      "cpfCnpjDoador": "32697680870",
+      "descricao": "#NULO",
+      "valor": 35
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "Renato Câmara",
+      "cpfCnpjDoador": "42855352894",
+      "descricao": "#NULO",
+      "valor": 100
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "CLISMAN DE ALM",
+      "cpfCnpjDoador": "09991652914",
+      "descricao": "#NULO",
+      "valor": 25
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "JESSICA PLACID",
+      "cpfCnpjDoador": "44243033811",
+      "descricao": "#NULO",
+      "valor": 10
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "Raul Aparecido",
+      "cpfCnpjDoador": "38943461836",
+      "descricao": "#NULO",
+      "valor": 50
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "LUCCA CENTA MALUCELLI",
+      "cpfCnpjDoador": "08405608931",
+      "descricao": "#NULO",
+      "valor": 140
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "MARCIO VINICIUS FALKOWSKI",
+      "cpfCnpjDoador": "09138863944",
+      "descricao": "#NULO",
+      "valor": 1000
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "MATHEUS MASSEM DA COSTA",
+      "cpfCnpjDoador": "00421137096",
+      "descricao": "#NULO",
+      "valor": 14.14
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "João Paulo Lodde Leal",
+      "cpfCnpjDoador": "01479665584",
+      "descricao": "#NULO",
+      "valor": 100
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "VERA LIGIA DE FREITAS",
+      "cpfCnpjDoador": "02996729803",
+      "descricao": "#NULO",
+      "valor": 14
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "HENRIQUE AMORIM",
+      "cpfCnpjDoador": "42928340831",
+      "descricao": "#NULO",
+      "valor": 40
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "GELSON ANTUNES VALTER",
+      "cpfCnpjDoador": "09671602940",
+      "descricao": "#NULO",
+      "valor": 63
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "FILIPE SOUS",
+      "cpfCnpjDoador": "02007581019",
+      "descricao": "#NULO",
+      "valor": 17.14
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "Kaic Raposo Viana de França",
+      "cpfCnpjDoador": "13713048746",
+      "descricao": "#NULO",
+      "valor": 5
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "JOAO MARCOS DE OLIVEIRA SILVA",
+      "cpfCnpjDoador": "46946908848",
+      "descricao": "#NULO",
+      "valor": 50.14
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "GABRIEL DUTRA ZIMMER",
+      "cpfCnpjDoador": "03878105010",
+      "descricao": "#NULO",
+      "valor": 30
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "Luis Felipe Ma",
+      "cpfCnpjDoador": "07131014150",
+      "descricao": "#NULO",
+      "valor": 5
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "VINICIUS AN",
+      "cpfCnpjDoador": "34456809817",
+      "descricao": "#NULO",
+      "valor": 1
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "JUELSON DA SIL",
+      "cpfCnpjDoador": "12907504754",
+      "descricao": "#NULO",
+      "valor": 5
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "FLAVIO FERR",
+      "cpfCnpjDoador": "03762811113",
+      "descricao": "#NULO",
+      "valor": 70
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "LUIS EDUARD",
+      "cpfCnpjDoador": "24957965838",
+      "descricao": "#NULO",
+      "valor": 150
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "Andre Dadalto",
+      "cpfCnpjDoador": "14134384745",
+      "descricao": "#NULO",
+      "valor": 140
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "Ramon dos Sant",
+      "cpfCnpjDoador": "12640159500",
+      "descricao": "#NULO",
+      "valor": 10
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "DAVI P OLIVEIR",
+      "cpfCnpjDoador": "16894323658",
+      "descricao": "#NULO",
+      "valor": 0.14
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "Rodolpho Pelli",
+      "cpfCnpjDoador": "39174178806",
+      "descricao": "#NULO",
+      "valor": 14.14
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "JACKSON SILVA",
+      "cpfCnpjDoador": "06796985583",
+      "descricao": "#NULO",
+      "valor": 2.75
+    },
+    {
+      "sqCandidato": "280002542548",
+      "doador": "Direção Nacional - PT",
+      "cpfCnpjDoador": "00676262000170",
+      "descricao": "#NULO",
+      "valor": 150000
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "ARIEL BARROSO",
+      "cpfCnpjDoador": "18760953934",
+      "descricao": "#NULO",
+      "valor": 50
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "LEONARDO BERBE",
+      "cpfCnpjDoador": "50934447829",
+      "descricao": "#NULO",
+      "valor": 141.44
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "MAURICIO JACKSON FRAGOSO TERTO DA SILVA",
+      "cpfCnpjDoador": "07610825492",
+      "descricao": "#NULO",
+      "valor": 20
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "FELIPE DE S",
+      "cpfCnpjDoador": "10901157333",
+      "descricao": "#NULO",
+      "valor": 1
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "DAVID BRYAN",
+      "cpfCnpjDoador": "61377701336",
+      "descricao": "#NULO",
+      "valor": 5
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "GABRIEL HEN",
+      "cpfCnpjDoador": "54763368850",
+      "descricao": "#NULO",
+      "valor": 200
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "Romulo Antonio Malcher Da Cunha",
+      "cpfCnpjDoador": "01253229252",
+      "descricao": "#NULO",
+      "valor": 14
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "QueroApoiar.com.br",
+      "cpfCnpjDoador": "39586155000197",
+      "descricao": "#NULO",
+      "valor": 3182.14
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "QueroApoiar.com.br",
+      "cpfCnpjDoador": "39586155000197",
+      "descricao": "Importação FCC - 10000000000000000000000",
+      "valor": 1014314.14
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "CAIO NORBER",
+      "cpfCnpjDoador": "39380988800",
+      "descricao": "#NULO",
+      "valor": 150
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "ROMULO RAMOS PAGNOZZI",
+      "cpfCnpjDoador": "09579089973",
+      "descricao": "#NULO",
+      "valor": 100
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "DIOGO PORRUA DOS SANTOS",
+      "cpfCnpjDoador": "12542073929",
+      "descricao": "#NULO",
+      "valor": 14
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "PEDRO FERNANDES RESENDE BONNAS",
+      "cpfCnpjDoador": "06879200192",
+      "descricao": "#NULO",
+      "valor": 200
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "RENAN CLAUDINO RODRIGUES",
+      "cpfCnpjDoador": "39601306862",
+      "descricao": "#NULO",
+      "valor": 50
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "Julia Silva Po",
+      "cpfCnpjDoador": "10825457750",
+      "descricao": "#NULO",
+      "valor": 14.14
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "IZABEL CRISTIN",
+      "cpfCnpjDoador": "52626113204",
+      "descricao": "#NULO",
+      "valor": 50
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "LEANDRO CAPPARELLI RAGGIO",
+      "cpfCnpjDoador": "09709269798",
+      "descricao": "#NULO",
+      "valor": 100
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "EDUARDO CONTRI",
+      "cpfCnpjDoador": "06752368945",
+      "descricao": "#NULO",
+      "valor": 114
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "MIQUEIAS HE",
+      "cpfCnpjDoador": "05842669366",
+      "descricao": "#NULO",
+      "valor": 20
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "MATHEUS ALFREDO GARLET TZI",
+      "cpfCnpjDoador": "03371062155",
+      "descricao": "#NULO",
+      "valor": 14
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "GUILHERME ARRUDA OUTEIRO",
+      "cpfCnpjDoador": "33955834816",
+      "descricao": "#NULO",
+      "valor": 114.14
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "QueroApoiar.com.br",
+      "cpfCnpjDoador": "39586155000197",
+      "descricao": "Importação FCC - 10000000000000000000000",
+      "valor": 1014314.14
+    },
+    {
+      "sqCandidato": "280002539826",
+      "doador": "Direção Nacional - NOVO",
+      "cpfCnpjDoador": "13405866000124",
+      "descricao": "#NULO",
+      "valor": 1000000
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "PAULO SERGIO PEREIRA DA SILVA JUNIOR",
+      "cpfCnpjDoador": "08467533919",
+      "descricao": "#NULO",
+      "valor": 14
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "PEDRO HENRIQUE FERRARI SILVA",
+      "cpfCnpjDoador": "05287739176",
+      "descricao": "#NULO",
+      "valor": 20
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "GUILHERME MACI",
+      "cpfCnpjDoador": "04276653029",
+      "descricao": "#NULO",
+      "valor": 14
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "Tiago Bourscheidt",
+      "cpfCnpjDoador": "10005924995",
+      "descricao": "#NULO",
+      "valor": 12.34
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "LUIZ EDUARDO MILANI BAETA NEVES",
+      "cpfCnpjDoador": "48395784864",
+      "descricao": "#NULO",
+      "valor": 140
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "Antonio Fagundes Silva Neto",
+      "cpfCnpjDoador": "07334759656",
+      "descricao": "#NULO",
+      "valor": 30
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "Alcides Pereir",
+      "cpfCnpjDoador": "05461633196",
+      "descricao": "#NULO",
+      "valor": 14.14
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "THIAGO MART",
+      "cpfCnpjDoador": "03094929044",
+      "descricao": "#NULO",
+      "valor": 100
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "ELTON ZELIC",
+      "cpfCnpjDoador": "33862738825",
+      "descricao": "#NULO",
+      "valor": 100
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "MARIA CLARA OLIVEIRA FARIAS",
+      "cpfCnpjDoador": "03953657593",
+      "descricao": "#NULO",
+      "valor": 5
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "IGOR GUSTAVO DA SILVA ROZENDO",
+      "cpfCnpjDoador": "09647150903",
+      "descricao": "#NULO",
+      "valor": 200.14
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "Lucas Maciel D",
+      "cpfCnpjDoador": "85460222591",
+      "descricao": "#NULO",
+      "valor": 20
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "ANDERSON DO",
+      "cpfCnpjDoador": "15897153736",
+      "descricao": "#NULO",
+      "valor": 53.58
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "ANA OLIVEIRA RODRIGUES SILVA",
+      "cpfCnpjDoador": "36027635878",
+      "descricao": "#NULO",
+      "valor": 28
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "Bhernardo Cont",
+      "cpfCnpjDoador": "03050038012",
+      "descricao": "#NULO",
+      "valor": 5.69
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "FELIPE CASTOR MESQUITA",
+      "cpfCnpjDoador": "03123036294",
+      "descricao": "#NULO",
+      "valor": 50
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "MATEUS SILVA NERI",
+      "cpfCnpjDoador": "52315484804",
+      "descricao": "#NULO",
+      "valor": 14
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "ARAGON RODRIGUES DE MELO",
+      "cpfCnpjDoador": "10130887439",
+      "descricao": "#NULO",
+      "valor": 104.14
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "GUILHERME ARRUDA OUTEIRO",
+      "cpfCnpjDoador": "33955834816",
+      "descricao": "#NULO",
+      "valor": 100
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "WILBERT HUMBERTO FUENTES MORANTE",
+      "cpfCnpjDoador": "70635111225",
+      "descricao": "#NULO",
+      "valor": 100
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "RAFAEL ALVES SILVEIRA",
+      "cpfCnpjDoador": "33372679806",
+      "descricao": "#NULO",
+      "valor": 50
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "DANIEL SILV",
+      "cpfCnpjDoador": "12781419796",
+      "descricao": "#NULO",
+      "valor": 4
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "DANIEL SILV",
+      "cpfCnpjDoador": "12781419796",
+      "descricao": "#NULO",
+      "valor": 10
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "RODRIGO ADRIAN",
+      "cpfCnpjDoador": "13731392933",
+      "descricao": "#NULO",
+      "valor": 2.36
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "Vitor Damacena de Lima",
+      "cpfCnpjDoador": "47648251809",
+      "descricao": "#NULO",
+      "valor": 14.48
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "Noan Felipe Pereira Coutinho",
+      "cpfCnpjDoador": "42656191858",
+      "descricao": "#NULO",
+      "valor": 14
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "RAPHAEL SERONI FERNANDES",
+      "cpfCnpjDoador": "45644143805",
+      "descricao": "#NULO",
+      "valor": 200
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "GABRIEL SOARES PEREIRA",
+      "cpfCnpjDoador": "05113567140",
+      "descricao": "#NULO",
+      "valor": 5
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "ALEXANDRE MITSUO M RIBEIRO",
+      "cpfCnpjDoador": "13422683852",
+      "descricao": "#NULO",
+      "valor": 100
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "GABRIEL APARECIDO RODRIGUES NABEIRO",
+      "cpfCnpjDoador": "12673453903",
+      "descricao": "#NULO",
+      "valor": 14.14
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "KENNEDY FELIPE BENEDITO E SILVA",
+      "cpfCnpjDoador": "07850147308",
+      "descricao": "#NULO",
+      "valor": 100
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "KENNEDY FELIPE BENEDITO E SILVA",
+      "cpfCnpjDoador": "07850147308",
+      "descricao": "#NULO",
+      "valor": 15
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "GABRIEL WOS FAJARDO",
+      "cpfCnpjDoador": "09486848955",
+      "descricao": "#NULO",
+      "valor": 100
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "CAIO ROBERT ANDRADE CAMPOS",
+      "cpfCnpjDoador": "10160142520",
+      "descricao": "#NULO",
+      "valor": 14.14
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "ANDRESSA CAMARGO",
+      "cpfCnpjDoador": "84977671015",
+      "descricao": "#NULO",
+      "valor": 50
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "VIVIANE ANDRADE APARECIDO",
+      "cpfCnpjDoador": "12475071656",
+      "descricao": "#NULO",
+      "valor": 50
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "Mateus Mucelin",
+      "cpfCnpjDoador": "15652746793",
+      "descricao": "#NULO",
+      "valor": 14
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "GABRIEL LUCAS DA SILVA",
+      "cpfCnpjDoador": "10368578917",
+      "descricao": "#NULO",
+      "valor": 3.71
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "ANA VITORIA CABRAL MENDES",
+      "cpfCnpjDoador": "10384002447",
+      "descricao": "#NULO",
+      "valor": 0.99
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "MIGUEL SOARES CANGUSSU OLIVEIRA",
+      "cpfCnpjDoador": "12370416602",
+      "descricao": "#NULO",
+      "valor": 10
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "EDUARDO GUAGLIARDI DOMINGUES",
+      "cpfCnpjDoador": "39948273885",
+      "descricao": "#NULO",
+      "valor": 915.54
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "VINICIUS OL",
+      "cpfCnpjDoador": "49087556802",
+      "descricao": "#NULO",
+      "valor": 5
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "MIGUEL AUGUSTO CHAVES OLIVEIRA DE MORAES",
+      "cpfCnpjDoador": "49917610855",
+      "descricao": "#NULO",
+      "valor": 30.14
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "FELIPE SILVA GOMES BATISTA",
+      "cpfCnpjDoador": "50403135869",
+      "descricao": "#NULO",
+      "valor": 0.14
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "JOAO VICTOR BATELI ROMAO",
+      "cpfCnpjDoador": "44227241855",
+      "descricao": "#NULO",
+      "valor": 100
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "DANIEL LIMA CARVALHO",
+      "cpfCnpjDoador": "04992884164",
+      "descricao": "#NULO",
+      "valor": 150
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "JOAO PEDRO ROD",
+      "cpfCnpjDoador": "06336164195",
+      "descricao": "#NULO",
+      "valor": 264
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "RICARDO DE OLIVEIRA",
+      "cpfCnpjDoador": "34119806804",
+      "descricao": "#NULO",
+      "valor": 100
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "DANILO ITAL",
+      "cpfCnpjDoador": "10585851425",
+      "descricao": "#NULO",
+      "valor": 2
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "FELIPE FREITAS LACERDA",
+      "cpfCnpjDoador": "02538576512",
+      "descricao": "#NULO",
+      "valor": 140
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "BERNARDO CESAR CLAUDINO DE OLIVEIRA",
+      "cpfCnpjDoador": "04813994962",
+      "descricao": "#NULO",
+      "valor": 100
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "LUCAS GIOVANELLA",
+      "cpfCnpjDoador": "04046407026",
+      "descricao": "#NULO",
+      "valor": 100
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "Gabriel Ventur",
+      "cpfCnpjDoador": "70106929127",
+      "descricao": "#NULO",
+      "valor": 162.63
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "RAFAEL CARD",
+      "cpfCnpjDoador": "01274675219",
+      "descricao": "#NULO",
+      "valor": 20
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "GUILHERME GONCALVES",
+      "cpfCnpjDoador": "07860823993",
+      "descricao": "#NULO",
+      "valor": 14
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "QueroApoiar.com.br",
+      "cpfCnpjDoador": "39586155000197",
+      "descricao": "#NULO",
+      "valor": 202791.72
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "ANDRIW MAGN",
+      "cpfCnpjDoador": "04282538228",
+      "descricao": "#NULO",
+      "valor": 30
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "GABRIEL V GARC",
+      "cpfCnpjDoador": "56851117894",
+      "descricao": "#NULO",
+      "valor": 1
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "MURILO CORTES SANTELLO",
+      "cpfCnpjDoador": "05784725971",
+      "descricao": "#NULO",
+      "valor": 100
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "ALLAN DELLON CESAR SILVA",
+      "cpfCnpjDoador": "11438068409",
+      "descricao": "#NULO",
+      "valor": 14.5
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "HENRIQUE JENSEN NETO",
+      "cpfCnpjDoador": "05117713982",
+      "descricao": "#NULO",
+      "valor": 77.12
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "VITOR VIEIRA PISETA",
+      "cpfCnpjDoador": "07175857942",
+      "descricao": "#NULO",
+      "valor": 100
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "CAROLINA CANTO DE MACEDO VILLAR",
+      "cpfCnpjDoador": "05607360962",
+      "descricao": "#NULO",
+      "valor": 14
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "EDJALMA FERNAN",
+      "cpfCnpjDoador": "25848559848",
+      "descricao": "#NULO",
+      "valor": 1014
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "WENDREL LUZ DIAS",
+      "cpfCnpjDoador": "01784160024",
+      "descricao": "#NULO",
+      "valor": 50
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "JOAO LUCAS",
+      "cpfCnpjDoador": "05808981212",
+      "descricao": "#NULO",
+      "valor": 5
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "THIAGO VILELA",
+      "cpfCnpjDoador": "12321496754",
+      "descricao": "#NULO",
+      "valor": 3.3
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "DENIS RENATO DA COSTA",
+      "cpfCnpjDoador": "25345670803",
+      "descricao": "#NULO",
+      "valor": 140
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "JOSE CARLOS LUCENA DE AGUIAR FERREIRA",
+      "cpfCnpjDoador": "02647708380",
+      "descricao": "#NULO",
+      "valor": 100
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "JOAO PERCHIAVA",
+      "cpfCnpjDoador": "39501863875",
+      "descricao": "#NULO",
+      "valor": 14
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "JOAO PAULO SOUZA DE LUCENA OLIVEIRA",
+      "cpfCnpjDoador": "23367532789",
+      "descricao": "#NULO",
+      "valor": 1
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "JULIANO RAFAEL T ENAMOTO",
+      "cpfCnpjDoador": "02303778158",
+      "descricao": "#NULO",
+      "valor": 100
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "WILLIAM DANIEL OLIVEIRA DA SILVA",
+      "cpfCnpjDoador": "71209385414",
+      "descricao": "#NULO",
+      "valor": 20
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "DAVI TORRES AV",
+      "cpfCnpjDoador": "46731109860",
+      "descricao": "#NULO",
+      "valor": 1
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "INDIANARA ANTU",
+      "cpfCnpjDoador": "08323322910",
+      "descricao": "#NULO",
+      "valor": 3
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "MATHEUS RUBI LUPATINI",
+      "cpfCnpjDoador": "05892832198",
+      "descricao": "#NULO",
+      "valor": 50
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "GABRIEL BARROZO ROSSETTO",
+      "cpfCnpjDoador": "06127033128",
+      "descricao": "#NULO",
+      "valor": 50
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "GUILHERME JOHANN ELY",
+      "cpfCnpjDoador": "02553644078",
+      "descricao": "#NULO",
+      "valor": 100
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "HENRIQUE BUTZKE KOTZ",
+      "cpfCnpjDoador": "02938390009",
+      "descricao": "#NULO",
+      "valor": 100
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "JOAO PEDRO COUTINHO COELHO",
+      "cpfCnpjDoador": "14799158740",
+      "descricao": "#NULO",
+      "valor": 50
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "ARTHUR GUIL",
+      "cpfCnpjDoador": "07386811136",
+      "descricao": "#NULO",
+      "valor": 10
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "VICTOR GOMES PRADINES",
+      "cpfCnpjDoador": "10479196486",
+      "descricao": "#NULO",
+      "valor": 2000
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "MARCUS VINICIUS NUNES ARANTES",
+      "cpfCnpjDoador": "02598291107",
+      "descricao": "#NULO",
+      "valor": 100
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "NATAN DA SILVA CASTRO",
+      "cpfCnpjDoador": "47560850839",
+      "descricao": "#NULO",
+      "valor": 100
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "LEONARDO HENRIQUE ALMEIDA DA SILVA",
+      "cpfCnpjDoador": "09814559997",
+      "descricao": "#NULO",
+      "valor": 14
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "ROGERIO EMYGDI",
+      "cpfCnpjDoador": "15939329870",
+      "descricao": "#NULO",
+      "valor": 50
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "CICERO THOMAZ DIAS DE CARVALHO",
+      "cpfCnpjDoador": "01269125214",
+      "descricao": "#NULO",
+      "valor": 30
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "CRISTINA DUTRA E SILVA",
+      "cpfCnpjDoador": "03702341625",
+      "descricao": "#NULO",
+      "valor": 20
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "WESLEY DE ARAUJO ELLER PASSOS",
+      "cpfCnpjDoador": "14150780765",
+      "descricao": "#NULO",
+      "valor": 50
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "JOSE ERANDI PEREIRA JUNIOR",
+      "cpfCnpjDoador": "09736645339",
+      "descricao": "#NULO",
+      "valor": 114.14
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "TULIO MARTINS NEVES",
+      "cpfCnpjDoador": "09507996613",
+      "descricao": "#NULO",
+      "valor": 100
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "RODRIGO LANNA DE ALMEIDA",
+      "cpfCnpjDoador": "06011205666",
+      "descricao": "#NULO",
+      "valor": 150
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "RODRIGO LANNA DE ALMEIDA",
+      "cpfCnpjDoador": "06011205666",
+      "descricao": "#NULO",
+      "valor": 150
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "GABRIEL CLEMENTE CARRARI",
+      "cpfCnpjDoador": "39123377801",
+      "descricao": "#NULO",
+      "valor": 100
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "Heitor de Souz",
+      "cpfCnpjDoador": "11998002608",
+      "descricao": "#NULO",
+      "valor": 10
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "BOLIVAR CAMARGO MARINO",
+      "cpfCnpjDoador": "41724731807",
+      "descricao": "#NULO",
+      "valor": 50
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "VALERIO SAMPAI",
+      "cpfCnpjDoador": "03953027573",
+      "descricao": "#NULO",
+      "valor": 100
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "LEONARDO ZANATELI CAPOBIANCO PEREIRA",
+      "cpfCnpjDoador": "43923081898",
+      "descricao": "#NULO",
+      "valor": 5.72
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "Isaac Camilo d",
+      "cpfCnpjDoador": "48661770807",
+      "descricao": "#NULO",
+      "valor": 0.65
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "ERICK GABRI",
+      "cpfCnpjDoador": "14940106403",
+      "descricao": "#NULO",
+      "valor": 50
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "RODRIGO NEPOMUCENO MARANGONI",
+      "cpfCnpjDoador": "47938254860",
+      "descricao": "#NULO",
+      "valor": 150
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "LIDIO ALVES FERREIRA DA SILVA",
+      "cpfCnpjDoador": "25398775839",
+      "descricao": "#NULO",
+      "valor": 14.14
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "VINICIUS RIBEIRO FERREIRA",
+      "cpfCnpjDoador": "14174792720",
+      "descricao": "#NULO",
+      "valor": 3.71
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "CEZAR AUGUSTO",
+      "cpfCnpjDoador": "07656169555",
+      "descricao": "#NULO",
+      "valor": 1200
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "ADRIAN BASSANI OLIVEIRA",
+      "cpfCnpjDoador": "44763048856",
+      "descricao": "#NULO",
+      "valor": 14
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "WESLEY SCHWARTZ FORMENTON",
+      "cpfCnpjDoador": "09163608901",
+      "descricao": "#NULO",
+      "valor": 100
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "Gustavo Souza",
+      "cpfCnpjDoador": "45234236870",
+      "descricao": "#NULO",
+      "valor": 20
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "MARK SILVA MEI",
+      "cpfCnpjDoador": "48045005882",
+      "descricao": "#NULO",
+      "valor": 14
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "Rafael Lage Ma",
+      "cpfCnpjDoador": "12128398622",
+      "descricao": "#NULO",
+      "valor": 100
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "FELIPE BERRETELLA CONCEICAO",
+      "cpfCnpjDoador": "42237545804",
+      "descricao": "#NULO",
+      "valor": 100
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "Daniel Rampine",
+      "cpfCnpjDoador": "04069877932",
+      "descricao": "#NULO",
+      "valor": 100
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "ARTHUR CARD",
+      "cpfCnpjDoador": "08040970547",
+      "descricao": "#NULO",
+      "valor": 23.9
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "Abner Bazalha",
+      "cpfCnpjDoador": "45519069808",
+      "descricao": "#NULO",
+      "valor": 3.13
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "ALINE MARCELLO",
+      "cpfCnpjDoador": "03366253916",
+      "descricao": "#NULO",
+      "valor": 50
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "JEISON RANGEL BATISTA",
+      "cpfCnpjDoador": "05145924941",
+      "descricao": "#NULO",
+      "valor": 100
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "Carlos Eduardo",
+      "cpfCnpjDoador": "00734193033",
+      "descricao": "#NULO",
+      "valor": 100
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "LEONARDO AL",
+      "cpfCnpjDoador": "18380897722",
+      "descricao": "#NULO",
+      "valor": 50
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "EDERSON CRISTIANO FERREIRA",
+      "cpfCnpjDoador": "04131359693",
+      "descricao": "#NULO",
+      "valor": 56
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "ARTUR NEVES LEAL",
+      "cpfCnpjDoador": "03348891035",
+      "descricao": "#NULO",
+      "valor": 30
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "MARIO GUEDE",
+      "cpfCnpjDoador": "10114249407",
+      "descricao": "#NULO",
+      "valor": 14
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "Christiano Alv",
+      "cpfCnpjDoador": "07259561785",
+      "descricao": "#NULO",
+      "valor": 5
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "FILIPI CONCEICAO LIMA",
+      "cpfCnpjDoador": "16937845723",
+      "descricao": "#NULO",
+      "valor": 10
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "EMANUEL MESSIAS DA SILVA",
+      "cpfCnpjDoador": "02806769566",
+      "descricao": "#NULO",
+      "valor": 100
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "GUSTAVO HENRIQ",
+      "cpfCnpjDoador": "12068120607",
+      "descricao": "#NULO",
+      "valor": 100
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "ANA VITORIA",
+      "cpfCnpjDoador": "49267723880",
+      "descricao": "#NULO",
+      "valor": 2.56
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "FABIO FERREIRA FERLING",
+      "cpfCnpjDoador": "25809726844",
+      "descricao": "#NULO",
+      "valor": 1200
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "MURILO SANTOS DO NASCIMENTO",
+      "cpfCnpjDoador": "38948357883",
+      "descricao": "#NULO",
+      "valor": 14
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "JONATAN GALLOTE COELHO DE OLIVEIRA CABRAL",
+      "cpfCnpjDoador": "15361369721",
+      "descricao": "#NULO",
+      "valor": 14
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "VINICIUS MANOEL MUNIZ GARCIA",
+      "cpfCnpjDoador": "40711894876",
+      "descricao": "#NULO",
+      "valor": 100
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "ITALO TEIXEIRA LOPES",
+      "cpfCnpjDoador": "49598738841",
+      "descricao": "#NULO",
+      "valor": 15
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "FILIPE MENEZES RODRIGUES MAIA",
+      "cpfCnpjDoador": "35738037847",
+      "descricao": "#NULO",
+      "valor": 70.14
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "LUIZ HENRIQUE CINTRA DA ROCHA",
+      "cpfCnpjDoador": "09377628903",
+      "descricao": "#NULO",
+      "valor": 20
+    },
+    {
+      "sqCandidato": "280002542548",
+      "doador": "JOSE DE FILIPPI JUNIOR",
+      "cpfCnpjDoador": "01260458873",
+      "descricao": "#NULO",
+      "valor": 100
+    },
+    {
+      "sqCandidato": "280002542548",
+      "doador": "JOSE DE FILIPPI JUNIOR",
+      "cpfCnpjDoador": "01260458873",
+      "descricao": "#NULO",
+      "valor": 200
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "ALUISIO YAN",
+      "cpfCnpjDoador": "00428141110",
+      "descricao": "#NULO",
+      "valor": 100
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "Lucas França Mendes",
+      "cpfCnpjDoador": "05102841165",
+      "descricao": "#NULO",
+      "valor": 2
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "Lara Ribeiro d",
+      "cpfCnpjDoador": "50962154822",
+      "descricao": "#NULO",
+      "valor": 0.06
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "Lara Ribeiro d",
+      "cpfCnpjDoador": "50962154822",
+      "descricao": "#NULO",
+      "valor": 0.3
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "FELIPE MENDONCA E ALMEIDA ARVATI",
+      "cpfCnpjDoador": "39453849820",
+      "descricao": "#NULO",
+      "valor": 200
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "BRUNO GABRIEL GERALDO",
+      "cpfCnpjDoador": "07369615936",
+      "descricao": "#NULO",
+      "valor": 10
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "ANDRE BOEMER DE CARVALHO CUNHA",
+      "cpfCnpjDoador": "50571485839",
+      "descricao": "#NULO",
+      "valor": 100
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "JOAO GABRIEL DE LIMA FARIA",
+      "cpfCnpjDoador": "70708570127",
+      "descricao": "#NULO",
+      "valor": 100
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "LEANDRO RODRIG",
+      "cpfCnpjDoador": "32915312800",
+      "descricao": "#NULO",
+      "valor": 20.68
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "GABRIEL MARQUES TRUJILLO",
+      "cpfCnpjDoador": "01826231064",
+      "descricao": "#NULO",
+      "valor": 150
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "VITOR SILVA AL",
+      "cpfCnpjDoador": "01676029184",
+      "descricao": "#NULO",
+      "valor": 5
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "RAPHAEL DANTAS FOGACA DE ALMEIDA",
+      "cpfCnpjDoador": "36988449825",
+      "descricao": "#NULO",
+      "valor": 100
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "PLAITER PONTES",
+      "cpfCnpjDoador": "10853100780",
+      "descricao": "#NULO",
+      "valor": 100
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "LEONARDO DE",
+      "cpfCnpjDoador": "03272191496",
+      "descricao": "#NULO",
+      "valor": 100
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "JOAO GABRIEL ARRUDA SILVA",
+      "cpfCnpjDoador": "41883302870",
+      "descricao": "#NULO",
+      "valor": 100
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "RAFAEL HAUEISEN BATISTA DE LIMA",
+      "cpfCnpjDoador": "04958599150",
+      "descricao": "#NULO",
+      "valor": 14.14
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "MICHELLE DE",
+      "cpfCnpjDoador": "39795788876",
+      "descricao": "#NULO",
+      "valor": 100
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "ANDRE SPARO",
+      "cpfCnpjDoador": "39652234885",
+      "descricao": "#NULO",
+      "valor": 100
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "RAFAEL DIAS BILLER",
+      "cpfCnpjDoador": "31444372807",
+      "descricao": "#NULO",
+      "valor": 114
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "RAFAEL DIAS BILLER",
+      "cpfCnpjDoador": "31444372807",
+      "descricao": "#NULO",
+      "valor": 114.14
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "PEDRO HENRIQUE LOPES NEGREIROS VIEIRA PINTO",
+      "cpfCnpjDoador": "39832068835",
+      "descricao": "#NULO",
+      "valor": 200
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "PEDRO HENRIQUE",
+      "cpfCnpjDoador": "50039042820",
+      "descricao": "#NULO",
+      "valor": 5
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "ANTONY RODRIGU",
+      "cpfCnpjDoador": "22887672789",
+      "descricao": "#NULO",
+      "valor": 10.87
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "VITOR CARVALHO DE SANTANA PRUDENCIO DA COSTA",
+      "cpfCnpjDoador": "07970701418",
+      "descricao": "#NULO",
+      "valor": 56.98
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "Marisa Santos Frazao",
+      "cpfCnpjDoador": "24850910807",
+      "descricao": "#NULO",
+      "valor": 114
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "MARCOS ANTONIO",
+      "cpfCnpjDoador": "71362356182",
+      "descricao": "#NULO",
+      "valor": 5
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "LUCAS RODRIGO CHAVES ROCHA",
+      "cpfCnpjDoador": "03345208008",
+      "descricao": "#NULO",
+      "valor": 50
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "Levi de Sousa",
+      "cpfCnpjDoador": "54020771855",
+      "descricao": "#NULO",
+      "valor": 2
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "PLINIO BORGES BARREIROS",
+      "cpfCnpjDoador": "05215140618",
+      "descricao": "#NULO",
+      "valor": 14.14
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "RIAN VITOR CANTON DAROS",
+      "cpfCnpjDoador": "03071907060",
+      "descricao": "#NULO",
+      "valor": 100
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "GABRIEL BURG",
+      "cpfCnpjDoador": "12207581918",
+      "descricao": "#NULO",
+      "valor": 50
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "DJONATAN KURTH BERGER",
+      "cpfCnpjDoador": "14829627727",
+      "descricao": "#NULO",
+      "valor": 14.14
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "WALISON BAT",
+      "cpfCnpjDoador": "70416771416",
+      "descricao": "#NULO",
+      "valor": 14
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "WALISON BAT",
+      "cpfCnpjDoador": "70416771416",
+      "descricao": "#NULO",
+      "valor": 14
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "WALISON BAT",
+      "cpfCnpjDoador": "70416771416",
+      "descricao": "#NULO",
+      "valor": 14
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "VINICIUS MANSANO MARTINS",
+      "cpfCnpjDoador": "42449933808",
+      "descricao": "#NULO",
+      "valor": 14.14
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "Felipe Portill",
+      "cpfCnpjDoador": "41492319821",
+      "descricao": "#NULO",
+      "valor": 14
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "Luiz Gustavo T",
+      "cpfCnpjDoador": "86432992516",
+      "descricao": "#NULO",
+      "valor": 3.2
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "CARLOS DE S",
+      "cpfCnpjDoador": "12904307648",
+      "descricao": "#NULO",
+      "valor": 10
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "FELIPE DANI",
+      "cpfCnpjDoador": "71255490470",
+      "descricao": "#NULO",
+      "valor": 2.72
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "Gabriel José H",
+      "cpfCnpjDoador": "09853409917",
+      "descricao": "#NULO",
+      "valor": 1.4
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "KAIC DA SILVA",
+      "cpfCnpjDoador": "57790290835",
+      "descricao": "#NULO",
+      "valor": 7.67
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "Nathan Ekichi",
+      "cpfCnpjDoador": "57061213892",
+      "descricao": "#NULO",
+      "valor": 200
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "CINTIA FIRENCE RAMOS",
+      "cpfCnpjDoador": "14747711813",
+      "descricao": "#NULO",
+      "valor": 100
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "FRANCISCO DA SILVA FERRAZ NETO",
+      "cpfCnpjDoador": "31713878836",
+      "descricao": "#NULO",
+      "valor": 700
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "MIGUEL GOME",
+      "cpfCnpjDoador": "50479921873",
+      "descricao": "#NULO",
+      "valor": 1.33
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "RODRIGO CESAR DE OLIVEIRA",
+      "cpfCnpjDoador": "26890929802",
+      "descricao": "#NULO",
+      "valor": 100
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "DANIELA CAVAGLIERI VIDOTTI",
+      "cpfCnpjDoador": "17590755826",
+      "descricao": "#NULO",
+      "valor": 514
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "ADRIEL DA SILVA",
+      "cpfCnpjDoador": "08970774904",
+      "descricao": "#NULO",
+      "valor": 500.39
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "VINICIUS DE MORAES SANTOS",
+      "cpfCnpjDoador": "55572505811",
+      "descricao": "#NULO",
+      "valor": 1
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "LUCAS SOUZA ME",
+      "cpfCnpjDoador": "52622523890",
+      "descricao": "#NULO",
+      "valor": 100
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "JOAO PAULO ABDALLA",
+      "cpfCnpjDoador": "34730831861",
+      "descricao": "#NULO",
+      "valor": 114.14
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "ITALO APARECIDO BIANQUINI MOREIRA",
+      "cpfCnpjDoador": "52076703870",
+      "descricao": "#NULO",
+      "valor": 50
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "AFONSO LUNIERE DE PAULA",
+      "cpfCnpjDoador": "05608444256",
+      "descricao": "#NULO",
+      "valor": 14
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "YURY VIDAL DE",
+      "cpfCnpjDoador": "03891436343",
+      "descricao": "#NULO",
+      "valor": 20
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "Patrick Aparec",
+      "cpfCnpjDoador": "15466936618",
+      "descricao": "#NULO",
+      "valor": 2.28
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "Anna Julia De Freitas Goulart",
+      "cpfCnpjDoador": "02296681603",
+      "descricao": "#NULO",
+      "valor": 14
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "Marcio Robson",
+      "cpfCnpjDoador": "04973177458",
+      "descricao": "#NULO",
+      "valor": 20
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "MIGUEL PIERI HELMANN",
+      "cpfCnpjDoador": "10378674919",
+      "descricao": "#NULO",
+      "valor": 4.14
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "LUIS FELIPE TEIXEIRA BONATO",
+      "cpfCnpjDoador": "04985075132",
+      "descricao": "#NULO",
+      "valor": 500
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "MAURICIO MANUE",
+      "cpfCnpjDoador": "35791207867",
+      "descricao": "#NULO",
+      "valor": 20
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "MARCELO SENA DA SILVA",
+      "cpfCnpjDoador": "04241579507",
+      "descricao": "#NULO",
+      "valor": 100
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "ARTHUR VERAS PEREIRA",
+      "cpfCnpjDoador": "36432044855",
+      "descricao": "#NULO",
+      "valor": 14
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "Lucas Batista",
+      "cpfCnpjDoador": "03371199290",
+      "descricao": "#NULO",
+      "valor": 200
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "MOISES CARLOS SILVA OLIVEIRA",
+      "cpfCnpjDoador": "00820179213",
+      "descricao": "#NULO",
+      "valor": 14
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "JOAO PEDRO",
+      "cpfCnpjDoador": "03934467008",
+      "descricao": "#NULO",
+      "valor": 7
+    },
+    {
+      "sqCandidato": "280002540694",
+      "doador": "Wenithy Benici",
+      "cpfCnpjDoador": "11152199366",
+      "descricao": "#NULO",
+      "valor": 1
+    }
+  ],
+  "despesas": [
+    {
+      "sqCandidato": "280002552484",
+      "fornecedor": "#NULO",
+      "cpfCnpjFornecedor": "-1",
+      "descricao": "#NULO",
+      "valor": 0
+    },
+    {
+      "sqCandidato": "280002551547",
+      "fornecedor": "#NULO",
+      "cpfCnpjFornecedor": "-1",
+      "descricao": "#NULO",
+      "valor": 0
+    },
+    {
+      "sqCandidato": "280002540694",
+      "fornecedor": "QueroApoiar.com.br",
+      "cpfCnpjFornecedor": "39586155000197",
+      "descricao": "Taxa Administração Financiamento Coletivo",
+      "valor": 44.57
+    },
+    {
+      "sqCandidato": "280002540694",
+      "fornecedor": "QueroApoiar.com.br",
+      "cpfCnpjFornecedor": "39586155000197",
+      "descricao": "Taxa Administração Financiamento Coletivo",
+      "valor": 14321.91
+    },
+    {
+      "sqCandidato": "280002540694",
+      "fornecedor": "QueroApoiar.com.br",
+      "cpfCnpjFornecedor": "39586155000197",
+      "descricao": "Taxa Administração Financiamento Coletivo",
+      "valor": 2787.58
+    },
+    {
+      "sqCandidato": "280002540694",
+      "fornecedor": "QueroApoiar.com.br",
+      "cpfCnpjFornecedor": "39586155000197",
+      "descricao": "Taxa Administração Financiamento Coletivo",
+      "valor": 14321.91
+    },
+    {
+      "sqCandidato": "280002539826",
+      "fornecedor": "#NULO",
+      "cpfCnpjFornecedor": "-1",
+      "descricao": "Tarifa Bancária",
+      "valor": 0.5
+    },
+    {
+      "sqCandidato": "280002539826",
+      "fornecedor": "#NULO",
+      "cpfCnpjFornecedor": "-1",
+      "descricao": "Tarifa Bancaria",
+      "valor": 2
+    },
+    {
+      "sqCandidato": "280002539826",
+      "fornecedor": "THAWAN DOUGLAS ALVES DA SILVA",
+      "cpfCnpjFornecedor": "13488108660",
+      "descricao": "elaboração de jingle de campanha, cessão de direitos de uso da obra musical  Jenifer  para campanha",
+      "valor": 8000
+    },
+    {
+      "sqCandidato": "280002539826",
+      "fornecedor": "#NULO",
+      "cpfCnpjFornecedor": "-1",
+      "descricao": "Tarifa Bancária",
+      "valor": 1.5
+    },
+    {
+      "sqCandidato": "280002539826",
+      "fornecedor": "#NULO",
+      "cpfCnpjFornecedor": "-1",
+      "descricao": "Tarifa Bancária",
+      "valor": 2
+    },
+    {
+      "sqCandidato": "280002539826",
+      "fornecedor": "#NULO",
+      "cpfCnpjFornecedor": "-1",
+      "descricao": "Tarifa Bancária",
+      "valor": 1
+    },
+    {
+      "sqCandidato": "280002539826",
+      "fornecedor": "#NULO",
+      "cpfCnpjFornecedor": "-1",
+      "descricao": "Tarifa Bancária",
+      "valor": 0.5
+    },
+    {
+      "sqCandidato": "280002539826",
+      "fornecedor": "#NULO",
+      "cpfCnpjFornecedor": "-1",
+      "descricao": "TarifaBancária",
+      "valor": 1
+    },
+    {
+      "sqCandidato": "280002539826",
+      "fornecedor": "#NULO",
+      "cpfCnpjFornecedor": "-1",
+      "descricao": "Tarifa Bancária",
+      "valor": 2
+    },
+    {
+      "sqCandidato": "280002539826",
+      "fornecedor": "#NULO",
+      "cpfCnpjFornecedor": "-1",
+      "descricao": "Tarifa Bancária",
+      "valor": 2
+    },
+    {
+      "sqCandidato": "280002539826",
+      "fornecedor": "SIMPLE VOOS LTDA",
+      "cpfCnpjFornecedor": "42865280000140",
+      "descricao": "Hospedagem no La Defense Apart Hotel - Montes Claros/MG, de 12/08/2026 a 17/08/2026. Hóspede: Paulo",
+      "valor": 1256
+    },
+    {
+      "sqCandidato": "280002539826",
+      "fornecedor": "STR COMERCIO DE PRODUTOS DE LIMPEZA DESCARTAVEIS LTDA",
+      "cpfCnpjFornecedor": "44984835000107",
+      "descricao": "CIF CREMOSO 250 ML LIMPEZA MILAGROSA",
+      "valor": 76.5
+    },
+    {
+      "sqCandidato": "280002539826",
+      "fornecedor": "STR COMERCIO DE PRODUTOS DE LIMPEZA DESCARTAVEIS LTDA",
+      "cpfCnpjFornecedor": "44984835000107",
+      "descricao": "CAFÉ MELITA 500 GRS",
+      "valor": 203.4
+    },
+    {
+      "sqCandidato": "280002539826",
+      "fornecedor": "STR COMERCIO DE PRODUTOS DE LIMPEZA DESCARTAVEIS LTDA",
+      "cpfCnpjFornecedor": "44984835000107",
+      "descricao": "MEXEDOR PARA CAFÉ C/ 500",
+      "valor": 11.99
+    },
+    {
+      "sqCandidato": "280002539826",
+      "fornecedor": "STR COMERCIO DE PRODUTOS DE LIMPEZA DESCARTAVEIS LTDA",
+      "cpfCnpjFornecedor": "44984835000107",
+      "descricao": "ADOÇANTE LIQUIDO ZERO CAL 200 ML",
+      "valor": 13.9
+    },
+    {
+      "sqCandidato": "280002539826",
+      "fornecedor": "STR COMERCIO DE PRODUTOS DE LIMPEZA DESCARTAVEIS LTDA",
+      "cpfCnpjFornecedor": "44984835000107",
+      "descricao": "GUARDANAPO PRATIKA GRANDE C/ 50",
+      "valor": 21.54
+    },
+    {
+      "sqCandidato": "280002539826",
+      "fornecedor": "STR COMERCIO DE PRODUTOS DE LIMPEZA DESCARTAVEIS LTDA",
+      "cpfCnpjFornecedor": "44984835000107",
+      "descricao": "GLADE TOQUE DE FRESCOR 12 ML / APARELHO + REFIL",
+      "valor": 59.96
+    },
+    {
+      "sqCandidato": "280002539826",
+      "fornecedor": "STR COMERCIO DE PRODUTOS DE LIMPEZA DESCARTAVEIS LTDA",
+      "cpfCnpjFornecedor": "44984835000107",
+      "descricao": "BLOQUEADOR DE ODORES FREECO 60 ML",
+      "valor": 155.96
+    },
+    {
+      "sqCandidato": "280002539826",
+      "fornecedor": "STR COMERCIO DE PRODUTOS DE LIMPEZA DESCARTAVEIS LTDA",
+      "cpfCnpjFornecedor": "44984835000107",
+      "descricao": "PAPEL INTERFOLHAS BRANCO POP C/ 1000",
+      "valor": 69.95
+    },
+    {
+      "sqCandidato": "280002539826",
+      "fornecedor": "STR COMERCIO DE PRODUTOS DE LIMPEZA DESCARTAVEIS LTDA",
+      "cpfCnpjFornecedor": "44984835000107",
+      "descricao": "SACO PARA LIXO 40 LITROS C/100",
+      "valor": 33.9
+    },
+    {
+      "sqCandidato": "280002539826",
+      "fornecedor": "STR COMERCIO DE PRODUTOS DE LIMPEZA DESCARTAVEIS LTDA",
+      "cpfCnpjFornecedor": "44984835000107",
+      "descricao": "SABONETE LIQUIDO 5 LITROS",
+      "valor": 23.99
+    },
+    {
+      "sqCandidato": "280002539826",
+      "fornecedor": "STR COMERCIO DE PRODUTOS DE LIMPEZA DESCARTAVEIS LTDA",
+      "cpfCnpjFornecedor": "44984835000107",
+      "descricao": "PANOS DE CHÃO ALVEJADO 1. QUALIDADE",
+      "valor": 15.96
+    },
+    {
+      "sqCandidato": "280002539826",
+      "fornecedor": "STR COMERCIO DE PRODUTOS DE LIMPEZA DESCARTAVEIS LTDA",
+      "cpfCnpjFornecedor": "44984835000107",
+      "descricao": "DESINFETANTE 5 LITROS",
+      "valor": 12.99
+    },
+    {
+      "sqCandidato": "280002539826",
+      "fornecedor": "STR COMERCIO DE PRODUTOS DE LIMPEZA DESCARTAVEIS LTDA",
+      "cpfCnpjFornecedor": "44984835000107",
+      "descricao": "ALCOOL LIQUIDO 46* 5 LITROS",
+      "valor": 26.9
+    },
+    {
+      "sqCandidato": "280002539826",
+      "fornecedor": "STR COMERCIO DE PRODUTOS DE LIMPEZA DESCARTAVEIS LTDA",
+      "cpfCnpjFornecedor": "44984835000107",
+      "descricao": "SACO PARA LIXO 20 LITROS BRANCO C/ 100",
+      "valor": 24.9
+    },
+    {
+      "sqCandidato": "280002539826",
+      "fornecedor": "STR COMERCIO DE PRODUTOS DE LIMPEZA DESCARTAVEIS LTDA",
+      "cpfCnpjFornecedor": "44984835000107",
+      "descricao": "REMOVEDOR MULTI USO SUPREMA",
+      "valor": 27.98
+    },
+    {
+      "sqCandidato": "280002539826",
+      "fornecedor": "STR COMERCIO DE PRODUTOS DE LIMPEZA DESCARTAVEIS LTDA",
+      "cpfCnpjFornecedor": "44984835000107",
+      "descricao": "COPO DESCARTÁVEL 180 ML C/100- FAÇA FACIL",
+      "valor": 31.5
+    },
+    {
+      "sqCandidato": "280002539826",
+      "fornecedor": "STR COMERCIO DE PRODUTOS DE LIMPEZA DESCARTAVEIS LTDA",
+      "cpfCnpjFornecedor": "44984835000107",
+      "descricao": "LIXEIRA BASCULANTE 30 LITROS SANREMO",
+      "valor": 225.6
+    },
+    {
+      "sqCandidato": "280002539826",
+      "fornecedor": "STR COMERCIO DE PRODUTOS DE LIMPEZA DESCARTAVEIS LTDA",
+      "cpfCnpjFornecedor": "44984835000107",
+      "descricao": "PAPEL HIGIENICO CAI CAI BABY C/10.000",
+      "valor": 73.9
+    },
+    {
+      "sqCandidato": "280002539826",
+      "fornecedor": "REFRAME IT CONSULTORIA E INTERMEDIACAO LTDA",
+      "cpfCnpjFornecedor": "59378606000108",
+      "descricao": "Consultoria e produção em marketing digital",
+      "valor": 350000
+    },
+    {
+      "sqCandidato": "280002539826",
+      "fornecedor": "ALESSANDRO DE REZENDE VIGGILI",
+      "cpfCnpjFornecedor": "57344516000170",
+      "descricao": "Prestação de serviços de produção de narrativas para conteúdos audiovisuais da campanha",
+      "valor": 72000
+    },
+    {
+      "sqCandidato": "280002539826",
+      "fornecedor": "2IZY PLATAFORMA DE SERVICOS LTDA",
+      "cpfCnpjFornecedor": "29629650000182",
+      "descricao": "AG. 1 LIMPEZA DE 6 HORAS E 13 LIMPEZAS DE 8 HORAS - DE 10 A 31-08-2026",
+      "valor": 3083
+    },
+    {
+      "sqCandidato": "280002539826",
+      "fornecedor": "66.236.281 ARTHUR HENRIQUE FERNANDES DE SOUZA",
+      "cpfCnpjFornecedor": "66236281000194",
+      "descricao": "Prestação de serviços de consultoria em comunicação e assessoria de imprensa",
+      "valor": 10000
+    },
+    {
+      "sqCandidato": "280002539826",
+      "fornecedor": "66.236.281 ARTHUR HENRIQUE FERNANDES DE SOUZA",
+      "cpfCnpjFornecedor": "66236281000194",
+      "descricao": "O objeto do presente contrato é a prestação de serviços especializados de assessoria de imprensa e",
+      "valor": 22000
+    },
+    {
+      "sqCandidato": "280002539826",
+      "fornecedor": "KREATOR COMUNICACAO E MARKETING LTDA",
+      "cpfCnpjFornecedor": "53491091000171",
+      "descricao": "OUTRAS ATIVIDADES DE PUBLICIDADE NÃO ESPECIFICADAS ANTERIORMENTE/OUTRAS ATIVIDADES DE PUBLICIDADE N",
+      "valor": 60000
+    },
+    {
+      "sqCandidato": "280002539826",
+      "fornecedor": "J Q CARVALHO",
+      "cpfCnpjFornecedor": "31256984000108",
+      "descricao": "Fonografia ou gravao de sons, inclusive trucagem, dublagem, mixagem e congneres.",
+      "valor": 5000
+    },
+    {
+      "sqCandidato": "280002542548",
+      "fornecedor": "#NULO",
+      "cpfCnpjFornecedor": "-1",
+      "descricao": "#NULO",
+      "valor": 0
+    },
+    {
+      "sqCandidato": "280002548139",
+      "fornecedor": "#NULO",
+      "cpfCnpjFornecedor": "-1",
+      "descricao": "#NULO",
+      "valor": 0
+    }
+  ]
+}

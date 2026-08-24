@@ -1,0 +1,1350 @@
+{
+  "receitas": [
+    {
+      "sqCandidato": "270002550089",
+      "doador": "EDUARDO MALHEIRO RIBEIRO FORTES",
+      "cpfCnpjDoador": "27094738870",
+      "descricao": "#NULO",
+      "valor": 2000
+    },
+    {
+      "sqCandidato": "270002544625",
+      "doador": "LUCIANO PEREIRA DE OLIVEIRA",
+      "cpfCnpjDoador": "90023030178",
+      "descricao": "#NULO",
+      "valor": 127000
+    },
+    {
+      "sqCandidato": "270002548456",
+      "doador": "ANTONIO DE PADUA SOARES MARQUES",
+      "cpfCnpjDoador": "28778804353",
+      "descricao": "DOAÇÃO DE PRESTAÇÃO DE SERVIÇOS DE ADMINISTRADOR FINANCEIRO PRA CAMPANHA 2026",
+      "valor": 10000
+    },
+    {
+      "sqCandidato": "270002546673",
+      "doador": "MARCOS LEITE DA SILVA",
+      "cpfCnpjDoador": "85607614115",
+      "descricao": "ADMINISTRADOR FINANCEIRO",
+      "valor": 5000
+    },
+    {
+      "sqCandidato": "270002546673",
+      "doador": "FABIANO KENJI NOHAMA",
+      "cpfCnpjDoador": "26866300860",
+      "descricao": "#NULO",
+      "valor": 13500
+    },
+    {
+      "sqCandidato": "270002546673",
+      "doador": "FABIANO KENJI NOHAMA",
+      "cpfCnpjDoador": "26866300860",
+      "descricao": "#NULO",
+      "valor": 13500
+    },
+    {
+      "sqCandidato": "270002544633",
+      "doador": "DANILO ALENCAR DE ANDRADE",
+      "cpfCnpjDoador": "97769118115",
+      "descricao": "#NULO",
+      "valor": 9500
+    },
+    {
+      "sqCandidato": "270002550594",
+      "doador": "STHEPANY FRAGOSO BORGES",
+      "cpfCnpjDoador": "73072141134",
+      "descricao": "SERVIÇO DE ADMINISTRADOR FINANCEIRO",
+      "valor": 5000
+    },
+    {
+      "sqCandidato": "270002550594",
+      "doador": "STHEPANY FRAGOSO BORGES",
+      "cpfCnpjDoador": "73072141134",
+      "descricao": "VEICULO CHEV/ONIX 10TT PR2 COR BRANCA ANO 2023",
+      "valor": 4000
+    },
+    {
+      "sqCandidato": "270002550594",
+      "doador": "MARCOS ANTONIO DUARTE DA SILVA",
+      "cpfCnpjDoador": "90146182120",
+      "descricao": "#NULO",
+      "valor": 9500
+    },
+    {
+      "sqCandidato": "270002542124",
+      "doador": "#NULO",
+      "cpfCnpjDoador": "-1",
+      "descricao": "#NULO",
+      "valor": 0
+    },
+    {
+      "sqCandidato": "270002550594",
+      "doador": "LUCIVANIA SANTANA SOUSA",
+      "cpfCnpjDoador": "01346947163",
+      "descricao": "VEICULO MARCA/MODELO RENAULT /DUST ICO 16 COR BRANCA ANO 2020",
+      "valor": 5000
+    },
+    {
+      "sqCandidato": "270002550594",
+      "doador": "JONATHAS COELHO SILVA",
+      "cpfCnpjDoador": "01578784140",
+      "descricao": "VEICULO MARCA/MODELO GM S10 EXECUTIVE D COR PRATA ANO 2010",
+      "valor": 6000
+    },
+    {
+      "sqCandidato": "270002544478",
+      "doador": "ALDAIR DA COSTA SOUSA",
+      "cpfCnpjDoador": "57651582187",
+      "descricao": "#NULO",
+      "valor": 120000
+    },
+    {
+      "sqCandidato": "270002550594",
+      "doador": "GETULIO BORGES FILHO",
+      "cpfCnpjDoador": "24356670272",
+      "descricao": "SERVIÇO DE MOTORISTA",
+      "valor": 2500
+    },
+    {
+      "sqCandidato": "270002550594",
+      "doador": "MARCIO DUARTE MODESTO DA SILVA",
+      "cpfCnpjDoador": "00598911146",
+      "descricao": "SERVIÇO DE MOTORISTA NO PLEITO ELEITORAL DE 2026",
+      "valor": 2500
+    },
+    {
+      "sqCandidato": "270002548420",
+      "doador": "MARIANA CARLA DE ALMEIDA",
+      "cpfCnpjDoador": "30404727808",
+      "descricao": "#NULO",
+      "valor": 4000
+    },
+    {
+      "sqCandidato": "270002548420",
+      "doador": "RAPHAEL PAIVA DE ALMEIDA",
+      "cpfCnpjDoador": "03041987147",
+      "descricao": "#NULO",
+      "valor": 4300
+    },
+    {
+      "sqCandidato": "270002544625",
+      "doador": "LEILA RENATA MOURA LIMA",
+      "cpfCnpjDoador": "02255206137",
+      "descricao": "SERVIÇO DE ADMINISTRADOR FINANCEIRO",
+      "valor": 10000
+    },
+    {
+      "sqCandidato": "270002548456",
+      "doador": "VANDELUCIA MONTEIRO DE CASTRO REIS",
+      "cpfCnpjDoador": "96127031168",
+      "descricao": "#NULO",
+      "valor": 5000
+    },
+    {
+      "sqCandidato": "270002550594",
+      "doador": "FRANCISCO WELLINGTON JAQUES COELHO",
+      "cpfCnpjDoador": "47110724468",
+      "descricao": "SERVIÇO DE MOTORISTA NO PLEITO ELEITORAL DE 2026",
+      "valor": 2500
+    },
+    {
+      "sqCandidato": "270002548344",
+      "doador": "JOSE ALEXANDRE DOMINGUES GUIMARAES",
+      "cpfCnpjDoador": "01084614162",
+      "descricao": "CESSÃO DE USO DE VEICULO HILUX SWSRX 4FD PARA PERIODO DE CAMPANHA 2026",
+      "valor": 15000
+    },
+    {
+      "sqCandidato": "270002548344",
+      "doador": "JOSE ALEXANDRE DOMINGUES GUIMARAES",
+      "cpfCnpjDoador": "01084614162",
+      "descricao": "#NULO",
+      "valor": 5000
+    },
+    {
+      "sqCandidato": "270002548344",
+      "doador": "MARCOS RODRIGUES PIRES",
+      "cpfCnpjDoador": "00891236112",
+      "descricao": "PRESTAÇÃO DE SERVIÇOS DE ADM. FINANCEIRO DURANTE PERIODO CAMPANHA 2026",
+      "valor": 10000
+    },
+    {
+      "sqCandidato": "270002544474",
+      "doador": "VLADEMIR COMIN",
+      "cpfCnpjDoador": "47029587049",
+      "descricao": "#NULO",
+      "valor": 4000
+    },
+    {
+      "sqCandidato": "270002544474",
+      "doador": "SONIA MARA DALMOLIN BUFFON",
+      "cpfCnpjDoador": "88537676187",
+      "descricao": "#NULO",
+      "valor": 10000
+    },
+    {
+      "sqCandidato": "270002550087",
+      "doador": "Vagner Camargo Pires",
+      "cpfCnpjDoador": "00931305110",
+      "descricao": "#NULO",
+      "valor": 15000
+    },
+    {
+      "sqCandidato": "270002544599",
+      "doador": "MELINA DA SILVA ABREU",
+      "cpfCnpjDoador": "04719916350",
+      "descricao": "#NULO",
+      "valor": 15000
+    },
+    {
+      "sqCandidato": "270002548422",
+      "doador": "LUANA MATILDE RIBEIRO LIMA",
+      "cpfCnpjDoador": "89392620187",
+      "descricao": "#NULO",
+      "valor": 20000
+    },
+    {
+      "sqCandidato": "270002548412",
+      "doador": "NATHALIA DE SOUZA POVOA",
+      "cpfCnpjDoador": "05153724123",
+      "descricao": "Prestação de serviços de Administrador Financeiro da Campanha eleitoral",
+      "valor": 10000
+    },
+    {
+      "sqCandidato": "270002548412",
+      "doador": "NATHALIA DE SOUZA POVOA",
+      "cpfCnpjDoador": "05153724123",
+      "descricao": "#NULO",
+      "valor": 10000
+    },
+    {
+      "sqCandidato": "270002542116",
+      "doador": "IRATA ABREU SILVESTRE",
+      "cpfCnpjDoador": "60507276191",
+      "descricao": "CESSÃO DE VEÍCULO I/TOYOTA HILUX SWSRXA4RD Placa: RMB4C85",
+      "valor": 18000
+    },
+    {
+      "sqCandidato": "270002542116",
+      "doador": "IRATA ABREU SILVESTRE",
+      "cpfCnpjDoador": "60507276191",
+      "descricao": "#NULO",
+      "valor": 20000
+    },
+    {
+      "sqCandidato": "270002548412",
+      "doador": "ATAIDES DE OLIVEIRA",
+      "cpfCnpjDoador": "14721929153",
+      "descricao": "#NULO",
+      "valor": 50000
+    },
+    {
+      "sqCandidato": "270002544641",
+      "doador": "SEGINALDO PEREIRA DO NASCIMENTO",
+      "cpfCnpjDoador": "78879159372",
+      "descricao": "#NULO",
+      "valor": 2920
+    },
+    {
+      "sqCandidato": "270002544474",
+      "doador": "RUBEN RITTER",
+      "cpfCnpjDoador": "35967161015",
+      "descricao": "#NULO",
+      "valor": 10000
+    },
+    {
+      "sqCandidato": "270002544474",
+      "doador": "LUCAS ZIRONDI LUDWING",
+      "cpfCnpjDoador": "34382093813",
+      "descricao": "#NULO",
+      "valor": 10000
+    },
+    {
+      "sqCandidato": "270002548424",
+      "doador": "ZAQUEU MELLO",
+      "cpfCnpjDoador": "08047947907",
+      "descricao": "#NULO",
+      "valor": 4000
+    },
+    {
+      "sqCandidato": "270002548424",
+      "doador": "CARLOS ENRIQUE FRANCO AMASTHA",
+      "cpfCnpjDoador": "48961620568",
+      "descricao": "#NULO",
+      "valor": 5000
+    },
+    {
+      "sqCandidato": "270002548422",
+      "doador": "JARBAS FERREIRA DA COSTA",
+      "cpfCnpjDoador": "24319449134",
+      "descricao": "DOAÇÃO DOS SEERVIÇOS DE ADMINISTRADOR FINANCEIRO DA CAMPANHA",
+      "valor": 5000
+    },
+    {
+      "sqCandidato": "270002544641",
+      "doador": "JOAO VICTOR MOREIRA DE FREITAS",
+      "cpfCnpjDoador": "66435102368",
+      "descricao": "HYUNDAI HB20S 16M VISION",
+      "valor": 5000
+    },
+    {
+      "sqCandidato": "270002548525",
+      "doador": "EDIVALDO CAMPELO PINHEIRO",
+      "cpfCnpjDoador": "33657009191",
+      "descricao": "#NULO",
+      "valor": 100000
+    },
+    {
+      "sqCandidato": "270002544629",
+      "doador": "PAULO SARDINHA MOURAO",
+      "cpfCnpjDoador": "06477534215",
+      "descricao": "#NULO",
+      "valor": 150000
+    },
+    {
+      "sqCandidato": "270002550603",
+      "doador": "VINICIUS FERNANDES MARTINS",
+      "cpfCnpjDoador": "00545664101",
+      "descricao": "#NULO",
+      "valor": 3000
+    },
+    {
+      "sqCandidato": "270002544482",
+      "doador": "MARCUS MARCELO DE BARROS ARAUJO",
+      "cpfCnpjDoador": "61531839568",
+      "descricao": "#NULO",
+      "valor": 10000
+    },
+    {
+      "sqCandidato": "270002544622",
+      "doador": "LARISSA CARLOS ROSENDA",
+      "cpfCnpjDoador": "05283681173",
+      "descricao": "#NULO",
+      "valor": 5000
+    },
+    {
+      "sqCandidato": "270002548407",
+      "doador": "JOSINIANE BRAGA NUNES",
+      "cpfCnpjDoador": "28884329191",
+      "descricao": "#NULO",
+      "valor": 5000
+    },
+    {
+      "sqCandidato": "270002544622",
+      "doador": "THALLISON LUSTOSA LAGO",
+      "cpfCnpjDoador": "03171860198",
+      "descricao": "#NULO",
+      "valor": 4000
+    },
+    {
+      "sqCandidato": "270002544622",
+      "doador": "MARINALVA RODRIGUES LAGO LUSTOSA",
+      "cpfCnpjDoador": "53460804149",
+      "descricao": "#NULO",
+      "valor": 6500
+    },
+    {
+      "sqCandidato": "270002544492",
+      "doador": "NILMAR GAVINO RUIZ",
+      "cpfCnpjDoador": "30989302172",
+      "descricao": "#NULO",
+      "valor": 10000
+    },
+    {
+      "sqCandidato": "270002548231",
+      "doador": "CARLOS HENRIQUE AMORIM",
+      "cpfCnpjDoador": "21944202153",
+      "descricao": "#NULO",
+      "valor": 10000
+    },
+    {
+      "sqCandidato": "270002548521",
+      "doador": "FABIO PEREIRA VAZ",
+      "cpfCnpjDoador": "83240543168",
+      "descricao": "#NULO",
+      "valor": 10000
+    },
+    {
+      "sqCandidato": "270002542161",
+      "doador": "ANDRE LUIS NUNES CAVALARI",
+      "cpfCnpjDoador": "03524031102",
+      "descricao": "#NULO",
+      "valor": 4000
+    },
+    {
+      "sqCandidato": "270002550603",
+      "doador": "DANYELLA NATO PEREIRA",
+      "cpfCnpjDoador": "00115683135",
+      "descricao": "Administrador Financeirp",
+      "valor": 3000
+    },
+    {
+      "sqCandidato": "270002548403",
+      "doador": "JANAD MARQUES DE FREITAS VALCARI",
+      "cpfCnpjDoador": "71487093187",
+      "descricao": "Imóvel situado à Quadra 210 Sul, (ARSE 24), Alameda 01, n. 09, Quadra HM, Lote 05-A -Comitê Político",
+      "valor": 10000
+    },
+    {
+      "sqCandidato": "270002548403",
+      "doador": "JANAD MARQUES DE FREITAS VALCARI",
+      "cpfCnpjDoador": "71487093187",
+      "descricao": "#NULO",
+      "valor": 50000
+    },
+    {
+      "sqCandidato": "270002548407",
+      "doador": "LUANA NUNES GARCIA",
+      "cpfCnpjDoador": "02334847100",
+      "descricao": "PBT9065",
+      "valor": 4500
+    },
+    {
+      "sqCandidato": "270002548403",
+      "doador": "FELIPE SANTANA MOTA",
+      "cpfCnpjDoador": "05514919579",
+      "descricao": "#NULO",
+      "valor": 150000
+    },
+    {
+      "sqCandidato": "270002542114",
+      "doador": "OSIRES RODRIGUES DAMASO",
+      "cpfCnpjDoador": "27848280187",
+      "descricao": "#NULO",
+      "valor": 5000
+    },
+    {
+      "sqCandidato": "270002548409",
+      "doador": "SUELISMAR CAETANO FERREIRA",
+      "cpfCnpjDoador": "46030948172",
+      "descricao": "#NULO",
+      "valor": 3000
+    },
+    {
+      "sqCandidato": "270002548409",
+      "doador": "SUELISMAR CAETANO FERREIRA",
+      "cpfCnpjDoador": "46030948172",
+      "descricao": "#NULO",
+      "valor": 40000
+    },
+    {
+      "sqCandidato": "270002542127",
+      "doador": "#NULO",
+      "cpfCnpjDoador": "-1",
+      "descricao": "#NULO",
+      "valor": 0
+    },
+    {
+      "sqCandidato": "270002548520",
+      "doador": "KÁRITA CARNEIRO PEREIRA",
+      "cpfCnpjDoador": "88876675191",
+      "descricao": "Administrador Financeiro da Campanha Eleitoral",
+      "valor": 15000
+    },
+    {
+      "sqCandidato": "270002548520",
+      "doador": "KÁRITA CARNEIRO PEREIRA",
+      "cpfCnpjDoador": "88876675191",
+      "descricao": "#NULO",
+      "valor": 10000
+    },
+    {
+      "sqCandidato": "270002548434",
+      "doador": "CELIO CARMO DE SOUSA",
+      "cpfCnpjDoador": "36985597149",
+      "descricao": "#NULO",
+      "valor": 1000
+    },
+    {
+      "sqCandidato": "270002546667",
+      "doador": "JALES PIMENTEL MARINHO",
+      "cpfCnpjDoador": "00319320103",
+      "descricao": "#NULO",
+      "valor": 500
+    },
+    {
+      "sqCandidato": "270002546667",
+      "doador": "JALES PIMENTEL MARINHO",
+      "cpfCnpjDoador": "00319320103",
+      "descricao": "#NULO",
+      "valor": 100
+    },
+    {
+      "sqCandidato": "270002544480",
+      "doador": "MOISEMAR ALVES MARINHO",
+      "cpfCnpjDoador": "92345786191",
+      "descricao": "CESSÃO DE USO DE VEÍCULO HILUX PLACA RSA4I44 P/PERIODO DE CAMPANHA DE 17/08 A 04/10/2026",
+      "valor": 12000
+    },
+    {
+      "sqCandidato": "270002544480",
+      "doador": "MOISEMAR ALVES MARINHO",
+      "cpfCnpjDoador": "92345786191",
+      "descricao": "CESSÃO DE USO SE IMOVEL PARA PERIODO DE CAMPANHA DE 17/08 A 04/10/2026",
+      "valor": 10000
+    },
+    {
+      "sqCandidato": "270002544480",
+      "doador": "MOISEMAR ALVES MARINHO",
+      "cpfCnpjDoador": "92345786191",
+      "descricao": "#NULO",
+      "valor": 1000
+    },
+    {
+      "sqCandidato": "270002544480",
+      "doador": "MOISEMAR ALVES MARINHO",
+      "cpfCnpjDoador": "92345786191",
+      "descricao": "#NULO",
+      "valor": 8000
+    },
+    {
+      "sqCandidato": "270002546667",
+      "doador": "MARIA ABADIA ALVES",
+      "cpfCnpjDoador": "33890056687",
+      "descricao": "#NULO",
+      "valor": 100
+    },
+    {
+      "sqCandidato": "270002544628",
+      "doador": "ALINE FARIAS PUYGCERVER",
+      "cpfCnpjDoador": "04218958610",
+      "descricao": "#NULO",
+      "valor": 1000
+    },
+    {
+      "sqCandidato": "270002542165",
+      "doador": "JOSE LUIZ PEREIRA JUNIOR",
+      "cpfCnpjDoador": "69385912100",
+      "descricao": "#NULO",
+      "valor": 1750
+    },
+    {
+      "sqCandidato": "270002542165",
+      "doador": "ELZA DE SOUSA PEREIRA ARMONDES",
+      "cpfCnpjDoador": "02227731117",
+      "descricao": "CESSÃO DE USO DE VEICULO PARA PERIODO DA CAMPANHA 2026",
+      "valor": 12000
+    },
+    {
+      "sqCandidato": "270002542165",
+      "doador": "FABIO ROQUE DA SILVA ARAUJO",
+      "cpfCnpjDoador": "61217689591",
+      "descricao": "#NULO",
+      "valor": 100000
+    },
+    {
+      "sqCandidato": "270002548407",
+      "doador": "SALUSTRIANO LUCAS MARQUEZ LEMES",
+      "cpfCnpjDoador": "70737096187",
+      "descricao": "#NULO",
+      "valor": 5000
+    }
+  ],
+  "despesas": [
+    {
+      "sqCandidato": "270002544474",
+      "fornecedor": "DLOCAL BRASIL INSTITUICAO DE PAGAMENTO S.A.",
+      "cpfCnpjFornecedor": "25021356000132",
+      "descricao": "SERVIÇOS DE TRAFEGO PAGO",
+      "valor": 5000
+    },
+    {
+      "sqCandidato": "270002544474",
+      "fornecedor": "R   M GRAFICA E EDITORA LTDA",
+      "cpfCnpjFornecedor": "05834922000118",
+      "descricao": "DESPESA COM SANTINHOS, 100.000 SANTINHOS 10x7CM",
+      "valor": 3200
+    },
+    {
+      "sqCandidato": "270002542127",
+      "fornecedor": "#NULO",
+      "cpfCnpjFornecedor": "-1",
+      "descricao": "#NULO",
+      "valor": 0
+    },
+    {
+      "sqCandidato": "270002542124",
+      "fornecedor": "#NULO",
+      "cpfCnpjFornecedor": "-1",
+      "descricao": "#NULO",
+      "valor": 0
+    },
+    {
+      "sqCandidato": "270002548407",
+      "fornecedor": "#NULO",
+      "cpfCnpjFornecedor": "-1",
+      "descricao": "#NULO",
+      "valor": 0
+    },
+    {
+      "sqCandidato": "270002548403",
+      "fornecedor": "JOAO PAULO COELHO DE ALENCAR COSTA",
+      "cpfCnpjFornecedor": "70732248191",
+      "descricao": "LOC VEÍC I/TOYOTA HILUX SWSRXA4RD, COR BRANCA, DIESEL , ANO 2025/2025.",
+      "valor": 24000
+    },
+    {
+      "sqCandidato": "270002548403",
+      "fornecedor": "IONA BEZERRA OLIVEIRA DE ASSUMCAO",
+      "cpfCnpjFornecedor": "78554810104",
+      "descricao": "ASSESSORIA JURÍDICA CONTENCIOSA ELEITORAL NO PLEITO GERAL DE 2026.",
+      "valor": 100000
+    },
+    {
+      "sqCandidato": "270002548403",
+      "fornecedor": "PEDRO PEREIRA DA SILVA",
+      "cpfCnpjFornecedor": "47604271634",
+      "descricao": "LOC VEÍC I/MMC PAJERO SPORT HPE , COR BRANCA, DIESEL, ANO 2020/2021.",
+      "valor": 16000
+    },
+    {
+      "sqCandidato": "270002548403",
+      "fornecedor": "SIMONE ROSA DO NASCIMENTO",
+      "cpfCnpjFornecedor": "80407293191",
+      "descricao": "LOC VEÍC I/GWM HAVAL H6 PREM HEV, COR CINZA , HIBRIDO, ANO 2024/2025.",
+      "valor": 6000
+    },
+    {
+      "sqCandidato": "270002548403",
+      "fornecedor": "PEDRO PEREIRA DA SILVA",
+      "cpfCnpjFornecedor": "47604271634",
+      "descricao": "LOC VEÍC I/TOYOTA HILUX CDSRXA4FD, COR CINZA, DIESEL, ANO 2025/2025.",
+      "valor": 14000
+    },
+    {
+      "sqCandidato": "270002548403",
+      "fornecedor": "SIMONE ROSA DO NASCIMENTO",
+      "cpfCnpjFornecedor": "80407293191",
+      "descricao": "LOC VEÍC JEEP/COMPASS SPORT T, COR CINZA, ALCOOL/GASOLINA, ANO 2026/2026.",
+      "valor": 6000
+    },
+    {
+      "sqCandidato": "270002548403",
+      "fornecedor": "DANIELA DA SILVA ABREU",
+      "cpfCnpjFornecedor": "03990506129",
+      "descricao": "LOC VEÍC CHEVROLET/S10 LT DD4A, COR BRANCA, DIESEL , ANO 2019/2020.",
+      "valor": 20000
+    },
+    {
+      "sqCandidato": "270002548403",
+      "fornecedor": "THIAGO SHHMIDT DA SILVA CARNEIRO",
+      "cpfCnpjFornecedor": "05427953108",
+      "descricao": "LOC VEÍC I/PEUGEOT 208 STYLE MT, COR PRETA, ALCOOL/GASOLINA, ANO 2023/2023.",
+      "valor": 5500
+    },
+    {
+      "sqCandidato": "270002548403",
+      "fornecedor": "ULLISSES KATTER VALCARI",
+      "cpfCnpjFornecedor": "00594175100",
+      "descricao": "LOC VEÍC I/TOYOTA HILUX SWDMDA4MD, COR BANCA, DIESEL, ANO 2022/2022",
+      "valor": 12000
+    },
+    {
+      "sqCandidato": "270002548403",
+      "fornecedor": "THAIS MILESI DO PRADO",
+      "cpfCnpjFornecedor": "14572612781",
+      "descricao": "COORDENADORA FINANCEIRA",
+      "valor": 10000
+    },
+    {
+      "sqCandidato": "270002548403",
+      "fornecedor": "MARIA DAS GRAÇAS DA SILVA MACEDO",
+      "cpfCnpjFornecedor": "12689408287",
+      "descricao": "SERVIÇO DE MILITANCIA 4 HORAS/DIA 6 DIAS/SEMANA. 1.000,00",
+      "valor": 1000
+    },
+    {
+      "sqCandidato": "270002548403",
+      "fornecedor": "ARISANE LIMA DA SILVA",
+      "cpfCnpjFornecedor": "01574465147",
+      "descricao": "SERVIÇO DE MILITANCIA 4 HORAS/DIA 6 DIAS/SEMANA. 1.000,00",
+      "valor": 1000
+    },
+    {
+      "sqCandidato": "270002548403",
+      "fornecedor": "LINDALVA MARIA DA CONCEICAO",
+      "cpfCnpjFornecedor": "04624908155",
+      "descricao": "SERVIÇO DE MILITANCIA 4 HORAS/DIA 6 DIAS/SEMANA. 1.000,00",
+      "valor": 1000
+    },
+    {
+      "sqCandidato": "270002548403",
+      "fornecedor": "LEIA PEREIRA DA SILVA",
+      "cpfCnpjFornecedor": "05235993152",
+      "descricao": "SERVIÇO DE MILITANCIA 4 HORAS/DIA 6 DIAS/SEMANA. 1.000,00",
+      "valor": 1000
+    },
+    {
+      "sqCandidato": "270002548403",
+      "fornecedor": "FERNANDO MORAES DE SOUSA",
+      "cpfCnpjFornecedor": "76196488368",
+      "descricao": "SERVIÇO DE MILITANCIA 4 HORAS/DIA 6 DIAS/SEMANA. 1.000,00",
+      "valor": 1000
+    },
+    {
+      "sqCandidato": "270002548403",
+      "fornecedor": "RAIANA DE MELO FARIAS",
+      "cpfCnpjFornecedor": "00420844236",
+      "descricao": "SERVIÇO DE MILITANCIA 4 HORAS/DIA 6 DIAS/SEMANA. 1.000,00",
+      "valor": 1000
+    },
+    {
+      "sqCandidato": "270002548403",
+      "fornecedor": "RENATA RAMALHO ANTUNES",
+      "cpfCnpjFornecedor": "06873088102",
+      "descricao": "SERVIÇO DE MILITANCIA 4 HORAS/DIA 6 DIAS/SEMANA. 1.000,00",
+      "valor": 1000
+    },
+    {
+      "sqCandidato": "270002548403",
+      "fornecedor": "MARINALVA ALVES VIEIRA DE SOUSA",
+      "cpfCnpjFornecedor": "90028490100",
+      "descricao": "SERVIÇO DE MILITANCIA 4 HORAS/DIA 6 DIAS/SEMANA. 1.000,00",
+      "valor": 1000
+    },
+    {
+      "sqCandidato": "270002548403",
+      "fornecedor": "RHAYLLA HANNA MENEZES FERREIRA",
+      "cpfCnpjFornecedor": "05694008138",
+      "descricao": "SERVIÇO DE MILITANCIA 4 HORAS/DIA 6 DIAS/SEMANA. 1.000,00",
+      "valor": 1000
+    },
+    {
+      "sqCandidato": "270002548403",
+      "fornecedor": "DEARLLY ESPARLAZZANY DA SILVA GOMES",
+      "cpfCnpjFornecedor": "04215942179",
+      "descricao": "SERVIÇO DE MILITANCIA 2 HORAS/DIA 6 DIAS/SEMANA. 500,00",
+      "valor": 500
+    },
+    {
+      "sqCandidato": "270002548403",
+      "fornecedor": "GISELINA DE SOUSA SILVA",
+      "cpfCnpjFornecedor": "07654075154",
+      "descricao": "SERVIÇO DE MILITANCIA 4 HORAS/DIA 6 DIAS/SEMANA. 1.000,00",
+      "valor": 1000
+    },
+    {
+      "sqCandidato": "270002548403",
+      "fornecedor": "VANIA DA SILVA OLIVEIRA",
+      "cpfCnpjFornecedor": "03362255124",
+      "descricao": "SERVIÇO DE MILITANCIA 4 HORAS/DIA 6 DIAS/SEMANA. 1.000,00",
+      "valor": 1000
+    },
+    {
+      "sqCandidato": "270002548403",
+      "fornecedor": "LUCIO RODRIGUES TAVARES",
+      "cpfCnpjFornecedor": "78369274153",
+      "descricao": "SERVIÇO DE MILITANCIA 2 HORAS/DIA 6 DIAS/SEMANA. 500,00",
+      "valor": 500
+    },
+    {
+      "sqCandidato": "270002548403",
+      "fornecedor": "DANIEL CARDOSO BISPO",
+      "cpfCnpjFornecedor": "07258902155",
+      "descricao": "SERVIÇO DE MILITANCIA 4 HORAS/DIA 6 DIAS/SEMANA. 1.000,00",
+      "valor": 1000
+    },
+    {
+      "sqCandidato": "270002548403",
+      "fornecedor": "SHARA GABRIELLY PEREIRA PASSOS",
+      "cpfCnpjFornecedor": "08057634146",
+      "descricao": "SERVIÇO DE MILITANCIA 4 HORAS/DIA 6 DIAS/SEMANA. 1.000,00",
+      "valor": 1000
+    },
+    {
+      "sqCandidato": "270002548403",
+      "fornecedor": "MARCOS JOSE SANTOS SILVA",
+      "cpfCnpjFornecedor": "06681650309",
+      "descricao": "SERVIÇO DE MILITANCIA 4 HORAS/DIA 6 DIAS/SEMANA. 1.000,00",
+      "valor": 1000
+    },
+    {
+      "sqCandidato": "270002548403",
+      "fornecedor": "ARLETE DA SILVA COSTA",
+      "cpfCnpjFornecedor": "00820513130",
+      "descricao": "SERVIÇO DE MILITANCIA 2 HORAS/DIA 6 DIAS/SEMANA. 500,00",
+      "valor": 500
+    },
+    {
+      "sqCandidato": "270002548403",
+      "fornecedor": "CLAUDIO KURT BOSSLER",
+      "cpfCnpjFornecedor": "33265275191",
+      "descricao": "SERVIÇO DE MILITANCIA 2 HORAS/DIA 6 DIAS/SEMANA. 500,00",
+      "valor": 500
+    },
+    {
+      "sqCandidato": "270002548403",
+      "fornecedor": "ANA VITORIA ALVES CRISOSTOMO",
+      "cpfCnpjFornecedor": "07347620112",
+      "descricao": "SERVIÇO DE MILITANCIA 2 HORAS/DIA 6 DIAS/SEMANA.",
+      "valor": 500
+    },
+    {
+      "sqCandidato": "270002548403",
+      "fornecedor": "AVANTHI SOLUCOES EM CONTABILIDADE PUBLICA LTDA",
+      "cpfCnpjFornecedor": "07119531000147",
+      "descricao": "ASSESSORIA CONTÁBIL NO PLEITO ELEITORAL DE 2026.",
+      "valor": 100000
+    },
+    {
+      "sqCandidato": "270002548403",
+      "fornecedor": "WILLIMA DE JESUS BENTO DOS SANTOS",
+      "cpfCnpjFornecedor": "02007963132",
+      "descricao": "COODERNADOR POLÍTICO",
+      "valor": 12500
+    },
+    {
+      "sqCandidato": "270002548403",
+      "fornecedor": "DANIEL DA SILVA LEÃO",
+      "cpfCnpjFornecedor": "86303805191",
+      "descricao": "SERVIÇOS DE FOTOGRAFIA PARA COBERTURA E REGISTRO DE ATIVIDADES DA CAMPANHA ELEITORAL DE 2026.",
+      "valor": 10000
+    },
+    {
+      "sqCandidato": "270002548403",
+      "fornecedor": "NATHALIA GONCALVES SANTOS",
+      "cpfCnpjFornecedor": "05093681156",
+      "descricao": "PRESTAÇÃO DE SERVIÇOS DE SOCIAL MÍDIA PARA CAMPANHA ELEITORAL 2026",
+      "valor": 10000
+    },
+    {
+      "sqCandidato": "270002548403",
+      "fornecedor": "FILIPE FERNANDES DE SOUSA",
+      "cpfCnpjFornecedor": "01448942110",
+      "descricao": "COORDENADOR POLÍTICO",
+      "valor": 12500
+    },
+    {
+      "sqCandidato": "270002548403",
+      "fornecedor": "DIEGO ARAUJO E SILVA",
+      "cpfCnpjFornecedor": "10270447199",
+      "descricao": "COORDENADOR DE ATENDIMENTO",
+      "valor": 5000
+    },
+    {
+      "sqCandidato": "270002548403",
+      "fornecedor": "JOAQUIM MAIA LEITE NETO",
+      "cpfCnpjFornecedor": "47162473172",
+      "descricao": "COODENADOR GERAL",
+      "valor": 25000
+    },
+    {
+      "sqCandidato": "270002548403",
+      "fornecedor": "WESLEY DE JESUS SOUSA",
+      "cpfCnpjFornecedor": "07206557147",
+      "descricao": "SERVIÇOS DE VIDEOMAKER PARA CAPTAÇÃO, PRODUÇÃO E EDIÇÃO DE VÍDEOS DE CAMPANHA ELEITORAL 2026.",
+      "valor": 10000
+    },
+    {
+      "sqCandidato": "270002548403",
+      "fornecedor": "ZELIA CASTRO DA SILVA",
+      "cpfCnpjFornecedor": "46277773291",
+      "descricao": "COORDENADORA DE AGENDA",
+      "valor": 5000
+    },
+    {
+      "sqCandidato": "270002548403",
+      "fornecedor": "YRLLEN RODRIGUES MELO CARVALHO",
+      "cpfCnpjFornecedor": "01006838198",
+      "descricao": "COORDENADORA ADMINISTRATIVA",
+      "valor": 10000
+    },
+    {
+      "sqCandidato": "270002548403",
+      "fornecedor": "MARCOS TEIXEIRA",
+      "cpfCnpjFornecedor": "43499481120",
+      "descricao": "COORDENADOR ADMINISTRATIVO",
+      "valor": 10000
+    },
+    {
+      "sqCandidato": "270002548521",
+      "fornecedor": "#NULO",
+      "cpfCnpjFornecedor": "-1",
+      "descricao": "#NULO",
+      "valor": 0
+    },
+    {
+      "sqCandidato": "270002548520",
+      "fornecedor": "#NULO",
+      "cpfCnpjFornecedor": "-1",
+      "descricao": "#NULO",
+      "valor": 0
+    },
+    {
+      "sqCandidato": "270002548525",
+      "fornecedor": "#NULO",
+      "cpfCnpjFornecedor": "-1",
+      "descricao": "#NULO",
+      "valor": 0
+    },
+    {
+      "sqCandidato": "270002542114",
+      "fornecedor": "#NULO",
+      "cpfCnpjFornecedor": "-1",
+      "descricao": "#NULO",
+      "valor": 0
+    },
+    {
+      "sqCandidato": "270002542116",
+      "fornecedor": "MARCIO AUGUSTO MONTEIRO MARTINS",
+      "cpfCnpjFornecedor": "47988819291",
+      "descricao": "LOCAÇÃO DE IMÓVEL COMERCIAL PARA COMITÊ",
+      "valor": 14000
+    },
+    {
+      "sqCandidato": "270002542116",
+      "fornecedor": "KEILA IWASSE EVANGELISTA CARVALHO",
+      "cpfCnpjFornecedor": "91892333104",
+      "descricao": "ADMINISTRADOR FINANCEIRO DA CAMPANHA",
+      "valor": 20000
+    },
+    {
+      "sqCandidato": "270002548434",
+      "fornecedor": "#NULO",
+      "cpfCnpjFornecedor": "-1",
+      "descricao": "#NULO",
+      "valor": 0
+    },
+    {
+      "sqCandidato": "270002544478",
+      "fornecedor": "#NULO",
+      "cpfCnpjFornecedor": "-1",
+      "descricao": "#NULO",
+      "valor": 0
+    },
+    {
+      "sqCandidato": "270002544480",
+      "fornecedor": "#NULO",
+      "cpfCnpjFornecedor": "-1",
+      "descricao": "#NULO",
+      "valor": 0
+    },
+    {
+      "sqCandidato": "270002544482",
+      "fornecedor": "#NULO",
+      "cpfCnpjFornecedor": "-1",
+      "descricao": "#NULO",
+      "valor": 0
+    },
+    {
+      "sqCandidato": "270002544492",
+      "fornecedor": "#NULO",
+      "cpfCnpjFornecedor": "-1",
+      "descricao": "#NULO",
+      "valor": 0
+    },
+    {
+      "sqCandidato": "270002550603",
+      "fornecedor": "#NULO",
+      "cpfCnpjFornecedor": "-1",
+      "descricao": "#NULO",
+      "valor": 0
+    },
+    {
+      "sqCandidato": "270002550594",
+      "fornecedor": "JORCE BEZERRA RODRIGUES",
+      "cpfCnpjFornecedor": "07055365139",
+      "descricao": "SERVIÇO DE COORDENADOR DE CAMPANHA",
+      "valor": 5000
+    },
+    {
+      "sqCandidato": "270002550594",
+      "fornecedor": "NEIA LUCIA RAMOS BRINGEL",
+      "cpfCnpjFornecedor": "49859676100",
+      "descricao": "IMOVEL SITUADO RUA DOS MAÇONS 1135, CENTRO CEP: 77.804-180 PARA COMITE ELEITORAL",
+      "valor": 4000
+    },
+    {
+      "sqCandidato": "270002550594",
+      "fornecedor": "DOURADO PRODUTORA LTDA",
+      "cpfCnpjFornecedor": "44673248000199",
+      "descricao": "Serviço de gravação, produção, edição, áudio, vídeo e foto",
+      "valor": 10000
+    },
+    {
+      "sqCandidato": "270002550594",
+      "fornecedor": "EDU SHOW E ILUMINACAO LTDA",
+      "cpfCnpjFornecedor": "24293104000108",
+      "descricao": "Locação, fornecimento, montagem e desmontagem de estrutura.",
+      "valor": 15000
+    },
+    {
+      "sqCandidato": "270002550594",
+      "fornecedor": "CORES EM PAPEL INDUSTRIA GRAFICA LTDA",
+      "cpfCnpjFornecedor": "15720302000101",
+      "descricao": "10.000 praguinha 9x9cm, 4x0 cores, tinta escala em adesivo brilho 180g",
+      "valor": 1240
+    },
+    {
+      "sqCandidato": "270002550594",
+      "fornecedor": "BASE NORTE DISTRIBUIDORA LTDA",
+      "cpfCnpjFornecedor": "34150361000136",
+      "descricao": "100- ADESIVOS PERFURADOS 70X33",
+      "valor": 1600
+    },
+    {
+      "sqCandidato": "270002550594",
+      "fornecedor": "BASE NORTE DISTRIBUIDORA LTDA",
+      "cpfCnpjFornecedor": "34150361000136",
+      "descricao": "200- ADESIVOS moto 10x10",
+      "valor": 120
+    },
+    {
+      "sqCandidato": "270002550594",
+      "fornecedor": "BASE NORTE DISTRIBUIDORA LTDA",
+      "cpfCnpjFornecedor": "34150361000136",
+      "descricao": "200- ADESIVOS moto 20x20",
+      "valor": 480
+    },
+    {
+      "sqCandidato": "270002550594",
+      "fornecedor": "BASE NORTE DISTRIBUIDORA LTDA",
+      "cpfCnpjFornecedor": "34150361000136",
+      "descricao": "SANTINHO 7X7 CM",
+      "valor": 1300
+    },
+    {
+      "sqCandidato": "270002550594",
+      "fornecedor": "CORES EM PAPEL INDUSTRIA GRAFICA LTDA",
+      "cpfCnpjFornecedor": "15720302000101",
+      "descricao": "7x10cm, 4x4 cores, tinta escala em couche brilho eleições 90g",
+      "valor": 1240
+    },
+    {
+      "sqCandidato": "270002550594",
+      "fornecedor": "BASE NORTE DISTRIBUIDORA LTDA",
+      "cpfCnpjFornecedor": "34150361000136",
+      "descricao": "6 winder banner 2,5mx60cm",
+      "valor": 1500
+    },
+    {
+      "sqCandidato": "270002550594",
+      "fornecedor": "ANTONIO BERNARDES FERNANDES NETO",
+      "cpfCnpjFornecedor": "01317808169",
+      "descricao": "SERVIÇO DE COORDENADOR DE CAMPANHA",
+      "valor": 5000
+    },
+    {
+      "sqCandidato": "270002550594",
+      "fornecedor": "ANALINA RAMALHO CARDOSO",
+      "cpfCnpjFornecedor": "03889064132",
+      "descricao": "SERVIÇO DE COORDENADOR DE CAMPANHA",
+      "valor": 5000
+    },
+    {
+      "sqCandidato": "270002550594",
+      "fornecedor": "CLEYTON COELHO",
+      "cpfCnpjFornecedor": "80775918172",
+      "descricao": "IMOVEL URBANO SITUADO RUA MONTIVIDEU 375 QD 01, LT 02 SETOR ANHANGUERA 0CEP: 77.818-590 PARA COMITE",
+      "valor": 4000
+    },
+    {
+      "sqCandidato": "270002550594",
+      "fornecedor": "PAULO CESAR RAMOS DE SOUSA",
+      "cpfCnpjFornecedor": "02224450176",
+      "descricao": "SERVIÇO DE COORDENADOR DE CAMPANHA",
+      "valor": 5000
+    },
+    {
+      "sqCandidato": "270002550594",
+      "fornecedor": "THIAGO PEREIRA DOS SANTOS MIRANDA",
+      "cpfCnpjFornecedor": "04791779100",
+      "descricao": "SERVIÇO DE MILITANCIA 2 HORAS/DIA 6 DIAS/SEMANA",
+      "valor": 500
+    },
+    {
+      "sqCandidato": "270002550594",
+      "fornecedor": "WASHINGTON ROSA DE LIMA",
+      "cpfCnpjFornecedor": "98215167187",
+      "descricao": "SERVIÇO DE MILITANCIA 2 HORAS/DIA 6 DIAS/SEMANA",
+      "valor": 500
+    },
+    {
+      "sqCandidato": "270002550594",
+      "fornecedor": "GIULLIANO VIANA CARLOS",
+      "cpfCnpjFornecedor": "01030788197",
+      "descricao": "SERVIÇO DE MILITANCIA 2 HORAS/DIA 6 DIAS/SEMANA",
+      "valor": 500
+    },
+    {
+      "sqCandidato": "270002550594",
+      "fornecedor": "FRANCISCO SAMUEL OLIVEIRA FELIPE",
+      "cpfCnpjFornecedor": "88570150334",
+      "descricao": "SERVIÇO DE MILITANCIA 2 HORAS/DIA 6 DIAS/SEMANA",
+      "valor": 500
+    },
+    {
+      "sqCandidato": "270002550594",
+      "fornecedor": "CRISTIANO MIRANDA DA SILVA",
+      "cpfCnpjFornecedor": "02507610174",
+      "descricao": "SERVIÇO DE MILITANCIA 2 HORAS/DIA 6 DIAS/SEMANA",
+      "valor": 500
+    },
+    {
+      "sqCandidato": "270002550594",
+      "fornecedor": "ANDRESSA LUALY MARTINS AGUIAR",
+      "cpfCnpjFornecedor": "07573232195",
+      "descricao": "SERVIÇO DE MILITANCIA 2 HORAS/DIA 6 DIAS/SEMANA",
+      "valor": 500
+    },
+    {
+      "sqCandidato": "270002550594",
+      "fornecedor": "LUDMILLA REIS FERREIRA",
+      "cpfCnpjFornecedor": "07948047131",
+      "descricao": "SERVIÇO DE MILITANCIA 2 HORAS/DIA 6 DIAS/SEMANA",
+      "valor": 500
+    },
+    {
+      "sqCandidato": "270002550594",
+      "fornecedor": "JOICE GONÇALVES SILVA",
+      "cpfCnpjFornecedor": "08284769182",
+      "descricao": "SERVIÇO DE MILITANCIA 2 HORAS/DIA 6 DIAS/SEMANA",
+      "valor": 500
+    },
+    {
+      "sqCandidato": "270002550594",
+      "fornecedor": "EIDE KENIA CACULA DOS SANTOS",
+      "cpfCnpjFornecedor": "02163703100",
+      "descricao": "SERVIÇO DE MILITANCIA 2 HORAS/DIA 6 DIAS/SEMANA",
+      "valor": 500
+    },
+    {
+      "sqCandidato": "270002550594",
+      "fornecedor": "WERBESON BORGES DOS SANTOS",
+      "cpfCnpjFornecedor": "07223385111",
+      "descricao": "SERVIÇO DE MILITANCIA 2 HORAS/DIA 6 DIAS/SEMANA",
+      "valor": 500
+    },
+    {
+      "sqCandidato": "270002550594",
+      "fornecedor": "KELLY PAMELA DA SILVA FARIAS",
+      "cpfCnpjFornecedor": "05540782100",
+      "descricao": "SERVIÇO DE MILITANCIA 2 HORAS/DIA 6 DIAS/SEMANA",
+      "valor": 500
+    },
+    {
+      "sqCandidato": "270002550594",
+      "fornecedor": "LUANA CAROLLINE MACHADO CORREA",
+      "cpfCnpjFornecedor": "02722912180",
+      "descricao": "SERVIÇO DE MILITANCIA 2 HORAS/DIA 6 DIAS/SEMANA",
+      "valor": 500
+    },
+    {
+      "sqCandidato": "270002550594",
+      "fornecedor": "SERILENY CARVALHO FELIPE",
+      "cpfCnpjFornecedor": "03510472390",
+      "descricao": "SERVIÇO DE MILITANCIA 2 HORAS/DIA 6 DIAS/SEMANA",
+      "valor": 500
+    },
+    {
+      "sqCandidato": "270002550594",
+      "fornecedor": "CAUE DOS SANTOS PAGANUCCI",
+      "cpfCnpjFornecedor": "11524061166",
+      "descricao": "SERVIÇO DE MILITANCIA 2 HORAS/DIA 6 DIAS/SEMANA",
+      "valor": 500
+    },
+    {
+      "sqCandidato": "270002550594",
+      "fornecedor": "GABRIELLE BARROS MURAD",
+      "cpfCnpjFornecedor": "07814235200",
+      "descricao": "SERVIÇO DE MILITANCIA 2 HORAS/DIA 6 DIAS/SEMANA",
+      "valor": 500
+    },
+    {
+      "sqCandidato": "270002550594",
+      "fornecedor": "GABRIELLY CAMPELO DE SOUZA",
+      "cpfCnpjFornecedor": "05179625190",
+      "descricao": "SERVIÇOS DE MILITANCIA 2 HORAS/DIA 6DIAS/SEMANA",
+      "valor": 500
+    },
+    {
+      "sqCandidato": "270002550594",
+      "fornecedor": "GELSIANE SILVA CARVALHO GOMES",
+      "cpfCnpjFornecedor": "04661030184",
+      "descricao": "SERVIÇO DE MILITANCIA 2 HORAS/DIA 6 DIAS/SEMANA",
+      "valor": 500
+    },
+    {
+      "sqCandidato": "270002550594",
+      "fornecedor": "KARINY AMORIM FARIAS",
+      "cpfCnpjFornecedor": "11353974146",
+      "descricao": "SERVIÇO DE MILITANCIA 2 HORAS/DIA 6 DIAS/SEMANA",
+      "valor": 500
+    },
+    {
+      "sqCandidato": "270002550594",
+      "fornecedor": "CHARLES DA SILVA LUZ",
+      "cpfCnpjFornecedor": "00485556146",
+      "descricao": "SERVIÇO DE MILITANCIA 2 HORAS/DIA 6 DIAS/SEMANA",
+      "valor": 500
+    },
+    {
+      "sqCandidato": "270002550594",
+      "fornecedor": "LARISSA GONÇALVES DA SILVA",
+      "cpfCnpjFornecedor": "07347849101",
+      "descricao": "SERVIÇO DE MILITANCIA 2 HORAS/DIA 6 DIAS/SEMANA",
+      "valor": 500
+    },
+    {
+      "sqCandidato": "270002542165",
+      "fornecedor": "RAMON DE QUADROS HENRICONI",
+      "cpfCnpjFornecedor": "24595309000130",
+      "descricao": "Produção de Jingle Político",
+      "valor": 750
+    },
+    {
+      "sqCandidato": "270002542165",
+      "fornecedor": "58.066.157 ELIEL PAULO BRUCH JUNIOR",
+      "cpfCnpjFornecedor": "58066157000108",
+      "descricao": "Produção de JINGLE campanha Deputado Estadual Junior Geo 2026",
+      "valor": 1000
+    },
+    {
+      "sqCandidato": "270002542161",
+      "fornecedor": "53.488.347 MARIA DOS REIS ALENCAR VIEIRA LOPES",
+      "cpfCnpjFornecedor": "53488347000191",
+      "descricao": "Desenvolvimento de identidade visual e papelaria para eleição 2026",
+      "valor": 3000
+    },
+    {
+      "sqCandidato": "270002542161",
+      "fornecedor": "#NULO",
+      "cpfCnpjFornecedor": "-1",
+      "descricao": "Tarifa Pix Enviado Tar. agrupadas - ocorrencia 20/08/2026",
+      "valor": 0.5
+    },
+    {
+      "sqCandidato": "270002548424",
+      "fornecedor": "FACEBOOK SERVICOS ONLINE DO BRASIL LTDA.",
+      "cpfCnpjFornecedor": "13347016000117",
+      "descricao": "Impulsionamento de Conteúdo",
+      "valor": 3000
+    },
+    {
+      "sqCandidato": "270002548422",
+      "fornecedor": "#NULO",
+      "cpfCnpjFornecedor": "-1",
+      "descricao": "#NULO",
+      "valor": 0
+    },
+    {
+      "sqCandidato": "270002548420",
+      "fornecedor": "#NULO",
+      "cpfCnpjFornecedor": "-1",
+      "descricao": "#NULO",
+      "valor": 0
+    },
+    {
+      "sqCandidato": "270002544628",
+      "fornecedor": "#NULO",
+      "cpfCnpjFornecedor": "-1",
+      "descricao": "#NULO",
+      "valor": 0
+    },
+    {
+      "sqCandidato": "270002544625",
+      "fornecedor": "AVANTHI SOLUCOES EM CONTABILIDADE PUBLICA LTDA",
+      "cpfCnpjFornecedor": "07119531000147",
+      "descricao": "PRESTAÇÃO DE SERVIÇOS CONTABEIS NO PLEITO ELEITORAL 2026",
+      "valor": 30000
+    },
+    {
+      "sqCandidato": "270002544622",
+      "fornecedor": "#NULO",
+      "cpfCnpjFornecedor": "-1",
+      "descricao": "#NULO",
+      "valor": 0
+    },
+    {
+      "sqCandidato": "270002544633",
+      "fornecedor": "#NULO",
+      "cpfCnpjFornecedor": "-1",
+      "descricao": "#NULO",
+      "valor": 0
+    },
+    {
+      "sqCandidato": "270002544641",
+      "fornecedor": "#NULO",
+      "cpfCnpjFornecedor": "-1",
+      "descricao": "#NULO",
+      "valor": 0
+    },
+    {
+      "sqCandidato": "270002548456",
+      "fornecedor": "#NULO",
+      "cpfCnpjFornecedor": "-1",
+      "descricao": "#NULO",
+      "valor": 0
+    },
+    {
+      "sqCandidato": "270002546673",
+      "fornecedor": "#NULO",
+      "cpfCnpjFornecedor": "-1",
+      "descricao": "#NULO",
+      "valor": 0
+    },
+    {
+      "sqCandidato": "270002546667",
+      "fornecedor": "#NULO",
+      "cpfCnpjFornecedor": "-1",
+      "descricao": "#NULO",
+      "valor": 0
+    },
+    {
+      "sqCandidato": "270002550087",
+      "fornecedor": "FACEBOOK SERVICOS ONLINE DO BRASIL LTDA.",
+      "cpfCnpjFornecedor": "13347016000117",
+      "descricao": "Despesa Impulsionamento",
+      "valor": 1000
+    },
+    {
+      "sqCandidato": "270002550089",
+      "fornecedor": "#NULO",
+      "cpfCnpjFornecedor": "-1",
+      "descricao": "#NULO",
+      "valor": 0
+    },
+    {
+      "sqCandidato": "270002544599",
+      "fornecedor": "#NULO",
+      "cpfCnpjFornecedor": "-1",
+      "descricao": "#NULO",
+      "valor": 0
+    },
+    {
+      "sqCandidato": "270002548412",
+      "fornecedor": "#NULO",
+      "cpfCnpjFornecedor": "-1",
+      "descricao": "#NULO",
+      "valor": 0
+    },
+    {
+      "sqCandidato": "270002548231",
+      "fornecedor": "#NULO",
+      "cpfCnpjFornecedor": "-1",
+      "descricao": "#NULO",
+      "valor": 0
+    },
+    {
+      "sqCandidato": "270002548344",
+      "fornecedor": "DLOCAL BRASIL INSTITUICAO DE PAGAMENTO S.A.",
+      "cpfCnpjFornecedor": "25021356000132",
+      "descricao": "IMPULSIONAMENTO FACEBOOK",
+      "valor": 5000
+    },
+    {
+      "sqCandidato": "270002544629",
+      "fornecedor": "#NULO",
+      "cpfCnpjFornecedor": "-1",
+      "descricao": "#NULO",
+      "valor": 0
+    },
+    {
+      "sqCandidato": "270002548409",
+      "fornecedor": "#NULO",
+      "cpfCnpjFornecedor": "-1",
+      "descricao": "#NULO",
+      "valor": 0
+    }
+  ]
+}

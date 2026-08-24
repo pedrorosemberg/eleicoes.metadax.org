@@ -23,9 +23,21 @@ const FEATURES: Array<{ titulo: string; descricao: string; status: StatusFeature
     status: "disponível",
   },
   {
-    titulo: "Redes sociais e bens declarados",
+    titulo: "Foto, redes sociais e bens declarados",
     descricao:
-      "Redes sociais informadas ao TSE e descrição/valor dos bens declarados na candidatura, conforme a regra de privacidade do TSE desde 2022 — coletados do site de dados abertos do TSE.",
+      "Foto oficial, redes sociais informadas ao TSE e descrição/valor dos bens declarados, conforme a regra de privacidade do TSE desde 2022 — coletados do site de dados abertos do TSE.",
+    status: "disponível",
+  },
+  {
+    titulo: "Plano de governo (PDF)",
+    descricao:
+      "Link direto ao PDF do plano de governo registrado no TSE, quando o candidato enviou um — coletado do site de dados abertos do TSE.",
+    status: "disponível",
+  },
+  {
+    titulo: "Finanças de campanha",
+    descricao:
+      "Receitas (doações recebidas) e despesas contratadas de cada candidato, e teto de gastos declarado — coletados do site de dados abertos do TSE.",
     status: "disponível",
   },
   {
@@ -43,11 +55,11 @@ const FEATURES: Array<{ titulo: string; descricao: string; status: StatusFeature
   {
     titulo: "Cruzamento com o Portal da Transparência",
     descricao:
-      "Contratos federais, status de Pessoa Exposta Politicamente (PEP) e sanções (CEIS/CNEP/CEPIM) ligados ao candidato ou a empresas dele — consulta ao vivo pronta, aguardando a chave de API do Portal da Transparência.",
-    status: "em progresso",
+      "Contratos federais, status de Pessoa Exposta Politicamente (PEP) e sanções (CEIS/CNEP/CEPIM) ligados ao candidato ou a empresas dele — consulta ao vivo, com a chave de API já configurada.",
+    status: "disponível",
   },
   {
-    titulo: "Site oficial (link direto), plano de governo e histórico de candidaturas",
+    titulo: "Site oficial (link direto) e histórico de candidaturas anteriores",
     descricao:
       "Dependem do sistema DivulgaCandContas do TSE, que não expõe o código de município usado para candidaturas estaduais/federais nos dados coletados até agora — sem ele, essa consulta não pode ser feita com confiança. Ver docs/DATA_SOURCES.md §5.",
     status: "indisponível",

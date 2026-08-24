@@ -28,30 +28,10 @@ interface ItemRoteiro {
 
 const PLANEJADOS: ItemRoteiro[] = [
   {
-    titulo: "Plano de governo (PDF)",
+    titulo: "Despesas pagas e doações originárias (detalhe de finanças)",
     descricao:
-      "Link direto ao PDF do plano de governo de cada candidato, por UF. Maior prioridade da lista — resolve a funcionalidade que hoje aparece como indisponível na home.",
-    fonte: "TSE — dataset proposta_governo (28 arquivos, 1 por UF + BR), coletado do site de dados abertos do TSE",
-    status: "planejado",
-  },
-  {
-    titulo: "Prestação de contas de campanha",
-    descricao:
-      "CNPJ de campanha e prestação de contas de candidatos/partidos — complementa os bens declarados com o lado da arrecadação e gasto de campanha.",
-    fonte: "TSE — datasets CNPJ_campanha e prestacao_de_contas_eleitorais, coletados do site de dados abertos do TSE",
-    status: "planejado",
-  },
-  {
-    titulo: "Informações complementares do candidato",
-    descricao: "Campos adicionais do cadastro de candidatura ainda não incorporados ao perfil.",
-    fonte: "TSE — dataset consulta_cand_complementar, coletado do site de dados abertos do TSE",
-    status: "planejado",
-  },
-  {
-    titulo: "Foto do candidato",
-    descricao:
-      "O campo fotoUrl já existe no modelo de dados do projeto, mas não é populado ainda — falta ingerir o dataset de fotos.",
-    fonte: "TSE — dataset de fotos por UF (foto_cand2026_{UF}_div.zip), coletado do site de dados abertos do TSE",
+      "As finanças de campanha já mostram receitas e despesas contratadas (com SQ_CANDIDATO direto). Faltam duas tabelas mais detalhadas do mesmo ZIP — despesas efetivamente pagas e o doador originário por trás de cada receita — que exigem um join a mais (via SQ_DESPESA/SQ_RECEITA) ainda não implementado.",
+    fonte: "TSE — dataset prestacao_de_contas_eleitorais_candidatos (mesmo ZIP já ingerido), coletado do site de dados abertos do TSE",
     status: "planejado",
   },
   {
@@ -64,15 +44,15 @@ const PLANEJADOS: ItemRoteiro[] = [
   {
     titulo: "Página do partido (/partido/[sigla])",
     descricao:
-      "Dados cadastrais do partido via CNPJ e lista de todos os candidatos filiados numa UF, num único lugar.",
-    fonte: "TSE (candidatos por partido) + Receita Federal via BrasilAPI (dados cadastrais)",
+      "Dados cadastrais do partido via CNPJ e lista de todos os candidatos filiados numa UF, num único lugar. Também daria um lugar natural para exibir a prestação de contas de órgãos partidários e os CNPJs de campanha por partido, já ingeridos mas sem interface própria ainda.",
+    fonte: "TSE (candidatos por partido, prestacao_de_contas_eleitorais_orgaos_partidarios) + Receita Federal via BrasilAPI (dados cadastrais)",
     status: "planejado",
   },
 ];
 
 const BLOQUEADOS: ItemRoteiro[] = [
   {
-    titulo: "Site oficial (link direto), histórico de candidaturas e certidões criminais ao vivo",
+    titulo: "Site oficial (link direto) e histórico de candidaturas anteriores ao vivo",
     descricao:
       "Dependem do sistema DivulgaCandContas do TSE, que exige um código de município na URL de consulta — código que não existe em consulta_cand para candidaturas estaduais/federais nos dados coletados até agora. Sem esse código, essa consulta ao vivo não pode ser feita com confiança.",
     fonte: "TSE — DivulgaCandContas (ver docs/DATA_SOURCES.md §5 para o achado completo)",
@@ -93,7 +73,12 @@ const SUGESTOES_COMUNIDADE = [
   {
     titulo: "Certidões criminais",
     descricao:
-      "Dataset já mapeado (ver lista de arquivos pendentes) — sem seção própria no produto ainda porque é o dado mais sensível dos disponíveis; precisa de uma decisão de design antes de implementar.",
+      "Dataset já mapeado (ver /participe para os links pendentes) — sem seção própria no produto ainda porque é o dado mais sensível dos disponíveis; precisa de uma decisão de design antes de implementar.",
+  },
+  {
+    titulo: "Consulta de CNPJs de campanha",
+    descricao:
+      "O dataset CNPJ_campanha do TSE já foi ingerido (140 mil CNPJs de candidatos e partidos), mas não cruza com um candidato específico — o arquivo de origem só traz CNPJ + nome fiscal, sem o SQ_CANDIDATO que os outros datasets têm. Uma busca própria por CNPJ/nome, sem tentar adivinhar o candidato dono, resolveria isso sem risco de associar o CNPJ errado a alguém.",
   },
   {
     titulo: "Aprofundar o mapa por cargo",

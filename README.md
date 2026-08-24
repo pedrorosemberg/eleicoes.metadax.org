@@ -18,9 +18,11 @@ Licenciado sob [CC BY 4.0](LICENSE).
 - `/` — apresentação do projeto
 - `/buscar` — busca **direta** (nome, número ou ID do candidato) ou **indireta**
   (filtros combináveis por UF, cidade, cargo e partido)
-- `/candidato/[id]` — perfil de um candidato: dados básicos, bens declarados,
-  redes sociais e coligação (coletados do site de dados abertos do TSE) e
-  cruzamento com o Portal da Transparência (PEP, contratos, sanções)
+- `/candidato/[id]` — perfil de um candidato: foto, dados básicos, bens
+  declarados, finanças de campanha (receitas/despesas), redes sociais,
+  plano de governo (PDF) e coligação (coletados do site de dados abertos
+  do TSE) e cruzamento com o Portal da Transparência (PEP, contratos,
+  sanções)
 - `/mapa` — mapa coroplético real (Leaflet + fronteiras oficiais do IBGE) e
   estatísticas por UF/cargo (consumível também via `GET /api/estatisticas`, JSON, CORS aberto)
 - `/status` — saúde em tempo real de cada fonte de dado externa (TSE, BrasilAPI,
@@ -73,12 +75,16 @@ npm run dev
 ```
 
 Abre em `http://localhost:3000`. O repositório já vem com um snapshot real,
-coletado do site de dados abertos do TSE em 20/08/2026 e commitado em
+coletado do site de dados abertos do TSE (20 e 24/08/2026) e commitado em
 `data/2026/`: 20.638 candidatos (28 unidades eleitorais — as 27 UFs + `BR`,
 usada pelo TSE para presidente/vice), bens declarados, redes sociais,
-coligações e vagas em disputa. Motivo de cassação está vazio porque nenhuma
-candidatura foi cassada até a data da coleta — não é ausência de dado, é o
-resultado real (o dataset do TSE trazia zero linhas).
+coligações, vagas em disputa, finanças de campanha, teto de gastos e
+situação de julgamento. Fotos (20.638) e PDFs de plano de governo (208
+candidatos) ficam numa branch separada do repositório (`assets-tse-2026`,
+binários demais para `data/`) e são referenciados por URL nos candidatos.
+Motivo de cassação está vazio porque nenhuma candidatura foi cassada até a
+data da coleta — não é ausência de dado, é o resultado real (o dataset do
+TSE trazia zero linhas).
 
 ### Coletando dados atualizados do TSE
 
@@ -98,10 +104,25 @@ npm run ingest -- --ano=2026 --from-dir=./caminho/com/zips-baixados
 `--from-dir` lê `{dataset}_{ano}.zip` de uma pasta local em vez de baixar —
 nomes esperados: `consulta_cand_{ano}.zip`, `bem_candidato_{ano}.zip`,
 `rede_social_candidato_{ano}.zip`, `motivo_cassacao_{ano}.zip`,
-`consulta_coligacao_{ano}.zip`, `consulta_vagas_{ano}.zip`. Só
-`consulta_cand` é obrigatório — os demais são independentes entre si, então
-rodar com qualquer subconjunto deles funciona normalmente (o que faltar
-fica de fora do snapshot, sem quebrar o resto).
+`consulta_coligacao_{ano}.zip`, `consulta_vagas_{ano}.zip`,
+`consulta_cand_complementar_{ano}.zip`,
+`prestacao_de_contas_eleitorais_candidatos_{ano}.zip`,
+`CNPJ_campanha_{ano}.zip`. Só `consulta_cand` é obrigatório — os demais são
+independentes entre si, então rodar com qualquer subconjunto deles funciona
+normalmente (o que faltar fica de fora do snapshot, sem quebrar o resto).
+
+Fotos e PDFs de plano de governo (`foto_cand2026_{UF}_div.zip`,
+`proposta_governo_2026_{UF}.zip`) não passam por `npm run ingest` — são
+binários demais para `data/`. Extraia-os localmente e rode:
+
+```bash
+npm run build-asset-index -- --ano=2026 --fotos-dir=./fotos --planos-dir=./planos-de-governo
+```
+
+Isso grava as URLs (`fotoUrl`, `planoGovernoUrls`) direto nos candidatos —
+os arquivos em si precisam estar publicados em algum lugar acessível por URL
+(este projeto usa uma branch própria do repositório, `assets-tse-2026`,
+servida via `raw.githubusercontent.com` — ver `docs/DATA_SOURCES.md` §1).
 
 ### Variáveis de ambiente
 
@@ -119,3 +140,4 @@ variável, os endpoints de cruzamento com o Portal da Transparência retornam
 | `npm run start` | Serve o build de produção |
 | `npm run lint` | ESLint |
 | `npm run ingest -- --ano=2026` | Roda a ingestão de dados do TSE (ver acima) |
+| `npm run build-asset-index -- --ano=2026 --fotos-dir=... --planos-dir=...` | Indexa fotos e planos de governo já extraídos, gravando as URLs nos candidatos (ver acima) |
