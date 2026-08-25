@@ -87,7 +87,10 @@ ${instrucoesCustomizadas}`;
 const userPrompt = `Diff do pull request${diffTruncado ? " (truncado — só a parte inicial)" : ""}:\n\n\`\`\`diff\n${diff}\n\`\`\``;
 
 const TENTATIVAS = 2; // 1 tentativa original + 1 retry — só para falha de rede/timeout, não para achado real
-const TIMEOUT_MS = 60_000; // por tentativa — sem isso, um fetch travado consome o timeout inteiro do job (~10min) antes de falhar
+// 120s, não 60s: a PR que introduziu este timeout (#11) rodou contra a API real e as DUAS
+// tentativas estouraram o abort de 60s em sequência — não uma falha de rede pontual, sinal de
+// que 60s é curto demais para este modelo de 70B sob a carga do tier gratuito da NVIDIA.
+const TIMEOUT_MS = 120_000; // por tentativa — sem isso, um fetch travado consome o timeout inteiro do job (~10min) antes de falhar
 
 async function chamarNvidiaUmaVez() {
   const controller = new AbortController();
