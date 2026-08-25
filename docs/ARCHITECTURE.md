@@ -589,10 +589,14 @@ acesso para comprar/anexar domínio ou alterar DNS — só o redirecionamento em
 
 ### Fontes oficiais com logo real (`SourceMarquee`)
 
-O mantenedor enviou os logos oficiais de TSE, Receita Federal e Portal da Transparência/CGU
-(`assets/fontes_images/`), substituindo o wordmark tipográfico que `SourceMarquee.tsx` usava como
-placeholder documentado (ver comentário original no componente, antes desta mudança). BrasilAPI e
-METADAX continuam com wordmark tipográfico — nenhum logo foi enviado para essas duas. Um quinto
-arquivo (`gov-br_logo-svg.png`, a marca unificada `gov.br`) foi recebido mas não usado: nenhuma
-das cinco fontes listadas em `SourceMarquee` corresponde a "gov.br" como órgão específico — fica
-disponível em `public/assets/fontes_images/` para uso futuro, se um caso de uso aparecer.
+O mantenedor enviou os logos oficiais das cinco fontes listadas em `SourceMarquee.tsx`, substituindo
+o wordmark tipográfico que era um placeholder documentado (ver git history do componente): TSE,
+Receita Federal e Portal da Transparência/CGU (`assets/fontes_images/`, enviados em 26/08/2026),
+BrasilAPI (`assets/fontes_images/brasilapi-logo-medium.webp`, enviado depois) e METADAX (logo
+remoto, `cdn.metadax.com.br/assets/metadax_branding_marks/...` — único logo servido de fora do
+domínio do produto; `next.config.ts` precisou de `images.remotePatterns` para esse host
+especificamente). Um arquivo recebido não foi usado: `gov-br_logo-svg.png` (a marca unificada
+`gov.br`) não corresponde a nenhuma das cinco fontes listadas em `SourceMarquee` como órgão
+específico — fica disponível em `public/assets/fontes_images/` para uso futuro (ver também a nova
+seção "Catálogo de APIs governamentais" em `docs/DATA_SOURCES.md`, onde esse logo teria mais
+sentido se uma seção de catálogo gov.br for exibida na UI algum dia).
