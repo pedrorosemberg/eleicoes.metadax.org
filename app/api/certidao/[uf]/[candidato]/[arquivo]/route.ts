@@ -10,6 +10,40 @@ import { buscarBytesEntradaZip } from "@/lib/zip-range";
  * documento) é construído, e docs/DATA_SOURCES.md §1 para o racional
  * completo dessa decisão de arquitetura.
  */
+
+/**
+ * O nome do arquivo dentro do ZIP não é confiável para determinar o tipo real
+ * do documento: ~350 dos 84 mil arquivos (confirmado em 25/08/2026, ver
+ * docs/DATA_SOURCES.md §1) são fotos/scans em JPEG cujo nome ainda assim
+ * termina em ".pdf" (resíduo de como o TSE reempacotou o upload do
+ * candidato). Servir esses com Content-Type: application/pdf fixo fazia o
+ * visualizador de PDF do navegador falhar silenciosamente — o link "não
+ * aparecia" ao clicar. Em vez de confiar no nome, os bytes reais (magic
+ * number) decidem o Content-Type.
+ */
+function detectarTipoConteudo(bytes: Uint8Array): { mime: string; extensao: string } {
+  if (bytes.length >= 4 && bytes[0] === 0x25 && bytes[1] === 0x50 && bytes[2] === 0x44 && bytes[3] === 0x46) {
+    return { mime: "application/pdf", extensao: "pdf" };
+  }
+  if (bytes.length >= 3 && bytes[0] === 0xff && bytes[1] === 0xd8 && bytes[2] === 0xff) {
+    return { mime: "image/jpeg", extensao: "jpg" };
+  }
+  if (
+    bytes.length >= 8 &&
+    bytes[0] === 0x89 &&
+    bytes[1] === 0x50 &&
+    bytes[2] === 0x4e &&
+    bytes[3] === 0x47 &&
+    bytes[4] === 0x0d &&
+    bytes[5] === 0x0a &&
+    bytes[6] === 0x1a &&
+    bytes[7] === 0x0a
+  ) {
+    return { mime: "image/png", extensao: "png" };
+  }
+  return { mime: "application/octet-stream", extensao: "bin" };
+}
+
 export async function GET(
   _request: Request,
   { params }: { params: Promise<{ uf: string; candidato: string; arquivo: string }> },
@@ -28,11 +62,13 @@ export async function GET(
   }
 
   try {
-    const bytes = await buscarBytesEntradaZip(indice.zipUrl, entrada.offset, entrada.tamanho);
-    return new NextResponse(new Uint8Array(bytes), {
+    const bytes = new Uint8Array(await buscarBytesEntradaZip(indice.zipUrl, entrada.offset, entrada.tamanho));
+    const { mime, extensao } = detectarTipoConteudo(bytes);
+    const nomeBase = arquivo.replace(/\.(pdf|jpe?g|png)$/i, "");
+    return new NextResponse(bytes, {
       headers: {
-        "Content-Type": "application/pdf",
-        "Content-Disposition": `inline; filename="certidao_${uf}_${candidato}_${arquivo}.pdf"`,
+        "Content-Type": mime,
+        "Content-Disposition": `inline; filename="certidao_${uf}_${candidato}_${nomeBase}.${extensao}"`,
         "Cache-Control": "public, max-age=86400, immutable",
       },
     });

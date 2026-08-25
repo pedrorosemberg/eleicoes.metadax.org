@@ -460,8 +460,10 @@ export default async function CandidatoPage({
       </section>
 
       {/* Certidões criminais — documentos enviados pelo próprio candidato no registro
-          de candidatura. Só a existência e o link do PDF oficial; o conteúdo não é lido
-          nem resumido por este produto (ver docs/DATA_SOURCES.md §10, neutralidade). */}
+          de candidatura (a maioria PDF, alguns fotos/scans em JPEG — o link serve o
+          arquivo original, no tipo em que foi enviado, sem tentar padronizar). Só a
+          existência e o link do documento oficial; o conteúdo não é lido nem resumido
+          por este produto (ver docs/DATA_SOURCES.md §10, neutralidade). */}
       <section className="mt-8 rounded-[18px] border p-5" style={{ borderColor: "var(--hairline)" }}>
         <h2 className="text-[17px] font-semibold text-[var(--text-primary)]">Certidões criminais</h2>
         {certidoesDoCandidato.length > 0 ? (
@@ -474,7 +476,7 @@ export default async function CandidatoPage({
                   rel="noreferrer noopener"
                   className="inline-flex items-center gap-1.5 underline underline-offset-2 text-[var(--text-primary)]"
                 >
-                  Certidão {i + 1} (PDF)
+                  Certidão {i + 1}
                   <IconExternalLink />
                 </a>
               </li>

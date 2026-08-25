@@ -175,6 +175,25 @@ ponta: bytes recuperados de `SC` servidos via a mesma rota de produção (`/api/
 produzem PDFs válidos (`file` confirma `PDF document, version 1.4`), tanto para um arquivo de
 nome numérico quanto para um com o texto descritivo mencionado acima.
 
+**Revalidação em 25/08/2026 — links que "não aparecem" ao clicar: causa real encontrada e
+corrigida.** O usuário do projeto relatou que algumas certidões, ao clicar, não abriam. Uma
+reamostragem ampla (480 entries aleatórias das 6 UFs recuperadas, checando não só o status HTTP
+mas os *magic bytes* reais do conteúdo em cada offset armazenado) confirmou que **o índice
+offset/tamanho está correto** — nenhum offset aponta para bytes fora do documento certo. A causa
+real era outra: **~350 dos 84.006 arquivos indexados (todas as 28 UFs, não só as 6 recuperadas)
+são fotos/scans em JPEG**, não PDFs — o candidato ou advogado anexou uma foto do documento em vez
+de um PDF, e o sistema do TSE reempacotou o upload mantendo um nome terminado em `.pdf` mesmo
+assim (ex.: um arquivo cujo conteúdo real começa com o magic number JPEG `FF D8 FF`, mas cujo
+nome interno no ZIP termina em `.jpg.pdf`). A rota `app/api/certidao/[uf]/[candidato]/[arquivo]/
+route.ts` **sempre respondia com `Content-Type: application/pdf`, fixo**, independente do
+conteúdo real — para esses ~350 arquivos, o navegador tentava abrir uma imagem JPEG como se fosse
+PDF e o visualizador embutido falhava silenciosamente, exatamente o sintoma relatado ("clico e
+não aparece"). Corrigido detectando o tipo real pelos *magic bytes* do conteúdo (não pelo nome do
+arquivo, que já provou ser não confiável neste dataset) antes de responder — `application/pdf`,
+`image/jpeg` ou `image/png` conforme o conteúdo, com `application/octet-stream` como fallback
+seguro para qualquer outro caso. Nenhum dado foi alterado; é puramente uma correção de como o
+mesmo byte já indexado é servido ao navegador.
+
 ---
 
 ## 2. TSE — DivulgaCandContas (API REST não oficial)
