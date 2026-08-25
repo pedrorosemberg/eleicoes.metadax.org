@@ -1,0 +1,47 @@
+name: Claude Security Review
+
+# Primeira validação da esteira de CI/CD (ver docs/ARCHITECTURE.md §15) —
+# obrigatório antes de qualquer merge em hmg/main. Roda o Claude Code
+# Security Reviewer da Anthropic (github.com/anthropics/claude-code-security-review)
+# contra o diff do PR, com instruções adicionais específicas deste projeto
+# em .github/claude-security-review-instructions.md (prompt injection,
+# prompt poisoning, segredos, integridade/disponibilidade/confidencialidade
+# do dado exibido).
+#
+# IMPORTANTE (documentado pela própria action): "não é hardened contra
+# ataques de prompt injection e deve ser usado só para revisar PRs
+# confiáveis". A mitigação real para isso não é neste arquivo — é a
+# configuração manual em Settings → Actions → General → "Fork pull request
+# workflows from outside collaborators" = "Require approval for all
+# outside collaborators", que pausa QUALQUER workflow (este incluído) até
+# um mantenedor aprovar rodar, antes de qualquer segredo ser usado contra
+# o conteúdo de um PR de fora. Ver checklist em docs/ARCHITECTURE.md §15.
+on:
+  pull_request:
+    branches: [hmg, main]
+
+concurrency:
+  group: claude-security-review-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+  pull-requests: write
+
+jobs:
+  security:
+    name: security
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+          fetch-depth: 2
+
+      - name: Claude Code Security Review
+        uses: anthropics/claude-code-security-review@main
+        with:
+          comment-pr: true
+          claude-api-key: ${{ secrets.CLAUDE_API_KEY }}
+          custom-security-scan-instructions: .github/claude-security-review-instructions.md

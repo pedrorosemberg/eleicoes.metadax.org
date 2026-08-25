@@ -253,6 +253,8 @@ Segundo achado, agravando o primeiro: **sem paginação**, um termo comum como "
 | `/candidato/[id]` (40 conexões, 12s) | 197 requisições, p50 ≈2,5s | 560 requisições, p50 ≈0,77s (≈3x throughput) |
 | `/api/estatisticas` (60 conexões, 10s) | 908 requisições, p50 ≈0,7s | ~5.000 requisições, p50 ≈0,12s (≈5x throughput) |
 
+Rotas confirmadas saudáveis sem mudança necessária: `/` (≈730 req/s, estático/pré-renderizado), `/mapa` (≈560 req/s), `/api/certidao/:uf/:candidato/:arquivo` (limitado por banda de rede real ao GitHub, não por CPU — comportamento esperado). `/status` é deliberadamente não cacheado — checagem ao vivo é o próprio propósito da página (ver §7).
+
 ## 13. Correções pós-divulgação (26/08/2026)
 
 Dois achados adicionais, depois que o mantenedor testou a feature de visitantes ao vivo e revisou o custo de `normalizar()` na busca sob o §12 acima.
@@ -294,4 +296,114 @@ Este produto assume, por design, **uma eleição corrente** por deploy — não 
 4. **Se o TSE mudar o layout do CSV** (nome de coluna, arquivo novo/removido) — já aconteceu de uma eleição para outra em outros datasets públicos brasileiros, não é hipotético. `scripts/ingest-tse.ts` já tem uma rede de segurança para isso: `validarColunaCritica()` derruba a ingestão com erro explícito se uma coluna crítica (`SQ_CANDIDATO`, `SG_UF` etc.) não existir no CSV, em vez de gerar um snapshot silenciosamente vazio ou errado. Se isso disparar: reabrir o `leiame.pdf` do dataset em questão (mesmo processo documentado em `docs/DATA_SOURCES.md` §1) e atualizar as constantes `*_COLUNAS` no topo do script — a lista de campos em si (`CAND_COLUNAS`, `BEM_COLUNAS` etc.) é o único lugar que precisa mudar; o resto do pipeline (agrupamento por UF, escrita em `data/`, índice de busca) não assume nenhum nome de coluna específico.
 5. **Não presumir que todo dataset novo vai existir** — `npm run ingest` já trata cada dataset além de `consulta_cand` como opcional (`ingestarOpcional`, ver início deste arquivo). Um dataset que sumir ou mudar de nome de um ano para o outro não deve derrubar a ingestão inteira; deve aparecer como aviso e o campo correspondente fica ausente (com o motivo certo — "fonte não consultada" — nunca um dado inventado), seguindo a mesma regra de `docs/DATA_SOURCES.md` §10.
 
-Rotas confirmadas saudáveis sem mudança necessária: `/` (≈730 req/s, estático/pré-renderizado), `/mapa` (≈560 req/s), `/api/certidao/:uf/:candidato/:arquivo` (limitado por banda de rede real ao GitHub, não por CPU — comportamento esperado). `/status` é deliberadamente não cacheado — checagem ao vivo é o próprio propósito da página (ver §7).
+## 15. Ambientes (hmg/prod) e esteira de CI/CD (26/08/2026)
+
+A pedido do mantenedor, antes de convidar outros desenvolvedores a contribuir: dois ambientes
+nomeados e uma esteira que exige duas validações — uma automatizada (Claude) e uma humana (o
+mantenedor) — antes de qualquer código publicado, nos dois ambientes.
+
+### Decisão de arquitetura: reaproveitar o deploy automático da Vercel, não substituí-lo
+
+A Vercel já publica automaticamente a cada push: qualquer branch vira uma Preview Deployment com
+URL estável e própria; só a branch `main` (Production Branch do projeto na Vercel) promove para o
+domínio de produção (`eleicoes.metadax.org`). Havia duas formas de montar os ambientes hmg/prod
+em cima disso:
+
+1. **Desligar o deploy automático da Vercel e publicar via GitHub Actions** (`vercel deploy`),
+   usando o recurso nativo "Environments" do GitHub (aprovador obrigatório antes do job de deploy
+   rodar). Mais formalmente parecido com "ambiente" no sentido de infraestrutura, mas exige criar
+   `VERCEL_TOKEN`/`VERCEL_ORG_ID`/`VERCEL_PROJECT_ID` como segredos no GitHub e alterar a
+   configuração de deploy que já está funcionando ao vivo em produção — risco desnecessário para
+   o que o pedido original resolve de outra forma.
+2. **Reaproveitar o deploy automático que já existe**, e mover o gate de "duas validações antes de
+   publicar" para onde ele já é nativo e testado: branch protection do GitHub, no momento do
+   *merge* (que é o evento que dispara o deploy automático da Vercel), não num job de deploy
+   separado.
+
+**Escolhida a opção 2** (decisão do mantenedor, 26/08/2026): zero mudança na configuração da
+Vercel, zero segredo novo de deploy no GitHub, zero risco ao pipeline de produção já verificado
+neste documento (§11, §12). Os dois ambientes viram:
+
+| Ambiente | Branch | URL | Quando publica |
+|---|---|---|---|
+| **hmg** (homologação) | `hmg` | Preview Deployment automática da Vercel para a branch `hmg` (padrão `eleicoes-metadax-org-git-hmg-<time>.vercel.app`) — sem domínio próprio, sem mudança de DNS | A cada merge de PR em `hmg` |
+| **prod** (produção) | `main` | `eleicoes.metadax.org` — mesma Production Branch de sempre | A cada merge de PR em `main` (sempre vindo de `hmg`, nunca direto de uma branch de feature) |
+
+### Fluxo de contribuição
+
+```
+branch de feature → PR → hmg (gate: Claude + mantenedor) → merge → testa no preview de hmg
+                                                                          ↓
+                                            PR de hmg → main (gate: Claude + mantenedor) → merge → prod
+```
+
+Nenhuma branch de feature deve abrir PR direto contra `main` — sempre contra `hmg` primeiro. A
+promoção `hmg → main` é o próprio ato de "homologar": só acontece depois que a mudança já foi
+conferida rodando de verdade no preview de `hmg`.
+
+### As duas validações, em cada um dos dois branches protegidos (`hmg` e `main`)
+
+1. **`.github/workflows/ci.yml`** — `npx tsc --noEmit`, `npm run lint`, `npm run build`. Mesmos
+   três comandos que `CONTRIBUTING.md` já pede para rodar localmente antes de abrir PR, agora
+   obrigatórios via CI.
+2. **`.github/workflows/claude-security-review.yml`** — roda o
+   [Claude Code Security Reviewer](https://github.com/anthropics/claude-code-security-review) da
+   própria Anthropic contra o diff do PR, com instruções adicionais específicas deste projeto em
+   `.github/claude-security-review-instructions.md`: prompt injection/prompt poisoning
+   direcionado a um agente de IA que venha a ler o repositório (não só "vulnerabilidade de
+   código" no sentido clássico), segredos/credenciais, enfraquecimento silencioso de controle de
+   segurança existente, e ameaça à integridade/disponibilidade/confidencialidade do dado exibido
+   — a varredura padrão da action já cobre injeção de SQL/XSS/auth/etc.; o arquivo de instruções
+   customizadas cobre o que é específico deste projeto (ver o próprio arquivo para a lista
+   completa e o porquê de cada item). Essa é a "primeira validação do Claude" pedida pelo
+   mantenedor.
+3. **Aprovação do mantenedor** — via `.github/CODEOWNERS` (`* @pedrorosemberg`) combinado com a
+   regra de branch protection "Require review from Code Owners" (ver checklist abaixo). Essa é a
+   "validação minha" — obrigatória nos dois branches, não só em `main`, exatamente como pedido
+   ("todos deverão ter a minha validação").
+
+### O que ainda precisa de uma configuração manual (nenhuma ferramenta disponível nesta sessão
+### cria isso via API — precisa ser feito uma vez, pela conta do mantenedor, em Settings do repo)
+
+Sem isso, os arquivos acima existem mas **não bloqueiam nada** — GitHub só impede merge quando uma
+regra de branch protection referencia esses checks explicitamente.
+
+1. **Criar a branch `hmg`** (feito nesta sessão, a partir do `main` atual).
+2. **Settings → Branches → Add branch protection rule**, uma vez para `main` e uma vez para `hmg`:
+   - "Require a pull request before merging" — sem push direto.
+   - "Require status checks to pass before merging" → marcar `build-and-test` (de `ci.yml`) e
+     `security` (de `claude-security-review.yml`). Eles só aparecem na lista depois da primeira
+     vez que rodarem uma vez em um PR real — abrir um PR de teste depois de configurar o resto
+     serve para isso.
+   - "Require review from Code Owners" — usa o `.github/CODEOWNERS` já commitado.
+   - "Dismiss stale pull request approvals when new commits are pushed" — recomendado, para que
+     uma aprovação não continue valendo depois que o PR mudou.
+3. **Settings → Secrets and variables → Actions → New repository secret**: `CLAUDE_API_KEY`, com
+   uma chave de `console.anthropic.com` habilitada para a Claude API (não é a mesma coisa que uma
+   assinatura do Claude Code/Claude.ai — precisa ser uma API key de conta com faturamento próprio
+   para uso via API). Sem essa chave, o workflow `claude-security-review.yml` falha (e, com o
+   status check marcado como obrigatório no passo 2, isso por si só já bloqueia o merge — falha
+   fechada, não aberta).
+4. **Settings → Actions → General → "Fork pull request workflows from outside collaborators"** →
+   escolher **"Require approval for all outside collaborators"** (a opção mais restritiva
+   disponível). Este é o passo que mitiga a ressalva que a própria documentação do Claude Code
+   Security Reviewer registra: a action "não é hardened contra ataques de prompt injection e deve
+   ser usada só para revisar PRs confiáveis" — sem essa configuração, um PR malicioso de um fork
+   poderia rodar workflows (incluindo os com acesso a `CLAUDE_API_KEY`) automaticamente, antes de
+   qualquer humano olhar o conteúdo. Com essa configuração, todo PR de fora do repositório fica
+   parado até o mantenedor clicar em "Approve and run" — o primeiro humano-no-loop da esteira,
+   antes mesmo do Claude entrar.
+5. **(Recomendado, opcional) Settings → General → Default branch** → trocar de `main` para `hmg`,
+   para que `git clone` e novos PRs apontem para `hmg` por padrão, reforçando o fluxo acima sem
+   depender de cada contribuidor lembrar de mudar a branch base manualmente. Não afeta a
+   Production Branch da Vercel, que é configurada separadamente lá e continua `main`.
+
+### Limitação conhecida, registrada
+
+O Claude Code Security Reviewer roda com `on: pull_request` (não `pull_request_target`) —
+deliberado: `pull_request_target` executa com o token/contexto do repositório-base mesmo para PRs
+de fork, o padrão clássico de "pwn request" se o job também faz checkout do código do fork (que é
+exatamente o que este job precisa fazer para revisar o diff). `pull_request` evita esse risco
+específico à custa de exigir o passo 4 acima como mitigação para o outro risco (segredo acessível
+a um workflow disparado por PR externo) — trade-off documentado pela própria Anthropic no
+`README.md` da action, não uma decisão isolada deste projeto.

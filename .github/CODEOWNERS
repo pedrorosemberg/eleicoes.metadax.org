@@ -1,0 +1,5 @@
+# Usado pela regra de branch protection "Require review from Code Owners"
+# em hmg e main (ver docs/ARCHITECTURE.md §15 para o checklist completo de
+# configuração) — garante que todo PR precisa da aprovação do mantenedor
+# antes de ser mesclado, além do check automatizado do Claude.
+* @pedrorosemberg

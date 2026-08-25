@@ -26,6 +26,19 @@ site) degradam graciosamente para "indisponível" em vez de quebrar. Variáveis 
 Os dados de candidatos em si (`data/2026/**/*.json`) já vêm commitados no repositório — não é
 preciso rodar nenhuma ingestão para desenvolver localmente.
 
+## Branch base do PR: `hmg`, não `main`
+
+Este projeto tem dois ambientes — `hmg` (homologação) e `main` (produção, `eleicoes.metadax.org`)
+— e uma esteira de CI/CD com duas validações obrigatórias em cada um: um check automatizado
+(Claude Security Review) e a aprovação do mantenedor. Detalhes completos, incluindo o porquê
+dessa arquitetura, em `docs/ARCHITECTURE.md` §15. Na prática, para quem contribui:
+
+1. Abra sua branch a partir de `hmg`, não de `main`.
+2. Abra o PR contra `hmg`. Depois de mesclado, a mudança fica disponível para teste no preview de
+   `hmg` (URL automática da Vercel para essa branch).
+3. A promoção de `hmg` para `main` (produção) é feita pelo mantenedor, num PR separado, depois de
+   validar no ambiente de homologação — não é algo que quem contribui precisa fazer.
+
 ## Antes de abrir um Pull Request
 
 ```bash
@@ -34,9 +47,18 @@ npm run lint       # eslint
 npm run build      # build de produção — pega erros que o dev não pega
 ```
 
-Os três precisam passar limpos. Para mudanças em página/UI, rode `npm run build && npm run
-start` e confira visualmente (CSS carregou, componentes client hidrataram) — já houve um
-incidente de build "quebrado silenciosamente" em produção, ver `docs/ARCHITECTURE.md` §11.
+Os três rodam automaticamente no PR (`.github/workflows/ci.yml`) e precisam passar limpos, mas
+rodar localmente primeiro poupa um ciclo de espera pelo CI. Para mudanças em página/UI, rode `npm
+run build && npm run start` e confira visualmente (CSS carregou, componentes client hidrataram) —
+já houve um incidente de build "quebrado silenciosamente" em produção, ver `docs/ARCHITECTURE.md`
+§11.
+
+Todo PR também passa por `.github/workflows/claude-security-review.yml` — uma revisão de
+segurança automatizada (Claude), com atenção especial a prompt injection/prompt poisoning
+direcionado a um agente de IA que venha a processar este repositório, não só vulnerabilidade de
+código no sentido clássico (ver `.github/claude-security-review-instructions.md` e
+`docs/ARCHITECTURE.md` §15). Isso é além da revisão humana do mantenedor, não em vez dela — os
+dois são obrigatórios.
 
 Para mudanças em rota que processa muito dado (`/buscar`, `/candidato/[id]`, agregados),
 considere um teste de carga rápido antes do PR — `docs/ARCHITECTURE.md` §12 documenta a

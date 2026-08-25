@@ -96,6 +96,15 @@ design está documentada e foi validada com testes reais, não apenas descrita:
 - **[SECURITY.md](SECURITY.md)** — como reportar uma vulnerabilidade e os
   riscos conhecidos já avaliados (resultado da auditoria de 26/08/2026).
 
+## Ambientes e CI/CD
+
+Dois ambientes: **hmg** (homologação — preview automático da Vercel para a branch `hmg`) e
+**prod** (`eleicoes.metadax.org` — branch `main`). Todo PR passa por dois checks obrigatórios
+antes de poder ser mesclado em qualquer um dos dois — CI (typecheck/lint/build) e uma revisão de
+segurança automatizada via Claude, com foco extra em prompt injection/prompt poisoning — mais a
+aprovação manual do mantenedor. Ver `docs/ARCHITECTURE.md` §15 para a arquitetura completa e o
+checklist de configuração, e `CONTRIBUTING.md` para o fluxo de contribuição.
+
 ## Stack
 
 Next.js 16 (App Router) + TypeScript + Tailwind CSS v4, deploy na Vercel.
