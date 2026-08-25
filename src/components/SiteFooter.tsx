@@ -41,15 +41,15 @@ export function SiteFooter() {
             Código-fonte
           </a>
           <span>
-            Um projeto do{" "}
+            Parceria de apoio:{" "}
             <a href="https://imi.metadax.org" target="_blank" rel="noreferrer noopener" className="underline underline-offset-2">
-              Instituto METADAX de Inovação
+              Instituto METADAX de Inovação (IMI)
             </a>
           </span>
         </div>
 
         <div className="border-t pt-4 text-xs leading-relaxed" style={{ borderColor: "var(--hairline)" }}>
-          <p className="font-semibold text-[var(--text-secondary)]">METADAX</p>
+          <p className="font-semibold text-[var(--text-secondary)]">METADAX — parceira apoiadora</p>
           <p>METADAX — CNPJ 65.640.808/0001-89</p>
           <p>Av. Getúlio Vargas, 671, Sala 500, Parte 1364 — Savassi, Belo Horizonte, MG — CEP 30112-021</p>
           <a href="https://www.metadax.com.br" target="_blank" rel="noreferrer noopener" className="underline underline-offset-2">

@@ -164,14 +164,15 @@ export default async function SobrePage() {
         {repositorio && ` Repositório atualizado em ${formatarDataHoraBR(repositorio.atualizadoEm)}.`}
       </p>
 
-      <h2 className="mt-10 text-[22px] font-semibold text-[var(--text-primary)]">Marca e mantenedor</h2>
+      <h2 className="mt-10 text-[22px] font-semibold text-[var(--text-primary)]">Marca e parceria de apoio</h2>
       <p className="mt-3 text-[17px] leading-relaxed text-[var(--text-secondary)]">
-        Este é um projeto do{" "}
+        Este projeto conta com o apoio do{" "}
         <a className="underline underline-offset-2" href="https://imi.metadax.org" target="_blank" rel="noreferrer noopener">
           Instituto METADAX de Inovação (IMI)
         </a>
-        . O uso do logotipo e da identidade visual da marca METADAX segue o Manual de Marca
-        oficial (
+        , parceiro de apoio — a idealização, o desenvolvimento e a manutenção são de Pedro
+        Rosemberg (ver abaixo). O uso do logotipo e da identidade visual da marca METADAX segue
+        o Manual de Marca oficial (
         <a className="underline underline-offset-2" href="https://www.metadax.com.br/manual-de-marca" target="_blank" rel="noreferrer noopener">
           metadax.com.br/manual-de-marca
         </a>
@@ -180,17 +181,19 @@ export default async function SobrePage() {
 
       <h2 className="mt-10 text-[22px] font-semibold text-[var(--text-primary)]">Responsável pelo projeto</h2>
       <div className="mt-4 flex items-start gap-4 rounded-[18px] border p-5" style={{ borderColor: "var(--hairline)" }}>
-        <div
-          className="flex h-16 w-16 shrink-0 items-center justify-center rounded-full text-[20px] font-semibold"
-          style={{ background: "var(--surface-2)", color: "var(--text-secondary)" }}
-          aria-hidden
-        >
-          PR
-        </div>
+        {/* eslint-disable-next-line @next/next/no-img-element -- fonte externa (site pessoal do idealizador), fora dos domínios configurados em next/image */}
+        <img
+          src="https://pedrorosemberg.com/assets/pedro-image.jpeg"
+          alt="Foto de Pedro Rosemberg"
+          width={64}
+          height={64}
+          className="h-16 w-16 shrink-0 rounded-full object-cover"
+          style={{ background: "var(--surface-2)" }}
+        />
         <div>
           <p className="text-[17px] font-semibold text-[var(--text-primary)]">Pedro Rosemberg</p>
           <p className="mt-1 text-sm text-[var(--text-secondary)]">
-            Idealizador e mantenedor do projeto, pelo Instituto METADAX de Inovação (IMI).
+            Idealizador e mantenedor do projeto.
           </p>
           <ul className="mt-3 flex flex-wrap gap-x-4 gap-y-1.5 text-sm">
             <li>
