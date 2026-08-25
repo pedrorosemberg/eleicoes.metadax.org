@@ -54,7 +54,7 @@ Licenciado sob [CC BY 4.0](LICENSE).
   Portal da Transparência), com checagem ao vivo a cada 30s
 - `/sobre` — metodologia, fontes, licença, responsável pelo projeto e estatísticas
   reais do repositório/site (consumível também via `GET /api/estatisticas-projeto`, JSON)
-- `/participe` — dicas de voto consciente e como contribuir com o projeto
+- `/participe` — dicas de voto consciente, grupo do WhatsApp do projeto e como contribuir com código/dado
 - `/roteiro` — o que está planejado, bloqueado ou só sugerido, cada item com a fonte de dado
   correspondente, e como propor algo novo
 - `/atualizacoes` — issues, patches e releases espelhados ao vivo do repositório no GitHub
@@ -95,6 +95,9 @@ design está documentada e foi validada com testes reais, não apenas descrita:
   neutra em categorias sensíveis, cache obrigatório para leitura de `data/`).
 - **[SECURITY.md](SECURITY.md)** — como reportar uma vulnerabilidade e os
   riscos conhecidos já avaliados (resultado da auditoria de 26/08/2026).
+- **[docs/ISO27001_27002.md](docs/ISO27001_27002.md)** — mapeamento dos controles técnicos da
+  ISO 27002 aplicáveis a este projeto, e por que a certificação ISO 27001 em si não se aplica a
+  um repositório isolado (é um sistema de gestão organizacional, não algo que um software tenha).
 
 ## Ambientes e CI/CD
 

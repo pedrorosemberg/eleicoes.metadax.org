@@ -299,7 +299,7 @@ Este produto assume, por design, **uma eleição corrente** por deploy — não 
 ## 15. Ambientes (hmg/prod) e esteira de CI/CD (26/08/2026)
 
 A pedido do mantenedor, antes de convidar outros desenvolvedores a contribuir: dois ambientes
-nomeados e uma esteira que exige duas validações — uma automatizada (Claude) e uma humana (o
+nomeados e uma esteira que exige duas validações — uma automatizada (IA) e uma humana (o
 mantenedor) — antes de qualquer código publicado, nos dois ambientes.
 
 ### Decisão de arquitetura: reaproveitar o deploy automático da Vercel, não substituí-lo
@@ -327,40 +327,63 @@ neste documento (§11, §12). Os dois ambientes viram:
 | Ambiente | Branch | URL | Quando publica |
 |---|---|---|---|
 | **hmg** (homologação) | `hmg` | Preview Deployment automática da Vercel para a branch `hmg` (padrão `eleicoes-metadax-org-git-hmg-<time>.vercel.app`) — sem domínio próprio, sem mudança de DNS | A cada merge de PR em `hmg` |
-| **prod** (produção) | `main` | `eleicoes.metadax.org` — mesma Production Branch de sempre | A cada merge de PR em `main` (sempre vindo de `hmg`, nunca direto de uma branch de feature) |
+| **prod** (produção) | `main` (rename para `prod` decidido pelo mantenedor em 26/08/2026, pendente de execução — ver item 6 do checklist manual abaixo) | `eleicoes.metadax.org` — mesma Production Branch de sempre | A cada merge de PR na branch de produção (sempre vindo de `hmg`, nunca direto de uma branch de feature) |
 
 ### Fluxo de contribuição
 
 ```
-branch de feature → PR → hmg (gate: Claude + mantenedor) → merge → testa no preview de hmg
-                                                                          ↓
-                                            PR de hmg → main (gate: Claude + mantenedor) → merge → prod
+branch de feature → PR → hmg (gate: IA + mantenedor) → merge → testa no preview de hmg
+                                                                    ↓
+                                    PR de hmg → prod (gate: IA + mantenedor) → merge → prod
 ```
 
-Nenhuma branch de feature deve abrir PR direto contra `main` — sempre contra `hmg` primeiro. A
-promoção `hmg → main` é o próprio ato de "homologar": só acontece depois que a mudança já foi
-conferida rodando de verdade no preview de `hmg`.
+Nenhuma branch de feature deve abrir PR direto contra a branch de produção — sempre contra `hmg`
+primeiro. A promoção `hmg → prod` é o próprio ato de "homologar": só acontece depois que a mudança
+já foi conferida rodando de verdade no preview de `hmg`. **Isso é regra, não ainda um bloqueio
+técnico** — ver o achado real registrado abaixo ("PR direto contra a branch de produção, mesclado
+com o check de segurança vermelho") sobre o que acontece hoje quando alguém (inclusive o próprio
+mantenedor) não segue essa regra antes da branch protection estar configurada.
 
 ### As duas validações, em cada um dos dois branches protegidos (`hmg` e `main`)
 
 1. **`.github/workflows/ci.yml`** — `npx tsc --noEmit`, `npm run lint`, `npm run build`. Mesmos
    três comandos que `CONTRIBUTING.md` já pede para rodar localmente antes de abrir PR, agora
    obrigatórios via CI.
-2. **`.github/workflows/claude-security-review.yml`** — roda o
-   [Claude Code Security Reviewer](https://github.com/anthropics/claude-code-security-review) da
-   própria Anthropic contra o diff do PR, com instruções adicionais específicas deste projeto em
-   `.github/claude-security-review-instructions.md`: prompt injection/prompt poisoning
-   direcionado a um agente de IA que venha a ler o repositório (não só "vulnerabilidade de
-   código" no sentido clássico), segredos/credenciais, enfraquecimento silencioso de controle de
-   segurança existente, e ameaça à integridade/disponibilidade/confidencialidade do dado exibido
-   — a varredura padrão da action já cobre injeção de SQL/XSS/auth/etc.; o arquivo de instruções
-   customizadas cobre o que é específico deste projeto (ver o próprio arquivo para a lista
-   completa e o porquê de cada item). Essa é a "primeira validação do Claude" pedida pelo
-   mantenedor.
+2. **`.github/workflows/ai-security-review.yml`** — roda `.github/scripts/ai-security-review.mjs`,
+   um script próprio que chama um modelo gratuito da NVIDIA (`build.nvidia.com`, endpoint
+   OpenAI-compatible, ver §15.1 abaixo para o porquê de não ser mais a action da Anthropic) contra
+   o diff do PR, com instruções específicas deste projeto embutidas no prompt via
+   `.github/ai-security-review-instructions.md`: vulnerabilidade de código clássica (injeção,
+   XSS, auth), prompt injection/prompt poisoning direcionado a um agente de IA que venha a ler o
+   repositório, segredos/credenciais, enfraquecimento silencioso de controle de segurança
+   existente, e ameaça à integridade/disponibilidade/confidencialidade do dado exibido (ver o
+   próprio arquivo de instruções para a lista completa e o porquê de cada item). Essa é a
+   "primeira validação automatizada" pedida pelo mantenedor — falha fechada (qualquer erro —
+   secret ausente, API fora do ar, resposta que não é JSON válido — bloqueia o merge, nunca deixa
+   passar por omissão).
 3. **Aprovação do mantenedor** — via `.github/CODEOWNERS` (`* @pedrorosemberg`) combinado com a
    regra de branch protection "Require review from Code Owners" (ver checklist abaixo). Essa é a
-   "validação minha" — obrigatória nos dois branches, não só em `main`, exatamente como pedido
-   ("todos deverão ter a minha validação").
+   "validação minha" — obrigatória nos dois branches, não só no de produção, exatamente como
+   pedido ("todos deverão ter a minha validação").
+
+### 15.1 Por que não é mais a action `anthropics/claude-code-security-review`
+
+A primeira versão desta esteira (26/08/2026) usava a action oficial da Anthropic, com uma
+`ANTHROPIC_API_KEY` paga. O mantenedor decidiu não usar uma chave paga e, em vez disso, usar a
+camada gratuita da NVIDIA (`build.nvidia.com` — chave `nvapi-...` sem cartão de crédito, endpoint
+`/v1/chat/completions` no formato OpenAI). Essa action é hardcoded para a API/CLI da Anthropic —
+não existe um input de "endpoint customizado" para apontar para outro provedor — então a única
+forma de usar um modelo diferente foi substituir a action por um script próprio
+(`.github/scripts/ai-security-review.mjs`, Node puro, sem dependência nova): calcula o diff do PR,
+monta um prompt com as instruções de `.github/ai-security-review-instructions.md`, chama a API da
+NVIDIA (modelo configurável via `NVIDIA_MODEL` no workflow — o catálogo da NVIDIA muda com o
+tempo, verificar o nome atual em `build.nvidia.com` se a API começar a retornar erro de modelo
+inválido), e falha o job se a resposta não for JSON válido ou tiver achado de severidade
+alta/crítica. Testado localmente antes de subir (três cenários: sem achados, com achado grave,
+resposta não-JSON — os três se comportam como esperado, ver histórico de commits).
+
+Consequência prática: o nome do secret mudou de `ANTHROPIC_API_KEY` para `NVIDIA_API_KEY`, e o
+workflow chama-se `ai-security-review.yml` (não mais `claude-security-review.yml`).
 
 ### O que ainda precisa de uma configuração manual (nenhuma ferramenta disponível nesta sessão
 ### cria isso via API — precisa ser feito uma vez, pela conta do mantenedor, em Settings do repo)
@@ -369,63 +392,159 @@ Sem isso, os arquivos acima existem mas **não bloqueiam nada** — GitHub só i
 regra de branch protection referencia esses checks explicitamente.
 
 1. **Criar a branch `hmg`** (feito nesta sessão, a partir do `main` atual).
-2. **Settings → Branches → Add branch protection rule**, uma vez para `main` e uma vez para `hmg`:
-   - "Require a pull request before merging" — sem push direto.
+2. **Settings → Branches → Add branch protection rule**, uma vez para a branch de produção e uma
+   vez para `hmg`:
+   - "Require a pull request before merging" — sem push direto. **É esta regra que faltou** no
+     achado registrado abaixo (PR aberto direto contra `main`, mesclado com o check de segurança
+     vermelho) — sem ela, nada do resto desta lista bloqueia merge de verdade.
    - "Require status checks to pass before merging" → marcar `build-and-test` (de `ci.yml`) e
-     `security` (de `claude-security-review.yml`). Eles só aparecem na lista depois da primeira
-     vez que rodarem uma vez em um PR real — abrir um PR de teste depois de configurar o resto
-     serve para isso.
+     `security` (de `ai-security-review.yml`). Eles só aparecem na lista depois da primeira vez
+     que rodarem em um PR real — abrir um PR de teste depois de configurar o resto serve para
+     isso.
    - "Require review from Code Owners" — usa o `.github/CODEOWNERS` já commitado.
    - "Dismiss stale pull request approvals when new commits are pushed" — recomendado, para que
      uma aprovação não continue valendo depois que o PR mudou.
-3. **Settings → Secrets and variables → Actions → New repository secret**: `ANTHROPIC_API_KEY`
-   (nome confirmado testando o workflow sem o secret configurado — é literalmente o que a própria
-   action imprime no erro: "Please provide the claude-api-key input... example:
-   secrets.ANTHROPIC_API_KEY"), com uma chave de `console.anthropic.com` habilitada para a Claude
-   API (não é a mesma coisa que uma assinatura do Claude Code/Claude.ai — precisa ser uma API key
-   de conta com faturamento próprio para uso via API). Sem essa chave, o workflow
-   `claude-security-review.yml` falha (e, com o status check marcado como obrigatório no passo 2,
-   isso por si só já bloqueia o merge — falha fechada, não aberta, confirmado no PR #1).
+3. **Settings → Secrets and variables → Actions → New repository secret**: `NVIDIA_API_KEY`, com
+   uma chave gratuita gerada em `build.nvidia.com` (cadastro só com e-mail, sem cartão de
+   crédito). Sem essa chave, o workflow `ai-security-review.yml` falha (e, com o status check
+   marcado como obrigatório no passo 2, isso por si só já bloqueia o merge — falha fechada, não
+   aberta).
 4. **Settings → Actions → General → "Fork pull request workflows from outside collaborators"** →
    escolher **"Require approval for all outside collaborators"** (a opção mais restritiva
-   disponível). Este é o passo que mitiga a ressalva que a própria documentação do Claude Code
-   Security Reviewer registra: a action "não é hardened contra ataques de prompt injection e deve
-   ser usada só para revisar PRs confiáveis" — sem essa configuração, um PR malicioso de um fork
-   poderia rodar workflows (incluindo os com acesso a `ANTHROPIC_API_KEY`) automaticamente, antes de
-   qualquer humano olhar o conteúdo. Com essa configuração, todo PR de fora do repositório fica
-   parado até o mantenedor clicar em "Approve and run" — o primeiro humano-no-loop da esteira,
-   antes mesmo do Claude entrar.
-5. **(Recomendado, opcional) Settings → General → Default branch** → trocar de `main` para `hmg`,
-   para que `git clone` e novos PRs apontem para `hmg` por padrão, reforçando o fluxo acima sem
-   depender de cada contribuidor lembrar de mudar a branch base manualmente. Não afeta a
-   Production Branch da Vercel, que é configurada separadamente lá e continua `main`.
+   disponível). Este é o passo que mitiga o mesmo risco que a documentação da action que
+   inspirou este script registrava para o caso equivalente: sem essa configuração, um PR
+   malicioso de um fork poderia rodar workflows (incluindo os com acesso a `NVIDIA_API_KEY`)
+   automaticamente, antes de qualquer humano olhar o conteúdo. Com essa configuração, todo PR de
+   fora do repositório fica parado até o mantenedor clicar em "Approve and run" — o primeiro
+   humano-no-loop da esteira, antes mesmo da IA entrar.
+5. **(Recomendado) Settings → General → Default branch** → trocar de `main` para `hmg`, para que
+   `git clone` e novos PRs apontem para `hmg` por padrão, reforçando o fluxo acima sem depender de
+   cada contribuidor lembrar de mudar a branch base manualmente. Não afeta a Production Branch da
+   Vercel, que é configurada separadamente lá.
+6. **Rename da branch de produção, `main` → `prod`** (decisão do mantenedor, 26/08/2026, pendente
+   de execução): `git`/GitHub não têm uma API que este ambiente de sessão tenha permissão de
+   destruir/recriar referências de branch com segurança — a forma correta e segura de fazer isso é
+   pela própria UI do GitHub (**Settings → Branches → ícone de lápis ao lado de `main` → Rename**),
+   que atualiza a branch padrão, redireciona PRs abertos e mantém o histórico intacto (bem mais
+   seguro do que criar uma branch `prod` nova e apagar `main` manualmente). Dois passos depois do
+   rename em si, ambos manuais:
+   - **Vercel → Project Settings → Git → Production Branch** → trocar de `main` para `prod` (sem
+     isso, a Vercel para de promover para produção em qualquer push, já que ela vincula a
+     Production Branch pelo nome).
+   - Depois de confirmado o rename + a Production Branch atualizados, os workflows deste
+     repositório (`ci.yml`, `ai-security-review.yml`, `codeql.yml`) e a documentação (este
+     arquivo, `CONTRIBUTING.md`) precisam trocar toda referência a `main` por `prod` — **não feito
+     ainda nesta sessão**, de propósito: mudar essas referências antes do rename real quebraria os
+     checks (eles parariam de disparar para pushes na branch que continua se chamando `main`).
+   - Recomendado fazer os dois primeiros passos em sequência rápida (o rename já redireciona
+     automaticamente pushes/PRs para o nome antigo por um tempo, mas a Vercel não sabe disso).
+7. **(Sugestão do mantenedor, pendente) Settings → Features → Wikis** → habilitar. Wiki do GitHub
+   é um repositório git próprio (`{repo}.wiki.git`), separado do código — nenhuma ferramenta desta
+   sessão tem permissão de habilitar essa feature (é um toggle de configuração do repositório, não
+   um recurso de conteúdo). Depois de habilitada, é só um `git clone`/`git push` normal nesse
+   segundo repositório — nesse ponto dá para espelhar lá o conteúdo de `docs/` que fizer sentido
+   como referência rápida (a versão em `docs/` continua sendo a fonte da verdade, versionada junto
+   com o código que ela documenta; a Wiki seria um índice/resumo de navegação mais fácil, não uma
+   cópia divergente).
 
 ### Limitação conhecida, registrada
 
-O Claude Code Security Reviewer roda com `on: pull_request` (não `pull_request_target`) —
-deliberado: `pull_request_target` executa com o token/contexto do repositório-base mesmo para PRs
-de fork, o padrão clássico de "pwn request" se o job também faz checkout do código do fork (que é
-exatamente o que este job precisa fazer para revisar o diff). `pull_request` evita esse risco
-específico à custa de exigir o passo 4 acima como mitigação para o outro risco (segredo acessível
-a um workflow disparado por PR externo) — trade-off documentado pela própria Anthropic no
-`README.md` da action, não uma decisão isolada deste projeto.
+`ai-security-review.yml` roda com `on: pull_request` (não `pull_request_target`) — deliberado:
+`pull_request_target` executa com o token/contexto do repositório-base mesmo para PRs de fork, o
+padrão clássico de "pwn request" se o job também faz checkout do código do fork (que é exatamente
+o que este job precisa fazer para revisar o diff). `pull_request` evita esse risco específico à
+custa de exigir o passo 4 do checklist acima como mitigação para o outro risco (segredo acessível
+a um workflow disparado por PR externo) — mesmo trade-off que a action `claude-code-security-review`
+da Anthropic documentava para o caso equivalente (§15.1), não uma decisão isolada deste projeto.
 
-### Achado real testando a esteira: "success" que não revisou nada (PR #1, 26/08/2026)
+### Achado histórico (superado): "success" que não revisou nada (PR #1, 26/08/2026)
 
-O primeiro teste ponta a ponta da esteira (antes do secret `ANTHROPIC_API_KEY` existir) expôs um
-comportamento perigoso do padrão da própria action: ela cacheia "ClaudeCode já rodou neste PR" por
-**número do PR**, não por commit, num arquivo de marcador restaurado por `restore-keys` com prefixo
-(`claudecode-{repo}-pr-{n}-`). A primeira tentativa (que falhou por falta do secret) ainda grava
-esse marcador antes de falhar — então **todo commit seguinte no mesmo PR encontrava o marcador,
-pulava a revisão inteira, e reportava `success`**, mesmo que o secret continuasse ausente e nenhum
-diff novo tivesse sido de fato analisado. Confirmado lendo o log linha a linha: `"ClaudeCode has
-already run on PR #1 (found marker file), forcing disable to avoid false positives"` seguido de
-`claudecode-scan;outcome=skipped`.
+Enquanto a esteira ainda usava a action `anthropics/claude-code-security-review` (§15.1), o
+primeiro teste ponta a ponta (antes do secret `ANTHROPIC_API_KEY` existir) expôs um comportamento
+perigoso do padrão da própria action: ela cacheia "já rodou neste PR" por **número do PR**, não
+por commit, num arquivo de marcador. A primeira tentativa (que falhou por falta do secret) ainda
+grava esse marcador antes de falhar — então **todo commit seguinte no mesmo PR encontrava o
+marcador, pulava a revisão inteira, e reportava `success`**, mesmo que o secret continuasse
+ausente e nenhum diff novo tivesse sido de fato analisado. Confirmado lendo o log linha a linha:
+`"ClaudeCode has already run on PR #1 (found marker file), forcing disable to avoid false
+positives"` seguido de `claudecode-scan;outcome=skipped`. Para um gate obrigatório de segurança,
+isso é inaceitável: um "check verde" que não significa "revisado" é pior do que não ter o check.
 
-Para um check decorativo isso seria só um detalhe de custo (a action existe para evitar chamada
-redundante de LLM a cada commit de um PR longo). Para um **gate obrigatório de segurança**, é
-inaceitável: um "check verde" que não significa "revisado" é pior do que não ter o check, porque
-passa confiança falsa. Corrigido setando `run-every-commit: true` no workflow — troca o custo de
-uma chamada real à API a cada push pela garantia de que o check verde sempre corresponde a uma
-revisão de verdade do commit atual, não de um estado cacheado de uma tentativa anterior (inclusive
-uma que falhou).
+Esse tipo de bug **não existe** em `.github/scripts/ai-security-review.mjs` (§15.1) — o script não
+tem nenhum mecanismo de "já rodei, pular" por construção: cada execução do workflow chama a API do
+zero, sempre. Registrado aqui como histórico de por que essa classe de bug importa, não porque
+ainda se aplique.
+
+### Achado real: PR direto contra `main`, mesclado com o check de segurança vermelho (26/08/2026)
+
+No mesmo dia em que a esteira foi criada, antes do checklist manual acima ter sido executado, um
+PR (#2) foi aberto direto contra `main` (não contra `hmg`, pulando a promoção via homologação) a
+partir da mesma branch de um PR já aberto contra `hmg` (#1), e mesclado com o check
+`security` em vermelho (o secret ainda não existia). Isso só foi possível porque **nenhuma branch
+protection ainda estava configurada** — os checks deste documento existem e rodam desde o primeiro
+commit, mas continuam sendo só informativos até uma regra de branch protection os referenciar
+explicitamente (passo 2 do checklist acima). Sem essa regra, "PR obrigatório" e "check obrigatório"
+são convenções documentadas, não bloqueios reais — qualquer um com permissão de push (incluindo o
+próprio mantenedor, sem intenção de contornar nada) pode mesclar direto.
+
+Correção aplicada: `hmg` foi ressincronizada com `main` (fast-forward) para as duas branches
+voltarem a apontar para o mesmo commit, e o PR #1 (agora redundante) foi fechado com um comentário
+explicando o motivo. Nenhuma mudança de código foi necessária — o "bug" aqui é 100% a ausência do
+passo 2 do checklist, não um defeito na esteira em si. Registrado como o exemplo mais concreto
+possível de por que aquele passo não é opcional antes de abrir o repositório para colaboradores
+externos: hoje quem contornou foi o próprio mantenedor, sem querer; amanhã pode ser alguém sem
+esse cuidado.
+
+## 16. Secure SDLC — o que foi adicionado e o modelo de fases adotado (26/08/2026)
+
+A pedido do mantenedor: revisar a esteira contra práticas de Secure SDLC (Software Development
+Life Cycle seguro — segurança integrada em cada fase do desenvolvimento, não só numa checagem
+final antes do deploy). O que já existia (auditoria de segredos, revisão automatizada de PR,
+ambientes separados, branch protection) já cobre boa parte disso; esta seção documenta o que foi
+adicionado especificamente para fechar lacunas de SAST/SCA, e como as fases do SDLC deste projeto
+mapeiam para controles concretos.
+
+### O que foi adicionado nesta rodada
+
+- **`.github/workflows/codeql.yml`** — SAST (Static Application Security Testing) via
+  [CodeQL](https://codeql.github.com/), a ferramenta de análise estática nativa do GitHub,
+  gratuita para repositórios públicos. Roda em todo PR (`hmg`/produção) e semanalmente
+  (`schedule`, segunda-feira 06:00 UTC) contra o código já existente — pega vulnerabilidade
+  estrutural conhecida (injeção, XSS, path traversal, uso inseguro de regex, etc.) com um
+  mecanismo determinístico de dataflow, complementar (não substituto) à revisão via IA de
+  `ai-security-review.yml`: CodeQL não depende de um modelo de linguagem "entender" o diff
+  corretamente, e a revisão via IA cobre o que CodeQL não tem regra para (prompt
+  injection/poisoning, decisões de arquitetura erradas, o que é específico deste projeto).
+- **`.github/dependabot.yml`** — SCA (Software Composition Analysis). Alertas de vulnerabilidade
+  em dependência (Dependabot alerts) já são automáticos e gratuitos para repositórios públicos
+  independente deste arquivo; o que ele adiciona são PRs semanais de atualização de versão,
+  agrupados por ecossistema (`npm` e `github-actions`), para não deixar dependência desatualizada
+  acumular até virar um problema de segurança grande de uma vez.
+- **Secret scanning + push protection** (GitHub nativo, gratuito para repositórios públicos) —
+  **precisa ser habilitado manualmente** em Settings → Code security → "Secret scanning" e "Push
+  protection" (ligar os dois). Bloqueia no próprio `git push` um commit que contenha um padrão de
+  chave/token reconhecido, antes mesmo de chegar ao GitHub — camada a mais além da auditoria
+  manual já feita (`SECURITY.md`) e da revisão automatizada de PR, que só rodam depois que o
+  código já está no repositório.
+- **`docs/ISO27001_27002.md`** (novo) — mapeamento explícito de qual controle desses (e dos já
+  existentes) corresponde a qual cláusula/controle da ISO 27001/27002, com o porquê de ISO 27001
+  em si não se aplicar a um repositório isolado (ver o documento para a explicação completa —
+  resumida na seção seguinte).
+
+### Modelo de fases do SDLC seguro deste projeto
+
+| Fase | Prática de segurança já aplicada |
+|---|---|
+| **Requisitos** | `docs/DATA_SOURCES.md` §10 (nunca fabricar dado), `docs/DESIGN_SYSTEM.md` (neutralidade), `CONTRIBUTING.md` (convenções obrigatórias) — segurança e integridade de dado como requisito documentado antes do código, não depois. |
+| **Design/arquitetura** | Decisões de arquitetura documentadas com o porquê (`docs/ARCHITECTURE.md` inteiro) — inclusive decisões de *não* fazer algo (ex.: não construir rate limiting agora, §10; não usar `pull_request_target`, §15). CORS aberto e ausência de autenticação em `/api/*` são decisões de design registradas, não omissões. |
+| **Desenvolvimento** | `import "server-only"` em todo módulo com segredo; `lerJsonCacheado()` obrigatório para leitura de dado estático (§12); linguagem neutra obrigatória em categoria sensível (`CONTRIBUTING.md`). |
+| **Build/CI** | `ci.yml` (typecheck/lint/build), `codeql.yml` (SAST), `dependabot.yml` (SCA) — todos obrigatórios ou automáticos antes de qualquer merge. |
+| **Revisão** | `ai-security-review.yml` (revisão automatizada via IA) + aprovação humana obrigatória via CODEOWNERS (§15) — duas validações independentes, nenhuma dispensa a outra. |
+| **Deploy** | Ambientes separados hmg/prod (§15), sem segredo de deploy novo, reaproveitando o pipeline da Vercel já testado sob carga (§12). |
+| **Operação/monitoramento** | `/status` com checagem ao vivo de cada fonte externa; `/atualizacoes` espelhando issues/PRs/releases do GitHub; Vercel Analytics/Speed Insights sem coleta de identificador pessoal (`/privacidade`). |
+| **Resposta a incidente** | `SECURITY.md` — canal de report privado (GitHub Security Advisories), riscos conhecidos com decisão registrada, e este próprio documento como histórico de achados reais e como foram corrigidos (§11, §12, §15). |
+
+Nenhuma fase nova foi inventada para "parecer completo" — o que está na tabela já existia ou foi
+adicionado nesta sessão; o valor de listar assim é tornar visível que segurança não é só o gate
+de PR, é uma prática distribuída pelas fases, e facilitar auditoria (interna ou de quem for
+contribuir) sobre onde cada controle mora.

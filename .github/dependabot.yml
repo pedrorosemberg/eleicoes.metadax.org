@@ -1,0 +1,23 @@
+# SCA (Software Composition Analysis) — parte da esteira de Secure SDLC
+# deste projeto (ver docs/ARCHITECTURE.md §15). Alertas de vulnerabilidade
+# em dependência (Dependabot alerts) já são automáticos e gratuitos para
+# repositórios públicos, sem precisar deste arquivo — o que isto adiciona
+# são PRs automáticos de atualização de versão, semanais, agrupados por
+# ecossistema, para não deixar dependência desatualizada acumular até virar
+# um problema de segurança grande de uma vez.
+version: 2
+updates:
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    open-pull-requests-limit: 5
+    labels:
+      - "dependencies"
+
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    labels:
+      - "dependencies"

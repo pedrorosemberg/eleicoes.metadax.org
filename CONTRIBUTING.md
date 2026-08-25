@@ -29,9 +29,9 @@ preciso rodar nenhuma ingestão para desenvolver localmente.
 ## Branch base do PR: `hmg`, não `main`
 
 Este projeto tem dois ambientes — `hmg` (homologação) e `main` (produção, `eleicoes.metadax.org`)
-— e uma esteira de CI/CD com duas validações obrigatórias em cada um: um check automatizado
-(Claude Security Review) e a aprovação do mantenedor. Detalhes completos, incluindo o porquê
-dessa arquitetura, em `docs/ARCHITECTURE.md` §15. Na prática, para quem contribui:
+— e uma esteira de CI/CD com duas validações obrigatórias em cada um: um check automatizado (AI
+Security Review) e a aprovação do mantenedor. Detalhes completos, incluindo o porquê dessa
+arquitetura, em `docs/ARCHITECTURE.md` §15. Na prática, para quem contribui:
 
 1. Abra sua branch a partir de `hmg`, não de `main`.
 2. Abra o PR contra `hmg`. Depois de mesclado, a mudança fica disponível para teste no preview de
@@ -53,12 +53,15 @@ run build && npm run start` e confira visualmente (CSS carregou, componentes cli
 já houve um incidente de build "quebrado silenciosamente" em produção, ver `docs/ARCHITECTURE.md`
 §11.
 
-Todo PR também passa por `.github/workflows/claude-security-review.yml` — uma revisão de
-segurança automatizada (Claude), com atenção especial a prompt injection/prompt poisoning
-direcionado a um agente de IA que venha a processar este repositório, não só vulnerabilidade de
-código no sentido clássico (ver `.github/claude-security-review-instructions.md` e
-`docs/ARCHITECTURE.md` §15). Isso é além da revisão humana do mantenedor, não em vez dela — os
+Todo PR também passa por `.github/workflows/ai-security-review.yml` — uma revisão de segurança
+automatizada via um modelo gratuito da NVIDIA (build.nvidia.com), com atenção especial a prompt
+injection/prompt poisoning direcionado a um agente de IA que venha a processar este repositório,
+não só vulnerabilidade de código no sentido clássico (ver `.github/ai-security-review-instructions.md`
+e `docs/ARCHITECTURE.md` §15). Isso é além da revisão humana do mantenedor, não em vez dela — os
 dois são obrigatórios.
+
+Além dos dois checks de PR, o repositório também tem CodeQL (SAST) e Dependabot (dependências
+vulneráveis/desatualizadas) rodando por conta própria — ver `docs/ARCHITECTURE.md` §15.
 
 Para mudanças em rota que processa muito dado (`/buscar`, `/candidato/[id]`, agregados),
 considere um teste de carga rápido antes do PR — `docs/ARCHITECTURE.md` §12 documenta a
