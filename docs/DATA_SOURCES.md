@@ -99,9 +99,23 @@ própria branch `assets-tse-2026` para a estrutura completa.
 Publicado pelo TSE como release do GitHub (28 ZIPs, um por UF + `BR`) em
 `https://github.com/pedrorosemberg/eleicoes.metadax.org/releases/tag/arquivos_de_certidoes_criminais`
 — documentos de certidão criminal enviados pelo próprio candidato no registro de candidatura.
-Nome de arquivo dentro do ZIP (confirmado contra o `leiame.pdf` real, incluído em cada ZIP):
-`{ano}{UF}{sqCandidato}_{sqArquivoDocumento}.pdf.pdf` — `SQ_CANDIDATO` embutido no nome, join
-confiável (diferente de `CNPJ_campanha`, que não tem essa chave).
+Nome de arquivo dentro do ZIP, conforme o `leiame.pdf` oficial (obtido tanto de dentro do ZIP
+quanto enviado diretamente pelo usuário em 25/08/2026):
+`{ano}{UF}{sqCandidato}_{sqArquivoDocumento}.{ext}`, com `sqArquivoDocumento` puramente numérico
+— `SQ_CANDIDATO` embutido no nome, join confiável (diferente de `CNPJ_campanha`, que não tem essa
+chave).
+
+**Divergência real entre o leiame e os arquivos de verdade:** `sqCandidato` sempre veio limpo em
+todos os UFs conferidos, mas a parte depois do `_` **nem sempre é só o número** — muitos arquivos
+têm texto descritivo colado depois (ex.: `..._240017097976.1 CERTIDAO DA JUSTICA FEDERAL
+2.pdf.pdf`), provavelmente resíduo do nome original enviado pelo candidato/advogado, preservado
+pelo sistema do TSE em vez de ser descartado. Um regex estrito (só dígitos depois do `_`, como o
+leiame descreve) **descartava silenciosamente esses arquivos** — nenhum erro, nenhum aviso, só
+um documento a menos no índice. Corrigido (25/08/2026) para capturar `sqCandidato` estritamente
+e tratar tudo entre o `_` e o `.pdf` final como um identificador opaco (usado como está, com
+`encodeURIComponent` na URL). O efeito real: o número de candidatos com pelo menos uma certidão
+indexada subiu em **todas** as 22 UFs que já funcionavam antes (ex.: AL 261→278, CE 645→708, PE
+817→956, RS 986→1049) — não só nas 6 recuperadas abaixo.
 
 **Tamanho real, confirmado nesta sessão (25/08/2026): ~9,5 GB no total** — muito maior que
 fotos+planos de governo (~440MB) juntos, e grande demais para duplicar em qualquer hospedagem
@@ -127,14 +141,39 @@ byte-range específico, servido por uma instância real do Next.js rodando local
 um PDF válido de 1 página, `file` confirmando `PDF document, version 1.4`). Ver
 `src/lib/zip-range.ts` para a implementação.
 
-**Falha real encontrada: 6 dos 28 ZIPs estão corrompidos no release** — `BA`, `MG`, `PR`, `RJ`,
-`SC` e `SP` não têm um End Of Central Directory válido (confirmado de forma independente com
-`unzip -t certidao_criminal_2026_SC.zip`: `"End-of-central-directory signature not found"`). O
-header local do início do arquivo é válido (`PK\x03\x04` presente), então é consistente com um
-upload incompleto/truncado dessas 6 UFs especificamente — não é um limite de tamanho (`RS`, com
-533MB, indexou normalmente; `MG`, com 473MB, falhou). `scripts/ingest-certidoes.ts` detecta e
-pula essas UFs sem quebrar a ingestão das demais; a UI (`/candidato/[id]`) informa explicitamente
-que a certidão está indisponível **pela UF, não pelo candidato**, até o arquivo ser reenviado.
+**6 dos 28 ZIPs tiveram o upload para o release truncado — recuperados, não perdidos.** `BA`,
+`MG`, `PR`, `RJ`, `SC` e `SP` não têm um End Of Central Directory válido (confirmado de forma
+independente com `unzip -t certidao_criminal_2026_SC.zip`:
+`"End-of-central-directory signature not found"`). O primeiro diagnóstico (25/08/2026) tratou
+isso como arquivo corrompido/inutilizável e pulava essas 6 UFs. **O usuário do projeto contestou
+esse diagnóstico** ao abrir o release e notar que muitos arquivos apareciam sem nome — o que
+levou a uma segunda análise mais cuidadosa, que mostrou que só o **rodapé** do ZIP (central
+directory + EOCD) estava ausente; o conteúdo em si — todo documento, exceto o último, que fica
+cortado pela metade — está intacto:
+
+- O header local do início do arquivo é válido (`PK\x03\x04` presente).
+- Uma varredura sequencial dos local file headers de `certidao_criminal_2026_SC.zip` (baixado
+  inteiro, 424MB) achou 2.319 entries válidas caminhando `PK\x03\x04 → nome → dados → próximo
+  PK\x03\x04`, sem nenhum erro no meio — só a **última** entry tinha `offset + tamanho` maior que
+  o tamanho real do arquivo (dado cortado pela metade, exatamente o que se espera de um upload
+  interrompido no meio da transferência). Descartando só essa última entry, as outras 2.318 são
+  100% válidas.
+- Nenhuma entry usa "data descriptor" (streaming) nem compressão diferente de STORE — confirmado
+  nas 6 UFs — então o header local sozinho já tem o tamanho real de cada arquivo, sem precisar de
+  nenhuma informação do central directory ausente.
+- Os offsets calculados dessa forma continuam válidos contra o arquivo hospedado no GitHub
+  (mesmos bytes — só falta o rodapé), então o mecanismo de serving por Range GET não muda; só o
+  índice precisou ser reconstruído de um jeito diferente para essas 6 UFs.
+
+Implementado em `src/lib/zip-range.ts#recuperarEntradasZipLocal`, usado por
+`scripts/ingest-certidoes.ts` como fallback automático quando o central directory remoto não é
+encontrado: baixa o ZIP inteiro uma única vez (necessário para a varredura sequencial), recupera
+o índice, descarta o arquivo local. Resultado real (25/08/2026): **as 28 UFs indexadas, 20.089
+candidatos com pelo menos um documento** — `BA` (1.217), `MG` (1.626), `PR` (1.049), `RJ`
+(1.894), `SC` (659) e `SP` (2.400) antes ficavam de fora inteiramente. Verificado de ponta a
+ponta: bytes recuperados de `SC` servidos via a mesma rota de produção (`/api/certidao/...`)
+produzem PDFs válidos (`file` confirma `PDF document, version 1.4`), tanto para um arquivo de
+nome numérico quanto para um com o texto descritivo mencionado acima.
 
 ---
 

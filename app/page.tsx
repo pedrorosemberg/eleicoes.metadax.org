@@ -61,7 +61,7 @@ const FEATURES: Array<{ titulo: string; descricao: string; status: StatusFeature
   {
     titulo: "Certidões criminais",
     descricao:
-      "Documentos enviados pelo próprio candidato no registro de candidatura, exatamente como publicados pelo TSE — disponível para 22 das 28 unidades eleitorais (6 aguardam reenvio de um arquivo de origem corrompido, ver /roteiro).",
+      "Documentos enviados pelo próprio candidato no registro de candidatura, exatamente como publicados pelo TSE — 20.089 candidatos com pelo menos um documento, nas 28 unidades eleitorais.",
     status: "disponível",
   },
   {

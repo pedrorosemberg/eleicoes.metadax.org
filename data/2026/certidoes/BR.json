@@ -1,886 +1,1403 @@
 {
   "uf": "BR",
   "zipUrl": "https://github.com/pedrorosemberg/eleicoes.metadax.org/releases/download/arquivos_de_certidoes_criminais/certidao_criminal_2026_BR.zip",
-  "atualizadoEm": "2026-08-25T00:09:14.409Z",
+  "atualizadoEm": "2026-08-25T00:48:53.721Z",
   "porCandidato": {
     "280002551543": [
       {
-        "arquivo": "280017104708",
+        "arquivo": "280017104708.pdf",
         "offset": 72,
         "tamanho": 67313
       },
       {
-        "arquivo": "280017104706",
+        "arquivo": "280017104706.pdf",
         "offset": 4102704,
         "tamanho": 67299
       },
       {
-        "arquivo": "280017104717",
+        "arquivo": "280017104717.pdf",
         "offset": 4170075,
         "tamanho": 52230
       },
       {
-        "arquivo": "280017104715",
+        "arquivo": "280017104715.pdf",
         "offset": 8040112,
         "tamanho": 66272
       },
       {
-        "arquivo": "280017104707",
+        "arquivo": "280017104707.pdf",
         "offset": 17194614,
         "tamanho": 412313
       },
       {
-        "arquivo": "280017104710",
+        "arquivo": "280017104710.pdf",
         "offset": 17606999,
         "tamanho": 112522
       },
       {
-        "arquivo": "280017104714",
+        "arquivo": "280017104714.pdf",
         "offset": 22750880,
         "tamanho": 114718
       },
       {
-        "arquivo": "280017104719",
+        "arquivo": "280017104719.pdf",
         "offset": 22865670,
         "tamanho": 43742
       },
       {
-        "arquivo": "280017104716",
+        "arquivo": "280017104716.pdf",
         "offset": 53572580,
         "tamanho": 44473
       }
     ],
     "280002551544": [
       {
-        "arquivo": "280017104722",
+        "arquivo": "280017104722.pdf",
         "offset": 67457,
         "tamanho": 89117
       },
       {
-        "arquivo": "280017104724",
+        "arquivo": "280017104724.pdf",
         "offset": 156646,
         "tamanho": 98522
       },
       {
-        "arquivo": "280017104728",
+        "arquivo": "280017104728.pdf",
         "offset": 255240,
         "tamanho": 89098
       },
       {
-        "arquivo": "280017104737",
+        "arquivo": "280017104737.pdf",
         "offset": 344410,
         "tamanho": 85304
       },
       {
-        "arquivo": "280017104743",
+        "arquivo": "280017104743.pdf",
         "offset": 429786,
         "tamanho": 51534
       },
       {
-        "arquivo": "280017104732",
+        "arquivo": "280017104732.pdf",
         "offset": 8106456,
         "tamanho": 102328
       },
       {
-        "arquivo": "280017104745",
+        "arquivo": "280017104745.pdf",
         "offset": 8240097,
         "tamanho": 100062
       },
       {
-        "arquivo": "280017104723",
+        "arquivo": "280017104723.pdf",
         "offset": 17719593,
         "tamanho": 94864
       },
       {
-        "arquivo": "280017104727",
+        "arquivo": "280017104727.pdf",
         "offset": 17814529,
         "tamanho": 81352
       },
       {
-        "arquivo": "280017104741",
+        "arquivo": "280017104741.pdf",
         "offset": 17895953,
         "tamanho": 65697
       },
       {
-        "arquivo": "280017104725",
+        "arquivo": "280017104725.pdf",
         "offset": 22909484,
         "tamanho": 103503
       },
       {
-        "arquivo": "280017104733",
+        "arquivo": "280017104733.pdf",
         "offset": 23013059,
         "tamanho": 334733
       },
       {
-        "arquivo": "280017104740",
+        "arquivo": "280017104740.PDF",
         "offset": 23347864,
         "tamanho": 96200
       },
       {
-        "arquivo": "280017104742",
+        "arquivo": "280017104742.pdf",
         "offset": 23444136,
         "tamanho": 44177
       },
       {
-        "arquivo": "280017104744",
+        "arquivo": "280017104744.pdf",
         "offset": 23488385,
         "tamanho": 85815
       },
       {
-        "arquivo": "280017104738",
+        "arquivo": "280017104738.pdf",
         "offset": 49686617,
         "tamanho": 88398
       },
       {
-        "arquivo": "280017104721",
+        "arquivo": "280017104721.pdf",
         "offset": 53617125,
         "tamanho": 324764
       },
       {
-        "arquivo": "280017104729",
+        "arquivo": "280017104729.pdf",
         "offset": 53941961,
         "tamanho": 120984
       },
       {
-        "arquivo": "280017104735",
+        "arquivo": "280017104735.pdf",
         "offset": 54063017,
         "tamanho": 87912
       },
       {
-        "arquivo": "280017104736",
+        "arquivo": "280017104736.pdf",
         "offset": 54151001,
         "tamanho": 97509
       },
       {
-        "arquivo": "280017104739",
+        "arquivo": "280017104739.pdf",
         "offset": 54248582,
         "tamanho": 102741
       },
       {
-        "arquivo": "280017104734",
+        "arquivo": "280017104720.2020.4.01.3400.pdf",
+        "offset": 61787252,
+        "tamanho": 98881
+      },
+      {
+        "arquivo": "280017104734.pdf",
         "offset": 61886205,
         "tamanho": 391996
       }
     ],
     "280002551546": [
       {
-        "arquivo": "280017104764",
+        "arquivo": "280017104764.pdf",
         "offset": 481392,
         "tamanho": 78707
       },
       {
-        "arquivo": "280017104762",
+        "arquivo": "280017104762.pdf",
         "offset": 4222377,
         "tamanho": 88867
       },
       {
-        "arquivo": "280017104761",
+        "arquivo": "280017104761.pdf",
         "offset": 49775087,
         "tamanho": 87834
       },
       {
-        "arquivo": "280017104765",
+        "arquivo": "280017104765.pdf",
         "offset": 49862993,
         "tamanho": 81447
       },
       {
-        "arquivo": "280017104763",
+        "arquivo": "280017104763.pdf",
         "offset": 54351395,
         "tamanho": 107274
       }
     ],
     "280002541457": [
       {
-        "arquivo": "280016998009",
+        "arquivo": "280016998009.pdf",
         "offset": 560171,
         "tamanho": 82255
       },
       {
-        "arquivo": "280016998010",
+        "arquivo": "280016998010.pdf",
         "offset": 4311316,
         "tamanho": 89065
       },
       {
-        "arquivo": "280016998008",
+        "arquivo": "280016998008.pdf",
         "offset": 17961722,
         "tamanho": 84249
       },
       {
-        "arquivo": "280016998003",
+        "arquivo": "280016998003.pdf",
         "offset": 54458741,
         "tamanho": 83592
       }
     ],
     "280002541458": [
       {
-        "arquivo": "280016998017",
+        "arquivo": "280016998017.pdf",
         "offset": 642498,
         "tamanho": 73780
       },
       {
-        "arquivo": "280016998018",
+        "arquivo": "280016998018.pdf",
         "offset": 716350,
         "tamanho": 81988
       },
       {
-        "arquivo": "280016998020",
+        "arquivo": "280016998020.pdf",
         "offset": 4400453,
         "tamanho": 107537
       },
       {
-        "arquivo": "280016998019",
+        "arquivo": "280016998019.pdf",
         "offset": 18046043,
         "tamanho": 88089
       },
       {
-        "arquivo": "280016998014",
+        "arquivo": "280016998014.pdf",
         "offset": 62488742,
         "tamanho": 105711
       }
     ],
+    "280002539826": [
+      {
+        "arquivo": "280016919940.2022.4.06.3800.pdf",
+        "offset": 798425,
+        "tamanho": 135264
+      },
+      {
+        "arquivo": "280016919935.2025.8.13.0000compressed.pdf",
+        "offset": 4572840,
+        "tamanho": 364112
+      },
+      {
+        "arquivo": "280016919936.2026.8.13.0000.pdf",
+        "offset": 4937039,
+        "tamanho": 263576
+      },
+      {
+        "arquivo": "280017124965. TRF1_1G e 2G.pdf",
+        "offset": 5261883,
+        "tamanho": 227318
+      },
+      {
+        "arquivo": "280016919938.2025.8.13.0000.pdf",
+        "offset": 8646873,
+        "tamanho": 501443
+      },
+      {
+        "arquivo": "280016919937.2025.8.13.0000.pdf",
+        "offset": 18134219,
+        "tamanho": 277452
+      },
+      {
+        "arquivo": "280016919941.pdf",
+        "offset": 18411743,
+        "tamanho": 66396
+      },
+      {
+        "arquivo": "280017006169. TRF6_ 1G e 2G_eProc.pdf",
+        "offset": 49987893,
+        "tamanho": 171221
+      },
+      {
+        "arquivo": "280016919927.pdf",
+        "offset": 54542405,
+        "tamanho": 80301
+      },
+      {
+        "arquivo": "280016919942. TRF62G.pdf",
+        "offset": 54622786,
+        "tamanho": 102997
+      },
+      {
+        "arquivo": "280016919929.pdf",
+        "offset": 62594525,
+        "tamanho": 82458
+      },
+      {
+        "arquivo": "280016919930.pdf",
+        "offset": 62677055,
+        "tamanho": 227760
+      },
+      {
+        "arquivo": "280016919939.2023.4.06.3800.pdf",
+        "offset": 62904902,
+        "tamanho": 129987
+      }
+    ],
+    "280002540694": [
+      {
+        "arquivo": "280017002798.do 1.pdf",
+        "offset": 933766,
+        "tamanho": 51410
+      },
+      {
+        "arquivo": "280017002796.pdf",
+        "offset": 5562855,
+        "tamanho": 113879
+      },
+      {
+        "arquivo": "280017002797.pdf",
+        "offset": 50159186,
+        "tamanho": 70924
+      },
+      {
+        "arquivo": "280017002799.pdf",
+        "offset": 50230182,
+        "tamanho": 637441
+      },
+      {
+        "arquivo": "280017002795.pdf",
+        "offset": 63034961,
+        "tamanho": 114060
+      }
+    ],
+    "280002552485": [
+      {
+        "arquivo": "280017113391.2 grauFABIANA.pdf",
+        "offset": 985262,
+        "tamanho": 86076
+      },
+      {
+        "arquivo": "280017113392.2 grauFABIANA.pdf",
+        "offset": 9230579,
+        "tamanho": 86076
+      },
+      {
+        "arquivo": "280017113394.grau.pdf",
+        "offset": 18478216,
+        "tamanho": 89670
+      },
+      {
+        "arquivo": "280017113393.pdf",
+        "offset": 50867695,
+        "tamanho": 84998
+      }
+    ],
     "280002552487": [
       {
-        "arquivo": "280017113411",
+        "arquivo": "280017113411.pdf",
         "offset": 1071410,
         "tamanho": 51258
       },
       {
-        "arquivo": "280017113414",
+        "arquivo": "280017113414.pdf",
         "offset": 5751663,
         "tamanho": 115821
       },
       {
-        "arquivo": "280017131970",
+        "arquivo": "280017131970.pdf",
         "offset": 18567958,
         "tamanho": 135617
       },
       {
-        "arquivo": "280017113412",
+        "arquivo": "280017113412.pdf",
         "offset": 23729742,
         "tamanho": 151834
       },
       {
-        "arquivo": "280017113413",
+        "arquivo": "280017113413.pdf",
         "offset": 55024265,
         "tamanho": 371914
       }
     ],
     "280002538811": [
       {
-        "arquivo": "280016899176",
+        "arquivo": "280016899176.pdf",
         "offset": 1122740,
         "tamanho": 65160
       },
       {
-        "arquivo": "280016899185",
+        "arquivo": "280016899185.pdf",
         "offset": 1187972,
         "tamanho": 52447
       },
       {
-        "arquivo": "280016899175",
+        "arquivo": "280016899175.pdf",
         "offset": 18703647,
         "tamanho": 65336
       },
       {
-        "arquivo": "280016899181",
+        "arquivo": "280016899181.pdf",
         "offset": 51010842,
         "tamanho": 65813
       },
       {
-        "arquivo": "280016899178",
+        "arquivo": "280016899178.pdf",
         "offset": 55550358,
         "tamanho": 56381
       },
       {
-        "arquivo": "280016899179",
+        "arquivo": "280016899179.pdf",
         "offset": 63445570,
         "tamanho": 56381
       }
     ],
+    "280002538812": [
+      {
+        "arquivo": "280016899212.2024.8.14.0401178595559594614580processopart16.pdf",
+        "offset": 1240538,
+        "tamanho": 188755
+      },
+      {
+        "arquivo": "280016899217.2024.8.14.0401178595559594614580processopart19.pdf",
+        "offset": 1429412,
+        "tamanho": 482424
+      },
+      {
+        "arquivo": "280016899213.2024.8.14.0401178595559594614580processopart23.pdf",
+        "offset": 5867603,
+        "tamanho": 274587
+      },
+      {
+        "arquivo": "280016899190.pdf",
+        "offset": 9431554,
+        "tamanho": 81924
+      },
+      {
+        "arquivo": "280016899201.2024.8.14.0401178595559594614580processopart25.pdf",
+        "offset": 9513597,
+        "tamanho": 742152
+      },
+      {
+        "arquivo": "280016899207.2024.8.14.0401178595559594614580processopart6.pdf",
+        "offset": 10255867,
+        "tamanho": 227840
+      },
+      {
+        "arquivo": "280016899202.2024.8.14.0401178595559594614580processopart13.pdf",
+        "offset": 18769102,
+        "tamanho": 135454
+      },
+      {
+        "arquivo": "280016899216.2024.8.14.0401178595559594614580processopart9.pdf",
+        "offset": 18904674,
+        "tamanho": 307790
+      },
+      {
+        "arquivo": "280016899218.2024.8.14.0401178595559594614580processopart11.pdf",
+        "offset": 19212583,
+        "tamanho": 705106
+      },
+      {
+        "arquivo": "280016899221.2024.8.14.0401178595559594614580processopart24.pdf",
+        "offset": 19917808,
+        "tamanho": 777256
+      },
+      {
+        "arquivo": "280016899223.2024.8.14.0401178595559594614580processopart18.pdf",
+        "offset": 20695183,
+        "tamanho": 337048
+      },
+      {
+        "arquivo": "280016899197.pdf",
+        "offset": 24735789,
+        "tamanho": 96533
+      },
+      {
+        "arquivo": "280016899209.2024.8.14.0401178595559594614580processopart15.pdf",
+        "offset": 24832441,
+        "tamanho": 141338
+      },
+      {
+        "arquivo": "280016899215.2024.8.14.0401178595559594614580processopart3.pdf",
+        "offset": 24973897,
+        "tamanho": 220972
+      },
+      {
+        "arquivo": "280016899204.2024.8.14.0401178595559594614580processopart20.pdf",
+        "offset": 51076774,
+        "tamanho": 364137
+      },
+      {
+        "arquivo": "280016899211.2024.8.14.0401178595559594614580processopart22.pdf",
+        "offset": 51441030,
+        "tamanho": 400051
+      },
+      {
+        "arquivo": "280016899222.2024.8.14.0401178595559594614580processopart2.pdf",
+        "offset": 51841199,
+        "tamanho": 262698
+      },
+      {
+        "arquivo": "280016899200.2024.8.14.0401178595559594614580processopart12.pdf",
+        "offset": 55606858,
+        "tamanho": 148135
+      },
+      {
+        "arquivo": "280016899205.2024.8.14.0401178595559594614580processopart7.pdf",
+        "offset": 55755111,
+        "tamanho": 226052
+      },
+      {
+        "arquivo": "280016899208.2024.8.14.0401178595559594614580processopart10.pdf",
+        "offset": 55981282,
+        "tamanho": 627263
+      },
+      {
+        "arquivo": "280016899210.2024.8.14.0401178595559594614580processopart14.pdf",
+        "offset": 56608664,
+        "tamanho": 169601
+      },
+      {
+        "arquivo": "280016899214.2024.8.14.0401178595559594614580processopart21.pdf",
+        "offset": 56778384,
+        "tamanho": 292847
+      },
+      {
+        "arquivo": "280016899219.2024.8.14.0401178595559594614580processopart4.pdf",
+        "offset": 57071349,
+        "tamanho": 258144
+      },
+      {
+        "arquivo": "280016899220.2024.8.14.0401178595559594614580processopart17.pdf",
+        "offset": 57399449,
+        "tamanho": 426993
+      },
+      {
+        "arquivo": "280016899191.pdf",
+        "offset": 63502023,
+        "tamanho": 89137
+      },
+      {
+        "arquivo": "280016899196.pdf",
+        "offset": 63591232,
+        "tamanho": 51970
+      },
+      {
+        "arquivo": "280016899198.2024.8.14.0401178595559594614580processopart1.pdf",
+        "offset": 63643320,
+        "tamanho": 431848
+      },
+      {
+        "arquivo": "280016899199.pdf",
+        "offset": 64075240,
+        "tamanho": 96533
+      },
+      {
+        "arquivo": "280016899203.2024.8.14.0401178595559594614580processopart5.pdf",
+        "offset": 64171891,
+        "tamanho": 214020
+      },
+      {
+        "arquivo": "280016899206.2024.8.14.0401178595559594614580processopart8.pdf",
+        "offset": 64386029,
+        "tamanho": 208406
+      }
+    ],
     "280002548140": [
       {
-        "arquivo": "280017075379",
+        "arquivo": "280017075379.pdf",
         "offset": 1911908,
         "tamanho": 82741
       },
       {
-        "arquivo": "280017075376",
+        "arquivo": "280017075376.pdf",
         "offset": 10483779,
         "tamanho": 67332
       },
       {
-        "arquivo": "280017075375",
+        "arquivo": "280017075375.pdf",
         "offset": 57329565,
         "tamanho": 69765
       },
       {
-        "arquivo": "280017075378",
+        "arquivo": "280017075378.pdf",
         "offset": 64594507,
         "tamanho": 89041
       }
     ],
     "280002551976": [
       {
-        "arquivo": "280017107296",
+        "arquivo": "280017107296.pdf",
         "offset": 1994721,
         "tamanho": 150750
       },
       {
-        "arquivo": "280017107297",
+        "arquivo": "280017107297.pdf",
         "offset": 6395526,
         "tamanho": 114348
       },
       {
-        "arquivo": "280017107295",
+        "arquivo": "280017107295.pdf",
         "offset": 25194941,
         "tamanho": 51545
       },
       {
-        "arquivo": "280017107301",
+        "arquivo": "280017107301.pdf",
         "offset": 52269869,
         "tamanho": 114616
       },
       {
-        "arquivo": "280017107298",
+        "arquivo": "280017107298.pdf",
         "offset": 57897002,
         "tamanho": 123837
       },
       {
-        "arquivo": "280017107299",
+        "arquivo": "280017107299.pdf",
         "offset": 64683620,
         "tamanho": 71211
       }
     ],
     "280002542548": [
       {
-        "arquivo": "280017015941",
+        "arquivo": "280017015913.2016.4.03.6102.pdf",
+        "offset": 2145558,
+        "tamanho": 79200
+      },
+      {
+        "arquivo": "280017015916.2016.4.03.6121.pdf",
+        "offset": 2224845,
+        "tamanho": 78157
+      },
+      {
+        "arquivo": "280017015918.2016.4.03.6102.pdf",
+        "offset": 2303089,
+        "tamanho": 87656
+      },
+      {
+        "arquivo": "280017015921.2026.4.03.6106.pdf",
+        "offset": 2390832,
+        "tamanho": 58193
+      },
+      {
+        "arquivo": "280017015941.pdf",
         "offset": 2449097,
         "tamanho": 397246
       },
       {
-        "arquivo": "280017015944",
+        "arquivo": "280017015944.pdf",
         "offset": 2846415,
         "tamanho": 310531
       },
       {
-        "arquivo": "280017015945",
+        "arquivo": "280017015945.pdf",
         "offset": 3157018,
         "tamanho": 286596
       },
       {
-        "arquivo": "280017015995",
+        "arquivo": "280017015959.2016.4.03.6100.pdf",
+        "offset": 3443701,
+        "tamanho": 72050
+      },
+      {
+        "arquivo": "280017015978.OBJ.PE005272314.2001.8.26.0114.pdf",
+        "offset": 3515854,
+        "tamanho": 84825
+      },
+      {
+        "arquivo": "280017015995.pdf",
         "offset": 3600751,
         "tamanho": 61313
       },
       {
-        "arquivo": "280017015947",
+        "arquivo": "280017015928.2016.4.03.6104.pdf",
+        "offset": 6509961,
+        "tamanho": 87852
+      },
+      {
+        "arquivo": "280017015934.2018.4.03.6100.pdf",
+        "offset": 6597900,
+        "tamanho": 239768
+      },
+      {
+        "arquivo": "280017015947.pdf",
         "offset": 6837740,
         "tamanho": 306169
       },
       {
-        "arquivo": "280017015984",
+        "arquivo": "280017015957.2016.4.03.6102.pdf",
+        "offset": 7143996,
+        "tamanho": 70843
+      },
+      {
+        "arquivo": "280017015984.pdf",
         "offset": 7214911,
         "tamanho": 264134
       },
       {
-        "arquivo": "280017015993",
+        "arquivo": "280017015993.pdf",
         "offset": 7479117,
         "tamanho": 496708
       },
       {
-        "arquivo": "280017015952",
+        "arquivo": "280017015932.2024.4.03.6100.pdf",
+        "offset": 10675140,
+        "tamanho": 135027
+      },
+      {
+        "arquivo": "280017015933.2016.4.03.6114.pdf",
+        "offset": 10810254,
+        "tamanho": 127355
+      },
+      {
+        "arquivo": "280017015937.2018.4.03.6105.pdf",
+        "offset": 10937696,
+        "tamanho": 265615
+      },
+      {
+        "arquivo": "280017015940.1998.pdf",
+        "offset": 11203388,
+        "tamanho": 131812
+      },
+      {
+        "arquivo": "280017015952.pdf",
         "offset": 11335272,
         "tamanho": 3011159
       },
       {
-        "arquivo": "280017015967",
+        "arquivo": "280017015967.pdf",
         "offset": 14346503,
         "tamanho": 333881
       },
       {
-        "arquivo": "280017015969",
+        "arquivo": "280017015969.pdf",
         "offset": 14680456,
         "tamanho": 418178
       },
       {
-        "arquivo": "280017015983",
+        "arquivo": "280017015977.1998.8.26.0050.pdf",
+        "offset": 15098721,
+        "tamanho": 66684
+      },
+      {
+        "arquivo": "280017015979.1991.8.26.0050.pdf",
+        "offset": 15165492,
+        "tamanho": 92458
+      },
+      {
+        "arquivo": "280017015983.pdf",
         "offset": 15258022,
         "tamanho": 283072
       },
       {
-        "arquivo": "280017015991",
+        "arquivo": "280017015991.pdf",
         "offset": 15541166,
         "tamanho": 406912
       },
       {
-        "arquivo": "280017015997",
+        "arquivo": "280017015997.pdf",
         "offset": 15948150,
         "tamanho": 44267
       },
       {
-        "arquivo": "280017015998",
+        "arquivo": "280017015998.pdf",
         "offset": 15992489,
         "tamanho": 362773
       },
       {
-        "arquivo": "280017016001",
+        "arquivo": "280017016001.pdf",
         "offset": 16355334,
         "tamanho": 171472
       },
       {
-        "arquivo": "280017015946",
+        "arquivo": "280017015919.2016.4.03.6100.pdf",
+        "offset": 21032318,
+        "tamanho": 108351
+      },
+      {
+        "arquivo": "280017015923.2009.4.03.6100.pdf",
+        "offset": 21140756,
+        "tamanho": 142236
+      },
+      {
+        "arquivo": "280017015929.2024.4.03.6100.pdf",
+        "offset": 21283079,
+        "tamanho": 124758
+      },
+      {
+        "arquivo": "280017015946.pdf",
         "offset": 21407909,
         "tamanho": 314378
       },
       {
-        "arquivo": "280017015965",
+        "arquivo": "280017015953.2024.4.03.6100.pdf",
+        "offset": 21722374,
+        "tamanho": 99813
+      },
+      {
+        "arquivo": "280017015965.pdf",
         "offset": 21822259,
         "tamanho": 226942
       },
       {
-        "arquivo": "280017015968",
+        "arquivo": "280017015968.pdf",
         "offset": 22049273,
         "tamanho": 325643
       },
       {
-        "arquivo": "280017015989",
+        "arquivo": "280017015974.1992.8.26.0050.pdf",
+        "offset": 22375003,
+        "tamanho": 61641
+      },
+      {
+        "arquivo": "280017015989.pdf",
         "offset": 22436716,
         "tamanho": 243080
       },
       {
-        "arquivo": "280017015942",
+        "arquivo": "280017015924.2016.4.03.6102.pdf",
+        "offset": 25246573,
+        "tamanho": 151936
+      },
+      {
+        "arquivo": "280017015926.2025.4.03.6100.pdf",
+        "offset": 25398596,
+        "tamanho": 77572
+      },
+      {
+        "arquivo": "280017015936.2023.4.03.6100.pdf",
+        "offset": 25476255,
+        "tamanho": 237355
+      },
+      {
+        "arquivo": "280017015938.2021.4.03.6100.pdf",
+        "offset": 25713697,
+        "tamanho": 412678
+      },
+      {
+        "arquivo": "280017015942.pdf",
         "offset": 26126447,
         "tamanho": 275376
       },
       {
-        "arquivo": "280017015982",
+        "arquivo": "280017015956.2016.4.03.6100.pdf",
+        "offset": 26401910,
+        "tamanho": 63887
+      },
+      {
+        "arquivo": "280017015960.2016.4.03.6100.pdf",
+        "offset": 26465884,
+        "tamanho": 87005
+      },
+      {
+        "arquivo": "280017015973.1985.8.26.0050.pdf",
+        "offset": 26552976,
+        "tamanho": 65254
+      },
+      {
+        "arquivo": "280017015982.pdf",
         "offset": 26618302,
         "tamanho": 218211
       },
       {
-        "arquivo": "280017015986",
+        "arquivo": "280017015985.2015.4.04.7100.pdf",
+        "offset": 26836600,
+        "tamanho": 508158
+      },
+      {
+        "arquivo": "280017015986.pdf",
         "offset": 27344830,
         "tamanho": 21784672
       },
       {
-        "arquivo": "280017015996",
+        "arquivo": "280017015996.pdf",
         "offset": 49129574,
         "tamanho": 68578
       },
       {
-        "arquivo": "280017015999",
+        "arquivo": "280017015999.pdf",
         "offset": 49198224,
         "tamanho": 344238
       },
       {
-        "arquivo": "280017015939",
+        "arquivo": "280017015912.2016.4.03.6105.pdf",
+        "offset": 52384572,
+        "tamanho": 63371
+      },
+      {
+        "arquivo": "280017015914.2010.4.03.6100.pdf",
+        "offset": 52448030,
+        "tamanho": 79150
+      },
+      {
+        "arquivo": "280017015922.2016.4.03.6100.pdf",
+        "offset": 52527267,
+        "tamanho": 110250
+      },
+      {
+        "arquivo": "280017015927.2022.4.03.6128.pdf",
+        "offset": 52637604,
+        "tamanho": 79286
+      },
+      {
+        "arquivo": "280017015939.pdf",
         "offset": 52716962,
         "tamanho": 78697
       },
       {
-        "arquivo": "280017015950",
+        "arquivo": "280017015950.pdf",
         "offset": 52795731,
         "tamanho": 109906
       },
       {
-        "arquivo": "280017015987",
+        "arquivo": "280017015962.2007.4.03.6105.pdf",
+        "offset": 52905724,
+        "tamanho": 79455
+      },
+      {
+        "arquivo": "280017015963.2007.4.03.6118.pdf",
+        "offset": 52985266,
+        "tamanho": 101247
+      },
+      {
+        "arquivo": "280017015987.pdf",
         "offset": 53086585,
         "tamanho": 170308
       },
       {
-        "arquivo": "280017015994",
+        "arquivo": "280017015994.pdf",
         "offset": 53256965,
         "tamanho": 59856
       },
       {
-        "arquivo": "280017015943",
+        "arquivo": "280017015925.2026.4.03.6100.pdf",
+        "offset": 58020926,
+        "tamanho": 74434
+      },
+      {
+        "arquivo": "280017015931.2016.4.03.6108.pdf",
+        "offset": 58095447,
+        "tamanho": 224885
+      },
+      {
+        "arquivo": "280017015943.pdf",
         "offset": 58320404,
         "tamanho": 281738
       },
       {
-        "arquivo": "280017015948",
+        "arquivo": "280017015948.pdf",
         "offset": 58602214,
         "tamanho": 313149
       },
       {
-        "arquivo": "280017015966",
+        "arquivo": "280017015958.2010.4.03.6109.pdf",
+        "offset": 58915450,
+        "tamanho": 72221
+      },
+      {
+        "arquivo": "280017015964.2018.4.01.3400favoritos.pdf",
+        "offset": 58987767,
+        "tamanho": 105002
+      },
+      {
+        "arquivo": "280017015966.pdf",
         "offset": 59092841,
         "tamanho": 211244
       },
       {
-        "arquivo": "280017015970",
+        "arquivo": "280017015970.pdf",
         "offset": 59304157,
         "tamanho": 1070138
       },
       {
-        "arquivo": "280017015988",
+        "arquivo": "280017015972.2022.8.26.0050  Luiz Inacio Lula da Silva.pdf",
+        "offset": 60374409,
+        "tamanho": 95235
+      },
+      {
+        "arquivo": "280017015988.pdf",
         "offset": 60469716,
         "tamanho": 162413
       },
       {
-        "arquivo": "280017015990",
+        "arquivo": "280017015990.pdf",
         "offset": 60632201,
         "tamanho": 259694
       },
       {
-        "arquivo": "280017016000",
+        "arquivo": "280017016000.pdf",
         "offset": 60891967,
         "tamanho": 254254
       },
       {
-        "arquivo": "280017015949",
+        "arquivo": "280017015915.2016.4.03.6100.pdf",
+        "offset": 64754918,
+        "tamanho": 76875
+      },
+      {
+        "arquivo": "280017015917.2016.4.03.6105.pdf",
+        "offset": 64831880,
+        "tamanho": 98454
+      },
+      {
+        "arquivo": "280017015920.2016.4.03.6100.pdf",
+        "offset": 64930421,
+        "tamanho": 107740
+      },
+      {
+        "arquivo": "280017015930.2025.4.03.6100.pdf",
+        "offset": 65038248,
+        "tamanho": 114591
+      },
+      {
+        "arquivo": "280017015935.2024.4.03.6100.pdf",
+        "offset": 65152926,
+        "tamanho": 205915
+      },
+      {
+        "arquivo": "280017015949.pdf",
         "offset": 65358913,
         "tamanho": 1655140
       },
       {
-        "arquivo": "280017016002",
+        "arquivo": "280017015951.2017.4.01.4000.pdf",
+        "offset": 67014140,
+        "tamanho": 77759
+      },
+      {
+        "arquivo": "280017015961.2016.4.03.6100.pdf",
+        "offset": 67091986,
+        "tamanho": 79682
+      },
+      {
+        "arquivo": "280017015971.1995.8.26.0001.pdf",
+        "offset": 67171755,
+        "tamanho": 74885
+      },
+      {
+        "arquivo": "280017015975.1991.8.26.0050.pdf",
+        "offset": 67246727,
+        "tamanho": 72069
+      },
+      {
+        "arquivo": "280017015976.2016.8.26.0050.pdf",
+        "offset": 67318883,
+        "tamanho": 76509
+      },
+      {
+        "arquivo": "280017015980.1991.8.26.0050.pdf",
+        "offset": 67395479,
+        "tamanho": 78196
+      },
+      {
+        "arquivo": "280017015992.2014.4.04.7100.pdf",
+        "offset": 67473762,
+        "tamanho": 577056
+      },
+      {
+        "arquivo": "280017016002.pdf",
         "offset": 68050890,
         "tamanho": 51243
       }
     ],
+    "280002542549": [
+      {
+        "arquivo": "280017016019. Certidao Criminal TSE  Geraldo Alckmin.pdf",
+        "offset": 3662176,
+        "tamanho": 52490
+      },
+      {
+        "arquivo": "280017016017. Certidao Criminal STF  Geraldo Alckmin.pdf",
+        "offset": 7975937,
+        "tamanho": 64103
+      },
+      {
+        "arquivo": "280017016009. Certidao Execucao Criminal TJSP  Geraldo Alckmin.pdf",
+        "offset": 16526928,
+        "tamanho": 54605
+      },
+      {
+        "arquivo": "280017016011. Certidao Criminal TJSP 1 grau Eproc  Geraldo Alckmin.pdf",
+        "offset": 16581659,
+        "tamanho": 60417
+      },
+      {
+        "arquivo": "280017016018. Certidao Criminal TJSP 2 grau  Geraldo Alckmin.pdf",
+        "offset": 16642196,
+        "tamanho": 51603
+      },
+      {
+        "arquivo": "280017016022. Certidao Criminal TRF1 1 e 2 grau  Geraldo Alckmin.pdf",
+        "offset": 16693923,
+        "tamanho": 105516
+      },
+      {
+        "arquivo": "280017016010. Certidao Criminal TJSP 1 grau eSAJ  Geraldo Alckmin.pdf",
+        "offset": 53316946,
+        "tamanho": 95686
+      },
+      {
+        "arquivo": "280017016014. Certidao Criminal TRF3 1 e 2 grau  Geraldo Alckmin.pdf",
+        "offset": 61146345,
+        "tamanho": 145907
+      },
+      {
+        "arquivo": "280017016016. Certidao Criminal TJDFT 1 e 2 grau  Geraldo Alckmin.pdf",
+        "offset": 68102258,
+        "tamanho": 87178
+      }
+    ],
     "280002553883": [
       {
-        "arquivo": "280017124642",
+        "arquivo": "280017124642.pdf",
         "offset": 3714738,
         "tamanho": 89169
       },
       {
-        "arquivo": "280017124639",
+        "arquivo": "280017124639.pdf",
         "offset": 49542534,
         "tamanho": 80207
       },
       {
-        "arquivo": "280017124640",
+        "arquivo": "280017124640.pdf",
         "offset": 53412704,
         "tamanho": 80432
       },
       {
-        "arquivo": "280017124641",
+        "arquivo": "280017124641.pdf",
         "offset": 61292324,
         "tamanho": 82111
       }
     ],
     "280002553884": [
       {
-        "arquivo": "280017124650",
+        "arquivo": "280017124650.pdf",
         "offset": 3803979,
         "tamanho": 65723
       },
       {
-        "arquivo": "280017124649",
+        "arquivo": "280017124649.pdf",
         "offset": 16799511,
         "tamanho": 51256
       },
       {
-        "arquivo": "280017124648",
+        "arquivo": "280017124648.pdf",
         "offset": 22679868,
         "tamanho": 70940
       },
       {
-        "arquivo": "280017124651",
+        "arquivo": "280017124651.pdf",
         "offset": 68189508,
         "tamanho": 66083
       }
     ],
     "280002551932": [
       {
-        "arquivo": "280017106563",
+        "arquivo": "280017106563.pdf",
         "offset": 3869774,
         "tamanho": 178426
       },
       {
-        "arquivo": "280017106560",
+        "arquivo": "280017106560.pdf",
         "offset": 16850839,
         "tamanho": 81935
       },
       {
-        "arquivo": "280017106561",
+        "arquivo": "280017106561.pdf",
         "offset": 53493208,
         "tamanho": 79300
       },
       {
-        "arquivo": "280017106559",
+        "arquivo": "280017106559.pdf",
         "offset": 61374507,
         "tamanho": 95956
       },
       {
-        "arquivo": "280017106565",
+        "arquivo": "280017106565.pdf",
         "offset": 68255663,
         "tamanho": 80303
       }
     ],
     "280002551933": [
       {
-        "arquivo": "280017106572",
+        "arquivo": "280017106572.pdf",
         "offset": 4048272,
         "tamanho": 54360
       },
       {
-        "arquivo": "280017106573",
+        "arquivo": "280017106573.pdf",
         "offset": 16932846,
         "tamanho": 153127
       },
       {
-        "arquivo": "280017106576",
+        "arquivo": "280017106576.pdf",
         "offset": 17086045,
         "tamanho": 108497
       },
       {
-        "arquivo": "280017106574",
+        "arquivo": "280017106574.pdf",
         "offset": 49622813,
         "tamanho": 63732
       },
       {
-        "arquivo": "280017106571",
+        "arquivo": "280017106571.pdf",
         "offset": 61470535,
         "tamanho": 316630
       }
     ],
     "280002539825": [
       {
-        "arquivo": "280016919919",
+        "arquivo": "280016919919.pdf",
         "offset": 4508062,
         "tamanho": 64681
       },
       {
-        "arquivo": "280016919922",
+        "arquivo": "280017127481. TRF5_1G.pdf",
+        "offset": 5200696,
+        "tamanho": 61101
+      },
+      {
+        "arquivo": "280016919922.pdf",
         "offset": 8537190,
         "tamanho": 65088
       },
       {
-        "arquivo": "280016919920",
+        "arquivo": "280016919920.pdf",
         "offset": 8602350,
         "tamanho": 44436
       },
       {
-        "arquivo": "280016919921",
+        "arquivo": "280017127482. Ob. Pé - 0805968-77.2022.4.05.8100.pdf",
+        "offset": 9148425,
+        "tamanho": 30359
+      },
+      {
+        "arquivo": "280016919921.pdf",
         "offset": 23574272,
         "tamanho": 84212
       }
     ],
     "280002540693": [
       {
-        "arquivo": "280017002785",
+        "arquivo": "280017002785.pdf",
         "offset": 5489273,
         "tamanho": 73510
       },
       {
-        "arquivo": "280017002783",
+        "arquivo": "280017002783.pdf",
         "offset": 9178856,
         "tamanho": 51637
       },
       {
-        "arquivo": "280017002784",
+        "arquivo": "280017002784.pdf",
         "offset": 54725855,
         "tamanho": 69007
       },
       {
-        "arquivo": "280017002786",
+        "arquivo": "280017002786.pdf",
         "offset": 54794934,
         "tamanho": 73510
       }
     ],
-    "280002540694": [
-      {
-        "arquivo": "280017002796",
-        "offset": 5562855,
-        "tamanho": 113879
-      },
-      {
-        "arquivo": "280017002797",
-        "offset": 50159186,
-        "tamanho": 70924
-      },
-      {
-        "arquivo": "280017002799",
-        "offset": 50230182,
-        "tamanho": 637441
-      },
-      {
-        "arquivo": "280017002795",
-        "offset": 63034961,
-        "tamanho": 114060
-      }
-    ],
     "280002552484": [
       {
-        "arquivo": "280017113387",
+        "arquivo": "280017113387.pdf",
         "offset": 5676806,
         "tamanho": 74785
       },
       {
-        "arquivo": "280017113386",
+        "arquivo": "280017113386.pdf",
         "offset": 54868516,
         "tamanho": 74785
       },
       {
-        "arquivo": "280017113388",
+        "arquivo": "280017113388.pdf",
         "offset": 54943373,
         "tamanho": 80820
       },
       {
-        "arquivo": "280017113381",
+        "arquivo": "280017113381.pdf",
         "offset": 63149093,
         "tamanho": 89121
+      },
+      {
+        "arquivo": "280017113385. GRAU MTCLARIANA.pdf",
+        "offset": 63238303,
+        "tamanho": 82355
       }
     ],
     "280002551975": [
       {
-        "arquivo": "280017107283",
+        "arquivo": "280017107283.pdf",
         "offset": 6142262,
         "tamanho": 114277
       },
       {
-        "arquivo": "280017107289",
+        "arquivo": "280017107289.pdf",
         "offset": 6256611,
         "tamanho": 138843
       },
       {
-        "arquivo": "280017107284",
+        "arquivo": "280017107284.pdf",
         "offset": 10551183,
         "tamanho": 123870
       },
       {
-        "arquivo": "280017107287",
+        "arquivo": "280017107287.pdf",
         "offset": 52103969,
         "tamanho": 51139
       },
       {
-        "arquivo": "280017107290",
+        "arquivo": "280017107290.pdf",
         "offset": 52155180,
         "tamanho": 114617
       },
       {
-        "arquivo": "280017107293",
+        "arquivo": "280017107293.pdf",
         "offset": 57826514,
         "tamanho": 70416
       }
     ],
     "280002551547": [
       {
-        "arquivo": "280017104771",
+        "arquivo": "280017104771.pdf",
         "offset": 8340231,
         "tamanho": 51098
       },
       {
-        "arquivo": "280017104773",
+        "arquivo": "280017104773.pdf",
         "offset": 8391401,
         "tamanho": 63086
       },
       {
-        "arquivo": "280017104774",
+        "arquivo": "280017104774.pdf",
         "offset": 8454559,
         "tamanho": 82559
       },
       {
-        "arquivo": "280017125642",
+        "arquivo": "280017125642.pdf",
         "offset": 49944512,
         "tamanho": 43288
       },
       {
-        "arquivo": "280017125644",
+        "arquivo": "280017125644.pdf",
         "offset": 62278273,
         "tamanho": 82457
       },
       {
-        "arquivo": "280017104772",
+        "arquivo": "280017104772.pdf",
         "offset": 62360802,
         "tamanho": 49584
       },
       {
-        "arquivo": "280017104782",
+        "arquivo": "280017104782.pdf",
         "offset": 62410458,
         "tamanho": 78212
       }
     ],
     "280002552486": [
       {
-        "arquivo": "280017113402",
+        "arquivo": "280017113402.pdf",
         "offset": 9316727,
         "tamanho": 114755
       },
       {
-        "arquivo": "280017113401",
+        "arquivo": "280017113401.pdf",
         "offset": 23658556,
         "tamanho": 71114
       }
     ],
-    "280002538812": [
-      {
-        "arquivo": "280016899190",
-        "offset": 9431554,
-        "tamanho": 81924
-      },
-      {
-        "arquivo": "280016899197",
-        "offset": 24735789,
-        "tamanho": 96533
-      },
-      {
-        "arquivo": "280016899191",
-        "offset": 63502023,
-        "tamanho": 89137
-      },
-      {
-        "arquivo": "280016899196",
-        "offset": 63591232,
-        "tamanho": 51970
-      },
-      {
-        "arquivo": "280016899199",
-        "offset": 64075240,
-        "tamanho": 96533
-      }
-    ],
-    "280002539826": [
-      {
-        "arquivo": "280016919941",
-        "offset": 18411743,
-        "tamanho": 66396
-      },
-      {
-        "arquivo": "280016919927",
-        "offset": 54542405,
-        "tamanho": 80301
-      },
-      {
-        "arquivo": "280016919929",
-        "offset": 62594525,
-        "tamanho": 82458
-      },
-      {
-        "arquivo": "280016919930",
-        "offset": 62677055,
-        "tamanho": 227760
-      }
-    ],
     "280002548139": [
       {
-        "arquivo": "280017075363",
+        "arquivo": "280017075363.pdf",
         "offset": 23881648,
         "tamanho": 114779
       },
       {
-        "arquivo": "280017075360",
+        "arquivo": "280017075365.2024.8.26.0191.pdf",
+        "offset": 23996514,
+        "tamanho": 739203
+      },
+      {
+        "arquivo": "280017075360.pdf",
         "offset": 50952765,
         "tamanho": 58005
       },
       {
-        "arquivo": "280017075361",
+        "arquivo": "280017075361.pdf",
         "offset": 55396251,
         "tamanho": 154035
       },
       {
-        "arquivo": "280017075367",
+        "arquivo": "280017075367.pdf",
         "offset": 63320730,
         "tamanho": 124768
-      }
-    ],
-    "280002552485": [
-      {
-        "arquivo": "280017113393",
-        "offset": 50867695,
-        "tamanho": 84998
       }
     ]
   }

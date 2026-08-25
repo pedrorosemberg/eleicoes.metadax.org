@@ -58,13 +58,6 @@ const BLOQUEADOS: ItemRoteiro[] = [
     fonte: "TSE — DivulgaCandContas (ver docs/DATA_SOURCES.md §5 para o achado completo)",
     status: "bloqueado",
   },
-  {
-    titulo: "Certidões criminais de 6 UFs (BA, MG, PR, RJ, SC, SP)",
-    descricao:
-      "As certidões criminais já estão disponíveis para 22 das 28 unidades eleitorais. Nessas 6, o ZIP de origem publicado no release está corrompido (falta o índice/central directory do arquivo, confirmado com unzip -t) — não é um dado sobre nenhum candidato específico dessas UFs, é um problema no arquivo em si, que precisa ser reenviado.",
-    fonte: "TSE — dataset certidao_criminal (ver docs/DATA_SOURCES.md §1 para o diagnóstico completo)",
-    status: "bloqueado",
-  },
 ];
 
 const SUGESTOES_COMUNIDADE = [

@@ -23,6 +23,7 @@
 
 const EOCD_SIGNATURE = 0x06054b50;
 const CENTRAL_DIR_SIGNATURE = 0x02014b50;
+const LOCAL_HEADER_SIGNATURE = 0x04034b50;
 const LOCAL_HEADER_FIXED_SIZE = 30;
 
 export interface ZipEntryLocation {
@@ -111,4 +112,73 @@ export async function buscarBytesEntradaZip(
   tamanho: number,
 ): Promise<Buffer> {
   return rangeGet(zipUrl, offset, offset + tamanho - 1);
+}
+
+/**
+ * Recupera as entradas de um ZIP baixado localmente cujo central directory
+ * está ausente (upload truncado — falta só o fim do arquivo, não o
+ * conteúdo). Em vez de depender do central directory, varre os local file
+ * headers sequencialmente a partir do início: cada entry tem um header
+ * fixo de 30 bytes com o tamanho dos dados que seguem, então dá para
+ * caminhar "PK\x03\x04 → nome → dados → próximo PK\x03\x04" sem nunca
+ * precisar do índice final.
+ *
+ * Confirmado contra os 6 ZIPs de certidões criminais com upload truncado
+ * (25/08/2026): todo entry é STORE (sem compactação) e sem data
+ * descriptor — os headers locais têm o tamanho real. A varredura chega
+ * limpa até o penúltimo entry; só o **último** fica com os dados
+ * cortados pela metade (é o que estava sendo enviado quando a conexão
+ * caiu) — detectado e descartado comparando offset+tamanho contra o
+ * tamanho real do arquivo, sem impactar nenhum outro documento.
+ *
+ * Os offsets calculados aqui continuam válidos contra o arquivo hospedado
+ * no release do GitHub (mesmos bytes, só falta o rodapé) — então o
+ * mecanismo de serving via Range GET (buscarBytesEntradaZip) funciona
+ * normalmente para essas entradas, sem duplicar hospedagem.
+ */
+export async function recuperarEntradasZipLocal(caminhoLocal: string): Promise<ZipEntryLocation[]> {
+  const fs = await import("node:fs/promises");
+  const { open } = fs;
+  const handle = await open(caminhoLocal, "r");
+  try {
+    const { size: tamanhoTotal } = await handle.stat();
+
+    const entradas: ZipEntryLocation[] = [];
+    let offset = 0;
+    const header = Buffer.alloc(30);
+
+    while (offset < tamanhoTotal - 4) {
+      const { bytesRead: sigBytes } = await handle.read(header, 0, 4, offset);
+      if (sigBytes < 4) break;
+      const sig = header.readUInt32LE(0);
+      if (sig !== LOCAL_HEADER_SIGNATURE) break; // fim dos entries locais (central directory ou lixo)
+
+      const { bytesRead: headerBytes } = await handle.read(header, 0, 30, offset);
+      if (headerBytes < 30) break;
+
+      const compMethod = header.readUInt16LE(8);
+      const compSize = header.readUInt32LE(18);
+      const fnLen = header.readUInt16LE(26);
+      const exLen = header.readUInt16LE(28);
+
+      const nomeBuf = Buffer.alloc(fnLen);
+      await handle.read(nomeBuf, 0, fnLen, offset + 30);
+      const filename = nomeBuf.toString("utf8");
+
+      const dataStart = offset + 30 + fnLen + exLen;
+
+      if (compMethod === 0 && dataStart + compSize <= tamanhoTotal) {
+        entradas.push({ arquivo: filename, offset: dataStart, tamanho: compSize });
+      }
+      // Entry comprimido (não deveria acontecer, ver nota no topo do
+      // arquivo) ou cujo fim calculado passa do tamanho real do arquivo
+      // (o entry final truncado pelo upload interrompido) é descartado.
+
+      offset = dataStart + compSize;
+    }
+
+    return entradas;
+  } finally {
+    await handle.close();
+  }
 }

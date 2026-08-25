@@ -440,7 +440,7 @@ export default async function CandidatoPage({
             {certidoesDoCandidato.map((c, i) => (
               <li key={c.arquivo}>
                 <a
-                  href={`/api/certidao/${candidato.uf}/${candidato.sqCandidato}/${c.arquivo}`}
+                  href={`/api/certidao/${candidato.uf}/${candidato.sqCandidato}/${encodeURIComponent(c.arquivo)}`}
                   target="_blank"
                   rel="noreferrer noopener"
                   className="inline-flex items-center gap-1.5 underline underline-offset-2 text-[var(--text-primary)]"
@@ -458,9 +458,9 @@ export default async function CandidatoPage({
         ) : (
           <p className="mt-2 flex items-start gap-2 text-sm text-[var(--text-tertiary)]">
             <IconAlertTriangle />
-            Indisponível para esta UF no momento — o arquivo de origem publicado pelo TSE para {candidato.uf}{" "}
-            está corrompido (falta o índice do ZIP) e aguarda reenvio. Não é um dado sobre este candidato
-            específico; nenhum candidato desta UF tem certidão disponível até isso ser corrigido.
+            Indisponível para esta UF no momento — o índice de certidões de {candidato.uf} ainda não foi
+            gerado. Não é um dado sobre este candidato específico; nenhum candidato desta UF tem certidão
+            disponível até isso ser corrigido.
           </p>
         )}
         <p className="mt-3 text-xs text-[var(--text-tertiary)]">
