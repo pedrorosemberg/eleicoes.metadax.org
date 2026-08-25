@@ -5,18 +5,21 @@ import { USER_AGENT } from "./http";
  * Visitantes e visualizações reais do site, via Vercel Web Analytics — o
  * mesmo produto cujo script (`@vercel/analytics`) já roda em todas as
  * páginas (ver app/layout.tsx e a divulgação em /privacidade). A API de
- * consulta exige duas coisas fora do código, feitas manualmente uma única
- * vez no painel da Vercel — nenhuma delas pode ser configurada por este
- * projeto sozinho:
+ * consulta exige duas coisas fora do código, configuradas manualmente no
+ * painel da Vercel (feito em 25/08/2026):
  *
  *   1. Habilitar Web Analytics no projeto (Vercel → Project → Analytics
- *      → Enable). O script já envia eventos hoje, mas sem isso eles não
- *      ficam retidos nem são consultáveis pela API.
- *   2. Um Vercel Access Token com acesso de leitura a este projeto,
- *      salvo como variável de ambiente `VERCEL_API_TOKEN` (nunca no
- *      código-fonte).
+ *      → Enable) — sem isso os eventos são enviados mas não ficam
+ *      retidos nem são consultáveis pela API.
+ *   2. Um Vercel Access Token **com expiração longa/sem expiração**
+ *      (criado em vercel.com/account/tokens — não confundir com o token
+ *      de acesso de 1h do fluxo OAuth "Sign in with Vercel", que é outra
+ *      coisa) com leitura neste projeto, salvo como variável de ambiente
+ *      `VERCEL_API_TOKEN` (nunca no código-fonte).
  *
- * Sem essas duas condições, degrada graciosamente: retorna `null` e a UI
+ * Sem essas duas condições — ou se a consulta falhar por qualquer outro
+ * motivo (ex.: janela de datas fora do permitido pelo plano, ver
+ * JANELA_DIAS abaixo) — degrada graciosamente: retorna `null` e a UI
  * mostra "indisponível" em vez de inventar um número ou mostrar zero como
  * se fosse dado real (mesmo padrão do resto do projeto, ver
  * src/lib/enrichment.ts).
@@ -26,9 +29,16 @@ const PROJECT_ID = "prj_D2HzLlR41SBF5MKnaK5pLiBWRMTD";
 const TEAM_ID = "team_nwD7aMZOVrV6Orwj8LSBieJI";
 const REVALIDATE_SEGUNDOS = 3600; // visitantes não precisam de granularidade fina
 
+// Confirmado em 25/08/2026: o plano Hobby só permite consultar os últimos
+// 31 dias (a API rejeita com 400 qualquer `since` mais antigo que isso —
+// não existe "todo o histórico" nesse plano). 30 dias fica com margem de
+// segurança dentro do limite real.
+const JANELA_DIAS = 30;
+
 export interface EstatisticasVisitantes {
   visitantes: number;
   visualizacoes: number;
+  janelaDias: number;
 }
 
 interface RespostaContagem {
@@ -43,14 +53,14 @@ export async function buscarVisitantesSite(): Promise<EstatisticasVisitantes | n
   if (!token) return null;
 
   try {
+    const agora = new Date();
+    const desde = new Date(agora.getTime() - JANELA_DIAS * 24 * 60 * 60 * 1000);
+
     const url = new URL("https://api.vercel.com/v1/query/web-analytics/visits/count");
     url.searchParams.set("projectId", PROJECT_ID);
     url.searchParams.set("teamId", TEAM_ID);
-    // Qualquer data bem anterior ao lançamento — a API só devolve dado real
-    // a partir do momento em que o Web Analytics foi habilitado, então uma
-    // janela larga não gera número inflado nem exige atualizar essa data.
-    url.searchParams.set("since", "2020-01-01T00:00:00.000Z");
-    url.searchParams.set("until", new Date().toISOString());
+    url.searchParams.set("since", desde.toISOString());
+    url.searchParams.set("until", agora.toISOString());
 
     const res = await fetch(url, {
       headers: { Authorization: `Bearer ${token}`, "User-Agent": USER_AGENT },
@@ -61,7 +71,7 @@ export async function buscarVisitantesSite(): Promise<EstatisticasVisitantes | n
     const json = (await res.json()) as RespostaContagem;
     const { visitors, pageviews } = json.data ?? {};
     if (typeof visitors !== "number" || typeof pageviews !== "number") return null;
-    return { visitantes: visitors, visualizacoes: pageviews };
+    return { visitantes: visitors, visualizacoes: pageviews, janelaDias: JANELA_DIAS };
   } catch {
     return null;
   }

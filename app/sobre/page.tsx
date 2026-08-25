@@ -104,7 +104,7 @@ export default async function SobrePage() {
         </a>
         .
       </p>
-      <dl className="mt-4 grid grid-cols-2 gap-3 sm:grid-cols-4">
+      <dl className="mt-4 grid grid-cols-2 gap-3 sm:grid-cols-3">
         <div className="rounded-[14px] border p-4" style={{ borderColor: "var(--hairline)" }}>
           <dt className="text-xs text-[var(--text-tertiary)]">Estrelas no GitHub</dt>
           <dd className="mt-1 text-[22px] font-semibold text-[var(--text-primary)]">
@@ -124,9 +124,19 @@ export default async function SobrePage() {
           </dd>
         </div>
         <div className="rounded-[14px] border p-4" style={{ borderColor: "var(--hairline)" }}>
-          <dt className="text-xs text-[var(--text-tertiary)]">Visitantes do site</dt>
+          <dt className="text-xs text-[var(--text-tertiary)]">
+            Visitantes ({visitantes?.janelaDias ?? 30} dias)
+          </dt>
           <dd className="mt-1 text-[22px] font-semibold text-[var(--text-primary)]">
             {visitantes ? numeroBR.format(visitantes.visitantes) : "—"}
+          </dd>
+        </div>
+        <div className="rounded-[14px] border p-4" style={{ borderColor: "var(--hairline)" }}>
+          <dt className="text-xs text-[var(--text-tertiary)]">
+            Páginas vistas ({visitantes?.janelaDias ?? 30} dias)
+          </dt>
+          <dd className="mt-1 text-[22px] font-semibold text-[var(--text-primary)]">
+            {visitantes ? numeroBR.format(visitantes.visualizacoes) : "—"}
           </dd>
         </div>
       </dl>
@@ -138,14 +148,15 @@ export default async function SobrePage() {
       )}
       {!visitantes && (
         <p className="mt-3 flex items-start gap-2 text-sm text-[var(--text-tertiary)]">
-          Visitantes indisponível — o Vercel Web Analytics deste projeto ainda está sendo
-          habilitado. Assim que estiver ativo, o número real aparece aqui automaticamente, sem
-          nenhuma mudança de código.
+          Visitantes indisponível no momento — a consulta ao Vercel Web Analytics falhou (pode ser
+          uma instabilidade temporária da API da Vercel). Não é um número zerado; é a ausência do
+          dado.
         </p>
       )}
       <p className="mt-3 text-xs text-[var(--text-tertiary)]">
-        Fonte: API pública do GitHub (repositório) e Vercel Web Analytics (visitantes, contagem de
-        páginas vistas por sessão, sem cookies de rastreamento — ver{" "}
+        Fonte: API pública do GitHub (repositório) e Vercel Web Analytics (visitantes/páginas
+        vistas dos últimos {visitantes?.janelaDias ?? 30} dias — limite do plano usado por este
+        projeto; sem cookies de rastreamento, ver{" "}
         <a className="underline underline-offset-2" href="/privacidade">
           /privacidade
         </a>

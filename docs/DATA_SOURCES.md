@@ -662,20 +662,32 @@ Markdown, renderizados pelo GitHub, fora do código da aplicação.
 
 **Visitantes e visualizações do site:** Vercel Web Analytics — o mesmo produto cujo script
 (`@vercel/analytics`) já roda em todas as páginas desde antes desta seção existir (ver
-`/privacidade`). A API de consulta (`GET /v1/query/web-analytics/visits/count`) exige duas
-condições que **não podem ser configuradas por este agente/sessão de código**, só manualmente
-pelo dono da conta Vercel:
+`/privacidade`). A API de consulta (`GET /v1/query/web-analytics/visits/count`) exigiu duas
+condições fora do alcance deste agente/sessão de código, configuradas manualmente pelo
+mantenedor em 25/08/2026, e um ajuste de código descoberto só depois de as duas estarem prontas:
 
-1. Habilitar Web Analytics no projeto (painel da Vercel → Project → Analytics → Enable, ou
-   `vercel project web-analytics` autenticado via CLI). Sem isso, o script já envia eventos, mas
-   a Vercel não os retém nem os deixa consultáveis — confirmado em 25/08/2026 com a API
-   respondendo `web_analytics_not_enabled`.
-2. Um [Vercel Access Token](https://vercel.com/docs/sign-in-with-vercel/tokens) com leitura
-   nesse projeto, salvo como variável de ambiente `VERCEL_API_TOKEN` no projeto (nunca no
-   código-fonte, nunca commitado).
+1. **Habilitar Web Analytics no projeto** (painel da Vercel → Project → Analytics → Enable). Sem
+   isso, o script já envia eventos, mas a Vercel não os retém nem os deixa consultáveis —
+   confirmado inicialmente com a API respondendo `web_analytics_not_enabled`.
+2. **Um Vercel Access Token de vida longa**, salvo como variável de ambiente `VERCEL_API_TOKEN`.
+   Existem dois tipos de token na Vercel, fáceis de confundir: um [Personal/Team Access
+   Token](https://vercel.com/docs/sign-in-with-vercel/tokens) criado em
+   `vercel.com/account/tokens` (opções de expiração: 1 dia / 30 / 60 / 90 dias / 1 ano / **sem
+   expiração** — é esse tipo que a aplicação precisa) é diferente do access token do fluxo OAuth
+   "Sign in with Vercel" (`vca_...` + refresh token `vcr_...`), que **expira em exatamente 1
+   hora por design** e não serve para uma variável de ambiente estática. O primeiro token gerado
+   nesta sessão era do segundo tipo — resolvido criando um Personal Access Token sem expiração.
+3. **Janela de datas dentro do permitido pelo plano.** Confirmado só depois das duas condições
+   acima estarem satisfeitas: o plano usado por este projeto restringe a consulta aos últimos 31
+   dias — pedir um `since` mais antigo (o código originalmente usava uma data fixa de 2020, para
+   nunca precisar ser atualizada) retorna `400 Bad Request`, que o tratamento de erro do código
+   absorvia como "indisponível" em vez de expor a causa real. Corrigido para uma janela deslizante
+   de 30 dias (`JANELA_DIAS` em `src/lib/site-analytics.ts`), dentro da margem do limite real —
+   por isso a UI rotula o número como "visitantes (30 dias)", não "desde o lançamento".
 
 Implementado em `src/lib/site-analytics.ts`, com o mesmo padrão de degradação graciosa do resto
-do projeto: sem essas duas condições, `buscarVisitantesSite()` retorna `null` e a UI mostra
-"indisponível" com a explicação real, nunca um número inventado ou zero disfarçado de dado real.
-Assim que as duas condições forem satisfeitas pelo mantenedor, o número real aparece
-automaticamente em `/sobre` e em `GET /api/estatisticas-projeto` — sem nenhuma mudança de código.
+do projeto: se qualquer uma dessas condições falhar, `buscarVisitantesSite()` retorna `null` e a
+UI mostra "indisponível" com a explicação real, nunca um número inventado ou zero disfarçado de
+dado real. Confirmado funcionando em produção em 25/08/2026 (`{"visitors":1,"pageviews":3}` numa
+janela de teste) — visitantes e visualizações aparecem automaticamente em `/sobre` e em
+`GET /api/estatisticas-projeto`.
