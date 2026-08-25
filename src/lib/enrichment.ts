@@ -92,8 +92,10 @@ export async function buscarTransparencia(
       headers: { "chave-api-dados": apiKey, "User-Agent": USER_AGENT },
       next: { revalidate: TRANSPARENCIA_CACHE_TTL },
     });
+    const bodyText = await res.text();
+    console.error(`[DEBUG_TRANSPARENCIA_TEMP] ${tipo} status=${res.status} body=${bodyText.slice(0, 2000)}`);
     if (!res.ok) return null;
-    const dados = await res.json();
+    const dados = JSON.parse(bodyText);
     return Array.isArray(dados) ? dados : null;
   } catch {
     return null;
