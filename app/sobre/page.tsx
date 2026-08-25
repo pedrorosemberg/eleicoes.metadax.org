@@ -125,7 +125,7 @@ export default async function SobrePage() {
         </div>
         <div className="rounded-[14px] border p-4" style={{ borderColor: "var(--hairline)" }}>
           <dt className="text-xs text-[var(--text-tertiary)]">
-            Visitantes ({visitantes?.janelaDias ?? 30} dias)
+            Visitantes únicos ({visitantes?.janelaDias ?? 30} dias)
           </dt>
           <dd className="mt-1 text-[22px] font-semibold text-[var(--text-primary)]">
             {visitantes ? numeroBR.format(visitantes.visitantes) : "—"}

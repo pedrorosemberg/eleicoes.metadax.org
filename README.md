@@ -1,17 +1,26 @@
 # eleicoes.metadax.org
 
-[![Estrelas no GitHub](https://img.shields.io/github/stars/pedrorosemberg/eleicoes.metadax.org?style=flat-square&label=estrelas)](https://github.com/pedrorosemberg/eleicoes.metadax.org/stargazers)
-[![Forks](https://img.shields.io/github/forks/pedrorosemberg/eleicoes.metadax.org?style=flat-square&label=forks)](https://github.com/pedrorosemberg/eleicoes.metadax.org/network/members)
-[![Issues e PRs abertos](https://img.shields.io/github/issues/pedrorosemberg/eleicoes.metadax.org?style=flat-square&label=issues%2FPRs%20abertos)](https://github.com/pedrorosemberg/eleicoes.metadax.org/issues)
-[![Último commit](https://img.shields.io/github/last-commit/pedrorosemberg/eleicoes.metadax.org?style=flat-square&label=%C3%BAltimo%20commit)](https://github.com/pedrorosemberg/eleicoes.metadax.org/commits/main)
-[![Licença CC BY 4.0](https://img.shields.io/badge/licen%C3%A7a-CC%20BY%204.0-000000?style=flat-square)](LICENSE)
+[![Estrelas no GitHub](https://eleicoes.metadax.org/api/badge/estrelas)](https://github.com/pedrorosemberg/eleicoes.metadax.org/stargazers)
+[![Forks](https://eleicoes.metadax.org/api/badge/forks)](https://github.com/pedrorosemberg/eleicoes.metadax.org/network/members)
+[![Issues e PRs abertos](https://eleicoes.metadax.org/api/badge/issues)](https://github.com/pedrorosemberg/eleicoes.metadax.org/issues)
+[![Último commit](https://eleicoes.metadax.org/api/badge/ultimo-commit)](https://github.com/pedrorosemberg/eleicoes.metadax.org/commits/main)
+[![Licença CC BY 4.0](https://eleicoes.metadax.org/api/badge/licenca)](LICENSE)
 
-Os quatro primeiros badges puxam o número direto da API do GitHub a cada
-carregamento — não são estáticos (o de licença é fixo por escolha: o
+Os badges acima são gerados por este próprio projeto (`GET /api/badge/[metrica]`,
+`src/lib/badge-svg.ts`), não pelo shields.io — trocado depois de o badge de
+estrelas ficar visivelmente desatualizado (mostrando "0" bem depois do
+repositório já ter sua primeira estrela real) por causa do cache do
+shields.io, que este projeto não controla. Os quatro primeiros puxam o
+número direto da API do GitHub a cada 5–10 min (mesma janela usada no
+resto do projeto); o de licença é fixo, pelo mesmo motivo de sempre: o
 detector automático do GitHub não reconhece CC BY 4.0 como licença de
-código, então mostraria "not identifiable" em vez do que está de fato no
-arquivo [`LICENSE`](LICENSE)). Os mesmos números do repositório, junto com
-visitantes do site, aparecem atualizados ao vivo em
+código. Uma ressalva que nenhuma implementação própria resolve: o GitHub
+embute imagens de README pelo seu próprio proxy (`camo.githubusercontent.com`),
+que tem seu cache por cima do nosso — o número aqui é sempre, na pior das
+hipóteses, tão atual quanto esse segundo cache permitir. Os mesmos números
+do repositório, junto com visitantes e páginas vistas do site (visitantes
+únicos e pageviews, sem esse segundo cache no meio), aparecem atualizados
+ao vivo em
 [eleicoes.metadax.org/sobre](https://eleicoes.metadax.org/sobre#estatisticas-do-projeto)
 (também disponível como JSON em `GET /api/estatisticas-projeto`).
 

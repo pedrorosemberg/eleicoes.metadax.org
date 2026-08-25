@@ -648,21 +648,43 @@ API pública do GitHub — mesma chamada não-autenticada já usada em `src/lib/
 `/atualizacoes` (ver §2 dessa mesma seção de código para o racional dos Termos de Serviço do
 GitHub). `open_issues_count` soma issues e pull requests abertos — o GitHub não separa isso sem
 uma segunda chamada, por isso o rótulo na UI é "Issues e PRs abertos", não só "issues", para não
-sugerir um número que a API não está de fato retornando. Os 4 primeiros badges do README (via
-[shields.io](https://shields.io), que por sua vez consulta a mesma API do GitHub) são dinâmicos —
-recarregam o número real a cada vez que o README é renderizado no GitHub, não são uma imagem
-estática. O badge de licença é a exceção deliberada: fixo em "CC BY 4.0", porque o endpoint
-dinâmico do shields.io (`img.shields.io/github/license/...`) depende do detector automático do
-GitHub, que não reconhece licenças de conteúdo como CC BY como reconhece licenças de código —
-retornava "not identifiable by github" em vez do que está de fato no arquivo `LICENSE` (verificado
-em 25/08/2026). Nenhum dado inventado: é a mesma licença já confirmada e documentada em §8, só
-declarada como texto fixo em vez de uma consulta que a própria GitHub não sabe responder direito
-para este caso. Nenhuma dependência nova no runtime do site: os badges do README só existem no
-Markdown, renderizados pelo GitHub, fora do código da aplicação.
+sugerir um número que a API não está de fato retornando.
 
-**Visitantes e visualizações do site:** Vercel Web Analytics — o mesmo produto cujo script
+**Badges do README — geração própria, não shields.io (revisado em 25/08/2026).** A primeira
+versão usava badges dinâmicos do [shields.io](https://shields.io) consultando a mesma API do
+GitHub. O mantenedor reportou o badge de estrelas ainda mostrando "0" bem depois do repositório
+já ter sua primeira estrela real — visível corretamente no site, que consulta a API do GitHub
+direto, sem passar pelo shields.io. Causa: o cache do shields.io é opaco e não configurável por
+este projeto (não há um parâmetro documentado e confiável para forçar uma janela de cache menor
+nos badges dinâmicos de repositório). Substituído por um gerador de badge SVG próprio
+(`src/lib/badge-svg.ts`, servido em `GET /api/badge/[metrica]` — `estrelas`, `forks`, `issues`,
+`ultimo-commit`, `licenca`), com o único cache sendo o `Cache-Control` que este projeto já define
+(`max-age=300, stale-while-revalidate=600`, alinhado com a janela de 10 min que
+`src/lib/github.ts` já usa para o GitHub) — sem depender de nenhum comportamento de terceiro fora
+do nosso controle. O badge de `licenca` continua fixo em "CC BY 4.0" pelo mesmo motivo de antes:
+o detector automático do GitHub não reconhece licenças de conteúdo como CC BY como reconhece
+licenças de código (retornava "not identifiable by github" em vez do que está de fato no arquivo
+`LICENSE`, verificado em 25/08/2026) — não é dado inventado, é a mesma licença já confirmada e
+documentada em §8, só sem depender de uma detecção que a própria GitHub não faz direito para este
+caso.
+
+**Ressalva que nenhuma implementação própria resolve:** o GitHub embute imagens de README através
+do seu próprio proxy de imagem (`camo.githubusercontent.com`), que tem seu próprio cache por cima
+do nosso `Cache-Control`. Isso significa que o número no README nunca é garantidamente
+"instantâneo" — é, na pior das hipóteses, tão atual quanto esse segundo nível de cache (fora do
+nosso controle) permitir. É estritamente melhor do que depender só do cache do shields.io, mas
+não elimina o problema por completo; só o site (`/sobre`, via `GET /api/estatisticas-projeto`)
+consulta a API do GitHub direto, sem esse proxy intermediário, e por isso é sempre a fonte mais
+atual das duas.
+
+**Visitantes únicos e páginas vistas do site:** Vercel Web Analytics — o mesmo produto cujo script
 (`@vercel/analytics`) já roda em todas as páginas desde antes desta seção existir (ver
-`/privacidade`). A API de consulta (`GET /v1/query/web-analytics/visits/count`) exigiu duas
+`/privacidade`). Dois números distintos, ambos reais, sem cache de proxy de imagem no meio (ao
+contrário dos badges do README): `visitantes` é o campo `visitors` da resposta da Vercel —
+contagem de visitantes **únicos**, deduplicados dentro da janela; `visualizacoes` é o campo
+`pageviews` — total de páginas vistas, sem deduplicar (a mesma pessoa vendo 3 páginas conta 1 vez
+em `visitantes` e 3 vezes em `visualizacoes`). A API de consulta (`GET
+/v1/query/web-analytics/visits/count`) exigiu duas
 condições fora do alcance deste agente/sessão de código, configuradas manualmente pelo
 mantenedor em 25/08/2026, e um ajuste de código descoberto só depois de as duas estarem prontas:
 

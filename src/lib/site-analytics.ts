@@ -36,7 +36,9 @@ const REVALIDATE_SEGUNDOS = 3600; // visitantes não precisam de granularidade f
 const JANELA_DIAS = 30;
 
 export interface EstatisticasVisitantes {
+  /** Visitantes únicos (deduplicados) na janela — campo `visitors` da API da Vercel. */
   visitantes: number;
+  /** Total de páginas vistas (não deduplicado) na janela — campo `pageviews` da API da Vercel. */
   visualizacoes: number;
   janelaDias: number;
 }
