@@ -45,11 +45,11 @@ jobs:
       - name: Rodar revisão de segurança (NVIDIA)
         env:
           NVIDIA_API_KEY: ${{ secrets.NVIDIA_API_KEY }}
-          # Modelo padrão escolhido em 26/08/2026 (catálogo de code-gen de
-          # build.nvidia.com). Se a API retornar erro de modelo inválido, o
-          # catálogo pode ter mudado o nome/removido o modelo — confira em
-          # build.nvidia.com e ajuste aqui.
-          NVIDIA_MODEL: qwen/qwen2.5-coder-32b-instruct
+          # Modelo confirmado pelo mantenedor (26/08/2026, testado
+          # diretamente contra a API da NVIDIA). Se a API retornar erro de
+          # modelo inválido, o catálogo pode ter mudado o nome/removido o
+          # modelo — confira em build.nvidia.com e ajuste aqui.
+          NVIDIA_MODEL: meta/llama-3.3-70b-instruct
           BASE_SHA: ${{ github.event.pull_request.base.sha }}
           HEAD_SHA: ${{ github.event.pull_request.head.sha }}
         run: node .github/scripts/ai-security-review.mjs
