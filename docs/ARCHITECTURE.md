@@ -253,4 +253,45 @@ Segundo achado, agravando o primeiro: **sem paginação**, um termo comum como "
 | `/candidato/[id]` (40 conexões, 12s) | 197 requisições, p50 ≈2,5s | 560 requisições, p50 ≈0,77s (≈3x throughput) |
 | `/api/estatisticas` (60 conexões, 10s) | 908 requisições, p50 ≈0,7s | ~5.000 requisições, p50 ≈0,12s (≈5x throughput) |
 
+## 13. Correções pós-divulgação (26/08/2026)
+
+Dois achados adicionais, depois que o mantenedor testou a feature de visitantes ao vivo e revisou o custo de `normalizar()` na busca sob o §12 acima.
+
+### Contagem de visitantes zerada — bug real de truncamento na API da Vercel
+
+Mesmo depois da correção de janela/cache do §11 de `docs/DATA_SOURCES.md`, o site voltou a mostrar "0 visitantes" com tráfego real do dia registrado. Isolado consultando `GET /v1/query/web-analytics/visits/count` (modo `count`) diretamente, fora do cache da aplicação:
+
+- `since=2026-07-26T00:00:00Z&until=2026-08-25T23:59:59Z` → API respondeu com `query.until` **truncado para `2026-08-25T00:00:00.000Z`** (início do dia, não o instante exato pedido) e devolveu `{"visitors":0,"pageviews":0}`.
+- A mesma consulta com `until=2026-08-26T00:00:00Z` (o dia seguinte) devolveu `{"visitors":2,"pageviews":40}` — o tráfego real do dia 25.
+- Confirmado que o dado existia: uma consulta em modo `aggregate` por dia (`by=["day"]`) mostrava `2026-08-25` com `visitors:2, pageviews:40` mesmo enquanto o modo `count` retornava zero para o mesmo intervalo.
+
+Ou seja: o endpoint de contagem trunca `until` para baixo, para o início do dia — passar "agora" como `until` exclui **todo o tráfego do dia corrente** da contagem, sempre, independente da hora. Não é um problema de cache nem de janela de dias (§11 de `DATA_SOURCES.md`); é um comportamento do próprio endpoint que não estava documentado e só apareceu comparando a resposta bruta da API com o que a aplicação calculava.
+
+**Correção** (`src/lib/site-analytics.ts`): `until` agora é sempre "agora + 1 dia" antes de truncar, garantindo que o dia corrente completo sempre entre na janela, não importa a hora em que a consulta rodar.
+
+### Índice de busca movido de runtime para tempo de ingestão
+
+O cache do §12 acima já tinha reduzido `normalizar()` (NFD + regex + `toLowerCase` sobre ~20 mil candidatos) de "toda requisição" para "uma vez por cold start de processo" — mas cada nova instância de função serverless que a Vercel cria sob um pico de tráfego ainda paga esse custo de CPU do zero. Correção: mover o cálculo para tempo de ingestão, uma única vez por dataset, em vez de uma vez por processo.
+
+- Novo `scripts/build-search-index.ts` — lê `data/{ano}/candidatos/{UF}.json` já gravado e escreve `data/{ano}/indice-busca/{UF}.json` com os mesmos campos já normalizados, alinhados por posição com o array de candidatos. Não depende dos ZIPs do TSE nem de rede — só do snapshot de candidatos já ingerido, então roda tanto automaticamente no fim de `npm run ingest` (chamado de dentro de `ingestCandidatos`, em `scripts/ingest-tse.ts`) quanto isolado (`npm run build-search-index -- --ano=2026`) sempre que `candidatos/` mudar por outro caminho.
+- `src/lib/data.ts` (`obterIndiceBusca`) agora tenta carregar o índice pré-computado primeiro (mesmo padrão `lerJsonCacheado` do resto do arquivo — sem custo de CPU, só leitura de arquivo cacheada); só recorre ao cálculo em memória (`calcularIndiceNormalizadoEmMemoria`, o `WeakMap` que já existia) como fallback, quando o índice não existe para aquele array — hoje isso só acontece com o fixture de amostra (poucas dezenas de linhas, custo desprezível).
+- Rodado uma vez contra o snapshot `data/2026/` já commitado (28 arquivos, 3,2 MB) sem precisar dos ZIPs do TSE — o script só depende de `candidatos/` já existir em disco.
+- Reteste local (autocannon, 80 conexões, 15s, `/buscar?q=silva`): 681 requisições completadas, **zero erros/timeouts**, mesma contagem de resultados de antes (3.284, página 1 de 137) — confirma que o índice pré-computado produz exatamente o mesmo resultado que o cálculo em runtime substituído.
+
+## 14. Playbook para uma nova eleição (ex.: 2028)
+
+Este produto assume, por design, **uma eleição corrente** por deploy — não é um arquivo histórico multi-ano navegável (isso seria um escopo bem maior: seletor de ano na UI, rotas versionadas, etc., não implementado). Trocar para os dados de uma eleição nova é hoje:
+
+1. **Rodar a ingestão para o ano novo**, de uma rede que o TSE não bloqueie (§5 de `docs/DATA_SOURCES.md`):
+   ```bash
+   npm run ingest -- --ano=2028
+   npm run build-asset-index -- --ano=2028 --fotos-dir=... --planos-dir=...
+   npm run ingest-certidoes -- --ano=2028   # se o release de certidões existir para o ano
+   ```
+   `build-search-index` roda sozinho dentro de `npm run ingest` (§13 acima) — não é um passo manual à parte.
+2. **Conferir `data/2028/meta.json`** — `ufs` deve listar as 27 UFs + `BR`, do mesmo jeito que hoje. Se faltar UF, algo na ingestão falhou silenciosamente para aquele estado — não assumir que "menos UFs" é normal.
+3. **Apontar a aplicação para o ano novo**: variável de ambiente `ANO_ELEICAO=2028` no projeto na Vercel (Settings → Environment Variables) + redeploy. Não precisa editar `src/lib/data.ts` — ver o comentário ali e `.env.example`. `data/2026/**` continua no repositório (histórico), só não é mais o que a aplicação lê.
+4. **Se o TSE mudar o layout do CSV** (nome de coluna, arquivo novo/removido) — já aconteceu de uma eleição para outra em outros datasets públicos brasileiros, não é hipotético. `scripts/ingest-tse.ts` já tem uma rede de segurança para isso: `validarColunaCritica()` derruba a ingestão com erro explícito se uma coluna crítica (`SQ_CANDIDATO`, `SG_UF` etc.) não existir no CSV, em vez de gerar um snapshot silenciosamente vazio ou errado. Se isso disparar: reabrir o `leiame.pdf` do dataset em questão (mesmo processo documentado em `docs/DATA_SOURCES.md` §1) e atualizar as constantes `*_COLUNAS` no topo do script — a lista de campos em si (`CAND_COLUNAS`, `BEM_COLUNAS` etc.) é o único lugar que precisa mudar; o resto do pipeline (agrupamento por UF, escrita em `data/`, índice de busca) não assume nenhum nome de coluna específico.
+5. **Não presumir que todo dataset novo vai existir** — `npm run ingest` já trata cada dataset além de `consulta_cand` como opcional (`ingestarOpcional`, ver início deste arquivo). Um dataset que sumir ou mudar de nome de um ano para o outro não deve derrubar a ingestão inteira; deve aparecer como aviso e o campo correspondente fica ausente (com o motivo certo — "fonte não consultada" — nunca um dado inventado), seguindo a mesma regra de `docs/DATA_SOURCES.md` §10.
+
 Rotas confirmadas saudáveis sem mudança necessária: `/` (≈730 req/s, estático/pré-renderizado), `/mapa` (≈560 req/s), `/api/certidao/:uf/:candidato/:arquivo` (limitado por banda de rede real ao GitHub, não por CPU — comportamento esperado). `/status` é deliberadamente não cacheado — checagem ao vivo é o próprio propósito da página (ver §7).

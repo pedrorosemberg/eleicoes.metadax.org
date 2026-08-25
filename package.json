@@ -9,6 +9,7 @@
     "start": "next start",
     "lint": "eslint .",
     "ingest": "tsx scripts/ingest-tse.ts",
+    "build-search-index": "tsx scripts/build-search-index.ts",
     "build-asset-index": "tsx scripts/build-asset-index.ts",
     "ingest-certidoes": "tsx scripts/ingest-certidoes.ts"
   },

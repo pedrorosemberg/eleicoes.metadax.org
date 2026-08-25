@@ -36,7 +36,10 @@
  *     data/{ano}/coligacoes.json (não é por-UF — uma coligação cobre um
  *     cargo numa UF, faz mais sentido como lista única) e
  *     data/{ano}/vagas.json (idem — poucas linhas, uma por UF+cargo).
- *  5. Grava data/{ano}/meta.json com o timestamp da ingestão.
+ *  5. Gera data/{ano}/indice-busca/{UF}.json — nome/município/partido já
+ *     normalizados (sem acento, minúsculas) para a busca não precisar
+ *     recalcular isso em runtime (ver scripts/build-search-index.ts).
+ *  6. Grava data/{ano}/meta.json com o timestamp da ingestão.
  *
  * Nomes de coluna: confirmados para `consulta_cand`, `bem_candidato`,
  * `rede_social_candidato`, `motivo_cassacao` e `consulta_coligacao` contra
@@ -47,6 +50,7 @@ import { mkdir, readdir, readFile, rm, writeFile } from "node:fs/promises";
 import path from "node:path";
 import AdmZip from "adm-zip";
 import { parse } from "csv-parse/sync";
+import { buildSearchIndex } from "./build-search-index";
 
 const ano = process.argv.find((a) => a.startsWith("--ano="))?.split("=")[1] ?? "2026";
 const fromDir = process.argv.find((a) => a.startsWith("--from-dir="))?.split("=")[1];
@@ -692,6 +696,12 @@ async function main() {
   await mkdir(TMP_DIR, { recursive: true });
   try {
     const ufs = await ingestCandidatos();
+
+    // Sempre roda (não é ingestarOpcional): só depende de candidatos/ já
+    // gravado acima, sem ZIP próprio nem rede — ver scripts/build-search-index.ts.
+    const ufsIndexadas = await buildSearchIndex(DATA_DIR);
+    console.log(`Gravado índice de busca pré-computado para ${ufsIndexadas} UFs`);
+
     await ingestarOpcional("bem_candidato", ingestBens);
     await ingestarOpcional("rede_social_candidato", ingestRedesSociais);
     await ingestarOpcional("motivo_cassacao", ingestMotivosCassacao);

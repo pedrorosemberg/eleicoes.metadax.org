@@ -23,7 +23,8 @@ Se você encontrar uma vulnerabilidade real (não um bug funcional comum — par
 ## O que está fora de escopo
 
 - **Dados públicos exibidos pelo produto não são uma vulnerabilidade.** Nome, partido, bens
-  declarados, CPF (usado só server-side, nunca exibido — ver abaixo), certidões criminais
+  declarados, CPF (dado público por lei eleitoral — usado só server-side e nunca renderizado
+  na UI por escolha de produto, não por exigência de sigilo, ver abaixo), certidões criminais
   anexadas pelo próprio candidato: tudo vem de fontes públicas por força de lei (LAI, dados
   abertos do TSE) e é o propósito declarado do projeto. Ver `docs/DATA_SOURCES.md` §9 para a
   revisão de compliance completa.
@@ -47,9 +48,13 @@ divulgação pública. Resumo dos achados:
   engano num Client Component, o que tornaria o segredo parte do bundle enviado ao navegador.
 - Nenhum `console.log`/`console.error` imprime o valor de uma chave, token ou header
   `Authorization` em nenhum lugar do código.
-- CPF (dado usado para consultar o Portal da Transparência) nunca é renderizado como texto em
-  nenhuma página — só usado como condição booleana (`candidato.cpf ? ... : ...`) e passado
-  server-side para as funções de enriquecimento. Confirmado varrendo toda a árvore `app/`.
+- CPF nunca é renderizado como texto em nenhuma página — só usado como condição booleana
+  (`candidato.cpf ? ... : ...`) e passado server-side para as funções de enriquecimento.
+  Confirmado varrendo toda a árvore `app/`. **Isso não é uma medida de sigilo** — CPF de
+  candidato já é dado público por força de lei eleitoral, exposto pelo próprio TSE nos seus
+  datasets abertos (ver `docs/DATA_SOURCES.md` §7 para o embasamento legal completo); a
+  omissão na UI é só uma escolha de produto (não é útil para quem lê o perfil de um
+  candidato), não uma correção de vazamento.
 - `package.json` tem só as dependências que o produto genuinamente usa (Next.js, React,
   Leaflet, parsing de CSV/ZIP) — sem pacotes suspeitos ou scripts de `postinstall`.
 - Nenhum caminho de arquivo local do ambiente de desenvolvimento vazou para o código

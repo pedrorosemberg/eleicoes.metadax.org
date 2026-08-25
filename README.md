@@ -162,7 +162,9 @@ servida via `raw.githubusercontent.com` — ver `docs/DATA_SOURCES.md` §1).
 Copie `.env.example` para `.env.local` e preencha `PORTAL_TRANSPARENCIA_API_KEY`
 (cadastro gratuito — passo a passo em `docs/DATA_SOURCES.md` §4). Sem essa
 variável, os endpoints de cruzamento com o Portal da Transparência retornam
-"indisponível" em vez de quebrar.
+"indisponível" em vez de quebrar. `ANO_ELEICAO` é opcional (padrão `2026`) —
+troca qual eleição a aplicação lê de `data/{ano}/**`, ver `docs/ARCHITECTURE.md`
+§14 para o passo a passo completo de virar para uma eleição nova.
 
 ## Scripts
 
@@ -172,6 +174,7 @@ variável, os endpoints de cruzamento com o Portal da Transparência retornam
 | `npm run build` | Build de produção |
 | `npm run start` | Serve o build de produção |
 | `npm run lint` | ESLint |
-| `npm run ingest -- --ano=2026` | Roda a ingestão de dados do TSE (ver acima) |
+| `npm run ingest -- --ano=2026` | Roda a ingestão de dados do TSE (ver acima) — já inclui a geração do índice de busca (ver linha abaixo) |
+| `npm run build-search-index -- --ano=2026` | Regera `data/{ano}/indice-busca/` a partir de `data/{ano}/candidatos/` já gravado, sem rede — roda sozinho dentro de `npm run ingest`, só precisa ser chamado à parte se `candidatos/` mudar por outro caminho (ver `docs/ARCHITECTURE.md` §13) |
 | `npm run build-asset-index -- --ano=2026 --fotos-dir=... --planos-dir=...` | Indexa fotos e planos de governo já extraídos, gravando as URLs nos candidatos (ver acima) |
 | `npm run ingest-certidoes -- --ano=2026` | Indexa as certidões criminais direto do release do GitHub (sem baixar os ZIPs inteiros — ver `docs/DATA_SOURCES.md` §1) |

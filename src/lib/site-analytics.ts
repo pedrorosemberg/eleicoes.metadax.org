@@ -41,6 +41,19 @@ const REVALIDATE_SEGUNDOS = 300;
 // segurança dentro do limite real.
 const JANELA_DIAS = 30;
 
+// Achado real em 25/08/2026, testando `/v1/query/web-analytics/visits/count`
+// direto (fora do cache desta função): o endpoint TRUNCA `until` para o
+// início do dia informado, não para o instante exato — passar `until` como
+// "agora" (ex.: 2026-08-25T16:08Z) faz a consulta na prática ignorar TODO o
+// tráfego do próprio dia (o servidor trata como se `until` fosse
+// 2026-08-25T00:00:00Z). Resultado visível: o site mostrava "0 visitantes"
+// mesmo com tráfego real registrado no dia, porque o dia corrente nunca
+// entrava na janela. Confirmado comparando a mesma consulta com
+// `until` = hoje (retornou 0) vs. `until` = amanhã (retornou o valor real).
+// Corrigido somando 1 dia a `agora` antes de truncar — garante que o dia
+// corrente completo sempre entre na janela, sem depender de que horas são
+// agora nem de fuso.
+
 export interface EstatisticasVisitantes {
   /** Visitantes únicos (deduplicados) na janela — campo `visitors` da API da Vercel. */
   visitantes: number;
@@ -63,12 +76,13 @@ export async function buscarVisitantesSite(): Promise<EstatisticasVisitantes | n
   try {
     const agora = new Date();
     const desde = new Date(agora.getTime() - JANELA_DIAS * 24 * 60 * 60 * 1000);
+    const ateAmanha = new Date(agora.getTime() + 24 * 60 * 60 * 1000);
 
     const url = new URL("https://api.vercel.com/v1/query/web-analytics/visits/count");
     url.searchParams.set("projectId", PROJECT_ID);
     url.searchParams.set("teamId", TEAM_ID);
     url.searchParams.set("since", desde.toISOString());
-    url.searchParams.set("until", agora.toISOString());
+    url.searchParams.set("until", ateAmanha.toISOString());
 
     const res = await fetch(url, {
       headers: { Authorization: `Bearer ${token}`, "User-Agent": USER_AGENT },

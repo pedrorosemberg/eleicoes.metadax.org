@@ -13,7 +13,16 @@ import type {
 import { CANDIDATOS_AMOSTRA, BENS_AMOSTRA } from "./amostra";
 import { UFS } from "./ufs";
 
-export const ANO_ELEICAO = 2026;
+/**
+ * Ano da eleição cujo snapshot (`data/{ano}/**`) esta instância do site lê.
+ * Configurável via variável de ambiente `ANO_ELEICAO` para trocar de
+ * eleição sem editar código-fonte — só uma variável nova + redeploy.
+ * Padrão 2026 (a eleição atual) se a variável não estiver definida, para
+ * nunca quebrar quem clona o repositório sem configurar nada. Ver
+ * docs/ARCHITECTURE.md §13 para o passo a passo completo de virar para uma
+ * eleição nova (ex.: 2028).
+ */
+export const ANO_ELEICAO = Number(process.env.ANO_ELEICAO) || 2026;
 
 export interface SnapshotMeta {
   ano: number;
@@ -166,18 +175,47 @@ interface CamposNormalizados {
 }
 
 /**
- * `normalizar()` (NFD + regex + toLowerCase) não é barato — rodar em 5
- * campos × ~20 mil candidatos a cada busca era a segunda metade do
- * travamento sob carga encontrado em 26/08/2026 (a primeira era a
- * releitura de arquivo, resolvida acima). Calculado uma vez por array de
- * candidatos (a mesma referência de array, graças ao cache de
- * carregarCandidatosPorUf/carregarTodosCandidatos acima) e reaproveitado
- * — WeakMap para nunca reter memória além do necessário.
+ * Índice de busca pré-computado em tempo de ingestão (ver
+ * scripts/build-search-index.ts) — o caminho normal. `normalizar()` (NFD +
+ * regex + toLowerCase) não é gratuito, e calculá-lo em runtime, mesmo
+ * cacheado por processo, ainda soma CPU real a cada cold start novo de
+ * função serverless sob tráfego — foi metade do travamento total
+ * encontrado no teste de carga de 26/08/2026 (a outra metade era a
+ * releitura de arquivo, resolvida acima). Pré-computar elimina esse custo
+ * de runtime por completo quando o índice existe.
  */
-const cacheIndiceNormalizado = new WeakMap<Candidato[], CamposNormalizados[]>();
+function carregarIndiceBuscaPorUf(uf: string): Promise<CamposNormalizados[] | null> {
+  return lerJsonCacheado<CamposNormalizados[]>(`${ANO_ELEICAO}/indice-busca/${uf}.json`);
+}
 
-function obterIndiceNormalizado(candidatos: Candidato[]): CamposNormalizados[] {
-  let indice = cacheIndiceNormalizado.get(candidatos);
+let cacheIndiceBuscaTodos: Promise<CamposNormalizados[] | null> | null = null;
+
+function carregarIndiceBuscaTodos(): Promise<CamposNormalizados[] | null> {
+  if (!cacheIndiceBuscaTodos) {
+    cacheIndiceBuscaTodos = (async () => {
+      const resultados = await Promise.all(
+        [...UFS, "BR"].map((uf) => carregarIndiceBuscaPorUf(uf)),
+      );
+      if (resultados.some((r) => r === null)) return null;
+      return resultados.flatMap((r) => r!);
+    })();
+  }
+  return cacheIndiceBuscaTodos;
+}
+
+/**
+ * Fallback: calcula o índice normalizado em memória, uma vez por array de
+ * candidatos (mesma referência, graças ao cache de
+ * carregarCandidatosPorUf/carregarTodosCandidatos acima) — WeakMap para
+ * nunca reter memória além do necessário. Só é acionado quando não existe
+ * índice pré-computado para o array em questão: hoje, isso é só o fixture
+ * de amostra (poucas dezenas de linhas, custo desprezível) ou um snapshot
+ * ingerido antes deste script existir.
+ */
+const cacheIndiceNormalizadoEmMemoria = new WeakMap<Candidato[], CamposNormalizados[]>();
+
+function calcularIndiceNormalizadoEmMemoria(candidatos: Candidato[]): CamposNormalizados[] {
+  let indice = cacheIndiceNormalizadoEmMemoria.get(candidatos);
   if (!indice) {
     indice = candidatos.map((c) => ({
       nomeUrna: normalizar(c.nomeUrna),
@@ -186,9 +224,15 @@ function obterIndiceNormalizado(candidatos: Candidato[]): CamposNormalizados[] {
       partidoSigla: normalizar(c.partido.sigla),
       partidoNome: normalizar(c.partido.nome),
     }));
-    cacheIndiceNormalizado.set(candidatos, indice);
+    cacheIndiceNormalizadoEmMemoria.set(candidatos, indice);
   }
   return indice;
+}
+
+async function obterIndiceBusca(uf: string | undefined, base: Candidato[]): Promise<CamposNormalizados[]> {
+  const precomputado = uf ? await carregarIndiceBuscaPorUf(uf) : await carregarIndiceBuscaTodos();
+  if (precomputado && precomputado.length === base.length) return precomputado;
+  return calcularIndiceNormalizadoEmMemoria(base);
 }
 
 /**
@@ -205,7 +249,7 @@ export async function buscarCandidatos(
     ? await carregarCandidatosPorUf(uf)
     : await carregarTodosCandidatos();
 
-  const indice = obterIndiceNormalizado(base);
+  const indice = await obterIndiceBusca(uf, base);
 
   const termo = q ? normalizar(q) : null;
   const cidadeNorm = cidade ? normalizar(cidade) : null;
