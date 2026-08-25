@@ -20,7 +20,7 @@ import { execFileSync } from "node:child_process";
 import { readFileSync, writeFileSync } from "node:fs";
 
 const NVIDIA_API_KEY = process.env.NVIDIA_API_KEY;
-const NVIDIA_MODEL = process.env.NVIDIA_MODEL || "qwen/qwen2.5-coder-32b-instruct";
+const NVIDIA_MODEL = process.env.NVIDIA_MODEL || "meta/llama-3.3-70b-instruct";
 // Override só para desenvolvimento/teste local (apontar para um mock) — em
 // produção o workflow nunca define NVIDIA_API_URL, então usa sempre o
 // endpoint real.
@@ -100,6 +100,9 @@ async function chamarNvidia() {
         { role: "user", content: userPrompt },
       ],
       temperature: 0.2,
+      top_p: 0.7,
+      // 4096, não 1024: o modelo precisa de espaço para o JSON estruturado
+      // com múltiplos achados (findings + summary), não uma resposta curta.
       max_tokens: 4096,
     }),
   });
