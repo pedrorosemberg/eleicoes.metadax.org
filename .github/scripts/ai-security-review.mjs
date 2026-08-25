@@ -86,26 +86,37 @@ ${instrucoesCustomizadas}`;
 
 const userPrompt = `Diff do pull request${diffTruncado ? " (truncado — só a parte inicial)" : ""}:\n\n\`\`\`diff\n${diff}\n\`\`\``;
 
-async function chamarNvidia() {
-  const res = await fetch(NVIDIA_API_URL, {
-    method: "POST",
-    headers: {
-      Authorization: `Bearer ${NVIDIA_API_KEY}`,
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({
-      model: NVIDIA_MODEL,
-      messages: [
-        { role: "system", content: systemPrompt },
-        { role: "user", content: userPrompt },
-      ],
-      temperature: 0.2,
-      top_p: 0.7,
-      // 4096, não 1024: o modelo precisa de espaço para o JSON estruturado
-      // com múltiplos achados (findings + summary), não uma resposta curta.
-      max_tokens: 4096,
-    }),
-  });
+const TENTATIVAS = 2; // 1 tentativa original + 1 retry — só para falha de rede/timeout, não para achado real
+const TIMEOUT_MS = 60_000; // por tentativa — sem isso, um fetch travado consome o timeout inteiro do job (~10min) antes de falhar
+
+async function chamarNvidiaUmaVez() {
+  const controller = new AbortController();
+  const timeout = setTimeout(() => controller.abort(), TIMEOUT_MS);
+  let res;
+  try {
+    res = await fetch(NVIDIA_API_URL, {
+      method: "POST",
+      signal: controller.signal,
+      headers: {
+        Authorization: `Bearer ${NVIDIA_API_KEY}`,
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        model: NVIDIA_MODEL,
+        messages: [
+          { role: "system", content: systemPrompt },
+          { role: "user", content: userPrompt },
+        ],
+        temperature: 0.2,
+        top_p: 0.7,
+        // 4096, não 1024: o modelo precisa de espaço para o JSON estruturado
+        // com múltiplos achados (findings + summary), não uma resposta curta.
+        max_tokens: 4096,
+      }),
+    });
+  } finally {
+    clearTimeout(timeout);
+  }
 
   if (!res.ok) {
     const corpo = await res.text().catch(() => "");
@@ -125,11 +136,32 @@ async function chamarNvidia() {
   return conteudo;
 }
 
+// Retry só cobre falha de transporte (timeout, "fetch failed", instabilidade momentânea da
+// API) — não existe para "tentar de novo até dar uma resposta que goste": um erro HTTP
+// explícito (401/404/etc.) ou uma resposta sem conteúdo já é um erro determinístico, mas
+// deixamos tentar de novo mesmo assim porque não vale a pena distinguir a causa aqui — o
+// gate falha fechado de qualquer forma se as duas tentativas falharem.
+async function chamarNvidia() {
+  let ultimoErro;
+  for (let tentativa = 1; tentativa <= TENTATIVAS; tentativa++) {
+    try {
+      return await chamarNvidiaUmaVez();
+    } catch (err) {
+      ultimoErro = err;
+      if (tentativa < TENTATIVAS) {
+        console.warn(`::warning::Tentativa ${tentativa}/${TENTATIVAS} falhou (${err.message}) — tentando de novo em 3s.`);
+        await new Promise((resolve) => setTimeout(resolve, 3000));
+      }
+    }
+  }
+  throw ultimoErro;
+}
+
 let respostaBruta;
 try {
   respostaBruta = await chamarNvidia();
 } catch (err) {
-  falhar(`Chamada à API da NVIDIA falhou: ${err.message}`);
+  falhar(`Chamada à API da NVIDIA falhou após ${TENTATIVAS} tentativa(s): ${err.message}`);
 }
 
 function extrairJson(texto) {
