@@ -49,3 +49,13 @@ jobs:
           # o secret em Settings → Secrets and variables → Actions.
           claude-api-key: ${{ secrets.ANTHROPIC_API_KEY }}
           custom-security-scan-instructions: .github/claude-security-review-instructions.md
+          # Achado testando a esteira (PR #1, 26/08/2026): por padrão a action
+          # cacheia "já rodei nesse PR" por número do PR, não por commit — na
+          # primeira tentativa (que falhou por falta do secret) ela ainda
+          # grava esse marcador, então TODO commit seguinte no mesmo PR
+          # reportava "success" sem rodar revisão nenhuma (job puramente
+          # skipped). Isso é inaceitável para um gate de segurança
+          # obrigatório: run-every-commit força uma revisão real a cada push,
+          # trocando o custo de chamadas extras à API pela garantia de que
+          # "check verde" sempre significa "revisado de verdade".
+          run-every-commit: true

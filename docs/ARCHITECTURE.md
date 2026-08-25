@@ -409,3 +409,23 @@ exatamente o que este job precisa fazer para revisar o diff). `pull_request` evi
 específico à custa de exigir o passo 4 acima como mitigação para o outro risco (segredo acessível
 a um workflow disparado por PR externo) — trade-off documentado pela própria Anthropic no
 `README.md` da action, não uma decisão isolada deste projeto.
+
+### Achado real testando a esteira: "success" que não revisou nada (PR #1, 26/08/2026)
+
+O primeiro teste ponta a ponta da esteira (antes do secret `ANTHROPIC_API_KEY` existir) expôs um
+comportamento perigoso do padrão da própria action: ela cacheia "ClaudeCode já rodou neste PR" por
+**número do PR**, não por commit, num arquivo de marcador restaurado por `restore-keys` com prefixo
+(`claudecode-{repo}-pr-{n}-`). A primeira tentativa (que falhou por falta do secret) ainda grava
+esse marcador antes de falhar — então **todo commit seguinte no mesmo PR encontrava o marcador,
+pulava a revisão inteira, e reportava `success`**, mesmo que o secret continuasse ausente e nenhum
+diff novo tivesse sido de fato analisado. Confirmado lendo o log linha a linha: `"ClaudeCode has
+already run on PR #1 (found marker file), forcing disable to avoid false positives"` seguido de
+`claudecode-scan;outcome=skipped`.
+
+Para um check decorativo isso seria só um detalhe de custo (a action existe para evitar chamada
+redundante de LLM a cada commit de um PR longo). Para um **gate obrigatório de segurança**, é
+inaceitável: um "check verde" que não significa "revisado" é pior do que não ter o check, porque
+passa confiança falsa. Corrigido setando `run-every-commit: true` no workflow — troca o custo de
+uma chamada real à API a cada push pela garantia de que o check verde sempre corresponde a uma
+revisão de verdade do commit atual, não de um estado cacheado de uma tentativa anterior (inclusive
+uma que falhou).
