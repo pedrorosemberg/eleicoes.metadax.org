@@ -299,7 +299,7 @@ Confirmado em `https://portaldatransparencia.gov.br/api-de-dados/cadastrar-email
 | Demais horários | 400 requisições/minuto |
 | **"APIs restritas"** (lista abaixo) | 180 requisições/minuto |
 
-> **Correção de precisão importante:** a chave (`chave-api-dados`) é **obrigatória para todos os endpoints** de `/api-de-dados/*` — confirmado pelo teste 403 acima em `/pessoa-fisica`, que **não** está na lista de "restritas". O termo "APIs restritas" no site da CGU não significa "as únicas que pedem chave" — significa especificamente **o subconjunto com teto de taxa mais baixo (180/min)**, por lidar com dados individuais de benefícios sociais mais sensíveis. Nenhum dos endpoints usados por este projeto (§4 acima: `peps`, `contratos/cpf-cnpj`, `ceis`, `cnep`, `cepim`, `emendas`, `servidores`, `pessoa-fisica`) está nessa lista restrita — ficam no teto geral de 400–700/min.
+> **Correção de precisão importante:** a chave (`chave-api-dados`) é **obrigatória para todos os endpoints** de `/api-de-dados/*` — confirmado pelo teste 403 acima em `/pessoa-fisica`, que **não** está na lista de "restritas". O termo "APIs restritas" no site da CGU não significa "as únicas que pedem chave" — significa especificamente **o subconjunto com teto de taxa mais baixo (180/min)**, por lidar com dados individuais de benefícios sociais mais sensíveis. Nenhum dos endpoints usados por este projeto (§4 acima: `peps`, `contratos/cpf-cnpj`, `ceis`, `cnep`, `emendas`, `servidores`, `pessoa-fisica`) está nessa lista restrita — ficam no teto geral de 400–700/min. (`cepim` não é mais usado — ver nota na linha da tabela abaixo. `bolsa-familia-disponivel-por-cpf-ou-nis`, usado desde 25/08/2026, está sim na lista restrita — ver a linha própria dele.)
 
 Lista completa das "APIs restritas" (180 req/min), nenhuma usada por este projeto:
 `despesas/documentos-por-favorecido`, `bolsa-familia-disponivel-por-cpf-ou-nis`, `bolsa-familia-por-municipio`, `bolsa-familia-sacado-por-nis`, `auxilio-emergencial-beneficiario-por-municipio`, `auxilio-emergencial-por-cpf-ou-nis`, `auxilio-emergencial-por-municipio`, `seguro-defeso-codigo`.
@@ -319,7 +319,7 @@ Usos acima do limite suspendem o token (a página não especifica por quanto tem
 | `GET /api-de-dados/emendas` | `nomeAutor`, `ano` | Emendas parlamentares de autoria do candidato, se ele for parlamentar em exercício/anterior — **atenção:** busca por nome textual, não por CPF; requer normalização e checagem manual de ambiguidade |
 | `GET /api-de-dados/ceis` | `codigoSancionado` (CPF/CNPJ) | Empresas do candidato com sanções por irregularidade em contrato com a administração pública |
 | `GET /api-de-dados/cnep` | `codigoSancionado` (CPF/CNPJ) | Sanções por atos de improbidade/corrupção (Lei Anticorrupção) |
-| `GET /api-de-dados/cepim` | `codigoSancionado` | Entidades sem fins lucrativos impedidas de celebrar convênios |
+| `GET /api-de-dados/cepim` | `cnpjSancionado` (só CNPJ — confirmado no OpenAPI oficial; **não** aceita `codigoSancionado`, diferente de CEIS/CNEP) | Entidades sem fins lucrativos impedidas de celebrar convênios. **Não usado neste projeto**: candidato pessoa física não tem CNPJ próprio para consultar aqui — ver nota em `buscarResumoTransparencia` (src/lib/enrichment.ts) sobre o bug real que isso causava antes de ser removido (25/08/2026) |
 | `GET /api-de-dados/viagens-por-cpf` | `cpf` | Viagens a serviço custeadas pela União, se servidor/agente público |
 
 Todos paginados (`pagina`, padrão `1`), retorno JSON, limite de itens por página não documentado no swagger — a implementação deve tratar paginação até resposta vazia.
@@ -411,7 +411,7 @@ Ambos os domínios do TSE (`dadosabertos.tse.jus.br`, `cdn.tse.jus.br`, `divulga
 | Empresas citadas nos bens → sócios/situação cadastral | BrasilAPI CNPJ | — |
 | Dinheiro público federal recebido pelo candidato/empresa dele | Portal da Transparência (`contratos/cpf-cnpj`, `emendas`) | BrasilAPI (para obter CNPJ de empresas ligadas) |
 | Status de Pessoa Exposta Politicamente | Portal da Transparência (`peps`) | — |
-| Sanções/impedimentos (o candidato ou empresa dele) | Portal da Transparência (`ceis`, `cnep`, `cepim`) | — |
+| Sanções/impedimentos (o candidato) | Portal da Transparência (`ceis`, `cnep`) | — (`cepim` não se aplica a pessoa física, ver §4) |
 | Histórico de candidaturas/mandatos anteriores | DivulgaCandContas (`eleicoesAnteriores`) | TSE CSV de anos anteriores (mesmo padrão de URL, trocar o ano) |
 
 ---

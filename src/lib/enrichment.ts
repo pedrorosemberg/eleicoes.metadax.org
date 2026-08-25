@@ -101,51 +101,63 @@ export async function buscarTransparencia(
 }
 
 /**
- * Agrega PEP + contratos + sanções (CEIS/CNEP/CEPIM) de uma pessoa física
- * num resumo único — ver docs/DATA_SOURCES.md §4 para os parâmetros
+ * Agrega PEP + contratos + sanções (CEIS/CNEP) de uma pessoa física num
+ * resumo único — ver docs/DATA_SOURCES.md §4 para os parâmetros
  * confirmados de cada endpoint (`cpf` para peps, `cpfCnpj` para
- * contratos, `codigoSancionado` para as três bases de sanção).
+ * contratos, `codigoSancionado` para CEIS/CNEP).
+ *
+ * CEPIM foi removido daqui em 25/08/2026: seu único parâmetro de busca
+ * por sancionado é `cnpjSancionado` (confirmado no OpenAPI oficial — o
+ * próprio nome já diz: CNPJ, não CPF/CNPJ como em CEIS/CNEP), porque
+ * CEPIM sanciona apenas entidades sem fins lucrativos (pessoa jurídica).
+ * O código anterior chamava `cepim` com `codigoSancionado: cpf` — um
+ * parâmetro que a API simplesmente ignora por não existir, então o
+ * endpoint devolvia sua listagem padrão (não filtrada), exibindo
+ * sanções de terceiros sem nenhuma relação com o candidato como se
+ * fossem dele. Não há CNPJ pessoal de candidato pessoa física para
+ * consultar aqui — reintroduzir isso exigiria vincular o candidato a um
+ * CNPJ de empresa que ele controla, o que este projeto não faz (ver
+ * `CnpjCampanha` em src/types/candidato.ts).
  *
  * Sem chave de API configurada, retorna `null` (nunca um objeto "vazio"
  * que pareça um resultado real de "nada encontrado" — são estados
  * diferentes). Cada sub-chamada falha de forma independente: se uma
  * base estiver fora do ar, as outras ainda aparecem.
  *
- * A chave de API está configurada e operacional em produção desde
- * 24/08/2026 (ver docs/ARCHITECTURE.md §5). Os nomes de campo usados em
- * `mapearContrato`/`mapearSancoes` vêm da documentação oficial da CGU;
- * qualquer divergência encontrada numa chamada real deve ser corrigida
- * aqui e registrada em docs/DATA_SOURCES.md.
+ * Nomes de campo confirmados contra o OpenAPI oficial real em 25/08/2026
+ * (schemas `ContratoDTO`, `CeisDTO`, `CnepDTO`, `UnidadeGestoraDTO`,
+ * `OrgaoSancionadorDTO`) — `orgaoSancionador` e `unidadeGestora` são
+ * objetos aninhados, não strings; o código anterior tratava como string
+ * direto, o que teria devolvido "—" (fallback) para todo contrato/sanção
+ * real assim que um resultado não-vazio aparecesse.
  */
 export async function buscarResumoTransparencia(cpf: string): Promise<TransparenciaResumo | null> {
   const cpfLimpo = cpf.replace(/\D/g, "");
   if (cpfLimpo.length !== 11) return null;
   if (!process.env.PORTAL_TRANSPARENCIA_API_KEY) return null;
 
-  const [peps, contratos, ceis, cnep, cepim] = await Promise.all([
+  const [peps, contratos, ceis, cnep] = await Promise.all([
     buscarTransparencia("peps", { cpf: cpfLimpo }),
     buscarTransparencia("contratos/cpf-cnpj", { cpfCnpj: cpfLimpo }),
     buscarTransparencia("ceis", { codigoSancionado: cpfLimpo }),
     buscarTransparencia("cnep", { codigoSancionado: cpfLimpo }),
-    buscarTransparencia("cepim", { codigoSancionado: cpfLimpo }),
   ]);
 
   // Se TODAS as sub-chamadas falharam (ex.: rede fora, não só "sem resultado"),
   // é mais honesto reportar indisponível do que um resumo zerado.
-  if (peps === null && contratos === null && ceis === null && cnep === null && cepim === null) {
+  if (peps === null && contratos === null && ceis === null && cnep === null) {
     return null;
   }
 
   const mapearContrato = (item: unknown): TransparenciaResumo["contratos"][number] => {
     const c = item as Record<string, unknown>;
+    const unidadeGestora = c.unidadeGestora as Record<string, unknown> | undefined;
     return {
-      numero: String(c.numero ?? c.numeroContrato ?? "—"),
-      objeto: String(c.objeto ?? c.objetoContrato ?? "—"),
-      valorInicial: Number(c.valorInicial ?? c.valorInicialCompra ?? 0),
+      numero: String(c.numero ?? "—"),
+      objeto: String(c.objeto ?? "—"),
+      valorInicial: Number(c.valorInicialCompra ?? 0),
       dataAssinatura: String(c.dataAssinatura ?? c.dataInicioVigencia ?? ""),
-      orgao: String(
-        (c.unidadeGestora as Record<string, unknown> | undefined)?.nomeOrgao ?? c.orgao ?? "—",
-      ),
+      orgao: String(unidadeGestora?.nome ?? "—"),
     };
   };
 
@@ -155,21 +167,18 @@ export async function buscarResumoTransparencia(cpf: string): Promise<Transparen
   ): TransparenciaResumo["sancoes"] =>
     (itens ?? []).map((item) => {
       const s = item as Record<string, unknown>;
+      const orgaoSancionador = s.orgaoSancionador as Record<string, unknown> | undefined;
       return {
         tipo,
-        orgaoSancionador: String(s.orgaoSancionador ?? s.nomeOrgaoSancionador ?? "—"),
-        data: String(s.dataInicioSancao ?? s.data ?? ""),
+        orgaoSancionador: String(orgaoSancionador?.nome ?? "—"),
+        data: String(s.dataInicioSancao ?? ""),
       };
     });
 
   return {
     pep: (peps?.length ?? 0) > 0,
     contratos: (contratos ?? []).map(mapearContrato),
-    sancoes: [
-      ...mapearSancoes(ceis, "CEIS"),
-      ...mapearSancoes(cnep, "CNEP"),
-      ...mapearSancoes(cepim, "CEPIM"),
-    ],
+    sancoes: [...mapearSancoes(ceis, "CEIS"), ...mapearSancoes(cnep, "CNEP")],
   };
 }
 
