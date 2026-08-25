@@ -27,7 +27,13 @@ import { USER_AGENT } from "./http";
 
 const PROJECT_ID = "prj_D2HzLlR41SBF5MKnaK5pLiBWRMTD";
 const TEAM_ID = "team_nwD7aMZOVrV6Orwj8LSBieJI";
-const REVALIDATE_SEGUNDOS = 3600; // visitantes não precisam de granularidade fina
+// 26/08/2026: era 3600 (1h) — o mantenedor reportou o número parecendo
+// "travado" depois de visitar o site de verdade. Causa real: a Vercel já
+// tinha o dado atualizado (confirmado consultando a API direto), mas o
+// cache de 1h desta função + o ISR de 10 min de /sobre somavam até ~70
+// min de atraso. Reduzido para 300s, igual ao Cache-Control que
+// GET /api/estatisticas-projeto já declara.
+const REVALIDATE_SEGUNDOS = 300;
 
 // Confirmado em 25/08/2026: o plano Hobby só permite consultar os últimos
 // 31 dias (a API rejeita com 400 qualquer `since` mais antigo que isso —
