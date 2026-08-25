@@ -218,3 +218,39 @@ Em 20/08/2026, uma deployment em produção (commit `55480ef`) ficou no ar sem n
 - Separadamente, o **mesmo commit exato**, reconstruído localmente de forma isolada (`rm -rf .next && npm run build && npm run start`) mais de uma vez, produziu resultados diferentes entre tentativas: numa saiu sem CSS/hidratação (idêntico ao sintoma em produção), na seguinte saiu perfeito — com `next.config.ts` e as dependências de build idênticos entre as tentativas. Isso aponta para uma **instabilidade do build de produção em Turbopack** (`▲ Next.js 16.3.1 (Turbopack)`, bundler de build ainda recente), não uma causa determinística no código.
 
 **Mitigação prática adotada:** antes de qualquer deploy, rodar `rm -rf .next && npm run build && npm run start` localmente e conferir visualmente (não só o código de status HTTP) que o CSS carregou e que componentes client hidrataram — um `curl` retornando `200` não é suficiente para confirmar que o build está íntegro. Se o problema se repetir, o próximo passo é testar sem Turbopack para isolar se é uma regressão específica dele.
+
+## 12. Teste de carga e cache em memória de processo (26/08/2026)
+
+Feito antes da divulgação pública do repositório, a pedido do mantenedor. Resultado: um bug crítico real encontrado e corrigido, mais uma auditoria de segurança sem achados críticos — ver `docs/SECURITY.md` para essa parte.
+
+### Metodologia — por que não contra produção diretamente
+
+A primeira tentativa foi rodar [`autocannon`](https://github.com/mcollina/autocannon) direto contra `https://eleicoes.metadax.org`. Resultado: **100% das requisições retornaram `403`**, mesmo em concorrência baixa (10 conexões) — confirmado não ser falha da aplicação (uma única requisição comum, ou 3 requisições `curl` genuinamente paralelas, sempre respondiam `200` normalmente). A proteção contra tráfego automatizado/rajada de uma única origem da própria Vercel (bot/attack protection) estava bloqueando o padrão de tráfego do autocannon — **comportamento correto de infraestrutura, não um defeito**. Tentar contornar essa proteção só para conseguir números de teste seria a escolha errada (o objetivo é testar a aplicação, não validar se dá pra evadir uma defesa real).
+
+**Metodologia adotada:** build de produção rodado localmente (`npm run build && npm run start`), testado com autocannon nesse processo local. Isso exercita exatamente o mesmo código de aplicação (carregamento de dados, renderização, busca) sem passar pela proteção de borda da Vercel — e sem consumir cota real de APIs externas de terceiros, já que este ambiente de teste não tinha `PORTAL_TRANSPARENCIA_API_KEY`/`VERCEL_API_TOKEN` configuradas (as chamadas que dependem delas retornam `null` de forma gradual, sem tentar rede).
+
+**Deliberadamente não testado sob carga alta:**
+- `/api/transparencia/:tipo` — proxy público (CORS aberto) para o Portal da Transparência, sem chave por consumidor. Testar em volume gastaria cota real e compartilhada (algumas faixas de endpoint são de 180 requisições/minuto — ver `docs/DATA_SOURCES.md` §4) que usuários reais do site dependem. A ausência de rate limiting nessa rota está documentada como risco conhecido em `docs/SECURITY.md`.
+- `/candidato/[id]` em produção com chaves reais — uma única visualização já dispara ~12 chamadas paralelas ao endpoint restrito de Bolsa Família (180/min). Testado localmente (sem chave configurada, chamadas retornam `null` sem rede) e com poucas requisições reais em produção, nunca em rajada.
+
+### Achado crítico: `/buscar` travava o processo inteiro sob concorrência
+
+Sem nenhum cache, `buscarCandidatos()` relia (via `fs.readFile`) os 28 arquivos de UF do zero **a cada requisição**, e `normalizar()` (NFD + regex + `toLowerCase`) rodava sobre os nomes de ~20 mil candidatos, também a cada requisição — sem nenhuma memoização. Confirmado com 80 conexões simultâneas: **0 das ~2.000 requisições completou** (`80 timeouts`), e o processo Node ficou preso a >90% de CPU, **sem responder a nenhuma requisição, incluindo `GET /` completamente não relacionada**, por mais de 2 minutos até ser encerrado manualmente. Confirmado via `ps aux` que o processo estava vivo (não travou nem foi morto pelo SO), só saturado.
+
+Segundo achado, agravando o primeiro: **sem paginação**, um termo comum como "silva" bate em **3.284 candidatos** (confirmado contra os dados reais), todos renderizados de uma vez, em toda requisição — multiplicando o custo de I/O e CPU do primeiro problema.
+
+**Correção** (`src/lib/data.ts`, `src/lib/stats.ts`, `app/buscar/page.tsx`):
+- Cache em memória do processo para os arquivos de `data/` (a Promise em si, não só o resultado — para que requisições concorrentes durante um cold start aguardem a mesma leitura em vez de cada uma abrir o arquivo de novo). Dado é estático por deploy (só muda numa nova ingestão + novo deploy), então não há problema de invalidação.
+- Nomes normalizados calculados uma vez por array de candidatos (`WeakMap`), não a cada busca.
+- `calcularEstatisticas()` (agregados de `/api/estatisticas` e `/mapa`) também cacheado, mesmo racional.
+- Paginação real em `/buscar` (24 por página, com "Mostrando X–Y de Z" e navegação Anterior/Próxima preservando os filtros).
+
+**Antes/depois, mesmo teste (autocannon local, servidor de produção `next start`):**
+
+| Rota | Antes | Depois |
+|---|---|---|
+| `/buscar?q=silva` (80 conexões, 15s) | Travamento total — 0/~2.000 completadas, 80 timeouts, processo preso >2 min | 1.000 requisições completadas, 0 erros, p50 ≈1,2s |
+| `/candidato/[id]` (40 conexões, 12s) | 197 requisições, p50 ≈2,5s | 560 requisições, p50 ≈0,77s (≈3x throughput) |
+| `/api/estatisticas` (60 conexões, 10s) | 908 requisições, p50 ≈0,7s | ~5.000 requisições, p50 ≈0,12s (≈5x throughput) |
+
+Rotas confirmadas saudáveis sem mudança necessária: `/` (≈730 req/s, estático/pré-renderizado), `/mapa` (≈560 req/s), `/api/certidao/:uf/:candidato/:arquivo` (limitado por banda de rede real ao GitHub, não por CPU — comportamento esperado). `/status` é deliberadamente não cacheado — checagem ao vivo é o próprio propósito da página (ver §7).

@@ -90,6 +90,11 @@ design está documentada e foi validada com testes reais, não apenas descrita:
 - **[docs/DESIGN_SYSTEM.md](docs/DESIGN_SYSTEM.md)** — identidade visual neutra
   (preto/branco) do projeto, e por que cada cor "de marca" foi deliberadamente
   excluída.
+- **[CONTRIBUTING.md](CONTRIBUTING.md)** — setup local, checklist antes de um PR
+  e as convenções específicas deste projeto (nunca fabricar dado, linguagem
+  neutra em categorias sensíveis, cache obrigatório para leitura de `data/`).
+- **[SECURITY.md](SECURITY.md)** — como reportar uma vulnerabilidade e os
+  riscos conhecidos já avaliados (resultado da auditoria de 26/08/2026).
 
 ## Stack
 
