@@ -12,12 +12,12 @@ Se você encontrar uma vulnerabilidade real (não um bug funcional comum — par
 1. **Não abra uma issue pública.** Use a aba
    [Security → Report a vulnerability](https://github.com/pedrorosemberg/eleicoes.metadax.org/security/advisories/new)
    do GitHub (advisory privado) — ou, se preferir, contate o mantenedor diretamente pelos
-   canais listados em [/sobre](https://eleicoes.metadax.org/sobre).
+   canais listados em [/sobre](https://fatoeleitoral.metadax.org/sobre).
 2. Descreva o problema, os passos para reproduzir e o impacto esperado. Não é necessário (nem
    recomendado) incluir CPF, chave de API ou qualquer outro dado sensível real no relato — uma
    descrição do mecanismo já basta.
 3. Como este é um projeto de código aberto mantido conforme o tempo disponível (ver
-   [/participe](https://eleicoes.metadax.org/participe)), não há um SLA formal de resposta,
+   [/participe](https://fatoeleitoral.metadax.org/participe)), não há um SLA formal de resposta,
    mas relatos de segurança têm prioridade sobre outras issues.
 
 ## O que está fora de escopo
@@ -65,16 +65,18 @@ divulgação pública. Resumo dos achados:
   `.env.example` ter sido escrito). Corrigido, com a distinção entre os dois tipos de token da
   Vercel documentada ali mesmo (ver `docs/DATA_SOURCES.md` §11 para o porquê disso importar).
 
-## Esteira de CI/CD (26/08/2026)
+## Esteira de CI/CD e Secure SDLC (26/08/2026)
 
-Desde que o repositório passou a aceitar contribuições externas, todo PR contra `hmg` ou `main`
-passa por dois gates obrigatórios antes de poder ser mesclado: um check automatizado de revisão
-de segurança via Claude (com atenção específica a prompt injection/prompt poisoning direcionado a
-um agente de IA que venha a processar este repositório — não só vulnerabilidade de código no
-sentido clássico) e a aprovação manual do mantenedor. PRs de fora do repositório (forks) exigem
-aprovação explícita do mantenedor só para rodar qualquer workflow, antes de qualquer segredo ser
-usado contra o conteúdo do PR. Arquitetura completa e o checklist de configuração em
-`docs/ARCHITECTURE.md` §15.
+Desde que o repositório passou a aceitar contribuições externas, todo PR contra `hmg` ou a branch
+de produção passa por dois gates obrigatórios antes de poder ser mesclado: um check automatizado
+de revisão de segurança via IA (com atenção específica a prompt injection/prompt poisoning
+direcionado a um agente de IA que venha a processar este repositório — não só vulnerabilidade de
+código no sentido clássico) e a aprovação manual do mantenedor. PRs de fora do repositório (forks)
+exigem aprovação explícita do mantenedor só para rodar qualquer workflow, antes de qualquer
+segredo ser usado contra o conteúdo do PR. Além disso, CodeQL (SAST) roda em todo PR e
+semanalmente, e Dependabot mantém dependências vulneráveis/desatualizadas sob monitoramento.
+Arquitetura completa e o checklist de configuração em `docs/ARCHITECTURE.md` §15 e §16; mapeamento
+de controles ISO 27002 aplicáveis em `docs/ISO27001_27002.md`.
 
 ## Riscos conhecidos (não críticos, decisão registrada)
 
@@ -93,7 +95,7 @@ risco por ora, dado que o produto inteiro já depende de CORS aberto como caract
 
 ## O que este projeto explicitamente não coleta
 
-Ver [/privacidade](https://eleicoes.metadax.org/privacidade) para a lista completa. Resumo: sem
+Ver [/privacidade](https://fatoeleitoral.metadax.org/privacidade) para a lista completa. Resumo: sem
 analytics de marketing (Meta/Google/Clarity), sem cookies de rastreamento — só Vercel
 Analytics/Speed Insights (contagem agregada de visitas, sem identificar indivíduos) e eventos de
 busca anônimos (termo buscado, sem IP nem qualquer identificador).

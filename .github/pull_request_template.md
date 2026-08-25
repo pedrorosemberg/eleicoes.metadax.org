@@ -1,6 +1,6 @@
 <!--
 Todo PR passa por duas validações obrigatórias antes de ser mesclado (ver
-docs/ARCHITECTURE.md §15): o check automatizado "Claude Security Review" e
+docs/ARCHITECTURE.md §15): o check automatizado "AI Security Review" e
 a aprovação manual do mantenedor. Preencher isto ajuda os dois.
 -->
 

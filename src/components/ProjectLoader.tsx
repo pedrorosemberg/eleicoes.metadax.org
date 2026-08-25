@@ -72,7 +72,7 @@ export function ProjectLoader() {
           />
         </svg>
         <span className="text-sm font-semibold tracking-wide text-[var(--text-secondary)]">
-          Eleições
+          FatoEleitoral
         </span>
       </div>
     </div>

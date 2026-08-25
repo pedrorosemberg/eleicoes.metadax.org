@@ -1,0 +1,39 @@
+name: CodeQL
+
+# SAST (Static Application Security Testing) — parte da esteira de Secure
+# SDLC deste projeto (ver docs/ARCHITECTURE.md §15). Análise estática
+# nativa do GitHub, gratuita para repositórios públicos, complementar à
+# revisão via IA (AI Security Review): CodeQL encontra padrões de
+# vulnerabilidade estruturais conhecidos (injeção, XSS, path traversal
+# etc.) com um mecanismo determinístico, dataflow-based — não depende de um
+# modelo de linguagem interpretar o diff corretamente.
+on:
+  pull_request:
+    branches: [hmg, main]
+  push:
+    branches: [hmg, main]
+  schedule:
+    # Varredura completa semanal, independente de PR — pega vulnerabilidade
+    # nova descoberta em dependência/padrão já existente no código, não só
+    # no que mudou.
+    - cron: "0 6 * * 1"
+
+permissions:
+  contents: read
+  security-events: write
+
+jobs:
+  analyze:
+    name: analyze
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Initialize CodeQL
+        uses: github/codeql-action/init@v3
+        with:
+          languages: javascript-typescript
+
+      - name: Analyze
+        uses: github/codeql-action/analyze@v3

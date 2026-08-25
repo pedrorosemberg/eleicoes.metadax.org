@@ -29,6 +29,10 @@ tsconfig.tsbuildinfo
 .env.local
 .env*.local
 
+# Saída local de .github/scripts/ai-security-review.mjs (em CI é efêmero por
+# runner; localmente, rodar o script de teste não deve sujar o working tree)
+ai-security-review-comment.md
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json

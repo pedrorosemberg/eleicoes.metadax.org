@@ -1,4 +1,4 @@
-# Fontes de Dados — eleicoes.metadax.org
+# Fontes de Dados — Fato Eleitoral
 
 > Documento de referência única. Toda integração de dados do projeto deve apontar para aqui.
 > Última validação: **20/08/2026**, testada ao vivo a partir do ambiente de execução desta sessão (ver "Nota sobre a rede de execução" abaixo antes de assumir que qualquer chamada funcionará em produção sem ajuste).
@@ -319,7 +319,7 @@ Um segundo teste imediato retornou `429 Too Many Requests` (rate limit não docu
 
 ### Pegadinha confirmada: BrasilAPI bloqueia o User-Agent padrão do Node
 
-Testado e confirmado nesta sessão: uma chamada `fetch()` feita pelo runtime Node/undici (como as Route Handlers do Next.js fazem por padrão) envia `User-Agent: node` — e a BrasilAPI retorna **403** especificamente para esse valor. `curl` (UA `curl/8.x`) e um User-Agent customizado (`eleicoes.metadax.org/1.0 (+https://eleicoes.metadax.org)`) funcionam normalmente (`200`); um UA vazio retorna `429`. **Correção aplicada no código:** todo `fetch` para a BrasilAPI (e, por padronização, para as demais fontes) envia um `User-Agent` explícito — ver `src/lib/http.ts`. Sem esse cabeçalho, o endpoint pareceria "fora do ar" quando na verdade está apenas bloqueando o identificador do cliente.
+Testado e confirmado nesta sessão: uma chamada `fetch()` feita pelo runtime Node/undici (como as Route Handlers do Next.js fazem por padrão) envia `User-Agent: node` — e a BrasilAPI retorna **403** especificamente para esse valor. `curl` (UA `curl/8.x`) e um User-Agent customizado (`fatoeleitoral.metadax.org/1.0 (+https://fatoeleitoral.metadax.org)`) funcionam normalmente (`200`); um UA vazio retorna `429`. **Correção aplicada no código:** todo `fetch` para a BrasilAPI (e, por padronização, para as demais fontes) envia um `User-Agent` explícito — ver `src/lib/http.ts`. Sem esse cabeçalho, o endpoint pareceria "fora do ar" quando na verdade está apenas bloqueando o identificador do cliente.
 
 ### Outros endpoints úteis da mesma API (não testados individualmente, mesma base confiável)
 
@@ -441,6 +441,7 @@ A pedido do usuário, as fontes abaixo foram checadas nesta sessão. Nenhuma del
 | **Integrador SP.GOV.BR** — API `tse-eleitores` | Canal de integração B2G do governo de SP: "consulta de local de votação, situação eleitoral, quitação eleitoral e crimes eleitorais" | Acessível (200), conteúdo lido | **Fora de escopo por desenho, não por bloqueio técnico.** É um canal credenciado (login gov.br institucional, fluxo "Quero utilizar essa API" atrás de autenticação) para órgãos do governo de SP trocarem dados entre si — não é uma API pública aberta a qualquer aplicação. Usar exigiria convênio institucional que este projeto não tem. |
 | **Infosimples** — `tribunal-tse-situacao` | Serviço comercial pago que automatiza consultas ao autoatendimento eleitoral do TSE (situação do título, biometria) | Acessível (200), conteúdo lido | **Fora de escopo por natureza do dado, não por licença.** Consulta **eleitor individual** (situação de título, biometria) para casos de uso de KYC/antifraude — não é dado de candidato, e o produto não coleta CPF de terceiros para esse fim. Serviço pago, sob contrato comercial (não é dado aberto) — não haveria conflito de licença por não ser usado, mas também não teria como ser redistribuído sob CC-BY mesmo que fosse. |
 | **Netrin** — `api/tse-titulo-eleitoral` | Serviço comercial pago equivalente ao Infosimples, para compliance/KYC de terceiros | Acessível (200), conteúdo lido | Mesma conclusão do Infosimples: fora de escopo (consulta de eleitor individual para antifraude, não dado de candidato), pago, sem licença de dado aberto. |
+| **Catálogo de APIs do Governo Federal (gov.br Conecta)** — [`gov.br/conecta/catalogo`](https://www.gov.br/conecta/catalogo/) | Catálogo centralizado de APIs de órgãos federais (não é uma API em si, é um diretório para descobrir outras) | Não avaliado nesta sessão — link registrado a pedido do mantenedor para consulta futura | **Pendente.** Não integrado a nada ainda; nenhuma API específica desse catálogo foi identificada, testada ou tem código escrito contra ela. Antes de integrar qualquer API listada lá, repetir o mesmo processo já aplicado às fontes acima: testar acesso real, documentar autenticação/limites, e só então decidir usar. Não presumir que uma API estar no catálogo significa que ela está pronta para uso sem credencial/convênio (ver o caso do Integrador SP.GOV.BR acima, que tinha exatamente esse tipo de barreira). |
 
 ## 4c. IBGE — Malhas Territoriais (fronteiras dos estados, para o mapa)
 

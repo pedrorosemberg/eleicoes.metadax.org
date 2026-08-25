@@ -7,7 +7,7 @@ const REPO_URL = "https://github.com/pedrorosemberg/eleicoes.metadax.org";
 export const metadata: Metadata = {
   title: "Participe",
   description:
-    "Vote com consciência e ajude a manter o Eleições — METADAX: reporte dados, contribua com código, valide fontes.",
+    "Vote com consciência e ajude a manter o Fato Eleitoral: reporte dados, contribua com código, valide fontes.",
   alternates: { canonical: "/participe" },
 };
 
@@ -109,6 +109,26 @@ export default function ParticipePage() {
           </li>
         ))}
       </ul>
+
+      <h2 className="mt-12 text-[22px] font-semibold text-[var(--text-primary)]">
+        Grupo do WhatsApp
+      </h2>
+      <p className="mt-3 max-w-prose text-[15px] leading-relaxed text-[var(--text-secondary)]">
+        Grupo aberto para discussão sobre o projeto — dúvida, sugestão, achar parceiro para
+        contribuir com código ou com dado. Grupos de WhatsApp têm um limite de membros definido
+        pelo próprio WhatsApp (hoje 1.024 participantes); se este grupo atingir o limite, um novo
+        grupo será criado e o link aqui nesta página será atualizado para o novo — esta página é
+        sempre a fonte do link atual, não uma cópia que pode ficar desatualizada em outro lugar.
+      </p>
+      <a
+        href="https://chat.whatsapp.com/GCXdQNeT7J6FfqkQcqgVKQ"
+        target="_blank"
+        rel="noreferrer noopener"
+        className="mt-4 inline-flex h-11 items-center rounded-[10px] border px-5 text-[15px] font-semibold text-[var(--text-primary)] hover:bg-[var(--surface-1)]"
+        style={{ borderColor: "var(--action-ghost-border)" }}
+      >
+        Entrar no grupo do WhatsApp ↗
+      </a>
 
       <h2 className="mt-12 text-[22px] font-semibold text-[var(--text-primary)]">
         Como ajudar o projeto

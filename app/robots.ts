@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next";
 
-const SITE_URL = "https://eleicoes.metadax.org";
+const SITE_URL = "https://fatoeleitoral.metadax.org";
 
 /**
  * Política deliberadamente permissiva: o objetivo do projeto é
