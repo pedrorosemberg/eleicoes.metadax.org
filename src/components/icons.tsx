@@ -90,3 +90,11 @@ export function IconExternalLink({ className }: IconProps) {
     </svg>
   );
 }
+
+export function IconChevronDown({ className }: IconProps) {
+  return (
+    <svg viewBox="0 0 20 20" width="14" height="14" fill="none" className={className} aria-hidden>
+      <path d="M5 7.5 10 12.5 15 7.5" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
+  );
+}

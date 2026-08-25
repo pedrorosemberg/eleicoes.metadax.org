@@ -83,7 +83,7 @@ Coletados manualmente do site de dados abertos do TSE (mesmo método do §5) e p
 |---|---|---|
 | `consulta_cand_complementar` | CSV (`_BRASIL.csv`, mesmo padrão de `consulta_cand`) | Merge direto em `candidatos/{UF}.json`: `tetoGastos` (VR_DESPESA_MAX_CAMPANHA) e `situacaoJulgamento` (DS_SITUACAO_JULGAMENTO — o campo que de fato tem valor antes da eleição; `DS_SIT_TOT_TURNO` só é preenchido depois da apuração, vindo `"#NULO"` até lá) |
 | `prestacao_de_contas_eleitorais_candidatos` | ZIP com **4 CSVs empacotados juntos** (receitas, despesas_contratadas, despesas_pagas, receitas_doador_originario) — só os dois primeiros têm `SQ_CANDIDATO` direto | `data/{ano}/financas/{UF}.json` — receitas e despesas contratadas por candidato. despesas_pagas e receitas_doador_originario ficam de fora (exigem join via SQ_DESPESA/SQ_RECEITA, não implementado — ver `/roteiro`) |
-| `CNPJ_campanha` | **Arquivo posicional de largura fixa, não CSV** — layout confirmado contra `leiame_cnpj_campanha.pdf` real (SECON/CSELE/STI/TSE, Julho/2016, v1.0.0): registro de 200 colunas, campo 2 (pos. 4-17) = CNPJ, campo 4 (pos. 18-167) = nome fiscal | `data/{ano}/cnpj-campanha.json` — lista solta, **não** cruzada com um candidato específico (o dataset não traz `SQ_CANDIDATO`, só CNPJ + nome fiscal no formato "ELEIÇÃO {ano} {nome} {cargo}"; inferir o candidato por esse nome seria uma correspondência não confiável, então fica de fora do perfil do candidato — ver `CnpjCampanha` em `src/types/candidato.ts`) |
+| `CNPJ_campanha` | **Arquivo posicional de largura fixa, não CSV** — layout confirmado contra `leiame_cnpj_campanha.pdf` real (SECON/CSELE/STI/TSE, Julho/2016, v1.0.0): registro de 200 colunas, campo 2 (pos. 4-17) = CNPJ, campo 4 (pos. 18-167) = nome fiscal | `data/{ano}/cnpj-campanha.json` — lista solta, **não** cruzada com um candidato específico (o dataset não traz `SQ_CANDIDATO`, só CNPJ + nome fiscal no formato "ELEIÇÃO {ano} {nome} {cargo}"; inferir o candidato por esse nome seria uma correspondência não confiável, então fica de fora do perfil do candidato — ver `CnpjCampanha` em `src/types/candidato.ts`). **Também investigado para o CNPJ do partido (25/08/2026), com o mesmo resultado**: as entradas `tipo: "partido"` são ~120 mil registros de diretório (nacional/estadual/municipal, um CNPJ cada), sem chave limpa sigla→CNPJ nacional — o nome do registro é inconsistente o bastante para que filtrar por "NACIONAL" no texto pegue tanto diretórios nacionais quanto o nome literal de partidos como o PMN ("Partido da Mobilização Nacional"). Fica de fora pelo mesmo motivo — ver item correspondente em `/roteiro` |
 | `foto_cand2026_{UF}_div.zip` (28 arquivos, 1 por UF) | ZIPs de JPEGs, nome `F{UF}{sqCandidato}_div.jpg` | `fotoUrl` em cada candidato — 20.638 fotos, uma para cada candidato do snapshot |
 | `proposta_governo_2026_{UF}.zip` (28 arquivos, 1 por UF) | ZIPs de PDFs, nome `{ano}{UF}{sqCandidato}_{NN}.pdf` | `planoGovernoUrls` — 208 candidatos com pelo menos um PDF (a maioria dos candidatos, principalmente os de cargos proporcionais, não é obrigada a enviar um) |
 
@@ -252,7 +252,15 @@ Estrutura confirmada via engenharia reversa publicada pela comunidade (repositó
 
 **O que é:** agregador open source e gratuito de várias fontes públicas brasileiras, incluindo dados de CNPJ da Receita Federal. **Único provedor externo dos 4 testado com sucesso total nesta sessão**, sem chave de API.
 
-**Uso no projeto:** enriquecer sigla partidária → dados cadastrais completos do partido (o TSE trata partidos como CNPJ), e permitir consulta de qualquer empresa citada na declaração de bens de um candidato ou em contratos públicos vinculados a ele.
+**Uso no projeto:** enriquecer sigla partidária → dados cadastrais completos do partido (o TSE trata partidos como CNPJ — ver nota em §1 sobre por que essa consulta ainda não está ligada a nenhum candidato), e permitir consulta de qualquer empresa citada na declaração de bens de um candidato ou em contratos públicos vinculados a ele.
+
+**Uso adicional (25/08/2026): accordion de CNPJ em receitas/despesas de campanha.** Diferente do
+CNPJ do partido, `cpfCnpjDoador`/`cpfCnpjFornecedor` vêm direto da prestação de contas do TSE, já
+ligados de verdade àquela receita/despesa específica — sem cruzamento por nome, sem ambiguidade.
+Quando o valor tem 14 dígitos (CNPJ, não CPF), o item vira um botão clicável
+(`src/components/CnpjAccordion.tsx`, client component) que consulta `/api/cnpj/{cnpj}` só quando
+o usuário expande — nunca em lote, nunca pré-carregado para as 20.638 fichas financeiras do
+snapshot.
 
 ### Endpoint principal
 

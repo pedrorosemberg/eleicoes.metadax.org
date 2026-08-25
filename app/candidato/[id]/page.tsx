@@ -19,6 +19,7 @@ import {
   buscarServidorPublico,
 } from "@/lib/enrichment";
 import { SnapshotNotice } from "@/components/SnapshotNotice";
+import { CnpjAccordion } from "@/components/CnpjAccordion";
 import { formatarDataBR, formatarDataHoraBR, formatarMoedaBRL } from "@/lib/format";
 import { IconAlertTriangle, IconCheckCircle, IconExternalLink, IconInfo } from "@/components/icons";
 
@@ -381,16 +382,30 @@ export default async function CandidatoPage({
               </span>
             </div>
             <ul className="mt-1.5 flex flex-col gap-1.5 text-sm">
-              {receitas.map((r, i) => (
-                <li key={i} className="flex items-center justify-between gap-3">
-                  <span className="text-[var(--text-secondary)]">
-                    {r.doador !== "#NULO" ? r.doador : "Doador não identificado"}
-                  </span>
-                  <span className="font-financial shrink-0 text-[var(--text-primary)]">
-                    {formatarMoedaBRL(r.valor)}
-                  </span>
-                </li>
-              ))}
+              {receitas.map((r, i) => {
+                const cnpjLimpo = r.cpfCnpjDoador?.replace(/\D/g, "");
+                if (cnpjLimpo?.length === 14) {
+                  return (
+                    <li key={i}>
+                      <CnpjAccordion
+                        cnpj={cnpjLimpo}
+                        nome={r.doador !== "#NULO" ? r.doador : "Doador não identificado"}
+                        valorFormatado={formatarMoedaBRL(r.valor)}
+                      />
+                    </li>
+                  );
+                }
+                return (
+                  <li key={i} className="flex items-center justify-between gap-3">
+                    <span className="text-[var(--text-secondary)]">
+                      {r.doador !== "#NULO" ? r.doador : "Doador não identificado"}
+                    </span>
+                    <span className="font-financial shrink-0 text-[var(--text-primary)]">
+                      {formatarMoedaBRL(r.valor)}
+                    </span>
+                  </li>
+                );
+              })}
             </ul>
           </div>
         )}
@@ -403,16 +418,30 @@ export default async function CandidatoPage({
               </span>
             </div>
             <ul className="mt-1.5 flex flex-col gap-1.5 text-sm">
-              {despesas.map((d, i) => (
-                <li key={i} className="flex items-center justify-between gap-3">
-                  <span className="text-[var(--text-secondary)]">
-                    {d.fornecedor !== "#NULO" ? d.fornecedor : "Fornecedor não identificado"}
-                  </span>
-                  <span className="font-financial shrink-0 text-[var(--text-primary)]">
-                    {formatarMoedaBRL(d.valor)}
-                  </span>
-                </li>
-              ))}
+              {despesas.map((d, i) => {
+                const cnpjLimpo = d.cpfCnpjFornecedor?.replace(/\D/g, "");
+                if (cnpjLimpo?.length === 14) {
+                  return (
+                    <li key={i}>
+                      <CnpjAccordion
+                        cnpj={cnpjLimpo}
+                        nome={d.fornecedor !== "#NULO" ? d.fornecedor : "Fornecedor não identificado"}
+                        valorFormatado={formatarMoedaBRL(d.valor)}
+                      />
+                    </li>
+                  );
+                }
+                return (
+                  <li key={i} className="flex items-center justify-between gap-3">
+                    <span className="text-[var(--text-secondary)]">
+                      {d.fornecedor !== "#NULO" ? d.fornecedor : "Fornecedor não identificado"}
+                    </span>
+                    <span className="font-financial shrink-0 text-[var(--text-primary)]">
+                      {formatarMoedaBRL(d.valor)}
+                    </span>
+                  </li>
+                );
+              })}
             </ul>
           </div>
         )}
@@ -637,6 +666,11 @@ export default async function CandidatoPage({
         </p>
       </section>
 
+      {/* candidato.partido.cnpj nunca é preenchido hoje — não existe uma fonte confiável de
+          CNPJ por partido ainda (CNPJ_campanha tem ~120 mil entradas de diretório por partido,
+          sem chave limpa partido→CNPJ nacional; cruzar por nome seria inferência não confiável,
+          ver docs/DATA_SOURCES.md §1 e /roteiro). Esta seção fica pronta para quando essa fonte
+          existir, sem nunca renderizar um estado vazio/quebrado enquanto isso não acontece. */}
       {dadosCnpjPartido && (
         <section className="mt-8 rounded-[18px] border p-5" style={{ borderColor: "var(--hairline)" }}>
           <h2 className="text-[17px] font-semibold text-[var(--text-primary)]">

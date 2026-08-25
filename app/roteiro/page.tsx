@@ -48,6 +48,13 @@ const PLANEJADOS: ItemRoteiro[] = [
     fonte: "TSE (candidatos por partido, prestacao_de_contas_eleitorais_orgaos_partidarios) + Receita Federal via BrasilAPI (dados cadastrais)",
     status: "planejado",
   },
+  {
+    titulo: "CNPJ do partido no perfil do candidato",
+    descricao:
+      "Investigado em 25/08/2026: o dataset CNPJ_campanha tem ~120 mil entradas de diretório por partido (nacional, estadual e municipal, um CNPJ para cada), sem uma chave limpa que ligue a sigla do partido ao CNPJ nacional — o campo de nome é inconsistente (grafias diferentes, \"NACIONAL\" aparece tanto como nível de diretório quanto como parte do nome de partidos como o PMN). Cruzar por nome seria uma inferência não confiável, então fica de fora até existir uma lista curada e verificada dos ~30 CNPJs nacionais dos partidos (não gerada por correspondência automática).",
+    fonte: "TSE — dataset CNPJ_campanha, já ingerido (ver docs/DATA_SOURCES.md §1)",
+    status: "planejado",
+  },
 ];
 
 const BLOQUEADOS: ItemRoteiro[] = [
