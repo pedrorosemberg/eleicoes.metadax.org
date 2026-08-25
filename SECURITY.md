@@ -65,16 +65,18 @@ divulgação pública. Resumo dos achados:
   `.env.example` ter sido escrito). Corrigido, com a distinção entre os dois tipos de token da
   Vercel documentada ali mesmo (ver `docs/DATA_SOURCES.md` §11 para o porquê disso importar).
 
-## Esteira de CI/CD (26/08/2026)
+## Esteira de CI/CD e Secure SDLC (26/08/2026)
 
-Desde que o repositório passou a aceitar contribuições externas, todo PR contra `hmg` ou `main`
-passa por dois gates obrigatórios antes de poder ser mesclado: um check automatizado de revisão
-de segurança via Claude (com atenção específica a prompt injection/prompt poisoning direcionado a
-um agente de IA que venha a processar este repositório — não só vulnerabilidade de código no
-sentido clássico) e a aprovação manual do mantenedor. PRs de fora do repositório (forks) exigem
-aprovação explícita do mantenedor só para rodar qualquer workflow, antes de qualquer segredo ser
-usado contra o conteúdo do PR. Arquitetura completa e o checklist de configuração em
-`docs/ARCHITECTURE.md` §15.
+Desde que o repositório passou a aceitar contribuições externas, todo PR contra `hmg` ou a branch
+de produção passa por dois gates obrigatórios antes de poder ser mesclado: um check automatizado
+de revisão de segurança via IA (com atenção específica a prompt injection/prompt poisoning
+direcionado a um agente de IA que venha a processar este repositório — não só vulnerabilidade de
+código no sentido clássico) e a aprovação manual do mantenedor. PRs de fora do repositório (forks)
+exigem aprovação explícita do mantenedor só para rodar qualquer workflow, antes de qualquer
+segredo ser usado contra o conteúdo do PR. Além disso, CodeQL (SAST) roda em todo PR e
+semanalmente, e Dependabot mantém dependências vulneráveis/desatualizadas sob monitoramento.
+Arquitetura completa e o checklist de configuração em `docs/ARCHITECTURE.md` §15 e §16; mapeamento
+de controles ISO 27002 aplicáveis em `docs/ISO27001_27002.md`.
 
 ## Riscos conhecidos (não críticos, decisão registrada)
 

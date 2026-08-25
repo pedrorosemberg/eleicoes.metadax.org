@@ -1,0 +1,64 @@
+name: AI Security Review
+
+# Primeira validação da esteira de CI/CD (ver docs/ARCHITECTURE.md §15) —
+# obrigatório antes de qualquer merge em hmg/main. Chama um modelo gratuito
+# da NVIDIA (build.nvidia.com, endpoint OpenAI-compatible) via
+# .github/scripts/ai-security-review.mjs, com instruções específicas deste
+# projeto em .github/ai-security-review-instructions.md (prompt injection,
+# prompt poisoning, segredos, integridade/disponibilidade/confidencialidade
+# do dado exibido).
+#
+# Por que não é mais a action anthropics/claude-code-security-review: ela é
+# hardcoded para a API/CLI da Anthropic, sem suporte a endpoint/provedor
+# customizado — decisão do mantenedor (26/08/2026) foi usar a camada
+# gratuita da NVIDIA em vez de uma ANTHROPIC_API_KEY paga. O script próprio
+# roda do zero a cada commit (sem cache "já rodei" — o bug que isso causou
+# na action anterior não existe aqui, ver docs/ARCHITECTURE.md §15).
+on:
+  pull_request:
+    branches: [hmg, main]
+
+concurrency:
+  group: ai-security-review-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+  pull-requests: write
+
+jobs:
+  security:
+    name: security
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "24"
+
+      - name: Rodar revisão de segurança (NVIDIA)
+        env:
+          NVIDIA_API_KEY: ${{ secrets.NVIDIA_API_KEY }}
+          # Modelo padrão escolhido em 26/08/2026 (catálogo de code-gen de
+          # build.nvidia.com). Se a API retornar erro de modelo inválido, o
+          # catálogo pode ter mudado o nome/removido o modelo — confira em
+          # build.nvidia.com e ajuste aqui.
+          NVIDIA_MODEL: qwen/qwen2.5-coder-32b-instruct
+          BASE_SHA: ${{ github.event.pull_request.base.sha }}
+          HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+        run: node .github/scripts/ai-security-review.mjs
+
+      - name: Comentar no PR
+        if: always()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if [ -f ai-security-review-comment.md ]; then
+            gh pr comment "${{ github.event.pull_request.number }}" --body-file ai-security-review-comment.md
+          fi
