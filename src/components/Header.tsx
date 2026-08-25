@@ -36,7 +36,7 @@ export function Header() {
       style={{ borderColor: "var(--hairline)" }}
     >
       <div className="mx-auto flex max-w-3xl items-center justify-between px-4 py-2.5 sm:px-6">
-        <Link href="/" aria-label="Eleições — página inicial">
+        <Link href="/" aria-label="FatoEleitoral — página inicial">
           <Logo />
         </Link>
 
