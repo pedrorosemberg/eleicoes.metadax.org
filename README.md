@@ -1,5 +1,16 @@
 # eleicoes.metadax.org
 
+[![Estrelas no GitHub](https://img.shields.io/github/stars/pedrorosemberg/eleicoes.metadax.org?style=flat-square&label=estrelas)](https://github.com/pedrorosemberg/eleicoes.metadax.org/stargazers)
+[![Forks](https://img.shields.io/github/forks/pedrorosemberg/eleicoes.metadax.org?style=flat-square&label=forks)](https://github.com/pedrorosemberg/eleicoes.metadax.org/network/members)
+[![Issues e PRs abertos](https://img.shields.io/github/issues/pedrorosemberg/eleicoes.metadax.org?style=flat-square&label=issues%2FPRs%20abertos)](https://github.com/pedrorosemberg/eleicoes.metadax.org/issues)
+[![Último commit](https://img.shields.io/github/last-commit/pedrorosemberg/eleicoes.metadax.org?style=flat-square&label=%C3%BAltimo%20commit)](https://github.com/pedrorosemberg/eleicoes.metadax.org/commits/main)
+[![Licença CC BY 4.0](https://img.shields.io/github/license/pedrorosemberg/eleicoes.metadax.org?style=flat-square&label=licen%C3%A7a)](LICENSE)
+
+Os badges acima puxam os números direto da API do GitHub a cada carregamento —
+não são estáticos. Os mesmos números, junto com visitantes do site, aparecem
+atualizados ao vivo em [eleicoes.metadax.org/sobre](https://eleicoes.metadax.org/sobre#estatisticas-do-projeto)
+(também disponível como JSON em `GET /api/estatisticas-projeto`).
+
 Consulta pública de candidatos às eleições brasileiras, cruzando dados coletados
 do site de dados abertos do Tribunal Superior Eleitoral (TSE) com o Portal da
 Transparência (CGU) e dados de CNPJ da Receita Federal (via
@@ -28,7 +39,8 @@ Licenciado sob [CC BY 4.0](LICENSE).
   estatísticas por UF/cargo (consumível também via `GET /api/estatisticas`, JSON, CORS aberto)
 - `/status` — saúde em tempo real de cada fonte de dado externa (TSE, BrasilAPI,
   Portal da Transparência), com checagem ao vivo a cada 30s
-- `/sobre` — metodologia, fontes, licença e responsável pelo projeto
+- `/sobre` — metodologia, fontes, licença, responsável pelo projeto e estatísticas
+  reais do repositório/site (consumível também via `GET /api/estatisticas-projeto`, JSON)
 - `/participe` — dicas de voto consciente e como contribuir com o projeto
 - `/roteiro` — o que está planejado, bloqueado ou só sugerido, cada item com a fonte de dado
   correspondente, e como propor algo novo

@@ -1,4 +1,7 @@
 import type { Metadata } from "next";
+import { buscarEstatisticasRepositorio } from "@/lib/github";
+import { buscarVisitantesSite } from "@/lib/site-analytics";
+import { formatarDataHoraBR } from "@/lib/format";
 
 const REPO_URL = "https://github.com/pedrorosemberg/eleicoes.metadax.org";
 
@@ -9,7 +12,13 @@ export const metadata: Metadata = {
   alternates: { canonical: "/sobre" },
 };
 
-export default function SobrePage() {
+export default async function SobrePage() {
+  const [repositorio, visitantes] = await Promise.all([
+    buscarEstatisticasRepositorio(),
+    buscarVisitantesSite(),
+  ]);
+  const numeroBR = new Intl.NumberFormat("pt-BR");
+
   return (
     <main className="mx-auto max-w-2xl px-4 py-10 sm:px-6 sm:py-16">
       <h1 className="text-[clamp(28px,6vw,40px)] font-semibold text-[var(--text-primary)]">
@@ -82,6 +91,66 @@ export default function SobrePage() {
           github.com/pedrorosemberg/eleicoes.metadax.org
         </a>
         .
+      </p>
+
+      <h2 id="estatisticas-do-projeto" className="mt-10 text-[22px] font-semibold text-[var(--text-primary)]">
+        Estatísticas do projeto
+      </h2>
+      <p className="mt-3 text-[17px] leading-relaxed text-[var(--text-secondary)]">
+        Números reais do repositório e do site, sem estimativa — a mesma consulta que
+        alimenta esta seção está disponível publicamente em{" "}
+        <a className="underline underline-offset-2" href="/api/estatisticas-projeto" target="_blank" rel="noreferrer noopener">
+          /api/estatisticas-projeto
+        </a>
+        .
+      </p>
+      <dl className="mt-4 grid grid-cols-2 gap-3 sm:grid-cols-4">
+        <div className="rounded-[14px] border p-4" style={{ borderColor: "var(--hairline)" }}>
+          <dt className="text-xs text-[var(--text-tertiary)]">Estrelas no GitHub</dt>
+          <dd className="mt-1 text-[22px] font-semibold text-[var(--text-primary)]">
+            {repositorio ? numeroBR.format(repositorio.estrelas) : "—"}
+          </dd>
+        </div>
+        <div className="rounded-[14px] border p-4" style={{ borderColor: "var(--hairline)" }}>
+          <dt className="text-xs text-[var(--text-tertiary)]">Forks</dt>
+          <dd className="mt-1 text-[22px] font-semibold text-[var(--text-primary)]">
+            {repositorio ? numeroBR.format(repositorio.forks) : "—"}
+          </dd>
+        </div>
+        <div className="rounded-[14px] border p-4" style={{ borderColor: "var(--hairline)" }}>
+          <dt className="text-xs text-[var(--text-tertiary)]">Issues e PRs abertos</dt>
+          <dd className="mt-1 text-[22px] font-semibold text-[var(--text-primary)]">
+            {repositorio ? numeroBR.format(repositorio.issuesEPrsAbertos) : "—"}
+          </dd>
+        </div>
+        <div className="rounded-[14px] border p-4" style={{ borderColor: "var(--hairline)" }}>
+          <dt className="text-xs text-[var(--text-tertiary)]">Visitantes do site</dt>
+          <dd className="mt-1 text-[22px] font-semibold text-[var(--text-primary)]">
+            {visitantes ? numeroBR.format(visitantes.visitantes) : "—"}
+          </dd>
+        </div>
+      </dl>
+      {!repositorio && (
+        <p className="mt-3 flex items-start gap-2 text-sm text-[var(--text-tertiary)]">
+          Estatísticas do GitHub indisponíveis no momento (API do GitHub fora do ar ou limite de
+          taxa atingido) — não é um problema do repositório em si.
+        </p>
+      )}
+      {!visitantes && (
+        <p className="mt-3 flex items-start gap-2 text-sm text-[var(--text-tertiary)]">
+          Visitantes indisponível — o Vercel Web Analytics deste projeto ainda está sendo
+          habilitado. Assim que estiver ativo, o número real aparece aqui automaticamente, sem
+          nenhuma mudança de código.
+        </p>
+      )}
+      <p className="mt-3 text-xs text-[var(--text-tertiary)]">
+        Fonte: API pública do GitHub (repositório) e Vercel Web Analytics (visitantes, contagem de
+        páginas vistas por sessão, sem cookies de rastreamento — ver{" "}
+        <a className="underline underline-offset-2" href="/privacidade">
+          /privacidade
+        </a>
+        ).
+        {repositorio && ` Repositório atualizado em ${formatarDataHoraBR(repositorio.atualizadoEm)}.`}
       </p>
 
       <h2 className="mt-10 text-[22px] font-semibold text-[var(--text-primary)]">Marca e mantenedor</h2>

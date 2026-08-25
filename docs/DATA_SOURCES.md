@@ -634,3 +634,42 @@ Exemplos concretos já aplicados no código (ver `app/candidato/[id]/page.tsx`):
   indisponível** — a consulta não pôde ser feita (ex.: sem CPF no dado de origem, ZIP de origem
   corrompido, API fora do ar). Tratar (b) como se fosse (a) é o erro mais fácil de cometer aqui
   e o mais enganoso para quem lê — parece "não tem nada" quando na verdade é "não sabemos".
+
+---
+
+## 11. Estatísticas do projeto — GitHub API e Vercel Web Analytics
+
+Seção "Estatísticas do projeto" em `/sobre` e os badges do `README.md` — adicionados em
+25/08/2026 a pedido do mantenedor, para tornar o repositório e o alcance real do site visíveis.
+Dois números, duas fontes diferentes, ambas reais:
+
+**Repositório (estrelas, forks, issues/PRs abertos, licença):** `GET /repos/{owner}/{repo}` da
+API pública do GitHub — mesma chamada não-autenticada já usada em `src/lib/github.ts` para
+`/atualizacoes` (ver §2 dessa mesma seção de código para o racional dos Termos de Serviço do
+GitHub). `open_issues_count` soma issues e pull requests abertos — o GitHub não separa isso sem
+uma segunda chamada, por isso o rótulo na UI é "Issues e PRs abertos", não só "issues", para não
+sugerir um número que a API não está de fato retornando. Os badges do README (via
+[shields.io](https://shields.io), que por sua vez consulta a mesma API do GitHub) são dinâmicos —
+recarregam o número real a cada vez que o README é renderizado no GitHub, não são uma imagem
+estática. Nenhuma dependência nova no runtime do site: os badges do README só existem no
+Markdown, renderizados pelo GitHub, fora do código da aplicação.
+
+**Visitantes e visualizações do site:** Vercel Web Analytics — o mesmo produto cujo script
+(`@vercel/analytics`) já roda em todas as páginas desde antes desta seção existir (ver
+`/privacidade`). A API de consulta (`GET /v1/query/web-analytics/visits/count`) exige duas
+condições que **não podem ser configuradas por este agente/sessão de código**, só manualmente
+pelo dono da conta Vercel:
+
+1. Habilitar Web Analytics no projeto (painel da Vercel → Project → Analytics → Enable, ou
+   `vercel project web-analytics` autenticado via CLI). Sem isso, o script já envia eventos, mas
+   a Vercel não os retém nem os deixa consultáveis — confirmado em 25/08/2026 com a API
+   respondendo `web_analytics_not_enabled`.
+2. Um [Vercel Access Token](https://vercel.com/docs/sign-in-with-vercel/tokens) com leitura
+   nesse projeto, salvo como variável de ambiente `VERCEL_API_TOKEN` no projeto (nunca no
+   código-fonte, nunca commitado).
+
+Implementado em `src/lib/site-analytics.ts`, com o mesmo padrão de degradação graciosa do resto
+do projeto: sem essas duas condições, `buscarVisitantesSite()` retorna `null` e a UI mostra
+"indisponível" com a explicação real, nunca um número inventado ou zero disfarçado de dado real.
+Assim que as duas condições forem satisfeitas pelo mantenedor, o número real aparece
+automaticamente em `/sobre` e em `GET /api/estatisticas-projeto` — sem nenhuma mudança de código.

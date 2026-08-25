@@ -120,3 +120,41 @@ export async function buscarReleasesGitHub(): Promise<ReleaseGitHub[] | null> {
     prerelease: r.prerelease,
   }));
 }
+
+export interface EstatisticasRepositorio {
+  estrelas: number;
+  forks: number;
+  observadores: number;
+  /** open_issues_count do GitHub soma issues E pull requests abertos — não dá pra separar sem uma segunda chamada. */
+  issuesEPrsAbertos: number;
+  licenca: string | null;
+  atualizadoEm: string;
+}
+
+interface RepositorioBruto {
+  stargazers_count: number;
+  forks_count: number;
+  subscribers_count: number;
+  open_issues_count: number;
+  license: { spdx_id: string } | null;
+  pushed_at: string;
+}
+
+/**
+ * `GET /repos/{owner}/{repo}` — dados públicos do próprio repositório
+ * (estrelas, forks, observadores, issues/PRs abertos, licença). Mesma
+ * chamada não-autenticada e mesmo `revalidate` das demais funções deste
+ * arquivo.
+ */
+export async function buscarEstatisticasRepositorio(): Promise<EstatisticasRepositorio | null> {
+  const bruto = await buscarGitHub<RepositorioBruto>("");
+  if (!bruto) return null;
+  return {
+    estrelas: bruto.stargazers_count,
+    forks: bruto.forks_count,
+    observadores: bruto.subscribers_count,
+    issuesEPrsAbertos: bruto.open_issues_count,
+    licenca: bruto.license?.spdx_id ?? null,
+    atualizadoEm: bruto.pushed_at,
+  };
+}
