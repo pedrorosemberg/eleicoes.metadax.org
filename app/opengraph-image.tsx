@@ -45,7 +45,7 @@ export default function OpengraphImage() {
               />
             </svg>
           </div>
-          <div style={{ fontSize: 32, fontWeight: 600, color: "#1E1E1E" }}>Eleições</div>
+          <div style={{ fontSize: 32, fontWeight: 600, color: "#1E1E1E" }}>FatoEleitoral</div>
         </div>
         <div
           style={{

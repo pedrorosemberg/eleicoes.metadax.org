@@ -9,7 +9,7 @@ import { buscarEstatisticasRepositorio } from "@/lib/github";
 const REPO_URL = "https://github.com/pedrorosemberg/eleicoes.metadax.org";
 
 export const metadata: Metadata = {
-  title: "Eleições — METADAX",
+  title: "Fato Eleitoral",
   description:
     "Consulta pública de candidatos às eleições brasileiras: dados oficiais do TSE, plano de governo, partido e cruzamento com o Portal da Transparência e a Receita Federal. Projeto de código aberto, sem cor de partido.",
 };

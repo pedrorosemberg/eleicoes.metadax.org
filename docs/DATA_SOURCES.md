@@ -1,4 +1,4 @@
-# Fontes de Dados — eleicoes.metadax.org
+# Fontes de Dados — Fato Eleitoral
 
 > Documento de referência única. Toda integração de dados do projeto deve apontar para aqui.
 > Última validação: **20/08/2026**, testada ao vivo a partir do ambiente de execução desta sessão (ver "Nota sobre a rede de execução" abaixo antes de assumir que qualquer chamada funcionará em produção sem ajuste).
@@ -319,7 +319,7 @@ Um segundo teste imediato retornou `429 Too Many Requests` (rate limit não docu
 
 ### Pegadinha confirmada: BrasilAPI bloqueia o User-Agent padrão do Node
 
-Testado e confirmado nesta sessão: uma chamada `fetch()` feita pelo runtime Node/undici (como as Route Handlers do Next.js fazem por padrão) envia `User-Agent: node` — e a BrasilAPI retorna **403** especificamente para esse valor. `curl` (UA `curl/8.x`) e um User-Agent customizado (`eleicoes.metadax.org/1.0 (+https://eleicoes.metadax.org)`) funcionam normalmente (`200`); um UA vazio retorna `429`. **Correção aplicada no código:** todo `fetch` para a BrasilAPI (e, por padronização, para as demais fontes) envia um `User-Agent` explícito — ver `src/lib/http.ts`. Sem esse cabeçalho, o endpoint pareceria "fora do ar" quando na verdade está apenas bloqueando o identificador do cliente.
+Testado e confirmado nesta sessão: uma chamada `fetch()` feita pelo runtime Node/undici (como as Route Handlers do Next.js fazem por padrão) envia `User-Agent: node` — e a BrasilAPI retorna **403** especificamente para esse valor. `curl` (UA `curl/8.x`) e um User-Agent customizado (`fatoeleitoral.metadax.org/1.0 (+https://fatoeleitoral.metadax.org)`) funcionam normalmente (`200`); um UA vazio retorna `429`. **Correção aplicada no código:** todo `fetch` para a BrasilAPI (e, por padronização, para as demais fontes) envia um `User-Agent` explícito — ver `src/lib/http.ts`. Sem esse cabeçalho, o endpoint pareceria "fora do ar" quando na verdade está apenas bloqueando o identificador do cliente.
 
 ### Outros endpoints úteis da mesma API (não testados individualmente, mesma base confiável)
 

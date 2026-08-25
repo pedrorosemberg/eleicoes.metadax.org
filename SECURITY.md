@@ -12,12 +12,12 @@ Se você encontrar uma vulnerabilidade real (não um bug funcional comum — par
 1. **Não abra uma issue pública.** Use a aba
    [Security → Report a vulnerability](https://github.com/pedrorosemberg/eleicoes.metadax.org/security/advisories/new)
    do GitHub (advisory privado) — ou, se preferir, contate o mantenedor diretamente pelos
-   canais listados em [/sobre](https://eleicoes.metadax.org/sobre).
+   canais listados em [/sobre](https://fatoeleitoral.metadax.org/sobre).
 2. Descreva o problema, os passos para reproduzir e o impacto esperado. Não é necessário (nem
    recomendado) incluir CPF, chave de API ou qualquer outro dado sensível real no relato — uma
    descrição do mecanismo já basta.
 3. Como este é um projeto de código aberto mantido conforme o tempo disponível (ver
-   [/participe](https://eleicoes.metadax.org/participe)), não há um SLA formal de resposta,
+   [/participe](https://fatoeleitoral.metadax.org/participe)), não há um SLA formal de resposta,
    mas relatos de segurança têm prioridade sobre outras issues.
 
 ## O que está fora de escopo
@@ -95,7 +95,7 @@ risco por ora, dado que o produto inteiro já depende de CORS aberto como caract
 
 ## O que este projeto explicitamente não coleta
 
-Ver [/privacidade](https://eleicoes.metadax.org/privacidade) para a lista completa. Resumo: sem
+Ver [/privacidade](https://fatoeleitoral.metadax.org/privacidade) para a lista completa. Resumo: sem
 analytics de marketing (Meta/Google/Clarity), sem cookies de rastreamento — só Vercel
 Analytics/Speed Insights (contagem agregada de visitas, sem identificar indivíduos) e eventos de
 busca anônimos (termo buscado, sem IP nem qualquer identificador).

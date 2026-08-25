@@ -8,7 +8,7 @@ const REPO_URL = "https://github.com/pedrorosemberg/eleicoes.metadax.org";
 export const metadata: Metadata = {
   title: "Sobre e fontes",
   description:
-    "Metodologia, fontes de dados e licença do projeto Eleições — METADAX. TSE, Portal da Transparência e Receita Federal.",
+    "Metodologia, fontes de dados e licença do projeto Fato Eleitoral. TSE, Portal da Transparência e Receita Federal.",
   alternates: { canonical: "/sobre" },
 };
 
@@ -25,7 +25,7 @@ export default async function SobrePage() {
         Sobre este projeto
       </h1>
       <p className="mt-4 text-[17px] leading-relaxed text-[var(--text-secondary)]">
-        O <strong>Eleições — METADAX</strong> cruza dados públicos de candidatos às eleições
+        O <strong>Fato Eleitoral</strong> cruza dados públicos de candidatos às eleições
         brasileiras — origem no Tribunal Superior Eleitoral (TSE) — com dados de CNPJ da
         Receita Federal e com o Portal da Transparência da Controladoria-Geral da União
         (CGU). O objetivo é permitir consultar, num só lugar, quem é candidato, por qual

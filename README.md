@@ -1,10 +1,16 @@
-# eleicoes.metadax.org
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/fatoeleitoral_branco.svg">
+  <img src="assets/fatoeleitoral.svg" alt="Fato Eleitoral" width="360">
+</picture>
 
-[![Estrelas no GitHub](https://eleicoes.metadax.org/api/badge/estrelas)](https://github.com/pedrorosemberg/eleicoes.metadax.org/stargazers)
-[![Forks](https://eleicoes.metadax.org/api/badge/forks)](https://github.com/pedrorosemberg/eleicoes.metadax.org/network/members)
-[![Issues e PRs abertos](https://eleicoes.metadax.org/api/badge/issues)](https://github.com/pedrorosemberg/eleicoes.metadax.org/issues)
-[![Último commit](https://eleicoes.metadax.org/api/badge/ultimo-commit)](https://github.com/pedrorosemberg/eleicoes.metadax.org/commits/main)
-[![Licença CC BY 4.0](https://eleicoes.metadax.org/api/badge/licenca)](LICENSE)
+Repositório: `eleicoes.metadax.org` (nome mantido por estabilidade de URLs/links
+já publicados — ver "Domínio" abaixo para o histórico e o plano de migração).
+
+[![Estrelas no GitHub](https://fatoeleitoral.metadax.org/api/badge/estrelas)](https://github.com/pedrorosemberg/eleicoes.metadax.org/stargazers)
+[![Forks](https://fatoeleitoral.metadax.org/api/badge/forks)](https://github.com/pedrorosemberg/eleicoes.metadax.org/network/members)
+[![Issues e PRs abertos](https://fatoeleitoral.metadax.org/api/badge/issues)](https://github.com/pedrorosemberg/eleicoes.metadax.org/issues)
+[![Último commit](https://fatoeleitoral.metadax.org/api/badge/ultimo-commit)](https://github.com/pedrorosemberg/eleicoes.metadax.org/commits/main)
+[![Licença CC BY 4.0](https://fatoeleitoral.metadax.org/api/badge/licenca)](LICENSE)
 
 Os badges acima são gerados por este próprio projeto (`GET /api/badge/[metrica]`,
 `src/lib/badge-svg.ts`), não pelo shields.io — trocado depois de o badge de
@@ -21,7 +27,7 @@ hipóteses, tão atual quanto esse segundo cache permitir. Os mesmos números
 do repositório, junto com visitantes e páginas vistas do site (visitantes
 únicos e pageviews, sem esse segundo cache no meio), aparecem atualizados
 ao vivo em
-[eleicoes.metadax.org/sobre](https://eleicoes.metadax.org/sobre#estatisticas-do-projeto)
+[fatoeleitoral.metadax.org/sobre](https://fatoeleitoral.metadax.org/sobre#estatisticas-do-projeto)
 (também disponível como JSON em `GET /api/estatisticas-projeto`).
 
 Consulta pública de candidatos às eleições brasileiras, cruzando dados coletados
@@ -30,12 +36,41 @@ Transparência (CGU) e dados de CNPJ da Receita Federal (via
 [BrasilAPI](https://brasilapi.com.br)).
 
 Tema claro, preto e branco, sem cor de partido, mobile-first — neutralidade
-político-partidária como requisito central de design, ver `docs/DESIGN_SYSTEM.md`.
-Sem nenhuma dependência de rede externa da METADAX (CDN, loader, header/footer) —
-tudo autocontido neste projeto. Um projeto do
-[Instituto METADAX de Inovação (IMI)](https://imi.metadax.org).
+político-partidária como requisito central de design, ver `docs/DESIGN_SYSTEM.md`
+(a logo e o favicon são a única exceção documentada, ver a seção "Identidade
+visual e domínio" abaixo). Sem nenhuma dependência de rede externa da METADAX
+(CDN, loader, header/footer) — tudo autocontido neste projeto. Idealizado e
+mantido por Pedro Rosemberg, com o
+[Instituto METADAX de Inovação (IMI)](https://imi.metadax.org) como parceiro
+de apoio institucional — ver `/sobre` para o detalhe completo.
 
 Licenciado sob [CC BY 4.0](LICENSE).
+
+## Identidade visual e domínio
+
+Em 26/08/2026 o projeto passou a se chamar **Fato Eleitoral**, com uma logo e
+favicon próprios (`assets/fatoeleitoral.svg`/`.png`, `assets/favicon.ico`/`.svg`).
+Esses arquivos são a única exceção à regra de neutralidade cromática do projeto:
+usam as cores da bandeira do Brasil (azul, verde, amarelo) *só* na logo e no
+favicon, por serem símbolos nacionais — o restante do site (UI, gráficos,
+estados de feedback) continua estritamente preto e branco, sem nenhuma cor de
+marca. Ver `docs/DESIGN_SYSTEM.md` para o detalhe completo dessa exceção.
+
+O domínio de produção também está em migração, em três passos:
+
+1. **Feito (26/08/2026):** `fatoeleitoral.metadax.org` é o novo domínio
+   canônico. `eleicoes.metadax.org` continua no ar, mas redireciona
+   (307, temporário) para `fatoeleitoral.metadax.org`, preservando caminho e
+   querystring — ver `next.config.ts`.
+2. **Planejado:** revisão de todo link externo/interno que ainda aponte para
+   `eleicoes.metadax.org`.
+3. **Planejado:** migração final para `fatoeleitoral.com.br` (já provisionado),
+   quando o redirecionamento do passo 1 for atualizado para apontar para lá.
+
+O nome do **repositório no GitHub** (`eleicoes.metadax.org`) não muda nesta
+migração — trocar o nome de um repositório já público quebraria todo link,
+fork e citação existentes para ele; o nome do produto e o domínio são
+independentes do nome do repositório.
 
 ## Páginas
 
@@ -88,8 +123,9 @@ design está documentada e foi validada com testes reais, não apenas descrita:
 - **[docs/DATA_LINEAGE.md](docs/DATA_LINEAGE.md)** — rastreabilidade completa:
   cada dado exibido, do dataset oficial no site do TSE até a página do produto.
 - **[docs/DESIGN_SYSTEM.md](docs/DESIGN_SYSTEM.md)** — identidade visual neutra
-  (preto/branco) do projeto, e por que cada cor "de marca" foi deliberadamente
-  excluída.
+  (preto/branco) do projeto, por que cada cor "de marca" foi deliberadamente
+  excluída, e a única exceção documentada (logo/favicon, ver "Identidade visual
+  e domínio" acima).
 - **[CONTRIBUTING.md](CONTRIBUTING.md)** — setup local, checklist antes de um PR
   e as convenções específicas deste projeto (nunca fabricar dado, linguagem
   neutra em categorias sensíveis, cache obrigatório para leitura de `data/`).
@@ -102,11 +138,12 @@ design está documentada e foi validada com testes reais, não apenas descrita:
 ## Ambientes e CI/CD
 
 Dois ambientes: **hmg** (homologação — preview automático da Vercel para a branch `hmg`) e
-**prod** (`eleicoes.metadax.org` — branch `main`). Todo PR passa por dois checks obrigatórios
-antes de poder ser mesclado em qualquer um dos dois — CI (typecheck/lint/build) e uma revisão de
-segurança automatizada via Claude, com foco extra em prompt injection/prompt poisoning — mais a
-aprovação manual do mantenedor. Ver `docs/ARCHITECTURE.md` §15 para a arquitetura completa e o
-checklist de configuração, e `CONTRIBUTING.md` para o fluxo de contribuição.
+**prod** (`fatoeleitoral.metadax.org` — branch `main`, ver "Identidade visual e domínio" acima).
+Todo PR passa por dois checks obrigatórios antes de poder ser mesclado em qualquer um dos dois —
+CI (typecheck/lint/build) e uma revisão de segurança automatizada via IA (NVIDIA, gratuita), com
+foco extra em prompt injection/prompt poisoning — mais a aprovação manual do mantenedor. Ver
+`docs/ARCHITECTURE.md` §15/§16 para a arquitetura completa e o checklist de configuração, e
+`CONTRIBUTING.md` para o fluxo de contribuição.
 
 ## Stack
 

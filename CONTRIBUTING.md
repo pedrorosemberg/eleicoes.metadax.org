@@ -2,7 +2,7 @@
 
 Guia técnico para quem vai mexer no código. Para formas mais informais de ajudar (reportar um
 dado errado, sugerir uma fonte, validar informação), veja
-[/participe](https://eleicoes.metadax.org/participe) no site.
+[/participe](https://fatoeleitoral.metadax.org/participe) no site.
 
 ## Configuração local
 
@@ -28,7 +28,7 @@ preciso rodar nenhuma ingestão para desenvolver localmente.
 
 ## Branch base do PR: `hmg`, não `main`
 
-Este projeto tem dois ambientes — `hmg` (homologação) e `main` (produção, `eleicoes.metadax.org`)
+Este projeto tem dois ambientes — `hmg` (homologação) e `main` (produção, `fatoeleitoral.metadax.org`)
 — e uma esteira de CI/CD com duas validações obrigatórias em cada um: um check automatizado (AI
 Security Review) e a aprovação do mantenedor. Detalhes completos, incluindo o porquê dessa
 arquitetura, em `docs/ARCHITECTURE.md` §15. Na prática, para quem contribui:
