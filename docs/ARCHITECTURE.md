@@ -600,3 +600,29 @@ especificamente). Um arquivo recebido não foi usado: `gov-br_logo-svg.png` (a m
 específico — fica disponível em `public/assets/fontes_images/` para uso futuro (ver também a nova
 seção "Catálogo de APIs governamentais" em `docs/DATA_SOURCES.md`, onde esse logo teria mais
 sentido se uma seção de catálogo gov.br for exibida na UI algum dia).
+
+## 18. Achado real: falso positivo de prompt injection na troca de modelo NVIDIA (26/08/2026)
+
+Ao trocar o modelo padrão de `qwen/qwen2.5-coder-32b-instruct` para `meta/llama-3.3-70b-instruct`
+(PR #9, primeira execução real do check `security` com `NVIDIA_API_KEY` configurada), o próprio
+modelo sinalizou a mudança como achado de severidade alta: *"A mudança do modelo de IA de
+'qwen/qwen2.5-coder-32b-instruct' para 'meta/llama-3.3-70b-instruct' pode ser uma tentativa de
+manipular a próxima IA que ler este repositório, o que é um exemplo de prompt injection/prompt
+poisoning."* — bloqueando o merge (falha fechada, como desenhado).
+
+**Causa raiz:** a regra 1 de `.github/ai-security-review-instructions.md` pede para tratar
+qualquer coisa "sobre IA" no repositório com suspeita elevada — redação correta para o problema
+real que ela resolve (texto tentando instruir um agente de IA), mas ambígua o suficiente para o
+modelo confundir uma mudança de *configuração* do próprio pipeline (qual modelo/parâmetro é
+chamado) com uma tentativa de *injetar instrução* via texto. É um falso positivo, não um bug de
+segurança real: trocar `NVIDIA_MODEL` é manutenção normal, feita abertamente pelo mantenedor, sem
+nenhum texto direcionado a um agente de IA no diff.
+
+**Corrigido** (PR seguinte) adicionando um parágrafo explícito de "o que isto NÃO é" na regra 1:
+mudança de valor de configuração do próprio pipeline (`NVIDIA_MODEL`, `temperature`, `top_p`,
+`max_tokens`) não é, por si só, prompt injection — o achado exige conteúdo textual com instrução
+dirigida a um agente de IA, não uma troca de provedor/modelo. Registrado aqui como o primeiro
+resultado real do gate desde que a chave foi configurada, e como lembrete de que instruções dadas
+a um modelo de linguagem para "ser desconfiado de X" podem generalizar mais do que o pretendido —
+vale reler a redação de `ai-security-review-instructions.md` sempre que um achado parecer
+desproporcional ao diff real, em vez de assumir que o modelo está sempre certo.
