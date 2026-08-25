@@ -12,8 +12,22 @@ export interface EstatisticasCandidatos {
  * Agregados públicos derivados do próprio dataset de candidatos — nunca
  * expõe dado individual (CPF, nome completo) aqui, só contagens. Ver
  * app/api/estatisticas/route.ts e app/mapa/page.tsx.
+ *
+ * Cacheado em memória do processo (achado do teste de carga de
+ * 26/08/2026): o resultado só muda com uma nova ingestão/deploy, então
+ * recalcular a cada request só soma trabalho de CPU desnecessário sob
+ * concorrência — mesmo padrão de cache já usado em src/lib/data.ts.
  */
-export async function calcularEstatisticas(): Promise<EstatisticasCandidatos> {
+let cacheEstatisticas: Promise<EstatisticasCandidatos> | null = null;
+
+export function calcularEstatisticas(): Promise<EstatisticasCandidatos> {
+  if (!cacheEstatisticas) {
+    cacheEstatisticas = calcularEstatisticasSemCache();
+  }
+  return cacheEstatisticas;
+}
+
+async function calcularEstatisticasSemCache(): Promise<EstatisticasCandidatos> {
   const { candidatos, isAmostra } = await carregarTodosCandidatos();
 
   const porUfMap = new Map<string, number>();

@@ -15,6 +15,16 @@ export const metadata: Metadata = {
 
 type Modo = "direta" | "indireta";
 
+/**
+ * Achado real do teste de carga em 26/08/2026: um termo comum ("silva")
+ * bate em milhares de candidatos (ex.: 3.284) e, sem paginação, a página
+ * renderizava todos de uma vez, em toda requisição — sob concorrência,
+ * isso sozinho já bastava para saturar o processo (independente do cache
+ * de dados em src/lib/data.ts, que resolve a outra metade do problema).
+ * 24 por página também é mais usável para quem está lendo a lista.
+ */
+const TAMANHO_PAGINA = 24;
+
 function tabClass(ativo: boolean) {
   return [
     "inline-flex h-10 items-center rounded-[10px] px-4 text-sm font-semibold",
@@ -34,12 +44,14 @@ export default async function BuscarPage({
     cidade?: string;
     cargo?: string;
     partido?: string;
+    pagina?: string;
   }>;
 }) {
   const sp = await searchParams;
   const modo: Modo = sp.modo === "direta" ? "direta" : "indireta";
   const ufsValidas = [...UFS, "BR"] as readonly string[];
   const uf = sp.uf && ufsValidas.includes(sp.uf.toUpperCase()) ? sp.uf.toUpperCase() : "SP";
+  const paginaAtual = Math.max(1, Number.parseInt(sp.pagina ?? "1", 10) || 1);
 
   const meta = await carregarMeta();
 
@@ -200,21 +212,80 @@ export default async function BuscarPage({
         <SnapshotNotice isAmostra={resultado.isAmostra} geradoEm={meta?.geradoEm} />
       </div>
 
-      <ul className="flex flex-col gap-3">
-        {resultado.candidatos.map((candidato) => (
-          <li key={candidato.sqCandidato}>
-            <CandidatoCard candidato={candidato} />
-          </li>
-        ))}
-      </ul>
+      {(() => {
+        const total = resultado.candidatos.length;
+        const totalPaginas = Math.max(1, Math.ceil(total / TAMANHO_PAGINA));
+        const pagina = Math.min(paginaAtual, totalPaginas);
+        const inicio = (pagina - 1) * TAMANHO_PAGINA;
+        const candidatosDaPagina = resultado.candidatos.slice(inicio, inicio + TAMANHO_PAGINA);
 
-      {resultado.candidatos.length === 0 && (
-        <p className="text-[var(--text-tertiary)]">
-          {modo === "direta" && !sp.q
-            ? "Digite um nome, número ou ID para buscar."
-            : "Nenhum candidato encontrado com esses filtros."}
-        </p>
-      )}
+        const paramsBase = new URLSearchParams();
+        paramsBase.set("modo", modo);
+        if (sp.q) paramsBase.set("q", sp.q);
+        if (modo === "indireta") paramsBase.set("uf", uf);
+        if (sp.cidade) paramsBase.set("cidade", sp.cidade);
+        if (sp.cargo) paramsBase.set("cargo", sp.cargo);
+        if (sp.partido) paramsBase.set("partido", sp.partido);
+
+        function linkPagina(p: number): string {
+          const params = new URLSearchParams(paramsBase);
+          params.set("pagina", String(p));
+          return `/buscar?${params.toString()}`;
+        }
+
+        return (
+          <>
+            {total > 0 && (
+              <p className="mb-3 text-sm text-[var(--text-tertiary)]">
+                Mostrando {inicio + 1}–{Math.min(inicio + TAMANHO_PAGINA, total)} de {total}{" "}
+                {total === 1 ? "candidato" : "candidatos"}
+                {totalPaginas > 1 && ` — página ${pagina} de ${totalPaginas}`}.
+              </p>
+            )}
+
+            <ul className="flex flex-col gap-3">
+              {candidatosDaPagina.map((candidato) => (
+                <li key={candidato.sqCandidato}>
+                  <CandidatoCard candidato={candidato} />
+                </li>
+              ))}
+            </ul>
+
+            {total === 0 && (
+              <p className="text-[var(--text-tertiary)]">
+                {modo === "direta" && !sp.q
+                  ? "Digite um nome, número ou ID para buscar."
+                  : "Nenhum candidato encontrado com esses filtros."}
+              </p>
+            )}
+
+            {totalPaginas > 1 && (
+              <nav className="mt-6 flex items-center justify-between gap-3" aria-label="Paginação de resultados">
+                {pagina > 1 ? (
+                  <Link
+                    href={linkPagina(pagina - 1)}
+                    className="inline-flex h-10 items-center rounded-[10px] border px-4 text-sm font-semibold text-[var(--text-secondary)] hover:bg-[var(--surface-1)]"
+                    style={{ borderColor: "var(--hairline)" }}
+                  >
+                    ← Anterior
+                  </Link>
+                ) : (
+                  <span />
+                )}
+                {pagina < totalPaginas && (
+                  <Link
+                    href={linkPagina(pagina + 1)}
+                    className="inline-flex h-10 items-center rounded-[10px] border px-4 text-sm font-semibold text-[var(--text-secondary)] hover:bg-[var(--surface-1)]"
+                    style={{ borderColor: "var(--hairline)" }}
+                  >
+                    Próxima →
+                  </Link>
+                )}
+              </nav>
+            )}
+          </>
+        );
+      })()}
     </main>
   );
 }
