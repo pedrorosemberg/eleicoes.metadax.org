@@ -342,6 +342,13 @@ corpo bruto da resposta), dois problemas reais foram encontrados e corrigidos:
    array externo (sempre 1 quando o CPF é encontrado), então "achava" um resultado vazio e parava
    de procurar em meses anteriores, gravando `R$ 0,00`. Corrigido para checar o array de detalhe
    e continuar tentando meses anteriores até achar um com dado real.
+3. Num mês com dado real, `valorTotalRemuneracaoAposDeducoes` veio como **string em formato
+   brasileiro** (`"18.290,81"` — ponto de milhar, vírgula decimal), não como número JSON — um
+   segundo teste real (após corrigir o item 2) mostrou o valor virando `R$ NaN` na UI.
+   `Number("18.290,81")` não funciona; corrigido com `parseValorMonetarioBR()` (remove pontos,
+   troca vírgula por ponto). Vale como alerta geral: campos monetários desta API específica
+   (`servidores/remuneracao`) não seguem o mesmo padrão que os outros endpoints usados neste
+   projeto (que devolvem número nativo) — não assumir sem checar contra uma resposta real.
 
 `src/lib/enrichment.ts#buscarBeneficiosSociais`/`buscarServidorPublico` refletem a versão
 corrigida.

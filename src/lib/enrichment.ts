@@ -262,6 +262,22 @@ export async function buscarBeneficiosSociais(cpf: string): Promise<ResumoBenefi
 }
 
 /**
+ * `servidores/remuneracao` da CGU devolve valores monetários como string
+ * no formato brasileiro (ex.: `"18.290,81"`, ponto como separador de
+ * milhar e vírgula como decimal) — confirmado contra a API real em
+ * 25/08/2026, onde `Number("18.290,81")` vira `NaN`. Os outros endpoints
+ * usados neste arquivo devolvem número nativo; só este precisa da
+ * conversão.
+ */
+function parseValorMonetarioBR(valor: unknown): number {
+  if (typeof valor === "number") return valor;
+  if (typeof valor !== "string") return 0;
+  const normalizado = valor.replace(/\./g, "").replace(",", ".").trim();
+  const numero = Number(normalizado);
+  return Number.isFinite(numero) ? numero : 0;
+}
+
+/**
  * Consulta ao vivo, por CPF, se a pessoa é ou foi servidora do Poder
  * Executivo Federal (endpoint `servidores`) e, quando localizável, a
  * remuneração do mês mais recente disponível (endpoint
@@ -316,10 +332,9 @@ export async function buscarServidorPublico(cpf: string): Promise<ServidorPublic
     const detalhes = item?.remuneracoesDTO as Array<Record<string, unknown>> | undefined;
     const detalhe = detalhes?.[0];
     if (!detalhe) continue;
-    console.error(`[DEBUG_REMUNERACAO_TEMP] mesAno=${mesAno} detalhe=${JSON.stringify(detalhe)}`);
 
-    const valor = Number(
-      detalhe.valorTotalRemuneracaoAposDeducoes ?? detalhe.remuneracaoBasicaBruta ?? 0,
+    const valor = parseValorMonetarioBR(
+      detalhe.valorTotalRemuneracaoAposDeducoes ?? detalhe.remuneracaoBasicaBruta,
     );
     resultado.remuneracaoRecente = { mesAno, valor };
     break;
