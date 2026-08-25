@@ -94,6 +94,48 @@ parte — ficam commitados numa branch órfã separada, `assets-tse-2026`, e ser
 (fotos) ou ~10MB (PDFs), bem abaixo do limite de 100MB por arquivo do GitHub. Ver o README da
 própria branch `assets-tse-2026` para a estrutura completa.
 
+### Dataset adicional ingerido em 25/08/2026 — `certidao_criminal`
+
+Publicado pelo TSE como release do GitHub (28 ZIPs, um por UF + `BR`) em
+`https://github.com/pedrorosemberg/eleicoes.metadax.org/releases/tag/arquivos_de_certidoes_criminais`
+— documentos de certidão criminal enviados pelo próprio candidato no registro de candidatura.
+Nome de arquivo dentro do ZIP (confirmado contra o `leiame.pdf` real, incluído em cada ZIP):
+`{ano}{UF}{sqCandidato}_{sqArquivoDocumento}.pdf.pdf` — `SQ_CANDIDATO` embutido no nome, join
+confiável (diferente de `CNPJ_campanha`, que não tem essa chave).
+
+**Tamanho real, confirmado nesta sessão (25/08/2026): ~9,5 GB no total** — muito maior que
+fotos+planos de governo (~440MB) juntos, e grande demais para duplicar em qualquer hospedagem
+sem custo real de infraestrutura (o padrão usado para fotos/planos, uma branch órfã do
+repositório, não é viável nessa escala).
+
+**Decisão de arquitetura: servir sob demanda via HTTP Range, sem duplicar hospedagem.** Os ZIPs
+usam o método de compressão **STORE (sem compactação)** — confirmado via `file` nos arquivos
+reais ("compression method=store") e via `compMethod=0` em todo entry do central directory.
+Isso significa que os bytes de um arquivo dentro do ZIP são idênticos aos do arquivo original —
+extrair um entry é só um recorte de bytes, sem descompactar nada. Também confirmado contra os
+arquivos reais: o campo de "extra field" do header local de cada entry tem tamanho zero, então o
+offset exato de início dos dados é calculável só com o que já vem no central directory (sem
+precisar buscar o header local separadamente).
+
+Isso permite: `scripts/ingest-certidoes.ts` lê só o final do ZIP remoto (End Of Central
+Directory + central directory completo — algumas dezenas/centenas de KB via HTTP Range, mesmo
+num ZIP de mais de 1GB) e grava um índice leve (`data/{ano}/certidoes/{UF}.json`) com o offset e
+tamanho exatos de cada documento. `app/api/certidao/[uf]/[candidato]/[arquivo]/route.ts` serve
+cada PDF sob demanda com um único Range GET direto no release do GitHub. **Nenhum PDF é baixado
+ou duplicado em nenhum outro lugar** — verificado de ponta a ponta nesta sessão (download de um
+byte-range específico, servido por uma instância real do Next.js rodando localmente, produzindo
+um PDF válido de 1 página, `file` confirmando `PDF document, version 1.4`). Ver
+`src/lib/zip-range.ts` para a implementação.
+
+**Falha real encontrada: 6 dos 28 ZIPs estão corrompidos no release** — `BA`, `MG`, `PR`, `RJ`,
+`SC` e `SP` não têm um End Of Central Directory válido (confirmado de forma independente com
+`unzip -t certidao_criminal_2026_SC.zip`: `"End-of-central-directory signature not found"`). O
+header local do início do arquivo é válido (`PK\x03\x04` presente), então é consistente com um
+upload incompleto/truncado dessas 6 UFs especificamente — não é um limite de tamanho (`RS`, com
+533MB, indexou normalmente; `MG`, com 473MB, falhou). `scripts/ingest-certidoes.ts` detecta e
+pula essas UFs sem quebrar a ingestão das demais; a UI (`/candidato/[id]`) informa explicitamente
+que a certidão está indisponível **pela UF, não pelo candidato**, até o arquivo ser reenviado.
+
 ---
 
 ## 2. TSE — DivulgaCandContas (API REST não oficial)
@@ -270,7 +312,9 @@ Usos acima do limite suspendem o token (a página não especifica por quanto tem
 |---|---|---|
 | `GET /api-de-dados/pessoa-fisica` | `cpf` | Registro básico da pessoa física na base da CGU |
 | `GET /api-de-dados/peps` | `cpf`, `nome` | **Pessoa Exposta Politicamente** — flag oficial, alto valor para o produto |
-| `GET /api-de-dados/servidores` | `cpf`, `nome` | Se o candidato é/foi servidor público federal — remuneração, órgão, cargo |
+| `GET /api-de-dados/servidores` | `cpf`, `nome` | Se o candidato é/foi servidor público federal — situação, órgão, cargo |
+| `GET /api-de-dados/servidores/remuneracao` | `cpf`, `mesAno` (obrigatório, um mês por chamada) | Remuneração de um servidor federal num mês específico — usado para tentar os 3 meses mais recentes e mostrar o mais recente disponível, não um histórico completo |
+| `GET /api-de-dados/bolsa-familia-disponivel-por-cpf-ou-nis` | `codigo` (aceita CPF **ou** NIS, não é `cpf`), `pagina` | Parcelas do Bolsa Família disponibilizadas ao titular, por CPF — está na faixa de limite mais restrita (180 req/min, ver tabela acima), por lidar com dado individual de benefício social |
 | `GET /api-de-dados/contratos/cpf-cnpj` | `cpfCnpj`, `pagina` | Contratos federais recebidos pelo candidato ou por empresa dele (cruzar com CNPJ do BrasilAPI) |
 | `GET /api-de-dados/emendas` | `nomeAutor`, `ano` | Emendas parlamentares de autoria do candidato, se ele for parlamentar em exercício/anterior — **atenção:** busca por nome textual, não por CPF; requer normalização e checagem manual de ambiguidade |
 | `GET /api-de-dados/ceis` | `codigoSancionado` (CPF/CNPJ) | Empresas do candidato com sanções por irregularidade em contrato com a administração pública |
@@ -279,6 +323,23 @@ Usos acima do limite suspendem o token (a página não especifica por quanto tem
 | `GET /api-de-dados/viagens-por-cpf` | `cpf` | Viagens a serviço custeadas pela União, se servidor/agente público |
 
 Todos paginados (`pagina`, padrão `1`), retorno JSON, limite de itens por página não documentado no swagger — a implementação deve tratar paginação até resposta vazia.
+
+**Nomes de campo confirmados via o OpenAPI oficial real (25/08/2026):** `curl` direto em
+`https://api.portaldatransparencia.gov.br/v3/api-docs` (schemas `BeneficiarioDTO`,
+`MunicipioDTO`, `ServidorAposentadoPensionistaDTO`, `RemuneracaoDTO` etc.) — não uma chamada
+autenticada real (sem chave disponível nesta sessão de desenvolvimento; a chave de produção está
+configurada só na Vercel), mas o contrato publicado oficialmente pela própria CGU, não uma
+suposição. `src/lib/enrichment.ts#buscarBeneficiosSociais`/`buscarServidorPublico` usam esses
+nomes; qualquer divergência encontrada numa chamada real em produção deve ser corrigida ali.
+
+**Decisão deliberada: `bolsa-familia-disponivel-por-cpf-ou-nis` e `servidores` NÃO entram no
+proxy público `/api/transparencia/[tipo]`** (o que aceita um `cpf` arbitrário de qualquer
+consumidor externo, CORS aberto). Diferente de PEP/contratos/sanções — que dizem respeito a
+pessoas com dever de prestar contas públicas —, benefício social e remuneração de servidor são
+dados de CPF de pessoas comuns; abrir isso como proxy genérico tornaria o site uma ferramenta de
+consulta em massa por CPF, muito além do propósito do produto (perfil de um candidato específico,
+cujo CPF já vem do próprio TSE). Essas duas funções ficam só server-side, chamadas com o CPF já
+conhecido de um candidato específico — mesmo tratamento já dado a `contratos/cpf-cnpj`.
 
 ---
 
@@ -448,3 +509,41 @@ esses vêm sempre da fonte oficial, sem alteração. Esse uso está fora do esco
 cláusula sobre "AI Services" das políticas revisadas acima (que tratam de produtos de IA
 oferecidos *pelos próprios provedores de infraestrutura* — Vercel, TSE, CGU —, não de ferramentas
 de desenvolvimento usadas pela equipe do projeto).
+
+---
+
+## 10. Neutralidade e linguagem — categorias sensíveis
+
+Regra permanente para qualquer texto (rótulo, mensagem de "sem dado", nota de rodapé, texto de
+ajuda) que apareça perto de bens, finanças de campanha, certidões criminais, remuneração/cargo de
+servidor público ou benefícios sociais: **descrever o fato, nunca interpretá-lo.** Nenhuma frase
+deste produto deve dar a entender que um dado é bom, ruim, suspeito ou meritório para o candidato
+— nem por adjetivo explícito, nem por tom, nem por omissão seletiva (mostrar um dado "positivo"
+com destaque e um "negativo" com hedge, por exemplo). Aplica-se com o mesmo rigor a todos os
+partidos e todos os candidatos — nenhuma categoria de informação é exibida para uns e omitida
+para outros por conveniência editorial.
+
+Exemplos concretos já aplicados no código (ver `app/candidato/[id]/page.tsx`):
+
+- **Certidões criminais:** o produto expõe a existência e o link do PDF oficial tal como
+  publicado pelo TSE — nunca lê, resume, classifica ou comenta o conteúdo do documento. Um
+  candidato sem certidão anexada não é descrito como "limpo"; um candidato com uma certidão
+  anexada não é descrito como tendo algo a esconder. A frase usada é neutra por design: "Nenhuma
+  certidão criminal consta anexada... até a data da coleta" (fato sobre o dado disponível, não
+  sobre o candidato).
+- **Benefícios sociais (Bolsa Família):** receber ou não receber é dado de política pública,
+  público por força da Lei de Acesso à Informação (12.527/2011) exatamente pelo mesmo princípio
+  que torna público um contrato ou uma remuneração de servidor — não é um indicador de mérito ou
+  demérito. A seção do produto declara isso explicitamente no texto de fonte, para que o contexto
+  não dependa da interpretação de quem lê.
+- **Servidor público federal:** "é/foi servidor público" é descrito como um fato de cadastro
+  (situação, cargo, órgão), sem qualificação de valor. O produto não infere nem insinua conflito
+  de interesse — se um usuário quiser tirar essa conclusão, os fatos brutos estão lá para isso,
+  mas o produto não a redige por ele.
+- **Toda categoria vazia informa o motivo real, nunca um espaço em branco.** Um bem, uma
+  despesa, um plano de governo ou uma certidão ausente é sempre um destes dois casos, e o texto
+  precisa deixar claro qual: (a) **fato confirmado** — a fonte foi consultada e retornou "nada
+  encontrado" (ex.: "Nenhum bem declarado encontrado para este candidato"); ou (b) **fonte
+  indisponível** — a consulta não pôde ser feita (ex.: sem CPF no dado de origem, ZIP de origem
+  corrompido, API fora do ar). Tratar (b) como se fosse (a) é o erro mais fácil de cometer aqui
+  e o mais enganoso para quem lê — parece "não tem nada" quando na verdade é "não sabemos".

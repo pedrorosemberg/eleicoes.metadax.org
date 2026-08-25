@@ -6,12 +6,20 @@ import {
   carregarCandidatoPorId,
   carregarColigacoes,
   carregarFinancasPorUf,
+  carregarIndiceCertidoesPorUf,
+  carregarMeta,
   carregarMotivosCassacaoPorUf,
   carregarRedesSociaisPorUf,
 } from "@/lib/data";
-import { buscarDadosCnpj, buscarDetalheDivulgaCand, buscarResumoTransparencia } from "@/lib/enrichment";
+import {
+  buscarBeneficiosSociais,
+  buscarDadosCnpj,
+  buscarDetalheDivulgaCand,
+  buscarResumoTransparencia,
+  buscarServidorPublico,
+} from "@/lib/enrichment";
 import { SnapshotNotice } from "@/components/SnapshotNotice";
-import { formatarDataBR, formatarMoedaBRL } from "@/lib/format";
+import { formatarDataBR, formatarDataHoraBR, formatarMoedaBRL } from "@/lib/format";
 import { IconAlertTriangle, IconCheckCircle, IconExternalLink, IconInfo } from "@/components/icons";
 
 export async function generateMetadata({
@@ -50,6 +58,10 @@ export default async function CandidatoPage({
     motivosCassacaoDaUf,
     coligacoes,
     financasDaUf,
+    indiceCertidoesDaUf,
+    meta,
+    beneficiosSociais,
+    servidorPublico,
   ] = await Promise.all([
     candidato.partido.cnpj ? buscarDadosCnpj(candidato.partido.cnpj) : Promise.resolve(null),
     carregarBensPorUf(candidato.uf),
@@ -72,6 +84,10 @@ export default async function CandidatoPage({
     carregarMotivosCassacaoPorUf(candidato.uf),
     carregarColigacoes(),
     carregarFinancasPorUf(candidato.uf),
+    carregarIndiceCertidoesPorUf(candidato.uf),
+    carregarMeta(),
+    candidato.cpf ? buscarBeneficiosSociais(candidato.cpf) : Promise.resolve(null),
+    candidato.cpf ? buscarServidorPublico(candidato.cpf) : Promise.resolve(null),
   ]);
 
   const bensDoCanditato = bensResultado.bens.filter((b) => b.sqCandidato === candidato.sqCandidato);
@@ -85,6 +101,8 @@ export default async function CandidatoPage({
   const despesas = financasDaUf.despesas.filter((d) => d.sqCandidato === candidato.sqCandidato);
   const totalReceitas = receitas.reduce((soma, r) => soma + r.valor, 0);
   const totalDespesas = despesas.reduce((soma, d) => soma + d.valor, 0);
+  const certidoesDoCandidato = indiceCertidoesDaUf?.porCandidato[candidato.sqCandidato] ?? [];
+  const agora = new Date().toISOString();
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -107,7 +125,7 @@ export default async function CandidatoPage({
       />
 
       <div className="mb-6">
-        <SnapshotNotice isAmostra={isAmostra} />
+        <SnapshotNotice isAmostra={isAmostra} geradoEm={meta?.geradoEm} />
       </div>
 
       <div className="flex items-start gap-4">
@@ -211,69 +229,89 @@ export default async function CandidatoPage({
         </section>
       )}
 
-      {/* Site oficial (só quando codMunicipio existir — ver src/types/candidato.ts) + redes sociais e plano de governo (coletados do site de dados abertos do TSE) */}
-      {detalheDivulgaCand?.sites?.length || redesSociais.length || candidato.planoGovernoUrls?.length ? (
-        <section className="mt-8 rounded-[18px] border p-5" style={{ borderColor: "var(--hairline)" }}>
-          <h2 className="text-[17px] font-semibold text-[var(--text-primary)]">
-            Site oficial, redes sociais e plano de governo
-          </h2>
-          {detalheDivulgaCand?.sites?.length ? (
-            <ul className="mt-3 flex flex-col gap-1.5 text-sm">
-              {detalheDivulgaCand.sites.map((site) => (
-                <li key={site}>
-                  <a
-                    href={site}
-                    target="_blank"
-                    rel="noreferrer noopener"
-                    className="inline-flex items-center gap-1.5 underline underline-offset-2 text-[var(--text-primary)]"
-                  >
-                    {site}
-                    <IconExternalLink />
-                  </a>
-                </li>
-              ))}
-            </ul>
-          ) : null}
-          {redesSociais.length ? (
-            <ul className="mt-3 flex flex-col gap-1.5 text-sm">
-              {redesSociais.map((r, i) => (
-                <li key={i}>
-                  <a
-                    href={r.url}
-                    target="_blank"
-                    rel="noreferrer noopener"
-                    className="inline-flex items-center gap-1.5 underline underline-offset-2 text-[var(--text-primary)]"
-                  >
-                    {r.url}
-                    <IconExternalLink />
-                  </a>
-                </li>
-              ))}
-            </ul>
-          ) : null}
-          {candidato.planoGovernoUrls?.length ? (
-            <ul className="mt-3 flex flex-col gap-1.5 text-sm">
-              {candidato.planoGovernoUrls.map((url, i) => (
-                <li key={url}>
-                  <a
-                    href={url}
-                    target="_blank"
-                    rel="noreferrer noopener"
-                    className="inline-flex items-center gap-1.5 underline underline-offset-2 text-[var(--text-primary)]"
-                  >
-                    Plano de governo (PDF{candidato.planoGovernoUrls!.length > 1 ? ` ${i + 1}` : ""})
-                    <IconExternalLink />
-                  </a>
-                </li>
-              ))}
-            </ul>
-          ) : null}
-        </section>
-      ) : (
-        <p className="mt-8 text-sm text-[var(--text-tertiary)]">
-          Site oficial, redes sociais e plano de governo ainda não disponíveis para este candidato.
-        </p>
-      )}
+      {/* Site oficial (só quando codMunicipio existir — ver src/types/candidato.ts) e redes sociais */}
+      <section className="mt-8 rounded-[18px] border p-5" style={{ borderColor: "var(--hairline)" }}>
+        <h2 className="text-[17px] font-semibold text-[var(--text-primary)]">Site oficial e redes sociais</h2>
+        {detalheDivulgaCand?.sites?.length || redesSociais.length ? (
+          <>
+            {detalheDivulgaCand?.sites?.length ? (
+              <ul className="mt-3 flex flex-col gap-1.5 text-sm">
+                {detalheDivulgaCand.sites.map((site) => (
+                  <li key={site}>
+                    <a
+                      href={site}
+                      target="_blank"
+                      rel="noreferrer noopener"
+                      className="inline-flex items-center gap-1.5 underline underline-offset-2 text-[var(--text-primary)]"
+                    >
+                      {site}
+                      <IconExternalLink />
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            ) : null}
+            {redesSociais.length ? (
+              <ul className="mt-3 flex flex-col gap-1.5 text-sm">
+                {redesSociais.map((r, i) => (
+                  <li key={i}>
+                    <a
+                      href={r.url}
+                      target="_blank"
+                      rel="noreferrer noopener"
+                      className="inline-flex items-center gap-1.5 underline underline-offset-2 text-[var(--text-primary)]"
+                    >
+                      {r.url}
+                      <IconExternalLink />
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            ) : null}
+          </>
+        ) : (
+          <p className="mt-2 text-sm text-[var(--text-tertiary)]">
+            Nenhum site oficial ou rede social consta no registro deste candidato no TSE.
+          </p>
+        )}
+        {meta && (
+          <p className="mt-3 text-xs text-[var(--text-tertiary)]">
+            Atualizado em {formatarDataHoraBR(meta.geradoEm)}.
+          </p>
+        )}
+      </section>
+
+      {/* Plano de governo — dataset proposta_governo do TSE */}
+      <section className="mt-8 rounded-[18px] border p-5" style={{ borderColor: "var(--hairline)" }}>
+        <h2 className="text-[17px] font-semibold text-[var(--text-primary)]">Plano de governo</h2>
+        {candidato.planoGovernoUrls?.length ? (
+          <ul className="mt-3 flex flex-col gap-1.5 text-sm">
+            {candidato.planoGovernoUrls.map((url, i) => (
+              <li key={url}>
+                <a
+                  href={url}
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  className="inline-flex items-center gap-1.5 underline underline-offset-2 text-[var(--text-primary)]"
+                >
+                  Plano de governo (PDF{candidato.planoGovernoUrls!.length > 1 ? ` ${i + 1}` : ""})
+                  <IconExternalLink />
+                </a>
+              </li>
+            ))}
+          </ul>
+        ) : (
+          <p className="mt-2 text-sm text-[var(--text-tertiary)]">
+            Este candidato não anexou um plano de governo no TSE até a data da coleta.
+          </p>
+        )}
+        {meta && (
+          <p className="mt-3 text-xs text-[var(--text-tertiary)]">
+            Fonte: dataset proposta_governo, site de dados abertos do TSE. Atualizado em{" "}
+            {formatarDataHoraBR(meta.geradoEm)}.
+          </p>
+        )}
+      </section>
 
       {/* Histórico de candidaturas anteriores — só quando codMunicipio existir (ver acima) */}
       {detalheDivulgaCand?.eleicoesAnteriores?.length ? (
@@ -322,63 +360,115 @@ export default async function CandidatoPage({
             Nenhum bem declarado encontrado para este candidato{bensResultado.isAmostra ? " (dados de exemplo)" : ""}.
           </p>
         )}
+        {meta && !bensResultado.isAmostra && (
+          <p className="mt-3 text-xs text-[var(--text-tertiary)]">
+            Atualizado em {formatarDataHoraBR(meta.geradoEm)}.
+          </p>
+        )}
       </section>
 
-      {/* Finanças de campanha — receitas (dinheiro recebido) e despesas contratadas (dinheiro gasto) */}
-      {(receitas.length > 0 || despesas.length > 0) && (
-        <section className="mt-8 rounded-[18px] border p-5" style={{ borderColor: "var(--hairline)" }}>
-          <h2 className="text-[17px] font-semibold text-[var(--text-primary)]">Finanças de campanha</h2>
-          {receitas.length > 0 && (
-            <div className="mt-3">
-              <div className="flex items-baseline justify-between gap-3">
-                <p className="font-medium text-[var(--text-primary)]">Receitas</p>
-                <span className="font-financial text-sm font-semibold text-[var(--text-primary)]">
-                  {formatarMoedaBRL(totalReceitas)}
-                </span>
-              </div>
-              <ul className="mt-1.5 flex flex-col gap-1.5 text-sm">
-                {receitas.map((r, i) => (
-                  <li key={i} className="flex items-center justify-between gap-3">
-                    <span className="text-[var(--text-secondary)]">
-                      {r.doador !== "#NULO" ? r.doador : "Doador não identificado"}
-                    </span>
-                    <span className="font-financial shrink-0 text-[var(--text-primary)]">
-                      {formatarMoedaBRL(r.valor)}
-                    </span>
-                  </li>
-                ))}
-              </ul>
+      {/* Finanças de campanha — receitas (dinheiro recebido) e despesas contratadas (dinheiro gasto).
+          Sempre renderizada (mesmo vazia) — ver docs/DATA_SOURCES.md §10: toda categoria informa o
+          candidato tem a mesma seção disponível, mesmo quando o motivo é "nada consta". */}
+      <section className="mt-8 rounded-[18px] border p-5" style={{ borderColor: "var(--hairline)" }}>
+        <h2 className="text-[17px] font-semibold text-[var(--text-primary)]">Finanças de campanha</h2>
+        {receitas.length > 0 && (
+          <div className="mt-3">
+            <div className="flex items-baseline justify-between gap-3">
+              <p className="font-medium text-[var(--text-primary)]">Receitas</p>
+              <span className="font-financial text-sm font-semibold text-[var(--text-primary)]">
+                {formatarMoedaBRL(totalReceitas)}
+              </span>
             </div>
-          )}
-          {despesas.length > 0 && (
-            <div className="mt-4">
-              <div className="flex items-baseline justify-between gap-3">
-                <p className="font-medium text-[var(--text-primary)]">Despesas contratadas</p>
-                <span className="font-financial text-sm font-semibold text-[var(--text-primary)]">
-                  {formatarMoedaBRL(totalDespesas)}
-                </span>
-              </div>
-              <ul className="mt-1.5 flex flex-col gap-1.5 text-sm">
-                {despesas.map((d, i) => (
-                  <li key={i} className="flex items-center justify-between gap-3">
-                    <span className="text-[var(--text-secondary)]">
-                      {d.fornecedor !== "#NULO" ? d.fornecedor : "Fornecedor não identificado"}
-                    </span>
-                    <span className="font-financial shrink-0 text-[var(--text-primary)]">
-                      {formatarMoedaBRL(d.valor)}
-                    </span>
-                  </li>
-                ))}
-              </ul>
+            <ul className="mt-1.5 flex flex-col gap-1.5 text-sm">
+              {receitas.map((r, i) => (
+                <li key={i} className="flex items-center justify-between gap-3">
+                  <span className="text-[var(--text-secondary)]">
+                    {r.doador !== "#NULO" ? r.doador : "Doador não identificado"}
+                  </span>
+                  <span className="font-financial shrink-0 text-[var(--text-primary)]">
+                    {formatarMoedaBRL(r.valor)}
+                  </span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
+        {despesas.length > 0 && (
+          <div className="mt-4">
+            <div className="flex items-baseline justify-between gap-3">
+              <p className="font-medium text-[var(--text-primary)]">Despesas contratadas</p>
+              <span className="font-financial text-sm font-semibold text-[var(--text-primary)]">
+                {formatarMoedaBRL(totalDespesas)}
+              </span>
             </div>
-          )}
-          <p className="mt-3 text-xs text-[var(--text-tertiary)]">
-            Fonte: prestação de contas eleitorais, coletada do site de dados abertos do TSE. Só receitas e
-            despesas já contratadas com o candidato identificado no dado de origem — não inclui despesas
-            pagas em parcelas nem doações a órgãos partidários.
+            <ul className="mt-1.5 flex flex-col gap-1.5 text-sm">
+              {despesas.map((d, i) => (
+                <li key={i} className="flex items-center justify-between gap-3">
+                  <span className="text-[var(--text-secondary)]">
+                    {d.fornecedor !== "#NULO" ? d.fornecedor : "Fornecedor não identificado"}
+                  </span>
+                  <span className="font-financial shrink-0 text-[var(--text-primary)]">
+                    {formatarMoedaBRL(d.valor)}
+                  </span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
+        {receitas.length === 0 && despesas.length === 0 && (
+          <p className="mt-2 text-sm text-[var(--text-tertiary)]">
+            Nenhuma receita ou despesa contratada consta na prestação de contas do TSE para este candidato
+            até a data da coleta.
           </p>
-        </section>
-      )}
+        )}
+        <p className="mt-3 text-xs text-[var(--text-tertiary)]">
+          Fonte: prestação de contas eleitorais, coletada do site de dados abertos do TSE. Só receitas e
+          despesas já contratadas com o candidato identificado no dado de origem — não inclui despesas
+          pagas em parcelas nem doações a órgãos partidários.
+          {meta && ` Atualizado em ${formatarDataHoraBR(meta.geradoEm)}.`}
+        </p>
+      </section>
+
+      {/* Certidões criminais — documentos enviados pelo próprio candidato no registro
+          de candidatura. Só a existência e o link do PDF oficial; o conteúdo não é lido
+          nem resumido por este produto (ver docs/DATA_SOURCES.md §10, neutralidade). */}
+      <section className="mt-8 rounded-[18px] border p-5" style={{ borderColor: "var(--hairline)" }}>
+        <h2 className="text-[17px] font-semibold text-[var(--text-primary)]">Certidões criminais</h2>
+        {certidoesDoCandidato.length > 0 ? (
+          <ul className="mt-3 flex flex-col gap-1.5 text-sm">
+            {certidoesDoCandidato.map((c, i) => (
+              <li key={c.arquivo}>
+                <a
+                  href={`/api/certidao/${candidato.uf}/${candidato.sqCandidato}/${c.arquivo}`}
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  className="inline-flex items-center gap-1.5 underline underline-offset-2 text-[var(--text-primary)]"
+                >
+                  Certidão {i + 1} (PDF)
+                  <IconExternalLink />
+                </a>
+              </li>
+            ))}
+          </ul>
+        ) : indiceCertidoesDaUf ? (
+          <p className="mt-2 text-sm text-[var(--text-tertiary)]">
+            Nenhuma certidão criminal consta anexada ao registro deste candidato no TSE até a data da coleta.
+          </p>
+        ) : (
+          <p className="mt-2 flex items-start gap-2 text-sm text-[var(--text-tertiary)]">
+            <IconAlertTriangle />
+            Indisponível para esta UF no momento — o arquivo de origem publicado pelo TSE para {candidato.uf}{" "}
+            está corrompido (falta o índice do ZIP) e aguarda reenvio. Não é um dado sobre este candidato
+            específico; nenhum candidato desta UF tem certidão disponível até isso ser corrigido.
+          </p>
+        )}
+        <p className="mt-3 text-xs text-[var(--text-tertiary)]">
+          Fonte: dataset certidao_criminal, publicado pelo TSE. Documentos exatamente como enviados pelo
+          candidato — este produto não lê, resume nem classifica o conteúdo.
+          {indiceCertidoesDaUf && ` Atualizado em ${formatarDataHoraBR(indiceCertidoesDaUf.atualizadoEm)}.`}
+        </p>
+      </section>
 
       {/* Cruzamento com o Portal da Transparência */}
       <section className="mt-8 rounded-[18px] border p-5" style={{ borderColor: "var(--hairline)" }}>
@@ -442,10 +532,107 @@ export default async function CandidatoPage({
           </div>
         ) : (
           <p className="mt-2 text-sm text-[var(--text-tertiary)]">
-            Cruzamento indisponível no momento — a chave de acesso ao Portal da Transparência ainda não está
-            configurada neste ambiente, ou a fonte está fora do ar.
+            {candidato.cpf
+              ? "Cruzamento indisponível no momento — a fonte (Portal da Transparência) não respondeu a esta consulta."
+              : "Cruzamento indisponível — este candidato não tem CPF registrado no dado de origem do TSE, necessário para esta consulta."}
           </p>
         )}
+        <p className="mt-3 text-xs text-[var(--text-tertiary)]">
+          Fonte: Portal da Transparência (CGU), consulta ao vivo por CPF a cada visita a esta página.
+          Consultado agora, {formatarDataHoraBR(agora)}.
+        </p>
+      </section>
+
+      {/* Servidor público federal e remuneração — cobre só o Poder Executivo Federal
+          (universo do próprio endpoint da CGU); não indica cargos estaduais, municipais,
+          nem dos poderes Legislativo/Judiciário. */}
+      <section className="mt-8 rounded-[18px] border p-5" style={{ borderColor: "var(--hairline)" }}>
+        <h2 className="text-[17px] font-semibold text-[var(--text-primary)]">
+          Servidor público federal e remuneração
+        </h2>
+        {servidorPublico && servidorPublico.situacao !== "não encontrado" ? (
+          <div className="mt-3 flex flex-col gap-1.5 text-sm">
+            <p className="text-[var(--text-secondary)]">
+              Situação: {servidorPublico.situacao} ({servidorPublico.tipoServidor})
+            </p>
+            {servidorPublico.cargoOuFuncao && (
+              <p className="text-[var(--text-secondary)]">Cargo/função: {servidorPublico.cargoOuFuncao}</p>
+            )}
+            {servidorPublico.orgaoExercicio && (
+              <p className="text-[var(--text-secondary)]">Órgão de exercício: {servidorPublico.orgaoExercicio}</p>
+            )}
+            {servidorPublico.orgaoLotacao &&
+              servidorPublico.orgaoLotacao !== servidorPublico.orgaoExercicio && (
+                <p className="text-[var(--text-secondary)]">Órgão de lotação: {servidorPublico.orgaoLotacao}</p>
+              )}
+            {servidorPublico.remuneracaoRecente ? (
+              <p className="font-financial text-[var(--text-primary)]">
+                Remuneração ({servidorPublico.remuneracaoRecente.mesAno}):{" "}
+                {formatarMoedaBRL(servidorPublico.remuneracaoRecente.valor)}
+              </p>
+            ) : (
+              <p className="text-[var(--text-tertiary)]">
+                Remuneração dos últimos meses não localizada na base da CGU.
+              </p>
+            )}
+          </div>
+        ) : servidorPublico ? (
+          <p className="mt-2 text-sm text-[var(--text-tertiary)]">
+            Não consta como servidor do Poder Executivo Federal na base da CGU.
+          </p>
+        ) : (
+          <p className="mt-2 text-sm text-[var(--text-tertiary)]">
+            {candidato.cpf
+              ? "Consulta indisponível no momento — a fonte (Portal da Transparência) não respondeu a esta consulta."
+              : "Consulta indisponível — este candidato não tem CPF registrado no dado de origem do TSE, necessário para esta consulta."}
+          </p>
+        )}
+        <p className="mt-3 text-xs text-[var(--text-tertiary)]">
+          Fonte: Portal da Transparência (CGU), endpoints servidores/servidores/remuneracao, consulta ao
+          vivo por CPF. Cobre só o Poder Executivo Federal — não indica cargos estaduais, municipais, nem
+          dos poderes Legislativo/Judiciário. Consultado agora, {formatarDataHoraBR(agora)}.
+        </p>
+      </section>
+
+      {/* Benefícios sociais — receber (ou não) um programa social é dado de política
+          pública, auditável pela Lei de Acesso à Informação, e não é indicador de
+          mérito/demérito do candidato. Ver docs/DATA_SOURCES.md §10. */}
+      <section className="mt-8 rounded-[18px] border p-5" style={{ borderColor: "var(--hairline)" }}>
+        <h2 className="text-[17px] font-semibold text-[var(--text-primary)]">Benefícios sociais</h2>
+        {beneficiosSociais && beneficiosSociais.parcelas.length > 0 ? (
+          <div className="mt-3 text-sm">
+            <div className="flex items-baseline justify-between gap-3">
+              <p className="font-medium text-[var(--text-primary)]">Bolsa Família</p>
+              <span className="font-financial text-sm font-semibold text-[var(--text-primary)]">
+                {formatarMoedaBRL(beneficiosSociais.valorTotal)}
+              </span>
+            </div>
+            <p className="mt-1 text-[var(--text-secondary)]">
+              {beneficiosSociais.parcelas.length} parcela(s) disponibilizada(s)
+              {beneficiosSociais.primeiroMesReferencia && beneficiosSociais.ultimoMesReferencia
+                ? `, de ${beneficiosSociais.primeiroMesReferencia} a ${beneficiosSociais.ultimoMesReferencia}`
+                : ""}
+              .
+            </p>
+          </div>
+        ) : beneficiosSociais ? (
+          <p className="mt-2 text-sm text-[var(--text-tertiary)]">
+            Nenhuma parcela de Bolsa Família disponibilizada para o CPF deste candidato consta na base da
+            CGU.
+          </p>
+        ) : (
+          <p className="mt-2 text-sm text-[var(--text-tertiary)]">
+            {candidato.cpf
+              ? "Consulta indisponível no momento — a fonte (Portal da Transparência) não respondeu a esta consulta."
+              : "Consulta indisponível — este candidato não tem CPF registrado no dado de origem do TSE, necessário para esta consulta."}
+          </p>
+        )}
+        <p className="mt-3 text-xs text-[var(--text-tertiary)]">
+          Fonte: Portal da Transparência (CGU), endpoint bolsa-familia-disponivel-por-cpf-ou-nis, consulta
+          ao vivo por CPF. Receber (ou não) este benefício é um dado de política pública, público por força
+          da Lei de Acesso à Informação — não é um indicador de mérito ou demérito do candidato. Consultado
+          agora, {formatarDataHoraBR(agora)}.
+        </p>
       </section>
 
       {dadosCnpjPartido && (

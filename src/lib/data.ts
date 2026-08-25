@@ -198,3 +198,21 @@ export async function carregarFinancasPorUf(uf: string): Promise<FinancasCandida
     }
   );
 }
+
+export interface IndiceCertidoesUf {
+  uf: string;
+  zipUrl: string;
+  atualizadoEm: string;
+  porCandidato: Record<string, Array<{ arquivo: string; offset: number; tamanho: number }>>;
+}
+
+/**
+ * Índice de certidões criminais por UF — gerado por scripts/ingest-certidoes.ts.
+ * `null` (não `{}`) quando o arquivo de índice não existe para essa UF, para
+ * distinguir "UF sem certidão indexada ainda" (ex.: ZIP de origem corrompido
+ * no release, ver docs/DATA_SOURCES.md §1) de "UF indexada, candidato sem
+ * documento" — dois motivos diferentes que a UI precisa relatar diferente.
+ */
+export async function carregarIndiceCertidoesPorUf(uf: string): Promise<IndiceCertidoesUf | null> {
+  return lerJsonOuNulo<IndiceCertidoesUf>(`${ANO_ELEICAO}/certidoes/${uf}.json`);
+}

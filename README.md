@@ -20,9 +20,10 @@ Licenciado sob [CC BY 4.0](LICENSE).
   (filtros combináveis por UF, cidade, cargo e partido)
 - `/candidato/[id]` — perfil de um candidato: foto, dados básicos, bens
   declarados, finanças de campanha (receitas/despesas), redes sociais,
-  plano de governo (PDF) e coligação (coletados do site de dados abertos
-  do TSE) e cruzamento com o Portal da Transparência (PEP, contratos,
-  sanções)
+  plano de governo (PDF), certidões criminais e coligação (coletados do
+  site de dados abertos do TSE), e cruzamento ao vivo com o Portal da
+  Transparência (PEP, contratos, sanções, servidor público federal e
+  benefícios sociais)
 - `/mapa` — mapa coroplético real (Leaflet + fronteiras oficiais do IBGE) e
   estatísticas por UF/cargo (consumível também via `GET /api/estatisticas`, JSON, CORS aberto)
 - `/status` — saúde em tempo real de cada fonte de dado externa (TSE, BrasilAPI,
@@ -59,6 +60,8 @@ design está documentada e foi validada com testes reais, não apenas descrita:
 - **[docs/ARCHITECTURE.md](docs/ARCHITECTURE.md)** — pipeline de ingestão,
   camada de proxy de API, modelo de dados, estrutura de páginas e a estratégia
   de SEO/AEO/GEO (visibilidade para buscadores e para IAs/crawlers).
+- **[docs/DATA_LINEAGE.md](docs/DATA_LINEAGE.md)** — rastreabilidade completa:
+  cada dado exibido, do dataset oficial no site do TSE até a página do produto.
 - **[docs/DESIGN_SYSTEM.md](docs/DESIGN_SYSTEM.md)** — identidade visual neutra
   (preto/branco) do projeto, e por que cada cor "de marca" foi deliberadamente
   excluída.
@@ -141,3 +144,4 @@ variável, os endpoints de cruzamento com o Portal da Transparência retornam
 | `npm run lint` | ESLint |
 | `npm run ingest -- --ano=2026` | Roda a ingestão de dados do TSE (ver acima) |
 | `npm run build-asset-index -- --ano=2026 --fotos-dir=... --planos-dir=...` | Indexa fotos e planos de governo já extraídos, gravando as URLs nos candidatos (ver acima) |
+| `npm run ingest-certidoes -- --ano=2026` | Indexa as certidões criminais direto do release do GitHub (sem baixar os ZIPs inteiros — ver `docs/DATA_SOURCES.md` §1) |

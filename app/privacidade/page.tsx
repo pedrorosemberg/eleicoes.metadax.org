@@ -101,6 +101,14 @@ export default function PrivacidadePage() {
         </a>{" "}
         §7 para o detalhamento legal e de LGPD dessa distinção.
       </p>
+      <p className="mt-3 text-[17px] leading-relaxed text-[var(--text-secondary)]">
+        Isso inclui categorias mais sensíveis, sempre pelo mesmo motivo (dado de política pública
+        auditável pela Lei de Acesso à Informação, não um dado pessoal comum): certidões
+        criminais anexadas pelo próprio candidato ao registro de candidatura, situação de
+        servidor público federal e remuneração, e benefícios sociais (Bolsa Família) associados
+        ao CPF do candidato. Nenhuma dessas consultas é feita para visitantes do site — só para
+        os CPFs de candidatos já públicos, publicados pelo próprio TSE.
+      </p>
 
       <h2 className="mt-10 text-[22px] font-semibold text-[var(--text-primary)]">
         Infraestrutura e ferramentas usadas para publicar este site

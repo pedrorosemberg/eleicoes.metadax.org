@@ -55,7 +55,13 @@ const FEATURES: Array<{ titulo: string; descricao: string; status: StatusFeature
   {
     titulo: "Cruzamento com o Portal da Transparência",
     descricao:
-      "Contratos federais, status de Pessoa Exposta Politicamente (PEP) e sanções (CEIS/CNEP/CEPIM) ligados ao candidato ou a empresas dele — consulta ao vivo, com a chave de API já configurada.",
+      "Contratos federais, status de Pessoa Exposta Politicamente (PEP), sanções (CEIS/CNEP/CEPIM), situação de servidor público federal e benefícios sociais (Bolsa Família) ligados ao CPF do candidato — consulta ao vivo, com a chave de API já configurada.",
+    status: "disponível",
+  },
+  {
+    titulo: "Certidões criminais",
+    descricao:
+      "Documentos enviados pelo próprio candidato no registro de candidatura, exatamente como publicados pelo TSE — disponível para 22 das 28 unidades eleitorais (6 aguardam reenvio de um arquivo de origem corrompido, ver /roteiro).",
     status: "disponível",
   },
   {

@@ -9,7 +9,8 @@
     "start": "next start",
     "lint": "eslint .",
     "ingest": "tsx scripts/ingest-tse.ts",
-    "build-asset-index": "tsx scripts/build-asset-index.ts"
+    "build-asset-index": "tsx scripts/build-asset-index.ts",
+    "ingest-certidoes": "tsx scripts/ingest-certidoes.ts"
   },
   "dependencies": {
     "@vercel/analytics": "^2.0.1",

@@ -184,3 +184,61 @@ export interface CnpjCampanha {
   naturezaJuridica: string;
   cnae: string;
 }
+
+/**
+ * Origem: dataset `certidao_criminal` do TSE (release "arquivos_de_certidoes_criminais"),
+ * documentos enviados pelo próprio candidato no registro da candidatura.
+ * `arquivo` é o nome original dentro do ZIP oficial da UF
+ * (`{ano}{UF}{sqCandidato}_{sqArquivoDocumento}.pdf.pdf`), usado como
+ * identificador único e servido sob demanda via `/api/certidao/[uf]/[arquivo]`
+ * — ver scripts/ingest-certidoes.ts e docs/DATA_SOURCES.md §1.
+ *
+ * Este produto expõe apenas a existência e o link do documento oficial tal
+ * como publicado pelo TSE — o conteúdo do PDF não é lido, resumido nem
+ * classificado por este produto, para não emitir juízo sobre o candidato.
+ */
+export interface CertidaoCriminal {
+  sqCandidato: string;
+  uf: string;
+  arquivo: string;
+  tamanhoBytes: number;
+}
+
+/**
+ * Origem: Portal da Transparência (CGU), endpoint
+ * `bolsa-familia-disponivel-por-cpf-ou-nis` — consulta pública por CPF,
+ * ao vivo (não pré-carregada). Cada item é uma parcela mensal
+ * disponibilizada, não necessariamente sacada — ver
+ * src/lib/enrichment.ts#buscarBeneficiosSociais.
+ */
+export interface ParcelaBeneficioSocial {
+  programa: "Bolsa Família";
+  mesReferencia: string;
+  mesCompetencia: string;
+  valor: number;
+  municipio?: string;
+  uf?: string;
+}
+
+export interface ResumoBeneficiosSociais {
+  parcelas: ParcelaBeneficioSocial[];
+  valorTotal: number;
+  primeiroMesReferencia?: string;
+  ultimoMesReferencia?: string;
+}
+
+/**
+ * Origem: Portal da Transparência (CGU), endpoints `servidores` e
+ * `servidores/remuneracao` — indica se o candidato é ou foi servidor
+ * público do Poder Executivo Federal, e (quando localizável) a
+ * remuneração do mês mais recente disponível. Não é um histórico
+ * completo de remuneração — ver docs/DATA_SOURCES.md §4.
+ */
+export interface ServidorPublicoFederal {
+  situacao: string;
+  tipoServidor: string;
+  orgaoLotacao?: string;
+  orgaoExercicio?: string;
+  cargoOuFuncao?: string;
+  remuneracaoRecente?: { mesAno: string; valor: number };
+}

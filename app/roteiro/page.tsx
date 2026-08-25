@@ -58,6 +58,13 @@ const BLOQUEADOS: ItemRoteiro[] = [
     fonte: "TSE — DivulgaCandContas (ver docs/DATA_SOURCES.md §5 para o achado completo)",
     status: "bloqueado",
   },
+  {
+    titulo: "Certidões criminais de 6 UFs (BA, MG, PR, RJ, SC, SP)",
+    descricao:
+      "As certidões criminais já estão disponíveis para 22 das 28 unidades eleitorais. Nessas 6, o ZIP de origem publicado no release está corrompido (falta o índice/central directory do arquivo, confirmado com unzip -t) — não é um dado sobre nenhum candidato específico dessas UFs, é um problema no arquivo em si, que precisa ser reenviado.",
+    fonte: "TSE — dataset certidao_criminal (ver docs/DATA_SOURCES.md §1 para o diagnóstico completo)",
+    status: "bloqueado",
+  },
 ];
 
 const SUGESTOES_COMUNIDADE = [
@@ -69,11 +76,6 @@ const SUGESTOES_COMUNIDADE = [
     titulo: "Exportação dos dados agregados em CSV",
     descricao:
       "Hoje só há JSON via /api/estatisticas — um CSV facilitaria o uso por quem faz análise em planilha, não em código.",
-  },
-  {
-    titulo: "Certidões criminais",
-    descricao:
-      "Dataset já mapeado (ver /participe para os links pendentes) — sem seção própria no produto ainda porque é o dado mais sensível dos disponíveis; precisa de uma decisão de design antes de implementar.",
   },
   {
     titulo: "Consulta de CNPJs de campanha",
