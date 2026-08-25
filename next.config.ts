@@ -2,6 +2,18 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   reactStrictMode: true,
+  images: {
+    // Logo da METADAX na SourceMarquee (src/components/SourceMarquee.tsx) —
+    // único uso de imagem remota do produto; todo o resto vem de
+    // public/assets/, servido pelo próprio domínio.
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "cdn.metadax.com.br",
+        pathname: "/assets/metadax_branding_marks/**",
+      },
+    ],
+  },
   // Nomes de UF/candidato viram parte da URL (/candidato/:id) — mantidos
   // minúsculos e sem acento no slug para estabilidade de indexação (SEO).
   trailingSlash: false,

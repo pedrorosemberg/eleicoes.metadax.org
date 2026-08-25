@@ -22,19 +22,35 @@ const FONTES = [
     largura: 691,
     altura: 236,
   },
-  { sigla: "API", nome: "BrasilAPI", logo: null },
-  { sigla: "MDX", nome: "METADAX", logo: null },
+  {
+    sigla: "API",
+    nome: "BrasilAPI",
+    logo: "/assets/fontes_images/brasilapi-logo-medium.webp",
+    largura: 384,
+    altura: 96,
+  },
+  {
+    sigla: "MDX",
+    nome: "METADAX",
+    // Único logo remoto (CDN da própria METADAX) — os outros quatro são
+    // arquivos locais em public/assets/fontes_images/. largura/altura são um
+    // palpite (512×512): o sandbox de desenvolvimento não tem acesso de rede
+    // a cdn.metadax.com.br para confirmar as dimensões reais do arquivo —
+    // ajustar aqui se a proporção não bater no preview.
+    logo: "https://cdn.metadax.com.br/assets/metadax_branding_marks/png/logos/metadax_dark.png",
+    largura: 512,
+    altura: 512,
+  },
 ];
 
 /**
  * Faixa animada com as fontes oficiais. Logos reais enviados pelo
- * mantenedor em 26/08/2026 para TSE, RFB e CGU (assets/fontes_images/) —
- * usados aqui só para atribuição da fonte do dado, não como marca deste
- * produto: por isso a cor de cada logo oficial é preservada como está,
- * sem contrariar a regra de neutralidade cromática do restante do site
- * (ver docs/DESIGN_SYSTEM.md, seção sobre cores de marca). BrasilAPI e
- * METADAX continuam com wordmark tipográfico — nenhum arquivo de logo
- * foi enviado para essas duas.
+ * mantenedor (26/08/2026, assets/fontes_images/, mais o logo remoto da
+ * METADAX) para as cinco fontes — usados aqui só para atribuição da fonte
+ * do dado, não como marca deste produto: por isso a cor de cada logo
+ * oficial é preservada como está, sem contrariar a regra de neutralidade
+ * cromática do restante do site (ver docs/DESIGN_SYSTEM.md, seção sobre
+ * cores de marca).
  */
 export function SourceMarquee() {
   const item = (f: (typeof FONTES)[number], key: string) => (
