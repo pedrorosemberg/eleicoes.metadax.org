@@ -65,8 +65,14 @@ export function SourceMarquee() {
           alt={f.nome}
           width={f.largura}
           height={f.altura}
-          style={{ height: 22, width: "auto" }}
-          className="h-[22px] w-auto"
+          // maxWidth + objectFit: contain — trava o tamanho mesmo se a
+          // proporção largura/altura declarada acima não bater exatamente
+          // com o arquivo real (caso do logo remoto da METADAX, cujas
+          // dimensões reais não puderam ser confirmadas neste ambiente).
+          // Sem isso, um palpite errado de proporção deixa o logo
+          // visivelmente maior ou menor que os outros da faixa.
+          style={{ height: 22, width: "auto", maxWidth: 110, objectFit: "contain" }}
+          className="h-[22px] w-auto max-w-[110px] object-contain"
         />
       ) : (
         <span
