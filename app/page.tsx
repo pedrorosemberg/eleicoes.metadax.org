@@ -127,7 +127,7 @@ export default async function LandingPage() {
               Ver busca de candidatos
             </Link>
             <a
-              href={`${REPO_URL}/stargazers`}
+              href={REPO_URL}
               target="_blank"
               rel="noreferrer noopener"
               className="inline-flex h-11 items-center gap-1.5 rounded-[10px] border px-5 text-[15px] font-semibold text-[var(--text-primary)] hover:bg-[var(--surface-1)]"
