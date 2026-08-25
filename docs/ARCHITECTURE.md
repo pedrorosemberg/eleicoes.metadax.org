@@ -378,18 +378,20 @@ regra de branch protection referencia esses checks explicitamente.
    - "Require review from Code Owners" — usa o `.github/CODEOWNERS` já commitado.
    - "Dismiss stale pull request approvals when new commits are pushed" — recomendado, para que
      uma aprovação não continue valendo depois que o PR mudou.
-3. **Settings → Secrets and variables → Actions → New repository secret**: `CLAUDE_API_KEY`, com
-   uma chave de `console.anthropic.com` habilitada para a Claude API (não é a mesma coisa que uma
-   assinatura do Claude Code/Claude.ai — precisa ser uma API key de conta com faturamento próprio
-   para uso via API). Sem essa chave, o workflow `claude-security-review.yml` falha (e, com o
-   status check marcado como obrigatório no passo 2, isso por si só já bloqueia o merge — falha
-   fechada, não aberta).
+3. **Settings → Secrets and variables → Actions → New repository secret**: `ANTHROPIC_API_KEY`
+   (nome confirmado testando o workflow sem o secret configurado — é literalmente o que a própria
+   action imprime no erro: "Please provide the claude-api-key input... example:
+   secrets.ANTHROPIC_API_KEY"), com uma chave de `console.anthropic.com` habilitada para a Claude
+   API (não é a mesma coisa que uma assinatura do Claude Code/Claude.ai — precisa ser uma API key
+   de conta com faturamento próprio para uso via API). Sem essa chave, o workflow
+   `claude-security-review.yml` falha (e, com o status check marcado como obrigatório no passo 2,
+   isso por si só já bloqueia o merge — falha fechada, não aberta, confirmado no PR #1).
 4. **Settings → Actions → General → "Fork pull request workflows from outside collaborators"** →
    escolher **"Require approval for all outside collaborators"** (a opção mais restritiva
    disponível). Este é o passo que mitiga a ressalva que a própria documentação do Claude Code
    Security Reviewer registra: a action "não é hardened contra ataques de prompt injection e deve
    ser usada só para revisar PRs confiáveis" — sem essa configuração, um PR malicioso de um fork
-   poderia rodar workflows (incluindo os com acesso a `CLAUDE_API_KEY`) automaticamente, antes de
+   poderia rodar workflows (incluindo os com acesso a `ANTHROPIC_API_KEY`) automaticamente, antes de
    qualquer humano olhar o conteúdo. Com essa configuração, todo PR de fora do repositório fica
    parado até o mantenedor clicar em "Approve and run" — o primeiro humano-no-loop da esteira,
    antes mesmo do Claude entrar.

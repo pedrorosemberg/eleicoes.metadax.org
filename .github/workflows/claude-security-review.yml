@@ -43,5 +43,9 @@ jobs:
         uses: anthropics/claude-code-security-review@main
         with:
           comment-pr: true
-          claude-api-key: ${{ secrets.CLAUDE_API_KEY }}
+          # Nome do secret confirmado pelo próprio erro da action quando ele
+          # falta ("Please provide the claude-api-key input... example:
+          # secrets.ANTHROPIC_API_KEY") — usar esse nome exato ao cadastrar
+          # o secret em Settings → Secrets and variables → Actions.
+          claude-api-key: ${{ secrets.ANTHROPIC_API_KEY }}
           custom-security-scan-instructions: .github/claude-security-review-instructions.md
