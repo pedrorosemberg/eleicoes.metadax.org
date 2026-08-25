@@ -20,7 +20,7 @@ import {
 } from "@/lib/enrichment";
 import { SnapshotNotice } from "@/components/SnapshotNotice";
 import { CnpjAccordion } from "@/components/CnpjAccordion";
-import { formatarDataBR, formatarDataHoraBR, formatarMoedaBRL } from "@/lib/format";
+import { formatarDataBR, formatarDataHoraBR, formatarMoedaBRL, normalizarUrlExterna } from "@/lib/format";
 import { IconAlertTriangle, IconCheckCircle, IconExternalLink, IconInfo } from "@/components/icons";
 
 export async function generateMetadata({
@@ -240,7 +240,7 @@ export default async function CandidatoPage({
                 {detalheDivulgaCand.sites.map((site) => (
                   <li key={site}>
                     <a
-                      href={site}
+                      href={normalizarUrlExterna(site)}
                       target="_blank"
                       rel="noreferrer noopener"
                       className="inline-flex items-center gap-1.5 underline underline-offset-2 text-[var(--text-primary)]"
@@ -257,7 +257,7 @@ export default async function CandidatoPage({
                 {redesSociais.map((r, i) => (
                   <li key={i}>
                     <a
-                      href={r.url}
+                      href={normalizarUrlExterna(r.url)}
                       target="_blank"
                       rel="noreferrer noopener"
                       className="inline-flex items-center gap-1.5 underline underline-offset-2 text-[var(--text-primary)]"

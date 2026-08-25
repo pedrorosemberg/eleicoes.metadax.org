@@ -61,3 +61,16 @@ export function formatarHoraBR(data: string | number | Date): string {
 export function formatarMoedaBRL(valor: number): string {
   return new Intl.NumberFormat("pt-BR", { style: "currency", currency: "BRL" }).format(valor);
 }
+
+/**
+ * Site oficial e redes sociais (DS_URL do TSE) vêm como o candidato digitou
+ * no registro de candidatura — muitos sem "http://"/"https://" na frente
+ * (ex.: "flaviobolsonaro.com.br"). Sem esquema, um <a href> assim é
+ * interpretado pelo navegador como caminho relativo dentro do próprio site
+ * (abria "/candidato/FLAVIOBOLSONARO.COM.BR" em vez do site do candidato).
+ * Só adiciona "https://" quando a URL ainda não tem nenhum esquema — nunca
+ * reescreve o texto exibido, só o href de navegação.
+ */
+export function normalizarUrlExterna(url: string): string {
+  return /^[a-z][a-z0-9+.-]*:\/\//i.test(url) ? url : `https://${url}`;
+}
