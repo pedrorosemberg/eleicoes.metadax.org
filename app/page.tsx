@@ -3,7 +3,8 @@ import Link from "next/link";
 import { SourceMarquee } from "@/components/SourceMarquee";
 import { Reveal } from "@/components/Reveal";
 import { CounterStat } from "@/components/CounterStat";
-import { IconCheckCircle, IconAlertTriangle, IconXCircle } from "@/components/icons";
+import { IconCheckCircle, IconAlertTriangle, IconXCircle, IconStar } from "@/components/icons";
+import { buscarEstatisticasRepositorio } from "@/lib/github";
 
 const REPO_URL = "https://github.com/pedrorosemberg/eleicoes.metadax.org";
 
@@ -96,7 +97,9 @@ const PRINCIPIOS = [
   },
 ];
 
-export default function LandingPage() {
+export default async function LandingPage() {
+  const estatisticasRepo = await buscarEstatisticasRepositorio();
+
   return (
     <>
       <section className="mx-auto max-w-3xl px-4 pt-10 sm:px-6 sm:pt-16">
@@ -122,6 +125,28 @@ export default function LandingPage() {
               style={{ background: "var(--action-primary-bg)", color: "var(--action-primary-fg)" }}
             >
               Ver busca de candidatos
+            </Link>
+            <a
+              href={`${REPO_URL}/stargazers`}
+              target="_blank"
+              rel="noreferrer noopener"
+              className="inline-flex h-11 items-center gap-1.5 rounded-[10px] border px-5 text-[15px] font-semibold text-[var(--text-primary)] hover:bg-[var(--surface-1)]"
+              style={{ borderColor: "var(--action-ghost-border)" }}
+            >
+              <IconStar />
+              Curtir no GitHub
+              {estatisticasRepo && (
+                <span className="font-financial text-[var(--text-secondary)]">
+                  · {estatisticasRepo.estrelas}
+                </span>
+              )}
+            </a>
+            <Link
+              href="/participe"
+              className="inline-flex h-11 items-center rounded-[10px] border px-5 text-[15px] font-semibold text-[var(--text-primary)] hover:bg-[var(--surface-1)]"
+              style={{ borderColor: "var(--action-ghost-border)" }}
+            >
+              Participar do projeto
             </Link>
             <a
               href={REPO_URL}

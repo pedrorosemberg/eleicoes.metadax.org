@@ -6,8 +6,20 @@
 html,
 body {
   min-height: 100%;
+  /* Trava o scroll horizontal da página inteira — rede de segurança contra
+     qualquer elemento que ainda force largura além da viewport (ver
+     overflow-wrap abaixo para a causa raiz mais comum disso aqui: URL sem
+     espaço, ex. site oficial/rede social de um candidato, "vazando" a
+     largura da tela em mobile). */
+  overflow-x: hidden;
 }
 
 body {
   margin: 0;
+  /* `anywhere` (não `break-word`) porque só ele conta para o cálculo do
+     tamanho mínimo automático de um item flex/grid — sem isso, uma URL
+     longa sem espaço (site oficial, rede social) continua forçando a
+     largura do contêiner mesmo com quebra de linha "permitida", achado
+     revisando o layout em mobile de app/candidato/[id]/page.tsx. */
+  overflow-wrap: anywhere;
 }

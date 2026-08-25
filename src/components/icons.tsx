@@ -14,6 +14,19 @@ export function IconCheck({ className }: IconProps) {
   );
 }
 
+export function IconStar({ className }: IconProps) {
+  return (
+    <svg viewBox="0 0 20 20" width="16" height="16" fill="none" className={className} aria-hidden>
+      <path
+        d="M10 2.5 12.47 7.5 18 8.3 14 12.19 14.94 17.7 10 15.1 5.06 17.7 6 12.19 2 8.3 7.53 7.5 10 2.5Z"
+        stroke="currentColor"
+        strokeWidth="1.4"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
+
 export function IconAlertTriangle({ className }: IconProps) {
   return (
     <svg viewBox="0 0 20 20" width="16" height="16" fill="none" className={className} aria-hidden>
