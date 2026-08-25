@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Termos de Uso",
-  description: "Usos autorizados dos dados e do serviço do Eleições — METADAX.",
+  description: "Usos autorizados dos dados e do serviço do Fato Eleitoral.",
   alternates: { canonical: "/termos" },
 };
 
@@ -17,7 +17,7 @@ export default function TermosPage() {
       </p>
 
       <p className="mt-6 max-w-prose text-[17px] leading-relaxed text-[var(--text-secondary)]">
-        O <strong>Eleições — METADAX</strong> é um projeto de código aberto e interesse
+        O <strong>Fato Eleitoral</strong> é um projeto de código aberto e interesse
         público do{" "}
         <a className="underline underline-offset-2" href="https://imi.metadax.org" target="_blank" rel="noreferrer noopener">
           Instituto METADAX de Inovação (IMI)

@@ -17,7 +17,7 @@ export default function PrivacidadePage() {
       </p>
 
       <p className="mt-6 max-w-prose text-[17px] leading-relaxed text-[var(--text-secondary)]">
-        O <strong>Eleições — METADAX</strong> é um projeto do{" "}
+        O <strong>Fato Eleitoral</strong> é um projeto do{" "}
         <a className="underline underline-offset-2" href="https://imi.metadax.org" target="_blank" rel="noreferrer noopener">
           Instituto METADAX de Inovação (IMI)
         </a>

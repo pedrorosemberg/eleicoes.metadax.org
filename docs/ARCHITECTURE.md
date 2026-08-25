@@ -306,8 +306,8 @@ mantenedor) — antes de qualquer código publicado, nos dois ambientes.
 
 A Vercel já publica automaticamente a cada push: qualquer branch vira uma Preview Deployment com
 URL estável e própria; só a branch `main` (Production Branch do projeto na Vercel) promove para o
-domínio de produção (`eleicoes.metadax.org`). Havia duas formas de montar os ambientes hmg/prod
-em cima disso:
+domínio de produção (`fatoeleitoral.metadax.org` desde 26/08/2026 — ver §16). Havia duas formas de
+montar os ambientes hmg/prod em cima disso:
 
 1. **Desligar o deploy automático da Vercel e publicar via GitHub Actions** (`vercel deploy`),
    usando o recurso nativo "Environments" do GitHub (aprovador obrigatório antes do job de deploy
@@ -327,7 +327,7 @@ neste documento (§11, §12). Os dois ambientes viram:
 | Ambiente | Branch | URL | Quando publica |
 |---|---|---|---|
 | **hmg** (homologação) | `hmg` | Preview Deployment automática da Vercel para a branch `hmg` (padrão `eleicoes-metadax-org-git-hmg-<time>.vercel.app`) — sem domínio próprio, sem mudança de DNS | A cada merge de PR em `hmg` |
-| **prod** (produção) | `main` (rename para `prod` decidido pelo mantenedor em 26/08/2026, pendente de execução — ver item 6 do checklist manual abaixo) | `eleicoes.metadax.org` — mesma Production Branch de sempre | A cada merge de PR na branch de produção (sempre vindo de `hmg`, nunca direto de uma branch de feature) |
+| **prod** (produção) | `main` (rename para `prod` decidido pelo mantenedor em 26/08/2026, pendente de execução — ver item 6 do checklist manual abaixo) | `fatoeleitoral.metadax.org` (novo, 26/08/2026) e `eleicoes.metadax.org` (antigo, redireciona para o novo — ver §17) — mesma Production Branch de sempre | A cada merge de PR na branch de produção (sempre vindo de `hmg`, nunca direto de uma branch de feature) |
 
 ### Fluxo de contribuição
 
@@ -548,3 +548,51 @@ Nenhuma fase nova foi inventada para "parecer completo" — o que está na tabel
 adicionado nesta sessão; o valor de listar assim é tornar visível que segurança não é só o gate
 de PR, é uma prática distribuída pelas fases, e facilitar auditoria (interna ou de quem for
 contribuir) sobre onde cada controle mora.
+
+## 17. Rebranding para Fato Eleitoral e migração de domínio (26/08/2026)
+
+A pedido do mantenedor, o produto passou a se chamar **Fato Eleitoral**, com logo e favicon
+próprios (`assets/fatoeleitoral.*`, `assets/favicon.*`) — decisão que inclui usar as cores da
+bandeira do Brasil nesses dois arquivos especificamente, uma exceção documentada em
+`docs/DESIGN_SYSTEM.md` §1.1 à regra de neutralidade cromática do restante do produto (que não
+muda). O nome do repositório no GitHub (`eleicoes.metadax.org`) **não muda** — repositório público
+já tem forks, estrelas e links externos; renomear quebraria isso sem necessidade, e o nome do
+produto não depende do nome do repositório que o hospeda.
+
+### Migração de domínio — plano de três passos
+
+O mantenedor provisionou dois domínios novos: `fatoeleitoral.metadax.org` (subdomínio de
+`metadax.org`, já anexado ao projeto na Vercel) e `fatoeleitoral.com.br` (domínio próprio,
+provisionado, migração futura). O plano, registrado para não se perder entre os passos:
+
+1. **Feito nesta seção:** `fatoeleitoral.metadax.org` vira o domínio canônico (`SITE_URL` em
+   `app/layout.tsx`, `app/sitemap.ts`, `app/robots.ts`, `USER_AGENT` em `src/lib/http.ts`).
+   `eleicoes.metadax.org` continua registrado e ativo na Vercel, mas passa a redirecionar
+   (307, não-permanente — `next.config.ts`, condição `has: [{ type: "host", ... }]`) para o novo
+   domínio, preservando caminho e querystring. Não-permanente de propósito: o passo 3 muda o
+   destino de novo, e um 301/308 seria cacheado por navegador/buscador de um jeito mais custoso de
+   reverter.
+2. **Planejado:** conferir todo link/documentação que ainda referencia `eleicoes.metadax.org`
+   como URL de produto (não como nome de repositório, que é uma coisa diferente — ver acima) e
+   atualizar para `fatoeleitoral.metadax.org`.
+3. **Planejado:** migração final para `fatoeleitoral.com.br` — nessa hora, o redirecionamento do
+   passo 1 passa a apontar para lá, e o mesmo cuidado com redirect não-permanente se aplica
+   até essa migração também estar validada em produção.
+
+### O que não foi automatizado nesta sessão
+
+Anexar `fatoeleitoral.metadax.org` ao projeto na Vercel e apontar o DNS do subdomínio já tinha
+sido feito manualmente pelo mantenedor antes desta sessão (confirmado via `mcp__Vercel__get_project`
+— o domínio já aparecia na lista de domínios do projeto). Nenhuma ferramenta desta sessão tem
+acesso para comprar/anexar domínio ou alterar DNS — só o redirecionamento em nível de aplicação
+(`next.config.ts`) e as referências de URL no código foram implementados aqui.
+
+### Fontes oficiais com logo real (`SourceMarquee`)
+
+O mantenedor enviou os logos oficiais de TSE, Receita Federal e Portal da Transparência/CGU
+(`assets/fontes_images/`), substituindo o wordmark tipográfico que `SourceMarquee.tsx` usava como
+placeholder documentado (ver comentário original no componente, antes desta mudança). BrasilAPI e
+METADAX continuam com wordmark tipográfico — nenhum logo foi enviado para essas duas. Um quinto
+arquivo (`gov-br_logo-svg.png`, a marca unificada `gov.br`) foi recebido mas não usado: nenhuma
+das cinco fontes listadas em `SourceMarquee` corresponde a "gov.br" como órgão específico — fica
+disponível em `public/assets/fontes_images/` para uso futuro, se um caso de uso aparecer.

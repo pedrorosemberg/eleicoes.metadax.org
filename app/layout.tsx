@@ -6,8 +6,8 @@ import { SiteFooter } from "@/components/SiteFooter";
 import { ProjectLoader } from "@/components/ProjectLoader";
 import "./globals.css";
 
-const SITE_URL = "https://eleicoes.metadax.org";
-const SITE_NAME = "Eleições — METADAX";
+const SITE_URL = "https://fatoeleitoral.metadax.org";
+const SITE_NAME = "Fato Eleitoral";
 const SITE_DESCRIPTION =
   "Consulta pública de candidatos às eleições brasileiras: dados oficiais do TSE, plano de governo, partido e cruzamento com o Portal da Transparência e a Receita Federal. Fonte pública, sem viés partidário.";
 

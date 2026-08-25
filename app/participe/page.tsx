@@ -7,7 +7,7 @@ const REPO_URL = "https://github.com/pedrorosemberg/eleicoes.metadax.org";
 export const metadata: Metadata = {
   title: "Participe",
   description:
-    "Vote com consciência e ajude a manter o Eleições — METADAX: reporte dados, contribua com código, valide fontes.",
+    "Vote com consciência e ajude a manter o Fato Eleitoral: reporte dados, contribua com código, valide fontes.",
   alternates: { canonical: "/participe" },
 };
 

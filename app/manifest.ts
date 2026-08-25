@@ -2,8 +2,8 @@ import type { MetadataRoute } from "next";
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: "Eleições — METADAX",
-    short_name: "Eleições",
+    name: "Fato Eleitoral",
+    short_name: "FatoEleitoral",
     description:
       "Consulta pública de candidatos às eleições brasileiras, cruzando TSE, Portal da Transparência e Receita Federal.",
     start_url: "/",

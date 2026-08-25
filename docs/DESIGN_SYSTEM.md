@@ -1,18 +1,29 @@
 # Identidade visual do projeto
 
-> Guia de identidade visual do **Eleições — METADAX**, um projeto do
-> [Instituto METADAX de Inovação (IMI)](https://imi.metadax.org). Este documento descreve
-> as decisões de design deste produto especificamente — não reproduz nem depende de nenhum
-> manual de design interno da METADAX; é autocontido.
+> Guia de identidade visual do **Fato Eleitoral** (nome adotado em 26/08/2026 —
+> ver `README.md`, seção "Identidade visual e domínio"), idealizado e mantido
+> por Pedro Rosemberg, com o
+> [Instituto METADAX de Inovação (IMI)](https://imi.metadax.org) como parceiro
+> de apoio institucional. Este documento descreve as decisões de design deste
+> produto especificamente — não reproduz nem depende de nenhum manual de
+> design interno da METADAX; é autocontido.
 
 ## 1. Decisão de neutralidade — a regra que domina todas as outras
 
 Requisito explícito do projeto: **tema claro, predominância de preto e branco, sem cor de identidade partidária** — para não sugerir associação com qualquer partido político. Isso é uma decisão deliberada de produto, não uma limitação técnica: uma ferramenta de transparência eleitoral não pode adotar a paleta de nenhum partido nem repetir o padrão visual (azul institucional, verde/vermelho de aprovação-reprovação) que os próprios partidos usam para se identificar.
 
-**Resolução adotada:** cor nunca é usada para decoração, marca, navegação ou identificação de categoria (cargo/UF/partido) — isso permanece só em preto, branco e cinza, com hierarquia tipográfica, ícone e texto explícito. A única exceção, deliberada, é um conjunto pequeno e fixo de **três cores semânticas de estado** (erro, execução/informativo, sucesso — Seção 2), usadas exclusivamente como *feedback funcional* (uma checagem deu certo, algo falhou, uma ação está em andamento) — nunca para diferenciar candidato, partido ou cargo. Mesmo nesses casos, cor nunca aparece sozinha: sempre com ícone de forma distinta + texto.
+**Resolução adotada:** cor nunca é usada para decoração, marca, navegação ou identificação de categoria (cargo/UF/partido) — isso permanece só em preto, branco e cinza, com hierarquia tipográfica, ícone e texto explícito. Há duas exceções deliberadas, e só duas:
+1. Um conjunto pequeno e fixo de **quatro cores semânticas de estado** (erro, informativo, sucesso, em progresso — Seção 2), usadas exclusivamente como *feedback funcional* (uma checagem deu certo, algo falhou, uma ação está em andamento) — nunca para diferenciar candidato, partido ou cargo. Mesmo nesses casos, cor nunca aparece sozinha: sempre com ícone de forma distinta + texto.
+2. A **logo e o favicon do próprio produto** (`assets/fatoeleitoral.*`, `assets/favicon.*`, ver Seção 1.1) — únicos lugares do site onde cor de marca aparece. Nenhum outro elemento (botão, ícone, gráfico, estado, UI em geral) usa essas cores.
+
+### 1.1. Logo e favicon — cores da bandeira do Brasil (26/08/2026)
+
+A logo e o favicon do Fato Eleitoral (`assets/fatoeleitoral.png`/`.svg`, `assets/favicon.ico`/`.svg`) usam azul, verde e amarelo — as cores da bandeira nacional. Isso é uma decisão consciente do mantenedor, confirmada explicitamente antes de aplicar (ver histórico do PR que introduziu esses arquivos), e uma mudança de postura em relação à marca anterior: o favicon anterior (um ícone de checagem neutro, preto/branco) foi desenhado de propósito para *evitar* qualquer cor institucional/governamental, justamente para não sugerir vínculo com um site oficial do governo. A logo atual assume essa referência deliberadamente — são símbolos nacionais, não a cor de um partido específico, e o uso está **restrito exclusivamente à logo e ao favicon**. Em nenhum outro lugar do produto — botões, gráficos, badges de status, cabeçalhos de seção — essas cores aparecem; a regra de neutralidade cromática do restante do site (Seção 2, Seção 3) continua em vigor sem alteração.
+
+A `SourceMarquee` (`src/components/SourceMarquee.tsx`) usa os logos oficiais de TSE, RFB e CGU como fontes de dado, cada um com suas próprias cores originais — isso não é uma terceira exceção à regra do produto: é atribuição de uma fonte externa (equivalente a citar a imagem oficial de um órgão num artigo), não a identidade visual deste site.
 
 **O que segue o padrão institucional da METADAX, por não ter carga partidária:**
-- Tipografia (Audiowide no logotipo — uso exclusivo —, Inter no restante do texto)
+- Tipografia de corpo (Inter)
 - Grid, espaçamento e breakpoints do site institucional
 - Regras de uso da marca/logotipo (ver Manual de Marca, `metadax.com.br/manual-de-marca`)
 - Bloco de rodapé institucional obrigatório (CNPJ, endereço, razão social) — reproduzido como texto estático em `SiteFooter.tsx` (ver nota abaixo sobre por que não vem do CDN)
@@ -79,7 +90,7 @@ Tema **claro** apenas.
 - `--color-warning` (âmbar/laranja): em progresso — usado especificamente no badge de status de funcionalidade da home (`/`), para "em progresso" (código pronto, aguardando dado real ou configuração externa) — distinto de `--color-info` para não confundir "isto é só um aviso" com "isto está sendo construído".
 - **Nunca** para: identificar partido, cargo, UF, navegação, branding, ou qualquer elemento decorativo. Sempre acompanhadas de um ícone com forma distinta (não só a cor muda) e texto explícito — nunca cor sozinha carregando o significado.
 
-**Exceção adicional:** o **logotipo** da METADAX no header/footer usa suas cores oficiais — a marca em si não é "cor de ação da interface", é identidade institucional obrigatória, e o Manual de Marca da METADAX proíbe alterar as cores do logotipo.
+**Nota:** a METADAX não tem logotipo exibido no header/footer deste produto — o header mostra a logo do próprio Fato Eleitoral (Seção 1.1), e o footer traz a identificação institucional da METADAX (CNPJ, endereço, razão social) só como texto, sem marca gráfica (ver Seção 7).
 
 ## 3. Como o produto usa (ou não) cor por tipo de informação
 
@@ -105,7 +116,7 @@ Tema **claro** apenas.
 | Caption / fine print | 14px | 400 | Inter |
 | Valor monetário (bens, contratos) | 14–24px conforme contexto | 600 | **JetBrains Mono**, `tabular-nums` — legibilidade numérica, não é decisão de cor |
 | Tabelas de dados (lista de candidatos densa) | 12–14px | 400–600 | Geist Sans / Geist Mono, para densidade de dados |
-| Logotipo | — | — | Audiowide, exclusivo, conforme Manual de Marca da METADAX |
+| Logotipo | — | — | Imagem própria (`assets/fatoeleitoral.svg`), não é texto tipografado — ver Seção 1.1 |
 
 ## 5. Componentes
 
@@ -136,4 +147,4 @@ Av. Getúlio Vargas, 671, Sala 500 — Savassi, Belo Horizonte, MG — CEP 30112
 metadax.com.br
 ```
 
-Complementado pelo rodapé próprio do produto (`SiteFooter`, ver `src/components/SiteFooter.tsx`), com os links legais específicos deste projeto (`/sobre`, `/privacidade`, `/termos`) e a atribuição ao Instituto METADAX de Inovação (IMI) como mantenedor do projeto.
+Complementado pelo rodapé próprio do produto (`SiteFooter`, ver `src/components/SiteFooter.tsx`), com o mapa do site, os links legais específicos deste projeto (`/privacidade`, `/termos`) e a atribuição ao Instituto METADAX de Inovação (IMI) como parceiro de apoio institucional — não como dono/mantenedor do projeto (ver `/sobre`).

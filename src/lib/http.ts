@@ -4,4 +4,4 @@
  * o chamador explicitamente também é boa prática de API — permite ao
  * provedor nos contatar/whitelistar se necessário.
  */
-export const USER_AGENT = "eleicoes.metadax.org/1.0 (+https://eleicoes.metadax.org)";
+export const USER_AGENT = "fatoeleitoral.metadax.org/1.0 (+https://fatoeleitoral.metadax.org)";

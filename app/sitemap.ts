@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
 import { UFS } from "@/lib/ufs";
 
-const SITE_URL = "https://eleicoes.metadax.org";
+const SITE_URL = "https://fatoeleitoral.metadax.org";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const estaticas: MetadataRoute.Sitemap = [
