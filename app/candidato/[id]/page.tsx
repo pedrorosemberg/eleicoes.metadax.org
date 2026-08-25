@@ -608,7 +608,7 @@ export default async function CandidatoPage({
               </span>
             </div>
             <p className="mt-1 text-[var(--text-secondary)]">
-              {beneficiosSociais.parcelas.length} parcela(s) disponibilizada(s)
+              {beneficiosSociais.parcelas.length} parcela(s) disponibilizada(s) nos últimos 12 meses
               {beneficiosSociais.primeiroMesReferencia && beneficiosSociais.ultimoMesReferencia
                 ? `, de ${beneficiosSociais.primeiroMesReferencia} a ${beneficiosSociais.ultimoMesReferencia}`
                 : ""}
@@ -618,7 +618,7 @@ export default async function CandidatoPage({
         ) : beneficiosSociais ? (
           <p className="mt-2 text-sm text-[var(--text-tertiary)]">
             Nenhuma parcela de Bolsa Família disponibilizada para o CPF deste candidato consta na base da
-            CGU.
+            CGU, nos últimos 12 meses.
           </p>
         ) : (
           <p className="mt-2 text-sm text-[var(--text-tertiary)]">
@@ -629,9 +629,11 @@ export default async function CandidatoPage({
         )}
         <p className="mt-3 text-xs text-[var(--text-tertiary)]">
           Fonte: Portal da Transparência (CGU), endpoint bolsa-familia-disponivel-por-cpf-ou-nis, consulta
-          ao vivo por CPF. Receber (ou não) este benefício é um dado de política pública, público por força
-          da Lei de Acesso à Informação — não é um indicador de mérito ou demérito do candidato. Consultado
-          agora, {formatarDataHoraBR(agora)}.
+          ao vivo por CPF, limitada aos últimos 12 meses (a mesma janela para todo candidato — o endpoint
+          exige um mês específico por consulta, não existe uma chamada de &ldquo;histórico completo&rdquo;). Receber
+          (ou não) este benefício é um dado de política pública, público por força da Lei de Acesso à
+          Informação — não é um indicador de mérito ou demérito do candidato. Consultado agora,{" "}
+          {formatarDataHoraBR(agora)}.
         </p>
       </section>
 

@@ -92,10 +92,8 @@ export async function buscarTransparencia(
       headers: { "chave-api-dados": apiKey, "User-Agent": USER_AGENT },
       next: { revalidate: TRANSPARENCIA_CACHE_TTL },
     });
-    const bodyText = await res.text();
-    console.error(`[DEBUG_TRANSPARENCIA_TEMP] ${tipo} status=${res.status} body=${bodyText.slice(0, 2000)}`);
     if (!res.ok) return null;
-    const dados = JSON.parse(bodyText);
+    const dados = await res.json();
     return Array.isArray(dados) ? dados : null;
   } catch {
     return null;
@@ -175,20 +173,27 @@ export async function buscarResumoTransparencia(cpf: string): Promise<Transparen
   };
 }
 
-const BENEFICIOS_MAX_PAGINAS = 50; // teto de segurança (~50 páginas cobre décadas de parcelas mensais)
-
 /**
  * Consulta ao vivo, por CPF, das parcelas do Bolsa Família disponibilizadas
  * ao titular — endpoint `bolsa-familia-disponivel-por-cpf-ou-nis`, que
  * aceita CPF diretamente em `codigo` (não exige NIS). Este endpoint está
  * na faixa de limite de taxa mais restrita da CGU (180 requisições/min —
  * ver docs/DATA_SOURCES.md §4), por lidar com dado individual sensível de
- * benefício social; por isso só é chamado sob demanda (visita a um perfil),
- * nunca em lote.
+ * benefício social; por isso só é chamado sob demanda (visita a um perfil,
+ * 12 requisições em paralelo), nunca em lote.
  *
- * Retorna `null` quando a fonte está indisponível (sem chave, erro de rede),
- * e um resumo com `parcelas: []` quando a consulta funcionou mas não há
- * nenhuma parcela — são estados diferentes, tratados como tal na UI.
+ * `anoMesReferencia` OU `anoMesCompetencia` é obrigatório em toda chamada —
+ * confirmado contra a API real em 25/08/2026 (omitir os dois retorna 400
+ * "Informe ano e mês de competência ou de referência"; o swagger marca os
+ * dois como individualmente opcionais, o que é enganoso). Não existe uma
+ * chamada de "histórico completo" — por isso a janela é fixa nos últimos
+ * 12 meses, igual para todo candidato, e isso é dito explicitamente no
+ * texto de fonte exibido na UI (não fica implícito).
+ *
+ * Retorna `null` quando a fonte está indisponível (sem chave, erro de rede
+ * em todos os 12 meses), e um resumo com `parcelas: []` quando a consulta
+ * funcionou mas não há nenhuma parcela — são estados diferentes, tratados
+ * como tal na UI.
  *
  * Neutralidade: receber (ou não) Bolsa Família não é indicador de mérito
  * ou demérito de um candidato — é um dado de política pública, exibido
@@ -196,25 +201,43 @@ const BENEFICIOS_MAX_PAGINAS = 50; // teto de segurança (~50 páginas cobre dé
  * pessoa física é auditável pela Lei de Acesso à Informação. Ver
  * docs/DATA_SOURCES.md §10.
  */
+const BENEFICIOS_MESES_JANELA = 12; // últimos 12 meses — ver nota abaixo sobre o motivo do recorte
+
 export async function buscarBeneficiosSociais(cpf: string): Promise<ResumoBeneficiosSociais | null> {
   const cpfLimpo = cpf.replace(/\D/g, "");
   if (cpfLimpo.length !== 11) return null;
   if (!process.env.PORTAL_TRANSPARENCIA_API_KEY) return null;
 
+  // O endpoint exige `anoMesReferencia` OU `anoMesCompetencia` em toda
+  // chamada (testado contra a API real em 25/08/2026: omitir os dois
+  // retorna 400 "Informe ano e mês de competência ou de referência" — o
+  // swagger marca os dois como individualmente opcionais, mas na prática
+  // pelo menos um é obrigatório). Não existe "todo o histórico" num único
+  // request — por isso a consulta é por mês, em paralelo, numa janela
+  // fixa dos últimos 12 meses (mesma janela para todo candidato).
+  const hoje = new Date();
+  const mesesAno = Array.from({ length: BENEFICIOS_MESES_JANELA }, (_, i) => {
+    const data = new Date(hoje.getFullYear(), hoje.getMonth() - i, 1);
+    return `${data.getFullYear()}${String(data.getMonth() + 1).padStart(2, "0")}`;
+  });
+
+  const resultadosPorMes = await Promise.all(
+    mesesAno.map((anoMesReferencia) =>
+      buscarTransparencia("bolsa-familia-disponivel-por-cpf-ou-nis", {
+        codigo: cpfLimpo,
+        anoMesReferencia,
+        pagina: "1",
+      }),
+    ),
+  );
+
+  // Se todo mês falhou (não só "sem parcela"), é mais honesto reportar
+  // indisponível do que um resumo zerado.
+  if (resultadosPorMes.every((r) => r === null)) return null;
+
   const parcelas: ResumoBeneficiosSociais["parcelas"] = [];
-  for (let pagina = 1; pagina <= BENEFICIOS_MAX_PAGINAS; pagina++) {
-    const itens = await buscarTransparencia("bolsa-familia-disponivel-por-cpf-ou-nis", {
-      codigo: cpfLimpo,
-      pagina: String(pagina),
-    });
-    if (itens === null) {
-      // Falha de rede/fonte na primeira página = indisponível; numa página
-      // seguinte, é só o fim natural da paginação.
-      if (pagina === 1) return null;
-      break;
-    }
-    if (itens.length === 0) break;
-    for (const item of itens) {
+  for (const itens of resultadosPorMes) {
+    for (const item of itens ?? []) {
       const p = item as Record<string, unknown>;
       const municipio = p.municipio as Record<string, unknown> | undefined;
       const uf = municipio?.uf as Record<string, unknown> | undefined;
@@ -227,7 +250,6 @@ export async function buscarBeneficiosSociais(cpf: string): Promise<ResumoBenefi
         uf: uf?.sigla ? String(uf.sigla) : undefined,
       });
     }
-    if (itens.length < 10) break; // página parcial = última página
   }
 
   const referencias = parcelas.map((p) => p.mesReferencia).filter(Boolean).sort();
@@ -243,9 +265,11 @@ export async function buscarBeneficiosSociais(cpf: string): Promise<ResumoBenefi
  * Consulta ao vivo, por CPF, se a pessoa é ou foi servidora do Poder
  * Executivo Federal (endpoint `servidores`) e, quando localizável, a
  * remuneração do mês mais recente disponível (endpoint
- * `servidores/remuneracao`, que exige um mês específico — tentamos os 3
- * meses mais recentes e ficamos com o primeiro que retornar dado). Não é
- * um histórico completo de remuneração, só um retrato do mês mais recente
+ * `servidores/remuneracao`, que exige um mês específico — tentamos os 6
+ * meses mais recentes, voltando no tempo, e ficamos com o primeiro que
+ * tiver o detalhe do mês (`remuneracoesDTO`) de fato preenchido — a folha
+ * de um mês recente pode ainda não ter sido publicada). Não é um
+ * histórico completo de remuneração, só um retrato do mês mais recente
  * encontrado — ver docs/DATA_SOURCES.md §4.
  *
  * Cobre apenas o Poder Executivo Federal (é o universo do próprio
@@ -276,24 +300,28 @@ export async function buscarServidorPublico(cpf: string): Promise<ServidorPublic
   };
 
   const hoje = new Date();
-  for (let mesesAtras = 1; mesesAtras <= 3; mesesAtras++) {
+  for (let mesesAtras = 1; mesesAtras <= 6; mesesAtras++) {
     const data = new Date(hoje.getFullYear(), hoje.getMonth() - mesesAtras, 1);
     const mesAno = `${data.getFullYear()}${String(data.getMonth() + 1).padStart(2, "0")}`;
     const remuneracoes = await buscarTransparencia("servidores/remuneracao", { cpf: cpfLimpo, mesAno, pagina: "1" });
-    if (remuneracoes && remuneracoes.length > 0) {
-      // Formato real da CGU (schema ServidorRemuneracaoDTO): cada item traz
-      // `remuneracoesDTO`, um array com o detalhe do mês — o total líquido
-      // (`valorTotalRemuneracaoAposDeducoes`) é o número mais direto de
-      // "quanto ganhou", já descontados impostos/previdência.
-      const item = remuneracoes[0] as Record<string, unknown>;
-      const detalhes = item.remuneracoesDTO as Array<Record<string, unknown>> | undefined;
-      const detalhe = detalhes?.[0];
-      const valor = Number(
-        detalhe?.valorTotalRemuneracaoAposDeducoes ?? detalhe?.remuneracaoBasicaBruta ?? 0,
-      );
-      resultado.remuneracaoRecente = { mesAno, valor };
-      break;
-    }
+    if (remuneracoes === null) continue; // falha nesse mês específico — tenta o anterior
+
+    // Formato real da CGU (schema ServidorRemuneracaoDTO, confirmado
+    // contra a API em 25/08/2026): o array externo sempre tem 1 item
+    // quando o CPF é encontrado, mas o detalhe do mês (`remuneracoesDTO`)
+    // pode vir vazio quando a folha daquele mês ainda não foi publicada
+    // — checar o array externo sozinho (sempre length 1) fazia o código
+    // "achar" um resultado vazio e parar de procurar em meses anteriores.
+    const item = remuneracoes[0] as Record<string, unknown> | undefined;
+    const detalhes = item?.remuneracoesDTO as Array<Record<string, unknown>> | undefined;
+    const detalhe = detalhes?.[0];
+    if (!detalhe) continue;
+
+    const valor = Number(
+      detalhe.valorTotalRemuneracaoAposDeducoes ?? detalhe.remuneracaoBasicaBruta ?? 0,
+    );
+    resultado.remuneracaoRecente = { mesAno, valor };
+    break;
   }
 
   return resultado;

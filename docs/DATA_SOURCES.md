@@ -313,8 +313,8 @@ Usos acima do limite suspendem o token (a página não especifica por quanto tem
 | `GET /api-de-dados/pessoa-fisica` | `cpf` | Registro básico da pessoa física na base da CGU |
 | `GET /api-de-dados/peps` | `cpf`, `nome` | **Pessoa Exposta Politicamente** — flag oficial, alto valor para o produto |
 | `GET /api-de-dados/servidores` | `cpf`, `nome` | Se o candidato é/foi servidor público federal — situação, órgão, cargo |
-| `GET /api-de-dados/servidores/remuneracao` | `cpf`, `mesAno` (obrigatório, um mês por chamada) | Remuneração de um servidor federal num mês específico — usado para tentar os 3 meses mais recentes e mostrar o mais recente disponível, não um histórico completo |
-| `GET /api-de-dados/bolsa-familia-disponivel-por-cpf-ou-nis` | `codigo` (aceita CPF **ou** NIS, não é `cpf`), `pagina` | Parcelas do Bolsa Família disponibilizadas ao titular, por CPF — está na faixa de limite mais restrita (180 req/min, ver tabela acima), por lidar com dado individual de benefício social |
+| `GET /api-de-dados/servidores/remuneracao` | `cpf`, `mesAno` (obrigatório, um mês por chamada) | Remuneração de um servidor federal num mês específico — usado para tentar os 6 meses mais recentes e mostrar o mais recente com o detalhe (`remuneracoesDTO`) de fato preenchido, não um histórico completo |
+| `GET /api-de-dados/bolsa-familia-disponivel-por-cpf-ou-nis` | `codigo` (aceita CPF **ou** NIS, não é `cpf`), `anoMesReferencia` **ou** `anoMesCompetencia` (na prática, um dos dois é obrigatório — testado contra a API real: omitir os dois retorna `400 "Informe ano e mês de competência ou de referência"`, mesmo o swagger marcando ambos como individualmente opcionais), `pagina` | Parcelas do Bolsa Família disponibilizadas ao titular, por CPF — está na faixa de limite mais restrita (180 req/min, ver tabela acima). Sem uma chamada de "histórico completo", o produto consulta os últimos 12 meses em paralelo (mesma janela para todo candidato) |
 | `GET /api-de-dados/contratos/cpf-cnpj` | `cpfCnpj`, `pagina` | Contratos federais recebidos pelo candidato ou por empresa dele (cruzar com CNPJ do BrasilAPI) |
 | `GET /api-de-dados/emendas` | `nomeAutor`, `ano` | Emendas parlamentares de autoria do candidato, se ele for parlamentar em exercício/anterior — **atenção:** busca por nome textual, não por CPF; requer normalização e checagem manual de ambiguidade |
 | `GET /api-de-dados/ceis` | `codigoSancionado` (CPF/CNPJ) | Empresas do candidato com sanções por irregularidade em contrato com a administração pública |
@@ -324,13 +324,27 @@ Usos acima do limite suspendem o token (a página não especifica por quanto tem
 
 Todos paginados (`pagina`, padrão `1`), retorno JSON, limite de itens por página não documentado no swagger — a implementação deve tratar paginação até resposta vazia.
 
-**Nomes de campo confirmados via o OpenAPI oficial real (25/08/2026):** `curl` direto em
-`https://api.portaldatransparencia.gov.br/v3/api-docs` (schemas `BeneficiarioDTO`,
-`MunicipioDTO`, `ServidorAposentadoPensionistaDTO`, `RemuneracaoDTO` etc.) — não uma chamada
-autenticada real (sem chave disponível nesta sessão de desenvolvimento; a chave de produção está
-configurada só na Vercel), mas o contrato publicado oficialmente pela própria CGU, não uma
-suposição. `src/lib/enrichment.ts#buscarBeneficiosSociais`/`buscarServidorPublico` usam esses
-nomes; qualquer divergência encontrada numa chamada real em produção deve ser corrigida ali.
+**Nomes de campo confirmados em duas etapas (25/08/2026):** primeiro contra o OpenAPI oficial real
+(`curl` direto em `https://api.portaldatransparencia.gov.br/v3/api-docs`, schemas
+`BeneficiarioDTO`, `MunicipioDTO`, `ServidorAposentadoPensionistaDTO`, `RemuneracaoDTO` etc.) —
+sem chave disponível nesta sessão de desenvolvimento para testar, mas o contrato publicado
+oficialmente pela CGU, não uma suposição. Depois, **com uma chamada autenticada real em
+produção** (a chave configurada na Vercel, via um deploy de diagnóstico temporário que logou o
+corpo bruto da resposta), dois problemas reais foram encontrados e corrigidos:
+
+1. `bolsa-familia-disponivel-por-cpf-ou-nis` retornou `400 {"Erro na API":"Informe ano e mês de
+   competência ou de referência."}` quando chamado só com `codigo` — o swagger marca
+   `anoMesReferencia`/`anoMesCompetencia` como individualmente opcionais, mas na prática pelo
+   menos um é obrigatório. Corrigido consultando os últimos 12 meses em paralelo (ver função
+   abaixo).
+2. `servidores/remuneracao` retornou um item com `remuneracoesDTO: []` (detalhe do mês vazio —
+   folha ainda não publicada) para o mês mais recente tentado; o código checava só o tamanho do
+   array externo (sempre 1 quando o CPF é encontrado), então "achava" um resultado vazio e parava
+   de procurar em meses anteriores, gravando `R$ 0,00`. Corrigido para checar o array de detalhe
+   e continuar tentando meses anteriores até achar um com dado real.
+
+`src/lib/enrichment.ts#buscarBeneficiosSociais`/`buscarServidorPublico` refletem a versão
+corrigida.
 
 **Decisão deliberada: `bolsa-familia-disponivel-por-cpf-ou-nis` e `servidores` NÃO entram no
 proxy público `/api/transparencia/[tipo]`** (o que aceita um `cpf` arbitrário de qualquer
