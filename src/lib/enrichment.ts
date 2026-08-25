@@ -316,6 +316,7 @@ export async function buscarServidorPublico(cpf: string): Promise<ServidorPublic
     const detalhes = item?.remuneracoesDTO as Array<Record<string, unknown>> | undefined;
     const detalhe = detalhes?.[0];
     if (!detalhe) continue;
+    console.error(`[DEBUG_REMUNERACAO_TEMP] mesAno=${mesAno} detalhe=${JSON.stringify(detalhe)}`);
 
     const valor = Number(
       detalhe.valorTotalRemuneracaoAposDeducoes ?? detalhe.remuneracaoBasicaBruta ?? 0,
