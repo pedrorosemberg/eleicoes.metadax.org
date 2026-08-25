@@ -42,6 +42,30 @@ jobs:
         with:
           node-version: "24"
 
+      - name: Diagnóstico de conectividade com a API da NVIDIA
+        # Temporário: PR #11 (timeout 60s) e #12 (timeout 120s) travaram pelo
+        # tempo EXATO do timeout nas duas tentativas, em ambos os casos — não
+        # uma resposta lenta, um "hang" total. Isso não é o modelo demorando
+        # a responder (aí pelo menos uma das 5 tentativas até agora teria
+        # completado antes do limite); é mais consistente com a conexão
+        # sendo derrubada/bloqueada silenciosamente antes de qualquer
+        # resposta. Este passo faz uma chamada mínima (max_tokens=5) via
+        # curl, com timing detalhado, só para diagnosticar onde trava
+        # (DNS, TCP connect, TLS, ou espera por resposta) — não falha o job
+        # (continue-on-error) e não substitui o passo de revisão abaixo.
+        continue-on-error: true
+        env:
+          NVIDIA_API_KEY: ${{ secrets.NVIDIA_API_KEY }}
+        run: |
+          curl -sS -m 20 -X POST https://integrate.api.nvidia.com/v1/chat/completions \
+            -H "Authorization: Bearer $NVIDIA_API_KEY" \
+            -H "Content-Type: application/json" \
+            -d '{"model":"meta/llama-3.3-70b-instruct","messages":[{"role":"user","content":"ping"}],"max_tokens":5}' \
+            -o /tmp/nvidia-diag.json \
+            -w "\nHTTP_CODE=%{http_code} DNS=%{time_namelookup}s CONNECT=%{time_connect}s TLS=%{time_appconnect}s TTFB=%{time_starttransfer}s TOTAL=%{time_total}s\n" \
+            || echo "curl falhou (exit $?) — provável timeout/conexão recusada, ver acima"
+          cat /tmp/nvidia-diag.json 2>/dev/null || true
+
       - name: Rodar revisão de segurança (NVIDIA)
         env:
           NVIDIA_API_KEY: ${{ secrets.NVIDIA_API_KEY }}
