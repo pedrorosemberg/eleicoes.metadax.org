@@ -4,11 +4,15 @@
 [![Forks](https://img.shields.io/github/forks/pedrorosemberg/eleicoes.metadax.org?style=flat-square&label=forks)](https://github.com/pedrorosemberg/eleicoes.metadax.org/network/members)
 [![Issues e PRs abertos](https://img.shields.io/github/issues/pedrorosemberg/eleicoes.metadax.org?style=flat-square&label=issues%2FPRs%20abertos)](https://github.com/pedrorosemberg/eleicoes.metadax.org/issues)
 [![Último commit](https://img.shields.io/github/last-commit/pedrorosemberg/eleicoes.metadax.org?style=flat-square&label=%C3%BAltimo%20commit)](https://github.com/pedrorosemberg/eleicoes.metadax.org/commits/main)
-[![Licença CC BY 4.0](https://img.shields.io/github/license/pedrorosemberg/eleicoes.metadax.org?style=flat-square&label=licen%C3%A7a)](LICENSE)
+[![Licença CC BY 4.0](https://img.shields.io/badge/licen%C3%A7a-CC%20BY%204.0-000000?style=flat-square)](LICENSE)
 
-Os badges acima puxam os números direto da API do GitHub a cada carregamento —
-não são estáticos. Os mesmos números, junto com visitantes do site, aparecem
-atualizados ao vivo em [eleicoes.metadax.org/sobre](https://eleicoes.metadax.org/sobre#estatisticas-do-projeto)
+Os quatro primeiros badges puxam o número direto da API do GitHub a cada
+carregamento — não são estáticos (o de licença é fixo por escolha: o
+detector automático do GitHub não reconhece CC BY 4.0 como licença de
+código, então mostraria "not identifiable" em vez do que está de fato no
+arquivo [`LICENSE`](LICENSE)). Os mesmos números do repositório, junto com
+visitantes do site, aparecem atualizados ao vivo em
+[eleicoes.metadax.org/sobre](https://eleicoes.metadax.org/sobre#estatisticas-do-projeto)
 (também disponível como JSON em `GET /api/estatisticas-projeto`).
 
 Consulta pública de candidatos às eleições brasileiras, cruzando dados coletados

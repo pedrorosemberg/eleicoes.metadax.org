@@ -648,10 +648,16 @@ API pública do GitHub — mesma chamada não-autenticada já usada em `src/lib/
 `/atualizacoes` (ver §2 dessa mesma seção de código para o racional dos Termos de Serviço do
 GitHub). `open_issues_count` soma issues e pull requests abertos — o GitHub não separa isso sem
 uma segunda chamada, por isso o rótulo na UI é "Issues e PRs abertos", não só "issues", para não
-sugerir um número que a API não está de fato retornando. Os badges do README (via
+sugerir um número que a API não está de fato retornando. Os 4 primeiros badges do README (via
 [shields.io](https://shields.io), que por sua vez consulta a mesma API do GitHub) são dinâmicos —
 recarregam o número real a cada vez que o README é renderizado no GitHub, não são uma imagem
-estática. Nenhuma dependência nova no runtime do site: os badges do README só existem no
+estática. O badge de licença é a exceção deliberada: fixo em "CC BY 4.0", porque o endpoint
+dinâmico do shields.io (`img.shields.io/github/license/...`) depende do detector automático do
+GitHub, que não reconhece licenças de conteúdo como CC BY como reconhece licenças de código —
+retornava "not identifiable by github" em vez do que está de fato no arquivo `LICENSE` (verificado
+em 25/08/2026). Nenhum dado inventado: é a mesma licença já confirmada e documentada em §8, só
+declarada como texto fixo em vez de uma consulta que a própria GitHub não sabe responder direito
+para este caso. Nenhuma dependência nova no runtime do site: os badges do README só existem no
 Markdown, renderizados pelo GitHub, fora do código da aplicação.
 
 **Visitantes e visualizações do site:** Vercel Web Analytics — o mesmo produto cujo script
