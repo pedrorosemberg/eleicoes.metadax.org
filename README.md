@@ -1,6 +1,6 @@
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/fatoeleitoral_branco.svg">
-  <img src="assets/fatoeleitoral.svg" alt="Fato Eleitoral" width="360">
+  <source media="(prefers-color-scheme: dark)" srcset="assets/fatoeleitoral_branco.png">
+  <img src="assets/fatoeleitoral.png" alt="Fato Eleitoral" width="360">
 </picture>
 
 Repositório: `eleicoes.metadax.org` (nome mantido por estabilidade de URLs/links
