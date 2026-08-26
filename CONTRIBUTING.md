@@ -54,11 +54,11 @@ já houve um incidente de build "quebrado silenciosamente" em produção, ver `d
 §11.
 
 Todo PR também passa por `.github/workflows/ai-security-review.yml` — uma revisão de segurança
-automatizada via um modelo gratuito da NVIDIA (build.nvidia.com), com atenção especial a prompt
+automatizada via um modelo gratuito do Gemini (Google AI Studio), com atenção especial a prompt
 injection/prompt poisoning direcionado a um agente de IA que venha a processar este repositório,
 não só vulnerabilidade de código no sentido clássico (ver `.github/ai-security-review-instructions.md`
-e `docs/ARCHITECTURE.md` §15). Isso é além da revisão humana do mantenedor, não em vez dela — os
-dois são obrigatórios.
+e `docs/ARCHITECTURE.md` §15/§19). Isso é além da revisão humana do mantenedor, não em vez dela —
+os dois são obrigatórios.
 
 Além dos dois checks de PR, o repositório também tem CodeQL (SAST) e Dependabot (dependências
 vulneráveis/desatualizadas) rodando por conta própria — ver `docs/ARCHITECTURE.md` §15.

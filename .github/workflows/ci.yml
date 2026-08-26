@@ -1,13 +1,13 @@
 name: CI
 
-# Gate de qualidade — obrigatório antes de qualquer merge em hmg/main (ver
+# Gate de qualidade — obrigatório antes de qualquer merge em hmg/prod (ver
 # docs/ARCHITECTURE.md §15). Roda os mesmos três comandos que
 # CONTRIBUTING.md já pede para rodar localmente antes de um PR.
 on:
   pull_request:
-    branches: [hmg, main]
+    branches: [hmg, prod]
   push:
-    branches: [hmg, main]
+    branches: [hmg, prod]
 
 concurrency:
   group: ci-${{ github.workflow }}-${{ github.ref }}
