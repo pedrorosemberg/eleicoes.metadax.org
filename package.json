@@ -34,7 +34,7 @@
     "adm-zip": "^0.6.0",
     "csv-parse": "^7.0.2",
     "eslint": "^10.9.0",
-    "eslint-config-next": "^16.3.1",
+    "eslint-config-next": "^16.3.2",
     "tailwindcss": "^4.3.3",
     "tsx": "^4.23.12",
     "typescript": "~6.0.2"
