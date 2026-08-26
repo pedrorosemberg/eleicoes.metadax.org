@@ -327,7 +327,7 @@ neste documento (§11, §12). Os dois ambientes viram:
 | Ambiente | Branch | URL | Quando publica |
 |---|---|---|---|
 | **hmg** (homologação) | `hmg` | Preview Deployment automática da Vercel para a branch `hmg` (padrão `eleicoes-metadax-org-git-hmg-<time>.vercel.app`) — sem domínio próprio, sem mudança de DNS | A cada merge de PR em `hmg` |
-| **prod** (produção) | `main` (rename para `prod` decidido pelo mantenedor em 26/08/2026, pendente de execução — ver item 6 do checklist manual abaixo) | `fatoeleitoral.metadax.org` (novo, 26/08/2026) e `eleicoes.metadax.org` (antigo, redireciona para o novo — ver §17) — mesma Production Branch de sempre | A cada merge de PR na branch de produção (sempre vindo de `hmg`, nunca direto de uma branch de feature) |
+| **prod** (produção) | `prod` (renomeada de `main` pelo mantenedor, 26/08/2026 — item 6 do checklist manual abaixo, concluído) | `fatoeleitoral.metadax.org` (novo, 26/08/2026) e `eleicoes.metadax.org` (antigo, redireciona para o novo — ver §17) — mesma Production Branch de sempre | A cada merge de PR na branch de produção (sempre vindo de `hmg`, nunca direto de uma branch de feature) |
 
 ### Fluxo de contribuição
 
@@ -344,14 +344,15 @@ técnico** — ver o achado real registrado abaixo ("PR direto contra a branch d
 com o check de segurança vermelho") sobre o que acontece hoje quando alguém (inclusive o próprio
 mantenedor) não segue essa regra antes da branch protection estar configurada.
 
-### As duas validações, em cada um dos dois branches protegidos (`hmg` e `main`)
+### As duas validações, em cada um dos dois branches protegidos (`hmg` e `prod`)
 
 1. **`.github/workflows/ci.yml`** — `npx tsc --noEmit`, `npm run lint`, `npm run build`. Mesmos
    três comandos que `CONTRIBUTING.md` já pede para rodar localmente antes de abrir PR, agora
    obrigatórios via CI.
 2. **`.github/workflows/ai-security-review.yml`** — roda `.github/scripts/ai-security-review.mjs`,
-   um script próprio que chama um modelo gratuito da NVIDIA (`build.nvidia.com`, endpoint
-   OpenAI-compatible, ver §15.1 abaixo para o porquê de não ser mais a action da Anthropic) contra
+   um script próprio que chama um modelo gratuito do Gemini (Google AI Studio, ver §15.1 abaixo
+   para o porquê de não ser mais a action da Anthropic, e §19 para o porquê de não ser mais a
+   NVIDIA) contra
    o diff do PR, com instruções específicas deste projeto embutidas no prompt via
    `.github/ai-security-review-instructions.md`: vulnerabilidade de código clássica (injeção,
    XSS, auth), prompt injection/prompt poisoning direcionado a um agente de IA que venha a ler o
@@ -370,20 +371,21 @@ mantenedor) não segue essa regra antes da branch protection estar configurada.
 
 A primeira versão desta esteira (26/08/2026) usava a action oficial da Anthropic, com uma
 `ANTHROPIC_API_KEY` paga. O mantenedor decidiu não usar uma chave paga e, em vez disso, usar a
-camada gratuita da NVIDIA (`build.nvidia.com` — chave `nvapi-...` sem cartão de crédito, endpoint
-`/v1/chat/completions` no formato OpenAI). Essa action é hardcoded para a API/CLI da Anthropic —
-não existe um input de "endpoint customizado" para apontar para outro provedor — então a única
-forma de usar um modelo diferente foi substituir a action por um script próprio
-(`.github/scripts/ai-security-review.mjs`, Node puro, sem dependência nova): calcula o diff do PR,
-monta um prompt com as instruções de `.github/ai-security-review-instructions.md`, chama a API da
-NVIDIA (modelo configurável via `NVIDIA_MODEL` no workflow — o catálogo da NVIDIA muda com o
-tempo, verificar o nome atual em `build.nvidia.com` se a API começar a retornar erro de modelo
-inválido), e falha o job se a resposta não for JSON válido ou tiver achado de severidade
-alta/crítica. Testado localmente antes de subir (três cenários: sem achados, com achado grave,
-resposta não-JSON — os três se comportam como esperado, ver histórico de commits).
+camada gratuita de um provedor de IA (inicialmente NVIDIA, depois Gemini — ver §19 para o porquê
+da troca). Essa action é hardcoded para a API/CLI da Anthropic — não existe um input de "endpoint
+customizado" para apontar para outro provedor — então a única forma de usar um modelo diferente
+foi substituir a action por um script próprio (`.github/scripts/ai-security-review.mjs`, Node
+puro, sem dependência nova): calcula o diff do PR, monta um prompt com as instruções de
+`.github/ai-security-review-instructions.md`, chama a API do provedor configurado (hoje Gemini,
+modelo configurável via `GEMINI_MODEL` no workflow — o catálogo do Google AI Studio muda com o
+tempo, verificar o nome atual em `https://aistudio.google.com/` se a API começar a retornar erro
+de modelo inválido), e falha o job se a resposta não for JSON válido ou tiver achado de
+severidade alta/crítica. Testado localmente antes de subir (três cenários: sem achados, com
+achado grave, resposta não-JSON — os três se comportam como esperado, ver histórico de commits).
 
-Consequência prática: o nome do secret mudou de `ANTHROPIC_API_KEY` para `NVIDIA_API_KEY`, e o
-workflow chama-se `ai-security-review.yml` (não mais `claude-security-review.yml`).
+Consequência prática: o nome do secret mudou de `ANTHROPIC_API_KEY` para `NVIDIA_API_KEY` e,
+depois (§19), para `GEMINI_API_KEY`; o workflow chama-se `ai-security-review.yml` desde a
+primeira troca (não mais `claude-security-review.yml`).
 
 ### O que ainda precisa de uma configuração manual (nenhuma ferramenta disponível nesta sessão
 ### cria isso via API — precisa ser feito uma vez, pela conta do mantenedor, em Settings do repo)
@@ -404,16 +406,17 @@ regra de branch protection referencia esses checks explicitamente.
    - "Require review from Code Owners" — usa o `.github/CODEOWNERS` já commitado.
    - "Dismiss stale pull request approvals when new commits are pushed" — recomendado, para que
      uma aprovação não continue valendo depois que o PR mudou.
-3. **Settings → Secrets and variables → Actions → New repository secret**: `NVIDIA_API_KEY`, com
-   uma chave gratuita gerada em `build.nvidia.com` (cadastro só com e-mail, sem cartão de
-   crédito). Sem essa chave, o workflow `ai-security-review.yml` falha (e, com o status check
-   marcado como obrigatório no passo 2, isso por si só já bloqueia o merge — falha fechada, não
-   aberta).
+3. **Settings → Secrets and variables → Actions → New repository secret**: `GEMINI_API_KEY`, com
+   uma chave gratuita gerada em `https://aistudio.google.com/apikey` (login com conta Google, sem
+   cartão de crédito). Sem essa chave, o workflow `ai-security-review.yml` falha (e, com o status
+   check marcado como obrigatório no passo 2, isso por si só já bloqueia o merge — falha fechada,
+   não aberta). **Migrado de `NVIDIA_API_KEY`, 26/08/2026 — ver §19.** O secret antigo pode ser
+   removido do repositório com segurança depois que este novo estiver configurado.
 4. **Settings → Actions → General → "Fork pull request workflows from outside collaborators"** →
    escolher **"Require approval for all outside collaborators"** (a opção mais restritiva
    disponível). Este é o passo que mitiga o mesmo risco que a documentação da action que
    inspirou este script registrava para o caso equivalente: sem essa configuração, um PR
-   malicioso de um fork poderia rodar workflows (incluindo os com acesso a `NVIDIA_API_KEY`)
+   malicioso de um fork poderia rodar workflows (incluindo os com acesso a `GEMINI_API_KEY`)
    automaticamente, antes de qualquer humano olhar o conteúdo. Com essa configuração, todo PR de
    fora do repositório fica parado até o mantenedor clicar em "Approve and run" — o primeiro
    humano-no-loop da esteira, antes mesmo da IA entrar.
@@ -421,23 +424,23 @@ regra de branch protection referencia esses checks explicitamente.
    `git clone` e novos PRs apontem para `hmg` por padrão, reforçando o fluxo acima sem depender de
    cada contribuidor lembrar de mudar a branch base manualmente. Não afeta a Production Branch da
    Vercel, que é configurada separadamente lá.
-6. **Rename da branch de produção, `main` → `prod`** (decisão do mantenedor, 26/08/2026, pendente
-   de execução): `git`/GitHub não têm uma API que este ambiente de sessão tenha permissão de
-   destruir/recriar referências de branch com segurança — a forma correta e segura de fazer isso é
-   pela própria UI do GitHub (**Settings → Branches → ícone de lápis ao lado de `main` → Rename**),
-   que atualiza a branch padrão, redireciona PRs abertos e mantém o histórico intacto (bem mais
-   seguro do que criar uma branch `prod` nova e apagar `main` manualmente). Dois passos depois do
-   rename em si, ambos manuais:
-   - **Vercel → Project Settings → Git → Production Branch** → trocar de `main` para `prod` (sem
-     isso, a Vercel para de promover para produção em qualquer push, já que ela vincula a
-     Production Branch pelo nome).
-   - Depois de confirmado o rename + a Production Branch atualizados, os workflows deste
-     repositório (`ci.yml`, `ai-security-review.yml`, `codeql.yml`) e a documentação (este
-     arquivo, `CONTRIBUTING.md`) precisam trocar toda referência a `main` por `prod` — **não feito
-     ainda nesta sessão**, de propósito: mudar essas referências antes do rename real quebraria os
-     checks (eles parariam de disparar para pushes na branch que continua se chamando `main`).
-   - Recomendado fazer os dois primeiros passos em sequência rápida (o rename já redireciona
-     automaticamente pushes/PRs para o nome antigo por um tempo, mas a Vercel não sabe disso).
+6. **Rename da branch de produção, `main` → `prod`** (decisão do mantenedor, 26/08/2026) —
+   **concluído**: o mantenedor executou o rename pela UI do GitHub (branch `prod` existe, `main`
+   não existe mais) e atualizou a Vercel → Project Settings → Git → Production Branch de `main`
+   para `prod`.
+
+   **Achado real (26/08/2026):** por um tempo depois do rename, os três workflows deste
+   repositório (`ci.yml`, `ai-security-review.yml`, `codeql.yml`) continuaram com
+   `on.pull_request.branches`/`on.push.branches` apontando para `[hmg, main]` — `main` não existia
+   mais, então **nenhum dos três checks (CI, revisão de segurança, CodeQL) disparava em PRs contra
+   `prod`**, incluindo os 8 PRs do Dependabot abertos automaticamente contra `prod` depois do
+   rename. Passou despercebido porque o rename em si não quebra nada visivelmente — os PRs
+   simplesmente apareciam como "mergeable" sem nenhum check pendente, o que parece "tudo certo" até
+   alguém notar que os checks obrigatórios simplesmente não existem na lista. Corrigido nesta
+   mesma sessão (mesmo PR que trocou NVIDIA por Gemini, ver §19): as três referências passaram para
+   `[hmg, prod]`. Lição: um rename de branch de produção não é só um passo de UI — toda referência
+   textual ao nome antigo em `.github/workflows/*.yml` precisa ser auditada explicitamente, porque
+   nem GitHub nem a Vercel avisam sobre um workflow trigger que ficou órfão.
 7. **(Sugestão do mantenedor, pendente) Settings → Features → Wikis** → habilitar. Wiki do GitHub
    é um repositório git próprio (`{repo}.wiki.git`), separado do código — nenhuma ferramenta desta
    sessão tem permissão de habilitar essa feature (é um toggle de configuração do repositório, não
@@ -626,3 +629,82 @@ resultado real do gate desde que a chave foi configurada, e como lembrete de que
 a um modelo de linguagem para "ser desconfiado de X" podem generalizar mais do que o pretendido —
 vale reler a redação de `ai-security-review-instructions.md` sempre que um achado parecer
 desproporcional ao diff real, em vez de assumir que o modelo está sempre certo.
+
+## 19. Achado real: NVIDIA travando a partir do GitHub Actions — migração para Gemini (26/08/2026)
+
+Depois de corrigir o falso positivo do §18, o check `security` voltou a falhar — desta vez com um
+erro de rede genuíno, não um achado. PR #10 (a correção do §18) travou ~5 minutos e falhou com
+`fetch failed`, sem timeout explícito no código. Corrigido com `AbortController` + retry (PR #11,
+timeout de 60s, 2 tentativas) — mas a chamada real ainda travou o timeout inteiro **nas duas
+tentativas**. Bumping para 120s (PR #12) não ajudou: as duas tentativas voltaram a travar pelo
+tempo exato do novo timeout, só que demorando o dobro para falhar.
+
+**Diagnóstico:** um padrão de 4 timeouts diferentes (~5min sem timeout, 60s, 120s, e um teste
+dedicado de 20s) e 6 tentativas no total, **todas** travando pelo tempo exato do limite
+configurado — nunca respondendo antes, nunca demorando menos. Isso não é compatível com "o modelo
+está devagar" (aí pelo menos uma tentativa, em algum dos quatro limites, teria completado antes de
+estourar). É compatível com a conexão sendo aceita e depois nunca respondida. Um teste de
+diagnóstico com `curl` (adicionado temporariamente ao workflow, `max_tokens=5`, requisição
+mínima) mediu exatamente onde a chamada travava: `DNS=0.038s CONNECT=0.039s TLS=0.113s
+TTFB=0.000s TOTAL=20.003s` — DNS resolve, TCP conecta, TLS completa, tudo em ~150ms, e depois
+**zero bytes voltam** pelos 20s inteiros do teste.
+
+A confirmação definitiva veio de repetir a mesma chamada (mesmo endpoint
+`integrate.api.nvidia.com`, mesmo corpo de requisição, sem a chave de API) a partir de uma origem
+de rede diferente do GitHub Actions: resposta em **389ms**, com um 401 correto ("Header of type
+`authorization` was missing") — comportamento normal de uma API saudável. A mesma API que nunca
+respondia a partir de um runner do GitHub Actions respondeu quase instantaneamente de outro lugar,
+com a mesma requisição. Isso isola o problema à origem de rede do GitHub Actions especificamente —
+consistente com um bloqueio/limitação silenciosa da NVIDIA contra faixas de IP de datacenter/CI
+(um padrão comum de proteção anti-abuso: descartar a conexão sem responder, em vez de devolver um
+429/403 explícito, para não sinalizar ao cliente automatizado que ele foi identificado) — não um
+bug neste script, e não algo que ajustar timeout/retry no nosso lado resolve.
+
+**Decisão do mantenedor (26/08/2026):** substituir a NVIDIA pela API do Gemini (Google AI Studio,
+também gratuita, chave via `https://aistudio.google.com/apikey`) neste mesmo pipeline. Mudanças:
+
+- `.github/scripts/ai-security-review.mjs`: reescrito para o formato de request/response do
+  Gemini (`systemInstruction` + `contents` em vez de `messages` no formato OpenAI; autenticação via
+  header `x-goog-api-key` em vez de `Authorization: Bearer`; `generationConfig.responseMimeType:
+  "application/json"` pedindo ao próprio Gemini para responder só JSON, mais confiável do que
+  depender só da instrução em texto). Estrutura de retry/timeout mantida (2 tentativas, agora 60s
+  cada — valor normal de higiene de rede para qualquer chamada de API em CI, não uma tentativa de
+  compensar um provedor que trava: a infraestrutura do Gemini não tem o histórico de hang que a da
+  NVIDIA tinha a partir de runners do GitHub Actions).
+- `.github/workflows/ai-security-review.yml`: secret `NVIDIA_API_KEY` → `GEMINI_API_KEY`, env
+  `NVIDIA_MODEL` → `GEMINI_MODEL`, passo de diagnóstico via `curl` removido (era temporário,
+  específico para investigar o hang da NVIDIA — sem função depois da migração). `GEMINI_MODEL` é
+  o próprio secret (não um valor fixo no workflow) — decisão do mantenedor para poder trocar de
+  modelo sem precisar de um PR; o fallback interno do script (usado só se o secret estiver vazio)
+  é `gemini-3.7-flash` (ver nota abaixo sobre a escolha do modelo).
+
+**Escolha do modelo (revisada 26/08/2026, a pedido do mantenedor):** a versão inicial da migração
+usava `gemini-2.5-flash` como padrão. O mantenedor pediu para revisar o catálogo de modelos do
+Gemini e confirmar se ainda era a melhor escolha. Achado: desde 1º/04/2026 o tier gratuito do
+Gemini API só inclui modelos Flash/Flash-Lite (modelos Pro saíram do gratuito); `gemini-2.5-flash`
+continua disponível, mas é uma geração mais antiga, com um limite diário bem mais apertado no tier
+gratuito (250 requisições/dia) do que a geração 3.x mais recente (ex.: Gemini 3 Flash, 1.500
+requisições/dia). O modelo mais atual encontrado no catálogo é `gemini-3.7-flash` (lançado
+13/08/2026), mesma família Flash (rápido, barato, elegível ao tier gratuito), API idêntica
+(`POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.7-flash:generateContent`).
+Trocado o fallback interno para `gemini-3.7-flash` — o volume de PRs deste projeto está bem abaixo
+de qualquer um dos dois limites diários, então a troca é por atualidade/qualidade do modelo, não
+por necessidade de mais requisições. Como o nome real em uso vem do secret `GEMINI_MODEL`, cabe ao
+mantenedor confirmar/atualizar o valor desse secret para `gemini-3.7-flash` — este documento e o
+fallback do script refletem a recomendação, não têm como alterar o valor do secret.
+- `.github/ai-security-review-instructions.md`: parágrafo "o que isto NÃO é" da regra 1 (§18)
+  atualizado para os nomes de env do Gemini (`GEMINI_MODEL`, `topP`, `maxOutputTokens`) e para
+  explicitar que a própria migração de provedor não é, por si só, um achado de prompt injection.
+
+**Achado relacionado, corrigido no mesmo PR:** ao investigar por que os 8 PRs do Dependabot
+abertos contra `prod` não mostravam nenhum resultado do check `security`, ficou claro que
+`ci.yml`, `ai-security-review.yml` e `codeql.yml` ainda tinham `branches: [hmg, main]` no
+trigger — `main` não existe mais desde o rename para `prod` (§ acima). Sem isso corrigido, nenhum
+dos três checks obrigatórios rodaria em PR nenhum contra `prod`, incluindo esta própria migração.
+Corrigido para `[hmg, prod]` nos três arquivos.
+
+**Ação manual pendente do mantenedor:** cadastrar o secret `GEMINI_API_KEY` no repositório
+(Settings → Secrets and variables → Actions) com uma chave gerada em
+`https://aistudio.google.com/apikey`, e remover o secret `NVIDIA_API_KEY` (não usado mais, chave
+antiga sem uso é uma superfície desnecessária). Sem o novo secret, o gate continua falhando
+fechado — não abre exceção enquanto a chave não existir, mesmo que a causa da falha tenha mudado.

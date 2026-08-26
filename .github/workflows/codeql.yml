@@ -9,9 +9,9 @@ name: CodeQL
 # modelo de linguagem interpretar o diff corretamente.
 on:
   pull_request:
-    branches: [hmg, main]
+    branches: [hmg, prod]
   push:
-    branches: [hmg, main]
+    branches: [hmg, prod]
   schedule:
     # Varredura completa semanal, independente de PR — pega vulnerabilidade
     # nova descoberta em dependência/padrão já existente no código, não só

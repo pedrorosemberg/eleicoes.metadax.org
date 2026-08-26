@@ -138,11 +138,11 @@ design está documentada e foi validada com testes reais, não apenas descrita:
 ## Ambientes e CI/CD
 
 Dois ambientes: **hmg** (homologação — preview automático da Vercel para a branch `hmg`) e
-**prod** (`fatoeleitoral.metadax.org` — branch `main`, ver "Identidade visual e domínio" acima).
+**prod** (`fatoeleitoral.metadax.org` — branch `prod`, ver "Identidade visual e domínio" acima).
 Todo PR passa por dois checks obrigatórios antes de poder ser mesclado em qualquer um dos dois —
-CI (typecheck/lint/build) e uma revisão de segurança automatizada via IA (NVIDIA, gratuita), com
+CI (typecheck/lint/build) e uma revisão de segurança automatizada via IA (Gemini, gratuita), com
 foco extra em prompt injection/prompt poisoning — mais a aprovação manual do mantenedor. Ver
-`docs/ARCHITECTURE.md` §15/§16 para a arquitetura completa e o checklist de configuração, e
+`docs/ARCHITECTURE.md` §15/§16/§19 para a arquitetura completa e o checklist de configuração, e
 `CONTRIBUTING.md` para o fluxo de contribuição.
 
 ## Stack
