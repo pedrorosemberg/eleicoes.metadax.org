@@ -29,11 +29,16 @@ import { execFileSync } from "node:child_process";
 import { readFileSync, writeFileSync } from "node:fs";
 
 const GEMINI_API_KEY = process.env.GEMINI_API_KEY;
-// gemini-2.5-flash: rápido e no tier gratuito do Google AI Studio — se a API
-// começar a responder "model not found", o catálogo pode ter mudado; conferir
-// o nome atual em https://aistudio.google.com/ e ajustar GEMINI_MODEL no
-// workflow.
-const GEMINI_MODEL = process.env.GEMINI_MODEL || "gemini-2.5-flash";
+// gemini-3.7-flash: modelo Flash mais recente do catálogo do Google AI Studio
+// no momento desta troca (26/08/2026, lançado 13/08/2026) — geração mais
+// nova que gemini-2.5-flash (usado na primeira versão deste script), com
+// limite diário mais generoso no tier gratuito. O nome real do modelo em uso
+// é definido pelo secret GEMINI_MODEL no workflow, não por este valor — este
+// é só o fallback para rodar o script localmente sem essa env definida. Se a
+// API começar a responder "model not found", o catálogo pode ter mudado;
+// conferir o nome atual em https://aistudio.google.com/ e ajustar o secret
+// GEMINI_MODEL.
+const GEMINI_MODEL = process.env.GEMINI_MODEL || "gemini-3.7-flash";
 // Override só para desenvolvimento/teste local (apontar para um mock) — em
 // produção o workflow nunca define GEMINI_API_URL, então usa sempre o
 // endpoint real.

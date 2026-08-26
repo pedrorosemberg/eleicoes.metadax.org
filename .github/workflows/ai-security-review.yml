@@ -53,11 +53,15 @@ jobs:
       - name: Rodar revisão de segurança (Gemini)
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-          # Modelo confirmado pelo mantenedor (26/08/2026). Se a API retornar
-          # erro de modelo inválido, o catálogo do Google AI Studio pode ter
-          # mudado o nome/removido o modelo — confira em
-          # https://aistudio.google.com/ e ajuste aqui.
-          GEMINI_MODEL: gemini-2.5-flash
+          # Guardado como secret (não como valor fixo aqui) por decisão do
+          # mantenedor — permite trocar o modelo sem precisar de um PR. Ver
+          # docs/ARCHITECTURE.md §19 para a recomendação atual (26/08/2026:
+          # gemini-3.7-flash) e o porquê. Se ficar vazio, o script cai no
+          # próprio fallback interno (ver ai-security-review.mjs). Se a API
+          # retornar erro de modelo inválido, o catálogo do Google AI Studio
+          # pode ter mudado — confira em https://aistudio.google.com/ e
+          # atualize o secret GEMINI_MODEL.
+          GEMINI_MODEL: ${{ secrets.GEMINI_MODEL }}
           BASE_SHA: ${{ github.event.pull_request.base.sha }}
           HEAD_SHA: ${{ github.event.pull_request.head.sha }}
         run: node .github/scripts/ai-security-review.mjs

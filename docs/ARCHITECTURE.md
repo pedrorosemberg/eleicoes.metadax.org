@@ -672,9 +672,26 @@ também gratuita, chave via `https://aistudio.google.com/apikey`) neste mesmo pi
   compensar um provedor que trava: a infraestrutura do Gemini não tem o histórico de hang que a da
   NVIDIA tinha a partir de runners do GitHub Actions).
 - `.github/workflows/ai-security-review.yml`: secret `NVIDIA_API_KEY` → `GEMINI_API_KEY`, env
-  `NVIDIA_MODEL` → `GEMINI_MODEL` (padrão `gemini-2.5-flash`), passo de diagnóstico via `curl`
-  removido (era temporário, específico para investigar o hang da NVIDIA — sem função depois da
-  migração).
+  `NVIDIA_MODEL` → `GEMINI_MODEL`, passo de diagnóstico via `curl` removido (era temporário,
+  específico para investigar o hang da NVIDIA — sem função depois da migração). `GEMINI_MODEL` é
+  o próprio secret (não um valor fixo no workflow) — decisão do mantenedor para poder trocar de
+  modelo sem precisar de um PR; o fallback interno do script (usado só se o secret estiver vazio)
+  é `gemini-3.7-flash` (ver nota abaixo sobre a escolha do modelo).
+
+**Escolha do modelo (revisada 26/08/2026, a pedido do mantenedor):** a versão inicial da migração
+usava `gemini-2.5-flash` como padrão. O mantenedor pediu para revisar o catálogo de modelos do
+Gemini e confirmar se ainda era a melhor escolha. Achado: desde 1º/04/2026 o tier gratuito do
+Gemini API só inclui modelos Flash/Flash-Lite (modelos Pro saíram do gratuito); `gemini-2.5-flash`
+continua disponível, mas é uma geração mais antiga, com um limite diário bem mais apertado no tier
+gratuito (250 requisições/dia) do que a geração 3.x mais recente (ex.: Gemini 3 Flash, 1.500
+requisições/dia). O modelo mais atual encontrado no catálogo é `gemini-3.7-flash` (lançado
+13/08/2026), mesma família Flash (rápido, barato, elegível ao tier gratuito), API idêntica
+(`POST https://generativelanguage.googleapis.com/v1beta/models/gemini-3.7-flash:generateContent`).
+Trocado o fallback interno para `gemini-3.7-flash` — o volume de PRs deste projeto está bem abaixo
+de qualquer um dos dois limites diários, então a troca é por atualidade/qualidade do modelo, não
+por necessidade de mais requisições. Como o nome real em uso vem do secret `GEMINI_MODEL`, cabe ao
+mantenedor confirmar/atualizar o valor desse secret para `gemini-3.7-flash` — este documento e o
+fallback do script refletem a recomendação, não têm como alterar o valor do secret.
 - `.github/ai-security-review-instructions.md`: parágrafo "o que isto NÃO é" da regra 1 (§18)
   atualizado para os nomes de env do Gemini (`GEMINI_MODEL`, `topP`, `maxOutputTokens`) e para
   explicitar que a própria migração de provedor não é, por si só, um achado de prompt injection.
