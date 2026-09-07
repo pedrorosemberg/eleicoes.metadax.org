@@ -187,6 +187,13 @@ export default async function CandidatoPage({
           </>
         )}
 
+        {candidato.grauInstrucao && (
+          <>
+            <dt className="text-[var(--text-tertiary)]">Escolaridade</dt>
+            <dd className="text-[var(--text-primary)]">{candidato.grauInstrucao}</dd>
+          </>
+        )}
+
         {candidato.coligacao && candidato.coligacao !== "PARTIDO ISOLADO" && (
           <>
             <dt className="text-[var(--text-tertiary)]">Coligação</dt>

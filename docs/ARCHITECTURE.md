@@ -592,15 +592,13 @@ Anexar `fatoeleitoral.metadax.org` ao projeto na Vercel e apontar o DNS do subdo
 manualmente pelo mantenedor antes da sessão de 26/08/2026 (confirmado via `mcp__Vercel__get_project`
 — o domínio já aparecia na lista de domínios do projeto).
 
-**Atenção — pendência aberta pela sessão de 07/09/2026:** `fatoeleitoral.com.br` ainda **não**
-aparece na lista de domínios do projeto na Vercel (`mcp__Vercel__get_project` em 07/09/2026 listou
-só `fatoeleitoral.metadax.org`, `eleicoes.metadax.org` e os subdomínios `*.vercel.app` — sem
-`fatoeleitoral.com.br`). O código já trata `fatoeleitoral.com.br` como domínio canônico
-(`SITE_URL`, redirects), mas até o mantenedor anexar o domínio ao projeto na Vercel e apontar o
-DNS para lá, `fatoeleitoral.com.br` não vai responder de fato — só os dois domínios antigos
-continuam servindo o site. Nenhuma ferramenta destas sessões tem acesso para comprar/anexar
-domínio ou alterar DNS — só o redirecionamento em nível de aplicação (`next.config.ts`) e as
-referências de URL no código/documentação foram implementados aqui.
+**Atualização (07/09/2026, mesmo dia):** o mantenedor anexou `fatoeleitoral.com.br` e
+`www.fatoeleitoral.com.br` ao projeto na Vercel e apontou o DNS — confirmado via
+`mcp__Vercel__get_project` (os dois já aparecem na lista de domínios) e por uma requisição real
+contra produção. Domínio canônico agora responde de fato, não só no código. Nenhuma ferramenta
+destas sessões tem acesso para comprar/anexar domínio ou alterar DNS — só o redirecionamento em
+nível de aplicação (`next.config.ts`) e as referências de URL no código/documentação foram
+implementados aqui; o anexo em si foi manual, feito pelo mantenedor.
 
 ### Fontes oficiais com logo real (`SourceMarquee`)
 
@@ -827,3 +825,66 @@ neutra em categoria sensível):
    de cada afirmação (para o leitor julgar), em vez de um score calculado pelo próprio projeto.
 
 Este roteiro também está refletido em `/roteiro` (itens novos, ligados a esta issue).
+
+## 21. Site público, firewall na Cloudflare e primeiras ações do roteiro (07/09/2026)
+
+Depois do domínio entrar de fato em produção (§17), o mantenedor tomou algumas decisões
+imediatas que mudam o que estava registrado no §20.
+
+### 21.1 Firewall: Vercel em modo log, decisão de mover para a Cloudflare adiada
+
+Um teste real desta sessão confirmou o problema descrito no §20.2: uma requisição de fora do
+Brasil contra `fatoeleitoral.com.br` voltava `403 Forbidden` com o cabeçalho
+`x-vercel-mitigated: deny` — ou seja, era o firewall do **Vercel** bloqueando (a Cloudflare só
+repassava a requisição; `server: cloudflare`/`cf-ray` nos cabeçalhos da resposta confirmam que o
+domínio já está proxied pela Cloudflare, sem precisar mexer em DNS para uma futura migração).
+
+O mantenedor resolveu o bloqueio imediato mudando a regra do Vercel para modo *log* (registra mas
+não bloqueia mais) — os crawlers de IA/busca (`app/robots.ts`) voltam a conseguir acessar o site.
+A migração da lógica de firewall para a Cloudflare WAF (regras propostas no §20.2: allowlist de
+crawlers por User-Agent com ação *Skip*, seguida de bloqueio/challenge geográfico por
+`ip.src.country`) **fica adiada** — não descartada, só não é a prioridade agora. Nenhuma
+ferramenta desta sessão tem acesso de escrita à Zone/WAF da Cloudflare nem ao Firewall do Vercel
+(só a deployment protection — senha/SSO/IP —, que é um produto diferente), então a execução,
+quando retomada, depende do mantenedor ou de credenciais adicionais serem concedidas a uma sessão
+futura.
+
+### 21.2 Issue #3, Fase 1 — parte já resolvida com dado que já existia
+
+Ao investigar a Fase 1 do roteiro (§20.4, "currículo público"), esta sessão descobriu que
+**escolaridade e ocupação já estavam ingeridas** do TSE (`DS_GRAU_INSTRUCAO`/`DS_OCUPACAO` de
+`consulta_cand`, ver `docs/DATA_SOURCES.md` §"Colunas relevantes de `consulta_cand`") — `ocupacao`
+já aparecia em `/candidato/[id]`, mas `grauInstrucao` só existia no tipo/dado, sem exibição.
+Adicionado o campo "Escolaridade" ao perfil do candidato (`app/candidato/[id]/page.tsx`), mesmo
+padrão visual do campo "Ocupação" ao lado. Zero ingestão nova, zero risco de fonte — só exibição
+de um dado oficial que já passava pelo pipeline.
+
+O que continua de pé da Fase 1 (e do §20.4): formação acadêmica detalhada (instituição, curso) e
+histórico profissional/político não existem no cadastro do TSE — isso ainda depende de encontrar
+uma fonte pública oficial e estruturada, como já estava registrado.
+
+### 21.3 Rate limiting em `/api/*`
+
+Implementado em `src/lib/rate-limit.ts` + `proxy.ts` (mesmo arquivo central que já aplicava CORS
+— ver §10): 60 requisições por IP a cada 60 segundos, em memória, por isolado de Edge Function.
+
+**Por que em memória e não `checkRateLimit` do `@vercel/firewall`:** o SDK da Vercel
+(`checkRateLimit(rateLimitId, options)`) não define o limite em código — ele referencia uma regra
+de rate limit **pré-configurada no dashboard da Vercel** (Security → Rate Limiting Rules) pelo
+mesmo `rateLimitId`. Sem acesso de escrita ao Firewall do Vercel (mesma limitação do §21.1), essa
+regra precisaria ser criada manualmente antes do código funcionar — então esta sessão optou por um
+limitador autocontido, sem dependência de configuração externa nem de um serviço de estado
+compartilhado (Redis/KV) que o projeto não tem hoje.
+
+**Limitação conhecida, aceita conscientemente:** o contador é por isolado de Edge Function, não
+global entre regiões — um scraper distribuído por vários PoPs poderia, em teoria, somar mais que
+60 req/min reais. Ainda assim, mitiga o padrão mais comum (um scraper batendo repetido do mesmo
+IP/região), sem custo de infraestrutura adicional. Camadas futuras (rate limit na Cloudflare, ver
+§21.1, ou o `checkRateLimit` da Vercel se uma regra de dashboard for criada) somam-se a esta, não
+a substituem.
+
+**Testado nesta sessão:** `npm run build && npm run start` local, 65 requisições sequenciais a
+`/api/health` — as primeiras 60 retornam `200`, a partir da 61ª retornam `429` com
+`Retry-After` e os cabeçalhos de CORS preservados; uma requisição `OPTIONS` (preflight) continua
+retornando `204` sem contar para o limite (checagem de rate limit vem depois do curto-circuito de
+CORS em `proxy.ts`).
