@@ -28,6 +28,13 @@ interface ItemRoteiro {
 
 const PLANEJADOS: ItemRoteiro[] = [
   {
+    titulo: "Currículo público do candidato (formação acadêmica e experiência profissional/política)",
+    descricao:
+      "Fase 1 do roteiro proposto pela issue #3 (evolução do perfil do candidato com dados de OSINT). Menor risco das três fases, mas ainda depende de uma fonte pública oficial e estruturada — nada de inferência via busca genérica. Ver docs/ARCHITECTURE.md §20.4 para o roteiro completo em fases.",
+    fonte: "A definir — precisa de investigação de fonte antes de virar código (ver docs/DATA_SOURCES.md)",
+    status: "planejado",
+  },
+  {
     titulo: "Despesas pagas e doações originárias (detalhe de finanças)",
     descricao:
       "As finanças de campanha já mostram receitas e despesas contratadas (com SQ_CANDIDATO direto). Faltam duas tabelas mais detalhadas do mesmo ZIP — despesas efetivamente pagas e o doador originário por trás de cada receita — que exigem um join a mais (via SQ_DESPESA/SQ_RECEITA) ainda não implementado.",
@@ -59,6 +66,13 @@ const PLANEJADOS: ItemRoteiro[] = [
 
 const BLOQUEADOS: ItemRoteiro[] = [
   {
+    titulo: "Processos judiciais do candidato",
+    descricao:
+      "Fase 2 do roteiro da issue #3. A maioria dos tribunais brasileiros não tem API pública em massa (mesmo tipo de bloqueio já documentado abaixo para o DivulgaCandContas), e o risco de homônimo num processo judicial é o pior cenário de dado incorreto deste projeto — regra 1 de CONTRIBUTING.md (nunca fabricar ou inferir dado) fica crítica aqui. Só avança com fonte oficial, consultável em lote, e desambiguação por CPF/nome+UF documentada em docs/DATA_SOURCES.md. Ver docs/ARCHITECTURE.md §20.4.",
+    fonte: "Nenhuma fonte oficial em lote identificada ainda — tribunais brasileiros, ver docs/ARCHITECTURE.md §20.4",
+    status: "bloqueado",
+  },
+  {
     titulo: "Site oficial (link direto) e histórico de candidaturas anteriores ao vivo",
     descricao:
       "Dependem do sistema DivulgaCandContas do TSE, que exige um código de município na URL de consulta — código que não existe em consulta_cand para candidaturas estaduais/federais nos dados coletados até agora. Sem esse código, essa consulta ao vivo não pode ser feita com confiança.",
@@ -68,6 +82,11 @@ const BLOQUEADOS: ItemRoteiro[] = [
 ];
 
 const SUGESTOES_COMUNIDADE = [
+  {
+    titulo: "Citação de fonte por afirmação (em vez de \"score de confiabilidade\")",
+    descricao:
+      "A issue #3 propôs uma camada que classificaria a confiabilidade de cada informação. Avaliação registrada em docs/ARCHITECTURE.md §20.4: atribuir um score de confiável/não confiável é julgamento editorial e colide com a regra de linguagem neutra deste projeto (CONTRIBUTING.md). Alternativa em avaliação: mostrar a citação datada e a fonte primária de cada afirmação, para o leitor julgar, sem um score calculado pelo projeto.",
+  },
   {
     titulo: "Comparador de candidatos lado a lado",
     descricao: "Selecionar 2–3 candidatos e ver bens, partido e histórico numa tabela comparativa.",
