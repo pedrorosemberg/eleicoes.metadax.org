@@ -327,7 +327,7 @@ neste documento (§11, §12). Os dois ambientes viram:
 | Ambiente | Branch | URL | Quando publica |
 |---|---|---|---|
 | **hmg** (homologação) | `hmg` | Preview Deployment automática da Vercel para a branch `hmg` (padrão `eleicoes-metadax-org-git-hmg-<time>.vercel.app`) — sem domínio próprio, sem mudança de DNS | A cada merge de PR em `hmg` |
-| **prod** (produção) | `prod` (renomeada de `main` pelo mantenedor, 26/08/2026 — item 6 do checklist manual abaixo, concluído) | `fatoeleitoral.metadax.org` (novo, 26/08/2026) e `eleicoes.metadax.org` (antigo, redireciona para o novo — ver §17) — mesma Production Branch de sempre | A cada merge de PR na branch de produção (sempre vindo de `hmg`, nunca direto de uma branch de feature) |
+| **prod** (produção) | `prod` (renomeada de `main` pelo mantenedor, 26/08/2026 — item 6 do checklist manual abaixo, concluído) | `fatoeleitoral.com.br` (canônico desde 07/09/2026) — `fatoeleitoral.metadax.org` e `eleicoes.metadax.org` (ambos antigos, redirecionam para o atual — ver §17) — mesma Production Branch de sempre | A cada merge de PR na branch de produção (sempre vindo de `hmg`, nunca direto de uma branch de feature) |
 
 ### Fluxo de contribuição
 
@@ -562,33 +562,45 @@ muda). O nome do repositório no GitHub (`eleicoes.metadax.org`) **não muda** �
 já tem forks, estrelas e links externos; renomear quebraria isso sem necessidade, e o nome do
 produto não depende do nome do repositório que o hospeda.
 
-### Migração de domínio — plano de três passos
+### Migração de domínio — três passos, concluída em 07/09/2026
 
 O mantenedor provisionou dois domínios novos: `fatoeleitoral.metadax.org` (subdomínio de
-`metadax.org`, já anexado ao projeto na Vercel) e `fatoeleitoral.com.br` (domínio próprio,
-provisionado, migração futura). O plano, registrado para não se perder entre os passos:
+`metadax.org`) e `fatoeleitoral.com.br` (domínio próprio). O plano, registrado para não se perder
+entre os passos:
 
-1. **Feito nesta seção:** `fatoeleitoral.metadax.org` vira o domínio canônico (`SITE_URL` em
+1. **Feito em 26/08/2026:** `fatoeleitoral.metadax.org` vira o domínio canônico (`SITE_URL` em
    `app/layout.tsx`, `app/sitemap.ts`, `app/robots.ts`, `USER_AGENT` em `src/lib/http.ts`).
    `eleicoes.metadax.org` continua registrado e ativo na Vercel, mas passa a redirecionar
-   (307, não-permanente — `next.config.ts`, condição `has: [{ type: "host", ... }]`) para o novo
+   (302, não-permanente — `next.config.ts`, condição `has: [{ type: "host", ... }]`) para o novo
    domínio, preservando caminho e querystring. Não-permanente de propósito: o passo 3 muda o
    destino de novo, e um 301/308 seria cacheado por navegador/buscador de um jeito mais custoso de
    reverter.
-2. **Planejado:** conferir todo link/documentação que ainda referencia `eleicoes.metadax.org`
-   como URL de produto (não como nome de repositório, que é uma coisa diferente — ver acima) e
-   atualizar para `fatoeleitoral.metadax.org`.
-3. **Planejado:** migração final para `fatoeleitoral.com.br` — nessa hora, o redirecionamento do
-   passo 1 passa a apontar para lá, e o mesmo cuidado com redirect não-permanente se aplica
-   até essa migração também estar validada em produção.
+2. **Feito em 26/08/2026:** conferido todo link/documentação que referenciava
+   `eleicoes.metadax.org` como URL de produto (não como nome de repositório, que é uma coisa
+   diferente — ver acima) e atualizado para `fatoeleitoral.metadax.org`.
+3. **Feito em 07/09/2026:** migração final para `fatoeleitoral.com.br` — `SITE_URL`/`USER_AGENT`
+   e todas as referências de domínio no código e na documentação passam a apontar para o domínio
+   definitivo. O redirecionamento em `next.config.ts` ganhou uma segunda regra: tanto
+   `eleicoes.metadax.org` quanto `fatoeleitoral.metadax.org` agora redirecionam (302,
+   não-permanente, mesmo motivo do passo 1) para `fatoeleitoral.com.br`, preservando caminho e
+   querystring. Os dois domínios antigos continuam ativos e anexados ao projeto na Vercel — não
+   foram removidos, só deixaram de ser o canônico.
 
-### O que não foi automatizado nesta sessão
+### O que não foi automatizado nestas sessões
 
-Anexar `fatoeleitoral.metadax.org` ao projeto na Vercel e apontar o DNS do subdomínio já tinha
-sido feito manualmente pelo mantenedor antes desta sessão (confirmado via `mcp__Vercel__get_project`
-— o domínio já aparecia na lista de domínios do projeto). Nenhuma ferramenta desta sessão tem
-acesso para comprar/anexar domínio ou alterar DNS — só o redirecionamento em nível de aplicação
-(`next.config.ts`) e as referências de URL no código foram implementados aqui.
+Anexar `fatoeleitoral.metadax.org` ao projeto na Vercel e apontar o DNS do subdomínio foi feito
+manualmente pelo mantenedor antes da sessão de 26/08/2026 (confirmado via `mcp__Vercel__get_project`
+— o domínio já aparecia na lista de domínios do projeto).
+
+**Atenção — pendência aberta pela sessão de 07/09/2026:** `fatoeleitoral.com.br` ainda **não**
+aparece na lista de domínios do projeto na Vercel (`mcp__Vercel__get_project` em 07/09/2026 listou
+só `fatoeleitoral.metadax.org`, `eleicoes.metadax.org` e os subdomínios `*.vercel.app` — sem
+`fatoeleitoral.com.br`). O código já trata `fatoeleitoral.com.br` como domínio canônico
+(`SITE_URL`, redirects), mas até o mantenedor anexar o domínio ao projeto na Vercel e apontar o
+DNS para lá, `fatoeleitoral.com.br` não vai responder de fato — só os dois domínios antigos
+continuam servindo o site. Nenhuma ferramenta destas sessões tem acesso para comprar/anexar
+domínio ou alterar DNS — só o redirecionamento em nível de aplicação (`next.config.ts`) e as
+referências de URL no código/documentação foram implementados aqui.
 
 ### Fontes oficiais com logo real (`SourceMarquee`)
 
@@ -708,3 +720,110 @@ Corrigido para `[hmg, prod]` nos três arquivos.
 `https://aistudio.google.com/apikey`, e remover o secret `NVIDIA_API_KEY` (não usado mais, chave
 antiga sem uso é uma superfície desnecessária). Sem o novo secret, o gate continua falhando
 fechado — não abre exceção enquanto a chave não existir, mesmo que a causa da falha tenha mudado.
+
+## 20. Otimização de recursos Vercel e roteiro pós-issues #31/#3 (07/09/2026)
+
+A pedido do mantenedor, esta sessão levantou dados reais (via `mcp__Vercel__*`) sobre consumo de
+recursos e avaliou duas issues abertas para decidir os próximos passos. **Nada nesta seção foi
+implementado** — é plano/decisão de direção, registrado para não se perder até virar trabalho.
+
+### 20.1 Diagnóstico de consumo de recursos na Vercel
+
+- **A conta tem ~50 projetos num único time Hobby** (`team_nwD7aMZOVrV6Orwj8LSBieJI`, plano
+  `hobby`) — no plano Hobby os limites de banda, execução de função (GB-horas) e Edge Requests são
+  **por conta, não por projeto**. Um projeto "barulhento" pode consumir a cota de todos os outros,
+  e vice-versa — não dá para isolar o problema olhando só este projeto.
+- **O tráfego real deste projeto é modesto:** Vercel Web Analytics mostra 194 visitantes
+  únicos / 1.003 pageviews nos últimos 30 dias; os runtime logs das últimas 24h mostram ~109
+  requisições, todas `200`/`304`, sem nenhum erro de runtime. Isso não é consistente com um volume
+  de tráfego legítimo capaz de estourar cota sozinho.
+- **20 deployments neste projeto em ~13 dias**, a maior parte de PRs individuais do Dependabot (um
+  PR — e um build de preview — por dependência atualizada, ao invés de agrupados) mais os merges
+  de promoção/reversão do incidente typescript 7/eslint 10 (§19). Esse padrão de "um PR por
+  dependência" se repete em todo projeto com Dependabot ativo na conta, multiplicando minutos de
+  build no agregado da conta.
+- **Rotas `/api/*` são CORS-aberto por decisão de arquitetura (§10)** e, hoje, sem nenhum rate
+  limit — correto para o objetivo de transparência pública, mas também são o alvo mais barato para
+  um scraper automatizado gerar muitas invocações de função sem aparecer no Web Analytics (o
+  script de analytics só roda no navegador; uma chamada direta a `/api/cnpj/[cnpj]` ou
+  `/api/transparencia/[tipo]`, por exemplo, não é contada como "visitante").
+- Isso é consistente com a issue #31 (abaixo): tráfego "anômalo"/estrangeiro alto sem visitantes
+  correspondentes no Analytics aponta para bot/scraper batendo direto na API, não para visita
+  humana real.
+
+### 20.2 Issue #31 — regra de bloqueio geográfico da Vercel
+
+[#31](https://github.com/pedrorosemberg/eleicoes.metadax.org/issues/31), aberta pelo mantenedor
+em 01/09/2026: quase metade do tráfego dos últimos 30 dias veio de fora do Brasil, considerado
+anômalo para um projeto sobre eleições brasileiras — mitigado com uma regra do Vercel Firewall
+bloqueando tráfego externo.
+
+**Risco levantado nesta sessão, ainda não confirmado:** `app/robots.ts` autoriza explicitamente
+crawlers de IA/busca (`GPTBot`, `ChatGPT-User`, `ClaudeBot`, `PerplexityBot`, `Bytespider`,
+`Amazonbot`, `Applebot` etc. — ver §"Estratégia de SEO/AEO/GEO") como parte deliberada da
+estratégia de visibilidade do projeto. Praticamente nenhum desses crawlers opera a partir de IP
+brasileiro. Uma regra de firewall que bloqueia por país (em vez de distinguir bot verificado de
+tráfego genérico) pode estar barrando exatamente os crawlers que o projeto pediu para vir — as
+duas decisões (§ acima e #31) podem estar em conflito direto. Nenhuma ferramenta desta sessão tem
+acesso de leitura à configuração real da regra do Firewall (só há exemplos de escrita via
+`@vercel/sdk`/`VERCEL_TOKEN`, que esta sessão não tem) — **o mantenedor precisa confirmar no
+dashboard da Vercel (Firewall → Rules) o escopo exato da regra criada** (bloqueia todo país
+não-BR? Uma lista específica?).
+
+**Proposta (pendente de confirmação acima):** trocar bloqueio binário por país por uma combinação
+mais granular, sem reverter a mitigação:
+1. Manter o bloqueio/desafio para tráfego genérico de fora do Brasil.
+2. Adicionar uma exceção (`bypass` ou `log`, condição por `User-Agent`) para os crawlers já
+   listados em `app/robots.ts`, ou avaliar o recurso nativo de Bot Management da Vercel (verificação
+   por IP, não só por header, mais robusta contra spoofing de User-Agent) para esse mesmo conjunto.
+3. Complementar com rate limiting por IP nas rotas `/api/*` mais caras (`@vercel/firewall`
+   `checkRateLimit`, ver `docs/ARCHITECTURE.md §10` para por que a rota continua sem autenticação)
+   — mitiga scraping mesmo de dentro do Brasil, o que o bloqueio geográfico sozinho não cobre.
+
+### 20.3 Plano de otimização de recursos — direção decidida, implementação futura
+
+Decisão do mantenedor (07/09/2026): registrar a direção agora, implementar num pedido futuro.
+
+1. **Agrupar o Dependabot** (`.github/dependabot.yml`, campo `groups`) para dependências de
+   dev/lint/types saírem num único PR/build em vez de um por pacote — reduz deployments de preview
+   proporcionalmente (5 PRs abertos hoje por bumps individuais viram 1).
+2. **Rate limiting básico nas rotas `/api/*` mais custosas** (`checkRateLimit` do
+   `@vercel/firewall`, por IP) — mitiga scraping sem exigir autenticação, mantendo a decisão de
+   CORS aberto do §10.
+3. **Auditoria dos ~50 projetos da conta** fora deste repositório — vários parecem protótipos/
+   experimentos inativos (ex.: `imagenv-2`, `mind-canvas-explore`, `onboarding-boost`,
+   `phishing-defense-game`); pausar ou remover os que não servem tráfego real libera cota
+   compartilhada da conta, independente de qual projeto "parece" estar consumindo mais. Fora do
+   escopo desta sessão (ação em outros repositórios) — decisão e execução ficam com o mantenedor.
+4. **Ajuste da regra de firewall da issue #31** conforme §20.2 acima.
+
+### 20.4 Issue #3 — proposta de evolução (OSINT: currículo + processos judiciais)
+
+[#3](https://github.com/pedrorosemberg/eleicoes.metadax.org/issues/3), aberta pela comunidade
+(@geovanidps) em 25/08/2026: ampliar o perfil do candidato com formação acadêmica, experiência
+profissional/política, processos judiciais (tribunais, movimentações, decisões) e uma "camada de
+inteligência de fontes" que classificaria a confiabilidade de cada informação.
+
+**Decisão de direção (07/09/2026, registrada aqui e como comentário na issue):** tratar como um
+épico em fases, não um PR único, pelo mesmo motivo que `/candidato/[id]` já trata bens e certidões
+criminais com o rigor das regras 1 e 2 de `CONTRIBUTING.md` (nunca fabricar/inferir dado; linguagem
+neutra em categoria sensível):
+
+1. **Fase 1 — currículo público (formação acadêmica, experiência profissional/política).** Menor
+   risco, mas ainda depende de existir fonte pública oficial e estruturada (não uma inferência via
+   busca genérica) — precisa da mesma investigação de fonte que qualquer dado novo em
+   `docs/DATA_SOURCES.md` antes de virar código.
+2. **Fase 2 — processos judiciais.** Risco bem mais alto: a maioria dos tribunais brasileiros não
+   tem API pública em massa (o mesmo tipo de bloqueio já documentado para DivulgaCandContas em
+   `/roteiro`, item "bloqueado"), e o rigor de "nunca fabricar ou inferir" fica crítico aqui —
+   errar a identidade em processo judicial (homônimo) é o pior cenário possível de dado incorreto
+   deste projeto. Só avança depois de uma fonte oficial, consultável em lote e com uma estratégia
+   de desambiguação por CPF/nome+UF (não só nome), documentada em `docs/DATA_SOURCES.md`.
+3. **Fase 3 — "classificação de confiabilidade de fonte": recomendação de repensar, não implementar
+   como descrita.** Atribuir um score de "confiável"/"não confiável" a uma informação é julgamento
+   editorial — colide diretamente com a regra 2 de `CONTRIBUTING.md` ("nenhuma frase pode sugerir
+   que um dado é bom, ruim, suspeito ou meritório") e é o tipo de decisão que expõe o projeto a
+   risco de difamação se errar. Alternativa proposta: mostrar a citação datada e a fonte primária
+   de cada afirmação (para o leitor julgar), em vez de um score calculado pelo próprio projeto.
+
+Este roteiro também está refletido em `/roteiro` (itens novos, ligados a esta issue).
