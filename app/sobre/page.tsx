@@ -181,9 +181,9 @@ export default async function SobrePage() {
 
       <h2 className="mt-10 text-[22px] font-semibold text-[var(--text-primary)]">Responsável pelo projeto</h2>
       <div className="mt-4 flex items-start gap-4 rounded-[18px] border p-5" style={{ borderColor: "var(--hairline)" }}>
-        {/* eslint-disable-next-line @next/next/no-img-element -- fonte externa (site pessoal do idealizador), fora dos domínios configurados em next/image */}
+        {/* eslint-disable-next-line @next/next/no-img-element -- cdn.metadax.com.br está configurado em next/image só para /assets/metadax_branding_marks/**, não para este caminho */}
         <img
-          src="https://pedrorosemberg.com/assets/pedro-image.jpeg"
+          src="https://cdn.metadax.com.br/assets/pedro_rosemberg_photo.png"
           alt="Foto de Pedro Rosemberg"
           width={64}
           height={64}

@@ -327,7 +327,7 @@ neste documento (§11, §12). Os dois ambientes viram:
 | Ambiente | Branch | URL | Quando publica |
 |---|---|---|---|
 | **hmg** (homologação) | `hmg` | Preview Deployment automática da Vercel para a branch `hmg` (padrão `eleicoes-metadax-org-git-hmg-<time>.vercel.app`) — sem domínio próprio, sem mudança de DNS | A cada merge de PR em `hmg` |
-| **prod** (produção) | `prod` (renomeada de `main` pelo mantenedor, 26/08/2026 — item 6 do checklist manual abaixo, concluído) | `fatoeleitoral.metadax.org` (novo, 26/08/2026) e `eleicoes.metadax.org` (antigo, redireciona para o novo — ver §17) — mesma Production Branch de sempre | A cada merge de PR na branch de produção (sempre vindo de `hmg`, nunca direto de uma branch de feature) |
+| **prod** (produção) | `prod` (renomeada de `main` pelo mantenedor, 26/08/2026 — item 6 do checklist manual abaixo, concluído) | `fatoeleitoral.com.br` (canônico desde 07/09/2026) — `fatoeleitoral.metadax.org` e `eleicoes.metadax.org` (ambos antigos, redirecionam para o atual — ver §17) — mesma Production Branch de sempre | A cada merge de PR na branch de produção (sempre vindo de `hmg`, nunca direto de uma branch de feature) |
 
 ### Fluxo de contribuição
 
@@ -562,33 +562,45 @@ muda). O nome do repositório no GitHub (`eleicoes.metadax.org`) **não muda** �
 já tem forks, estrelas e links externos; renomear quebraria isso sem necessidade, e o nome do
 produto não depende do nome do repositório que o hospeda.
 
-### Migração de domínio — plano de três passos
+### Migração de domínio — três passos, concluída em 07/09/2026
 
 O mantenedor provisionou dois domínios novos: `fatoeleitoral.metadax.org` (subdomínio de
-`metadax.org`, já anexado ao projeto na Vercel) e `fatoeleitoral.com.br` (domínio próprio,
-provisionado, migração futura). O plano, registrado para não se perder entre os passos:
+`metadax.org`) e `fatoeleitoral.com.br` (domínio próprio). O plano, registrado para não se perder
+entre os passos:
 
-1. **Feito nesta seção:** `fatoeleitoral.metadax.org` vira o domínio canônico (`SITE_URL` em
+1. **Feito em 26/08/2026:** `fatoeleitoral.metadax.org` vira o domínio canônico (`SITE_URL` em
    `app/layout.tsx`, `app/sitemap.ts`, `app/robots.ts`, `USER_AGENT` em `src/lib/http.ts`).
    `eleicoes.metadax.org` continua registrado e ativo na Vercel, mas passa a redirecionar
-   (307, não-permanente — `next.config.ts`, condição `has: [{ type: "host", ... }]`) para o novo
+   (302, não-permanente — `next.config.ts`, condição `has: [{ type: "host", ... }]`) para o novo
    domínio, preservando caminho e querystring. Não-permanente de propósito: o passo 3 muda o
    destino de novo, e um 301/308 seria cacheado por navegador/buscador de um jeito mais custoso de
    reverter.
-2. **Planejado:** conferir todo link/documentação que ainda referencia `eleicoes.metadax.org`
-   como URL de produto (não como nome de repositório, que é uma coisa diferente — ver acima) e
-   atualizar para `fatoeleitoral.metadax.org`.
-3. **Planejado:** migração final para `fatoeleitoral.com.br` — nessa hora, o redirecionamento do
-   passo 1 passa a apontar para lá, e o mesmo cuidado com redirect não-permanente se aplica
-   até essa migração também estar validada em produção.
+2. **Feito em 26/08/2026:** conferido todo link/documentação que referenciava
+   `eleicoes.metadax.org` como URL de produto (não como nome de repositório, que é uma coisa
+   diferente — ver acima) e atualizado para `fatoeleitoral.metadax.org`.
+3. **Feito em 07/09/2026:** migração final para `fatoeleitoral.com.br` — `SITE_URL`/`USER_AGENT`
+   e todas as referências de domínio no código e na documentação passam a apontar para o domínio
+   definitivo. O redirecionamento em `next.config.ts` ganhou uma segunda regra: tanto
+   `eleicoes.metadax.org` quanto `fatoeleitoral.metadax.org` agora redirecionam (302,
+   não-permanente, mesmo motivo do passo 1) para `fatoeleitoral.com.br`, preservando caminho e
+   querystring. Os dois domínios antigos continuam ativos e anexados ao projeto na Vercel — não
+   foram removidos, só deixaram de ser o canônico.
 
-### O que não foi automatizado nesta sessão
+### O que não foi automatizado nestas sessões
 
-Anexar `fatoeleitoral.metadax.org` ao projeto na Vercel e apontar o DNS do subdomínio já tinha
-sido feito manualmente pelo mantenedor antes desta sessão (confirmado via `mcp__Vercel__get_project`
-— o domínio já aparecia na lista de domínios do projeto). Nenhuma ferramenta desta sessão tem
-acesso para comprar/anexar domínio ou alterar DNS — só o redirecionamento em nível de aplicação
-(`next.config.ts`) e as referências de URL no código foram implementados aqui.
+Anexar `fatoeleitoral.metadax.org` ao projeto na Vercel e apontar o DNS do subdomínio foi feito
+manualmente pelo mantenedor antes da sessão de 26/08/2026 (confirmado via `mcp__Vercel__get_project`
+— o domínio já aparecia na lista de domínios do projeto).
+
+**Atenção — pendência aberta pela sessão de 07/09/2026:** `fatoeleitoral.com.br` ainda **não**
+aparece na lista de domínios do projeto na Vercel (`mcp__Vercel__get_project` em 07/09/2026 listou
+só `fatoeleitoral.metadax.org`, `eleicoes.metadax.org` e os subdomínios `*.vercel.app` — sem
+`fatoeleitoral.com.br`). O código já trata `fatoeleitoral.com.br` como domínio canônico
+(`SITE_URL`, redirects), mas até o mantenedor anexar o domínio ao projeto na Vercel e apontar o
+DNS para lá, `fatoeleitoral.com.br` não vai responder de fato — só os dois domínios antigos
+continuam servindo o site. Nenhuma ferramenta destas sessões tem acesso para comprar/anexar
+domínio ou alterar DNS — só o redirecionamento em nível de aplicação (`next.config.ts`) e as
+referências de URL no código/documentação foram implementados aqui.
 
 ### Fontes oficiais com logo real (`SourceMarquee`)
 
