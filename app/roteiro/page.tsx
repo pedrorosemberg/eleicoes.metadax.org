@@ -28,10 +28,10 @@ interface ItemRoteiro {
 
 const PLANEJADOS: ItemRoteiro[] = [
   {
-    titulo: "Currículo público do candidato (formação acadêmica e experiência profissional/política)",
+    titulo: "Formação acadêmica e experiência profissional detalhadas (além de escolaridade/ocupação)",
     descricao:
-      "Fase 1 do roteiro proposto pela issue #3 (evolução do perfil do candidato com dados de OSINT). Menor risco das três fases, mas ainda depende de uma fonte pública oficial e estruturada — nada de inferência via busca genérica. Ver docs/ARCHITECTURE.md §20.4 para o roteiro completo em fases.",
-    fonte: "A definir — precisa de investigação de fonte antes de virar código (ver docs/DATA_SOURCES.md)",
+      "Fase 1 do roteiro proposto pela issue #3 (evolução do perfil do candidato com dados de OSINT). A escolaridade e a ocupação declaradas ao TSE (dado oficial, já ingerido) já aparecem no perfil do candidato — o que falta é um currículo mais detalhado (instituição, curso, cargos anteriores), que não existe no cadastro do TSE e ainda depende de uma fonte pública oficial e estruturada — nada de inferência via busca genérica. Ver docs/ARCHITECTURE.md §20.4 para o roteiro completo em fases.",
+    fonte: "Escolaridade/ocupação: TSE (consulta_cand, já ingerido). Currículo detalhado: a definir — precisa de investigação de fonte antes de virar código (ver docs/DATA_SOURCES.md)",
     status: "planejado",
   },
   {
