@@ -6,11 +6,11 @@
 Repositório: `eleicoes.metadax.org` (nome mantido por estabilidade de URLs/links
 já publicados — ver "Domínio" abaixo para o histórico e o plano de migração).
 
-[![Estrelas no GitHub](https://fatoeleitoral.metadax.org/api/badge/estrelas)](https://github.com/pedrorosemberg/eleicoes.metadax.org/stargazers)
-[![Forks](https://fatoeleitoral.metadax.org/api/badge/forks)](https://github.com/pedrorosemberg/eleicoes.metadax.org/network/members)
-[![Issues e PRs abertos](https://fatoeleitoral.metadax.org/api/badge/issues)](https://github.com/pedrorosemberg/eleicoes.metadax.org/issues)
-[![Último commit](https://fatoeleitoral.metadax.org/api/badge/ultimo-commit)](https://github.com/pedrorosemberg/eleicoes.metadax.org/commits/main)
-[![Licença CC BY 4.0](https://fatoeleitoral.metadax.org/api/badge/licenca)](LICENSE)
+[![Estrelas no GitHub](https://fatoeleitoral.com.br/api/badge/estrelas)](https://github.com/pedrorosemberg/eleicoes.metadax.org/stargazers)
+[![Forks](https://fatoeleitoral.com.br/api/badge/forks)](https://github.com/pedrorosemberg/eleicoes.metadax.org/network/members)
+[![Issues e PRs abertos](https://fatoeleitoral.com.br/api/badge/issues)](https://github.com/pedrorosemberg/eleicoes.metadax.org/issues)
+[![Último commit](https://fatoeleitoral.com.br/api/badge/ultimo-commit)](https://github.com/pedrorosemberg/eleicoes.metadax.org/commits/main)
+[![Licença CC BY 4.0](https://fatoeleitoral.com.br/api/badge/licenca)](LICENSE)
 
 Os badges acima são gerados por este próprio projeto (`GET /api/badge/[metrica]`,
 `src/lib/badge-svg.ts`), não pelo shields.io — trocado depois de o badge de
@@ -27,7 +27,7 @@ hipóteses, tão atual quanto esse segundo cache permitir. Os mesmos números
 do repositório, junto com visitantes e páginas vistas do site (visitantes
 únicos e pageviews, sem esse segundo cache no meio), aparecem atualizados
 ao vivo em
-[fatoeleitoral.metadax.org/sobre](https://fatoeleitoral.metadax.org/sobre#estatisticas-do-projeto)
+[fatoeleitoral.com.br/sobre](https://fatoeleitoral.com.br/sobre#estatisticas-do-projeto)
 (também disponível como JSON em `GET /api/estatisticas-projeto`).
 
 Consulta pública de candidatos às eleições brasileiras, cruzando dados coletados
@@ -56,16 +56,22 @@ favicon, por serem símbolos nacionais — o restante do site (UI, gráficos,
 estados de feedback) continua estritamente preto e branco, sem nenhuma cor de
 marca. Ver `docs/DESIGN_SYSTEM.md` para o detalhe completo dessa exceção.
 
-O domínio de produção também está em migração, em três passos:
+O domínio de produção também passou por uma migração, em três passos:
 
-1. **Feito (26/08/2026):** `fatoeleitoral.metadax.org` é o novo domínio
+1. **Feito (26/08/2026):** `fatoeleitoral.metadax.org` vira o domínio
    canônico. `eleicoes.metadax.org` continua no ar, mas redireciona
-   (307, temporário) para `fatoeleitoral.metadax.org`, preservando caminho e
-   querystring — ver `next.config.ts`.
-2. **Planejado:** revisão de todo link externo/interno que ainda aponte para
-   `eleicoes.metadax.org`.
-3. **Planejado:** migração final para `fatoeleitoral.com.br` (já provisionado),
-   quando o redirecionamento do passo 1 for atualizado para apontar para lá.
+   (302, temporário) para o novo domínio, preservando caminho e querystring
+   — ver `next.config.ts`.
+2. **Feito (26/08/2026):** revisão de todo link externo/interno que ainda
+   apontava para `eleicoes.metadax.org`.
+3. **Feito no código (07/09/2026):** migração final para `fatoeleitoral.com.br`
+   (domínio próprio, já provisionado antes deste passo). Os dois domínios
+   anteriores (`eleicoes.metadax.org` e `fatoeleitoral.metadax.org`)
+   continuam no ar, redirecionando (302, temporário) para o domínio atual.
+   **Pendência do mantenedor:** `fatoeleitoral.com.br` ainda não está anexado
+   ao projeto na Vercel nem com o DNS apontado — até isso ser feito, o site
+   continua respondendo pelos dois domínios antigos. Ver `docs/ARCHITECTURE.md`
+   §17.
 
 O nome do **repositório no GitHub** (`eleicoes.metadax.org`) não muda nesta
 migração — trocar o nome de um repositório já público quebraria todo link,
@@ -138,7 +144,7 @@ design está documentada e foi validada com testes reais, não apenas descrita:
 ## Ambientes e CI/CD
 
 Dois ambientes: **hmg** (homologação — preview automático da Vercel para a branch `hmg`) e
-**prod** (`fatoeleitoral.metadax.org` — branch `prod`, ver "Identidade visual e domínio" acima).
+**prod** (`fatoeleitoral.com.br` — branch `prod`, ver "Identidade visual e domínio" acima).
 Todo PR passa por dois checks obrigatórios antes de poder ser mesclado em qualquer um dos dois —
 CI (typecheck/lint/build) e uma revisão de segurança automatizada via IA (Gemini, gratuita), com
 foco extra em prompt injection/prompt poisoning — mais a aprovação manual do mantenedor. Ver
